@@ -4,11 +4,11 @@
     <title>Will • Posts by &#34;spring cloud&#34; category</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
     <updated>2021-07-03T14:52:38.991Z</updated>
-    <category term="Docker" />
-    <category term="Archery" />
     <category term="JAVA" />
     <category term="POI" />
     <category term="EXCEL" />
+    <category term="Docker" />
+    <category term="Archery" />
     <category term="Linux" />
     <category term="Cron" />
     <category term="BeetlSql" />
@@ -160,7 +160,7 @@
 &lt;li&gt;&lt;p&gt;服务发现：服务调用方向服务注册中心咨询服务，并获取所有服务的实例清单，实现对具体服务实&lt;br&gt;例的访问。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg-blog.csdnimg.cn%2F20210428165337815.png%3Fx-oss-process%3Dimage%2Fwatermark%2Ctype_ZmFuZ3poZW5naGVpdGk%2Cshadow_10%2Ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RhYmFvYWQxMTIy%2Csize_16%2Ccolor_FFFFFF%2Ct_70&amp;refer=http%3A%2F%2Fimg-blog.csdnimg.cn&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1627915317&amp;t=3fd39251c197ed2da566594c89dc6b09&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdn.net/20160419111801783&#34; alt=&#34;Microservices&#34;&gt;&lt;/p&gt;
 &lt;p&gt;通过上面的调用图会发现，除了微服务，还有一个组件是服务注册中心，它是微服务架构非常重要的一个组件，在微服务架构里主要起到了协调者的一个作用。注册中心一般包含如下几个功能：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;服务发现：&lt;/p&gt;
