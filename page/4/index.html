@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+
+
+<head>
+  <meta charset="utf-8" />
+   
+  <meta name="keywords" content="will" />
+   
+  <meta name="description" content="愿你一生努力，一生被爱" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     Will
+  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+  
+  
+
+  
+
+</head>
+
+</html>
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+      
+      <a class="forkMe" href="https://github.com/Shen-Yu/hexo-theme-ayer"
+        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover1.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">Will</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  
+
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content" id="broad"></div>
+</div>
+<script type="text/javascript">
+    fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("broad").innerHTML = data.hitokoto;
+        })
+        .catch(console.error)
+</script>
+
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-Docker/Docker(1)-初识Docker"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/03/21/Docker/Docker(1)-%E5%88%9D%E8%AF%86Docker/"
+    >Docker(1)-初识Docker</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/03/21/Docker/Docker(1)-%E5%88%9D%E8%AF%86Docker/" class="article-date">
+  <time datetime="2021-03-21T10:55:17.614Z" itemprop="datePublished">2021-03-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Docker/">Docker</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>本人文章均引用或者复制：</p>
+<p>公众号：</p>
+<p><img src="http://www.cicoding.cn/icons/wx.jpg"></p>
+<p>QQ群：<a target="_blank" rel="noopener" href="http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21">806951874</a></p>
+</blockquote>
+<h1 id="Docker的前世今生"><a href="#Docker的前世今生" class="headerlink" title="Docker的前世今生"></a>Docker的前世今生</h1><h2 id="传统项目开发部署的流程是怎样的？"><a href="#传统项目开发部署的流程是怎样的？" class="headerlink" title="传统项目开发部署的流程是怎样的？"></a>传统项目开发部署的流程是怎样的？</h2><h3 id="传统项目开发部署的基本流程"><a href="#传统项目开发部署的基本流程" class="headerlink" title="传统项目开发部署的基本流程"></a>传统项目开发部署的基本流程</h3><p>这里只简单描述一下，项目发布的基本流程</p>
+<ul>
+<li>本地开发+测试，没有问题的话，编译打包发布到测试环境</li>
+<li>在测试环境中进行测试，测试完成后，发布到生产环境</li>
+<li>在生产环境中进行最后的测试，如果没有问题，那么一切就OK了</li>
+</ul>
+<h3 id="存在什么问题？"><a href="#存在什么问题？" class="headerlink" title="存在什么问题？"></a>存在什么问题？</h3><ul>
+<li><strong>存在问题：不同机器上的软件环境不一致。（比较核心的问题)</strong></li>
+<li><strong>软件环境的配置繁多、命令记不清楚。</strong></li>
+<li><strong>重复性搭建软件环境、效率低下。</strong></li>
+</ul>
+<h2 id="对照传统虚拟机总结"><a href="#对照传统虚拟机总结" class="headerlink" title="对照传统虚拟机总结"></a>对照传统虚拟机总结</h2><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>容器</th>
+<th>虚拟机</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>启动</td>
+<td>秒级</td>
+<td>分钟级</td>
+</tr>
+<tr>
+<td>硬盘使用</td>
+<td>一般为MB</td>
+<td>一般为GB</td>
+</tr>
+<tr>
+<td>性能</td>
+<td>接近原生</td>
+<td>弱于</td>
+</tr>
+<tr>
+<td>系统支持量</td>
+<td>单机支持上千个容器</td>
+<td>一般几十个</td>
+</tr>
+</tbody></table>
+<h1 id="Docker是干什么用的？"><a href="#Docker是干什么用的？" class="headerlink" title="Docker是干什么用的？"></a>Docker是干什么用的？</h1><h2 id="Docker解决的问题"><a href="#Docker解决的问题" class="headerlink" title="Docker解决的问题"></a>Docker解决的问题</h2><p>由于不同的机器有不同的操作系统，以及不同的库和组件，在将一个应用部署到多台机器上需要进行大量的环境配置操作。<br>Docker 主要解决环境配置问题，它是一种虚拟化技术，对进程进行隔离，被隔离的进程独立于宿主操作系统和其它隔离的进程。使用 Docker 可以不修改应用程序代码，不需要开发人员学习特定环境下的技术，就能够将现有的应用程序部署在其它机器上。</p>
+<p><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2520176274,3530821872&fm=26&gp=0.jpg"></p>
+<h2 id="与虚拟机的比较"><a href="#与虚拟机的比较" class="headerlink" title="与虚拟机的比较"></a>与虚拟机的比较</h2><p>虚拟机也是一种虚拟化技术，它与 Docker 最大的区别在于它是通过模拟硬件，并在硬件上安装操作系统来实现。</p>
+<p>so</p>
+<blockquote>
+<p>==<strong>Docker不是虚拟机</strong>==</p>
+</blockquote>
+<blockquote>
+<p>对Docker的感受：</p>
+</blockquote>
+<p>比如公司买了一台新服务器，系统是centos，你要想把项目部署到服务器上，而且项目中使用到了mysql、redis、activemq、zookeeper等技术，要想项目能在服务器上正常运行，必须在新的服务器上搭建好mysql、redis、activemq、zookeeper服务环境。这样的话，在环境搭建和配置上就要花费太多的时间了（因为需要配置很多的配置文件、需要手动启动服务等）。</p>
+<p>又或者每次重装一次系统或者换一个机器，你就要把环境重装一次，东西越多花费的时间越多、很麻烦、浪费时间和精力。</p>
+<p>而使用Docker的话，你只需要一条命令，你就可以在你的centos系统上运行你需要的软件，比如mysql、tomcat、jdk、redis等。</p>
+<blockquote>
+<p>举个栗子</p>
+</blockquote>
+<p>【示例1】：Docker上安装mysql</p>
+<ul>
+<li>你需要MySQL服务，那么在docker中通过简单的命令就可以安装一个MySQL数据库服务：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动mysql命令</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=123456 mysql</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>很简单吧，一个mysql服务就启动完成了，就可以正常使用了。可以通过mysql客户端（Navicat、DataGrip等）连接这个mysql数据库。</p>
+</blockquote>
+<p>【示例2】：Docker上安装jdk</p>
+<ul>
+<li>你需要JDK环境，那么在Docker中通过简单的命令安装一个JDK的镜像， 然后通过一条命令启动这个容器就行了，容器会自动给你安装配置好JDK环境。</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull java</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>就这么简单的一条命令，JDK就安装好了。你可以在Docker容器的命令行中通过java -version来检测jdk是否安装成功。</p>
+</blockquote>
+<blockquote>
+<p><strong>镜像、容器</strong>：</p>
+<p>对于新手而言，或许有点不明白镜像和容器分别是个什么东东，还是有点不明白。</p>
+<p>你可以这样感官的理解：</p>
+<blockquote>
+<p>镜像 —— 相当于ISO操作系统的安装包，ISO镜像的内容是固定的，不会发生改变，可以重复使用。</p>
+<p>容器 —— 类似于使用 ISO镜像安装的新的操作系统，可以使用一个相同的ISO镜像，安装很多操作系统。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>Docker占用的资源很小。启动一个容器一般都是秒级的。</p>
+</blockquote>
+<h1 id="Docker镜像、容器、仓库的介绍"><a href="#Docker镜像、容器、仓库的介绍" class="headerlink" title="Docker镜像、容器、仓库的介绍"></a>Docker镜像、容器、仓库的介绍</h1><h2 id="Docker镜像"><a href="#Docker镜像" class="headerlink" title="Docker镜像"></a>Docker镜像</h2><p>通俗的理解镜像</p>
+<blockquote>
+<p>Docker的镜像是一个只读的模板，一个独立的文件系统，包括运行容器所需的数据，可以用来创建新的容器。</p>
+</blockquote>
+<p>Docker的镜像相当于ISO操作系统的安装包，ISO镜像的内容是固定的，不会发生改变，可以重复使用。</p>
+<p>如果上面的形容还无法让你理解Docker镜像，那我再举一个例子：</p>
+<p>从事Java开发的人都知道类和实例的关系。直观的感觉，类就像是一个模板，根据这个类模板，可以生成很多个具体的对象实例。</p>
+<p>则，<strong>Docker镜像就相当于Java的类，而通过Docker镜像生成出来的东西，我们就叫他它“容器”</strong>。</p>
+<p>通过上面的形容，应该可以感觉的到镜像和容器之间的关系了吧。</p>
+<h2 id="Docker容器"><a href="#Docker容器" class="headerlink" title="Docker容器"></a>Docker容器</h2><p>通俗的理解容器</p>
+<p>在上一节已经介绍了镜像与容器的关系。</p>
+<p>这里就直接copy文档中的一句话，来简单形容一下容器：</p>
+<p><strong>Docker镜像就相当于Java的类，而通过Docker镜像生成出来的东西，我们就叫他它“容器”</strong>。</p>
+<h2 id="Docker仓库"><a href="#Docker仓库" class="headerlink" title="Docker仓库"></a>Docker仓库</h2><p>通俗的理解Docker仓库</p>
+<p>仓库支持的操作类似git，当用户创建了自己的镜像之后就可以使用 push 命令将它上传到公有或者私有仓库，这样下次在另外一台机器上使用这个镜像时候，只需要从仓库上 pull 下来就可以了。</p>
+<p>类似于，将某项目模块打成jar包，然后上传到私有或者公有的maven仓库，然后在其他的所有支持maven环境的机器上，都可以拉取这个jar进行使用。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-Docker/Archery教程"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/03/21/Docker/Archery%E6%95%99%E7%A8%8B/"
+    >Archery安装教程</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/03/21/Docker/Archery%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2021-03-21T10:55:17.613Z" itemprop="datePublished">2021-03-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Docker/">Docker</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote>
+<blockquote>
+<p>本文基于官方文档安装，有不太详细的地方请多多包涵，下方为官方文档连接：                                  </p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://archerydms.com/">Archery中文官方文档</a></p>
+</blockquote>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><blockquote>
+<p>Archery是<a href="https://github.com/jly8866/archer">archer</a>的分支项目，定位于SQL审核查询平台，旨在提升DBA的工作效率，支持多数据库的SQL上线和查询，同时支持丰富的MySQL运维功能，所有功能都兼容手机端操作</p>
+</blockquote>
+<h1 id="功能清单"><a href="#功能清单" class="headerlink" title="功能清单"></a>功能清单</h1><table>
+<thead>
+<tr>
+<th align="left">查询</th>
+<th align="left">审核</th>
+<th align="left">执行</th>
+<th align="left">备份</th>
+<th align="left">数据字典</th>
+<th align="left">慢日志</th>
+<th align="left">会话管理</th>
+<th align="left">账号管理</th>
+<th align="left">参数管理</th>
+<th align="left">数据归档</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">MySQL</td>
+<td align="left">√</td>
+<td align="left">√</td>
+<td align="left">√</td>
+<td align="left">√</td>
+<td align="left">√</td>
+<td align="left">√</td>
+<td align="left">√</td>
+<td align="left">√</td>
+<td align="left">√</td>
+<td>√</td>
+</tr>
+<tr>
+<td align="left">MsSQL</td>
+<td align="left">√</td>
+<td align="left">×</td>
+<td align="left">√</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td>×</td>
+</tr>
+<tr>
+<td align="left">Redis</td>
+<td align="left">√</td>
+<td align="left">×</td>
+<td align="left">√</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td>×</td>
+</tr>
+<tr>
+<td align="left">PgSQL</td>
+<td align="left">√</td>
+<td align="left">×</td>
+<td align="left">√</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td>×</td>
+</tr>
+<tr>
+<td align="left">Oracle</td>
+<td align="left">√</td>
+<td align="left">×</td>
+<td align="left">√</td>
+<td align="left">√</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td>×</td>
+</tr>
+<tr>
+<td align="left">MongoDB</td>
+<td align="left">√</td>
+<td align="left">×</td>
+<td align="left">√</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td align="left">×</td>
+<td>×</td>
+</tr>
+</tbody></table>
+<h1 id="部署升级"><a href="#部署升级" class="headerlink" title="部署升级"></a>部署升级</h1><blockquote>
+<p>支持docker部署、手动部署，支持升级。</p>
+<p>由于安装包部署略微繁琐，本文不提供介绍，详细请看上方文档地址，自行搭建，本次只是提供基于docker的部署教程。</p>
+</blockquote>
+<ul>
+<li>docker部署</li>
+<li>安装包部署</li>
+</ul>
+<h1 id="Docker部署"><a href="#Docker部署" class="headerlink" title="Docker部署"></a>Docker部署</h1><h2 id="安装Docker-compose"><a href="#安装Docker-compose" class="headerlink" title="安装Docker-compose"></a>安装Docker-compose</h2><blockquote>
+<p>安装Docker-compose有两种方法：一个通过Python的pip安装；另外一个是通过连接。</p>
+<p>本文会详细介绍两种方法。</p>
+</blockquote>
+<h3 id="通过pip安装"><a href="#通过pip安装" class="headerlink" title="通过pip安装"></a>通过pip安装</h3><h4 id="更新Python3-X版本"><a href="#更新Python3-X版本" class="headerlink" title="更新Python3.X版本"></a>更新Python3.X版本</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入安装包目录</span></span><br><span class="line"><span class="built_in">cd</span> /<span class="built_in">source</span></span><br><span class="line"><span class="comment"># 下载Python3安装包</span></span><br><span class="line">wget https://www.python.org/ftp/python/3.7.10/Python-3.7.10.tgz</span><br><span class="line"><span class="comment"># 解压</span></span><br><span class="line">tar xzvf Python-3.7.0.tgz</span><br><span class="line"><span class="built_in">cd</span> Python-3.7.0</span><br><span class="line">mkdir /usr/<span class="built_in">local</span>/src/python3   <span class="comment">#这个是个人喜好放在这个目录</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="安装GC编译器"><a href="#安装GC编译器" class="headerlink" title="安装GC编译器"></a>安装GC编译器</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>先安装一下GC编译器，要不然编译失败，没办法安装。</p>
+<p><strong>检查一下：</strong>要注意的是产生了：python3和pip3.7</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls &#x2F;usr&#x2F;local&#x2F;src&#x2F;python3&#x2F;bin</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装pip"><a href="#安装pip" class="headerlink" title="安装pip"></a>安装pip</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装依赖</span></span><br><span class="line">yum install -y epel-release</span><br><span class="line"><span class="meta">#</span><span class="bash">安装pip</span></span><br><span class="line">yum install -y python-pip</span><br><span class="line"><span class="meta">#</span><span class="bash">查看pip版本</span></span><br><span class="line">pip --version</span><br><span class="line"><span class="meta">#</span><span class="bash">升级pip版本</span></span><br><span class="line">pip install -U pip</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装docker-compose"><a href="#安装docker-compose" class="headerlink" title="安装docker-compose"></a>安装docker-compose</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line">pip install docker-compose</span><br></pre></td></tr></table></figure>
+
+<h3 id="通过docker安装"><a href="#通过docker安装" class="headerlink" title="通过docker安装"></a>通过docker安装</h3><h4 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h4><blockquote>
+<p>已安装docker该步骤略过。</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com -o get-docker.sh | sudo sh</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装-Docker-Compos"><a href="#安装-Docker-Compos" class="headerlink" title="安装 Docker Compos"></a>安装 Docker Compos</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</span><br><span class="line">sudo chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
+
+<h2 id="下载REALEASE文件"><a href="#下载REALEASE文件" class="headerlink" title="下载REALEASE文件"></a>下载REALEASE文件</h2><blockquote>
+<p>下载下图路径下的文件，里面包含项目执行的所需要的SQL以及依赖。</p>
+</blockquote>
+<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20210316105046.png" alt="image-20210316105036672"></p>
+<h2 id="准备运行配置"><a href="#准备运行配置" class="headerlink" title="准备运行配置"></a>准备运行配置</h2><p>具体可参考：<a href="https://github.com/hhyo/Archery/tree/master/src/docker-compose">文档地址</a></p>
+<blockquote>
+<p>docker-compose.yml文件内的services可按照本身的运行环境来调整，同时注意检查版本号是否正确，比如说外部已经装好了mysql、redis、inception，就可以将对应的services删除，但是需要注意修改settings.py文件的相关配置，具体可以参考<a target="_blank" rel="noopener" href="https://archerydms.com/installation/manual/#_5">修改配置</a></p>
+</blockquote>
+<h2 id="启动部署"><a href="#启动部署" class="headerlink" title="启动部署"></a>启动部署</h2><blockquote>
+<p>下载 <a href="https://github.com/hhyo/archery/releases/">Releases</a>文件，解压后进入docker-compose文件夹,按照本文4.3步骤进行本地配置。</p>
+<p>因本人使用的是新建的虚拟机，所以就按照默认配置进行执行了。</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 启动</span></span><br><span class="line">docker-compose -f docker-compose.yml up -d</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 表结构初始化</span></span><br><span class="line">docker exec -ti archery /bin/bash</span><br><span class="line">cd /opt/archery</span><br><span class="line">source /opt/venv4archery/bin/activate</span><br><span class="line">python3 manage.py makemigrations sql  </span><br><span class="line">python3 manage.py migrate </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 数据初始化</span></span><br><span class="line">python3 manage.py dbshell&lt;sql/fixtures/auth_group.sql</span><br><span class="line">python3 manage.py dbshell&lt;src/init_sql/mysql_slow_query_review.sql</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建管理用户</span></span><br><span class="line">python3 manage.py createsuperuser</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 重启</span></span><br><span class="line">docker restart archery</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 日志查看和问题排查</span></span><br><span class="line">docker logs archery -f --tail=50</span><br></pre></td></tr></table></figure>
+
+<h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h2><p><a target="_blank" rel="noopener" href="http://127.0.0.1:9123/">http://127.0.0.1:9123</a></p>
+<h2 id="启动后配置"><a href="#启动后配置" class="headerlink" title="启动后配置"></a>启动后配置</h2><p>在启动后 Archery 有一些配置(如Inception , 资源组, 权限组等)需要按需配置, 请详细阅读 <a target="_blank" rel="noopener" href="https://archerydms.com/configuration/">配置项说明</a> , 按照自己的需要进行配置</p>
+<h2 id="运行界面"><a href="#运行界面" class="headerlink" title="运行界面"></a>运行界面</h2><p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20210316113345.png" alt="image-20210316113342723"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Archery/" rel="tag">Archery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/3/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2015-2021
+        <i class="ri-heart-fill heart_icon"></i> will
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        由 <a href="https://hexo.io" target="_blank">Hexo</a> 强力驱动
+        <span class="division">|</span>
+        主题 - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></s>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Will"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/player">播放器</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+
+<link rel="stylesheet" href="/css/clipboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+<!-- CanvasBackground -->
+
+
+    
+  </div>
+</body>
+
+</html>

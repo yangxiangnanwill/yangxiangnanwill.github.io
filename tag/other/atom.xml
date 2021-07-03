@@ -1,0 +1,331 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
+    <title>Will • Posts by &#34;other&#34; tag</title>
+    <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
+    <updated>2021-05-09T07:52:34.091Z</updated>
+    <category term="Docker" />
+    <category term="Archery" />
+    <category term="JAVA" />
+    <category term="POI" />
+    <category term="EXCEL" />
+    <category term="Linux" />
+    <category term="Cron" />
+    <category term="BeetlSql" />
+    <category term="Git" />
+    <category term="Other" />
+    <category term="ProtoBuffer" />
+    <category term="随笔" />
+    <category term="Spring Cloud" />
+    <category term="IDEA" />
+    <category term="Stream" />
+    <category term="Debug" />
+    <category term="JAVA工具类整理" />
+    <category term="Poi" />
+    <category term="EasyExcel" />
+    <category term="Excel" />
+    <category term="测试" />
+    <category term="Typora" />
+    <category term="IDEA常用功能整理" />
+    <category term="MyBatis" />
+    <category term="SpringBoot" />
+    <category term="爬虫" />
+    <category term="Quartz" />
+    <category term="Jsoup" />
+    <category term="Http" />
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/05/09/Other/Typora%E6%95%99%E7%A8%8B/</id>
+        <title>Typora史上保姆级教程</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/05/09/Other/Typora%E6%95%99%E7%A8%8B/"/>
+        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;本篇介绍一下博猪经常使用的一个工具的教程，也是博猪用于总结开发和记录学习笔记的一个神器，说先说明一点，博猪纯纯的处女座，所以对于某些东西还是有较高的要求的，但是这款工具都满足了博猪的要求，最主要的事情就是开源（免费）和用着爽。废话不多说，下面博猪带给你史上Typora保姆级教程。&lt;/p&gt;
+&lt;p&gt;Typora 一直是我认为桌面端笔记应用应有的终极形态。用一句话概况话来说就是，「它的&lt;strong&gt;功能之强大、设计之冷静、体验之美妙、理念之先进&lt;/strong&gt;，我认为值得所有笔记应用厂商学习。」&lt;/p&gt;
+&lt;p&gt;参考文章：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sspai.com/post/54912/&#34;&gt;少数派&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qq_33159059/article/details/87910522&#34;&gt;CSDN博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/tian_ci/article/details/85257667&#34;&gt;CSDN博客&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;Typora简介&#34;&gt;&lt;a href=&#34;#Typora简介&#34; class=&#34;headerlink&#34; title=&#34;Typora简介&#34;&gt;&lt;/a&gt;Typora简介&lt;/h1&gt;&lt;h2 id=&#34;Typora-是什么？&#34;&gt;&lt;a href=&#34;#Typora-是什么？&#34; class=&#34;headerlink&#34; title=&#34;Typora 是什么？&#34;&gt;&lt;/a&gt;Typora 是什么？&lt;/h2&gt;&lt;p&gt;Typora 是一款&lt;strong&gt;支持实时预览的 Markdown 文本编辑器&lt;/strong&gt;。它有 OS X、Windows、Linux 三个平台的版本，并且由于仍在测试中，是&lt;strong&gt;完全免费&lt;/strong&gt;的。&lt;/p&gt;
+&lt;p&gt;在这篇文章中，我希望以「Typora 是什么」这个问题为线索，向大家全面介绍这款令人爱不释手的笔记应用。&lt;/p&gt;
+&lt;h2 id=&#34;一个-Markdown-文本编辑器&#34;&gt;&lt;a href=&#34;#一个-Markdown-文本编辑器&#34; class=&#34;headerlink&#34; title=&#34;一个 Markdown 文本编辑器&#34;&gt;&lt;/a&gt;一个 Markdown 文本编辑器&lt;/h2&gt;&lt;p&gt;Typora 首先是一个 Markdown 文本编辑器，它支持且仅支持 Markdown 语法的文本编辑。在 &lt;a href=&#34;https://typora.io/&#34;&gt;Typora 官网&lt;/a&gt; 上他们将 Typora 描述为 「A truly &lt;strong&gt;minimal&lt;/strong&gt; markdown editor. 」。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/49c4cdef47bf81018b9871a628523064.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;关于-Markdown&#34;&gt;&lt;a href=&#34;#关于-Markdown&#34; class=&#34;headerlink&#34; title=&#34;关于 Markdown&#34;&gt;&lt;/a&gt;关于 Markdown&lt;/h3&gt;&lt;p&gt;Markdown 是用来编写结构化文档的一种纯文本格式，它使我们在双手不离开键盘的情况下，可以对文本进行一定程度的格式排版。&lt;/p&gt;
+&lt;p&gt;由于目前还没有一个权威机构对 Markdown 的语法进行规范，各应用厂商制作时遵循的 Markdown 语法也是不尽相同的。其中比较受到认可的是 &lt;a href=&#34;https://github.github.com/gfm/&#34;&gt;GFM 标准&lt;/a&gt;，它是由著名代码托管网站 &lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt; 所制定的。Typora 主要使用的也是 GFM 标准。同时，你还可以在 &lt;code&gt;文件 - 偏好设置 - Markdown 语法偏好 - 严格模式&lt;/code&gt; 中将标准设置为「更严格地遵循 GFM 标准」。具体内容你可以在官方的 &lt;a href=&#34;http://support.typora.io/Strict-Mode/&#34;&gt;这篇文档&lt;/a&gt; 中查看。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/a35f8fd5e9d968edfe5a0b02b54d0881.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;严格模式&lt;/p&gt;
+&lt;h3 id=&#34;写得舒服&#34;&gt;&lt;a href=&#34;#写得舒服&#34; class=&#34;headerlink&#34; title=&#34;写得舒服&#34;&gt;&lt;/a&gt;写得舒服&lt;/h3&gt;&lt;p&gt;一个文本编辑器，&lt;strong&gt;写得舒服&lt;/strong&gt;是关键。我曾说过，「更有趣的是，一个笔记应用不会因为它支持 Markdown 语法而高级或易用很多。」，细枝末节处的人性化考虑才是最重要的。而 Typora 的编辑体验显然是经过深思熟虑设计的产物。&lt;/p&gt;
+&lt;p&gt;我认为：一个优秀的笔记应用应该给用户&lt;strong&gt;选择 Markdown 语法风格的权利&lt;/strong&gt;。而 Typora 在这一点上是我目前见过所有 Markdown 笔记应用中做得最好的。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/ea30087c6f93d0fa3c5a313c8cdce357.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;文本编辑设置&lt;/p&gt;
+&lt;p&gt;通过打开 &lt;code&gt;文件 - 偏好设置&lt;/code&gt; 你会发现 Typora 为编辑体验的考虑细致到了令人叹为观止的程度。Typora 中提供了大量有关 Markdown 偏好的设置，据此，你可以构建一个几乎完全适合自己的 Markdown 编辑器。下面我将依次介绍一些与文本编辑体验有关的功能亮点。&lt;/p&gt;
+&lt;h4 id=&#34;智能标点&#34;&gt;&lt;a href=&#34;#智能标点&#34; class=&#34;headerlink&#34; title=&#34;智能标点&#34;&gt;&lt;/a&gt;智能标点&lt;/h4&gt;&lt;p&gt;我认为「智能标点」是比较有趣的一点。它可以自动帮你将不是很美观的直引号 &lt;code&gt;&amp;quot;&lt;/code&gt; &lt;code&gt;&amp;#39;&lt;/code&gt; 转化为更美观的弯引号 &lt;code&gt;“&lt;/code&gt; &lt;code&gt;‘&lt;/code&gt; &lt;code&gt;’&lt;/code&gt; &lt;code&gt;”&lt;/code&gt;。具体内容你可以在官方的 &lt;a href=&#34;http://support.typora.io/SmartyPants/&#34;&gt;这篇文档&lt;/a&gt; 中查看。关于直弯引号在 macOS 上如何输入你也可以看 &lt;a href=&#34;https://sspai.com/post/38342&#34;&gt;这篇文章&lt;/a&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;图片插入&#34;&gt;&lt;a href=&#34;#图片插入&#34; class=&#34;headerlink&#34; title=&#34;图片插入&#34;&gt;&lt;/a&gt;图片插入&lt;/h4&gt;&lt;p&gt;Typora 的图片插入功能是广受好评的。要知道，Markdown 原生不太注重图片插入的功能，但你可以在 Typora 中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接使用 &lt;code&gt;右键 - 复制 Ctrl + V&lt;/code&gt; 将网络图片、剪贴板图片复制到文档中&lt;/li&gt;
+&lt;li&gt;拖动本地图片到文档中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Typora 会自动帮你插入符合 Markdown 语法的图片语句，并给它加上标题。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/1de13eae43785e27bbbcd631931fd161.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;复制图片&lt;/p&gt;
+&lt;p&gt;你也完全可以使用图床来保证文档在分享后图片仍能正常显示。&lt;/p&gt;
+&lt;p&gt;更强大的是，Typora 支持在拖动或 &lt;code&gt;Ctrl + V&lt;/code&gt; 网络图片后自动将其保存到本地。你可以在 &lt;code&gt;文件 - 偏好设置 - 编辑器 - 图片插入&lt;/code&gt; 中选择复制到哪个路径，什么情况下需要复制。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/717da653ad91e938c5f1f40555b9c057.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;图片插入&lt;/p&gt;
+&lt;p&gt;这一功能保证了即使网络图片源失效了，你还有本地的备份可用。同时也能使你的文档文件夹更合理、完整。&lt;/p&gt;
+&lt;h4 id=&#34;打字机模式和专注模式&#34;&gt;&lt;a href=&#34;#打字机模式和专注模式&#34; class=&#34;headerlink&#34; title=&#34;打字机模式和专注模式&#34;&gt;&lt;/a&gt;打字机模式和专注模式&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;「打字机模式」&lt;/strong&gt;使得你所编辑的那一行永远处于屏幕正中。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;「专注模式」&lt;/strong&gt;使你正在编辑的那一行保留颜色，而其他行的字体呈灰色。&lt;/p&gt;
+&lt;p&gt;你可以在 &lt;code&gt;视图 - 专注模式 / 打字机模式&lt;/code&gt; 中勾选使用这两个模式。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/8b4e14ef732a23d4cc2a8fb1f8ec016c.gif&#34; alt=&#34;img&#34;&gt;两种模式&lt;/p&gt;
+&lt;h4 id=&#34;实时预览&#34;&gt;&lt;a href=&#34;#实时预览&#34; class=&#34;headerlink&#34; title=&#34;实时预览&#34;&gt;&lt;/a&gt;实时预览&lt;/h4&gt;&lt;p&gt;我想很果断地下这个结论：到现在还不支持编辑界面实时预览的 Markdown 编辑器基本可以退出市场了。Typora 在这一方面显然已经领先了一大步——他们连 Markdown 语法的标记都在实时预览中消去了。当你离开正在编辑的有格式的文本段后，Typora 会自动隐藏 Markdown 标记，只留下&lt;strong&gt;「所见即所得」&lt;/strong&gt;的美妙。&lt;em&gt;他们把这称为 Hybrid View。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/f99c9ce02e2728ec6c64b443947fc67e.gif&#34; alt=&#34;img&#34;&gt;所见即所得&lt;/p&gt;
+&lt;p&gt;为了防止一些程序 bug 的发生（虽然在我使用下来感到是很少的）导致格式问题无法修改，Typora 保留了一个&lt;strong&gt;「源代码模式」&lt;/strong&gt;。你可以通过 &lt;code&gt;视图 - 源代码模式&lt;/code&gt; 或左下角的 &lt;code&gt;&amp;lt;/&amp;gt;&lt;/code&gt; 按钮进入。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/bcda9c4e35725b7297a6b90d8745564e.gif&#34; alt=&#34;img&#34;&gt;源代码模式&lt;/p&gt;
+&lt;h4 id=&#34;大纲-文件侧边栏&#34;&gt;&lt;a href=&#34;#大纲-文件侧边栏&#34; class=&#34;headerlink&#34; title=&#34;大纲 / 文件侧边栏&#34;&gt;&lt;/a&gt;大纲 / 文件侧边栏&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/f2461efb5ac297facfcd9f72cc5da6be.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;侧边栏&lt;/p&gt;
+&lt;p&gt;Typora 会根据你 Markdown 标记的 H1、H2、H3…… 各级标题为你呈现一个大纲。&lt;/p&gt;
+&lt;p&gt;你也可以选择查看文件夹中的文件，但由于目前 Typora 只支持查看 md 文件，因此我认为文件侧边栏这个功能还是很鸡肋的。&lt;/p&gt;
+&lt;h4 id=&#34;空格与换行&#34;&gt;&lt;a href=&#34;#空格与换行&#34; class=&#34;headerlink&#34; title=&#34;空格与换行&#34;&gt;&lt;/a&gt;空格与换行&lt;/h4&gt;&lt;p&gt;Typora 在空格与换行部分主要是使用 &lt;a href=&#34;http://www.commonmark.cn/w/&#34;&gt;CommonMark&lt;/a&gt; 作为标注规范。与前文提到的 GFM 一样，CommonMark 也是比较流行的 Markdown 语言规范（解析器）之一。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;空格：&lt;/strong&gt;在输入连续的空格后，Typora 会在编辑器视图里为你保留这些空格，但当你打印或导出时，这些空格会被省略成一个。&lt;br&gt;你可以在源代码模式下，为每个空格前加一个 &lt;code&gt;\&lt;/code&gt; 转义符，或者直接使用 HTML 风格的 &lt;code&gt;&amp;amp;nbps;&lt;/code&gt; 来保持连续的空格。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;软换行：&lt;/strong&gt;需要说明的是，在 Markdown 语法中，换行（line break）与换段是不同的。且换行分为软换行和硬换行。在 Typora 中，你可以通过 &lt;code&gt;Shift + Enter&lt;/code&gt; 完成一次软换行。软换行只在编辑界面可见，当文档被导出时换行会被省略。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;硬换行：&lt;/strong&gt;你可以通过 &lt;code&gt;空格 + 空格 + Shift + Enter&lt;/code&gt; 完成一次硬换行，而这也是许多 Markdown 编辑器所原生支持的。硬换行在文档被导出时将被保留，且没有换段的段后距。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;换段：&lt;/strong&gt;你可以通过 &lt;code&gt;Enter&lt;/code&gt; 完成一次换段。Typora 会自动帮你完成两次 &lt;code&gt;Shift + Enter&lt;/code&gt; 的软换行，从而完成一次换段。这也意味着在 Markdown 语法下，换段是通过在段与段之间加入空行来实现的。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Windows 风格（CR+LF）与 Unix 风格（CR）的换行符：&lt;/strong&gt;CR 表示回车 &lt;code&gt;\r&lt;/code&gt; ，即回到一行的开头，而 LF 表示换行 &lt;code&gt;\n&lt;/code&gt; ，即另起一行。&lt;br&gt;所以 Windows 风格的换行符本质是「回车 + 换行」，而 Unix 风格的换行符是「换行」。这也是为什么 Unix / Mac 系统下的文件，如果在 Windows 系统直接打开会全部在同一行内。 你可以在 &lt;code&gt;文件 - 偏好设置 - 编辑器 - 默认换行符&lt;/code&gt; 中对此进行切换。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下附以上各空格、换行、换段的测试结果图。具体内容你可以在官网的 &lt;a href=&#34;http://support.typora.io/Line-Break/&#34;&gt;这篇文档&lt;/a&gt; 中查阅。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/5c2fbaa53b27666a7fd0b07ac3e100bf.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;空格、换行、换段&lt;/p&gt;
+&lt;h4 id=&#34;emoji-表情&#34;&gt;&lt;a href=&#34;#emoji-表情&#34; class=&#34;headerlink&#34; title=&#34;emoji 表情&#34;&gt;&lt;/a&gt;emoji 表情&lt;/h4&gt;&lt;p&gt;如今 emoji 表情越来越多地出现在一些网站文章中，但在桌面端（特别是 Windows 系统）文本编辑器上插入 emoji 是一件十分麻烦的事情。在使用 Typora 之前，我打出 emoji 表情的办法基本有两个：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;输入法联想：&lt;/strong&gt;优点是比较方便，但会插入一张图片而不是一个字符，在许多情景下都不是很合适。 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;复制 emoji 符号：&lt;/strong&gt;优点是能保证符号的形式，但显然每次用都需要去复制，比较麻烦。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/b2601a694aba07b8a68615ca59bcc495.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;输入法联想&lt;/p&gt;
+&lt;p&gt;在 Typora 中，你可以用 &lt;code&gt;:emoji:&lt;/code&gt; 的形式来打出 emoji，软件会自动给出图形的提示，还是比较好用的。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/ff26eeb5ff2d6fae16cab163ebfcd096.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;Typora 中输入 emoji&lt;/p&gt;
+&lt;h2 id=&#34;一个学术文档编辑器&#34;&gt;&lt;a href=&#34;#一个学术文档编辑器&#34; class=&#34;headerlink&#34; title=&#34;一个学术文档编辑器&#34;&gt;&lt;/a&gt;一个学术文档编辑器&lt;/h2&gt;&lt;p&gt;除了基本的文本编辑体验极佳之外，Typora 还是一个非常优秀的学术文档编辑器。当然作为一个轻量级的、基于 Markdown 的编辑器，它不能与那些 LaTeX 编辑器相提并论，但它仍支持了许多可用于学术写作的功能。&lt;/p&gt;
+&lt;h3 id=&#34;LaTeX&#34;&gt;&lt;a href=&#34;#LaTeX&#34; class=&#34;headerlink&#34; title=&#34;LaTeX&#34;&gt;&lt;/a&gt;LaTeX&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;LaTeX 是一种基于 TeX 的排版系统，由于它易于快速生成复杂表格和数学公式，非常适用于生成高印刷质量的科技和数学类文档。如果你常阅读数学、计算机等领域的学术论文，你一定对 LaTeX 不陌生。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Typora 原生支持 LaTeX 语法，你有两种方式输入 LaTeX 风格的数学公式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;行内公式（inline）：&lt;/strong&gt;用 &lt;code&gt;$...$&lt;/code&gt; 括起公式，公式会出现在行内。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;块间公式（display）：&lt;/strong&gt;用 &lt;code&gt;$$...$$&lt;/code&gt; 括起公式（注意 &lt;code&gt;$$&lt;/code&gt; 后需要换行），公式会默认显示在行中间。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;具体的 LaTeX 语法在此不赘述了，你可以在 &lt;a href=&#34;https://blog.csdn.net/happyday_d/article/details/83715440&#34;&gt;这篇文章&lt;/a&gt; 中查看。&lt;/p&gt;
+&lt;h3 id=&#34;代码高亮&#34;&gt;&lt;a href=&#34;#代码高亮&#34; class=&#34;headerlink&#34; title=&#34;代码高亮&#34;&gt;&lt;/a&gt;代码高亮&lt;/h3&gt;&lt;p&gt;Typora 中代码的插入也可以分为行内和块间两种：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;行内代码：用 &lt;code&gt;...&lt;/code&gt; 或 &lt;code&gt;...&lt;/code&gt; 括起代码，代码会以主题中设置的样式出现在行内，但不会实现代码高亮。&lt;/li&gt;
+&lt;li&gt;代码块：输入 ````` 后并输入语言名，换行，开始写代码，Typora 就会自动帮你实现代码高亮。Typora 原生支持许多编程语言代码块的语法高亮，基本日常常用的编程语言它都能很好地支持。&lt;br&gt;除此以外，你也可以直接换行开始写，而后再选择语言。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/a8c283ba4f1ba09d41331b87e2eef3b9.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;代码块&lt;/p&gt;
+&lt;h3 id=&#34;表格&#34;&gt;&lt;a href=&#34;#表格&#34; class=&#34;headerlink&#34; title=&#34;表格&#34;&gt;&lt;/a&gt;表格&lt;/h3&gt;&lt;p&gt;在 Markdown 中插入表格一直是一件比较头疼的事情。在一般的 Markdown 编辑器中，你可以通过以下的格式插入表格：&lt;/p&gt;
+&lt;figure class=&#34;highlight markdown&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;| 左对齐 | 右对齐 | 居中对齐 |&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;| :-----| ----: | :----: |&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;| 单元格 | 单元格 | 单元格 |&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;| 单元格 | 单元格 | 单元格 |&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;乍一看还挺直观好用的是吧？但想想，一旦表格内容层次不齐，又或是表格长得难以下手，直接用键盘输入表格就显得十分麻烦和痛苦了。&lt;/p&gt;
+&lt;p&gt;好在 Typora 为我们提供了图形界面的插入表格的功能，你只需要在行内 &lt;code&gt;鼠标右键 - 插入 - 表格&lt;/code&gt; ，并输入行数和列数，Typora 就会自动生成一张样式不错的空表格。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/51bf2f290592e1ddbadb95765c04f297.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;Typora 表格&lt;/p&gt;
+&lt;h3 id=&#34;链接引用与脚注&#34;&gt;&lt;a href=&#34;#链接引用与脚注&#34; class=&#34;headerlink&#34; title=&#34;链接引用与脚注&#34;&gt;&lt;/a&gt;链接引用与脚注&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;链接引用&lt;/strong&gt;类似于我们常在论文末尾看到的「参考文献」的写法，你可以通过 &lt;code&gt;[]:&lt;/code&gt; 的语法来为你的文档加上链接引用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;脚注&lt;/strong&gt;在少数派的文章中也很常见，即某段话结尾右上角标有数字标记，页面底部进行注释的写法。你可以在需要插入脚注标号的位置写 &lt;code&gt;[^ number ]&lt;/code&gt; ，再在下方通过 &lt;code&gt;[^ number ]:&lt;/code&gt; 在文档中插入脚注。注意不要遗漏了脚注编号 &lt;code&gt;number&lt;/code&gt; 前后的空格。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/5f82606e6d89fe1eb24705c4ca6b895d.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;链接引用和脚注&lt;/p&gt;
+&lt;h3 id=&#34;文件系统&#34;&gt;&lt;a href=&#34;#文件系统&#34; class=&#34;headerlink&#34; title=&#34;文件系统&#34;&gt;&lt;/a&gt;文件系统&lt;/h3&gt;&lt;p&gt;除了前文提到的文件侧边栏，Typora 还提供了一些耦合度不高的文件系统。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;快速打开：&lt;/strong&gt;你可以通过 &lt;code&gt;文件 - 快速打开...&lt;/code&gt; 或 &lt;code&gt;Ctrl + P&lt;/code&gt; 快捷键快速打开最近的文档。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;保存：&lt;/strong&gt;Typora 支持自动保存，一般很少有写好的文档丢失的情况。同时它也提供了诸如「保存」、「另存为」、「保存全部打开的文件…」之类的功能。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;导入：&lt;/strong&gt;Typora 支持非常多的文件格式：.docx, .latex, .tex, .ltx, .rst, .rest, .org, .wiki, .dokuwiki, .textile, .opml, .epub。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;导出：&lt;/strong&gt;Typora 原生支持导出 PDF，HTML等格式。你可以根据软件内提示安装 &lt;strong&gt;Pandoc 插件&lt;/strong&gt;来导出更多例如 docx，LaTeX 等格式。 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/ba295f21f0b71646bb36a0517e868ced.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;导出&lt;/p&gt;
+&lt;h2 id=&#34;一个伪装成文本编辑器的浏览器&#34;&gt;&lt;a href=&#34;#一个伪装成文本编辑器的浏览器&#34; class=&#34;headerlink&#34; title=&#34;一个伪装成文本编辑器的浏览器&#34;&gt;&lt;/a&gt;一个伪装成文本编辑器的浏览器&lt;/h2&gt;&lt;p&gt;当我的一个朋友问我「Typora 有什么好写的？」时，我回答「Typora 是一个伪装成文本编辑器的浏览器」。是的，事实上如果你有一定的计算机基础，你可以找到许多有关于「Typora 其实是一个浏览器」的蛛丝马迹。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/13837bcdcded9ae406e8c4aac5f2d752.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;图片插入&lt;/p&gt;
+&lt;p&gt;在图片插入的选项中，Typora 用了「复制图片到 ./${filename}.assets 文件夹」的说法，而这其实是网页前端常用的 Javascript 字符串模板语法的风格。&lt;/p&gt;
+&lt;p&gt;再比如，Typora 将更遵循 GFM 标准的 Markdown 语法模式称为「严格模式 Strict Mode」，这一说法常见于 HTML 和 JavaScript 编程中。类似「源代码模式」的说法也是同理。&lt;/p&gt;
+&lt;p&gt;当然，最明显的一点是当你按下 &lt;code&gt;Shift + F12&lt;/code&gt; 快捷键时，页面会弹出一个基于 Chrome 的开发者工具栏，也就是我们在浏览器中常说的「审查元素」。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/da8c9b305a222cb5fadb41c12da81a12.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;审查元素&lt;/p&gt;
+&lt;h3 id=&#34;伪装从何而来？&#34;&gt;&lt;a href=&#34;#伪装从何而来？&#34; class=&#34;headerlink&#34; title=&#34;伪装从何而来？&#34;&gt;&lt;/a&gt;伪装从何而来？&lt;/h3&gt;&lt;p&gt;当我们把视角放在「Typora 是一个支持 Markdown 语言的文本编辑器」的出发点来考虑这个问题，一切就都显得很明白了。&lt;/p&gt;
+&lt;p&gt;John Gruber 在 2004 年用 Perl 创造了 Markdown 语言，这个语言的目的是希望大家使用「易于阅读、易于撰写的纯文字格式，并选择性的转换成有效的 XHTML（或是 HTML）」。也就是说，&lt;strong&gt;在 Markdown 诞生之初，它就是为了被浏览器阅读而设计的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们在用 Markdown 语言撰写文稿的时候，其实本质上是在借助某种编程语言的转化（解析器）来编写一个 HTML 网页。Markdown 从它诞生之初就与 Web 技术有着及其紧密的联系。&lt;/p&gt;
+&lt;p&gt;如果我说，我们每一篇文稿都是一个网页，那就很好理解了。Typora 利用解析器先将我们写的 Markdown 文档解析成为 HTML 文档，再为它嵌入一个 CSS 样式，最后再加上可能需要的脚本等。&lt;/p&gt;
+&lt;h3 id=&#34;HTML&#34;&gt;&lt;a href=&#34;#HTML&#34; class=&#34;headerlink&#34; title=&#34;HTML&#34;&gt;&lt;/a&gt;HTML&lt;/h3&gt;&lt;p&gt;HTML 是一种标记语言，主要负责构成网页的骨架，它包含所有不加装饰的网页元素。在 Typora 的使用场景下则是所有的&lt;strong&gt;文本、段落、标题等&lt;/strong&gt;的记号。&lt;/p&gt;
+&lt;p&gt;你可以把一张网页想象成一幅数字油画，HTML 就是那个黑白线条的底，上面写满了数字标记，示意你哪一块区域要涂什么颜色。而 CSS 则负责在对应的区域涂上颜色，甚至加上一些装饰等。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/7ce3d9ed245eed902e833405b9464103.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;数字油画&lt;/p&gt;
+&lt;h4 id=&#34;HTML-标签&#34;&gt;&lt;a href=&#34;#HTML-标签&#34; class=&#34;headerlink&#34; title=&#34;HTML 标签&#34;&gt;&lt;/a&gt;HTML 标签&lt;/h4&gt;&lt;p&gt;Typora 支持许多常用的 HTML 标签，如果你了解 HTML 语法的话，你可以写出十分美观丰富的文档页面。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/89bba4dfdfb49b8d3c129ce1157a54b1.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;HTML 标签&lt;/p&gt;
+&lt;p&gt;事实上你可以在 Typora 中完成许多基本的 HTML 风格的文本输入，例如 HTML 字符、HTML 块、HTML 风格的注释，甚至是视频和音频。具体支持的功能和限制请在 &lt;a href=&#34;http://support.typora.io/HTML/&#34;&gt;官方文档&lt;/a&gt; 中查阅。&lt;/p&gt;
+&lt;p&gt;有了这一功能，我们就可以在 Typora 中创造出远超普通 Markdown 文档的页面效果。&lt;/p&gt;
+&lt;h4 id=&#34;导出为-HTML&#34;&gt;&lt;a href=&#34;#导出为-HTML&#34; class=&#34;headerlink&#34; title=&#34;导出为 HTML&#34;&gt;&lt;/a&gt;导出为 HTML&lt;/h4&gt;&lt;p&gt;Typora 原生支持将文档导出为 HTML 格式的文件，并选择是否要嵌入 style（也就是后文我将提到的 CSS 的部分）。&lt;/p&gt;
+&lt;p&gt;除此之外，由于其本身「浏览器」的属性，你可以直接在实时预览界面用 &lt;code&gt;Ctrl +C&lt;/code&gt; 复制到 HTML 代码。一个实用的用处是将这些 HTML 代码直接 &lt;code&gt;Ctrl + V&lt;/code&gt; 黏贴到微信公众号后台，基本可以保证两边显示效果相同。这一点不仅使公众号推送可以有更自由、美观的样式，也让编辑、排版更轻松了。（由于微信自带浏览器的一些特性，可能有少部分 CSS style 不能生效，建议多多校对。）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/3d818c18934632b043fcf4ad9be1d046.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;公众号&lt;/p&gt;
+&lt;p&gt;具体如何用 Typora 完成公众号写作，你可以在 &lt;a href=&#34;https://sspai.com/post/40524&#34;&gt;这篇文章&lt;/a&gt; 中进一步了解。&lt;/p&gt;
+&lt;h3 id=&#34;CSS&#34;&gt;&lt;a href=&#34;#CSS&#34; class=&#34;headerlink&#34; title=&#34;CSS&#34;&gt;&lt;/a&gt;CSS&lt;/h3&gt;&lt;p&gt;为了让文档更美观，我们可以为其加上 CSS style。我认为 Typora 对 CSS 的支持让它成为一众桌面笔记应用中最与众不同的一个。在 Typora 中 CSS 被称为「主题」，但其本质仍是 CSS 文件。你可以在 &lt;code&gt;文件 - 偏好设置 - 主题 - 打开主题文件夹&lt;/code&gt; 看到这些 CSS 文件。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/7d3cfbc92721733e16ed63d72a48a572.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;主题&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/98a04c4f9129e0f018d15bc790b376c2.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;主题文件夹&lt;/p&gt;
+&lt;p&gt;选择不同的主题可以使文档拥有不同的外观，但不会影响内容。Typora 自带了若干主题，你也可以在 &lt;a href=&#34;http://theme.typora.io/&#34;&gt;官网&lt;/a&gt; 下载更多的主题。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/efcf65ba993c4bb0b058d6eb8258df6f.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;主题商店&lt;/p&gt;
+&lt;p&gt;除此以外，如果你有一定的 Web 编程基础，你当然也可以自己修改、新建适合你使用需求的 CSS 文件。我自己就写了一份名为 WeChat 的 CSS 文件，来符合我公众号特定的排版需求，例如正文是 15px，页边距是 8，小标题是 18px 等等。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2019/05/24/317ac1df25fcfc817c03f92d6086764e.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; alt=&#34;img&#34;&gt;CSS 文件&lt;/p&gt;
+&lt;p&gt;使用 Typora 的「主题」功能写公众号的一个好处是，只需要每次都套用同样的主题，我们就可以在保证每次排版规范都相同的同时，节省许多重复的工作。&lt;/p&gt;
+&lt;h3 id=&#34;YAML-front-matter&#34;&gt;&lt;a href=&#34;#YAML-front-matter&#34; class=&#34;headerlink&#34; title=&#34;YAML front-matter&#34;&gt;&lt;/a&gt;YAML front-matter&lt;/h3&gt;&lt;p&gt;Typora 支持在文档头部加上基于 YAML 的 front-matter 信息，这一特性适用于把 Markdown 文档分类归档上传到用 Hexo 框架搭建的博客中。&lt;/p&gt;
+&lt;h2 id=&#34;写在最后&#34;&gt;&lt;a href=&#34;#写在最后&#34; class=&#34;headerlink&#34; title=&#34;写在最后&#34;&gt;&lt;/a&gt;写在最后&lt;/h2&gt;&lt;p&gt;如果你看过 Typora 的 &lt;a href=&#34;https://typora.io/dev_release.html&#34;&gt;更新日志&lt;/a&gt; 你会发现它早在 2015 年 12 月 19 日就发布了 0.7.0 (alpha) 版本，但到目前为止它仍处于 beta 阶段。&lt;em&gt;截止到笔者写作这篇文章的初稿时，Typora 的版本号为 0.9.9.24.6 (beta)。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;我想，能够潜心三年多打磨、测试一个产品，开发者们一定是倾注了极大的心血到这款笔记应用中。而在使用中，我也能体会到开发者的良苦用心。他们不想做知识的储备中心，不想做快速的草稿、笔记应用，也不想做任何和生产力无关的功能和特性。对于 Typora 的设计和构想，只有唯一的宗旨——&lt;strong&gt;「生产效率」&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;因为移动端生产效率低，所以只有桌面端应用。因为左顾右盼的两栏式预览影响思路，所以他们甚至去掉了 Markdown 语法标记，只留下最终呈现的样式。因为 Markdown 是为了 HTML 呈现而设计的，所以他们提供了从入门到高级的一系列 Web 辅助功能…… 这一切都只是为了纯粹的&lt;strong&gt;生产效率&lt;/strong&gt;。如果我们回头想想，Markdown 语言本身，当初不也是为了高效地生成简单网页而诞生的吗？&lt;/p&gt;
+&lt;p&gt;最后，让我们一起期待这款&lt;strong&gt;顶级桌面文本生产力工具&lt;/strong&gt;的正式版的到来吧！😆&lt;/p&gt;
+&lt;h1 id=&#34;快捷键操作&#34;&gt;&lt;a href=&#34;#快捷键操作&#34; class=&#34;headerlink&#34; title=&#34;快捷键操作&#34;&gt;&lt;/a&gt;快捷键操作&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;Ctrl + 1&lt;/td&gt;
+&lt;td&gt;一级 标题&lt;/td&gt;
+&lt;td&gt;Ctrl + B&lt;/td&gt;
+&lt;td&gt;字体加粗&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl + 2&lt;/td&gt;
+&lt;td&gt;二级标题&lt;/td&gt;
+&lt;td&gt;Ctrl + I&lt;/td&gt;
+&lt;td&gt;字体倾斜&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl + 3&lt;/td&gt;
+&lt;td&gt;三级标题&lt;/td&gt;
+&lt;td&gt;Ctrl + U&lt;/td&gt;
+&lt;td&gt;下划线&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl + 4&lt;/td&gt;
+&lt;td&gt;四级标题&lt;/td&gt;
+&lt;td&gt;Ctrl + Home&lt;/td&gt;
+&lt;td&gt;返回顶部&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl + 5&lt;/td&gt;
+&lt;td&gt;五级标题&lt;/td&gt;
+&lt;td&gt;Ctrl + End&lt;/td&gt;
+&lt;td&gt;返回底部&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl + 6&lt;/td&gt;
+&lt;td&gt;六级标题&lt;/td&gt;
+&lt;td&gt;Ctrl + T&lt;/td&gt;
+&lt;td&gt;创建表格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl + L&lt;/td&gt;
+&lt;td&gt;选中一行&lt;/td&gt;
+&lt;td&gt;Ctrl + K&lt;/td&gt;
+&lt;td&gt;创造超链接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl + D&lt;/td&gt;
+&lt;td&gt;选择一个单词&lt;/td&gt;
+&lt;td&gt;Ctrl + F&lt;/td&gt;
+&lt;td&gt;搜索&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl + E&lt;/td&gt;
+&lt;td&gt;选中相同格式的文字&lt;/td&gt;
+&lt;td&gt;Ctrl + H&lt;/td&gt;
+&lt;td&gt;搜索并替换&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Alt + Shift + 5&lt;/td&gt;
+&lt;td&gt;删除线&lt;/td&gt;
+&lt;td&gt;Ctrl + Shift + I&lt;/td&gt;
+&lt;td&gt;插入图片&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h1 id=&#34;高级进阶&#34;&gt;&lt;a href=&#34;#高级进阶&#34; class=&#34;headerlink&#34; title=&#34;高级进阶&#34;&gt;&lt;/a&gt;高级进阶&lt;/h1&gt;&lt;h2 id=&#34;优化标题排版（带序号）&#34;&gt;&lt;a href=&#34;#优化标题排版（带序号）&#34; class=&#34;headerlink&#34; title=&#34;优化标题排版（带序号）&#34;&gt;&lt;/a&gt;优化标题排版（带序号）&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;俗话说：“授之以鱼，不如授之以渔”。&lt;/code&gt;在讲如何添加自动编号功能之前，我要先讲一下如何修改的，不能不明所以。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Typora的底层是一个浏览器，或者说是一个Electron应用。不信，你可以按下快捷键&lt;code&gt;Shift + F12&lt;/code&gt;，或者点击&lt;code&gt;视图&lt;/code&gt;中的&lt;code&gt;打开开发者工具&lt;/code&gt;按钮：&lt;br&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/20190225023640443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMTU5MDU5,size_16,color_FFFFFF,t_70&#34; alt=&#34;在这里插入图片描述&#34;&gt;&lt;/p&gt;
+&lt;p&gt;就可以看到熟悉的浏览器控制台调试界面了：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/20190225023703930.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMTU5MDU5,size_16,color_FFFFFF,t_70&#34; alt=&#34;在这里插入图片描述&#34;&gt;&lt;/p&gt;
+&lt;p&gt;既然知道Typora的实现基于浏览器，那么就好办了。各个界面肯定都是HTML语言渲染出来的，那么，我们就可以通过添加CSS样式表，来添加自动编号的功能。好在Typora官方提前想到了这个事，专门出了篇官方文章来告诉我们怎么去添加自定义的样式文件。&lt;/p&gt;
+&lt;p&gt;知道了怎么添加自定义样式文件，还得知道怎么去定制样式表。语言吗，肯定是CSS。剩下的就差定位编辑区、导航窗格区和目录树区对应的元素了。最简洁的方法，就是使用元素选择键去定位，下图中的红色按钮就是：&lt;/p&gt;
+&lt;p&gt;三个区域的元素定位如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;正文标题： #write&lt;/li&gt;
+&lt;li&gt;[TOC]目录树区: .md-toc-content&lt;/li&gt;
+&lt;li&gt;侧边栏的目录大纲区: .sidebar-content&lt;br&gt;到此，前菜都已准备好。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;自动编号功能&lt;br&gt;&lt;strong&gt;那么，开始准备主菜。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;编写css样式文件，命名为：&lt;code&gt;base.user.css&lt;/code&gt;。要完成自动编号功能，必须借助CSS3中的如下特性：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;计数器：counter(基准计数器)，用于计算基准计数器的值&lt;br&gt;计数器增量：counter-increment，设置每次增长的量&lt;br&gt;重置计数器：counter-reset，用于将当前标题的计数器重置到指定的基准计数器&lt;br&gt;子代类型选择器：nth-of-type，可以从子代中选择出同一类型元素中的指定元素&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight css&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;76&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;77&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;78&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;79&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;80&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;81&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;82&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;83&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;84&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;85&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;86&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;87&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;88&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;89&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;90&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;91&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;92&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;93&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;94&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;95&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;96&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;97&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;98&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;99&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;100&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;101&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;102&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;103&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;104&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;105&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;106&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;107&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;108&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;109&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;110&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;111&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;112&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;113&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;114&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;115&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;116&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;117&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;118&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;119&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;120&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;121&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;122&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;123&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;124&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;125&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-class&#34;&gt;.sidebar-content&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;counter-reset&lt;/span&gt;: h1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-h1&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;counter-reset&lt;/span&gt;: h2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-h2&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;counter-reset&lt;/span&gt;: h3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-h3&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;counter-reset&lt;/span&gt;: h4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-h4&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;counter-reset&lt;/span&gt;: h5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-h5&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;counter-reset&lt;/span&gt;: h6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-h1&lt;/span&gt;&amp;gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-item&lt;/span&gt;&amp;gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-label&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;counter-increment&lt;/span&gt;: h1;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;content&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h1) &lt;span class=&#34;string&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-h2&lt;/span&gt;&amp;gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-item&lt;/span&gt;&amp;gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-label&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;counter-increment&lt;/span&gt;: h2;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;content&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h1) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h2) &lt;span class=&#34;string&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-h3&lt;/span&gt;&amp;gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-item&lt;/span&gt;&amp;gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-label&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;counter-increment&lt;/span&gt;: h3;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;content&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h1) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h2) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h3) &lt;span class=&#34;string&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-h4&lt;/span&gt;&amp;gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-item&lt;/span&gt;&amp;gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-label&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;counter-increment&lt;/span&gt;: h4;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;content&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h1) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h2) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h3) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h4) &lt;span class=&#34;string&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-h5&lt;/span&gt;&amp;gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-item&lt;/span&gt;&amp;gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-label&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;counter-increment&lt;/span&gt;: h5;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;content&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h1) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h2) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h3) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h4) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h5) &lt;span class=&#34;string&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-h6&lt;/span&gt;&amp;gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-item&lt;/span&gt;&amp;gt;&lt;span class=&#34;selector-class&#34;&gt;.outline-label&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;counter-increment&lt;/span&gt;: h6;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;content&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h1) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h2) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h3) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h4) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h5) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h6) &lt;span class=&#34;string&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;/** initialize css counter */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-id&#34;&gt;#write&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;counter-reset&lt;/span&gt;: h1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-tag&#34;&gt;h1&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;counter-reset&lt;/span&gt;: h2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-tag&#34;&gt;h2&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;counter-reset&lt;/span&gt;: h3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-tag&#34;&gt;h3&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;counter-reset&lt;/span&gt;: h4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-tag&#34;&gt;h4&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;counter-reset&lt;/span&gt;: h5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-tag&#34;&gt;h5&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;counter-reset&lt;/span&gt;: h6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;/** put counter result into headings */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-id&#34;&gt;#write&lt;/span&gt; &lt;span class=&#34;selector-tag&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;counter-increment&lt;/span&gt;: h1;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;content&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h1) &lt;span class=&#34;string&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;span class=&#34;selector-id&#34;&gt;#write&lt;/span&gt; &lt;span class=&#34;selector-tag&#34;&gt;h2&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;counter-increment&lt;/span&gt;: h2;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;content&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h1) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h2) &lt;span class=&#34;string&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-id&#34;&gt;#write&lt;/span&gt; &lt;span class=&#34;selector-tag&#34;&gt;h3&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-tag&#34;&gt;h3&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.md-focus&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.md-heading&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt; &lt;span class=&#34;comment&#34;&gt;/** override the default style for focused headings */&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;counter-increment&lt;/span&gt;: h3;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;content&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h1) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h2) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h3) &lt;span class=&#34;string&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-id&#34;&gt;#write&lt;/span&gt; &lt;span class=&#34;selector-tag&#34;&gt;h4&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-tag&#34;&gt;h4&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.md-focus&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.md-heading&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;counter-increment&lt;/span&gt;: h4;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;content&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h1) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h2) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h3) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h4) &lt;span class=&#34;string&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-id&#34;&gt;#write&lt;/span&gt; &lt;span class=&#34;selector-tag&#34;&gt;h5&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-tag&#34;&gt;h5&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.md-focus&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.md-heading&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;counter-increment&lt;/span&gt;: h5;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;content&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h1) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h2) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h3) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h4) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h5) &lt;span class=&#34;string&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-id&#34;&gt;#write&lt;/span&gt; &lt;span class=&#34;selector-tag&#34;&gt;h6&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-tag&#34;&gt;h6&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.md-focus&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.md-heading&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;counter-increment&lt;/span&gt;: h6;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;content&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h1) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h2) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h3) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h4) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h5) &lt;span class=&#34;string&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;counter&lt;/span&gt;(h6) &lt;span class=&#34;string&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;/** override the default style for focused headings */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-id&#34;&gt;#write&lt;/span&gt;&amp;gt;&lt;span class=&#34;selector-tag&#34;&gt;h3&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.md-focus&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-id&#34;&gt;#write&lt;/span&gt;&amp;gt;&lt;span class=&#34;selector-tag&#34;&gt;h4&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.md-focus&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-id&#34;&gt;#write&lt;/span&gt;&amp;gt;&lt;span class=&#34;selector-tag&#34;&gt;h5&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.md-focus&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-id&#34;&gt;#write&lt;/span&gt;&amp;gt;&lt;span class=&#34;selector-tag&#34;&gt;h6&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.md-focus&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-tag&#34;&gt;h3&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.md-focus&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-tag&#34;&gt;h4&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.md-focus&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-tag&#34;&gt;h5&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.md-focus&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-tag&#34;&gt;h6&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.md-focus&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:before&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;color&lt;/span&gt;: inherit;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;border&lt;/span&gt;: inherit;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;border-radius&lt;/span&gt;: inherit;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;position&lt;/span&gt;: inherit;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;left&lt;/span&gt;:initial;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;float&lt;/span&gt;: none;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;top&lt;/span&gt;:initial;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;font-size&lt;/span&gt;: inherit;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;padding-left&lt;/span&gt;: inherit;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;padding-right&lt;/span&gt;: inherit;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;vertical-align&lt;/span&gt;: inherit;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;font-weight&lt;/span&gt;: inherit;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attribute&#34;&gt;line-height&lt;/span&gt;: inherit;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;Typora侧边栏的大纲视图折叠-win系统&#34;&gt;&lt;a href=&#34;#Typora侧边栏的大纲视图折叠-win系统&#34; class=&#34;headerlink&#34; title=&#34;Typora侧边栏的大纲视图折叠( win系统 )&#34;&gt;&lt;/a&gt;Typora侧边栏的大纲视图折叠( win系统 )&lt;/h2&gt;&lt;h3 id=&#34;效果&#34;&gt;&lt;a href=&#34;#效果&#34; class=&#34;headerlink&#34; title=&#34;效果&#34;&gt;&lt;/a&gt;效果&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/20181226094905721.gif&#34; alt=&#34;在这里插入图片描述&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;解决方案&#34;&gt;&lt;a href=&#34;#解决方案&#34; class=&#34;headerlink&#34; title=&#34;解决方案&#34;&gt;&lt;/a&gt;解决方案&lt;/h3&gt;&lt;p&gt;&lt;code&gt;文件 ⇒ 偏好设置 ⇒ 勾选&amp;quot;侧边栏&amp;quot;&lt;/code&gt;&lt;br&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/20181226093929134.png&#34; alt=&#34;在这里插入图片描述&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/20181226093934973.png&#34; alt=&#34;在这里插入图片描述&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/20181226101055865.gif&#34; alt=&#34;在这里插入图片描述&#34;&gt;&lt;/p&gt;
+</content>
+        <category term="Other" />
+        <category term="Typora" />
+        <updated>2021-05-09T07:52:34.091Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/23/Other/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B/</id>
+        <title>Git分支管理开发流程</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/23/Other/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B/"/>
+        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;有幸参与一次大型项目，人员较多，需求较多，代码管理方面值得学习，记录总结一下分支管理。&lt;/p&gt;
+&lt;p&gt;本文参考：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/ligang2585116/category_2869531.html?spm=1001.2014.3001.5482&#34;&gt;李刚的学习专栏&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.pianshen.com/article/1702340951/&#34;&gt;程序员大本营&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;管理流程简介&#34;&gt;&lt;a href=&#34;#管理流程简介&#34; class=&#34;headerlink&#34; title=&#34;管理流程简介&#34;&gt;&lt;/a&gt;管理流程简介&lt;/h1&gt;&lt;h2 id=&#34;流程图例&#34;&gt;&lt;a href=&#34;#流程图例&#34; class=&#34;headerlink&#34; title=&#34;流程图例&#34;&gt;&lt;/a&gt;流程图例&lt;/h2&gt;&lt;p&gt;大体管理流程如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/03/22/6ok62V.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pianshen.com/images/752/5e42a4fa2ddcfadf8c02c39a9da9cc40.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;案例解析&#34;&gt;&lt;a href=&#34;#案例解析&#34; class=&#34;headerlink&#34; title=&#34;案例解析&#34;&gt;&lt;/a&gt;案例解析&lt;/h2&gt;&lt;p&gt;如上图所示：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;生产初始版本为v0.5,项目初始develop与master是保持一致的&lt;/p&gt;
+&lt;p&gt;现有新需求:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;平台注册功能&lt;/li&gt;
+&lt;li&gt;平台登录功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;版本规划：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;平台注册功能v1.0版本上线&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;平台登录功能v1.1版本上线&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;开发任务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;注册功能由张三负责&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;登录功能由李四负责&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;张三同学：v1-0版本开发到上线&#34;&gt;&lt;a href=&#34;#张三同学：v1-0版本开发到上线&#34; class=&#34;headerlink&#34; title=&#34;张三同学：v1.0版本开发到上线&#34;&gt;&lt;/a&gt;张三同学：v1.0版本开发到上线&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;从develop新建一个用于开发注册功能的分支&lt;/li&gt;
+&lt;li&gt;命名为feature_register&lt;/li&gt;
+&lt;li&gt;本地拉取分支代码，开发注册功能，测试，修改再测试等流程&lt;/li&gt;
+&lt;li&gt;开发完成，提交到develop，此时feature_register可以删除&lt;/li&gt;
+&lt;li&gt;从develop新建一个预发布分支release-v1.0&lt;/li&gt;
+&lt;li&gt;从release-v1.0打包发布到测试环境&lt;/li&gt;
+&lt;li&gt;测试修复bug，测试通过更新到master以及develop&lt;/li&gt;
+&lt;li&gt;master打包，打tag，tag信息为v1.0相关信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;李四同学：v1-1版本开发到上线&#34;&gt;&lt;a href=&#34;#李四同学：v1-1版本开发到上线&#34; class=&#34;headerlink&#34; title=&#34;李四同学：v1.1版本开发到上线&#34;&gt;&lt;/a&gt;李四同学：v1.1版本开发到上线&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;从develop新建一个用于开发登录功能的分支&lt;/li&gt;
+&lt;li&gt;命名为feature_login&lt;/li&gt;
+&lt;li&gt;本地拉取分支代码，开发登录功能，测试，修改再测试等流程&lt;/li&gt;
+&lt;li&gt;开发完成，提交到develop，此时feature_login可以删除&lt;/li&gt;
+&lt;li&gt;从develop新建一个预发布分支release-v1.0&lt;/li&gt;
+&lt;li&gt;从release-v1.0打包发布到测试环境&lt;/li&gt;
+&lt;li&gt;测试修复bug，测试通过更新到master以及develop&lt;/li&gt;
+&lt;li&gt;master打包，打tag，tag信息为v1.0相关信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：hotfix-xxx分支主要是针对master上bug的修复，修复完成之后需要把hotfix合并到maser，master打包，打tag，tag信息为hotfix相关信息，并发布生产，同时合并到develop分支，使develop和master一致，此时hotfix可删除。&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="Git" />
+        <category term="Other" />
+        <updated>2021-03-23T13:50:08.103Z</updated>
+    </entry>
+</feed>

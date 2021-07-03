@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Will • Posts by &#34;stream&#34; tag</title>
+        <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
+        <description>愿你一生努力，一生被爱</description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 16 May 2021 19:15:30 +0800</pubDate>
+        <lastBuildDate>Sun, 16 May 2021 19:15:30 +0800</lastBuildDate>
+        <category>Docker</category>
+        <category>Archery</category>
+        <category>JAVA</category>
+        <category>POI</category>
+        <category>EXCEL</category>
+        <category>Linux</category>
+        <category>Cron</category>
+        <category>BeetlSql</category>
+        <category>Git</category>
+        <category>Other</category>
+        <category>ProtoBuffer</category>
+        <category>随笔</category>
+        <category>Spring Cloud</category>
+        <category>IDEA</category>
+        <category>Stream</category>
+        <category>Debug</category>
+        <category>JAVA工具类整理</category>
+        <category>Poi</category>
+        <category>EasyExcel</category>
+        <category>Excel</category>
+        <category>测试</category>
+        <category>Typora</category>
+        <category>IDEA常用功能整理</category>
+        <category>MyBatis</category>
+        <category>SpringBoot</category>
+        <category>爬虫</category>
+        <category>Quartz</category>
+        <category>Jsoup</category>
+        <category>Http</category>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/05/16/Tool/IDEA-Stram%E8%B0%83%E8%AF%95/</guid>
+            <title>IDEA-Stream调试</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/05/16/Tool/IDEA-Stram%E8%B0%83%E8%AF%95/</link>
+            <category>IDEA</category>
+            <category>Stream</category>
+            <category>Debug</category>
+            <pubDate>Sun, 16 May 2021 19:15:30 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;JAVA8的lambda的stream编程，给我们带来了很流畅(牛逼)的编程体验，但带来的问题也很明显：&lt;/p&gt;
+&lt;p&gt;下面粘贴一张博猪一个日常的代码片段：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/05/16/GMO19Rr65Uykbad.png&#34; alt=&#34;image-20210516222157802.png&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;上面代码看着很简洁(zhaungbi)，但是带来的问题也很直接：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方法可读性不好&lt;/li&gt;
+&lt;li&gt;调试困难，无法知道流程周转&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面博猪给大家介绍一个博猪日常写stream时常用的一个神器：==Stream-Trance==,一个IDEA自带的调试神器，这个工具可以详细看到每一步操作的关系、结果，非常方便进行调试。&lt;/p&gt;
+&lt;h1 id=&#34;Stream调试&#34;&gt;&lt;a href=&#34;#Stream调试&#34; class=&#34;headerlink&#34; title=&#34;Stream调试&#34;&gt;&lt;/a&gt;Stream调试&lt;/h1&gt;&lt;p&gt;下面通过一个Demo，让博猪给你演示一下神器是如何使用的。首先给大家贴一下没有注释的代码（很装逼的代码）。&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;List&amp;lt;Integer&amp;gt; list = Arrays.asList(&lt;span class=&#34;number&#34;&gt;45&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;56&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;23&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;89&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;34&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;78&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;56&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Map&amp;lt;Boolean, List&amp;lt;Integer&amp;gt;&amp;gt; collect = list.stream()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        .filter(i -&amp;gt; i * &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt; &amp;gt; &lt;span class=&#34;number&#34;&gt;60&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        .sorted()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        .map(i -&amp;gt; i - &lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        .distinct()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        .collect(Collectors.groupingBy(i -&amp;gt; i &amp;gt;= &lt;span class=&#34;number&#34;&gt;50&lt;/span&gt;, Collectors.toList()));&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println(collect);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;下面博猪贴一下有注释的代码，顺便理一下这一块的代码的流程：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//初始化数组&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;List&amp;lt;Integer&amp;gt; list = Arrays.asList(&lt;span class=&#34;number&#34;&gt;45&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;56&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;23&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;89&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;34&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;78&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;56&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Map&amp;lt;Boolean, List&amp;lt;Integer&amp;gt;&amp;gt; collect = list.stream()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;comment&#34;&gt;//过滤 当前数字*2后大于60的,结果：[45,56,89,34,78,56]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        .filter(i -&amp;gt; i * &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt; &amp;gt; &lt;span class=&#34;number&#34;&gt;60&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;comment&#34;&gt;//默认排序,结果:[34,45,56,56,78,89]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        .sorted()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;comment&#34;&gt;//每个值-10，成一个map：结果：&amp;#123;24,35,46,46,68,79&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        .map(i -&amp;gt; i - &lt;span class=&#34;number&#34;&gt;10&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;comment&#34;&gt;//去重,结果：&amp;#123;24,35,46,68,79&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        .distinct()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;comment&#34;&gt;//大于五十的分组，输出一个Map&amp;lt;Boolean,Collection&amp;gt;,结果：&amp;#123;false=[24, 35, 46], true=[68, 79]&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        .collect(Collectors.groupingBy(i -&amp;gt; i &amp;gt;= &lt;span class=&#34;number&#34;&gt;50&lt;/span&gt;, Collectors.toList()));&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println(collect);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;上面这段代码算是流程比较长的了，当然实际工作中可能遇到比这个还要复杂的，那博猪演示一下日常是怎么调试Stream流程的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在Stream那行打上断点。点击debug运行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/05/16/H9D6AIBzpVuUO1J.png&#34; alt=&#34;image-20210516224707120.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;点击下方按钮&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/05/16/kCfM9RescBSY56T.png&#34; alt=&#34;image-20210516224817756.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;然后自动进入当前 &lt;code&gt;Stream &lt;/code&gt;跟踪调试窗口，默认Split 模式显示，上面会展示每个链式调用的选项卡，点击各个选项卡可以看对应每步的跟踪结果。如下面所示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;初始流&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/05/16/irG98MsoLcwWK7j.png&#34; alt=&#34;image-20210516224947403.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;过滤&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/05/16/pdXOtZ1eg3fEmCA.png&#34; alt=&#34;image-20210516225139631.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;排序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/05/16/KTpAJVIzayqiM7h.png&#34; alt=&#34;image-20210516225158100.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;转map&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/05/16/uSknG6vzfbgQyEl.png&#34; alt=&#34;image-20210516225215527.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;去重&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/05/16/sBdW1lf2NxVLUmg.png&#34; alt=&#34;image-20210516225230717.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;结果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/05/16/y6EzCFpfOjNmwo5.png&#34; alt=&#34;image-20210516225249902.png&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;还可以点击&lt;code&gt;Flat Mode&lt;/code&gt;，查看完整的流程的运转&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/05/16/dNqs9ZXwrbgi4De.png&#34; alt=&#34;image-20210516225407829.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;链式调试&#34;&gt;&lt;a href=&#34;#链式调试&#34; class=&#34;headerlink&#34; title=&#34;链式调试&#34;&gt;&lt;/a&gt;链式调试&lt;/h1&gt;&lt;p&gt;上方详细介绍了一下Stream的调试，但是平时也是使用一些Lambda的链式编程，那上述方法是否支持呢？&lt;/p&gt;
+&lt;p&gt;比如下方代码：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;String str = Optional.of(&lt;span class=&#34;string&#34;&gt;&amp;quot;will&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        .map(s -&amp;gt; s + &lt;span class=&#34;string&#34;&gt;&amp;quot; hello&amp;quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        .map(s -&amp;gt; s + &lt;span class=&#34;string&#34;&gt;&amp;quot; world!&amp;quot;&lt;/span&gt;).get();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println(str);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;OK，我们按照上方进行调试，调试图如下方所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/05/16/VKAsE5YGah8SIT2.png&#34; alt=&#34;image-20210516230237419.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可惜， &lt;code&gt;Trace Current Stream Chain &lt;/code&gt;按钮是灰色状态，不能进入，因为那个按钮只能被 &lt;code&gt;Stream &lt;/code&gt;调试所用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;那像这种非 Stream 链式调用怎么调试呢？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;断点进入后，可以选中需要调试的部分链式代码片断，然后右键选中 &lt;code&gt;Evaluate Expression &lt;/code&gt;菜单（ALT + F8）进入表达式计算窗口，点击 &lt;code&gt;Evaluate &lt;/code&gt;按钮开始计算：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/05/16/vNV6iIde2qsDzlC.png&#34; alt=&#34;image-20210516230402779.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/05/16/lqGKfRJrHC7XojM.png&#34; alt=&#34;image-20210516230429818.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;计算无误，该表达式还可以自由编辑，非常强大。虽然没有像 &lt;code&gt;Stream &lt;/code&gt;这样专属的调试面板，使用 &lt;code&gt;Evaluate Expression &lt;/code&gt;也能达到调试链式调用的目的&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
