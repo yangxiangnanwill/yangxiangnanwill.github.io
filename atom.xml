@@ -4,11 +4,11 @@
     <title>Will</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
     <updated>2021-07-03T14:52:38.991Z</updated>
+    <category term="Docker" />
+    <category term="Archery" />
     <category term="JAVA" />
     <category term="POI" />
     <category term="EXCEL" />
-    <category term="Docker" />
-    <category term="Archery" />
     <category term="Linux" />
     <category term="Cron" />
     <category term="BeetlSql" />
@@ -160,7 +160,7 @@
 &lt;li&gt;&lt;p&gt;服务发现：服务调用方向服务注册中心咨询服务，并获取所有服务的实例清单，实现对具体服务实&lt;br&gt;例的访问。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://img-blog.csdn.net/20160419111801783&#34; alt=&#34;Microservices&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/RRd8Ag&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/07/03/RRd8Ag.jpg&#34; alt=&#34;RRd8Ag.jpg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;通过上面的调用图会发现，除了微服务，还有一个组件是服务注册中心，它是微服务架构非常重要的一个组件，在微服务架构里主要起到了协调者的一个作用。注册中心一般包含如下几个功能：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;服务发现：&lt;/p&gt;

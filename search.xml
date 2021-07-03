@@ -1,212 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>POI-Excel生成建表语句</title>
-    <url>/2021/03/21/Java/Excel%E7%94%9F%E6%88%90%E5%BB%BA%E8%A1%A8%E8%AF%AD%E5%8F%A5/</url>
-    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>最近公司开展新项目，由于项目进度紧急，部分项目负责人不在现在，建表相关的使用的是Excel，由于Excel拼接过于麻烦，博猪COPY了一下大神的代码，修改了部分代码，以便适用于我们项目。</p>
-<p>参照博客地址：<a href="https://blog.csdn.net/u014624447/article/details/111690418">博客地址</a></p>
-</blockquote>
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="Excel模板"><a href="#Excel模板" class="headerlink" title="Excel模板"></a>Excel模板</h2><blockquote>
-<p>模板可以根据自己的习惯来创建，需要注意的是建表时我们需要的参数有：数据库名，表名，表注释，列名，列注释，列类型，列长度，列精度，是否主键，是否非空。</p>
-</blockquote>
-<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20210224163817.png" alt="image-20210224163802424"></p>
-<table>
-<thead>
-<tr>
-<th>Database Name</th>
-<th>your database name</th>
-<th>Table Name (physical name)</th>
-<th>your table name</th>
-<th>Table Name (logical name)</th>
-<th>你的表名</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Column Name (physical name)</td>
-<td>Column Name (logical name)</td>
-<td>Type</td>
-<td>Length</td>
-<td>Decimal</td>
-<td>PK</td>
-<td>NOT NULL</td>
-</tr>
-<tr>
-<td>column 1</td>
-<td>列 1</td>
-<td>VARCHAR</td>
-<td>255</td>
-<td></td>
-<td>*</td>
-<td>*</td>
-</tr>
-</tbody></table>
-<h1 id="撸代码"><a href="#撸代码" class="headerlink" title="撸代码"></a>撸代码</h1><h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><p>首先新建maven项目，并导入poi（用于操作excel）、lombok（简化实体类代码）依赖：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>3.15<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi-ooxml<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>3.15<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.18.16<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>因为我们只需要控制台输入，并且输出sql语句，所以只需要这3个依赖即可。</p>
-<h2 id="相关实体类"><a href="#相关实体类" class="headerlink" title="相关实体类"></a>相关实体类</h2><h3 id="数据类型常量类TableTypeConstant-java"><a href="#数据类型常量类TableTypeConstant-java" class="headerlink" title="数据类型常量类TableTypeConstant.java"></a>数据类型常量类TableTypeConstant.java</h3><p>定义MySQL的数据类型</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TableTypeConstant</span> </span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String INT = <span class="string">&quot;int&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String VARCHAR =<span class="string">&quot;varchar&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DATE = <span class="string">&quot;date&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DATE_TIME=<span class="string">&quot;datetime&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String TEXT =<span class="string">&quot;text&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String LONG_TEXT = <span class="string">&quot;longtext&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String CHAR = <span class="string">&quot;char&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String LONG = <span class="string">&quot;long&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String TIME_STAMP = <span class="string">&quot;timestamp&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DECIMAL=<span class="string">&quot;decimal&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="字段信息ColumnEntity-java"><a href="#字段信息ColumnEntity-java" class="headerlink" title="字段信息ColumnEntity.java"></a>字段信息ColumnEntity.java</h3><p>定义我们关注的字段的关键信息</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ColumnEntity</span> </span>&#123;</span><br><span class="line">	<span class="comment">/*物理列名*/</span></span><br><span class="line">	<span class="keyword">private</span> String physicalColumnName;</span><br><span class="line">	<span class="comment">/*逻辑列名*/</span></span><br><span class="line">	<span class="keyword">private</span> String logicalColumnName;</span><br><span class="line">	<span class="comment">/*类型*/</span></span><br><span class="line">	<span class="keyword">private</span> String type;</span><br><span class="line">	<span class="comment">/*长度*/</span></span><br><span class="line">	<span class="keyword">private</span> String length;</span><br><span class="line">	<span class="comment">/*精度*/</span></span><br><span class="line">	<span class="keyword">private</span> String decimal;</span><br><span class="line">	<span class="comment">/*是否主键*/</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span> isPrimaryKey;</span><br><span class="line">	<span class="comment">/*是否非空*/</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span> isNotNull;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="表信息TableEntity-java"><a href="#表信息TableEntity-java" class="headerlink" title="表信息TableEntity.java"></a>表信息TableEntity.java</h3><p>定义建表语句需要的信息</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TableEntity</span> </span>&#123;</span><br><span class="line">	<span class="comment">/*列信息*/</span></span><br><span class="line">	<span class="keyword">private</span> List&lt;ColumnEntity&gt; entities;</span><br><span class="line">	<span class="comment">/*表物理名*/</span></span><br><span class="line">	<span class="keyword">private</span> String physicalTableName;</span><br><span class="line">	<span class="comment">/*表逻辑名*/</span></span><br><span class="line">	<span class="keyword">private</span> String logicalTableName;</span><br><span class="line">	<span class="comment">/*数据库名*/</span></span><br><span class="line">	<span class="keyword">private</span> String databaseName;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="业务类"><a href="#业务类" class="headerlink" title="业务类"></a>业务类</h2><h3 id="生成SQL语句Excel-java"><a href="#生成SQL语句Excel-java" class="headerlink" title="生成SQL语句Excel.java"></a>生成SQL语句Excel.java</h3><p>包含3个方法</p>
-<ul>
-<li><code>TableEntity readExcel(String excelPath)</code> 解析Excel并返回TableEntity</li>
-<li><code>void convertSQL(TableEntity tableEntity)</code> 根据TableEntity生成SQL语句并写入txt</li>
-<li><code>void writeTXT(String path, String value, String fileName)</code> 将字符串写入txt文件</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.bossYang.myBatisTest.bean.ColumnEntity;</span><br><span class="line"><span class="keyword">import</span> com.bossYang.myBatisTest.bean.TableEntity;</span><br><span class="line"><span class="keyword">import</span> com.bossYang.myBatisTest.bean.TableTypeConstant;</span><br><span class="line"><span class="keyword">import</span> org.apache.poi.hssf.usermodel.HSSFWorkbook;</span><br><span class="line"><span class="keyword">import</span> org.apache.poi.ss.usermodel.Row;</span><br><span class="line"><span class="keyword">import</span> org.apache.poi.ss.usermodel.Row.MissingCellPolicy;</span><br><span class="line"><span class="keyword">import</span> org.apache.poi.ss.usermodel.Sheet;</span><br><span class="line"><span class="keyword">import</span> org.apache.poi.ss.usermodel.Workbook;</span><br><span class="line"><span class="keyword">import</span> org.apache.poi.xssf.usermodel.XSSFWorkbook;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.FileOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.OutputStreamWriter;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Excel</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 读取excel并转换为表实体</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> excelPath</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> TableEntity <span class="title">readExcel</span><span class="params">(String excelPath)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 解析模板对象List</span></span><br><span class="line">		List&lt;ColumnEntity&gt; entities = <span class="keyword">new</span> ArrayList&lt;ColumnEntity&gt;();</span><br><span class="line">		<span class="comment">// 表物理名</span></span><br><span class="line">		String physicalTableName = <span class="keyword">null</span>;</span><br><span class="line">		<span class="comment">// 表逻辑名</span></span><br><span class="line">		String logicalTableName = <span class="keyword">null</span>;</span><br><span class="line">		<span class="comment">// 数据库名</span></span><br><span class="line">		String databaseName = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="comment">// String encoding = &quot;GBK&quot;;</span></span><br><span class="line">			File excel = <span class="keyword">new</span> File(excelPath);</span><br><span class="line">			<span class="keyword">if</span> (excel.isFile() &amp;&amp; excel.exists()) &#123; <span class="comment">// 判断文件是否存在</span></span><br><span class="line"></span><br><span class="line">				String[] split = excel.getName().split(<span class="string">&quot;\\.&quot;</span>); <span class="comment">// .是特殊字符，需要转义！！！！！</span></span><br><span class="line">				Workbook wb;</span><br><span class="line">				<span class="comment">// 根据文件后缀（xls/xlsx）进行判断</span></span><br><span class="line">				<span class="keyword">if</span> (<span class="string">&quot;xls&quot;</span>.equals(split[<span class="number">1</span>])) &#123;</span><br><span class="line">					FileInputStream fis = <span class="keyword">new</span> FileInputStream(excel); <span class="comment">// 文件流对象</span></span><br><span class="line">					wb = <span class="keyword">new</span> HSSFWorkbook(fis);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">&quot;xlsx&quot;</span>.equals(split[<span class="number">1</span>])) &#123;</span><br><span class="line">					wb = <span class="keyword">new</span> XSSFWorkbook(excel);</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					System.out.println(<span class="string">&quot;文件类型错误!&quot;</span>);</span><br><span class="line">					<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="comment">// 开始解析</span></span><br><span class="line">				Sheet sheet = wb.getSheetAt(<span class="number">0</span>); <span class="comment">// 读取sheet 0</span></span><br><span class="line"></span><br><span class="line">				<span class="keyword">int</span> firstRowIndex = sheet.getFirstRowNum() + <span class="number">2</span>; <span class="comment">// 第一、二行是列名，所以不读，从第三行开始读</span></span><br><span class="line">				<span class="keyword">int</span> lastRowIndex = sheet.getLastRowNum();</span><br><span class="line">				<span class="comment">// System.out.println(&quot;firstRowIndex: &quot;+firstRowIndex);</span></span><br><span class="line">				<span class="comment">// System.out.println(&quot;lastRowIndex: &quot;+lastRowIndex);</span></span><br><span class="line"></span><br><span class="line">				<span class="comment">// 解析模板对象List</span></span><br><span class="line">				entities = <span class="keyword">new</span> ArrayList&lt;ColumnEntity&gt;();</span><br><span class="line">				<span class="comment">// 数据库名</span></span><br><span class="line">				databaseName = sheet.getRow(<span class="number">0</span>).getCell(<span class="number">1</span>).getStringCellValue();</span><br><span class="line">				<span class="comment">// 表物理名</span></span><br><span class="line">				physicalTableName = sheet.getRow(<span class="number">0</span>).getCell(<span class="number">3</span>).getStringCellValue();</span><br><span class="line">				<span class="comment">// 表逻辑名</span></span><br><span class="line">				logicalTableName = sheet.getRow(<span class="number">0</span>).getCell(<span class="number">5</span>).getStringCellValue();</span><br><span class="line"></span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> rIndex = firstRowIndex; rIndex &lt;= lastRowIndex; rIndex++) &#123; <span class="comment">// 遍历行</span></span><br><span class="line">					<span class="comment">// System.out.println(&quot;rIndex: &quot; + rIndex);</span></span><br><span class="line">					ColumnEntity entity = <span class="keyword">new</span> ColumnEntity();</span><br><span class="line">					Row row = sheet.getRow(rIndex);</span><br><span class="line">					<span class="keyword">if</span> (row != <span class="keyword">null</span>) &#123;</span><br><span class="line">						<span class="keyword">if</span> (row.getCell(<span class="number">0</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue() == <span class="keyword">null</span> || row</span><br><span class="line">								.getCell(<span class="number">0</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue().isEmpty()) &#123;</span><br><span class="line">							<span class="keyword">continue</span>;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="comment">/*</span></span><br><span class="line"><span class="comment">						 * int firstCellIndex = row.getFirstCellNum(); int lastCellIndex =</span></span><br><span class="line"><span class="comment">						 * row.getLastCellNum(); for (int cIndex = firstCellIndex; cIndex &lt;</span></span><br><span class="line"><span class="comment">						 * lastCellIndex; cIndex++) &#123; //遍历列 Cell cell = row.getCell(cIndex); if (cell !=</span></span><br><span class="line"><span class="comment">						 * null) &#123; System.out.println(cell.toString()); &#125; &#125;</span></span><br><span class="line"><span class="comment">						 */</span></span><br><span class="line">						</span><br><span class="line">						<span class="comment">// 解析对象</span></span><br><span class="line">						entity.setPhysicalColumnName(</span><br><span class="line">								row.getCell(<span class="number">0</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue());<span class="comment">// 列物理名</span></span><br><span class="line">						entity.setLogicalColumnName(</span><br><span class="line">								row.getCell(<span class="number">1</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue());<span class="comment">// 列逻辑名</span></span><br><span class="line">						entity.setType(row.getCell(<span class="number">2</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue());<span class="comment">// 类型</span></span><br><span class="line">						entity.setLength(row.getCell(<span class="number">3</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue());<span class="comment">// 长度</span></span><br><span class="line">						entity.setDecimal(row.getCell(<span class="number">4</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue());<span class="comment">// 精度</span></span><br><span class="line">						entity.setPrimaryKey(<span class="string">&quot;*&quot;</span></span><br><span class="line">								.equals(row.getCell(<span class="number">5</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue()));<span class="comment">// 是否主键</span></span><br><span class="line">						entity.setNotNull(<span class="string">&quot;*&quot;</span></span><br><span class="line">								.equals(row.getCell(<span class="number">6</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue()));<span class="comment">// 是否非空</span></span><br><span class="line">						<span class="comment">// 存入list</span></span><br><span class="line">						entities.add(entity);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				System.out.println(<span class="string">&quot;找不到指定的文件&quot;</span>);</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		TableEntity tableEntity = <span class="keyword">new</span> TableEntity();</span><br><span class="line">		tableEntity.setEntities(entities);</span><br><span class="line">		tableEntity.setDatabaseName(databaseName);</span><br><span class="line">		tableEntity.setLogicalTableName(logicalTableName);</span><br><span class="line">		tableEntity.setPhysicalTableName(physicalTableName);</span><br><span class="line">		<span class="keyword">return</span> tableEntity;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 将表实体转换为sql并输出为txt</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> tableEntity</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">convertSQL</span><span class="params">(TableEntity tableEntity)</span> </span>&#123;</span><br><span class="line">		StringBuffer sql = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">		sql.append(<span class="string">&quot;CREATE TABLE `&quot;</span>);</span><br><span class="line">		sql.append(tableEntity.getDatabaseName());</span><br><span class="line">		sql.append(<span class="string">&quot;`.`&quot;</span>);</span><br><span class="line">		sql.append(tableEntity.getPhysicalTableName());</span><br><span class="line">		sql.append(<span class="string">&quot;` (&quot;</span>);</span><br><span class="line">		<span class="comment">// CREATE TABLE `databaseName`.`tablePhysicalName` (</span></span><br><span class="line">		List&lt;ColumnEntity&gt; cellEnties = tableEntity.getEntities();</span><br><span class="line">		<span class="comment">// 主键</span></span><br><span class="line">		String primaryKey = <span class="keyword">null</span>;</span><br><span class="line">		<span class="comment">// 获取主键</span></span><br><span class="line">		<span class="keyword">for</span> (ColumnEntity item : cellEnties) &#123;</span><br><span class="line">			<span class="comment">// 将pk为true的设为主键</span></span><br><span class="line">			<span class="keyword">if</span> (item.isPrimaryKey()) &#123;</span><br><span class="line">				primaryKey = item.getPhysicalColumnName();</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 循环列</span></span><br><span class="line">		<span class="keyword">for</span> (ColumnEntity item : cellEnties) &#123;</span><br><span class="line">			sql.append(<span class="string">&quot; `&quot;</span>);</span><br><span class="line">			sql.append(item.getPhysicalColumnName().trim());</span><br><span class="line">			sql.append(<span class="string">&quot;` &quot;</span>);</span><br><span class="line">			<span class="comment">// `physicalColumnName`</span></span><br><span class="line"></span><br><span class="line">			<span class="comment">// 根据NOT NULL 来拼接</span></span><br><span class="line">			<span class="keyword">if</span> (item.isNotNull()) &#123; <span class="comment">// 如果不允许为空，则拼接NOT NULL</span></span><br><span class="line">				<span class="comment">//类型</span></span><br><span class="line">				String type = item.getType().toLowerCase();</span><br><span class="line">				<span class="comment">//类型转换</span></span><br><span class="line">				<span class="keyword">if</span>(type.indexOf(<span class="string">&quot;varchar&quot;</span>)!=-<span class="number">1</span>) &#123;</span><br><span class="line">					type= TableTypeConstant.VARCHAR;</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span> (type.indexOf(<span class="string">&quot;number&quot;</span>)!=-<span class="number">1</span>) &#123;</span><br><span class="line">					type=TableTypeConstant.INT;</span><br><span class="line">					<span class="comment">//默认长度</span></span><br><span class="line">					<span class="keyword">if</span>(item.getLength()==<span class="keyword">null</span>||item.getLength().isEmpty()) &#123;</span><br><span class="line">						item.setLength(<span class="string">&quot;11&quot;</span>);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span>(type.indexOf(<span class="string">&quot;char&quot;</span>)!=-<span class="number">1</span>) &#123;</span><br><span class="line">					type=TableTypeConstant.CHAR;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				</span><br><span class="line">				<span class="comment">// 根据类型选择是否拼接长度</span></span><br><span class="line">				<span class="keyword">if</span> (TableTypeConstant.CHAR.equals(type) || TableTypeConstant.VARCHAR.equals(type)) &#123; <span class="comment">// 文本需要拼接长度</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot;(&quot;</span>);</span><br><span class="line">					sql.append(item.getLength());</span><br><span class="line">					sql.append(<span class="string">&quot;) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (TableTypeConstant.TEXT.equals(type) || TableTypeConstant.LONG_TEXT.equals(type)) &#123; <span class="comment">// 文本不需要拼接长度</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot; CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (TableTypeConstant.DATE.equals(type)) &#123; <span class="comment">// 时间不需要拼接长度</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot; NOT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (TableTypeConstant.DATE_TIME.equals(type)||TableTypeConstant.TIME_STAMP.equals(type)) &#123; <span class="comment">// 时间需要拼接长度 并且长度为0</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot;(0) NOT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (TableTypeConstant.INT.equals(type)) &#123; <span class="comment">// 数字需要拼接长度</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot;(&quot;</span>);</span><br><span class="line">					sql.append(item.getLength());</span><br><span class="line">					sql.append(<span class="string">&quot;)  NOT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123; <span class="comment">// 如果允许为空，则拼接 NULL DEFAULT NULL</span></span><br><span class="line">				</span><br><span class="line">				String type = item.getType().toLowerCase();</span><br><span class="line">				<span class="comment">//类型转换</span></span><br><span class="line">				<span class="keyword">if</span>(type.indexOf(<span class="string">&quot;varchar&quot;</span>)!=-<span class="number">1</span>) &#123;</span><br><span class="line">					type=TableTypeConstant.VARCHAR;</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span> (type.indexOf(<span class="string">&quot;number&quot;</span>)!=-<span class="number">1</span>) &#123;</span><br><span class="line">					type=TableTypeConstant.INT;</span><br><span class="line">					<span class="comment">//默认长度</span></span><br><span class="line">					<span class="keyword">if</span>(item.getLength()==<span class="keyword">null</span>||item.getLength().isEmpty()) &#123;</span><br><span class="line">						item.setLength(<span class="string">&quot;11&quot;</span>);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span>(type.indexOf(<span class="string">&quot;char&quot;</span>)!=-<span class="number">1</span>) &#123;</span><br><span class="line">					type=TableTypeConstant.CHAR;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				<span class="comment">// 根据类型选择是否拼接长度</span></span><br><span class="line">				<span class="keyword">if</span> (TableTypeConstant.CHAR.equals(type) || TableTypeConstant.VARCHAR.equals(type)) &#123; <span class="comment">// 文本需要拼接长度</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot;(&quot;</span>);</span><br><span class="line">					sql.append(item.getLength());</span><br><span class="line">					sql.append(<span class="string">&quot;) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (TableTypeConstant.TEXT.equals(type) || TableTypeConstant.LONG_TEXT.equals(type)) &#123; <span class="comment">// 文本不需要拼接长度</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot; CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (TableTypeConstant.DATE.equals(type)) &#123; <span class="comment">// 时间不需要拼接长度</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot; NULL DEFAULT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (TableTypeConstant.DATE_TIME.equals(type)||TableTypeConstant.TIME_STAMP.equals(type)) &#123; <span class="comment">// 时间需要拼接长度 并且长度为0</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot;(0) NULL DEFAULT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (TableTypeConstant.INT.equals(type) || TableTypeConstant.BIG_INT.equals(type) || TableTypeConstant.LONG.equals(type)) &#123; <span class="comment">// 数字需要拼接长度</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot;(&quot;</span>);</span><br><span class="line">					sql.append(item.getLength());</span><br><span class="line">					sql.append(<span class="string">&quot;)  NULL DEFAULT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="comment">// 拼接逻辑列名</span></span><br><span class="line">			sql.append(item.getLogicalColumnName());</span><br><span class="line">			sql.append(<span class="string">&quot;&#x27;,&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 拼接主键</span></span><br><span class="line">		sql.append(<span class="string">&quot; PRIMARY KEY (`&quot;</span>);</span><br><span class="line">		sql.append(primaryKey);</span><br><span class="line">		sql.append(<span class="string">&quot;`) USING BTREE ) &quot;</span>);</span><br><span class="line">		<span class="comment">// 拼接引擎和逻辑表名</span></span><br><span class="line">		sql.append(<span class="string">&quot;ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = &#x27;&quot;</span>);</span><br><span class="line">		sql.append(tableEntity.getLogicalTableName());</span><br><span class="line">		sql.append(<span class="string">&quot;&#x27;  ROW_FORMAT = Compact;&quot;</span>);</span><br><span class="line">		System.err.println(sql);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			writeTXT(<span class="string">&quot;&quot;</span>, sql.toString(), tableEntity.getPhysicalTableName() + tableEntity.getLogicalTableName());</span><br><span class="line">			System.out</span><br><span class="line">					.println(<span class="string">&quot;已导出:&quot;</span> + tableEntity.getPhysicalTableName() + tableEntity.getLogicalTableName() + <span class="string">&quot;.txt!&quot;</span>);</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">			System.err.println(<span class="string">&quot;导出文件失败&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 将字符串写入txt并导出</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">writeTXT</span><span class="params">(String path, String value, String fileName)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		File f = <span class="keyword">new</span> File(path + fileName + <span class="string">&quot;.txt&quot;</span>);</span><br><span class="line">		FileOutputStream fos1 = <span class="keyword">new</span> FileOutputStream(f);</span><br><span class="line">		OutputStreamWriter dos1 = <span class="keyword">new</span> OutputStreamWriter(fos1);</span><br><span class="line">		dos1.write(value);</span><br><span class="line">		dos1.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="主入口"><a href="#主入口" class="headerlink" title="主入口"></a>主入口</h2><p>通过控制台输入Excel路径，会在jar包同级目录下生成包含建表SQL的TXT文件。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainApplication</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">while</span>(<span class="keyword">true</span>) &#123;</span><br><span class="line">			Excel excel = <span class="keyword">new</span> Excel();</span><br><span class="line">			Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">			System.err.println(<span class="string">&quot;请输入Excel的路径：&quot;</span>);</span><br><span class="line">			String excelPath = scanner.nextLine();</span><br><span class="line">			TableEntity tEntity = excel.readExcel(excelPath);</span><br><span class="line">			<span class="keyword">if</span>(tEntity==<span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			excel.convertSQL(tEntity);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>基本上就是解析EXCEL，然后根据数据类型拼接SQL语句。</p>
-<p>目前支持情况：</p>
-<ul>
-<li><p><input checked="" disabled="" type="checkbox">  VARCHAR</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  INT</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  LONG</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  DATE</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  DATETIME</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  TIMESTAMP</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  TEXT</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  LONGTEXT</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  CHAR</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  是否为空</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  单主键</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  BIGINT</p>
-</li>
-<li><p><input disabled="" type="checkbox">  FLOAT</p>
-</li>
-<li><p><input disabled="" type="checkbox">  DOUBLE</p>
-</li>
-<li><p><input disabled="" type="checkbox">  DECIMAL</p>
-</li>
-<li><p><input disabled="" type="checkbox">  联合主键</p>
-</li>
-<li><p><input disabled="" type="checkbox">  自定义字符集编码</p>
-</li>
-</ul>
-<blockquote>
-<p>较原文没啥改动，只是增加了部分字段，处理了部分默认值问题。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-        <tag>POI</tag>
-        <tag>EXCEL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>浅析枚举</title>
-    <url>/2021/03/21/Java/JAVA_%E6%B5%85%E6%9E%90%E6%9E%9A%E4%B8%BE/</url>
-    <content><![CDATA[<hr>
-<h2 id="title-Hello-World"><a href="#title-Hello-World" class="headerlink" title="title: Hello World"></a>title: Hello World</h2><h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><p>==<font color="red">Enum 一般用来表示<strong>一组相同类型的常量</strong></font>==。如：性别、日期、月份、颜色等。对这些属性用常量的好处是显而易见的，不仅可以保证单例，且在比较的时候可以用 ”==” 来替换 equals。在 JDK1.5 之前是没有 Enum 这个类型的，那时候一般用接口常量来替代。</p>
-<h1 id="2-Enum究竟是啥"><a href="#2-Enum究竟是啥" class="headerlink" title="2.Enum究竟是啥"></a>2.Enum究竟是啥</h1><p>你是否被问到过以下的问题：</p>
-<ul>
-<li>枚举允许继承类吗？</li>
-<li>枚举允许实现接口吗？</li>
-<li>枚举可以用等号比较吗？</li>
-<li>可以继承枚举吗？</li>
-<li>枚举是单例吗？</li>
-<li>当使用compareTo()比较枚举时，比较的是什么？</li>
-<li>当使用equals()比较枚举的时候，比较的是什么？</li>
-</ul>
-<p>面试官的问题五花八门，但归根结底都是在考察同一个问题：枚举的本质。</p>
-<p>那么枚举究竟是啥?</p>
-<p>废话不说,先看源代码:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Enum</span>&lt;<span class="title">E</span> <span class="keyword">extends</span> <span class="title">Enum</span>&lt;<span class="title">E</span>&gt;&gt;</span></span><br><span class="line"><span class="class">        <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">E</span>&gt;, <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">		<span class="comment">//*******        </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>从源代码可以看出Enum的本质是一个抽象类,所以上述问题基本上都迎刃而解了.</p>
-<h1 id="3-Enum的特性"><a href="#3-Enum的特性" class="headerlink" title="3.Enum的特性"></a>3.Enum的特性</h1><ul>
-<li>Enum常量隐式的加上了static和final，一旦被创建就无法修改</li>
-<li>Enum提供了是类型安全的(type-safe)</li>
-<li>Enum隐式的加上了values()方法，返回一个数组包含所有的Enum常量</li>
-<li>两个Enum常量可以使用 <code>==</code>或<code>equals()</code>方法比较</li>
-<li>Enum可以用在switch语句中，就像int，String。</li>
-<li>Enum有自己的名称空间</li>
-<li>Enum可以实现Java接口</li>
-<li>可以在Enum中定义构造器</li>
-</ul>
-<h1 id="4-Enum的注意事项"><a href="#4-Enum的注意事项" class="headerlink" title="4.Enum的注意事项"></a>4.Enum的注意事项</h1><h3 id="Enum的用法"><a href="#Enum的用法" class="headerlink" title="Enum的用法"></a>Enum的用法</h3><p>1 . Enum的声明，Enum可以声明在一个类之外或者在类内部，但是不能在方法中。</p>
-<h3 id="Enum的用法-1"><a href="#Enum的用法-1" class="headerlink" title="Enum的用法"></a>Enum的用法</h3><ol>
-<li>Enum的声明，Enum可以声明在一个类之外或者在类内部，但是不能在方法中。</li>
-<li>==<strong><font color="red">在创建Enum常量的时候可以指定值，但是这个时候你需要定义一个成员变量构造器。构造器必须是private的，不然会报编译错误.</font></strong>==</li>
-</ol>
-<h1 id="5-EumDemo"><a href="#5-EumDemo" class="headerlink" title="5.EumDemo"></a>5.EumDemo</h1><p>1)创建一个水果相关的枚举</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">Fruit</span> </span>&#123;  </span><br><span class="line">    APPLE, PEAR, PEACH, ORANGE;  </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-<p>再看看Fruit反编译的结果:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> test;  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> <span class="keyword">extends</span> <span class="title">Enum</span> </span>&#123;  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Fruit</span><span class="params">(String s, <span class="keyword">int</span> i)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">super</span>(s, i);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Fruit[] values() &#123;  </span><br><span class="line">        Fruit afruit[];  </span><br><span class="line">        <span class="keyword">int</span> i;  </span><br><span class="line">        Fruit afruit1[];  </span><br><span class="line">        System.arraycopy(afruit = ENUM$VALUES, <span class="number">0</span>, afruit1 = <span class="keyword">new</span> Fruit[i = afruit.length], <span class="number">0</span>, i);  </span><br><span class="line">        <span class="keyword">return</span> afruit1;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Fruit <span class="title">valueOf</span><span class="params">(String s)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> (Fruit)Enum.valueOf(test/Fruit, s);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit APPLE;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit PEAR;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit PEACH;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit ORANGE;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit ENUM$VALUES[];  </span><br><span class="line">    <span class="keyword">static</span> &#123;  </span><br><span class="line">        APPLE = <span class="keyword">new</span> Fruit(<span class="string">&quot;APPLE&quot;</span>, <span class="number">0</span>);  </span><br><span class="line">        PEAR = <span class="keyword">new</span> Fruit(<span class="string">&quot;PEAR&quot;</span>, <span class="number">1</span>);  </span><br><span class="line">        PEACH = <span class="keyword">new</span> Fruit(<span class="string">&quot;PEACH&quot;</span>, <span class="number">2</span>);  </span><br><span class="line">        ORANGE = <span class="keyword">new</span> Fruit(<span class="string">&quot;ORANGE&quot;</span>, <span class="number">3</span>);  </span><br><span class="line">        ENUM$VALUES = (<span class="keyword">new</span> Fruit[] &#123;  </span><br><span class="line">            APPLE, PEAR, PEACH, ORANGE  </span><br><span class="line">        &#125;);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-<p>注意这几行：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit APPLE;  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit PEAR;  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit PEACH;  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit ORANGE;  </span><br></pre></td></tr></table></figure>
-
-<p>可以看到我们定义的几个成员变量,JVM底层把它转换成Eunm类型.</p>
-<p>我们还是再写点代码看看:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">Fruit</span> </span>&#123;  </span><br><span class="line">    APPLE &#123;   </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">            System.out.println(<span class="string">&quot;I am an apple.&quot;</span>);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;,  </span><br><span class="line">    PEAR &#123;   </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">            System.out.println(<span class="string">&quot;I am a pear.&quot;</span>);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;,  </span><br><span class="line">    PEACH &#123;   </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">            System.out.println(<span class="string">&quot;I am a peach.&quot;</span>);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;,  </span><br><span class="line">    ORANGE;  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        System.out.println(<span class="string">&quot;I am a fruit.&quot;</span>);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-<p>其中，只有Orange没有Overide test()方法；</p>
-<p>在main方法里面调用:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;  </span><br><span class="line">        Fruit.APPLE.test();  </span><br><span class="line">        Fruit.PEAR.test();  </span><br><span class="line">        Fruit.PEACH.test();  </span><br><span class="line">        Fruit.ORANGE.test();  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-<p>输出结果:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I am an apple. </span><br><span class="line">I am a pear. </span><br><span class="line">I am a peach. </span><br><span class="line">I am a fruit.</span><br></pre></td></tr></table></figure>
-
-<p>可以看到，重新定义了test方法的APPLE,PEAR,PEACH覆盖了从父类继承过来的默认行为，而未从新定义test方法的ORANGE却沿袭了父类的行为，多态性在这里展现出来了。</p>
-<p>再看看反编译后的文件:</p>
-<p><img src="https://img-blog.csdn.net/20160413220702331"></p>
-<p>发现多了几个内部类的字节码文件,看看反编译后的代码:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.  </span></span><br><span class="line"><span class="comment">// Jad home page: http://www.geocities.com/kpdus/jad.html  </span></span><br><span class="line"><span class="comment">// Decompiler options: packimports(3)   </span></span><br><span class="line"><span class="comment">// Source File Name:   Fruit.java  </span></span><br><span class="line"><span class="keyword">package</span> test;  </span><br><span class="line"><span class="keyword">import</span> java.io.PrintStream;  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> <span class="keyword">extends</span> <span class="title">Enum</span> </span>&#123;  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Fruit</span><span class="params">(String s, <span class="keyword">int</span> i)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">super</span>(s, i);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        System.out.println(<span class="string">&quot;I am a fruit.&quot;</span>);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Fruit[] values() &#123;  </span><br><span class="line">        Fruit afruit[];  </span><br><span class="line">        <span class="keyword">int</span> i;  </span><br><span class="line">        Fruit afruit1[];  </span><br><span class="line">        System.arraycopy(afruit = ENUM$VALUES, <span class="number">0</span>, afruit1 = <span class="keyword">new</span> Fruit[i = afruit.length], <span class="number">0</span>, i);  </span><br><span class="line">        <span class="keyword">return</span> afruit1;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Fruit <span class="title">valueOf</span><span class="params">(String s)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> (Fruit)Enum.valueOf(test/Fruit, s);  </span><br><span class="line">    &#125;  </span><br><span class="line">    Fruit(String s, <span class="keyword">int</span> i, Fruit fruit) &#123;  </span><br><span class="line">        <span class="keyword">this</span>(s, i);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit APPLE;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit PEAR;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit PEACH;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit ORANGE;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit ENUM$VALUES[];  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;  </span><br><span class="line">        APPLE = <span class="keyword">new</span> Fruit(<span class="string">&quot;APPLE&quot;</span>, <span class="number">0</span>) &#123;  </span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function">            </span>&#123;  </span><br><span class="line">                System.out.println(<span class="string">&quot;I am an apple.&quot;</span>);  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;;  </span><br><span class="line">        PEAR = <span class="keyword">new</span> Fruit(<span class="string">&quot;PEAR&quot;</span>, <span class="number">1</span>) &#123;  </span><br><span class="line"></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function">            </span>&#123;  </span><br><span class="line">                System.out.println(<span class="string">&quot;I am a pear.&quot;</span>);  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;;  </span><br><span class="line">        PEACH = <span class="keyword">new</span> Fruit(<span class="string">&quot;PEACH&quot;</span>, <span class="number">2</span>) &#123;  </span><br><span class="line"></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function">            </span>&#123;  </span><br><span class="line">                System.out.println(<span class="string">&quot;I am a peach.&quot;</span>);  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;;  </span><br><span class="line">        ORANGE = <span class="keyword">new</span> Fruit(<span class="string">&quot;ORANGE&quot;</span>, <span class="number">3</span>);  </span><br><span class="line">        ENUM$VALUES = (<span class="keyword">new</span> Fruit[] &#123;  </span><br><span class="line">            APPLE, PEAR, PEACH, ORANGE  </span><br><span class="line">        &#125;);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-<p>注意这段代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span>   </span><br><span class="line">    &#123;  </span><br><span class="line">        APPLE = <span class="keyword">new</span> Fruit(<span class="string">&quot;APPLE&quot;</span>, <span class="number">0</span>) &#123;  </span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function">            </span>&#123;  </span><br><span class="line">                System.out.println(<span class="string">&quot;I am an apple.&quot;</span>);  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;;  </span><br><span class="line">        PEAR = <span class="keyword">new</span> Fruit(<span class="string">&quot;PEAR&quot;</span>, <span class="number">1</span>) &#123;  </span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function">            </span>&#123;  </span><br><span class="line">                System.out.println(<span class="string">&quot;I am a pear.&quot;</span>);  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;;  </span><br><span class="line">        PEACH = <span class="keyword">new</span> Fruit(<span class="string">&quot;PEACH&quot;</span>, <span class="number">2</span>) &#123;  </span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function">            </span>&#123;  </span><br><span class="line">                System.out.println(<span class="string">&quot;I am a peach.&quot;</span>);  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;;  </span><br><span class="line">        ORANGE = <span class="keyword">new</span> Fruit(<span class="string">&quot;ORANGE&quot;</span>, <span class="number">3</span>);  </span><br></pre></td></tr></table></figure>
-
-<p>　这个时候的APPLE，PEAR，PEACH已经以匿名内部类的方式对Fruit进行了Overide，自然体现出了多态，多出的那三个疑似内部类的class文件也就是它们！而ORANGE，没有重写test方法，仍然以一个Fruit实例的形式出现。</p>
-<h1 id="6-反思-Enum多态体现的好处"><a href="#6-反思-Enum多态体现的好处" class="headerlink" title="6.反思-Enum多态体现的好处"></a>6.反思-Enum多态体现的好处</h1><p>其实通过上面我们可以通过Enum(枚举类)实现单例工厂模式,这样就能省去多余的判断步骤和不必要的父类和其他的相关类,大大提高我们的代码效率.</p>
-<h2 id="练习小Demo"><a href="#练习小Demo" class="headerlink" title="练习小Demo"></a><strong><font color="red">练习小Demo</font></strong></h2><p><strong>1.创建Dog和Persion类</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com._521it.Enum.Model;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: yangxiangnan</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/7/17 14:47</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>:</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;狗狗的无参数构造器&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">(String name, String age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        System.out.println(<span class="string">&quot;狗狗的有参数构造器&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bark</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;汪汪&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(String age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com._521it.Enum.Model;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: yangxiangnan</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/7/17 14:51</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>:</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Persion</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Persion</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;人的无参数构造器&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Persion</span><span class="params">(String name, String age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        System.out.println(<span class="string">&quot;人的有参数构造器&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;说话&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(String age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><strong>2.创建单例工厂类</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com._521it.Enum.Singletion;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com._521it.Enum.Model.Dog;</span><br><span class="line"><span class="keyword">import</span> com._521it.Enum.Model.Persion;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: yangxiangnan</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/7/17 14:52</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>:</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">SingletonInstanceFactory</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    INSTANCE_FACTORY;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Persion persion;</span><br><span class="line">    <span class="keyword">private</span> Dog dog;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonInstanceFactory</span><span class="params">()</span></span>&#123;</span><br><span class="line">        persion = <span class="keyword">new</span> Persion();</span><br><span class="line">        dog = <span class="keyword">new</span> Dog();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Persion <span class="title">getPersion</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> persion;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Dog <span class="title">getDog</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> dog;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><strong>3.进行测试</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com._521it.Enum;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com._521it.Enum.Model.Dog;</span><br><span class="line"><span class="keyword">import</span> com._521it.Enum.Model.Persion;</span><br><span class="line"><span class="keyword">import</span> com._521it.Enum.Singletion.SingletonInstanceFactory;</span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: yangxiangnan</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/7/17 17:18</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>:</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test01</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Dog dog1 = SingletonInstanceFactory.INSTANCE_FACTORY.getDog();</span><br><span class="line">        Dog dog2 = SingletonInstanceFactory.INSTANCE_FACTORY.getDog();</span><br><span class="line">        System.out.println(<span class="string">&quot;dog1 = &quot;</span> + dog1);</span><br><span class="line">        System.out.println(<span class="string">&quot;dog2 = &quot;</span> + dog2);</span><br><span class="line">        dog1.bark();</span><br><span class="line">        dog2.bark();</span><br><span class="line">        System.out.println(dog1 == dog2);</span><br><span class="line"></span><br><span class="line">        Persion persion1 = SingletonInstanceFactory.INSTANCE_FACTORY.getPersion();</span><br><span class="line">        Persion persion2 = SingletonInstanceFactory.INSTANCE_FACTORY.getPersion();</span><br><span class="line">        System.out.println(<span class="string">&quot;persion1 = &quot;</span> + persion1);</span><br><span class="line">        System.out.println(<span class="string">&quot;persion2 = &quot;</span> + persion2);</span><br><span class="line">        persion1.speak();</span><br><span class="line">        persion2.speak();</span><br><span class="line">        System.out.println(persion1 == persion2);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><strong>4.运行结果</strong></p>
-<p>结果如下:</p>
-<p><img src="https://raw.githubusercontent.com/yangxiangnanwill/uploadImages/master/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20190717172845.png"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Archery安装教程</title>
     <url>/2021/03/21/Docker/Archery%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<blockquote>
@@ -1217,51 +1011,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Docker(8)-安装Nacos</title>
-    <url>/2021/06/20/Docker/Docker(8)-%E5%AE%89%E8%A3%85nacos/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
-<p>日常开发使用springcloud-alibaba，为个人开发方便，本地搭建一个测试环境。</p>
-</blockquote>
-<h1 id="安装Nacos"><a href="#安装Nacos" class="headerlink" title="安装Nacos"></a>安装Nacos</h1><h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker pull nacos&#x2F;nacos-server</span><br></pre></td></tr></table></figure>
-
-<h2 id="挂载目录"><a href="#挂载目录" class="headerlink" title="挂载目录"></a>挂载目录</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir -p /data/nacos/logs/                      #新建logs目录</span><br><span class="line">mkdir -p /data/nacos/init.d/          </span><br><span class="line">vim /data/nacos/init.d/custom.properties        #修改配置文件</span><br></pre></td></tr></table></figure>
-
-<h2 id="mysql新建nacos的数据库，并执行脚本"><a href="#mysql新建nacos的数据库，并执行脚本" class="headerlink" title="mysql新建nacos的数据库，并执行脚本"></a>mysql新建nacos的数据库，并执行脚本</h2><blockquote>
-<p><a href="https://github.com/alibaba/nacos/blob/master/config/src/main/resources/META-INF/nacos-db.sql">下载地址</a></p>
-</blockquote>
-<h2 id="修改配置文件custom-properties"><a href="#修改配置文件custom-properties" class="headerlink" title="修改配置文件custom.properties"></a>修改配置文件<code>custom.properties</code></h2><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="meta">server.contextPath</span>=<span class="string">/nacos</span></span><br><span class="line"><span class="meta">server.servlet.contextPath</span>=<span class="string">/nacos</span></span><br><span class="line"><span class="meta">server.port</span>=<span class="string">8848</span></span><br><span class="line"></span><br><span class="line"><span class="meta">spring.datasource.platform</span>=<span class="string">mysql</span></span><br><span class="line"><span class="meta">db.num</span>=<span class="string">1</span></span><br><span class="line"><span class="meta">db.url.0</span>=<span class="string">jdbc:mysql://192.168.56.120:3306/nacos_devtest_prod?characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=3000&amp;autoReconnect=true</span></span><br><span class="line"><span class="meta">db.user</span>=<span class="string">user</span></span><br><span class="line"><span class="meta">db.password</span>=<span class="string">pass</span></span><br><span class="line"></span><br><span class="line"><span class="meta">nacos.cmdb.dumpTaskInterval</span>=<span class="string">3600</span></span><br><span class="line"><span class="meta">nacos.cmdb.eventTaskInterval</span>=<span class="string">10</span></span><br><span class="line"><span class="meta">nacos.cmdb.labelTaskInterval</span>=<span class="string">300</span></span><br><span class="line"><span class="meta">nacos.cmdb.loadDataAtStart</span>=<span class="string">false</span></span><br><span class="line"><span class="meta">management.metrics.export.elastic.enabled</span>=<span class="string">false</span></span><br><span class="line"><span class="meta">management.metrics.export.influx.enabled</span>=<span class="string">false</span></span><br><span class="line"><span class="meta">server.tomcat.accesslog.enabled</span>=<span class="string">true</span></span><br><span class="line"><span class="meta">server.tomcat.accesslog.pattern</span>=<span class="string">%h %l %u %t &quot;%r&quot; %s %b %D %&#123;User-Agent&#125;i</span></span><br><span class="line"><span class="meta">nacos.security.ignore.urls</span>=<span class="string">/,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-fe/public/**,/v1/auth/login,/v1/console/health/**,/v1/cs/**,/v1/ns/**,/v1/cmdb/**,/actuator/**,/v1/console/server/**</span></span><br><span class="line"><span class="meta">nacos.naming.distro.taskDispatchThreadCount</span>=<span class="string">1</span></span><br><span class="line"><span class="meta">nacos.naming.distro.taskDispatchPeriod</span>=<span class="string">200</span></span><br><span class="line"><span class="meta">nacos.naming.distro.batchSyncKeyCount</span>=<span class="string">1000</span></span><br><span class="line"><span class="meta">nacos.naming.distro.initDataRatio</span>=<span class="string">0.9</span></span><br><span class="line"><span class="meta">nacos.naming.distro.syncRetryDelay</span>=<span class="string">5000</span></span><br><span class="line"><span class="meta">nacos.naming.data.warmup</span>=<span class="string">true</span></span><br><span class="line"><span class="meta">nacos.naming.expireInstance</span>=<span class="string">true</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker  run \</span><br><span class="line">--name nacos -d \</span><br><span class="line">-p 8848:8848 \</span><br><span class="line">--privileged=true \</span><br><span class="line">--restart=always \</span><br><span class="line">-e JVM_XMS=256m \</span><br><span class="line">-e JVM_XMX=256m \</span><br><span class="line">-e MODE=standalone \</span><br><span class="line">-e PREFER_HOST_MODE=hostname \</span><br><span class="line">-v /data/nacos/logs:/home/nacos/logs \</span><br><span class="line">-v /data/nacos/init.d/custom.properties:/home/nacos/init.d/custom.properties \</span><br><span class="line">nacos/nacos-server</span><br></pre></td></tr></table></figure>
-
-<h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h2><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>地址</td>
-<td>http://宿主ip:8848/nacos</td>
-</tr>
-<tr>
-<td>用户名</td>
-<td>nacos</td>
-</tr>
-<tr>
-<td>密码</td>
-<td>nacos</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker(7)-Docker常用命令</title>
     <url>/2021/06/20/Docker/Docker(7)-Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
@@ -1450,6 +1199,257 @@
       </categories>
       <tags>
         <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker(8)-安装Nacos</title>
+    <url>/2021/06/20/Docker/Docker(8)-%E5%AE%89%E8%A3%85nacos/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>日常开发使用springcloud-alibaba，为个人开发方便，本地搭建一个测试环境。</p>
+</blockquote>
+<h1 id="安装Nacos"><a href="#安装Nacos" class="headerlink" title="安装Nacos"></a>安装Nacos</h1><h2 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker pull nacos&#x2F;nacos-server</span><br></pre></td></tr></table></figure>
+
+<h2 id="挂载目录"><a href="#挂载目录" class="headerlink" title="挂载目录"></a>挂载目录</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir -p /data/nacos/logs/                      #新建logs目录</span><br><span class="line">mkdir -p /data/nacos/init.d/          </span><br><span class="line">vim /data/nacos/init.d/custom.properties        #修改配置文件</span><br></pre></td></tr></table></figure>
+
+<h2 id="mysql新建nacos的数据库，并执行脚本"><a href="#mysql新建nacos的数据库，并执行脚本" class="headerlink" title="mysql新建nacos的数据库，并执行脚本"></a>mysql新建nacos的数据库，并执行脚本</h2><blockquote>
+<p><a href="https://github.com/alibaba/nacos/blob/master/config/src/main/resources/META-INF/nacos-db.sql">下载地址</a></p>
+</blockquote>
+<h2 id="修改配置文件custom-properties"><a href="#修改配置文件custom-properties" class="headerlink" title="修改配置文件custom.properties"></a>修改配置文件<code>custom.properties</code></h2><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="meta">server.contextPath</span>=<span class="string">/nacos</span></span><br><span class="line"><span class="meta">server.servlet.contextPath</span>=<span class="string">/nacos</span></span><br><span class="line"><span class="meta">server.port</span>=<span class="string">8848</span></span><br><span class="line"></span><br><span class="line"><span class="meta">spring.datasource.platform</span>=<span class="string">mysql</span></span><br><span class="line"><span class="meta">db.num</span>=<span class="string">1</span></span><br><span class="line"><span class="meta">db.url.0</span>=<span class="string">jdbc:mysql://192.168.56.120:3306/nacos_devtest_prod?characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=3000&amp;autoReconnect=true</span></span><br><span class="line"><span class="meta">db.user</span>=<span class="string">user</span></span><br><span class="line"><span class="meta">db.password</span>=<span class="string">pass</span></span><br><span class="line"></span><br><span class="line"><span class="meta">nacos.cmdb.dumpTaskInterval</span>=<span class="string">3600</span></span><br><span class="line"><span class="meta">nacos.cmdb.eventTaskInterval</span>=<span class="string">10</span></span><br><span class="line"><span class="meta">nacos.cmdb.labelTaskInterval</span>=<span class="string">300</span></span><br><span class="line"><span class="meta">nacos.cmdb.loadDataAtStart</span>=<span class="string">false</span></span><br><span class="line"><span class="meta">management.metrics.export.elastic.enabled</span>=<span class="string">false</span></span><br><span class="line"><span class="meta">management.metrics.export.influx.enabled</span>=<span class="string">false</span></span><br><span class="line"><span class="meta">server.tomcat.accesslog.enabled</span>=<span class="string">true</span></span><br><span class="line"><span class="meta">server.tomcat.accesslog.pattern</span>=<span class="string">%h %l %u %t &quot;%r&quot; %s %b %D %&#123;User-Agent&#125;i</span></span><br><span class="line"><span class="meta">nacos.security.ignore.urls</span>=<span class="string">/,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-fe/public/**,/v1/auth/login,/v1/console/health/**,/v1/cs/**,/v1/ns/**,/v1/cmdb/**,/actuator/**,/v1/console/server/**</span></span><br><span class="line"><span class="meta">nacos.naming.distro.taskDispatchThreadCount</span>=<span class="string">1</span></span><br><span class="line"><span class="meta">nacos.naming.distro.taskDispatchPeriod</span>=<span class="string">200</span></span><br><span class="line"><span class="meta">nacos.naming.distro.batchSyncKeyCount</span>=<span class="string">1000</span></span><br><span class="line"><span class="meta">nacos.naming.distro.initDataRatio</span>=<span class="string">0.9</span></span><br><span class="line"><span class="meta">nacos.naming.distro.syncRetryDelay</span>=<span class="string">5000</span></span><br><span class="line"><span class="meta">nacos.naming.data.warmup</span>=<span class="string">true</span></span><br><span class="line"><span class="meta">nacos.naming.expireInstance</span>=<span class="string">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker  run \</span><br><span class="line">--name nacos -d \</span><br><span class="line">-p 8848:8848 \</span><br><span class="line">--privileged=true \</span><br><span class="line">--restart=always \</span><br><span class="line">-e JVM_XMS=256m \</span><br><span class="line">-e JVM_XMX=256m \</span><br><span class="line">-e MODE=standalone \</span><br><span class="line">-e PREFER_HOST_MODE=hostname \</span><br><span class="line">-v /data/nacos/logs:/home/nacos/logs \</span><br><span class="line">-v /data/nacos/init.d/custom.properties:/home/nacos/init.d/custom.properties \</span><br><span class="line">nacos/nacos-server</span><br></pre></td></tr></table></figure>
+
+<h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>地址</td>
+<td>http://宿主ip:8848/nacos</td>
+</tr>
+<tr>
+<td>用户名</td>
+<td>nacos</td>
+</tr>
+<tr>
+<td>密码</td>
+<td>nacos</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>POI-Excel生成建表语句</title>
+    <url>/2021/03/21/Java/Excel%E7%94%9F%E6%88%90%E5%BB%BA%E8%A1%A8%E8%AF%AD%E5%8F%A5/</url>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>最近公司开展新项目，由于项目进度紧急，部分项目负责人不在现在，建表相关的使用的是Excel，由于Excel拼接过于麻烦，博猪COPY了一下大神的代码，修改了部分代码，以便适用于我们项目。</p>
+<p>参照博客地址：<a href="https://blog.csdn.net/u014624447/article/details/111690418">博客地址</a></p>
+</blockquote>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="Excel模板"><a href="#Excel模板" class="headerlink" title="Excel模板"></a>Excel模板</h2><blockquote>
+<p>模板可以根据自己的习惯来创建，需要注意的是建表时我们需要的参数有：数据库名，表名，表注释，列名，列注释，列类型，列长度，列精度，是否主键，是否非空。</p>
+</blockquote>
+<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20210224163817.png" alt="image-20210224163802424"></p>
+<table>
+<thead>
+<tr>
+<th>Database Name</th>
+<th>your database name</th>
+<th>Table Name (physical name)</th>
+<th>your table name</th>
+<th>Table Name (logical name)</th>
+<th>你的表名</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Column Name (physical name)</td>
+<td>Column Name (logical name)</td>
+<td>Type</td>
+<td>Length</td>
+<td>Decimal</td>
+<td>PK</td>
+<td>NOT NULL</td>
+</tr>
+<tr>
+<td>column 1</td>
+<td>列 1</td>
+<td>VARCHAR</td>
+<td>255</td>
+<td></td>
+<td>*</td>
+<td>*</td>
+</tr>
+</tbody></table>
+<h1 id="撸代码"><a href="#撸代码" class="headerlink" title="撸代码"></a>撸代码</h1><h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><p>首先新建maven项目，并导入poi（用于操作excel）、lombok（简化实体类代码）依赖：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>3.15<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi-ooxml<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>3.15<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.18.16<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>因为我们只需要控制台输入，并且输出sql语句，所以只需要这3个依赖即可。</p>
+<h2 id="相关实体类"><a href="#相关实体类" class="headerlink" title="相关实体类"></a>相关实体类</h2><h3 id="数据类型常量类TableTypeConstant-java"><a href="#数据类型常量类TableTypeConstant-java" class="headerlink" title="数据类型常量类TableTypeConstant.java"></a>数据类型常量类TableTypeConstant.java</h3><p>定义MySQL的数据类型</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TableTypeConstant</span> </span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String INT = <span class="string">&quot;int&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String VARCHAR =<span class="string">&quot;varchar&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DATE = <span class="string">&quot;date&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DATE_TIME=<span class="string">&quot;datetime&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String TEXT =<span class="string">&quot;text&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String LONG_TEXT = <span class="string">&quot;longtext&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String CHAR = <span class="string">&quot;char&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String LONG = <span class="string">&quot;long&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String TIME_STAMP = <span class="string">&quot;timestamp&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DECIMAL=<span class="string">&quot;decimal&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="字段信息ColumnEntity-java"><a href="#字段信息ColumnEntity-java" class="headerlink" title="字段信息ColumnEntity.java"></a>字段信息ColumnEntity.java</h3><p>定义我们关注的字段的关键信息</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ColumnEntity</span> </span>&#123;</span><br><span class="line">	<span class="comment">/*物理列名*/</span></span><br><span class="line">	<span class="keyword">private</span> String physicalColumnName;</span><br><span class="line">	<span class="comment">/*逻辑列名*/</span></span><br><span class="line">	<span class="keyword">private</span> String logicalColumnName;</span><br><span class="line">	<span class="comment">/*类型*/</span></span><br><span class="line">	<span class="keyword">private</span> String type;</span><br><span class="line">	<span class="comment">/*长度*/</span></span><br><span class="line">	<span class="keyword">private</span> String length;</span><br><span class="line">	<span class="comment">/*精度*/</span></span><br><span class="line">	<span class="keyword">private</span> String decimal;</span><br><span class="line">	<span class="comment">/*是否主键*/</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span> isPrimaryKey;</span><br><span class="line">	<span class="comment">/*是否非空*/</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span> isNotNull;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="表信息TableEntity-java"><a href="#表信息TableEntity-java" class="headerlink" title="表信息TableEntity.java"></a>表信息TableEntity.java</h3><p>定义建表语句需要的信息</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TableEntity</span> </span>&#123;</span><br><span class="line">	<span class="comment">/*列信息*/</span></span><br><span class="line">	<span class="keyword">private</span> List&lt;ColumnEntity&gt; entities;</span><br><span class="line">	<span class="comment">/*表物理名*/</span></span><br><span class="line">	<span class="keyword">private</span> String physicalTableName;</span><br><span class="line">	<span class="comment">/*表逻辑名*/</span></span><br><span class="line">	<span class="keyword">private</span> String logicalTableName;</span><br><span class="line">	<span class="comment">/*数据库名*/</span></span><br><span class="line">	<span class="keyword">private</span> String databaseName;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="业务类"><a href="#业务类" class="headerlink" title="业务类"></a>业务类</h2><h3 id="生成SQL语句Excel-java"><a href="#生成SQL语句Excel-java" class="headerlink" title="生成SQL语句Excel.java"></a>生成SQL语句Excel.java</h3><p>包含3个方法</p>
+<ul>
+<li><code>TableEntity readExcel(String excelPath)</code> 解析Excel并返回TableEntity</li>
+<li><code>void convertSQL(TableEntity tableEntity)</code> 根据TableEntity生成SQL语句并写入txt</li>
+<li><code>void writeTXT(String path, String value, String fileName)</code> 将字符串写入txt文件</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.bossYang.myBatisTest.bean.ColumnEntity;</span><br><span class="line"><span class="keyword">import</span> com.bossYang.myBatisTest.bean.TableEntity;</span><br><span class="line"><span class="keyword">import</span> com.bossYang.myBatisTest.bean.TableTypeConstant;</span><br><span class="line"><span class="keyword">import</span> org.apache.poi.hssf.usermodel.HSSFWorkbook;</span><br><span class="line"><span class="keyword">import</span> org.apache.poi.ss.usermodel.Row;</span><br><span class="line"><span class="keyword">import</span> org.apache.poi.ss.usermodel.Row.MissingCellPolicy;</span><br><span class="line"><span class="keyword">import</span> org.apache.poi.ss.usermodel.Sheet;</span><br><span class="line"><span class="keyword">import</span> org.apache.poi.ss.usermodel.Workbook;</span><br><span class="line"><span class="keyword">import</span> org.apache.poi.xssf.usermodel.XSSFWorkbook;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.FileOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.OutputStreamWriter;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Excel</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 读取excel并转换为表实体</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> excelPath</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> TableEntity <span class="title">readExcel</span><span class="params">(String excelPath)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 解析模板对象List</span></span><br><span class="line">		List&lt;ColumnEntity&gt; entities = <span class="keyword">new</span> ArrayList&lt;ColumnEntity&gt;();</span><br><span class="line">		<span class="comment">// 表物理名</span></span><br><span class="line">		String physicalTableName = <span class="keyword">null</span>;</span><br><span class="line">		<span class="comment">// 表逻辑名</span></span><br><span class="line">		String logicalTableName = <span class="keyword">null</span>;</span><br><span class="line">		<span class="comment">// 数据库名</span></span><br><span class="line">		String databaseName = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="comment">// String encoding = &quot;GBK&quot;;</span></span><br><span class="line">			File excel = <span class="keyword">new</span> File(excelPath);</span><br><span class="line">			<span class="keyword">if</span> (excel.isFile() &amp;&amp; excel.exists()) &#123; <span class="comment">// 判断文件是否存在</span></span><br><span class="line"></span><br><span class="line">				String[] split = excel.getName().split(<span class="string">&quot;\\.&quot;</span>); <span class="comment">// .是特殊字符，需要转义！！！！！</span></span><br><span class="line">				Workbook wb;</span><br><span class="line">				<span class="comment">// 根据文件后缀（xls/xlsx）进行判断</span></span><br><span class="line">				<span class="keyword">if</span> (<span class="string">&quot;xls&quot;</span>.equals(split[<span class="number">1</span>])) &#123;</span><br><span class="line">					FileInputStream fis = <span class="keyword">new</span> FileInputStream(excel); <span class="comment">// 文件流对象</span></span><br><span class="line">					wb = <span class="keyword">new</span> HSSFWorkbook(fis);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">&quot;xlsx&quot;</span>.equals(split[<span class="number">1</span>])) &#123;</span><br><span class="line">					wb = <span class="keyword">new</span> XSSFWorkbook(excel);</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					System.out.println(<span class="string">&quot;文件类型错误!&quot;</span>);</span><br><span class="line">					<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="comment">// 开始解析</span></span><br><span class="line">				Sheet sheet = wb.getSheetAt(<span class="number">0</span>); <span class="comment">// 读取sheet 0</span></span><br><span class="line"></span><br><span class="line">				<span class="keyword">int</span> firstRowIndex = sheet.getFirstRowNum() + <span class="number">2</span>; <span class="comment">// 第一、二行是列名，所以不读，从第三行开始读</span></span><br><span class="line">				<span class="keyword">int</span> lastRowIndex = sheet.getLastRowNum();</span><br><span class="line">				<span class="comment">// System.out.println(&quot;firstRowIndex: &quot;+firstRowIndex);</span></span><br><span class="line">				<span class="comment">// System.out.println(&quot;lastRowIndex: &quot;+lastRowIndex);</span></span><br><span class="line"></span><br><span class="line">				<span class="comment">// 解析模板对象List</span></span><br><span class="line">				entities = <span class="keyword">new</span> ArrayList&lt;ColumnEntity&gt;();</span><br><span class="line">				<span class="comment">// 数据库名</span></span><br><span class="line">				databaseName = sheet.getRow(<span class="number">0</span>).getCell(<span class="number">1</span>).getStringCellValue();</span><br><span class="line">				<span class="comment">// 表物理名</span></span><br><span class="line">				physicalTableName = sheet.getRow(<span class="number">0</span>).getCell(<span class="number">3</span>).getStringCellValue();</span><br><span class="line">				<span class="comment">// 表逻辑名</span></span><br><span class="line">				logicalTableName = sheet.getRow(<span class="number">0</span>).getCell(<span class="number">5</span>).getStringCellValue();</span><br><span class="line"></span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> rIndex = firstRowIndex; rIndex &lt;= lastRowIndex; rIndex++) &#123; <span class="comment">// 遍历行</span></span><br><span class="line">					<span class="comment">// System.out.println(&quot;rIndex: &quot; + rIndex);</span></span><br><span class="line">					ColumnEntity entity = <span class="keyword">new</span> ColumnEntity();</span><br><span class="line">					Row row = sheet.getRow(rIndex);</span><br><span class="line">					<span class="keyword">if</span> (row != <span class="keyword">null</span>) &#123;</span><br><span class="line">						<span class="keyword">if</span> (row.getCell(<span class="number">0</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue() == <span class="keyword">null</span> || row</span><br><span class="line">								.getCell(<span class="number">0</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue().isEmpty()) &#123;</span><br><span class="line">							<span class="keyword">continue</span>;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="comment">/*</span></span><br><span class="line"><span class="comment">						 * int firstCellIndex = row.getFirstCellNum(); int lastCellIndex =</span></span><br><span class="line"><span class="comment">						 * row.getLastCellNum(); for (int cIndex = firstCellIndex; cIndex &lt;</span></span><br><span class="line"><span class="comment">						 * lastCellIndex; cIndex++) &#123; //遍历列 Cell cell = row.getCell(cIndex); if (cell !=</span></span><br><span class="line"><span class="comment">						 * null) &#123; System.out.println(cell.toString()); &#125; &#125;</span></span><br><span class="line"><span class="comment">						 */</span></span><br><span class="line">						</span><br><span class="line">						<span class="comment">// 解析对象</span></span><br><span class="line">						entity.setPhysicalColumnName(</span><br><span class="line">								row.getCell(<span class="number">0</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue());<span class="comment">// 列物理名</span></span><br><span class="line">						entity.setLogicalColumnName(</span><br><span class="line">								row.getCell(<span class="number">1</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue());<span class="comment">// 列逻辑名</span></span><br><span class="line">						entity.setType(row.getCell(<span class="number">2</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue());<span class="comment">// 类型</span></span><br><span class="line">						entity.setLength(row.getCell(<span class="number">3</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue());<span class="comment">// 长度</span></span><br><span class="line">						entity.setDecimal(row.getCell(<span class="number">4</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue());<span class="comment">// 精度</span></span><br><span class="line">						entity.setPrimaryKey(<span class="string">&quot;*&quot;</span></span><br><span class="line">								.equals(row.getCell(<span class="number">5</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue()));<span class="comment">// 是否主键</span></span><br><span class="line">						entity.setNotNull(<span class="string">&quot;*&quot;</span></span><br><span class="line">								.equals(row.getCell(<span class="number">6</span>, MissingCellPolicy.CREATE_NULL_AS_BLANK).getStringCellValue()));<span class="comment">// 是否非空</span></span><br><span class="line">						<span class="comment">// 存入list</span></span><br><span class="line">						entities.add(entity);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				System.out.println(<span class="string">&quot;找不到指定的文件&quot;</span>);</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		TableEntity tableEntity = <span class="keyword">new</span> TableEntity();</span><br><span class="line">		tableEntity.setEntities(entities);</span><br><span class="line">		tableEntity.setDatabaseName(databaseName);</span><br><span class="line">		tableEntity.setLogicalTableName(logicalTableName);</span><br><span class="line">		tableEntity.setPhysicalTableName(physicalTableName);</span><br><span class="line">		<span class="keyword">return</span> tableEntity;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 将表实体转换为sql并输出为txt</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> tableEntity</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">convertSQL</span><span class="params">(TableEntity tableEntity)</span> </span>&#123;</span><br><span class="line">		StringBuffer sql = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">		sql.append(<span class="string">&quot;CREATE TABLE `&quot;</span>);</span><br><span class="line">		sql.append(tableEntity.getDatabaseName());</span><br><span class="line">		sql.append(<span class="string">&quot;`.`&quot;</span>);</span><br><span class="line">		sql.append(tableEntity.getPhysicalTableName());</span><br><span class="line">		sql.append(<span class="string">&quot;` (&quot;</span>);</span><br><span class="line">		<span class="comment">// CREATE TABLE `databaseName`.`tablePhysicalName` (</span></span><br><span class="line">		List&lt;ColumnEntity&gt; cellEnties = tableEntity.getEntities();</span><br><span class="line">		<span class="comment">// 主键</span></span><br><span class="line">		String primaryKey = <span class="keyword">null</span>;</span><br><span class="line">		<span class="comment">// 获取主键</span></span><br><span class="line">		<span class="keyword">for</span> (ColumnEntity item : cellEnties) &#123;</span><br><span class="line">			<span class="comment">// 将pk为true的设为主键</span></span><br><span class="line">			<span class="keyword">if</span> (item.isPrimaryKey()) &#123;</span><br><span class="line">				primaryKey = item.getPhysicalColumnName();</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 循环列</span></span><br><span class="line">		<span class="keyword">for</span> (ColumnEntity item : cellEnties) &#123;</span><br><span class="line">			sql.append(<span class="string">&quot; `&quot;</span>);</span><br><span class="line">			sql.append(item.getPhysicalColumnName().trim());</span><br><span class="line">			sql.append(<span class="string">&quot;` &quot;</span>);</span><br><span class="line">			<span class="comment">// `physicalColumnName`</span></span><br><span class="line"></span><br><span class="line">			<span class="comment">// 根据NOT NULL 来拼接</span></span><br><span class="line">			<span class="keyword">if</span> (item.isNotNull()) &#123; <span class="comment">// 如果不允许为空，则拼接NOT NULL</span></span><br><span class="line">				<span class="comment">//类型</span></span><br><span class="line">				String type = item.getType().toLowerCase();</span><br><span class="line">				<span class="comment">//类型转换</span></span><br><span class="line">				<span class="keyword">if</span>(type.indexOf(<span class="string">&quot;varchar&quot;</span>)!=-<span class="number">1</span>) &#123;</span><br><span class="line">					type= TableTypeConstant.VARCHAR;</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span> (type.indexOf(<span class="string">&quot;number&quot;</span>)!=-<span class="number">1</span>) &#123;</span><br><span class="line">					type=TableTypeConstant.INT;</span><br><span class="line">					<span class="comment">//默认长度</span></span><br><span class="line">					<span class="keyword">if</span>(item.getLength()==<span class="keyword">null</span>||item.getLength().isEmpty()) &#123;</span><br><span class="line">						item.setLength(<span class="string">&quot;11&quot;</span>);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span>(type.indexOf(<span class="string">&quot;char&quot;</span>)!=-<span class="number">1</span>) &#123;</span><br><span class="line">					type=TableTypeConstant.CHAR;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				</span><br><span class="line">				<span class="comment">// 根据类型选择是否拼接长度</span></span><br><span class="line">				<span class="keyword">if</span> (TableTypeConstant.CHAR.equals(type) || TableTypeConstant.VARCHAR.equals(type)) &#123; <span class="comment">// 文本需要拼接长度</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot;(&quot;</span>);</span><br><span class="line">					sql.append(item.getLength());</span><br><span class="line">					sql.append(<span class="string">&quot;) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (TableTypeConstant.TEXT.equals(type) || TableTypeConstant.LONG_TEXT.equals(type)) &#123; <span class="comment">// 文本不需要拼接长度</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot; CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (TableTypeConstant.DATE.equals(type)) &#123; <span class="comment">// 时间不需要拼接长度</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot; NOT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (TableTypeConstant.DATE_TIME.equals(type)||TableTypeConstant.TIME_STAMP.equals(type)) &#123; <span class="comment">// 时间需要拼接长度 并且长度为0</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot;(0) NOT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (TableTypeConstant.INT.equals(type)) &#123; <span class="comment">// 数字需要拼接长度</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot;(&quot;</span>);</span><br><span class="line">					sql.append(item.getLength());</span><br><span class="line">					sql.append(<span class="string">&quot;)  NOT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123; <span class="comment">// 如果允许为空，则拼接 NULL DEFAULT NULL</span></span><br><span class="line">				</span><br><span class="line">				String type = item.getType().toLowerCase();</span><br><span class="line">				<span class="comment">//类型转换</span></span><br><span class="line">				<span class="keyword">if</span>(type.indexOf(<span class="string">&quot;varchar&quot;</span>)!=-<span class="number">1</span>) &#123;</span><br><span class="line">					type=TableTypeConstant.VARCHAR;</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span> (type.indexOf(<span class="string">&quot;number&quot;</span>)!=-<span class="number">1</span>) &#123;</span><br><span class="line">					type=TableTypeConstant.INT;</span><br><span class="line">					<span class="comment">//默认长度</span></span><br><span class="line">					<span class="keyword">if</span>(item.getLength()==<span class="keyword">null</span>||item.getLength().isEmpty()) &#123;</span><br><span class="line">						item.setLength(<span class="string">&quot;11&quot;</span>);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span>(type.indexOf(<span class="string">&quot;char&quot;</span>)!=-<span class="number">1</span>) &#123;</span><br><span class="line">					type=TableTypeConstant.CHAR;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				<span class="comment">// 根据类型选择是否拼接长度</span></span><br><span class="line">				<span class="keyword">if</span> (TableTypeConstant.CHAR.equals(type) || TableTypeConstant.VARCHAR.equals(type)) &#123; <span class="comment">// 文本需要拼接长度</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot;(&quot;</span>);</span><br><span class="line">					sql.append(item.getLength());</span><br><span class="line">					sql.append(<span class="string">&quot;) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (TableTypeConstant.TEXT.equals(type) || TableTypeConstant.LONG_TEXT.equals(type)) &#123; <span class="comment">// 文本不需要拼接长度</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot; CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (TableTypeConstant.DATE.equals(type)) &#123; <span class="comment">// 时间不需要拼接长度</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot; NULL DEFAULT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (TableTypeConstant.DATE_TIME.equals(type)||TableTypeConstant.TIME_STAMP.equals(type)) &#123; <span class="comment">// 时间需要拼接长度 并且长度为0</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot;(0) NULL DEFAULT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (TableTypeConstant.INT.equals(type) || TableTypeConstant.BIG_INT.equals(type) || TableTypeConstant.LONG.equals(type)) &#123; <span class="comment">// 数字需要拼接长度</span></span><br><span class="line">					sql.append(type);</span><br><span class="line">					sql.append(<span class="string">&quot;(&quot;</span>);</span><br><span class="line">					sql.append(item.getLength());</span><br><span class="line">					sql.append(<span class="string">&quot;)  NULL DEFAULT NULL COMMENT &#x27;&quot;</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="comment">// 拼接逻辑列名</span></span><br><span class="line">			sql.append(item.getLogicalColumnName());</span><br><span class="line">			sql.append(<span class="string">&quot;&#x27;,&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 拼接主键</span></span><br><span class="line">		sql.append(<span class="string">&quot; PRIMARY KEY (`&quot;</span>);</span><br><span class="line">		sql.append(primaryKey);</span><br><span class="line">		sql.append(<span class="string">&quot;`) USING BTREE ) &quot;</span>);</span><br><span class="line">		<span class="comment">// 拼接引擎和逻辑表名</span></span><br><span class="line">		sql.append(<span class="string">&quot;ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = &#x27;&quot;</span>);</span><br><span class="line">		sql.append(tableEntity.getLogicalTableName());</span><br><span class="line">		sql.append(<span class="string">&quot;&#x27;  ROW_FORMAT = Compact;&quot;</span>);</span><br><span class="line">		System.err.println(sql);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			writeTXT(<span class="string">&quot;&quot;</span>, sql.toString(), tableEntity.getPhysicalTableName() + tableEntity.getLogicalTableName());</span><br><span class="line">			System.out</span><br><span class="line">					.println(<span class="string">&quot;已导出:&quot;</span> + tableEntity.getPhysicalTableName() + tableEntity.getLogicalTableName() + <span class="string">&quot;.txt!&quot;</span>);</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">			System.err.println(<span class="string">&quot;导出文件失败&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 将字符串写入txt并导出</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">writeTXT</span><span class="params">(String path, String value, String fileName)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		File f = <span class="keyword">new</span> File(path + fileName + <span class="string">&quot;.txt&quot;</span>);</span><br><span class="line">		FileOutputStream fos1 = <span class="keyword">new</span> FileOutputStream(f);</span><br><span class="line">		OutputStreamWriter dos1 = <span class="keyword">new</span> OutputStreamWriter(fos1);</span><br><span class="line">		dos1.write(value);</span><br><span class="line">		dos1.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="主入口"><a href="#主入口" class="headerlink" title="主入口"></a>主入口</h2><p>通过控制台输入Excel路径，会在jar包同级目录下生成包含建表SQL的TXT文件。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainApplication</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">while</span>(<span class="keyword">true</span>) &#123;</span><br><span class="line">			Excel excel = <span class="keyword">new</span> Excel();</span><br><span class="line">			Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">			System.err.println(<span class="string">&quot;请输入Excel的路径：&quot;</span>);</span><br><span class="line">			String excelPath = scanner.nextLine();</span><br><span class="line">			TableEntity tEntity = excel.readExcel(excelPath);</span><br><span class="line">			<span class="keyword">if</span>(tEntity==<span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			excel.convertSQL(tEntity);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>基本上就是解析EXCEL，然后根据数据类型拼接SQL语句。</p>
+<p>目前支持情况：</p>
+<ul>
+<li><p><input checked="" disabled="" type="checkbox">  VARCHAR</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  INT</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  LONG</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  DATE</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  DATETIME</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  TIMESTAMP</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  TEXT</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  LONGTEXT</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  CHAR</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  是否为空</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  单主键</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  BIGINT</p>
+</li>
+<li><p><input disabled="" type="checkbox">  FLOAT</p>
+</li>
+<li><p><input disabled="" type="checkbox">  DOUBLE</p>
+</li>
+<li><p><input disabled="" type="checkbox">  DECIMAL</p>
+</li>
+<li><p><input disabled="" type="checkbox">  联合主键</p>
+</li>
+<li><p><input disabled="" type="checkbox">  自定义字符集编码</p>
+</li>
+</ul>
+<blockquote>
+<p>较原文没啥改动，只是增加了部分字段，处理了部分默认值问题。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+        <tag>POI</tag>
+        <tag>EXCEL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浅析枚举</title>
+    <url>/2021/03/21/Java/JAVA_%E6%B5%85%E6%9E%90%E6%9E%9A%E4%B8%BE/</url>
+    <content><![CDATA[<hr>
+<h2 id="title-Hello-World"><a href="#title-Hello-World" class="headerlink" title="title: Hello World"></a>title: Hello World</h2><h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><p>==<font color="red">Enum 一般用来表示<strong>一组相同类型的常量</strong></font>==。如：性别、日期、月份、颜色等。对这些属性用常量的好处是显而易见的，不仅可以保证单例，且在比较的时候可以用 ”==” 来替换 equals。在 JDK1.5 之前是没有 Enum 这个类型的，那时候一般用接口常量来替代。</p>
+<h1 id="2-Enum究竟是啥"><a href="#2-Enum究竟是啥" class="headerlink" title="2.Enum究竟是啥"></a>2.Enum究竟是啥</h1><p>你是否被问到过以下的问题：</p>
+<ul>
+<li>枚举允许继承类吗？</li>
+<li>枚举允许实现接口吗？</li>
+<li>枚举可以用等号比较吗？</li>
+<li>可以继承枚举吗？</li>
+<li>枚举是单例吗？</li>
+<li>当使用compareTo()比较枚举时，比较的是什么？</li>
+<li>当使用equals()比较枚举的时候，比较的是什么？</li>
+</ul>
+<p>面试官的问题五花八门，但归根结底都是在考察同一个问题：枚举的本质。</p>
+<p>那么枚举究竟是啥?</p>
+<p>废话不说,先看源代码:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Enum</span>&lt;<span class="title">E</span> <span class="keyword">extends</span> <span class="title">Enum</span>&lt;<span class="title">E</span>&gt;&gt;</span></span><br><span class="line"><span class="class">        <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">E</span>&gt;, <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">		<span class="comment">//*******        </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>从源代码可以看出Enum的本质是一个抽象类,所以上述问题基本上都迎刃而解了.</p>
+<h1 id="3-Enum的特性"><a href="#3-Enum的特性" class="headerlink" title="3.Enum的特性"></a>3.Enum的特性</h1><ul>
+<li>Enum常量隐式的加上了static和final，一旦被创建就无法修改</li>
+<li>Enum提供了是类型安全的(type-safe)</li>
+<li>Enum隐式的加上了values()方法，返回一个数组包含所有的Enum常量</li>
+<li>两个Enum常量可以使用 <code>==</code>或<code>equals()</code>方法比较</li>
+<li>Enum可以用在switch语句中，就像int，String。</li>
+<li>Enum有自己的名称空间</li>
+<li>Enum可以实现Java接口</li>
+<li>可以在Enum中定义构造器</li>
+</ul>
+<h1 id="4-Enum的注意事项"><a href="#4-Enum的注意事项" class="headerlink" title="4.Enum的注意事项"></a>4.Enum的注意事项</h1><h3 id="Enum的用法"><a href="#Enum的用法" class="headerlink" title="Enum的用法"></a>Enum的用法</h3><p>1 . Enum的声明，Enum可以声明在一个类之外或者在类内部，但是不能在方法中。</p>
+<h3 id="Enum的用法-1"><a href="#Enum的用法-1" class="headerlink" title="Enum的用法"></a>Enum的用法</h3><ol>
+<li>Enum的声明，Enum可以声明在一个类之外或者在类内部，但是不能在方法中。</li>
+<li>==<strong><font color="red">在创建Enum常量的时候可以指定值，但是这个时候你需要定义一个成员变量构造器。构造器必须是private的，不然会报编译错误.</font></strong>==</li>
+</ol>
+<h1 id="5-EumDemo"><a href="#5-EumDemo" class="headerlink" title="5.EumDemo"></a>5.EumDemo</h1><p>1)创建一个水果相关的枚举</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">Fruit</span> </span>&#123;  </span><br><span class="line">    APPLE, PEAR, PEACH, ORANGE;  </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>再看看Fruit反编译的结果:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> test;  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> <span class="keyword">extends</span> <span class="title">Enum</span> </span>&#123;  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Fruit</span><span class="params">(String s, <span class="keyword">int</span> i)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">super</span>(s, i);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Fruit[] values() &#123;  </span><br><span class="line">        Fruit afruit[];  </span><br><span class="line">        <span class="keyword">int</span> i;  </span><br><span class="line">        Fruit afruit1[];  </span><br><span class="line">        System.arraycopy(afruit = ENUM$VALUES, <span class="number">0</span>, afruit1 = <span class="keyword">new</span> Fruit[i = afruit.length], <span class="number">0</span>, i);  </span><br><span class="line">        <span class="keyword">return</span> afruit1;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Fruit <span class="title">valueOf</span><span class="params">(String s)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> (Fruit)Enum.valueOf(test/Fruit, s);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit APPLE;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit PEAR;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit PEACH;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit ORANGE;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit ENUM$VALUES[];  </span><br><span class="line">    <span class="keyword">static</span> &#123;  </span><br><span class="line">        APPLE = <span class="keyword">new</span> Fruit(<span class="string">&quot;APPLE&quot;</span>, <span class="number">0</span>);  </span><br><span class="line">        PEAR = <span class="keyword">new</span> Fruit(<span class="string">&quot;PEAR&quot;</span>, <span class="number">1</span>);  </span><br><span class="line">        PEACH = <span class="keyword">new</span> Fruit(<span class="string">&quot;PEACH&quot;</span>, <span class="number">2</span>);  </span><br><span class="line">        ORANGE = <span class="keyword">new</span> Fruit(<span class="string">&quot;ORANGE&quot;</span>, <span class="number">3</span>);  </span><br><span class="line">        ENUM$VALUES = (<span class="keyword">new</span> Fruit[] &#123;  </span><br><span class="line">            APPLE, PEAR, PEACH, ORANGE  </span><br><span class="line">        &#125;);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<p>注意这几行：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit APPLE;  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit PEAR;  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit PEACH;  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit ORANGE;  </span><br></pre></td></tr></table></figure>
+
+<p>可以看到我们定义的几个成员变量,JVM底层把它转换成Eunm类型.</p>
+<p>我们还是再写点代码看看:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">Fruit</span> </span>&#123;  </span><br><span class="line">    APPLE &#123;   </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">            System.out.println(<span class="string">&quot;I am an apple.&quot;</span>);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;,  </span><br><span class="line">    PEAR &#123;   </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">            System.out.println(<span class="string">&quot;I am a pear.&quot;</span>);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;,  </span><br><span class="line">    PEACH &#123;   </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">            System.out.println(<span class="string">&quot;I am a peach.&quot;</span>);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;,  </span><br><span class="line">    ORANGE;  </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        System.out.println(<span class="string">&quot;I am a fruit.&quot;</span>);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<p>其中，只有Orange没有Overide test()方法；</p>
+<p>在main方法里面调用:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;  </span><br><span class="line">        Fruit.APPLE.test();  </span><br><span class="line">        Fruit.PEAR.test();  </span><br><span class="line">        Fruit.PEACH.test();  </span><br><span class="line">        Fruit.ORANGE.test();  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<p>输出结果:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I am an apple. </span><br><span class="line">I am a pear. </span><br><span class="line">I am a peach. </span><br><span class="line">I am a fruit.</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，重新定义了test方法的APPLE,PEAR,PEACH覆盖了从父类继承过来的默认行为，而未从新定义test方法的ORANGE却沿袭了父类的行为，多态性在这里展现出来了。</p>
+<p>再看看反编译后的文件:</p>
+<p><img src="https://img-blog.csdn.net/20160413220702331"></p>
+<p>发现多了几个内部类的字节码文件,看看反编译后的代码:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.  </span></span><br><span class="line"><span class="comment">// Jad home page: http://www.geocities.com/kpdus/jad.html  </span></span><br><span class="line"><span class="comment">// Decompiler options: packimports(3)   </span></span><br><span class="line"><span class="comment">// Source File Name:   Fruit.java  </span></span><br><span class="line"><span class="keyword">package</span> test;  </span><br><span class="line"><span class="keyword">import</span> java.io.PrintStream;  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> <span class="keyword">extends</span> <span class="title">Enum</span> </span>&#123;  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Fruit</span><span class="params">(String s, <span class="keyword">int</span> i)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">super</span>(s, i);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        System.out.println(<span class="string">&quot;I am a fruit.&quot;</span>);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Fruit[] values() &#123;  </span><br><span class="line">        Fruit afruit[];  </span><br><span class="line">        <span class="keyword">int</span> i;  </span><br><span class="line">        Fruit afruit1[];  </span><br><span class="line">        System.arraycopy(afruit = ENUM$VALUES, <span class="number">0</span>, afruit1 = <span class="keyword">new</span> Fruit[i = afruit.length], <span class="number">0</span>, i);  </span><br><span class="line">        <span class="keyword">return</span> afruit1;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Fruit <span class="title">valueOf</span><span class="params">(String s)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> (Fruit)Enum.valueOf(test/Fruit, s);  </span><br><span class="line">    &#125;  </span><br><span class="line">    Fruit(String s, <span class="keyword">int</span> i, Fruit fruit) &#123;  </span><br><span class="line">        <span class="keyword">this</span>(s, i);  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit APPLE;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit PEAR;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit PEACH;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit ORANGE;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit ENUM$VALUES[];  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;  </span><br><span class="line">        APPLE = <span class="keyword">new</span> Fruit(<span class="string">&quot;APPLE&quot;</span>, <span class="number">0</span>) &#123;  </span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function">            </span>&#123;  </span><br><span class="line">                System.out.println(<span class="string">&quot;I am an apple.&quot;</span>);  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;;  </span><br><span class="line">        PEAR = <span class="keyword">new</span> Fruit(<span class="string">&quot;PEAR&quot;</span>, <span class="number">1</span>) &#123;  </span><br><span class="line"></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function">            </span>&#123;  </span><br><span class="line">                System.out.println(<span class="string">&quot;I am a pear.&quot;</span>);  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;;  </span><br><span class="line">        PEACH = <span class="keyword">new</span> Fruit(<span class="string">&quot;PEACH&quot;</span>, <span class="number">2</span>) &#123;  </span><br><span class="line"></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function">            </span>&#123;  </span><br><span class="line">                System.out.println(<span class="string">&quot;I am a peach.&quot;</span>);  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;;  </span><br><span class="line">        ORANGE = <span class="keyword">new</span> Fruit(<span class="string">&quot;ORANGE&quot;</span>, <span class="number">3</span>);  </span><br><span class="line">        ENUM$VALUES = (<span class="keyword">new</span> Fruit[] &#123;  </span><br><span class="line">            APPLE, PEAR, PEACH, ORANGE  </span><br><span class="line">        &#125;);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<p>注意这段代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span>   </span><br><span class="line">    &#123;  </span><br><span class="line">        APPLE = <span class="keyword">new</span> Fruit(<span class="string">&quot;APPLE&quot;</span>, <span class="number">0</span>) &#123;  </span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function">            </span>&#123;  </span><br><span class="line">                System.out.println(<span class="string">&quot;I am an apple.&quot;</span>);  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;;  </span><br><span class="line">        PEAR = <span class="keyword">new</span> Fruit(<span class="string">&quot;PEAR&quot;</span>, <span class="number">1</span>) &#123;  </span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function">            </span>&#123;  </span><br><span class="line">                System.out.println(<span class="string">&quot;I am a pear.&quot;</span>);  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;;  </span><br><span class="line">        PEACH = <span class="keyword">new</span> Fruit(<span class="string">&quot;PEACH&quot;</span>, <span class="number">2</span>) &#123;  </span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function">            </span>&#123;  </span><br><span class="line">                System.out.println(<span class="string">&quot;I am a peach.&quot;</span>);  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;;  </span><br><span class="line">        ORANGE = <span class="keyword">new</span> Fruit(<span class="string">&quot;ORANGE&quot;</span>, <span class="number">3</span>);  </span><br></pre></td></tr></table></figure>
+
+<p>　这个时候的APPLE，PEAR，PEACH已经以匿名内部类的方式对Fruit进行了Overide，自然体现出了多态，多出的那三个疑似内部类的class文件也就是它们！而ORANGE，没有重写test方法，仍然以一个Fruit实例的形式出现。</p>
+<h1 id="6-反思-Enum多态体现的好处"><a href="#6-反思-Enum多态体现的好处" class="headerlink" title="6.反思-Enum多态体现的好处"></a>6.反思-Enum多态体现的好处</h1><p>其实通过上面我们可以通过Enum(枚举类)实现单例工厂模式,这样就能省去多余的判断步骤和不必要的父类和其他的相关类,大大提高我们的代码效率.</p>
+<h2 id="练习小Demo"><a href="#练习小Demo" class="headerlink" title="练习小Demo"></a><strong><font color="red">练习小Demo</font></strong></h2><p><strong>1.创建Dog和Persion类</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com._521it.Enum.Model;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: yangxiangnan</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/7/17 14:47</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>:</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;狗狗的无参数构造器&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">(String name, String age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        System.out.println(<span class="string">&quot;狗狗的有参数构造器&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bark</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;汪汪&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(String age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com._521it.Enum.Model;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: yangxiangnan</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/7/17 14:51</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>:</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Persion</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Persion</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;人的无参数构造器&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Persion</span><span class="params">(String name, String age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        System.out.println(<span class="string">&quot;人的有参数构造器&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;说话&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(String age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>2.创建单例工厂类</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com._521it.Enum.Singletion;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com._521it.Enum.Model.Dog;</span><br><span class="line"><span class="keyword">import</span> com._521it.Enum.Model.Persion;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: yangxiangnan</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/7/17 14:52</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>:</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">SingletonInstanceFactory</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    INSTANCE_FACTORY;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Persion persion;</span><br><span class="line">    <span class="keyword">private</span> Dog dog;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonInstanceFactory</span><span class="params">()</span></span>&#123;</span><br><span class="line">        persion = <span class="keyword">new</span> Persion();</span><br><span class="line">        dog = <span class="keyword">new</span> Dog();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Persion <span class="title">getPersion</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> persion;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Dog <span class="title">getDog</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> dog;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>3.进行测试</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com._521it.Enum;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com._521it.Enum.Model.Dog;</span><br><span class="line"><span class="keyword">import</span> com._521it.Enum.Model.Persion;</span><br><span class="line"><span class="keyword">import</span> com._521it.Enum.Singletion.SingletonInstanceFactory;</span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Auther</span>: yangxiangnan</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2019/7/17 17:18</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span>:</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test01</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Dog dog1 = SingletonInstanceFactory.INSTANCE_FACTORY.getDog();</span><br><span class="line">        Dog dog2 = SingletonInstanceFactory.INSTANCE_FACTORY.getDog();</span><br><span class="line">        System.out.println(<span class="string">&quot;dog1 = &quot;</span> + dog1);</span><br><span class="line">        System.out.println(<span class="string">&quot;dog2 = &quot;</span> + dog2);</span><br><span class="line">        dog1.bark();</span><br><span class="line">        dog2.bark();</span><br><span class="line">        System.out.println(dog1 == dog2);</span><br><span class="line"></span><br><span class="line">        Persion persion1 = SingletonInstanceFactory.INSTANCE_FACTORY.getPersion();</span><br><span class="line">        Persion persion2 = SingletonInstanceFactory.INSTANCE_FACTORY.getPersion();</span><br><span class="line">        System.out.println(<span class="string">&quot;persion1 = &quot;</span> + persion1);</span><br><span class="line">        System.out.println(<span class="string">&quot;persion2 = &quot;</span> + persion2);</span><br><span class="line">        persion1.speak();</span><br><span class="line">        persion2.speak();</span><br><span class="line">        System.out.println(persion1 == persion2);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>4.运行结果</strong></p>
+<p>结果如下:</p>
+<p><img src="https://raw.githubusercontent.com/yangxiangnanwill/uploadImages/master/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20190717172845.png"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
       </tags>
   </entry>
   <entry>
@@ -2095,7 +2095,7 @@
 <li><p>服务发现：服务调用方向服务注册中心咨询服务，并获取所有服务的实例清单，实现对具体服务实<br>例的访问。</p>
 </li>
 </ul>
-<p><img src="https://img-blog.csdn.net/20160419111801783" alt="Microservices"></p>
+<p><a href="https://imgtu.com/i/RRd8Ag"><img src="https://z3.ax1x.com/2021/07/03/RRd8Ag.jpg" alt="RRd8Ag.jpg"></a></p>
 <p>通过上面的调用图会发现，除了微服务，还有一个组件是服务注册中心，它是微服务架构非常重要的一个组件，在微服务架构里主要起到了协调者的一个作用。注册中心一般包含如下几个功能：</p>
 <ul>
 <li><p>服务发现：</p>
@@ -2255,6 +2255,311 @@
       </categories>
       <tags>
         <tag>JAVA工具类整理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker(5)-安装MySQL</title>
+    <url>/2021/06/20/Docker/Docker(5)-%E5%AE%89%E8%A3%85MySQL/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>本人文章均引用或者复制：</p>
+<p>公众号：</p>
+<p><img src="http://www.cicoding.cn/icons/wx.jpg"></p>
+<p>QQ群：<a href="http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21">806951874</a></p>
+</blockquote>
+<h1 id="在Docker中安装Mysql"><a href="#在Docker中安装Mysql" class="headerlink" title="在Docker中安装Mysql"></a>在Docker中安装Mysql</h1><h2 id="前言-1"><a href="#前言-1" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>前言</p>
+<p>此篇幅内容较多，讲解的很详细，也有很多知识点。能耐心认真的读完，就很不错了~</p>
+</blockquote>
+<blockquote>
+<p>一般情况下，都会永久性的配置镜像加速，在Linux中修改 /etc/docker/daemon.json 文件，填入以下内容：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;registry-mirrors&quot;: [&quot;https://registry.docker-cn.com&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>如果daemon.json不存在的话，需要自己创建一下。</p>
+<p>文件修改保存成功之后，记得重启一下Docker服务，以便让这个镜像加速生效。</p>
+<p>重启Docker服务</p>
+<p>我们在【在centos系统中安装Docker】一节中讲过Docker随着服务器重启自动启动的内容，正好可以通过命令service docker restart来实现Docker服务的重启。</p>
+<p>具体详情请查看 <a href="https://yuque.com/zhoubang/docker/rqspmt#cuygcr">https://yuque.com/zhoubang/docker/rqspmt#cuygcr</a></p>
+</blockquote>
+<blockquote>
+<p>然后我们在Linux中执行命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service docker restart</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>出现下图所示结果，表明Docker服务已经重新启动了！这样就可以永久性的使用Docker加速服务了。</p>
+<blockquote>
+<p>如果不做特别的配置的话，之前处于运行状态的容器，随着Docker服务的重启也会停止运行。</p>
+</blockquote>
+<h2 id="下载mysql镜像"><a href="#下载mysql镜像" class="headerlink" title="下载mysql镜像"></a>下载mysql镜像</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker pull mysql</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果配置了镜像加速，那么在下载mysql镜像或者其他比较大的文件的时候，会发现下载速度变得非常快！</p>
+</blockquote>
+<h2 id="启动mysql容器"><a href="#启动mysql容器" class="headerlink" title="启动mysql容器"></a>启动mysql容器</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 --name=mysql mysql</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>其中 -e 的作用是用于设置环境变量，mysql默认用户名为root，则MYSQL_ROOT_PASSWORD即为root设置密码，即123456</p>
+</blockquote>
+<h2 id="查看运行的mysql容器"><a href="#查看运行的mysql容器" class="headerlink" title="查看运行的mysql容器"></a>查看运行的mysql容器</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+
+<p>如下图：</p>
+<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015011544.png"></p>
+<blockquote>
+<p>mysql容器已经正常启动了！</p>
+</blockquote>
+<h2 id="进入mysql容器"><a href="#进入mysql容器" class="headerlink" title="进入mysql容器"></a>进入mysql容器</h2><blockquote>
+<p>既然mysql服务启动了，如果我们想对mysql进行操作（比如进入命令行操作、客户端连接等操作），该怎么办？</p>
+</blockquote>
+<p><strong>通过 docker exec 命令进入mysql容器：</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker exec -it c9 /bin/bash</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>其中的“c9”指的当前mysql容器ID的前面部分值（在上图就可以看出来mysql容器的ID是 c94faeed480a）。</p>
+</blockquote>
+<p>回车运行效果如下图：</p>
+<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015011544.png" alt="img"></p>
+<blockquote>
+<p>其实这个时候，命令行控制台可以输入mysql相关的命令了。</p>
+</blockquote>
+<h2 id="连接mysql数据库"><a href="#连接mysql数据库" class="headerlink" title="连接mysql数据库"></a>连接mysql数据库</h2><blockquote>
+<p>mysql -u root -p123456</p>
+</blockquote>
+<p>如下图：</p>
+<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015011544.png" alt="img"></p>
+<p>这个就是我们非常熟悉的mysql命令行界面了！</p>
+<p>我们可以在这里创建数据库、表等操作。再次印证了Docker的强大和方便！</p>
+<p><img src="http://www.cicoding.cn/images/docker/1527527324223-e0be6ce6-e27b-4ba9-9eb0-821cb8f0509e.jpeg"></p>
+<h2 id="查看当前所有的数据库"><a href="#查看当前所有的数据库" class="headerlink" title="查看当前所有的数据库"></a>查看当前所有的数据库</h2><p>在mysql命令行中执行命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+
+<p>如下图所示：</p>
+<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015012343.png"></p>
+<blockquote>
+<p>完全就是和平常使用mysql一样。</p>
+</blockquote>
+<h2 id="创建数据库、表、新增测试数据"><a href="#创建数据库、表、新增测试数据" class="headerlink" title="创建数据库、表、新增测试数据"></a>创建数据库、表、新增测试数据</h2><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">create database docker_test;</span><br></pre></td></tr></table></figure>
+
+<p>效果如下图：</p>
+<p><img src="http://www.cicoding.cn/images/docker/1527527630068-b5963a1f-6e4b-4afb-90fa-6aff56bb5f2d.png"></p>
+<blockquote>
+<p>这里我就创建了一个数据库docker_test</p>
+</blockquote>
+<h3 id="选择数据库"><a href="#选择数据库" class="headerlink" title="选择数据库"></a>选择数据库</h3><blockquote>
+<p>首先需要<strong>选择具体的数据库</strong>，执行命令选择刚刚创建的数据库：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use docker_test</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">create table test(name varchar(20),age int(11));</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>创建了test表，有2个字段：name、age</p>
+</blockquote>
+<h3 id="添加测试数据"><a href="#添加测试数据" class="headerlink" title="添加测试数据"></a>添加测试数据</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">insert into test values(&quot;Kitty&quot;,26),(&quot;Tom&quot;,18),(&quot;Jack&quot;,36);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这里就简单添加3条测试数据。</p>
+</blockquote>
+<blockquote>
+<p>我们查询一下数据是否存在于数据库中：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select * from test;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015013358.png"></p>
+</blockquote>
+<blockquote>
+<p>一切OK！</p>
+</blockquote>
+<h2 id="客户端连接mysql数据库"><a href="#客户端连接mysql数据库" class="headerlink" title="客户端连接mysql数据库"></a>客户端连接mysql数据库</h2><blockquote>
+<p>既然mysql成功启动并运行，除了能在命令行中操作mysql数据库之外，肯定也是必须要能在客户端上连接和操作数据库才行。</p>
+</blockquote>
+<blockquote>
+<p>下面我就在我本地电脑上通过数据库客户端软件连接一下这个mysql数据库， 看看能不能正常连接和操作。</p>
+</blockquote>
+<blockquote>
+<p>我使用的是IDEA自带的数据库软件</p>
+</blockquote>
+<h3 id="新建连接mysql数据库"><a href="#新建连接mysql数据库" class="headerlink" title="新建连接mysql数据库"></a>新建连接mysql数据库</h3><p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015035759.png"></p>
+<ul>
+<li>输入正确的mysql相关信息，连接数据库</li>
+</ul>
+<blockquote>
+<p>输入完成之后，可以点击下方的 Test Connection 按钮，来测试连接是否正常。</p>
+</blockquote>
+<p><strong>查看创建的数据库和表：</strong></p>
+<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015040227.png"></p>
+<blockquote>
+<p>到此，mysql的相关服务已经正常访问和操作了。这和我们传统的使用mysql没有什么不同。</p>
+</blockquote>
+<h3 id="客户端中操作表数据"><a href="#客户端中操作表数据" class="headerlink" title="客户端中操作表数据"></a>客户端中操作表数据</h3><blockquote>
+<p>我们通过DataGrip客户端，在test表中手动再添加一条数据，然后我们在docker中看看是否能查看到新增的数据：</p>
+</blockquote>
+<p><img src="http://www.cicoding.cn/images/docker/1527529149115-b76ddbb0-d5d6-47c2-994a-5e6b7c86b9aa.png" alt="在Docker中安装Mysql"></p>
+<blockquote>
+<p>【注意】：我这里添加了一条带有中文的数据。</p>
+</blockquote>
+<h3 id="进入mysql容器中查询表数据"><a href="#进入mysql容器中查询表数据" class="headerlink" title="进入mysql容器中查询表数据"></a>进入mysql容器中查询表数据</h3><p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015040555.png"></p>
+<blockquote>
+<p>呀！是不是发现问题了~ 没错，中文乱码！怎么解决呢？</p>
+</blockquote>
+<h3 id="mysql容器中解决表数据中文乱码"><a href="#mysql容器中解决表数据中文乱码" class="headerlink" title="mysql容器中解决表数据中文乱码"></a>mysql容器中解决表数据中文乱码</h3><h4 id="查看mysql容器的ID"><a href="#查看mysql容器的ID" class="headerlink" title="查看mysql容器的ID"></a>查看mysql容器的ID</h4><p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015011544.png" alt="img"></p>
+<h4 id="进入mysql的docker容器"><a href="#进入mysql的docker容器" class="headerlink" title="进入mysql的docker容器"></a>进入mysql的docker容器</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker exec -it 20 /bin/bash</span><br></pre></td></tr></table></figure>
+
+<h4 id="编辑mysql配置文件"><a href="#编辑mysql配置文件" class="headerlink" title="编辑mysql配置文件"></a>编辑mysql配置文件</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim /etc/mysql/my.cnf</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果提示 vim: command not found 的错误信息，需要安装相关依赖包，执行下面两个命令即可：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get install vim</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="在my-cnf文件中加入以下配置"><a href="#在my-cnf文件中加入以下配置" class="headerlink" title="在my.cnf文件中加入以下配置"></a>在my.cnf文件中加入以下配置</h4><figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">character-set-server=utf8 </span><br><span class="line">[client]</span><br><span class="line">default-character-set=utf8 </span><br><span class="line">[mysql]</span><br><span class="line">default-character-set=utf8</span><br></pre></td></tr></table></figure>
+
+<p>最终修改结果为：</p>
+<p><img src="http://www.cicoding.cn/images/docker/1527530651772-65e37c7b-f8bd-4600-82d3-bbc899c75588.png" alt="在Docker中安装Mysql"></p>
+<p><strong>重新进入mysql容器，查询表数据</strong> ，显示结果为：</p>
+<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015041908.png"></p>
+<blockquote>
+<p>可以看到，已经正常显示中文了！</p>
+</blockquote>
+<h4 id="停止并重启mysql容器，再次查看效果"><a href="#停止并重启mysql容器，再次查看效果" class="headerlink" title="停止并重启mysql容器，再次查看效果"></a>停止并重启mysql容器，再次查看效果</h4><p><img src="http://www.cicoding.cn/images/docker/1527531064156-dd3d8b97-58ea-45e1-a0a3-c197f1bf4053.png"></p>
+<p><img src="http://www.cicoding.cn/images/docker/1527531133633-c2fa79b6-d15b-4339-b062-ef0514e77940.png" alt="在Docker中安装Mysql"></p>
+<blockquote>
+<p>客户端连接正常！</p>
+</blockquote>
+<h4 id="进入mysql容器，查看表数据"><a href="#进入mysql容器，查看表数据" class="headerlink" title="进入mysql容器，查看表数据"></a>进入mysql容器，查看表数据</h4><p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015085429.png"></p>
+<blockquote>
+<p>mysql容器重启之后，查询数据正常显示中文！一切没什么问题了~</p>
+</blockquote>
+<h2 id="通过commit命令提交新的镜像"><a href="#通过commit命令提交新的镜像" class="headerlink" title="通过commit命令提交新的镜像"></a>通过commit命令提交新的镜像</h2><blockquote>
+<p>根据在mysql容器中所做的更改，创建新的mysql镜像。</p>
+<p>回想一下，我们在mysql容器中做了什么更改？</p>
+<p>创建数据库、表、新增数据、修改my.cnf配置文件，就是这些吧~</p>
+</blockquote>
+<p>使用<em><strong>commit</strong></em>命令提交新镜像</p>
+<p>通过在Linux命令行中执行命令，提交新的镜像：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker commit c9 mysql-new</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>其中，“c9”就是指的容器ID，新的镜像名称为“mysql-new”。</p>
+</blockquote>
+<p>如下图：</p>
+<p><img src="http://www.cicoding.cn/images/docker/1527531803451-9e5877e4-43d7-4661-a577-961c2332fe2d.png" alt="在Docker中安装Mysql"></p>
+<p>查看所有镜像列表：</p>
+<p><img src="http://www.cicoding.cn/images/docker/1527532053082-2e7691e6-6219-455b-906d-f4534476b913.png" alt="在Docker中安装Mysql"></p>
+<blockquote>
+<p>是不是发现了我们创建的新的镜像mysql-new了。</p>
+</blockquote>
+<h3 id="启动新创建的mysql镜像"><a href="#启动新创建的mysql镜像" class="headerlink" title="启动新创建的mysql镜像"></a>启动新创建的mysql镜像</h3><p><img src="http://www.cicoding.cn/images/docker/1527532239704-6e772c1c-551f-42f6-9b45-39137f38bea5.png" alt="在Docker中安装Mysql"></p>
+<blockquote>
+<p>由于上面我们已经运行了一个mysql的容器了，端口是3306，所以我们新运行一个mysql容器的时候，端口号就不能是3306了，这里我指定为3307，且容器的别名是mysql-new，方便区分查看。</p>
+</blockquote>
+<h3 id="进入新创建的mysql容器"><a href="#进入新创建的mysql容器" class="headerlink" title="进入新创建的mysql容器"></a>进入新创建的mysql容器</h3><h4 id="查看mysql数据库信息"><a href="#查看mysql数据库信息" class="headerlink" title="查看mysql数据库信息"></a>查看mysql数据库信息</h4><p><img src="http://www.cicoding.cn/images/docker/1527532534611-7677fed8-a17e-463c-93bb-62a1f7dfbb21.png" alt="在Docker中安装Mysql"></p>
+<h4 id="查看my-cnf配置文件内容"><a href="#查看my-cnf配置文件内容" class="headerlink" title="查看my.cnf配置文件内容"></a>查看my.cnf配置文件内容</h4><p><img src="http://www.cicoding.cn/images/docker/1527532760600-5a1830ab-633e-4d00-a15a-23b6c2e0d677.png" alt="在Docker中安装Mysql"></p>
+<p>从上面2张图中，可以明显的看到，我们之前创建的数据库docker_test、表test，都没有了！但是修改的my.cnf配置文件的内容还是保留着的。</p>
+<p>why？？？ 为什么会这样呢？</p>
+<blockquote>
+<p>官方文档在commit命令的介绍中，有这样一段话：</p>
+<p><strong>The commit operation will not include any data contained in volumes mounted inside the container.</strong></p>
+</blockquote>
+<blockquote>
+<p>意思是commit操作并不会包含容器内挂载数据卷中的数据。</p>
+</blockquote>
+<blockquote>
+<p><strong>如果对于“数据卷”不了解的话，确实看不懂是什么意思。</strong></p>
+</blockquote>
+<h3 id="数据卷与数据卷容器"><a href="#数据卷与数据卷容器" class="headerlink" title="数据卷与数据卷容器"></a>数据卷与数据卷容器</h3><blockquote>
+<p><strong>数据卷与数据卷容器</strong></p>
+</blockquote>
+<blockquote>
+<p>生产环境中使用Docker的过程中，往往需要对数据进行持久化，或者需要在多个容器之间进行数据共享，这必然涉及容器的数据管理操作。</p>
+<p>容器中管理数据主要有两种方式：</p>
+<p>数据卷（Data Volumes）：数据卷是一个可供容器使用的特殊目录，它将主机操作系统目录直接映射进容器。</p>
+<p>数据卷容器（Data Volume Containers）：数据卷容器也是一个容器，但是它的目的是专门用来提供数据卷，供其他容器挂载使用的。</p>
+</blockquote>
+<p>根据官方文档对于commit的介绍中，可以猜测到为何之前创建的数据库、表都不见了，原因是因为mysql容器的挂载数据卷引起的。</p>
+<p>我们可以通过命令查看到别名是“mysql”的容器挂载数据卷的目录。</p>
+<p>看一下我们的“mysql”容器的ID信息，方便查看。</p>
+<p><img src="http://www.cicoding.cn/images/docker/1527546716034-2e7873e1-883c-4d60-bdd6-bd75962b403a.png" alt="在Docker中安装Mysql"></p>
+<p>通过命令docker inspect查看mysql这个容器的数据卷挂载信息：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker inspect c9</span><br></pre></td></tr></table></figure>
+
+<p>执行命令之后，由于显示的内容比较多，这里我们就贴一下重要的信息：</p>
+<p><img src="http://www.cicoding.cn/images/docker/1527546766842-6a1ebb25-6a86-4a67-b202-05382a3ca083.png" alt="在Docker中安装Mysql"></p>
+<p>通过图中可以看到，mysql容器将容器内的/var/lib/mysql路径作为volume挂载。真正的数据库相关数据文件所在的目录就是“Source”对应的目录，即：/var/lib/docker/volumes/1b0b17f6a4f78d357a187116d75991db8ee784213e67cc9b9988c8ef647fe563/_data</p>
+<p>我们可以进入mysql容器查看/var/lib/mysql目录下的内容：</p>
+<p><img src="http://www.cicoding.cn/images/docker/1527546887058-112f86c9-f2ae-4cae-9540-6da58fe3e8aa.png" alt="在Docker中安装Mysql"></p>
+<blockquote>
+<p>发现的确是mysql数据库的数据文件（红色区域）。</p>
+</blockquote>
+<p>这时候，我们切换到Linux命令行，进入到mysql容器的数据挂载目录，看看该目录下有什么内容：</p>
+<p>/var/lib/docker/volumes/1b0b17f6a4f78d357a187116d75991db8ee784213e67cc9b9988c8ef647fe563/_data</p>
+<p>如下图所示：</p>
+<p><img src="http://www.cicoding.cn/images/docker/1527546977803-7124018a-3f0e-447b-88d8-80b442be4539.png" alt="在Docker中安装Mysql"></p>
+<p>咦~ 是不是发现了什么！把黄色区域的内容与上图中红色区域内容进行对比，是不是内容一模一样！</p>
+<p>这也就印证了，当初我们在mysql容器中创建的数据库、表等，真正的数据库文件存放的位置就是在宿主机下面，而不是存放在容器中。</p>
+<p>到此，我们终于知道了为何mysql-new容器中的数据库、表都不见了，原来数据库文件是存放在宿主机上的。</p>
+<p>那该如何解决这个问题呢？怎样才能让mysql-new容器启动之后可以正常加载我们之前创建的数据库、表等数据呢？这就引入了下面的正题 —— 数据挂载。</p>
+<h2 id="数据挂载"><a href="#数据挂载" class="headerlink" title="数据挂载"></a>数据挂载</h2><p>docker的数据挂载分为三种，volume、bind mount和tmpfs，关于三种的具体说明，有兴趣了解的可以看一下官网的文档 <a href="https://docs.docker.com/storage/">https://docs.docker.com/storage/</a></p>
+<p>参考文档 《基于docker部署mysql的数据持久化问题》 <a href="https://www.jianshu.com/p/530d00f97cbf">https://www.jianshu.com/p/530d00f97cbf</a></p>
+<blockquote>
+<p>上面的文章里面，把问题描述的非常详细清楚。我这里就不多做说明了。</p>
+</blockquote>
+<h3 id="使用-v-实现数据挂载（数据卷）"><a href="#使用-v-实现数据挂载（数据卷）" class="headerlink" title="使用 -v 实现数据挂载（数据卷）"></a>使用 <strong>-v 实现数据挂载（数据卷）</strong></h3><p>如果我们想在 run 一个新的mysql容器的时候，可以正常访问我们之前在mysql容器中创建的数据库、表数据，则在docker run命令启动容器的时候，就需要指定挂载目录。</p>
+<p><strong>注意：要想让新的mysql容器能正常挂载名称是“mysql”容器，前提是需要先停止名称是“mysql”的容器</strong>，不然的话，即使run命令配置正确，容器启动的时候会一直报错：</p>
+<p><img src="http://www.cicoding.cn/images/docker/1527547243072-cf5029a8-3d60-434f-aeba-f314633d6b0b.png" alt="在Docker中安装Mysql"></p>
+<p>上图就是因为没有事先停止mysql容器导致的。</p>
+<p><strong>下面开始具体操作：</strong></p>
+<ul>
+<li>先停止mysql容器</li>
+</ul>
+<p><img src="http://www.cicoding.cn/images/docker/1527547465870-974cfc00-44b0-4a09-87a9-b6035b4adbf5.png" alt="在Docker中安装Mysql"></p>
+<ul>
+<li>重新启动一个新的mysql容器，命令如下：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d -p 3308:3306 -e MYSQL_ROOT_PASSWORD=123456 --name mysql-v -v /var/lib/docker/volumes/1b0b17f6a4f78d357a187116d75991db8ee784213e67cc9b9988c8ef647fe563/_data:/var/lib/mysql mysql</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>最重要的一个参数 -v ：挂载数据卷。-v 后面的值中间有“：”号，前半部分指的是宿主机的目录（也就是我们上面的mysql容器的数据库存储的目录），后半部分指的是容器的目录。</p>
+<p>实现的效果就是说：新启动的容器，挂载宿主机的目录，实现数据共享。</p>
+</blockquote>
+<p>运行结果：</p>
+<p><img src="http://www.cicoding.cn/images/docker/1527547916774-cd6487ee-4afc-42a6-b6bb-f2ce6cf71523.png" alt="在Docker中安装Mysql"></p>
+<ul>
+<li><strong>登录新的mysql-v容器，查看数据库信息</strong></li>
+</ul>
+<p>直接看下图的命令操作吧：</p>
+<p><img src="http://www.cicoding.cn/images/docker/1527548344772-a86dd217-1ad4-4a19-b443-d51d2d45a80a.png" alt="在Docker中安装Mysql">       看到效果了吧！在这个mysql-v的新容器里面，已经可以看到我们一开始在“mysql”容器中创建的数据库和表了。</p>
+<p>也就实现了容器之间的数据共享。</p>
+<p>核心的实现就是在run命令里面加入了 -v 参数。如果不太明白-v的含义的，可以自行网上查询资料了解学习，加深印象。</p>
+<blockquote>
+<p><strong>上面我们解决了容器挂载数据卷的问题，但是细心的朋友，可能还有一个疑问：</strong></p>
+</blockquote>
+<p>为什么修改了my.cnf配置文件、以及运行mysql镜像时指定的MYSQL_ROOT_PASSWORD=123456，却依然可以在新容器mysql-new中使用呢，为什么这俩样数据不会消失呢？</p>
+<blockquote>
+<p>官方文档对于commit命令还有这样一段描述：</p>
+<p>It can be useful to commit a container’s file changes or settings into a new image.</p>
+</blockquote>
+<p>谷歌翻译过来的意思就是：将容器的文件更改或设置提交到新映像可能很有用。</p>
+<p>还记得我们当初运行第一个mysql容器的时候，docker run 命令是怎样的，这里贴一下当时启动容器的命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 --name=mysql mysql</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>其中，里面使用到了 -e 参数，设置了root用户的密码为123456。</p>
+<p>所以，结合官方文档对commit的介绍（It can be useful to commit a container’s file changes or settings into a new image. ），就可以知道，通过 -e 设置的信息，在使用commit提交新镜像的时候，这些设置被容器保留了下来，commit命令使用这些设置构建了新的镜像，在新容器里面使用的是相同的设置。</p>
+</blockquote>
+<blockquote>
+<p>这也印证了，我们在mysql-new容器中登录数据库的时候，登录密码写的是123456。因为在第一次启动mysql服务的时候，用户root密码是通过 -e 指定的，所以在commit提交新的镜像的时候，是被一同提交到了新镜像mysql-new中。</p>
+</blockquote>
+<h3 id="数据卷容器"><a href="#数据卷容器" class="headerlink" title="数据卷容器"></a>数据卷容器</h3><blockquote>
+<p>通过数据卷容器也可以实现多个容器间的数据共享。</p>
+</blockquote>
+<blockquote>
+<p>如果要授权一个容器访问另一个容器的数据卷，我们可以使用-volumes-from参数来执行docker run。</p>
+</blockquote>
+<p>（这里就不多做说明了，有兴趣的可以网上自行查阅资料研究）</p>
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -2841,311 +3146,6 @@
       </categories>
       <tags>
         <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker(5)-安装MySQL</title>
-    <url>/2021/06/20/Docker/Docker(5)-%E5%AE%89%E8%A3%85MySQL/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
-<p>本人文章均引用或者复制：</p>
-<p>公众号：</p>
-<p><img src="http://www.cicoding.cn/icons/wx.jpg"></p>
-<p>QQ群：<a href="http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21">806951874</a></p>
-</blockquote>
-<h1 id="在Docker中安装Mysql"><a href="#在Docker中安装Mysql" class="headerlink" title="在Docker中安装Mysql"></a>在Docker中安装Mysql</h1><h2 id="前言-1"><a href="#前言-1" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>前言</p>
-<p>此篇幅内容较多，讲解的很详细，也有很多知识点。能耐心认真的读完，就很不错了~</p>
-</blockquote>
-<blockquote>
-<p>一般情况下，都会永久性的配置镜像加速，在Linux中修改 /etc/docker/daemon.json 文件，填入以下内容：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;registry-mirrors&quot;: [&quot;https://registry.docker-cn.com&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>如果daemon.json不存在的话，需要自己创建一下。</p>
-<p>文件修改保存成功之后，记得重启一下Docker服务，以便让这个镜像加速生效。</p>
-<p>重启Docker服务</p>
-<p>我们在【在centos系统中安装Docker】一节中讲过Docker随着服务器重启自动启动的内容，正好可以通过命令service docker restart来实现Docker服务的重启。</p>
-<p>具体详情请查看 <a href="https://yuque.com/zhoubang/docker/rqspmt#cuygcr">https://yuque.com/zhoubang/docker/rqspmt#cuygcr</a></p>
-</blockquote>
-<blockquote>
-<p>然后我们在Linux中执行命令：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service docker restart</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>出现下图所示结果，表明Docker服务已经重新启动了！这样就可以永久性的使用Docker加速服务了。</p>
-<blockquote>
-<p>如果不做特别的配置的话，之前处于运行状态的容器，随着Docker服务的重启也会停止运行。</p>
-</blockquote>
-<h2 id="下载mysql镜像"><a href="#下载mysql镜像" class="headerlink" title="下载mysql镜像"></a>下载mysql镜像</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker pull mysql</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>如果配置了镜像加速，那么在下载mysql镜像或者其他比较大的文件的时候，会发现下载速度变得非常快！</p>
-</blockquote>
-<h2 id="启动mysql容器"><a href="#启动mysql容器" class="headerlink" title="启动mysql容器"></a>启动mysql容器</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 --name=mysql mysql</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>其中 -e 的作用是用于设置环境变量，mysql默认用户名为root，则MYSQL_ROOT_PASSWORD即为root设置密码，即123456</p>
-</blockquote>
-<h2 id="查看运行的mysql容器"><a href="#查看运行的mysql容器" class="headerlink" title="查看运行的mysql容器"></a>查看运行的mysql容器</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
-
-<p>如下图：</p>
-<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015011544.png"></p>
-<blockquote>
-<p>mysql容器已经正常启动了！</p>
-</blockquote>
-<h2 id="进入mysql容器"><a href="#进入mysql容器" class="headerlink" title="进入mysql容器"></a>进入mysql容器</h2><blockquote>
-<p>既然mysql服务启动了，如果我们想对mysql进行操作（比如进入命令行操作、客户端连接等操作），该怎么办？</p>
-</blockquote>
-<p><strong>通过 docker exec 命令进入mysql容器：</strong></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker exec -it c9 /bin/bash</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>其中的“c9”指的当前mysql容器ID的前面部分值（在上图就可以看出来mysql容器的ID是 c94faeed480a）。</p>
-</blockquote>
-<p>回车运行效果如下图：</p>
-<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015011544.png" alt="img"></p>
-<blockquote>
-<p>其实这个时候，命令行控制台可以输入mysql相关的命令了。</p>
-</blockquote>
-<h2 id="连接mysql数据库"><a href="#连接mysql数据库" class="headerlink" title="连接mysql数据库"></a>连接mysql数据库</h2><blockquote>
-<p>mysql -u root -p123456</p>
-</blockquote>
-<p>如下图：</p>
-<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015011544.png" alt="img"></p>
-<p>这个就是我们非常熟悉的mysql命令行界面了！</p>
-<p>我们可以在这里创建数据库、表等操作。再次印证了Docker的强大和方便！</p>
-<p><img src="http://www.cicoding.cn/images/docker/1527527324223-e0be6ce6-e27b-4ba9-9eb0-821cb8f0509e.jpeg"></p>
-<h2 id="查看当前所有的数据库"><a href="#查看当前所有的数据库" class="headerlink" title="查看当前所有的数据库"></a>查看当前所有的数据库</h2><p>在mysql命令行中执行命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
-
-<p>如下图所示：</p>
-<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015012343.png"></p>
-<blockquote>
-<p>完全就是和平常使用mysql一样。</p>
-</blockquote>
-<h2 id="创建数据库、表、新增测试数据"><a href="#创建数据库、表、新增测试数据" class="headerlink" title="创建数据库、表、新增测试数据"></a>创建数据库、表、新增测试数据</h2><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">create database docker_test;</span><br></pre></td></tr></table></figure>
-
-<p>效果如下图：</p>
-<p><img src="http://www.cicoding.cn/images/docker/1527527630068-b5963a1f-6e4b-4afb-90fa-6aff56bb5f2d.png"></p>
-<blockquote>
-<p>这里我就创建了一个数据库docker_test</p>
-</blockquote>
-<h3 id="选择数据库"><a href="#选择数据库" class="headerlink" title="选择数据库"></a>选择数据库</h3><blockquote>
-<p>首先需要<strong>选择具体的数据库</strong>，执行命令选择刚刚创建的数据库：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use docker_test</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">create table test(name varchar(20),age int(11));</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>创建了test表，有2个字段：name、age</p>
-</blockquote>
-<h3 id="添加测试数据"><a href="#添加测试数据" class="headerlink" title="添加测试数据"></a>添加测试数据</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">insert into test values(&quot;Kitty&quot;,26),(&quot;Tom&quot;,18),(&quot;Jack&quot;,36);</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>这里就简单添加3条测试数据。</p>
-</blockquote>
-<blockquote>
-<p>我们查询一下数据是否存在于数据库中：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select * from test;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015013358.png"></p>
-</blockquote>
-<blockquote>
-<p>一切OK！</p>
-</blockquote>
-<h2 id="客户端连接mysql数据库"><a href="#客户端连接mysql数据库" class="headerlink" title="客户端连接mysql数据库"></a>客户端连接mysql数据库</h2><blockquote>
-<p>既然mysql成功启动并运行，除了能在命令行中操作mysql数据库之外，肯定也是必须要能在客户端上连接和操作数据库才行。</p>
-</blockquote>
-<blockquote>
-<p>下面我就在我本地电脑上通过数据库客户端软件连接一下这个mysql数据库， 看看能不能正常连接和操作。</p>
-</blockquote>
-<blockquote>
-<p>我使用的是IDEA自带的数据库软件</p>
-</blockquote>
-<h3 id="新建连接mysql数据库"><a href="#新建连接mysql数据库" class="headerlink" title="新建连接mysql数据库"></a>新建连接mysql数据库</h3><p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015035759.png"></p>
-<ul>
-<li>输入正确的mysql相关信息，连接数据库</li>
-</ul>
-<blockquote>
-<p>输入完成之后，可以点击下方的 Test Connection 按钮，来测试连接是否正常。</p>
-</blockquote>
-<p><strong>查看创建的数据库和表：</strong></p>
-<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015040227.png"></p>
-<blockquote>
-<p>到此，mysql的相关服务已经正常访问和操作了。这和我们传统的使用mysql没有什么不同。</p>
-</blockquote>
-<h3 id="客户端中操作表数据"><a href="#客户端中操作表数据" class="headerlink" title="客户端中操作表数据"></a>客户端中操作表数据</h3><blockquote>
-<p>我们通过DataGrip客户端，在test表中手动再添加一条数据，然后我们在docker中看看是否能查看到新增的数据：</p>
-</blockquote>
-<p><img src="http://www.cicoding.cn/images/docker/1527529149115-b76ddbb0-d5d6-47c2-994a-5e6b7c86b9aa.png" alt="在Docker中安装Mysql"></p>
-<blockquote>
-<p>【注意】：我这里添加了一条带有中文的数据。</p>
-</blockquote>
-<h3 id="进入mysql容器中查询表数据"><a href="#进入mysql容器中查询表数据" class="headerlink" title="进入mysql容器中查询表数据"></a>进入mysql容器中查询表数据</h3><p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015040555.png"></p>
-<blockquote>
-<p>呀！是不是发现问题了~ 没错，中文乱码！怎么解决呢？</p>
-</blockquote>
-<h3 id="mysql容器中解决表数据中文乱码"><a href="#mysql容器中解决表数据中文乱码" class="headerlink" title="mysql容器中解决表数据中文乱码"></a>mysql容器中解决表数据中文乱码</h3><h4 id="查看mysql容器的ID"><a href="#查看mysql容器的ID" class="headerlink" title="查看mysql容器的ID"></a>查看mysql容器的ID</h4><p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015011544.png" alt="img"></p>
-<h4 id="进入mysql的docker容器"><a href="#进入mysql的docker容器" class="headerlink" title="进入mysql的docker容器"></a>进入mysql的docker容器</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker exec -it 20 /bin/bash</span><br></pre></td></tr></table></figure>
-
-<h4 id="编辑mysql配置文件"><a href="#编辑mysql配置文件" class="headerlink" title="编辑mysql配置文件"></a>编辑mysql配置文件</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim /etc/mysql/my.cnf</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>如果提示 vim: command not found 的错误信息，需要安装相关依赖包，执行下面两个命令即可：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get install vim</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h4 id="在my-cnf文件中加入以下配置"><a href="#在my-cnf文件中加入以下配置" class="headerlink" title="在my.cnf文件中加入以下配置"></a>在my.cnf文件中加入以下配置</h4><figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">character-set-server=utf8 </span><br><span class="line">[client]</span><br><span class="line">default-character-set=utf8 </span><br><span class="line">[mysql]</span><br><span class="line">default-character-set=utf8</span><br></pre></td></tr></table></figure>
-
-<p>最终修改结果为：</p>
-<p><img src="http://www.cicoding.cn/images/docker/1527530651772-65e37c7b-f8bd-4600-82d3-bbc899c75588.png" alt="在Docker中安装Mysql"></p>
-<p><strong>重新进入mysql容器，查询表数据</strong> ，显示结果为：</p>
-<p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015041908.png"></p>
-<blockquote>
-<p>可以看到，已经正常显示中文了！</p>
-</blockquote>
-<h4 id="停止并重启mysql容器，再次查看效果"><a href="#停止并重启mysql容器，再次查看效果" class="headerlink" title="停止并重启mysql容器，再次查看效果"></a>停止并重启mysql容器，再次查看效果</h4><p><img src="http://www.cicoding.cn/images/docker/1527531064156-dd3d8b97-58ea-45e1-a0a3-c197f1bf4053.png"></p>
-<p><img src="http://www.cicoding.cn/images/docker/1527531133633-c2fa79b6-d15b-4339-b062-ef0514e77940.png" alt="在Docker中安装Mysql"></p>
-<blockquote>
-<p>客户端连接正常！</p>
-</blockquote>
-<h4 id="进入mysql容器，查看表数据"><a href="#进入mysql容器，查看表数据" class="headerlink" title="进入mysql容器，查看表数据"></a>进入mysql容器，查看表数据</h4><p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015085429.png"></p>
-<blockquote>
-<p>mysql容器重启之后，查询数据正常显示中文！一切没什么问题了~</p>
-</blockquote>
-<h2 id="通过commit命令提交新的镜像"><a href="#通过commit命令提交新的镜像" class="headerlink" title="通过commit命令提交新的镜像"></a>通过commit命令提交新的镜像</h2><blockquote>
-<p>根据在mysql容器中所做的更改，创建新的mysql镜像。</p>
-<p>回想一下，我们在mysql容器中做了什么更改？</p>
-<p>创建数据库、表、新增数据、修改my.cnf配置文件，就是这些吧~</p>
-</blockquote>
-<p>使用<em><strong>commit</strong></em>命令提交新镜像</p>
-<p>通过在Linux命令行中执行命令，提交新的镜像：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker commit c9 mysql-new</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>其中，“c9”就是指的容器ID，新的镜像名称为“mysql-new”。</p>
-</blockquote>
-<p>如下图：</p>
-<p><img src="http://www.cicoding.cn/images/docker/1527531803451-9e5877e4-43d7-4661-a577-961c2332fe2d.png" alt="在Docker中安装Mysql"></p>
-<p>查看所有镜像列表：</p>
-<p><img src="http://www.cicoding.cn/images/docker/1527532053082-2e7691e6-6219-455b-906d-f4534476b913.png" alt="在Docker中安装Mysql"></p>
-<blockquote>
-<p>是不是发现了我们创建的新的镜像mysql-new了。</p>
-</blockquote>
-<h3 id="启动新创建的mysql镜像"><a href="#启动新创建的mysql镜像" class="headerlink" title="启动新创建的mysql镜像"></a>启动新创建的mysql镜像</h3><p><img src="http://www.cicoding.cn/images/docker/1527532239704-6e772c1c-551f-42f6-9b45-39137f38bea5.png" alt="在Docker中安装Mysql"></p>
-<blockquote>
-<p>由于上面我们已经运行了一个mysql的容器了，端口是3306，所以我们新运行一个mysql容器的时候，端口号就不能是3306了，这里我指定为3307，且容器的别名是mysql-new，方便区分查看。</p>
-</blockquote>
-<h3 id="进入新创建的mysql容器"><a href="#进入新创建的mysql容器" class="headerlink" title="进入新创建的mysql容器"></a>进入新创建的mysql容器</h3><h4 id="查看mysql数据库信息"><a href="#查看mysql数据库信息" class="headerlink" title="查看mysql数据库信息"></a>查看mysql数据库信息</h4><p><img src="http://www.cicoding.cn/images/docker/1527532534611-7677fed8-a17e-463c-93bb-62a1f7dfbb21.png" alt="在Docker中安装Mysql"></p>
-<h4 id="查看my-cnf配置文件内容"><a href="#查看my-cnf配置文件内容" class="headerlink" title="查看my.cnf配置文件内容"></a>查看my.cnf配置文件内容</h4><p><img src="http://www.cicoding.cn/images/docker/1527532760600-5a1830ab-633e-4d00-a15a-23b6c2e0d677.png" alt="在Docker中安装Mysql"></p>
-<p>从上面2张图中，可以明显的看到，我们之前创建的数据库docker_test、表test，都没有了！但是修改的my.cnf配置文件的内容还是保留着的。</p>
-<p>why？？？ 为什么会这样呢？</p>
-<blockquote>
-<p>官方文档在commit命令的介绍中，有这样一段话：</p>
-<p><strong>The commit operation will not include any data contained in volumes mounted inside the container.</strong></p>
-</blockquote>
-<blockquote>
-<p>意思是commit操作并不会包含容器内挂载数据卷中的数据。</p>
-</blockquote>
-<blockquote>
-<p><strong>如果对于“数据卷”不了解的话，确实看不懂是什么意思。</strong></p>
-</blockquote>
-<h3 id="数据卷与数据卷容器"><a href="#数据卷与数据卷容器" class="headerlink" title="数据卷与数据卷容器"></a>数据卷与数据卷容器</h3><blockquote>
-<p><strong>数据卷与数据卷容器</strong></p>
-</blockquote>
-<blockquote>
-<p>生产环境中使用Docker的过程中，往往需要对数据进行持久化，或者需要在多个容器之间进行数据共享，这必然涉及容器的数据管理操作。</p>
-<p>容器中管理数据主要有两种方式：</p>
-<p>数据卷（Data Volumes）：数据卷是一个可供容器使用的特殊目录，它将主机操作系统目录直接映射进容器。</p>
-<p>数据卷容器（Data Volume Containers）：数据卷容器也是一个容器，但是它的目的是专门用来提供数据卷，供其他容器挂载使用的。</p>
-</blockquote>
-<p>根据官方文档对于commit的介绍中，可以猜测到为何之前创建的数据库、表都不见了，原因是因为mysql容器的挂载数据卷引起的。</p>
-<p>我们可以通过命令查看到别名是“mysql”的容器挂载数据卷的目录。</p>
-<p>看一下我们的“mysql”容器的ID信息，方便查看。</p>
-<p><img src="http://www.cicoding.cn/images/docker/1527546716034-2e7873e1-883c-4d60-bdd6-bd75962b403a.png" alt="在Docker中安装Mysql"></p>
-<p>通过命令docker inspect查看mysql这个容器的数据卷挂载信息：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker inspect c9</span><br></pre></td></tr></table></figure>
-
-<p>执行命令之后，由于显示的内容比较多，这里我们就贴一下重要的信息：</p>
-<p><img src="http://www.cicoding.cn/images/docker/1527546766842-6a1ebb25-6a86-4a67-b202-05382a3ca083.png" alt="在Docker中安装Mysql"></p>
-<p>通过图中可以看到，mysql容器将容器内的/var/lib/mysql路径作为volume挂载。真正的数据库相关数据文件所在的目录就是“Source”对应的目录，即：/var/lib/docker/volumes/1b0b17f6a4f78d357a187116d75991db8ee784213e67cc9b9988c8ef647fe563/_data</p>
-<p>我们可以进入mysql容器查看/var/lib/mysql目录下的内容：</p>
-<p><img src="http://www.cicoding.cn/images/docker/1527546887058-112f86c9-f2ae-4cae-9540-6da58fe3e8aa.png" alt="在Docker中安装Mysql"></p>
-<blockquote>
-<p>发现的确是mysql数据库的数据文件（红色区域）。</p>
-</blockquote>
-<p>这时候，我们切换到Linux命令行，进入到mysql容器的数据挂载目录，看看该目录下有什么内容：</p>
-<p>/var/lib/docker/volumes/1b0b17f6a4f78d357a187116d75991db8ee784213e67cc9b9988c8ef647fe563/_data</p>
-<p>如下图所示：</p>
-<p><img src="http://www.cicoding.cn/images/docker/1527546977803-7124018a-3f0e-447b-88d8-80b442be4539.png" alt="在Docker中安装Mysql"></p>
-<p>咦~ 是不是发现了什么！把黄色区域的内容与上图中红色区域内容进行对比，是不是内容一模一样！</p>
-<p>这也就印证了，当初我们在mysql容器中创建的数据库、表等，真正的数据库文件存放的位置就是在宿主机下面，而不是存放在容器中。</p>
-<p>到此，我们终于知道了为何mysql-new容器中的数据库、表都不见了，原来数据库文件是存放在宿主机上的。</p>
-<p>那该如何解决这个问题呢？怎样才能让mysql-new容器启动之后可以正常加载我们之前创建的数据库、表等数据呢？这就引入了下面的正题 —— 数据挂载。</p>
-<h2 id="数据挂载"><a href="#数据挂载" class="headerlink" title="数据挂载"></a>数据挂载</h2><p>docker的数据挂载分为三种，volume、bind mount和tmpfs，关于三种的具体说明，有兴趣了解的可以看一下官网的文档 <a href="https://docs.docker.com/storage/">https://docs.docker.com/storage/</a></p>
-<p>参考文档 《基于docker部署mysql的数据持久化问题》 <a href="https://www.jianshu.com/p/530d00f97cbf">https://www.jianshu.com/p/530d00f97cbf</a></p>
-<blockquote>
-<p>上面的文章里面，把问题描述的非常详细清楚。我这里就不多做说明了。</p>
-</blockquote>
-<h3 id="使用-v-实现数据挂载（数据卷）"><a href="#使用-v-实现数据挂载（数据卷）" class="headerlink" title="使用 -v 实现数据挂载（数据卷）"></a>使用 <strong>-v 实现数据挂载（数据卷）</strong></h3><p>如果我们想在 run 一个新的mysql容器的时候，可以正常访问我们之前在mysql容器中创建的数据库、表数据，则在docker run命令启动容器的时候，就需要指定挂载目录。</p>
-<p><strong>注意：要想让新的mysql容器能正常挂载名称是“mysql”容器，前提是需要先停止名称是“mysql”的容器</strong>，不然的话，即使run命令配置正确，容器启动的时候会一直报错：</p>
-<p><img src="http://www.cicoding.cn/images/docker/1527547243072-cf5029a8-3d60-434f-aeba-f314633d6b0b.png" alt="在Docker中安装Mysql"></p>
-<p>上图就是因为没有事先停止mysql容器导致的。</p>
-<p><strong>下面开始具体操作：</strong></p>
-<ul>
-<li>先停止mysql容器</li>
-</ul>
-<p><img src="http://www.cicoding.cn/images/docker/1527547465870-974cfc00-44b0-4a09-87a9-b6035b4adbf5.png" alt="在Docker中安装Mysql"></p>
-<ul>
-<li>重新启动一个新的mysql容器，命令如下：</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d -p 3308:3306 -e MYSQL_ROOT_PASSWORD=123456 --name mysql-v -v /var/lib/docker/volumes/1b0b17f6a4f78d357a187116d75991db8ee784213e67cc9b9988c8ef647fe563/_data:/var/lib/mysql mysql</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>最重要的一个参数 -v ：挂载数据卷。-v 后面的值中间有“：”号，前半部分指的是宿主机的目录（也就是我们上面的mysql容器的数据库存储的目录），后半部分指的是容器的目录。</p>
-<p>实现的效果就是说：新启动的容器，挂载宿主机的目录，实现数据共享。</p>
-</blockquote>
-<p>运行结果：</p>
-<p><img src="http://www.cicoding.cn/images/docker/1527547916774-cd6487ee-4afc-42a6-b6bb-f2ce6cf71523.png" alt="在Docker中安装Mysql"></p>
-<ul>
-<li><strong>登录新的mysql-v容器，查看数据库信息</strong></li>
-</ul>
-<p>直接看下图的命令操作吧：</p>
-<p><img src="http://www.cicoding.cn/images/docker/1527548344772-a86dd217-1ad4-4a19-b443-d51d2d45a80a.png" alt="在Docker中安装Mysql">       看到效果了吧！在这个mysql-v的新容器里面，已经可以看到我们一开始在“mysql”容器中创建的数据库和表了。</p>
-<p>也就实现了容器之间的数据共享。</p>
-<p>核心的实现就是在run命令里面加入了 -v 参数。如果不太明白-v的含义的，可以自行网上查询资料了解学习，加深印象。</p>
-<blockquote>
-<p><strong>上面我们解决了容器挂载数据卷的问题，但是细心的朋友，可能还有一个疑问：</strong></p>
-</blockquote>
-<p>为什么修改了my.cnf配置文件、以及运行mysql镜像时指定的MYSQL_ROOT_PASSWORD=123456，却依然可以在新容器mysql-new中使用呢，为什么这俩样数据不会消失呢？</p>
-<blockquote>
-<p>官方文档对于commit命令还有这样一段描述：</p>
-<p>It can be useful to commit a container’s file changes or settings into a new image.</p>
-</blockquote>
-<p>谷歌翻译过来的意思就是：将容器的文件更改或设置提交到新映像可能很有用。</p>
-<p>还记得我们当初运行第一个mysql容器的时候，docker run 命令是怎样的，这里贴一下当时启动容器的命令：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 --name=mysql mysql</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>其中，里面使用到了 -e 参数，设置了root用户的密码为123456。</p>
-<p>所以，结合官方文档对commit的介绍（It can be useful to commit a container’s file changes or settings into a new image. ），就可以知道，通过 -e 设置的信息，在使用commit提交新镜像的时候，这些设置被容器保留了下来，commit命令使用这些设置构建了新的镜像，在新容器里面使用的是相同的设置。</p>
-</blockquote>
-<blockquote>
-<p>这也印证了，我们在mysql-new容器中登录数据库的时候，登录密码写的是123456。因为在第一次启动mysql服务的时候，用户root密码是通过 -e 指定的，所以在commit提交新的镜像的时候，是被一同提交到了新镜像mysql-new中。</p>
-</blockquote>
-<h3 id="数据卷容器"><a href="#数据卷容器" class="headerlink" title="数据卷容器"></a>数据卷容器</h3><blockquote>
-<p>通过数据卷容器也可以实现多个容器间的数据共享。</p>
-</blockquote>
-<blockquote>
-<p>如果要授权一个容器访问另一个容器的数据卷，我们可以使用-volumes-from参数来执行docker run。</p>
-</blockquote>
-<p>（这里就不多做说明了，有兴趣的可以网上自行查阅资料研究）</p>
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
