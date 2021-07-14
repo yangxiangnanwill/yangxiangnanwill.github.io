@@ -7,19 +7,19 @@
         <language>zh-CN</language>
         <pubDate>Mon, 12 Jul 2021 21:49:27 +0800</pubDate>
         <lastBuildDate>Mon, 12 Jul 2021 21:49:27 +0800</lastBuildDate>
-        <category>Docker</category>
-        <category>Archery</category>
+        <category>Linux</category>
+        <category>Cron</category>
         <category>JAVA</category>
         <category>POI</category>
         <category>EXCEL</category>
-        <category>Linux</category>
-        <category>Cron</category>
-        <category>Spring Cloud</category>
+        <category>Docker</category>
+        <category>Archery</category>
         <category>BeetlSql</category>
         <category>Git</category>
         <category>Other</category>
         <category>ProtoBuffer</category>
         <category>随笔</category>
+        <category>Spring Cloud</category>
         <category>IDEA</category>
         <category>Stream</category>
         <category>Debug</category>
@@ -30,12 +30,12 @@
         <category>测试</category>
         <category>Typora</category>
         <category>IDEA常用功能整理</category>
+        <category>MyBatis</category>
         <category>SpringBoot</category>
         <category>爬虫</category>
         <category>Quartz</category>
         <category>Jsoup</category>
         <category>Http</category>
-        <category>MyBatis</category>
         <item>
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/07/12/Spring/Spring-Cloud-Alibaba(4)-%E6%9C%8D%E5%8A%A1%E5%AE%B9%E9%94%99/</guid>
             <title>Spring Cloud Alibaba(4)-服务容错</title>
