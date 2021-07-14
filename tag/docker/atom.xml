@@ -3,7 +3,7 @@
     <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
     <title>Will • Posts by &#34;docker&#34; tag</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
-    <updated>2021-06-20T13:36:35.354Z</updated>
+    <updated>2021-06-24T09:36:36.620Z</updated>
     <category term="Docker" />
     <category term="Archery" />
     <category term="JAVA" />
@@ -11,12 +11,12 @@
     <category term="EXCEL" />
     <category term="Linux" />
     <category term="Cron" />
+    <category term="Spring Cloud" />
     <category term="BeetlSql" />
     <category term="Git" />
     <category term="Other" />
     <category term="ProtoBuffer" />
     <category term="随笔" />
-    <category term="Spring Cloud" />
     <category term="IDEA" />
     <category term="Stream" />
     <category term="Debug" />
@@ -27,16 +27,58 @@
     <category term="测试" />
     <category term="Typora" />
     <category term="IDEA常用功能整理" />
-    <category term="MyBatis" />
     <category term="SpringBoot" />
     <category term="爬虫" />
     <category term="Quartz" />
     <category term="Jsoup" />
     <category term="Http" />
+    <category term="MyBatis" />
     <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/20/Docker/Docker(7)-Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Docker/Docker(8)-%E5%AE%89%E8%A3%85nacos/</id>
+        <title>Docker(8)-安装Nacos</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Docker/Docker(8)-%E5%AE%89%E8%A3%85nacos/"/>
+        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;日常开发使用springcloud-alibaba，为个人开发方便，本地搭建一个测试环境。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;安装Nacos&#34;&gt;&lt;a href=&#34;#安装Nacos&#34; class=&#34;headerlink&#34; title=&#34;安装Nacos&#34;&gt;&lt;/a&gt;安装Nacos&lt;/h1&gt;&lt;h2 id=&#34;拉取镜像&#34;&gt;&lt;a href=&#34;#拉取镜像&#34; class=&#34;headerlink&#34; title=&#34;拉取镜像&#34;&gt;&lt;/a&gt;拉取镜像&lt;/h2&gt;&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker pull nacos&amp;#x2F;nacos-server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;挂载目录&#34;&gt;&lt;a href=&#34;#挂载目录&#34; class=&#34;headerlink&#34; title=&#34;挂载目录&#34;&gt;&lt;/a&gt;挂载目录&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mkdir -p /data/nacos/logs/                      #新建logs目录&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mkdir -p /data/nacos/init.d/          &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vim /data/nacos/init.d/custom.properties        #修改配置文件&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;mysql新建nacos的数据库，并执行脚本&#34;&gt;&lt;a href=&#34;#mysql新建nacos的数据库，并执行脚本&#34; class=&#34;headerlink&#34; title=&#34;mysql新建nacos的数据库，并执行脚本&#34;&gt;&lt;/a&gt;mysql新建nacos的数据库，并执行脚本&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/alibaba/nacos/blob/master/config/src/main/resources/META-INF/nacos-db.sql&#34;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;修改配置文件custom-properties&#34;&gt;&lt;a href=&#34;#修改配置文件custom-properties&#34; class=&#34;headerlink&#34; title=&#34;修改配置文件custom.properties&#34;&gt;&lt;/a&gt;修改配置文件&lt;code&gt;custom.properties&lt;/code&gt;&lt;/h2&gt;&lt;figure class=&#34;highlight properties&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;server.contextPath&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;/nacos&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;server.servlet.contextPath&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;/nacos&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;server.port&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;8848&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;spring.datasource.platform&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;mysql&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;db.num&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;db.url.0&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;jdbc:mysql://192.168.56.120:3306/nacos_devtest_prod?characterEncoding=utf8&amp;amp;connectTimeout=1000&amp;amp;socketTimeout=3000&amp;amp;autoReconnect=true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;db.user&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;user&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;db.password&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;pass&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.cmdb.dumpTaskInterval&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;3600&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.cmdb.eventTaskInterval&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;10&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.cmdb.labelTaskInterval&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;300&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.cmdb.loadDataAtStart&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;management.metrics.export.elastic.enabled&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;management.metrics.export.influx.enabled&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;server.tomcat.accesslog.enabled&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;server.tomcat.accesslog.pattern&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;%h %l %u %t &amp;quot;%r&amp;quot; %s %b %D %&amp;#123;User-Agent&amp;#125;i&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.security.ignore.urls&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;/,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-fe/public/**,/v1/auth/login,/v1/console/health/**,/v1/cs/**,/v1/ns/**,/v1/cmdb/**,/actuator/**,/v1/console/server/**&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.naming.distro.taskDispatchThreadCount&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.naming.distro.taskDispatchPeriod&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;200&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.naming.distro.batchSyncKeyCount&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;1000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.naming.distro.initDataRatio&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;0.9&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.naming.distro.syncRetryDelay&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;5000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.naming.data.warmup&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.naming.expireInstance&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;启动容器&#34;&gt;&lt;a href=&#34;#启动容器&#34; class=&#34;headerlink&#34; title=&#34;启动容器&#34;&gt;&lt;/a&gt;启动容器&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker  run \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;--name nacos -d \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;-p 8848:8848 \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;--privileged=true \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;--restart=always \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;-e JVM_XMS=256m \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;-e JVM_XMX=256m \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;-e MODE=standalone \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;-e PREFER_HOST_MODE=hostname \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;-v /data/nacos/logs:/home/nacos/logs \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;-v /data/nacos/init.d/custom.properties:/home/nacos/init.d/custom.properties \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nacos/nacos-server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;访问&#34;&gt;&lt;a href=&#34;#访问&#34; class=&#34;headerlink&#34; title=&#34;访问&#34;&gt;&lt;/a&gt;访问&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;地址&lt;/td&gt;
+&lt;td&gt;http://宿主ip:8848/nacos&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;用户名&lt;/td&gt;
+&lt;td&gt;nacos&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;密码&lt;/td&gt;
+&lt;td&gt;nacos&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+</content>
+        <category term="Docker" />
+        <updated>2021-06-24T09:36:36.620Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Docker/Docker(7)-Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
         <title>Docker(7)-Docker常用命令</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/20/Docker/Docker(7)-Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Docker/Docker(7)-Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
 &lt;p&gt;公众号：&lt;/p&gt;
@@ -219,54 +261,12 @@
 &lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker build -f /path/to/a/Dockerfile .&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/blockquote&gt;
 </content>
         <category term="Docker" />
-        <updated>2021-06-20T13:36:35.354Z</updated>
+        <updated>2021-06-24T09:36:36.619Z</updated>
     </entry>
     <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/20/Docker/Docker(8)-%E5%AE%89%E8%A3%85nacos/</id>
-        <title>Docker(8)-安装Nacos</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/20/Docker/Docker(8)-%E5%AE%89%E8%A3%85nacos/"/>
-        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;日常开发使用springcloud-alibaba，为个人开发方便，本地搭建一个测试环境。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;安装Nacos&#34;&gt;&lt;a href=&#34;#安装Nacos&#34; class=&#34;headerlink&#34; title=&#34;安装Nacos&#34;&gt;&lt;/a&gt;安装Nacos&lt;/h1&gt;&lt;h2 id=&#34;拉取镜像&#34;&gt;&lt;a href=&#34;#拉取镜像&#34; class=&#34;headerlink&#34; title=&#34;拉取镜像&#34;&gt;&lt;/a&gt;拉取镜像&lt;/h2&gt;&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker pull nacos&amp;#x2F;nacos-server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;挂载目录&#34;&gt;&lt;a href=&#34;#挂载目录&#34; class=&#34;headerlink&#34; title=&#34;挂载目录&#34;&gt;&lt;/a&gt;挂载目录&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mkdir -p /data/nacos/logs/                      #新建logs目录&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mkdir -p /data/nacos/init.d/          &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vim /data/nacos/init.d/custom.properties        #修改配置文件&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;mysql新建nacos的数据库，并执行脚本&#34;&gt;&lt;a href=&#34;#mysql新建nacos的数据库，并执行脚本&#34; class=&#34;headerlink&#34; title=&#34;mysql新建nacos的数据库，并执行脚本&#34;&gt;&lt;/a&gt;mysql新建nacos的数据库，并执行脚本&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/alibaba/nacos/blob/master/config/src/main/resources/META-INF/nacos-db.sql&#34;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;修改配置文件custom-properties&#34;&gt;&lt;a href=&#34;#修改配置文件custom-properties&#34; class=&#34;headerlink&#34; title=&#34;修改配置文件custom.properties&#34;&gt;&lt;/a&gt;修改配置文件&lt;code&gt;custom.properties&lt;/code&gt;&lt;/h2&gt;&lt;figure class=&#34;highlight properties&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;server.contextPath&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;/nacos&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;server.servlet.contextPath&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;/nacos&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;server.port&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;8848&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;spring.datasource.platform&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;mysql&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;db.num&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;db.url.0&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;jdbc:mysql://192.168.56.120:3306/nacos_devtest_prod?characterEncoding=utf8&amp;amp;connectTimeout=1000&amp;amp;socketTimeout=3000&amp;amp;autoReconnect=true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;db.user&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;user&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;db.password&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;pass&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.cmdb.dumpTaskInterval&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;3600&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.cmdb.eventTaskInterval&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;10&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.cmdb.labelTaskInterval&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;300&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.cmdb.loadDataAtStart&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;management.metrics.export.elastic.enabled&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;management.metrics.export.influx.enabled&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;server.tomcat.accesslog.enabled&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;server.tomcat.accesslog.pattern&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;%h %l %u %t &amp;quot;%r&amp;quot; %s %b %D %&amp;#123;User-Agent&amp;#125;i&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.security.ignore.urls&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;/,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-fe/public/**,/v1/auth/login,/v1/console/health/**,/v1/cs/**,/v1/ns/**,/v1/cmdb/**,/actuator/**,/v1/console/server/**&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.naming.distro.taskDispatchThreadCount&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.naming.distro.taskDispatchPeriod&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;200&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.naming.distro.batchSyncKeyCount&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;1000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.naming.distro.initDataRatio&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;0.9&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.naming.distro.syncRetryDelay&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;5000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.naming.data.warmup&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;nacos.naming.expireInstance&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;启动容器&#34;&gt;&lt;a href=&#34;#启动容器&#34; class=&#34;headerlink&#34; title=&#34;启动容器&#34;&gt;&lt;/a&gt;启动容器&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker  run \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;--name nacos -d \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;-p 8848:8848 \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;--privileged=true \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;--restart=always \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;-e JVM_XMS=256m \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;-e JVM_XMX=256m \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;-e MODE=standalone \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;-e PREFER_HOST_MODE=hostname \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;-v /data/nacos/logs:/home/nacos/logs \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;-v /data/nacos/init.d/custom.properties:/home/nacos/init.d/custom.properties \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nacos/nacos-server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;访问&#34;&gt;&lt;a href=&#34;#访问&#34; class=&#34;headerlink&#34; title=&#34;访问&#34;&gt;&lt;/a&gt;访问&lt;/h2&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;名称&lt;/th&gt;
-&lt;th&gt;值&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;地址&lt;/td&gt;
-&lt;td&gt;http://宿主ip:8848/nacos&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;用户名&lt;/td&gt;
-&lt;td&gt;nacos&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;密码&lt;/td&gt;
-&lt;td&gt;nacos&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-</content>
-        <category term="Docker" />
-        <updated>2021-06-20T12:25:46.056Z</updated>
-    </entry>
-    <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/20/Docker/Docker(6)-%E5%AE%89%E8%A3%85Nginx/</id>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Docker/Docker(6)-%E5%AE%89%E8%A3%85Nginx/</id>
         <title>Docker(6)-安装Nginx</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/20/Docker/Docker(6)-%E5%AE%89%E8%A3%85Nginx/"/>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Docker/Docker(6)-%E5%AE%89%E8%A3%85Nginx/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
 &lt;p&gt;公众号：&lt;/p&gt;
@@ -445,12 +445,170 @@
 
 </content>
         <category term="Docker" />
-        <updated>2021-06-20T12:23:59.519Z</updated>
+        <updated>2021-06-24T09:36:36.618Z</updated>
     </entry>
     <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/20/Docker/Docker(5)-%E5%AE%89%E8%A3%85MySQL/</id>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Docker/Docker(4)-%E5%AE%89%E8%A3%85Tomcat/</id>
+        <title>Docker(4)-安装Tomcat</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Docker/Docker(4)-%E5%AE%89%E8%A3%85Tomcat/"/>
+        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
+&lt;p&gt;公众号：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/icons/wx.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;QQ群：&lt;a href=&#34;http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21&#34;&gt;806951874&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;在Docker中安装Tomcat&#34;&gt;&lt;a href=&#34;#在Docker中安装Tomcat&#34; class=&#34;headerlink&#34; title=&#34;在Docker中安装Tomcat&#34;&gt;&lt;/a&gt;在Docker中安装Tomcat&lt;/h1&gt;&lt;h2 id=&#34;前言-1&#34;&gt;&lt;a href=&#34;#前言-1&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Tomcat镜像中已经包含jdk环境依赖，所以我们可以不用去启动java容器，直接运行tomcat容器就可以正常访问tomcat服务的，当然，你启动了java容器，也不会有什么影响，因为容器之间是隔离的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;查询Tomcat镜像列表&#34;&gt;&lt;a href=&#34;#查询Tomcat镜像列表&#34; class=&#34;headerlink&#34; title=&#34;查询Tomcat镜像列表&#34;&gt;&lt;/a&gt;查询Tomcat镜像列表&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker search tomcat&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;运行结果如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010114436.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一般情况下，都会选择下载stars数量最多的那个镜像，排在第一位的，一般都是官方提供的镜像。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;下载Tomcat镜像&#34;&gt;&lt;a href=&#34;#下载Tomcat镜像&#34; class=&#34;headerlink&#34; title=&#34;下载Tomcat镜像&#34;&gt;&lt;/a&gt;下载Tomcat镜像&lt;/h2&gt;&lt;p&gt;执行命令下载tomcat镜像：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker pull tomcat&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;运行Tomcat镜像&#34;&gt;&lt;a href=&#34;#运行Tomcat镜像&#34; class=&#34;headerlink&#34; title=&#34;运行Tomcat镜像&#34;&gt;&lt;/a&gt;运行Tomcat镜像&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run -p 8081:8080 tomcat&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;运行效果如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010114658.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;访问tomcat：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;访问地址为：ip:端口号，因为我的服务器地址为192.168.56.128，所以打开浏览器输入：&lt;strong&gt;192.168.56.128:8081&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;效果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010115113.png&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;运行Tomcat404问题&#34;&gt;&lt;a href=&#34;#运行Tomcat404问题&#34; class=&#34;headerlink&#34; title=&#34;运行Tomcat404问题&#34;&gt;&lt;/a&gt;运行Tomcat404问题&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;解决docker启动tomcat容器访问端口显示404的问题，页面显示 源服务器未能找到目标资源的表示或者是不愿公开一个已经存在&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;如果已经关闭防火墙，还出现404问题，那么就确定是tomcat的webapps文件夹下没有东西&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;启动Tomcat容器&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run -p 8081:8080 tomcat&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;查看已经启动的容器&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker ps&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;访问部署环境地址&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用8011端口访问Tomcat失败&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/20200228164338431.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTg5MDUw,size_16,color_FFFFFF,t_70&#34; alt=&#34;ip:端口号&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;先查看防火墙状况&#34;&gt;&lt;a href=&#34;#先查看防火墙状况&#34; class=&#34;headerlink&#34; title=&#34;先查看防火墙状况&#34;&gt;&lt;/a&gt;先查看防火墙状况&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;先查看防火墙状态&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;service firewalld status&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;出现下图所示代码，表示已经关闭防火墙&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/20200228164705354.png&#34; alt=&#34;在这里插入图片描述&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;防火墙未关闭&#34;&gt;&lt;a href=&#34;#防火墙未关闭&#34; class=&#34;headerlink&#34; title=&#34;防火墙未关闭&#34;&gt;&lt;/a&gt;防火墙未关闭&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;如果防火墙没关闭，先关闭防火墙&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;bash&#34;&gt; 关闭防火墙&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl stop firewalld.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;bash&#34;&gt; 禁止防火墙开机启动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl disable firewalld.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;bash&#34;&gt; 启动docker&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl start docker&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;bash&#34;&gt; 重启docker&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl restart docker&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&#34;防火墙关闭&#34;&gt;&lt;a href=&#34;#防火墙关闭&#34; class=&#34;headerlink&#34; title=&#34;防火墙关闭&#34;&gt;&lt;/a&gt;防火墙关闭&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;如果防火墙已经关闭但访问tomcat还是失败，那么使用如下命名进入tomcat的目录&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker exec -it a5f02a3e6dde(启动的tomcat容器的容器id) /bin/bash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;查看当前文件夹内的所有文件&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ls&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;进入webapps文件夹下，如果显示total 0，我们就需要把webapps.dist中的内容复制到webapps文件夹下&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd webapps&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;rm -f webapps&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cp -r webapps.dist webapps&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;访问ip:主机端口（8081）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010115113.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;后台运行Tomcat&#34;&gt;&lt;a href=&#34;#后台运行Tomcat&#34; class=&#34;headerlink&#34; title=&#34;后台运行Tomcat&#34;&gt;&lt;/a&gt;后台运行Tomcat&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;通过上述步骤搭建一个Tomcat，是不是很简单，一个tomcat就这样启动完成了！不得不说docker的强大！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;有没有觉得上面的启动方式存在什么问题？如果在命令行界面中按下 Ctrl+C快捷键，会有什么效果？&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;没错，当前的tomcat容器会停止运行，服务无法访问！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;有什么办法可以让tomcat容器一直运行呢？&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;解决办法其实很简单，答案就再在 docker run 命令里面设置一个 -d 的参数即可，如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run -d -p 8081:8080 --name tomcat tomcat&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010164641.png&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;看到没有，和上面的启动tomcat的效果不同，控制台并未输出tomcat启动的日志信息，这时候我们打开浏览器，重新访问一下：  &lt;strong&gt;192.168.56.128:8081&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;效果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010115113.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;通过上面两次docker run 启动tomcat的效果对比，我想大家也应该看得出区别了。所以，如果想让应用在后台一直运行的话，通过在 docker run 命令中使用“-d”参数来让容器处于后台运行。&lt;/p&gt;
+&lt;h2 id=&#34;查看运行中的Tomcat容器&#34;&gt;&lt;a href=&#34;#查看运行中的Tomcat容器&#34; class=&#34;headerlink&#34; title=&#34;查看运行中的Tomcat容器&#34;&gt;&lt;/a&gt;查看运行中的Tomcat容器&lt;/h2&gt;&lt;p&gt;通过下面命令，来查看当前服务器上运行的docker容器列表：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker ps&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010165054.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;从图中可以看到tomcat容器的一些信息，在最后一列的“NAMES”显示的tomcat名称是“tomcat9”，这是因为你在docker run的时候，指定了“–name”别名，如果没有，docker会给你自动生成一个别名，一般情况下，我们还是建议使用–name来设置别名以及版本，方便实际使用容易区分。&lt;/p&gt;
+&lt;p&gt;然后tomcat容器的“PORTS”这一列，可以看到8081 &amp;gt; 8080 的信息，我们知道tomcat是运行在容器里面的，而tomcat默认的端口是8080，也就是说tomcat所在容器的对外端口是8080，我们如果想通过浏览器等访问到tomcat，就需要指定一个宿主机的端口与这个tomcat容器端口进行映射，也就是8081这个宿主机的端口。我们实际在浏览器访问的时候，就是通过8081来访问的，不能使用8080访问。端口号的话你也可以自定义的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;停止Tomcat容器&#34;&gt;&lt;a href=&#34;#停止Tomcat容器&#34; class=&#34;headerlink&#34; title=&#34;停止Tomcat容器&#34;&gt;&lt;/a&gt;停止Tomcat容器&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;我们在jdk的文章中已经提及到停止容器的命令。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;首先我们还是要查看一下目前正在运行状态的tomcat容器的信息（ID或者别名）：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker ps&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010165054.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们可以看到tomcat容器的ID以及别名的信息，这里我就直接使用ID进行容器的操作了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;通过docker stop实现容器停止关闭&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker stop tomcat9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;疑问解答&#34;&gt;&lt;a href=&#34;#疑问解答&#34; class=&#34;headerlink&#34; title=&#34;疑问解答&#34;&gt;&lt;/a&gt;疑问解答&lt;/h2&gt;&lt;h3 id=&#34;问题一&#34;&gt;&lt;a href=&#34;#问题一&#34; class=&#34;headerlink&#34; title=&#34;问题一&#34;&gt;&lt;/a&gt;问题一&lt;/h3&gt;&lt;h4 id=&#34;问题&#34;&gt;&lt;a href=&#34;#问题&#34; class=&#34;headerlink&#34; title=&#34;问题&#34;&gt;&lt;/a&gt;问题&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;之前启动了tomcat容器，最后又把它关闭了，那我如果想再运行这个tomcat服务，怎么办？难道是要重新执行docker run这个命令来运行一个tomcat容器吗？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;解答&#34;&gt;&lt;a href=&#34;#解答&#34; class=&#34;headerlink&#34; title=&#34;解答&#34;&gt;&lt;/a&gt;解答&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;我们要知道docker run这个命令的作用，其实是运行一个全新的容器。你执行一次docker run命令，就会生成一个新的容器，通过一个图来看一下具体情况：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527521919194-08e09ebc-778b-4f01-b5d0-bc9e229734da.png&#34;&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527521919194-08e09ebc-778b-4f01-b5d0-bc9e229734da.png&#34; alt=&#34;在Docker中安装Tomcat&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;从图中可以看到，出现了很多tomcat的容器，而且“STATUS”状态为“Exited”。什么意思呢？因为我在操作的过程中，总共执行了5次docker run命令（这里忽略docker rm删除的容器），启动了5个全新的容器，每个容器之间是隔离的。同时，我又对每个tomcat容器执行了docker stop关闭命令，所以状态都是“Exited”。&lt;/p&gt;
+&lt;p&gt;所以，你每次启动的容器，docker都会给你保留下来，并不是说你执行了docker stop命令，容器就会被删除掉，答案是不会删除掉，只是标记一下容器的STATUS为Exited状态，处于未运行状态。&lt;/p&gt;
+&lt;p&gt;所以，如果想重新运行关闭状态下的容器，请使用docker start命令，比如我这里随便启动一个tomcat容器：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker start 22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这时候通过docker ps查看处于运行状态的容器列表：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527522366260-fea95bcb-fced-4f46-8234-c8e39393a245.png&#34;&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527522366260-fea95bcb-fced-4f46-8234-c8e39393a245.png&#34; alt=&#34;在Docker中安装Tomcat&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;说明tomcat容器已经启动成功了！&lt;/p&gt;
+&lt;p&gt;我们再通过docker ps -a查看所有的容器列表（包括未运行的容器），主要看一下tomcat容器的数量是否和上面的5个一致，并未重新运行一个全新的容器：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527522475276-0f83eb27-f7ef-4e5b-bcdc-39c32bdea54a.png&#34;&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527522475276-0f83eb27-f7ef-4e5b-bcdc-39c32bdea54a.png&#34; alt=&#34;在Docker中安装Tomcat&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以看到，tomcat容器的数量并未发生变化，其中的一个tomcat容器处于运行状态，剩余4个都是Exited停止状态。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;问题二&#34;&gt;&lt;a href=&#34;#问题二&#34; class=&#34;headerlink&#34; title=&#34;问题二&#34;&gt;&lt;/a&gt;问题二&lt;/h3&gt;&lt;h4 id=&#34;问题-1&#34;&gt;&lt;a href=&#34;#问题-1&#34; class=&#34;headerlink&#34; title=&#34;问题&#34;&gt;&lt;/a&gt;问题&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;如果上图中代表当前服务器上的容器情况，如果这时候我执行以下命令，你觉得会出现什么问题？&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run -d -p 8082:8080 --name quirky_mayer tomcat&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;命令的含义应该都明白吧。启动一个新的tomcat容器，映射的宿主机端口号是8082（因为之前已经启动了一个8081的容器，宿主机的端口号不能冲突），给该tomcat容器起了一个别名“quirky_mayer”，注意观察一下上图的tomcat容器的别名信息哦~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;解答-1&#34;&gt;&lt;a href=&#34;#解答-1&#34; class=&#34;headerlink&#34; title=&#34;解答&#34;&gt;&lt;/a&gt;解答&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;运行结果如下图：&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527522929924-fbeab3d9-8623-4239-b816-d041b8da890a.png&#34;&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527522929924-fbeab3d9-8623-4239-b816-d041b8da890a.png&#34; alt=&#34;在Docker中安装Tomcat&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实错误信息很明显了，就是容器的别名“quirky_mayer”已经存在了，别的tomcat容器的别名也存在一个是“quirky_mayer”的。&lt;/p&gt;
+&lt;p&gt;这个别名校验是否重复，是针对所有容器而言的，并非是只判断运行状态的容器，那些Exited状态的容器也会进行校验。&lt;/p&gt;
+&lt;p&gt;因此，我们在使用–name指定别名的时候，不要出现重复。&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="Docker" />
+        <updated>2021-06-24T09:36:36.617Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Docker/Docker(5)-%E5%AE%89%E8%A3%85MySQL/</id>
         <title>Docker(5)-安装MySQL</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/20/Docker/Docker(5)-%E5%AE%89%E8%A3%85MySQL/"/>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Docker/Docker(5)-%E5%AE%89%E8%A3%85MySQL/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
 &lt;p&gt;公众号：&lt;/p&gt;
@@ -747,170 +905,12 @@
 &lt;p&gt;（这里就不多做说明了，有兴趣的可以网上自行查阅资料研究）&lt;/p&gt;
 </content>
         <category term="Docker" />
-        <updated>2021-06-20T12:21:31.212Z</updated>
+        <updated>2021-06-24T09:36:36.617Z</updated>
     </entry>
     <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/20/Docker/Docker(4)-%E5%AE%89%E8%A3%85Tomcat/</id>
-        <title>Docker(4)-安装Tomcat</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/20/Docker/Docker(4)-%E5%AE%89%E8%A3%85Tomcat/"/>
-        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
-&lt;p&gt;公众号：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/icons/wx.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;QQ群：&lt;a href=&#34;http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21&#34;&gt;806951874&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;在Docker中安装Tomcat&#34;&gt;&lt;a href=&#34;#在Docker中安装Tomcat&#34; class=&#34;headerlink&#34; title=&#34;在Docker中安装Tomcat&#34;&gt;&lt;/a&gt;在Docker中安装Tomcat&lt;/h1&gt;&lt;h2 id=&#34;前言-1&#34;&gt;&lt;a href=&#34;#前言-1&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Tomcat镜像中已经包含jdk环境依赖，所以我们可以不用去启动java容器，直接运行tomcat容器就可以正常访问tomcat服务的，当然，你启动了java容器，也不会有什么影响，因为容器之间是隔离的。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;查询Tomcat镜像列表&#34;&gt;&lt;a href=&#34;#查询Tomcat镜像列表&#34; class=&#34;headerlink&#34; title=&#34;查询Tomcat镜像列表&#34;&gt;&lt;/a&gt;查询Tomcat镜像列表&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker search tomcat&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;运行结果如下图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010114436.png&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一般情况下，都会选择下载stars数量最多的那个镜像，排在第一位的，一般都是官方提供的镜像。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;下载Tomcat镜像&#34;&gt;&lt;a href=&#34;#下载Tomcat镜像&#34; class=&#34;headerlink&#34; title=&#34;下载Tomcat镜像&#34;&gt;&lt;/a&gt;下载Tomcat镜像&lt;/h2&gt;&lt;p&gt;执行命令下载tomcat镜像：&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker pull tomcat&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;运行Tomcat镜像&#34;&gt;&lt;a href=&#34;#运行Tomcat镜像&#34; class=&#34;headerlink&#34; title=&#34;运行Tomcat镜像&#34;&gt;&lt;/a&gt;运行Tomcat镜像&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run -p 8081:8080 tomcat&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;运行效果如下图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010114658.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;访问tomcat：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;访问地址为：ip:端口号，因为我的服务器地址为192.168.56.128，所以打开浏览器输入：&lt;strong&gt;192.168.56.128:8081&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010115113.png&#34;&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;运行Tomcat404问题&#34;&gt;&lt;a href=&#34;#运行Tomcat404问题&#34; class=&#34;headerlink&#34; title=&#34;运行Tomcat404问题&#34;&gt;&lt;/a&gt;运行Tomcat404问题&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;解决docker启动tomcat容器访问端口显示404的问题，页面显示 源服务器未能找到目标资源的表示或者是不愿公开一个已经存在&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;如果已经关闭防火墙，还出现404问题，那么就确定是tomcat的webapps文件夹下没有东西&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;启动Tomcat容器&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run -p 8081:8080 tomcat&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;查看已经启动的容器&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker ps&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;访问部署环境地址&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;使用8011端口访问Tomcat失败&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/20200228164338431.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTg5MDUw,size_16,color_FFFFFF,t_70&#34; alt=&#34;ip:端口号&#34;&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;先查看防火墙状况&#34;&gt;&lt;a href=&#34;#先查看防火墙状况&#34; class=&#34;headerlink&#34; title=&#34;先查看防火墙状况&#34;&gt;&lt;/a&gt;先查看防火墙状况&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;先查看防火墙状态&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;service firewalld status&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;出现下图所示代码，表示已经关闭防火墙&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/20200228164705354.png&#34; alt=&#34;在这里插入图片描述&#34;&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;防火墙未关闭&#34;&gt;&lt;a href=&#34;#防火墙未关闭&#34; class=&#34;headerlink&#34; title=&#34;防火墙未关闭&#34;&gt;&lt;/a&gt;防火墙未关闭&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;如果防火墙没关闭，先关闭防火墙&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;bash&#34;&gt; 关闭防火墙&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl stop firewalld.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;bash&#34;&gt; 禁止防火墙开机启动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl disable firewalld.service&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;bash&#34;&gt; 启动docker&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl start docker&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;bash&#34;&gt; 重启docker&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;systemctl restart docker&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h4 id=&#34;防火墙关闭&#34;&gt;&lt;a href=&#34;#防火墙关闭&#34; class=&#34;headerlink&#34; title=&#34;防火墙关闭&#34;&gt;&lt;/a&gt;防火墙关闭&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;如果防火墙已经关闭但访问tomcat还是失败，那么使用如下命名进入tomcat的目录&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker exec -it a5f02a3e6dde(启动的tomcat容器的容器id) /bin/bash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;查看当前文件夹内的所有文件&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ls&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;进入webapps文件夹下，如果显示total 0，我们就需要把webapps.dist中的内容复制到webapps文件夹下&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd webapps&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;rm -f webapps&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cp -r webapps.dist webapps&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;访问ip:主机端口（8081）&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010115113.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;后台运行Tomcat&#34;&gt;&lt;a href=&#34;#后台运行Tomcat&#34; class=&#34;headerlink&#34; title=&#34;后台运行Tomcat&#34;&gt;&lt;/a&gt;后台运行Tomcat&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;通过上述步骤搭建一个Tomcat，是不是很简单，一个tomcat就这样启动完成了！不得不说docker的强大！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;有没有觉得上面的启动方式存在什么问题？如果在命令行界面中按下 Ctrl+C快捷键，会有什么效果？&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;没错，当前的tomcat容器会停止运行，服务无法访问！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;有什么办法可以让tomcat容器一直运行呢？&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;解决办法其实很简单，答案就再在 docker run 命令里面设置一个 -d 的参数即可，如下：&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run -d -p 8081:8080 --name tomcat tomcat&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010164641.png&#34;&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;看到没有，和上面的启动tomcat的效果不同，控制台并未输出tomcat启动的日志信息，这时候我们打开浏览器，重新访问一下：  &lt;strong&gt;192.168.56.128:8081&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010115113.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;通过上面两次docker run 启动tomcat的效果对比，我想大家也应该看得出区别了。所以，如果想让应用在后台一直运行的话，通过在 docker run 命令中使用“-d”参数来让容器处于后台运行。&lt;/p&gt;
-&lt;h2 id=&#34;查看运行中的Tomcat容器&#34;&gt;&lt;a href=&#34;#查看运行中的Tomcat容器&#34; class=&#34;headerlink&#34; title=&#34;查看运行中的Tomcat容器&#34;&gt;&lt;/a&gt;查看运行中的Tomcat容器&lt;/h2&gt;&lt;p&gt;通过下面命令，来查看当前服务器上运行的docker容器列表：&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker ps&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;如下图所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010165054.png&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;从图中可以看到tomcat容器的一些信息，在最后一列的“NAMES”显示的tomcat名称是“tomcat9”，这是因为你在docker run的时候，指定了“–name”别名，如果没有，docker会给你自动生成一个别名，一般情况下，我们还是建议使用–name来设置别名以及版本，方便实际使用容易区分。&lt;/p&gt;
-&lt;p&gt;然后tomcat容器的“PORTS”这一列，可以看到8081 &amp;gt; 8080 的信息，我们知道tomcat是运行在容器里面的，而tomcat默认的端口是8080，也就是说tomcat所在容器的对外端口是8080，我们如果想通过浏览器等访问到tomcat，就需要指定一个宿主机的端口与这个tomcat容器端口进行映射，也就是8081这个宿主机的端口。我们实际在浏览器访问的时候，就是通过8081来访问的，不能使用8080访问。端口号的话你也可以自定义的。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;停止Tomcat容器&#34;&gt;&lt;a href=&#34;#停止Tomcat容器&#34; class=&#34;headerlink&#34; title=&#34;停止Tomcat容器&#34;&gt;&lt;/a&gt;停止Tomcat容器&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;我们在jdk的文章中已经提及到停止容器的命令。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;首先我们还是要查看一下目前正在运行状态的tomcat容器的信息（ID或者别名）：&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker ps&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;如下图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010165054.png&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我们可以看到tomcat容器的ID以及别名的信息，这里我就直接使用ID进行容器的操作了。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;通过docker stop实现容器停止关闭&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker stop tomcat9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;疑问解答&#34;&gt;&lt;a href=&#34;#疑问解答&#34; class=&#34;headerlink&#34; title=&#34;疑问解答&#34;&gt;&lt;/a&gt;疑问解答&lt;/h2&gt;&lt;h3 id=&#34;问题一&#34;&gt;&lt;a href=&#34;#问题一&#34; class=&#34;headerlink&#34; title=&#34;问题一&#34;&gt;&lt;/a&gt;问题一&lt;/h3&gt;&lt;h4 id=&#34;问题&#34;&gt;&lt;a href=&#34;#问题&#34; class=&#34;headerlink&#34; title=&#34;问题&#34;&gt;&lt;/a&gt;问题&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;之前启动了tomcat容器，最后又把它关闭了，那我如果想再运行这个tomcat服务，怎么办？难道是要重新执行docker run这个命令来运行一个tomcat容器吗？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;解答&#34;&gt;&lt;a href=&#34;#解答&#34; class=&#34;headerlink&#34; title=&#34;解答&#34;&gt;&lt;/a&gt;解答&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;我们要知道docker run这个命令的作用，其实是运行一个全新的容器。你执行一次docker run命令，就会生成一个新的容器，通过一个图来看一下具体情况：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527521919194-08e09ebc-778b-4f01-b5d0-bc9e229734da.png&#34;&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527521919194-08e09ebc-778b-4f01-b5d0-bc9e229734da.png&#34; alt=&#34;在Docker中安装Tomcat&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;从图中可以看到，出现了很多tomcat的容器，而且“STATUS”状态为“Exited”。什么意思呢？因为我在操作的过程中，总共执行了5次docker run命令（这里忽略docker rm删除的容器），启动了5个全新的容器，每个容器之间是隔离的。同时，我又对每个tomcat容器执行了docker stop关闭命令，所以状态都是“Exited”。&lt;/p&gt;
-&lt;p&gt;所以，你每次启动的容器，docker都会给你保留下来，并不是说你执行了docker stop命令，容器就会被删除掉，答案是不会删除掉，只是标记一下容器的STATUS为Exited状态，处于未运行状态。&lt;/p&gt;
-&lt;p&gt;所以，如果想重新运行关闭状态下的容器，请使用docker start命令，比如我这里随便启动一个tomcat容器：&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker start 22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;这时候通过docker ps查看处于运行状态的容器列表：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527522366260-fea95bcb-fced-4f46-8234-c8e39393a245.png&#34;&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527522366260-fea95bcb-fced-4f46-8234-c8e39393a245.png&#34; alt=&#34;在Docker中安装Tomcat&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;说明tomcat容器已经启动成功了！&lt;/p&gt;
-&lt;p&gt;我们再通过docker ps -a查看所有的容器列表（包括未运行的容器），主要看一下tomcat容器的数量是否和上面的5个一致，并未重新运行一个全新的容器：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527522475276-0f83eb27-f7ef-4e5b-bcdc-39c32bdea54a.png&#34;&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527522475276-0f83eb27-f7ef-4e5b-bcdc-39c32bdea54a.png&#34; alt=&#34;在Docker中安装Tomcat&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;可以看到，tomcat容器的数量并未发生变化，其中的一个tomcat容器处于运行状态，剩余4个都是Exited停止状态。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;问题二&#34;&gt;&lt;a href=&#34;#问题二&#34; class=&#34;headerlink&#34; title=&#34;问题二&#34;&gt;&lt;/a&gt;问题二&lt;/h3&gt;&lt;h4 id=&#34;问题-1&#34;&gt;&lt;a href=&#34;#问题-1&#34; class=&#34;headerlink&#34; title=&#34;问题&#34;&gt;&lt;/a&gt;问题&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;如果上图中代表当前服务器上的容器情况，如果这时候我执行以下命令，你觉得会出现什么问题？&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run -d -p 8082:8080 --name quirky_mayer tomcat&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;命令的含义应该都明白吧。启动一个新的tomcat容器，映射的宿主机端口号是8082（因为之前已经启动了一个8081的容器，宿主机的端口号不能冲突），给该tomcat容器起了一个别名“quirky_mayer”，注意观察一下上图的tomcat容器的别名信息哦~&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;解答-1&#34;&gt;&lt;a href=&#34;#解答-1&#34; class=&#34;headerlink&#34; title=&#34;解答&#34;&gt;&lt;/a&gt;解答&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;运行结果如下图：&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527522929924-fbeab3d9-8623-4239-b816-d041b8da890a.png&#34;&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527522929924-fbeab3d9-8623-4239-b816-d041b8da890a.png&#34; alt=&#34;在Docker中安装Tomcat&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;其实错误信息很明显了，就是容器的别名“quirky_mayer”已经存在了，别的tomcat容器的别名也存在一个是“quirky_mayer”的。&lt;/p&gt;
-&lt;p&gt;这个别名校验是否重复，是针对所有容器而言的，并非是只判断运行状态的容器，那些Exited状态的容器也会进行校验。&lt;/p&gt;
-&lt;p&gt;因此，我们在使用–name指定别名的时候，不要出现重复。&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
-        <category term="Docker" />
-        <updated>2021-06-20T12:17:48.160Z</updated>
-    </entry>
-    <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/20/Docker/Docker(3)-%E5%AE%89%E8%A3%85jdk/</id>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Docker/Docker(3)-%E5%AE%89%E8%A3%85jdk/</id>
         <title>Docker(3)-安装jdk</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/20/Docker/Docker(3)-%E5%AE%89%E8%A3%85jdk/"/>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Docker/Docker(3)-%E5%AE%89%E8%A3%85jdk/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
 &lt;p&gt;公众号：&lt;/p&gt;
@@ -1089,12 +1089,12 @@
 &lt;/blockquote&gt;
 </content>
         <category term="Docker" />
-        <updated>2021-06-20T12:14:26.191Z</updated>
+        <updated>2021-06-24T09:36:36.616Z</updated>
     </entry>
     <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/20/Docker/Docker(2)-CentOS%E5%AE%89%E8%A3%85/</id>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Docker/Docker(2)-CentOS%E5%AE%89%E8%A3%85/</id>
         <title>Docker(2)-CentOS安装</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/20/Docker/Docker(2)-CentOS%E5%AE%89%E8%A3%85/"/>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Docker/Docker(2)-CentOS%E5%AE%89%E8%A3%85/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
 &lt;p&gt;公众号：&lt;/p&gt;
@@ -1271,12 +1271,12 @@
 &lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo systemctl start docker&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
         <category term="Docker" />
-        <updated>2021-06-20T12:10:14.690Z</updated>
+        <updated>2021-06-24T09:36:36.615Z</updated>
     </entry>
     <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Docker/Docker(1)-%E5%88%9D%E8%AF%86Docker/</id>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Docker/Docker(1)-%E5%88%9D%E8%AF%86Docker/</id>
         <title>Docker(1)-初识Docker</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Docker/Docker(1)-%E5%88%9D%E8%AF%86Docker/"/>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Docker/Docker(1)-%E5%88%9D%E8%AF%86Docker/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
 &lt;p&gt;公众号：&lt;/p&gt;
@@ -1392,12 +1392,12 @@
 &lt;p&gt;类似于，将某项目模块打成jar包，然后上传到私有或者公有的maven仓库，然后在其他的所有支持maven环境的机器上，都可以拉取这个jar进行使用。&lt;/p&gt;
 </content>
         <category term="Docker" />
-        <updated>2021-03-21T10:55:17.614Z</updated>
+        <updated>2021-06-24T09:36:36.614Z</updated>
     </entry>
     <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Docker/Archery%E6%95%99%E7%A8%8B/</id>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/16/Docker/Archery%E6%95%99%E7%A8%8B/</id>
         <title>Archery安装教程</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Docker/Archery%E6%95%99%E7%A8%8B/"/>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/16/Docker/Archery%E6%95%99%E7%A8%8B/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;本文基于官方文档安装，有不太详细的地方请多多包涵，下方为官方文档连接：                                  &lt;/p&gt;
@@ -1555,6 +1555,6 @@
 </content>
         <category term="Docker" />
         <category term="Archery" />
-        <updated>2021-03-21T10:55:17.613Z</updated>
+        <updated>2021-03-16T03:42:56.147Z</updated>
     </entry>
 </feed>

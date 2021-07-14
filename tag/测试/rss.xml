@@ -5,8 +5,8 @@
         <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
         <description>愿你一生努力，一生被爱</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 21 Mar 2021 18:55:17 +0800</pubDate>
-        <lastBuildDate>Sun, 21 Mar 2021 18:55:17 +0800</lastBuildDate>
+        <pubDate>Mon, 04 Jan 2021 10:13:52 +0800</pubDate>
+        <lastBuildDate>Mon, 04 Jan 2021 10:13:52 +0800</lastBuildDate>
         <category>Docker</category>
         <category>Archery</category>
         <category>JAVA</category>
@@ -14,12 +14,12 @@
         <category>EXCEL</category>
         <category>Linux</category>
         <category>Cron</category>
+        <category>Spring Cloud</category>
         <category>BeetlSql</category>
         <category>Git</category>
         <category>Other</category>
         <category>ProtoBuffer</category>
         <category>随笔</category>
-        <category>Spring Cloud</category>
         <category>IDEA</category>
         <category>Stream</category>
         <category>Debug</category>
@@ -30,18 +30,18 @@
         <category>测试</category>
         <category>Typora</category>
         <category>IDEA常用功能整理</category>
-        <category>MyBatis</category>
         <category>SpringBoot</category>
         <category>爬虫</category>
         <category>Quartz</category>
         <category>Jsoup</category>
         <category>Http</category>
+        <category>MyBatis</category>
         <item>
-            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/PostMan%E6%95%99%E7%A8%8B/</guid>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/01/04/Other/PostMan%E6%95%99%E7%A8%8B/</guid>
             <title>PostMan教程大全</title>
-            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/PostMan%E6%95%99%E7%A8%8B/</link>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/01/04/Other/PostMan%E6%95%99%E7%A8%8B/</link>
             <category>测试</category>
-            <pubDate>Sun, 21 Mar 2021 18:55:17 +0800</pubDate>
+            <pubDate>Mon, 04 Jan 2021 10:13:52 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;推荐一款接口测试工具！POSTMAN！ 简单来说，四个词，简单实用大方美观！&lt;/p&gt;
 &lt;/blockquote&gt;

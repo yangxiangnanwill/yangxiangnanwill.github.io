@@ -3,7 +3,7 @@
     <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
     <title>Will • Posts by &#34;typora&#34; tag</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
-    <updated>2021-05-09T07:52:34.091Z</updated>
+    <updated>2021-03-23T14:48:47.569Z</updated>
     <category term="Docker" />
     <category term="Archery" />
     <category term="JAVA" />
@@ -11,12 +11,12 @@
     <category term="EXCEL" />
     <category term="Linux" />
     <category term="Cron" />
+    <category term="Spring Cloud" />
     <category term="BeetlSql" />
     <category term="Git" />
     <category term="Other" />
     <category term="ProtoBuffer" />
     <category term="随笔" />
-    <category term="Spring Cloud" />
     <category term="IDEA" />
     <category term="Stream" />
     <category term="Debug" />
@@ -27,16 +27,16 @@
     <category term="测试" />
     <category term="Typora" />
     <category term="IDEA常用功能整理" />
-    <category term="MyBatis" />
     <category term="SpringBoot" />
     <category term="爬虫" />
     <category term="Quartz" />
     <category term="Jsoup" />
     <category term="Http" />
+    <category term="MyBatis" />
     <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/05/09/Other/Typora%E6%95%99%E7%A8%8B/</id>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/23/Other/Typora%E6%95%99%E7%A8%8B/</id>
         <title>Typora史上保姆级教程</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/05/09/Other/Typora%E6%95%99%E7%A8%8B/"/>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/23/Other/Typora%E6%95%99%E7%A8%8B/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;本篇介绍一下博猪经常使用的一个工具的教程，也是博猪用于总结开发和记录学习笔记的一个神器，说先说明一点，博猪纯纯的处女座，所以对于某些东西还是有较高的要求的，但是这款工具都满足了博猪的要求，最主要的事情就是开源（免费）和用着爽。废话不多说，下面博猪带给你史上Typora保姆级教程。&lt;/p&gt;
 &lt;p&gt;Typora 一直是我认为桌面端笔记应用应有的终极形态。用一句话概况话来说就是，「它的&lt;strong&gt;功能之强大、设计之冷静、体验之美妙、理念之先进&lt;/strong&gt;，我认为值得所有笔记应用厂商学习。」&lt;/p&gt;
@@ -262,6 +262,6 @@
 </content>
         <category term="Other" />
         <category term="Typora" />
-        <updated>2021-05-09T07:52:34.091Z</updated>
+        <updated>2021-03-23T14:48:47.569Z</updated>
     </entry>
 </feed>

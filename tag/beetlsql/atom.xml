@@ -3,7 +3,7 @@
     <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
     <title>Will • Posts by &#34;beetlsql&#34; tag</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
-    <updated>2021-03-21T10:55:17.623Z</updated>
+    <updated>2020-11-09T01:38:11.461Z</updated>
     <category term="Docker" />
     <category term="Archery" />
     <category term="JAVA" />
@@ -11,12 +11,12 @@
     <category term="EXCEL" />
     <category term="Linux" />
     <category term="Cron" />
+    <category term="Spring Cloud" />
     <category term="BeetlSql" />
     <category term="Git" />
     <category term="Other" />
     <category term="ProtoBuffer" />
     <category term="随笔" />
-    <category term="Spring Cloud" />
     <category term="IDEA" />
     <category term="Stream" />
     <category term="Debug" />
@@ -27,16 +27,16 @@
     <category term="测试" />
     <category term="Typora" />
     <category term="IDEA常用功能整理" />
-    <category term="MyBatis" />
     <category term="SpringBoot" />
     <category term="爬虫" />
     <category term="Quartz" />
     <category term="Jsoup" />
     <category term="Http" />
+    <category term="MyBatis" />
     <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/BeetlSql/</id>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Other/BeetlSql/</id>
         <title>BeetlSql学习</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/BeetlSql/"/>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Other/BeetlSql/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;因本人项目需要接触了一下国内一款ORM框架，感觉用着很爽，项目易于管理，特此介绍一下。详情请点解下方官网：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://ibeetl.com/&#34;&gt;BeetlSql官网&lt;/a&gt;&lt;/p&gt;
@@ -84,12 +84,12 @@
 &lt;/ul&gt;
 </content>
         <category term="BeetlSql" />
-        <updated>2021-03-21T10:55:17.623Z</updated>
+        <updated>2020-11-09T01:38:11.461Z</updated>
     </entry>
     <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/BeetlSql&amp;&amp;ProtoBuffer%E5%AE%9E%E8%B7%B5Demo/</id>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Other/BeetlSql&amp;&amp;ProtoBuffer%E5%AE%9E%E8%B7%B5Demo/</id>
         <title>BeetlSql&amp;&amp;ProtoBuffer实践Demo</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/BeetlSql&amp;&amp;ProtoBuffer%E5%AE%9E%E8%B7%B5Demo/"/>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Other/BeetlSql&amp;&amp;ProtoBuffer%E5%AE%9E%E8%B7%B5Demo/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;由于开发架构问题，公司使用的基于SpringBoot+BeetlSql+ProtoBuffer的架子来处理业务,由于BeetlSQL和Protobuffer有些小众，特记录一下。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -293,6 +293,6 @@
 </content>
         <category term="BeetlSql" />
         <category term="ProtoBuffer" />
-        <updated>2021-03-21T10:55:17.622Z</updated>
+        <updated>2020-11-09T01:38:11.460Z</updated>
     </entry>
 </feed>

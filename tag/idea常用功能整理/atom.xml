@@ -3,7 +3,7 @@
     <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
     <title>Will • Posts by &#34;idea常用功能整理&#34; tag</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
-    <updated>2021-03-21T10:55:17.628Z</updated>
+    <updated>2020-11-09T01:38:11.466Z</updated>
     <category term="Docker" />
     <category term="Archery" />
     <category term="JAVA" />
@@ -11,12 +11,12 @@
     <category term="EXCEL" />
     <category term="Linux" />
     <category term="Cron" />
+    <category term="Spring Cloud" />
     <category term="BeetlSql" />
     <category term="Git" />
     <category term="Other" />
     <category term="ProtoBuffer" />
     <category term="随笔" />
-    <category term="Spring Cloud" />
     <category term="IDEA" />
     <category term="Stream" />
     <category term="Debug" />
@@ -27,16 +27,16 @@
     <category term="测试" />
     <category term="Typora" />
     <category term="IDEA常用功能整理" />
-    <category term="MyBatis" />
     <category term="SpringBoot" />
     <category term="爬虫" />
     <category term="Quartz" />
     <category term="Jsoup" />
     <category term="Http" />
+    <category term="MyBatis" />
     <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Tool/IDEA%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/</id>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Tool/IDEA%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/</id>
         <title>IDEA常用功能整理</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Tool/IDEA%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/"/>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Tool/IDEA%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;记录一下我IDEA常用配置，便于安装配置。&lt;/p&gt;
 &lt;p&gt;快捷键摘自：&lt;a href=&#34;https://blog.csdn.net/qq_38963960&#34;&gt;D离歌&lt;/a&gt;&lt;/p&gt;
@@ -812,6 +812,6 @@
 &lt;/tbody&gt;&lt;/table&gt;
 </content>
         <category term="IDEA常用功能整理" />
-        <updated>2021-03-21T10:55:17.628Z</updated>
+        <updated>2020-11-09T01:38:11.466Z</updated>
     </entry>
 </feed>

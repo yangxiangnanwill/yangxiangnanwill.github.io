@@ -5,8 +5,8 @@
         <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
         <description>愿你一生努力，一生被爱</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 16 May 2021 19:15:30 +0800</pubDate>
-        <lastBuildDate>Sun, 16 May 2021 19:15:30 +0800</lastBuildDate>
+        <pubDate>Sun, 16 May 2021 23:18:34 +0800</pubDate>
+        <lastBuildDate>Sun, 16 May 2021 23:18:34 +0800</lastBuildDate>
         <category>Docker</category>
         <category>Archery</category>
         <category>JAVA</category>
@@ -14,12 +14,12 @@
         <category>EXCEL</category>
         <category>Linux</category>
         <category>Cron</category>
+        <category>Spring Cloud</category>
         <category>BeetlSql</category>
         <category>Git</category>
         <category>Other</category>
         <category>ProtoBuffer</category>
         <category>随笔</category>
-        <category>Spring Cloud</category>
         <category>IDEA</category>
         <category>Stream</category>
         <category>Debug</category>
@@ -30,12 +30,12 @@
         <category>测试</category>
         <category>Typora</category>
         <category>IDEA常用功能整理</category>
-        <category>MyBatis</category>
         <category>SpringBoot</category>
         <category>爬虫</category>
         <category>Quartz</category>
         <category>Jsoup</category>
         <category>Http</category>
+        <category>MyBatis</category>
         <item>
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/05/16/Tool/IDEA-Stram%E8%B0%83%E8%AF%95/</guid>
             <title>IDEA-Stream调试</title>
@@ -43,7 +43,7 @@
             <category>IDEA</category>
             <category>Stream</category>
             <category>Debug</category>
-            <pubDate>Sun, 16 May 2021 19:15:30 +0800</pubDate>
+            <pubDate>Sun, 16 May 2021 23:18:34 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;JAVA8的lambda的stream编程，给我们带来了很流畅(牛逼)的编程体验，但带来的问题也很明显：&lt;/p&gt;
 &lt;p&gt;下面粘贴一张博猪一个日常的代码片段：&lt;/p&gt;

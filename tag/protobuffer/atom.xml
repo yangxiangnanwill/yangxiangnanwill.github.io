@@ -3,7 +3,7 @@
     <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
     <title>Will • Posts by &#34;protobuffer&#34; tag</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
-    <updated>2021-03-21T10:55:17.624Z</updated>
+    <updated>2020-11-09T01:38:11.462Z</updated>
     <category term="Docker" />
     <category term="Archery" />
     <category term="JAVA" />
@@ -11,12 +11,12 @@
     <category term="EXCEL" />
     <category term="Linux" />
     <category term="Cron" />
+    <category term="Spring Cloud" />
     <category term="BeetlSql" />
     <category term="Git" />
     <category term="Other" />
     <category term="ProtoBuffer" />
     <category term="随笔" />
-    <category term="Spring Cloud" />
     <category term="IDEA" />
     <category term="Stream" />
     <category term="Debug" />
@@ -27,16 +27,16 @@
     <category term="测试" />
     <category term="Typora" />
     <category term="IDEA常用功能整理" />
-    <category term="MyBatis" />
     <category term="SpringBoot" />
     <category term="爬虫" />
     <category term="Quartz" />
     <category term="Jsoup" />
     <category term="Http" />
+    <category term="MyBatis" />
     <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/ProtoBuffer%E7%AC%94%E8%AE%B0/</id>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Other/ProtoBuffer%E7%AC%94%E8%AE%B0/</id>
         <title>ProtoBuffer学习</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/ProtoBuffer%E7%AC%94%E8%AE%B0/"/>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Other/ProtoBuffer%E7%AC%94%E8%AE%B0/"/>
         <content type="html">&lt;h1 id=&#34;Protobuf学习&#34;&gt;&lt;a href=&#34;#Protobuf学习&#34; class=&#34;headerlink&#34; title=&#34;Protobuf学习&#34;&gt;&lt;/a&gt;Protobuf学习&lt;/h1&gt;&lt;h2 id=&#34;Protobuf是什么&#34;&gt;&lt;a href=&#34;#Protobuf是什么&#34; class=&#34;headerlink&#34; title=&#34;Protobuf是什么&#34;&gt;&lt;/a&gt;Protobuf是什么&lt;/h2&gt;&lt;p&gt;Protobuf是一种平台无关、语言无关、可扩展且轻便高效的序列化数据结构的协议，可以用于&lt;strong&gt;网络通信&lt;/strong&gt;和&lt;strong&gt;数据存储&lt;/strong&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;为什么要使用Protobuf&#34;&gt;&lt;a href=&#34;#为什么要使用Protobuf&#34; class=&#34;headerlink&#34; title=&#34;为什么要使用Protobuf&#34;&gt;&lt;/a&gt;为什么要使用Protobuf&lt;/h3&gt;&lt;p&gt;  &lt;img src=&#34;D:/images4note/2608075-1e8b5b166e9d9fee.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;使用方法也比较简单:&lt;/p&gt;
@@ -94,12 +94,12 @@
 
 </content>
         <category term="ProtoBuffer" />
-        <updated>2021-03-21T10:55:17.624Z</updated>
+        <updated>2020-11-09T01:38:11.462Z</updated>
     </entry>
     <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/BeetlSql&amp;&amp;ProtoBuffer%E5%AE%9E%E8%B7%B5Demo/</id>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Other/BeetlSql&amp;&amp;ProtoBuffer%E5%AE%9E%E8%B7%B5Demo/</id>
         <title>BeetlSql&amp;&amp;ProtoBuffer实践Demo</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/BeetlSql&amp;&amp;ProtoBuffer%E5%AE%9E%E8%B7%B5Demo/"/>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Other/BeetlSql&amp;&amp;ProtoBuffer%E5%AE%9E%E8%B7%B5Demo/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;由于开发架构问题，公司使用的基于SpringBoot+BeetlSql+ProtoBuffer的架子来处理业务,由于BeetlSQL和Protobuffer有些小众，特记录一下。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -303,6 +303,6 @@
 </content>
         <category term="BeetlSql" />
         <category term="ProtoBuffer" />
-        <updated>2021-03-21T10:55:17.622Z</updated>
+        <updated>2020-11-09T01:38:11.460Z</updated>
     </entry>
 </feed>

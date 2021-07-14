@@ -5,8 +5,8 @@
         <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
         <description>愿你一生努力，一生被爱</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 09 May 2021 15:52:34 +0800</pubDate>
-        <lastBuildDate>Sun, 09 May 2021 15:52:34 +0800</lastBuildDate>
+        <pubDate>Tue, 23 Mar 2021 22:48:47 +0800</pubDate>
+        <lastBuildDate>Tue, 23 Mar 2021 22:48:47 +0800</lastBuildDate>
         <category>Docker</category>
         <category>Archery</category>
         <category>JAVA</category>
@@ -14,12 +14,12 @@
         <category>EXCEL</category>
         <category>Linux</category>
         <category>Cron</category>
+        <category>Spring Cloud</category>
         <category>BeetlSql</category>
         <category>Git</category>
         <category>Other</category>
         <category>ProtoBuffer</category>
         <category>随笔</category>
-        <category>Spring Cloud</category>
         <category>IDEA</category>
         <category>Stream</category>
         <category>Debug</category>
@@ -30,19 +30,19 @@
         <category>测试</category>
         <category>Typora</category>
         <category>IDEA常用功能整理</category>
-        <category>MyBatis</category>
         <category>SpringBoot</category>
         <category>爬虫</category>
         <category>Quartz</category>
         <category>Jsoup</category>
         <category>Http</category>
+        <category>MyBatis</category>
         <item>
-            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/05/09/Other/Typora%E6%95%99%E7%A8%8B/</guid>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/23/Other/Typora%E6%95%99%E7%A8%8B/</guid>
             <title>Typora史上保姆级教程</title>
-            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/05/09/Other/Typora%E6%95%99%E7%A8%8B/</link>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/23/Other/Typora%E6%95%99%E7%A8%8B/</link>
             <category>Other</category>
             <category>Typora</category>
-            <pubDate>Sun, 09 May 2021 15:52:34 +0800</pubDate>
+            <pubDate>Tue, 23 Mar 2021 22:48:47 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;本篇介绍一下博猪经常使用的一个工具的教程，也是博猪用于总结开发和记录学习笔记的一个神器，说先说明一点，博猪纯纯的处女座，所以对于某些东西还是有较高的要求的，但是这款工具都满足了博猪的要求，最主要的事情就是开源（免费）和用着爽。废话不多说，下面博猪带给你史上Typora保姆级教程。&lt;/p&gt;
 &lt;p&gt;Typora 一直是我认为桌面端笔记应用应有的终极形态。用一句话概况话来说就是，「它的&lt;strong&gt;功能之强大、设计之冷静、体验之美妙、理念之先进&lt;/strong&gt;，我认为值得所有笔记应用厂商学习。」&lt;/p&gt;
@@ -268,12 +268,12 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/23/Other/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B/</guid>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/22/Other/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B/</guid>
             <title>Git分支管理开发流程</title>
-            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/23/Other/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B/</link>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/22/Other/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B/</link>
             <category>Git</category>
             <category>Other</category>
-            <pubDate>Tue, 23 Mar 2021 21:50:08 +0800</pubDate>
+            <pubDate>Mon, 22 Mar 2021 14:33:24 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;有幸参与一次大型项目，人员较多，需求较多，代码管理方面值得学习，记录总结一下分支管理。&lt;/p&gt;
 &lt;p&gt;本文参考：&lt;/p&gt;

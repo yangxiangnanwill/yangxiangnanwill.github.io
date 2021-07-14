@@ -5,8 +5,8 @@
         <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
         <description>愿你一生努力，一生被爱</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 06 Jun 2021 18:50:11 +0800</pubDate>
-        <lastBuildDate>Sun, 06 Jun 2021 18:50:11 +0800</lastBuildDate>
+        <pubDate>Thu, 24 Jun 2021 17:36:36 +0800</pubDate>
+        <lastBuildDate>Thu, 24 Jun 2021 17:36:36 +0800</lastBuildDate>
         <category>Docker</category>
         <category>Archery</category>
         <category>JAVA</category>
@@ -14,12 +14,12 @@
         <category>EXCEL</category>
         <category>Linux</category>
         <category>Cron</category>
+        <category>Spring Cloud</category>
         <category>BeetlSql</category>
         <category>Git</category>
         <category>Other</category>
         <category>ProtoBuffer</category>
         <category>随笔</category>
-        <category>Spring Cloud</category>
         <category>IDEA</category>
         <category>Stream</category>
         <category>Debug</category>
@@ -30,20 +30,20 @@
         <category>测试</category>
         <category>Typora</category>
         <category>IDEA常用功能整理</category>
-        <category>MyBatis</category>
         <category>SpringBoot</category>
         <category>爬虫</category>
         <category>Quartz</category>
         <category>Jsoup</category>
         <category>Http</category>
+        <category>MyBatis</category>
         <item>
-            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/06/Other/EasyExcel%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B(2)/</guid>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Other/EasyExcel%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B(2)/</guid>
             <title>EasyExcel保姆级教程(2)</title>
-            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/06/Other/EasyExcel%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B(2)/</link>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Other/EasyExcel%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B(2)/</link>
             <category>Poi</category>
             <category>EasyExcel</category>
             <category>Excel</category>
-            <pubDate>Sun, 06 Jun 2021 18:50:11 +0800</pubDate>
+            <pubDate>Thu, 24 Jun 2021 17:36:36 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;上文详细介绍了&lt;code&gt;easyExcel&lt;/code&gt;的优点以及相关的读操作，通过这些案例你会发现，阿里巴巴的&lt;code&gt;easyExcel&lt;/code&gt;真的对POI做了大量的封装和优化，同时让我们开发者使用也变得那么的so easy，那么今天博猪就紧着介绍一下&lt;code&gt;easyExcel&lt;/code&gt;相关的写操作，看完这些案例就会发现Excel的处理也不是那么头疼了。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -99,13 +99,13 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/05/29/Other/EasyExcel%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B(1)/</guid>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Other/EasyExcel%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B(1)/</guid>
             <title>EasyExcel保姆级教程(1)</title>
-            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/05/29/Other/EasyExcel%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B(1)/</link>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/06/24/Other/EasyExcel%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B(1)/</link>
             <category>Poi</category>
             <category>EasyExcel</category>
             <category>Excel</category>
-            <pubDate>Sat, 29 May 2021 20:10:04 +0800</pubDate>
+            <pubDate>Thu, 24 Jun 2021 17:36:36 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;由于博猪所在行业使用到关于Excel导入、导出的功能比较多，本文主要详细介绍一下博猪使用的阿里巴巴的&lt;code&gt;easyExcel&lt;/code&gt;，让Excel相关操作没那么多烦恼。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -194,12 +194,12 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/05/09/Other/Typora%E6%95%99%E7%A8%8B/</guid>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/23/Other/Typora%E6%95%99%E7%A8%8B/</guid>
             <title>Typora史上保姆级教程</title>
-            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/05/09/Other/Typora%E6%95%99%E7%A8%8B/</link>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/23/Other/Typora%E6%95%99%E7%A8%8B/</link>
             <category>Other</category>
             <category>Typora</category>
-            <pubDate>Sun, 09 May 2021 15:52:34 +0800</pubDate>
+            <pubDate>Tue, 23 Mar 2021 22:48:47 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;本篇介绍一下博猪经常使用的一个工具的教程，也是博猪用于总结开发和记录学习笔记的一个神器，说先说明一点，博猪纯纯的处女座，所以对于某些东西还是有较高的要求的，但是这款工具都满足了博猪的要求，最主要的事情就是开源（免费）和用着爽。废话不多说，下面博猪带给你史上Typora保姆级教程。&lt;/p&gt;
 &lt;p&gt;Typora 一直是我认为桌面端笔记应用应有的终极形态。用一句话概况话来说就是，「它的&lt;strong&gt;功能之强大、设计之冷静、体验之美妙、理念之先进&lt;/strong&gt;，我认为值得所有笔记应用厂商学习。」&lt;/p&gt;
@@ -425,12 +425,12 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/23/Other/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B/</guid>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/22/Other/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B/</guid>
             <title>Git分支管理开发流程</title>
-            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/23/Other/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B/</link>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/22/Other/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B/</link>
             <category>Git</category>
             <category>Other</category>
-            <pubDate>Tue, 23 Mar 2021 21:50:08 +0800</pubDate>
+            <pubDate>Mon, 22 Mar 2021 14:33:24 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;有幸参与一次大型项目，人员较多，需求较多，代码管理方面值得学习，记录总结一下分支管理。&lt;/p&gt;
 &lt;p&gt;本文参考：&lt;/p&gt;
@@ -489,231 +489,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/%E8%87%B4%E6%AD%A3%E5%9C%A8%E5%A5%8B%E6%96%97%E8%B7%AF%E4%B8%8A%E7%9A%84%E4%BD%A0/</guid>
-            <title>致正在奋斗路上的你</title>
-            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/%E8%87%B4%E6%AD%A3%E5%9C%A8%E5%A5%8B%E6%96%97%E8%B7%AF%E4%B8%8A%E7%9A%84%E4%BD%A0/</link>
-            <category>随笔</category>
-            <pubDate>Sun, 21 Mar 2021 18:55:17 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;致正在奋斗路上的你&#34;&gt;&lt;a href=&#34;#致正在奋斗路上的你&#34; class=&#34;headerlink&#34; title=&#34;致正在奋斗路上的你&#34;&gt;&lt;/a&gt;致正在奋斗路上的你&lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;写这个博客的目的主要是为了针对身边某些正在处于大学的朋友，感觉他们很迷茫，然后很刻苦，但是感觉努力的不在点上，所以我趁我考试的路上写下了这篇博客，一是为了记录一下这次旅行和放松的机会；二是给身边的一些朋友&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt; 当你看到这个文章的时候，本博猪正在从大连回北京的路上，此时九点五十左右，博猪辗转反侧，夜不能寐，特此写下这篇文章，记录一下次不是在上坡的路上就是在上坡的路上的考试之旅，顺便缓解一下博猪六个小时屁股的煎熬。&lt;br&gt;  首先按照常规流程博猪自我介绍一下，博猪笔名will，意义如何自行百度，98年出身，山东泰安人士，本博猪2019年3月份入坑，主要从事于车险，车险金融行业，先后参与过北汽鹏龙二期改造、北汽鹏龙微信端开发，捷通达集团车险经济平台理赔、续保、新车销售、部分报表统计等开发，参与北汽鹏龙中行、平安、浙江中行快速对接和流程设计和开发（SSI架构，前端LayUI），捷通达参与Erp,Sap系统资源对接，目前手里维护者九、十个左右的项目，目前正在长城驻场开发，参与车服务保代经济云系统、续保系统，主要负责续保系统的需求分析和业务开发，车服务系统对账方面开发和长城原系统和第三方系统对接封装基于spring cloud alibaba的相关工具类。目前项目已经上生产环境，目前正协助压测人员进行压力测试。&lt;/p&gt;
-&lt;p&gt;OK，博猪履历介绍到这里，俗话说三年小架构，博猪目标如此，也正在努力的朝着这个目标前进，废话不说博猪写这篇文章的目的是分享一下自己的学习方式和一些学习心得，缘由是博猪身边有几个入坑这个专业的大学生最近看他们也是挺努力刻苦的，但是学习的点总是不在那个关键的地方上，这样博猪心有余而力不足，想好心帮忙但是每次都是很费劲的完成。&lt;br&gt;那么，我分享一下我的学习方式，顺便跟着博猪思考一下博猪对你们的问题，是否对你现在有所触动和能解决你手里的问题！&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;有目的的学习&lt;/p&gt;
-&lt;p&gt;目的很重要，因为它是你迷茫路上的一个指路灯，至少它能让你有一个目的地，在我的世界观里面target很重要，至少它能让你知道你下一步至少干啥，然后具体咋实现看你如何安排了。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Q:     你是否有想过近三年或者你毕业进入社会想干啥或者想过什么样的生活了没有？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;坚持&lt;/p&gt;
-&lt;p&gt;俗话说师傅领进门，修行靠个人，虽然博猪当时也啥都学，什么3dmax，ps，电商，嗯，因为我刚开始报的是电商的专业，然后大一上学期末临时转的软件开发，然后靠扎实的C语言的基础，自学的JAVA，JAVAEE，JAVA WEB，MySQL等，因为学校教程太慢，太杂，我当时的想法很简单，就是工作，然后赚钱，然后我静静的边抽烟边刷了一遍招聘软件上的软件开发的技术，然后回去下载资料，自己学，上机课我就偷偷的猫到一个角落自己戴着耳机学习，然后一遍遍的码代码，自己不关心的科目期末不挂科就行，寒暑假初中同学高中同学聚会能推就推。&lt;br&gt;所以，如果说我提出的第一点占头百分之二十的话，那么坚持就能占百分之七十。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Q:    如果你已经深深的思考了第一题，那么鉴于第一题的基础上，你是否能你的目标坚持下去的努力？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;不浮躁&lt;/p&gt;
-&lt;p&gt;博猪很喜欢博猪学校的校训:坚持 不浮躁，坚持容易，不浮躁难。coding本身就是一个很枯燥无聊，甚至很容易没得朋友的一个事情，所以让自己的心沉下来很重要。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;有属于自己的学习体系&lt;/p&gt;
-&lt;p&gt;有自己的学习体系很重要，作为一个成年人应该有个事情紧急程度的排序，给自己的科目或者事情排个序，那个可以做那个可以不做，不要把自己搞得很乱又很累。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;学会自己思考&lt;/p&gt;
-&lt;p&gt;身边的朋友很多就是遇到问题就是，为啥明明都是一模一样的，为啥我的就直接报错，那么你有没有想过这个程序为啥这样执行？还有你执行完一个程序后是否进行复验程序？程序是不会骗人的，所以多多吃一些异常报错有营养，对自己成长有好处的。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;学会自己解决问题&lt;/p&gt;
-&lt;p&gt;遇到一个问题以后，你要相信一句话这个一定不是你一个人再犯，肯定会有前人给你踩过坑，所以遇到问题学会找谷哥或者找度娘。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;学会正确的搜索关键词&lt;/p&gt;
-&lt;p&gt;一个正确的搜索关键词会大大提高搜索引擎给你的搜索结果，也大大减少了浏览器因模糊或者一些广告给你带来的困扰。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;切勿好高骛远&lt;/p&gt;
-&lt;p&gt;博猪最近遇到很多刚入行的小白，感觉微服务不过如此，业主不过如此，但是真正到自己手里的时候，连最基本的crud都不会，当然博猪和技术经理交给他们的这就是一些crud的项目模块，当然前期由于长城这个公司刚成立，一些最基本的技术沉淀都没有，当然博猪算是经历了一次一个公司技术体系从无到有的一个过程。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;建议藏在内容里面，答案请自行寻找&lt;/p&gt;
-&lt;p&gt;俗话说的好，九为数极，哈哈，这个建议是针对将来入职程序猿的盆友建议，如果还在读大学建议赶紧找个对象，要不然你会发现你工作入职后不是你想象的白领的生活，而是整天不断的需求和加班，996的生活，正在朝着你招手，所以博猪最大的遗憾就是没在大学期间找个女票。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;话就絮叨到这里了，22点50了，车快到站了，博猪也要收拾一下东西回家了，哈哈末尾送你们一句话，也是博猪最近闲下来刷剧看到的一句话感觉挺不错的，句子如下：&lt;br&gt;   须知少时凌云志，曾许人间第一流！&lt;/p&gt;
-&lt;p&gt;下面贴两张博猪拍的两张图片：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201026135857.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201026135915.jpg&#34;&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/%E5%BC%80%E5%8F%91%E5%A5%BD%E4%B9%A0%E6%83%AF/</guid>
-            <title>开发好习惯</title>
-            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/%E5%BC%80%E5%8F%91%E5%A5%BD%E4%B9%A0%E6%83%AF/</link>
-            <category>随笔</category>
-            <pubDate>Sun, 21 Mar 2021 18:55:17 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;写干净的代码，做风一样的男子！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;编程5分钟，查代码2小时!&lt;/p&gt;
-&lt;p&gt;在程序员的编程生涯，免不了和BUG打交道，甚至有些程序员被BUG虐杀的苦不堪言。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://p3-tt.byteimg.com/origin/4ada0003ada15e3b0683?from=pc&#34; alt=&#34;程序员减少代码BUG的7种方法，写干净的代码，做风一样的男子！&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;当有人指出程序员代码有BUG时，程序员的回答各有不同：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;不可能啊，在我电脑上运行没有问题呀!&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;我已经一星期没碰这块代码啦!&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;没事，我改一行代码就可以了，不影响程序。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;center&gt;程序员调 Bug 的样子，非常真实~&lt;/center&gt;
-
-&lt;p&gt;​                                                                                                                         &lt;center&gt;↓↓↓&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://ss.csdn.net/p?http://mmbiz.qpic.cn/mmbiz_gif/2A8tXicCG8yka2rcVsmkqPjN4taJfwp3wUy7KTTM4IhnOjTMdC3zXRYGElM7Pia1AhvV02UlibtPKoRFc9icv40dHA/0?wx_fmt=gif&amp;wxfrom=5&amp;wx_lazy=1&#34; alt=&#34;0?wx_fmt=gif&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://ss.csdn.net/p?http://mmbiz.qpic.cn/mmbiz_gif/2A8tXicCG8yka2rcVsmkqPjN4taJfwp3wxQKXe3ibNiadib0xqp2uYXribWiby2WCrXmO4q1CXAibbpugibUNvdA2yuuNQ/0?wx_fmt=gif&amp;wxfrom=5&amp;wx_lazy=1&#34; alt=&#34;0?wx_fmt=gif&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_gif/2A8tXicCG8yka2rcVsmkqPjN4taJfwp3w5fLdGxLudXOB5pdrwh2vbClrZU7KC5QysFhibrkP9spDK2kONPHTUnw/0?wx_fmt=gif&#34; alt=&#34;0?wx_fmt=gif&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;调bug是火，bug是烟。一处点火，四处冒烟&lt;/p&gt;
-&lt;p&gt;下面奉上我日常开发的一些总结.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;如何减少代码的BUG呢-在此分享几个技巧&#34;&gt;&lt;a href=&#34;#如何减少代码的BUG呢-在此分享几个技巧&#34; class=&#34;headerlink&#34; title=&#34;如何减少代码的BUG呢?在此分享几个技巧&#34;&gt;&lt;/a&gt;如何减少代码的BUG呢?在此分享几个技巧&lt;/h1&gt;&lt;h2 id=&#34;别对警告视而不见&#34;&gt;&lt;a href=&#34;#别对警告视而不见&#34; class=&#34;headerlink&#34; title=&#34;别对警告视而不见&#34;&gt;&lt;/a&gt;别对警告视而不见&lt;/h2&gt;&lt;p&gt;相信不少的程序员会使用IDEA，使用它敲代码，有时候会出现警告，那么这时你对警告就不能视而不见了。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;我们的目标是，写干净的代码，做风一样的男子!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://p1-tt.byteimg.com/origin/4add00036e54d5cefc42?from=pc&#34; alt=&#34;程序员减少代码BUG的7种方法，写干净的代码，做风一样的男子！&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;编程习惯&#34;&gt;&lt;a href=&#34;#编程习惯&#34; class=&#34;headerlink&#34; title=&#34;编程习惯&#34;&gt;&lt;/a&gt;编程习惯&lt;/h2&gt;&lt;p&gt;种瓜得瓜种豆得豆，好的编程习惯可以大大降低BUG数量。譬如有if必须写else，即使else是个空语句 。&lt;/p&gt;
-&lt;h2 id=&#34;写代码的时间问题&#34;&gt;&lt;a href=&#34;#写代码的时间问题&#34; class=&#34;headerlink&#34; title=&#34;写代码的时间问题&#34;&gt;&lt;/a&gt;写代码的时间问题&lt;/h2&gt;&lt;p&gt;对于程序员而言，千万别熬夜写代码。一些程序员在晚上11点，仍然在敲代码。&lt;/p&gt;
-&lt;p&gt;虽然你自己觉得头脑其实很清醒，但是第二天自测，或者QA测试的时候你有可能就会发现问题很多。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;我们一般不提倡长期加班写代码，因为那样会导致Bug率直线上升。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://p1-tt.byteimg.com/origin/4ade00036510b0efbb55?from=pc&#34; alt=&#34;程序员减少代码BUG的7种方法，写干净的代码，做风一样的男子！&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;验证、自测&#34;&gt;&lt;a href=&#34;#验证、自测&#34; class=&#34;headerlink&#34; title=&#34;验证、自测&#34;&gt;&lt;/a&gt;验证、自测&lt;/h2&gt;&lt;p&gt;在提交测试前要多验证，其中包括自动化测试、手动跑用例等。&lt;/p&gt;
-&lt;p&gt;有一句话说的好，千万别怕麻烦，不然你会麻烦一辈子。&lt;/p&gt;
-&lt;p&gt;这也是我认为我现在坚持的比较好的一点，自测ok，然后交给业务测试&lt;/p&gt;
-&lt;h2 id=&#34;仔细的DEBUG&#34;&gt;&lt;a href=&#34;#仔细的DEBUG&#34; class=&#34;headerlink&#34; title=&#34;仔细的DEBUG&#34;&gt;&lt;/a&gt;仔细的DEBUG&lt;/h2&gt;&lt;p&gt;在2.4基础上建议自测是仔细的DEBUG一遍，这样能对自己的代码心里有个范围，大体知道风险点和错误是便于直接调整自己的代码。&lt;/p&gt;
-&lt;h2 id=&#34;仔细的设计&#34;&gt;&lt;a href=&#34;#仔细的设计&#34; class=&#34;headerlink&#34; title=&#34;仔细的设计&#34;&gt;&lt;/a&gt;仔细的设计&lt;/h2&gt;&lt;p&gt;在程序员编写代码之前，必须对代码的整个结构以及逻辑结构胸有成竹。&lt;/p&gt;
-&lt;h2 id=&#34;避免干扰&#34;&gt;&lt;a href=&#34;#避免干扰&#34; class=&#34;headerlink&#34; title=&#34;避免干扰&#34;&gt;&lt;/a&gt;避免干扰&lt;/h2&gt;&lt;p&gt;有部分的程序员敲代码的时候，经常会一边听音乐一边敲代码，这样效率不仅仅低，而且也更容易产生BUG。&lt;/p&gt;
-&lt;h2 id=&#34;注释&#34;&gt;&lt;a href=&#34;#注释&#34; class=&#34;headerlink&#34; title=&#34;注释&#34;&gt;&lt;/a&gt;注释&lt;/h2&gt;&lt;p&gt;写注释，写注释，写注释。重要的事情说三遍。&lt;/p&gt;
-&lt;p&gt;因为前期的注释有利于后续开发的时候容易减少bug。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;自从修改了注释模板，整个人精神多了，bug也明显少了，如图：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201215145135.png&#34; alt=&#34;image-20201215145125620&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;敢于维护上古代码&#34;&gt;&lt;a href=&#34;#敢于维护上古代码&#34; class=&#34;headerlink&#34; title=&#34;敢于维护上古代码&#34;&gt;&lt;/a&gt;敢于维护上古代码&lt;/h2&gt;&lt;p&gt;博猪开发时间其实很少，只有一年的时间，其实上古代码对于博猪的历练很大，俗话说的好多吃BUG,身体棒棒。博猪入职之后前半年一直维护一个SSI项目，里面用的技术很杂，有的在网上找不到，包括前端和后台，其次最重要的是业务方面，更是不懂，业务一般人不是给你讲的，所以我就一遍遍的启动本地DEBUG,慢慢啃下来的。&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/ProtoBuffer%E7%AC%94%E8%AE%B0/</guid>
-            <title>ProtoBuffer学习</title>
-            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/ProtoBuffer%E7%AC%94%E8%AE%B0/</link>
-            <category>ProtoBuffer</category>
-            <pubDate>Sun, 21 Mar 2021 18:55:17 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;Protobuf学习&#34;&gt;&lt;a href=&#34;#Protobuf学习&#34; class=&#34;headerlink&#34; title=&#34;Protobuf学习&#34;&gt;&lt;/a&gt;Protobuf学习&lt;/h1&gt;&lt;h2 id=&#34;Protobuf是什么&#34;&gt;&lt;a href=&#34;#Protobuf是什么&#34; class=&#34;headerlink&#34; title=&#34;Protobuf是什么&#34;&gt;&lt;/a&gt;Protobuf是什么&lt;/h2&gt;&lt;p&gt;Protobuf是一种平台无关、语言无关、可扩展且轻便高效的序列化数据结构的协议，可以用于&lt;strong&gt;网络通信&lt;/strong&gt;和&lt;strong&gt;数据存储&lt;/strong&gt;。&lt;/p&gt;
-&lt;h3 id=&#34;为什么要使用Protobuf&#34;&gt;&lt;a href=&#34;#为什么要使用Protobuf&#34; class=&#34;headerlink&#34; title=&#34;为什么要使用Protobuf&#34;&gt;&lt;/a&gt;为什么要使用Protobuf&lt;/h3&gt;&lt;p&gt;  &lt;img src=&#34;D:/images4note/2608075-1e8b5b166e9d9fee.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;使用方法也比较简单:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;定义用于消息文件.proto&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;使用protobuf的编译器编译消息文件&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;使用编译好对应语言的类文件进行消息的序列化与反序列化&lt;/p&gt;
-&lt;p&gt;先来定义一个简单的消息:&lt;/p&gt;
-&lt;figure class=&#34;highlight protobuf&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;message&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Person&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;built_in&#34;&gt;int32&lt;/span&gt; id = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;&lt;span class=&#34;comment&#34;&gt;//24&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;built_in&#34;&gt;string&lt;/span&gt; name = &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;span class=&#34;comment&#34;&gt;//wujingchao&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;built_in&#34;&gt;string&lt;/span&gt; email = &lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;;&lt;span class=&#34;comment&#34;&gt;//wujingchao92@gmail.com&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;实际的二进制消息为:&lt;/p&gt;
-&lt;p&gt;08 18 12 0a 77 75 6a 69 6e 67 63 68 61 6f 1a 16 77 75 6a 69 6e 67 63 68 61 6f 39 32 40 67 6d 61 69 6c 2e 63 6f 6d&lt;/p&gt;
-&lt;p&gt;其实Protobuffer就是把数据转换成2进制的数据，这样传输效率会大大提高！！&lt;/p&gt;
-&lt;p&gt;使用步骤：&lt;/p&gt;
-&lt;p&gt;先在Java的同级目录下新建一个名为proto的文件夹专门用于存放proto文件，编写proto文件后编译模块会根据proto文件内容生成java文件。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:/images4note/2608075-1e8f6b397107fd56.png&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;来看一下名为Test.proto的文件内容:&lt;/p&gt;
-&lt;figure class=&#34;highlight protobuf&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//指定protobuf语法版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;syntax = &lt;span class=&#34;string&#34;&gt;&amp;quot;proto2&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//包名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;option&lt;/span&gt; java_package = &lt;span class=&#34;string&#34;&gt;&amp;quot;com.lhc.protobuf&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//源文件类名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;option&lt;/span&gt; java_outer_classname = &lt;span class=&#34;string&#34;&gt;&amp;quot;AddressBookProtos&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// class Person&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;message&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Person&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//required 必须设置（不能为null）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;required&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;string&lt;/span&gt; name = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//int32 对应java中的int&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;required&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;int32&lt;/span&gt; id = &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//optional 可以为空&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;optional&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;string&lt;/span&gt; email = &lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;PhoneType&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    MOBILE = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    HOME = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    WORK = &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;message&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;PhoneNumber&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;required&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;string&lt;/span&gt; number = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;optional&lt;/span&gt; PhoneType type = &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt; [default = HOME];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;comment&#34;&gt;//repeated 重复的 （集合）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;repeated&lt;/span&gt; PhoneNumber phones = &lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;message&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;AddressBook&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;repeated&lt;/span&gt; Person people = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;Protobuf应用——网络传输&#34;&gt;&lt;a href=&#34;#Protobuf应用——网络传输&#34; class=&#34;headerlink&#34; title=&#34;Protobuf应用——网络传输&#34;&gt;&lt;/a&gt;Protobuf应用——网络传输&lt;/h2&gt;&lt;h5 id=&#34;http传输&#34;&gt;&lt;a href=&#34;#http传输&#34; class=&#34;headerlink&#34; title=&#34;http传输&#34;&gt;&lt;/a&gt;http传输&lt;/h5&gt;&lt;p&gt;通常在应用层我们使用的都是Http协议，Http的本质是一次socket请求的连接与断开。传输数据时将protobuf对象转换为byte[]传输即可&lt;/p&gt;
-&lt;h5 id=&#34;自定义TCP通信协议&#34;&gt;&lt;a href=&#34;#自定义TCP通信协议&#34; class=&#34;headerlink&#34; title=&#34;自定义TCP通信协议&#34;&gt;&lt;/a&gt;自定义TCP通信协议&lt;/h5&gt;&lt;p&gt;当我们自定义TCP通信协议的时候，将面临粘包与分包的问题&lt;/p&gt;
-&lt;p&gt;分包：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;要发送的数据大于TCP缓冲剩余空间&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;待发送数据大于MSS（最大报文长度）&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;D:/images4note/2608075-120dfd45169eb074.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;粘包：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;要发送的数据小于TCP缓冲区，将多次写入缓冲区的数据一起发送&lt;/li&gt;
-&lt;li&gt;接收端的应用层没有及时读取缓冲区的数据&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;自定义通信协议的两种方式&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;定义数据包包头&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;D:/images4note/2608075-43774effe82958aa-1553651810415.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在数据包之间设置边界&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;D:/images4note/2608075-4ae26be105ab8167.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;​            大家可以参考 JT808协议 ——交通部808协议（车联网），也是采用类似的方式定义通信协议&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;小细节：&#34;&gt;&lt;a href=&#34;#小细节：&#34; class=&#34;headerlink&#34; title=&#34;小细节：&#34;&gt;&lt;/a&gt;小细节：&lt;/h1&gt;&lt;h3 id=&#34;枚举enum类型：&#34;&gt;&lt;a href=&#34;#枚举enum类型：&#34; class=&#34;headerlink&#34; title=&#34;枚举enum类型：&#34;&gt;&lt;/a&gt;枚举enum类型：&lt;/h3&gt;&lt;h4 id=&#34;1、不支持一个proto文件中，多个枚举中定义相同的枚举常量名。&#34;&gt;&lt;a href=&#34;#1、不支持一个proto文件中，多个枚举中定义相同的枚举常量名。&#34; class=&#34;headerlink&#34; title=&#34;1、不支持一个proto文件中，多个枚举中定义相同的枚举常量名。&#34;&gt;&lt;/a&gt;1、不支持一个proto文件中，多个枚举中定义相同的枚举常量名。&lt;/h4&gt;&lt;figure class=&#34;highlight protobuf&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Enum1&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    IDLE = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    RUNNING = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Enum2&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    IDLE = &lt;span class=&#34;number&#34;&gt;5&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    RUNNING = &lt;span class=&#34;number&#34;&gt;6&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;==编译不通过，会报错！！！==&lt;/p&gt;
-&lt;h4 id=&#34;2、枚举第一个常量的值必须是0&#34;&gt;&lt;a href=&#34;#2、枚举第一个常量的值必须是0&#34; class=&#34;headerlink&#34; title=&#34;2、枚举第一个常量的值必须是0&#34;&gt;&lt;/a&gt;2、枚举第一个常量的值必须是0&lt;/h4&gt;&lt;p&gt;eg:&lt;/p&gt;
-&lt;figure class=&#34;highlight protobuf&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;BallTypeEnum&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    BALL_TYPE_UNSPECIFIED = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    BASKETBALL = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    FOOTBALL = &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/BeetlSql/</guid>
-            <title>BeetlSql学习</title>
-            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/BeetlSql/</link>
-            <category>BeetlSql</category>
-            <pubDate>Sun, 21 Mar 2021 18:55:17 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;因本人项目需要接触了一下国内一款ORM框架，感觉用着很爽，项目易于管理，特此介绍一下。详情请点解下方官网：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://ibeetl.com/&#34;&gt;BeetlSql官网&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;BeetlSql是什么&#34;&gt;&lt;a href=&#34;#BeetlSql是什么&#34; class=&#34;headerlink&#34; title=&#34;BeetlSql是什么&#34;&gt;&lt;/a&gt;BeetlSql是什么&lt;/h1&gt;&lt;p&gt;BeetlSQL 是一个全功能 DAO 工具，同时具有 Hibernate 优点 &amp;amp; Mybatis 优点功能，适用于承认以 SQL 为中心，同时又需求工具能自动能生成大量常用的 SQL 的应用。&lt;/p&gt;
-&lt;h1 id=&#34;BeetlSql优点&#34;&gt;&lt;a href=&#34;#BeetlSql优点&#34; class=&#34;headerlink&#34; title=&#34;BeetlSql优点&#34;&gt;&lt;/a&gt;BeetlSql优点&lt;/h1&gt;&lt;p&gt;BeetSql是一个全功能DAO工具， 同时具有Hibernate 优点 &amp;amp; Mybatis优点功能，适用于承认以SQL为中心，同时又需求工具能自动能生成大量常用的SQL的应用。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;开发效率高&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;无需注解，自动使用大量内置SQL，轻易完成增删改查功能，节省50%的开发工作量。 数据模型支持Pojo，也支持Map/List这种快速模型，也支持混合模型。 SQL 模板基于Beetl实现，更容易写和调试，以及扩展。 可以针对单个表(或者视图）代码生成pojo类和sql模版，甚至是整个数据库。能减少代码编写工作量。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;易于维护&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;SQL 以更简洁的方式，Markdown方式集中管理，同时方便程序开发和数据库SQL调试。可以自动将sql文件映射为dao接口类。灵活直观的支持支持一对一，一对多，多对多关系映射而不引入复杂的OR Mapping概念和技术。具备Interceptor功能，可以调试，性能诊断SQL，以及扩展其他功能&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;其他特色&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;内置支持主从数据库支持的开源工具，支持跨数据库平台，开发者所需工作减少到最小，目前跨数据库支持MySql、Postgres、Oracle、SQLServer、h2、SQLite、DB2。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;p&gt;以上来自官网介绍。一下为本人感受：&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;中文文档全面&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;中文官网解析非常全面清晰，API解释非常清晰，易于理解。&lt;/li&gt;
-&lt;li&gt;方法内部参数解析清晰、完成，可随时观看&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;SQL默认debug，输出打印美化，方便排查问题和SQL分析&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;相对于复杂SQL分析排查我觉得BeetlSql自带的console日志打印输出非常好用。&lt;/li&gt;
-&lt;li&gt;SQLconsole打印优雅。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;BeetlSql缺点&#34;&gt;&lt;a href=&#34;#BeetlSql缺点&#34; class=&#34;headerlink&#34; title=&#34;BeetlSql缺点&#34;&gt;&lt;/a&gt;BeetlSql缺点&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;小众，使用数量较少&lt;/li&gt;
-&lt;li&gt;社区不够活跃&lt;/li&gt;
-&lt;/ul&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/PostMan%E6%95%99%E7%A8%8B/</guid>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/01/04/Other/PostMan%E6%95%99%E7%A8%8B/</guid>
             <title>PostMan教程大全</title>
-            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/PostMan%E6%95%99%E7%A8%8B/</link>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/01/04/Other/PostMan%E6%95%99%E7%A8%8B/</link>
             <category>测试</category>
-            <pubDate>Sun, 21 Mar 2021 18:55:17 +0800</pubDate>
+            <pubDate>Mon, 04 Jan 2021 10:13:52 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;推荐一款接口测试工具！POSTMAN！ 简单来说，四个词，简单实用大方美观！&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1037,12 +817,232 @@ pm.expect(jsonData.weatherinfo.city).to.eql(&amp;#39;北京&amp;#39;);
 &lt;h2 id=&#34;列表中取最后一个元素&#34;&gt;&lt;a href=&#34;#列表中取最后一个元素&#34; class=&#34;headerlink&#34; title=&#34;列表中取最后一个元素&#34;&gt;&lt;/a&gt;列表中取最后一个元素&lt;/h2&gt;&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;string&#34;&gt;&amp;quot;code&amp;quot;&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;string&#34;&gt;&amp;quot;message&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;请求成功！&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;string&#34;&gt;&amp;quot;data&amp;quot;&lt;/span&gt;: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;string&#34;&gt;&amp;quot;total&amp;quot;&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;24&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;string&#34;&gt;&amp;quot;rows&amp;quot;&lt;/span&gt;: [&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &lt;span class=&#34;string&#34;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;1066370498633486336&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &lt;span class=&#34;string&#34;&gt;&amp;quot;mobile&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;15812340003&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &lt;span class=&#34;string&#34;&gt;&amp;quot;username&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;zbz&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &lt;span class=&#34;string&#34;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;1071632760222810112&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &lt;span class=&#34;string&#34;&gt;&amp;quot;mobile&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;16612094236&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &lt;span class=&#34;string&#34;&gt;&amp;quot;username&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;llx&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &lt;span class=&#34;string&#34;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;1075383133106425856&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &lt;span class=&#34;string&#34;&gt;&amp;quot;mobile&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;13523679872&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &lt;span class=&#34;string&#34;&gt;&amp;quot;username&amp;quot;&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;test001&amp;quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//获取json体数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; jsonData = pm.response.json()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 获取id的值,通过slice(-1)获取列表中最后一个元素。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; id = jsonData.data.rows.slice(&lt;span class=&#34;number&#34;&gt;-1&lt;/span&gt;)[&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/BeetlSql&amp;&amp;ProtoBuffer%E5%AE%9E%E8%B7%B5Demo/</guid>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/12/15/Other/%E5%BC%80%E5%8F%91%E5%A5%BD%E4%B9%A0%E6%83%AF/</guid>
+            <title>开发好习惯</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/12/15/Other/%E5%BC%80%E5%8F%91%E5%A5%BD%E4%B9%A0%E6%83%AF/</link>
+            <category>随笔</category>
+            <pubDate>Tue, 15 Dec 2020 14:38:12 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;写干净的代码，做风一样的男子！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;编程5分钟，查代码2小时!&lt;/p&gt;
+&lt;p&gt;在程序员的编程生涯，免不了和BUG打交道，甚至有些程序员被BUG虐杀的苦不堪言。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://p3-tt.byteimg.com/origin/4ada0003ada15e3b0683?from=pc&#34; alt=&#34;程序员减少代码BUG的7种方法，写干净的代码，做风一样的男子！&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;当有人指出程序员代码有BUG时，程序员的回答各有不同：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;不可能啊，在我电脑上运行没有问题呀!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;我已经一星期没碰这块代码啦!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;没事，我改一行代码就可以了，不影响程序。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;center&gt;程序员调 Bug 的样子，非常真实~&lt;/center&gt;
+
+&lt;p&gt;​                                                                                                                         &lt;center&gt;↓↓↓&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ss.csdn.net/p?http://mmbiz.qpic.cn/mmbiz_gif/2A8tXicCG8yka2rcVsmkqPjN4taJfwp3wUy7KTTM4IhnOjTMdC3zXRYGElM7Pia1AhvV02UlibtPKoRFc9icv40dHA/0?wx_fmt=gif&amp;wxfrom=5&amp;wx_lazy=1&#34; alt=&#34;0?wx_fmt=gif&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ss.csdn.net/p?http://mmbiz.qpic.cn/mmbiz_gif/2A8tXicCG8yka2rcVsmkqPjN4taJfwp3wxQKXe3ibNiadib0xqp2uYXribWiby2WCrXmO4q1CXAibbpugibUNvdA2yuuNQ/0?wx_fmt=gif&amp;wxfrom=5&amp;wx_lazy=1&#34; alt=&#34;0?wx_fmt=gif&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_gif/2A8tXicCG8yka2rcVsmkqPjN4taJfwp3w5fLdGxLudXOB5pdrwh2vbClrZU7KC5QysFhibrkP9spDK2kONPHTUnw/0?wx_fmt=gif&#34; alt=&#34;0?wx_fmt=gif&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;调bug是火，bug是烟。一处点火，四处冒烟&lt;/p&gt;
+&lt;p&gt;下面奉上我日常开发的一些总结.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;如何减少代码的BUG呢-在此分享几个技巧&#34;&gt;&lt;a href=&#34;#如何减少代码的BUG呢-在此分享几个技巧&#34; class=&#34;headerlink&#34; title=&#34;如何减少代码的BUG呢?在此分享几个技巧&#34;&gt;&lt;/a&gt;如何减少代码的BUG呢?在此分享几个技巧&lt;/h1&gt;&lt;h2 id=&#34;别对警告视而不见&#34;&gt;&lt;a href=&#34;#别对警告视而不见&#34; class=&#34;headerlink&#34; title=&#34;别对警告视而不见&#34;&gt;&lt;/a&gt;别对警告视而不见&lt;/h2&gt;&lt;p&gt;相信不少的程序员会使用IDEA，使用它敲代码，有时候会出现警告，那么这时你对警告就不能视而不见了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我们的目标是，写干净的代码，做风一样的男子!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://p1-tt.byteimg.com/origin/4add00036e54d5cefc42?from=pc&#34; alt=&#34;程序员减少代码BUG的7种方法，写干净的代码，做风一样的男子！&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;编程习惯&#34;&gt;&lt;a href=&#34;#编程习惯&#34; class=&#34;headerlink&#34; title=&#34;编程习惯&#34;&gt;&lt;/a&gt;编程习惯&lt;/h2&gt;&lt;p&gt;种瓜得瓜种豆得豆，好的编程习惯可以大大降低BUG数量。譬如有if必须写else，即使else是个空语句 。&lt;/p&gt;
+&lt;h2 id=&#34;写代码的时间问题&#34;&gt;&lt;a href=&#34;#写代码的时间问题&#34; class=&#34;headerlink&#34; title=&#34;写代码的时间问题&#34;&gt;&lt;/a&gt;写代码的时间问题&lt;/h2&gt;&lt;p&gt;对于程序员而言，千万别熬夜写代码。一些程序员在晚上11点，仍然在敲代码。&lt;/p&gt;
+&lt;p&gt;虽然你自己觉得头脑其实很清醒，但是第二天自测，或者QA测试的时候你有可能就会发现问题很多。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我们一般不提倡长期加班写代码，因为那样会导致Bug率直线上升。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://p1-tt.byteimg.com/origin/4ade00036510b0efbb55?from=pc&#34; alt=&#34;程序员减少代码BUG的7种方法，写干净的代码，做风一样的男子！&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;验证、自测&#34;&gt;&lt;a href=&#34;#验证、自测&#34; class=&#34;headerlink&#34; title=&#34;验证、自测&#34;&gt;&lt;/a&gt;验证、自测&lt;/h2&gt;&lt;p&gt;在提交测试前要多验证，其中包括自动化测试、手动跑用例等。&lt;/p&gt;
+&lt;p&gt;有一句话说的好，千万别怕麻烦，不然你会麻烦一辈子。&lt;/p&gt;
+&lt;p&gt;这也是我认为我现在坚持的比较好的一点，自测ok，然后交给业务测试&lt;/p&gt;
+&lt;h2 id=&#34;仔细的DEBUG&#34;&gt;&lt;a href=&#34;#仔细的DEBUG&#34; class=&#34;headerlink&#34; title=&#34;仔细的DEBUG&#34;&gt;&lt;/a&gt;仔细的DEBUG&lt;/h2&gt;&lt;p&gt;在2.4基础上建议自测是仔细的DEBUG一遍，这样能对自己的代码心里有个范围，大体知道风险点和错误是便于直接调整自己的代码。&lt;/p&gt;
+&lt;h2 id=&#34;仔细的设计&#34;&gt;&lt;a href=&#34;#仔细的设计&#34; class=&#34;headerlink&#34; title=&#34;仔细的设计&#34;&gt;&lt;/a&gt;仔细的设计&lt;/h2&gt;&lt;p&gt;在程序员编写代码之前，必须对代码的整个结构以及逻辑结构胸有成竹。&lt;/p&gt;
+&lt;h2 id=&#34;避免干扰&#34;&gt;&lt;a href=&#34;#避免干扰&#34; class=&#34;headerlink&#34; title=&#34;避免干扰&#34;&gt;&lt;/a&gt;避免干扰&lt;/h2&gt;&lt;p&gt;有部分的程序员敲代码的时候，经常会一边听音乐一边敲代码，这样效率不仅仅低，而且也更容易产生BUG。&lt;/p&gt;
+&lt;h2 id=&#34;注释&#34;&gt;&lt;a href=&#34;#注释&#34; class=&#34;headerlink&#34; title=&#34;注释&#34;&gt;&lt;/a&gt;注释&lt;/h2&gt;&lt;p&gt;写注释，写注释，写注释。重要的事情说三遍。&lt;/p&gt;
+&lt;p&gt;因为前期的注释有利于后续开发的时候容易减少bug。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;自从修改了注释模板，整个人精神多了，bug也明显少了，如图：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201215145135.png&#34; alt=&#34;image-20201215145125620&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;敢于维护上古代码&#34;&gt;&lt;a href=&#34;#敢于维护上古代码&#34; class=&#34;headerlink&#34; title=&#34;敢于维护上古代码&#34;&gt;&lt;/a&gt;敢于维护上古代码&lt;/h2&gt;&lt;p&gt;博猪开发时间其实很少，只有一年的时间，其实上古代码对于博猪的历练很大，俗话说的好多吃BUG,身体棒棒。博猪入职之后前半年一直维护一个SSI项目，里面用的技术很杂，有的在网上找不到，包括前端和后台，其次最重要的是业务方面，更是不懂，业务一般人不是给你讲的，所以我就一遍遍的启动本地DEBUG,慢慢啃下来的。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Other/%E8%87%B4%E6%AD%A3%E5%9C%A8%E5%A5%8B%E6%96%97%E8%B7%AF%E4%B8%8A%E7%9A%84%E4%BD%A0/</guid>
+            <title>致正在奋斗路上的你</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Other/%E8%87%B4%E6%AD%A3%E5%9C%A8%E5%A5%8B%E6%96%97%E8%B7%AF%E4%B8%8A%E7%9A%84%E4%BD%A0/</link>
+            <category>随笔</category>
+            <pubDate>Mon, 09 Nov 2020 09:38:11 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;致正在奋斗路上的你&#34;&gt;&lt;a href=&#34;#致正在奋斗路上的你&#34; class=&#34;headerlink&#34; title=&#34;致正在奋斗路上的你&#34;&gt;&lt;/a&gt;致正在奋斗路上的你&lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;写这个博客的目的主要是为了针对身边某些正在处于大学的朋友，感觉他们很迷茫，然后很刻苦，但是感觉努力的不在点上，所以我趁我考试的路上写下了这篇博客，一是为了记录一下这次旅行和放松的机会；二是给身边的一些朋友&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; 当你看到这个文章的时候，本博猪正在从大连回北京的路上，此时九点五十左右，博猪辗转反侧，夜不能寐，特此写下这篇文章，记录一下次不是在上坡的路上就是在上坡的路上的考试之旅，顺便缓解一下博猪六个小时屁股的煎熬。&lt;br&gt;  首先按照常规流程博猪自我介绍一下，博猪笔名will，意义如何自行百度，98年出身，山东泰安人士，本博猪2019年3月份入坑，主要从事于车险，车险金融行业，先后参与过北汽鹏龙二期改造、北汽鹏龙微信端开发，捷通达集团车险经济平台理赔、续保、新车销售、部分报表统计等开发，参与北汽鹏龙中行、平安、浙江中行快速对接和流程设计和开发（SSI架构，前端LayUI），捷通达参与Erp,Sap系统资源对接，目前手里维护者九、十个左右的项目，目前正在长城驻场开发，参与车服务保代经济云系统、续保系统，主要负责续保系统的需求分析和业务开发，车服务系统对账方面开发和长城原系统和第三方系统对接封装基于spring cloud alibaba的相关工具类。目前项目已经上生产环境，目前正协助压测人员进行压力测试。&lt;/p&gt;
+&lt;p&gt;OK，博猪履历介绍到这里，俗话说三年小架构，博猪目标如此，也正在努力的朝着这个目标前进，废话不说博猪写这篇文章的目的是分享一下自己的学习方式和一些学习心得，缘由是博猪身边有几个入坑这个专业的大学生最近看他们也是挺努力刻苦的，但是学习的点总是不在那个关键的地方上，这样博猪心有余而力不足，想好心帮忙但是每次都是很费劲的完成。&lt;br&gt;那么，我分享一下我的学习方式，顺便跟着博猪思考一下博猪对你们的问题，是否对你现在有所触动和能解决你手里的问题！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;有目的的学习&lt;/p&gt;
+&lt;p&gt;目的很重要，因为它是你迷茫路上的一个指路灯，至少它能让你有一个目的地，在我的世界观里面target很重要，至少它能让你知道你下一步至少干啥，然后具体咋实现看你如何安排了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Q:     你是否有想过近三年或者你毕业进入社会想干啥或者想过什么样的生活了没有？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;坚持&lt;/p&gt;
+&lt;p&gt;俗话说师傅领进门，修行靠个人，虽然博猪当时也啥都学，什么3dmax，ps，电商，嗯，因为我刚开始报的是电商的专业，然后大一上学期末临时转的软件开发，然后靠扎实的C语言的基础，自学的JAVA，JAVAEE，JAVA WEB，MySQL等，因为学校教程太慢，太杂，我当时的想法很简单，就是工作，然后赚钱，然后我静静的边抽烟边刷了一遍招聘软件上的软件开发的技术，然后回去下载资料，自己学，上机课我就偷偷的猫到一个角落自己戴着耳机学习，然后一遍遍的码代码，自己不关心的科目期末不挂科就行，寒暑假初中同学高中同学聚会能推就推。&lt;br&gt;所以，如果说我提出的第一点占头百分之二十的话，那么坚持就能占百分之七十。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Q:    如果你已经深深的思考了第一题，那么鉴于第一题的基础上，你是否能你的目标坚持下去的努力？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;不浮躁&lt;/p&gt;
+&lt;p&gt;博猪很喜欢博猪学校的校训:坚持 不浮躁，坚持容易，不浮躁难。coding本身就是一个很枯燥无聊，甚至很容易没得朋友的一个事情，所以让自己的心沉下来很重要。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;有属于自己的学习体系&lt;/p&gt;
+&lt;p&gt;有自己的学习体系很重要，作为一个成年人应该有个事情紧急程度的排序，给自己的科目或者事情排个序，那个可以做那个可以不做，不要把自己搞得很乱又很累。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;学会自己思考&lt;/p&gt;
+&lt;p&gt;身边的朋友很多就是遇到问题就是，为啥明明都是一模一样的，为啥我的就直接报错，那么你有没有想过这个程序为啥这样执行？还有你执行完一个程序后是否进行复验程序？程序是不会骗人的，所以多多吃一些异常报错有营养，对自己成长有好处的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;学会自己解决问题&lt;/p&gt;
+&lt;p&gt;遇到一个问题以后，你要相信一句话这个一定不是你一个人再犯，肯定会有前人给你踩过坑，所以遇到问题学会找谷哥或者找度娘。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;学会正确的搜索关键词&lt;/p&gt;
+&lt;p&gt;一个正确的搜索关键词会大大提高搜索引擎给你的搜索结果，也大大减少了浏览器因模糊或者一些广告给你带来的困扰。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;切勿好高骛远&lt;/p&gt;
+&lt;p&gt;博猪最近遇到很多刚入行的小白，感觉微服务不过如此，业主不过如此，但是真正到自己手里的时候，连最基本的crud都不会，当然博猪和技术经理交给他们的这就是一些crud的项目模块，当然前期由于长城这个公司刚成立，一些最基本的技术沉淀都没有，当然博猪算是经历了一次一个公司技术体系从无到有的一个过程。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;建议藏在内容里面，答案请自行寻找&lt;/p&gt;
+&lt;p&gt;俗话说的好，九为数极，哈哈，这个建议是针对将来入职程序猿的盆友建议，如果还在读大学建议赶紧找个对象，要不然你会发现你工作入职后不是你想象的白领的生活，而是整天不断的需求和加班，996的生活，正在朝着你招手，所以博猪最大的遗憾就是没在大学期间找个女票。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;话就絮叨到这里了，22点50了，车快到站了，博猪也要收拾一下东西回家了，哈哈末尾送你们一句话，也是博猪最近闲下来刷剧看到的一句话感觉挺不错的，句子如下：&lt;br&gt;   须知少时凌云志，曾许人间第一流！&lt;/p&gt;
+&lt;p&gt;下面贴两张博猪拍的两张图片：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201026135857.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201026135915.jpg&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Other/ProtoBuffer%E7%AC%94%E8%AE%B0/</guid>
+            <title>ProtoBuffer学习</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Other/ProtoBuffer%E7%AC%94%E8%AE%B0/</link>
+            <category>ProtoBuffer</category>
+            <pubDate>Mon, 09 Nov 2020 09:38:11 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;Protobuf学习&#34;&gt;&lt;a href=&#34;#Protobuf学习&#34; class=&#34;headerlink&#34; title=&#34;Protobuf学习&#34;&gt;&lt;/a&gt;Protobuf学习&lt;/h1&gt;&lt;h2 id=&#34;Protobuf是什么&#34;&gt;&lt;a href=&#34;#Protobuf是什么&#34; class=&#34;headerlink&#34; title=&#34;Protobuf是什么&#34;&gt;&lt;/a&gt;Protobuf是什么&lt;/h2&gt;&lt;p&gt;Protobuf是一种平台无关、语言无关、可扩展且轻便高效的序列化数据结构的协议，可以用于&lt;strong&gt;网络通信&lt;/strong&gt;和&lt;strong&gt;数据存储&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;为什么要使用Protobuf&#34;&gt;&lt;a href=&#34;#为什么要使用Protobuf&#34; class=&#34;headerlink&#34; title=&#34;为什么要使用Protobuf&#34;&gt;&lt;/a&gt;为什么要使用Protobuf&lt;/h3&gt;&lt;p&gt;  &lt;img src=&#34;D:/images4note/2608075-1e8b5b166e9d9fee.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;使用方法也比较简单:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;定义用于消息文件.proto&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;使用protobuf的编译器编译消息文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;使用编译好对应语言的类文件进行消息的序列化与反序列化&lt;/p&gt;
+&lt;p&gt;先来定义一个简单的消息:&lt;/p&gt;
+&lt;figure class=&#34;highlight protobuf&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;message&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Person&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;built_in&#34;&gt;int32&lt;/span&gt; id = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;&lt;span class=&#34;comment&#34;&gt;//24&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;built_in&#34;&gt;string&lt;/span&gt; name = &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;span class=&#34;comment&#34;&gt;//wujingchao&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;built_in&#34;&gt;string&lt;/span&gt; email = &lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;;&lt;span class=&#34;comment&#34;&gt;//wujingchao92@gmail.com&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;实际的二进制消息为:&lt;/p&gt;
+&lt;p&gt;08 18 12 0a 77 75 6a 69 6e 67 63 68 61 6f 1a 16 77 75 6a 69 6e 67 63 68 61 6f 39 32 40 67 6d 61 69 6c 2e 63 6f 6d&lt;/p&gt;
+&lt;p&gt;其实Protobuffer就是把数据转换成2进制的数据，这样传输效率会大大提高！！&lt;/p&gt;
+&lt;p&gt;使用步骤：&lt;/p&gt;
+&lt;p&gt;先在Java的同级目录下新建一个名为proto的文件夹专门用于存放proto文件，编写proto文件后编译模块会根据proto文件内容生成java文件。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:/images4note/2608075-1e8f6b397107fd56.png&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;来看一下名为Test.proto的文件内容:&lt;/p&gt;
+&lt;figure class=&#34;highlight protobuf&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//指定protobuf语法版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;syntax = &lt;span class=&#34;string&#34;&gt;&amp;quot;proto2&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//包名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;option&lt;/span&gt; java_package = &lt;span class=&#34;string&#34;&gt;&amp;quot;com.lhc.protobuf&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//源文件类名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;option&lt;/span&gt; java_outer_classname = &lt;span class=&#34;string&#34;&gt;&amp;quot;AddressBookProtos&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// class Person&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;message&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Person&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//required 必须设置（不能为null）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;required&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;string&lt;/span&gt; name = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//int32 对应java中的int&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;required&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;int32&lt;/span&gt; id = &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;//optional 可以为空&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;optional&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;string&lt;/span&gt; email = &lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;PhoneType&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    MOBILE = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    HOME = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    WORK = &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;message&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;PhoneNumber&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;required&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;string&lt;/span&gt; number = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;optional&lt;/span&gt; PhoneType type = &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt; [default = HOME];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &lt;span class=&#34;comment&#34;&gt;//repeated 重复的 （集合）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;repeated&lt;/span&gt; PhoneNumber phones = &lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;message&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;AddressBook&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;repeated&lt;/span&gt; Person people = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;Protobuf应用——网络传输&#34;&gt;&lt;a href=&#34;#Protobuf应用——网络传输&#34; class=&#34;headerlink&#34; title=&#34;Protobuf应用——网络传输&#34;&gt;&lt;/a&gt;Protobuf应用——网络传输&lt;/h2&gt;&lt;h5 id=&#34;http传输&#34;&gt;&lt;a href=&#34;#http传输&#34; class=&#34;headerlink&#34; title=&#34;http传输&#34;&gt;&lt;/a&gt;http传输&lt;/h5&gt;&lt;p&gt;通常在应用层我们使用的都是Http协议，Http的本质是一次socket请求的连接与断开。传输数据时将protobuf对象转换为byte[]传输即可&lt;/p&gt;
+&lt;h5 id=&#34;自定义TCP通信协议&#34;&gt;&lt;a href=&#34;#自定义TCP通信协议&#34; class=&#34;headerlink&#34; title=&#34;自定义TCP通信协议&#34;&gt;&lt;/a&gt;自定义TCP通信协议&lt;/h5&gt;&lt;p&gt;当我们自定义TCP通信协议的时候，将面临粘包与分包的问题&lt;/p&gt;
+&lt;p&gt;分包：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;要发送的数据大于TCP缓冲剩余空间&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;待发送数据大于MSS（最大报文长度）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;D:/images4note/2608075-120dfd45169eb074.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;粘包：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;要发送的数据小于TCP缓冲区，将多次写入缓冲区的数据一起发送&lt;/li&gt;
+&lt;li&gt;接收端的应用层没有及时读取缓冲区的数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;自定义通信协议的两种方式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定义数据包包头&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;D:/images4note/2608075-43774effe82958aa-1553651810415.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在数据包之间设置边界&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;D:/images4note/2608075-4ae26be105ab8167.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​            大家可以参考 JT808协议 ——交通部808协议（车联网），也是采用类似的方式定义通信协议&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;小细节：&#34;&gt;&lt;a href=&#34;#小细节：&#34; class=&#34;headerlink&#34; title=&#34;小细节：&#34;&gt;&lt;/a&gt;小细节：&lt;/h1&gt;&lt;h3 id=&#34;枚举enum类型：&#34;&gt;&lt;a href=&#34;#枚举enum类型：&#34; class=&#34;headerlink&#34; title=&#34;枚举enum类型：&#34;&gt;&lt;/a&gt;枚举enum类型：&lt;/h3&gt;&lt;h4 id=&#34;1、不支持一个proto文件中，多个枚举中定义相同的枚举常量名。&#34;&gt;&lt;a href=&#34;#1、不支持一个proto文件中，多个枚举中定义相同的枚举常量名。&#34; class=&#34;headerlink&#34; title=&#34;1、不支持一个proto文件中，多个枚举中定义相同的枚举常量名。&#34;&gt;&lt;/a&gt;1、不支持一个proto文件中，多个枚举中定义相同的枚举常量名。&lt;/h4&gt;&lt;figure class=&#34;highlight protobuf&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Enum1&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    IDLE = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    RUNNING = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;Enum2&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    IDLE = &lt;span class=&#34;number&#34;&gt;5&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    RUNNING = &lt;span class=&#34;number&#34;&gt;6&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;==编译不通过，会报错！！！==&lt;/p&gt;
+&lt;h4 id=&#34;2、枚举第一个常量的值必须是0&#34;&gt;&lt;a href=&#34;#2、枚举第一个常量的值必须是0&#34; class=&#34;headerlink&#34; title=&#34;2、枚举第一个常量的值必须是0&#34;&gt;&lt;/a&gt;2、枚举第一个常量的值必须是0&lt;/h4&gt;&lt;p&gt;eg:&lt;/p&gt;
+&lt;figure class=&#34;highlight protobuf&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;BallTypeEnum&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    BALL_TYPE_UNSPECIFIED = &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    BASKETBALL = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    FOOTBALL = &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Other/BeetlSql/</guid>
+            <title>BeetlSql学习</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Other/BeetlSql/</link>
+            <category>BeetlSql</category>
+            <pubDate>Mon, 09 Nov 2020 09:38:11 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;因本人项目需要接触了一下国内一款ORM框架，感觉用着很爽，项目易于管理，特此介绍一下。详情请点解下方官网：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://ibeetl.com/&#34;&gt;BeetlSql官网&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;BeetlSql是什么&#34;&gt;&lt;a href=&#34;#BeetlSql是什么&#34; class=&#34;headerlink&#34; title=&#34;BeetlSql是什么&#34;&gt;&lt;/a&gt;BeetlSql是什么&lt;/h1&gt;&lt;p&gt;BeetlSQL 是一个全功能 DAO 工具，同时具有 Hibernate 优点 &amp;amp; Mybatis 优点功能，适用于承认以 SQL 为中心，同时又需求工具能自动能生成大量常用的 SQL 的应用。&lt;/p&gt;
+&lt;h1 id=&#34;BeetlSql优点&#34;&gt;&lt;a href=&#34;#BeetlSql优点&#34; class=&#34;headerlink&#34; title=&#34;BeetlSql优点&#34;&gt;&lt;/a&gt;BeetlSql优点&lt;/h1&gt;&lt;p&gt;BeetSql是一个全功能DAO工具， 同时具有Hibernate 优点 &amp;amp; Mybatis优点功能，适用于承认以SQL为中心，同时又需求工具能自动能生成大量常用的SQL的应用。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;开发效率高&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;无需注解，自动使用大量内置SQL，轻易完成增删改查功能，节省50%的开发工作量。 数据模型支持Pojo，也支持Map/List这种快速模型，也支持混合模型。 SQL 模板基于Beetl实现，更容易写和调试，以及扩展。 可以针对单个表(或者视图）代码生成pojo类和sql模版，甚至是整个数据库。能减少代码编写工作量。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;易于维护&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SQL 以更简洁的方式，Markdown方式集中管理，同时方便程序开发和数据库SQL调试。可以自动将sql文件映射为dao接口类。灵活直观的支持支持一对一，一对多，多对多关系映射而不引入复杂的OR Mapping概念和技术。具备Interceptor功能，可以调试，性能诊断SQL，以及扩展其他功能&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;其他特色&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;内置支持主从数据库支持的开源工具，支持跨数据库平台，开发者所需工作减少到最小，目前跨数据库支持MySql、Postgres、Oracle、SQLServer、h2、SQLite、DB2。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;以上来自官网介绍。一下为本人感受：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;中文文档全面&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;中文官网解析非常全面清晰，API解释非常清晰，易于理解。&lt;/li&gt;
+&lt;li&gt;方法内部参数解析清晰、完成，可随时观看&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SQL默认debug，输出打印美化，方便排查问题和SQL分析&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;相对于复杂SQL分析排查我觉得BeetlSql自带的console日志打印输出非常好用。&lt;/li&gt;
+&lt;li&gt;SQLconsole打印优雅。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;BeetlSql缺点&#34;&gt;&lt;a href=&#34;#BeetlSql缺点&#34; class=&#34;headerlink&#34; title=&#34;BeetlSql缺点&#34;&gt;&lt;/a&gt;BeetlSql缺点&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;小众，使用数量较少&lt;/li&gt;
+&lt;li&gt;社区不够活跃&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Other/BeetlSql&amp;&amp;ProtoBuffer%E5%AE%9E%E8%B7%B5Demo/</guid>
             <title>BeetlSql&amp;&amp;ProtoBuffer实践Demo</title>
-            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/03/21/Other/BeetlSql&amp;&amp;ProtoBuffer%E5%AE%9E%E8%B7%B5Demo/</link>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2020/11/09/Other/BeetlSql&amp;&amp;ProtoBuffer%E5%AE%9E%E8%B7%B5Demo/</link>
             <category>BeetlSql</category>
             <category>ProtoBuffer</category>
-            <pubDate>Sun, 21 Mar 2021 18:55:17 +0800</pubDate>
+            <pubDate>Mon, 09 Nov 2020 09:38:11 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;由于开发架构问题，公司使用的基于SpringBoot+BeetlSql+ProtoBuffer的架子来处理业务,由于BeetlSQL和Protobuffer有些小众，特记录一下。&lt;/p&gt;
 &lt;/blockquote&gt;
