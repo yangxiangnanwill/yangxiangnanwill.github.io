@@ -3,14 +3,14 @@
     <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
     <title>Will</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
-    <updated>2021-07-12T13:49:27.139Z</updated>
-    <category term="Linux" />
-    <category term="Cron" />
+    <updated>2021-07-18T13:59:35.883Z</updated>
     <category term="JAVA" />
     <category term="POI" />
     <category term="EXCEL" />
     <category term="Docker" />
     <category term="Archery" />
+    <category term="Linux" />
+    <category term="Cron" />
     <category term="BeetlSql" />
     <category term="Git" />
     <category term="Other" />
@@ -34,9 +34,9 @@
     <category term="Jsoup" />
     <category term="Http" />
     <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/07/12/Spring/Spring-Cloud-Alibaba(4)-%E6%9C%8D%E5%8A%A1%E5%AE%B9%E9%94%99/</id>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/07/18/Spring/Spring-Cloud-Alibaba(4)-%E6%9C%8D%E5%8A%A1%E5%AE%B9%E9%94%99/</id>
         <title>Spring Cloud Alibaba(4)-服务容错</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/07/12/Spring/Spring-Cloud-Alibaba(4)-%E6%9C%8D%E5%8A%A1%E5%AE%B9%E9%94%99/"/>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/07/18/Spring/Spring-Cloud-Alibaba(4)-%E6%9C%8D%E5%8A%A1%E5%AE%B9%E9%94%99/"/>
         <content type="html">&lt;h1 id=&#34;高并发带来的问题&#34;&gt;&lt;a href=&#34;#高并发带来的问题&#34; class=&#34;headerlink&#34; title=&#34;高并发带来的问题&#34;&gt;&lt;/a&gt;高并发带来的问题&lt;/h1&gt;&lt;p&gt;在微服务架构中，我们将业务拆分成一个个的服务，服务与服务之间可以相互调用，但是由于网络原因或者自身的原因，服务并不能保证服务的100%可用，如果单个服务出现问题，调用这个服务就会出现网络延迟，此时若有大量的网络涌入，会形成任务堆积，最终导致服务瘫痪。&lt;/p&gt;
 &lt;p&gt;接下来我们通过一个案例，来模拟一下一个高并发的场景。&lt;/p&gt;
 &lt;ul&gt;
@@ -69,12 +69,262 @@
 &lt;p&gt;此时会发现, 由于order方法囤积了大量请求, 导致ｍessage方法的访问出现了问题，这就是服务雪崩的雏形。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&#34;服务雪崩效应&#34;&gt;&lt;a href=&#34;#服务雪崩效应&#34; class=&#34;headerlink&#34; title=&#34;服务雪崩效应&#34;&gt;&lt;/a&gt;服务雪崩效应&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;在分布式系统中,由于网络原因或自身的原因,服务一般无法保证 100% 可用。如果一个服务出现了问题，调用这个服务就会出现线程阻塞的情况，此时若有大量的请求涌入，就会出现多条线程阻塞等待，进而导致服务瘫痪。&lt;br&gt;由于服务与服务之间的依赖性，故障会传播，会对整个微服务系统造成灾难性的严重后果，这就是服务故障的 “雪崩效应”。&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;图片占坑。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ftp.bmp.ovh/imgs/2021/07/806b4e49574f0d7c.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;雪崩发生的原因多种多样，有不合理的容量设计，或者是高并发下某一个方法响应变慢，亦或是某台机器的资源耗尽。我们无法完全杜绝雪崩源头的发生，只有做好足够的容错，保证在一个服务发生问题，不会影响到其它服务的正常运行。也就是＂雪落而不雪崩＂。&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;常见容错方案&#34;&gt;&lt;a href=&#34;#常见容错方案&#34; class=&#34;headerlink&#34; title=&#34;常见容错方案&#34;&gt;&lt;/a&gt;常见容错方案&lt;/h1&gt;&lt;p&gt;要防止雪崩的扩散，我们就要做好服务的容错，容错说白了就是保护自己不被猪队友拖垮的一些措施, 下面介绍常见的服务容错思路和组件。&lt;/p&gt;
+&lt;h2 id=&#34;常见的容错思路&#34;&gt;&lt;a href=&#34;#常见的容错思路&#34; class=&#34;headerlink&#34; title=&#34;常见的容错思路&#34;&gt;&lt;/a&gt;常见的容错思路&lt;/h2&gt;&lt;p&gt;常见的容错思路有隔离、超时、限流、熔断、降级这几种，下面分别介绍一下。&lt;/p&gt;
+&lt;h3 id=&#34;隔离&#34;&gt;&lt;a href=&#34;#隔离&#34; class=&#34;headerlink&#34; title=&#34;隔离&#34;&gt;&lt;/a&gt;隔离&lt;/h3&gt;&lt;p&gt;它是指将系统按照一定的原则划分为若干个服务模块，各个模块之间相对独立，无强依赖。当有故障发生时，能将问题和影响隔离在某个模块内部，而不扩散风险，不波及其它模块，不影响整体的系统服务。常见的隔离方式有：线程池隔离和信号量隔离．&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W8Nehj&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/07/18/W8Nehj.png&#34; alt=&#34;W8Nehj.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;超时&#34;&gt;&lt;a href=&#34;#超时&#34; class=&#34;headerlink&#34; title=&#34;超时&#34;&gt;&lt;/a&gt;超时&lt;/h3&gt;&lt;p&gt;在上游服务调用下游服务的时候，设置一个最大响应时间，如果超过这个时间，下游未作出反应，就断开请求，释放掉线程。&lt;/p&gt;
+&lt;h3 id=&#34;限流&#34;&gt;&lt;a href=&#34;#限流&#34; class=&#34;headerlink&#34; title=&#34;限流&#34;&gt;&lt;/a&gt;限流&lt;/h3&gt;&lt;p&gt;限流就是限制系统的输入和输出流量已达到保护系统的目的。为了保证系统的稳固运行,一旦达到的需要限制的阈值,就需要限制流量并采取少量措施以完成限制流量的目的。&lt;/p&gt;
+&lt;h3 id=&#34;熔断&#34;&gt;&lt;a href=&#34;#熔断&#34; class=&#34;headerlink&#34; title=&#34;熔断&#34;&gt;&lt;/a&gt;熔断&lt;/h3&gt;&lt;p&gt;在互联网系统中，当下游服务因访问压力过大而响应变慢或失败，上游服务为了保护系统整体的可用性，可以暂时切断对下游服务的调用。这种牺牲局部，保全整体的措施就叫做熔断。&lt;/p&gt;
+&lt;p&gt;服务熔断一般有三种状态：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;熔断关闭状态（Closed）&lt;br&gt;服务没有故障时，熔断器所处的状态，对调用方的调用不做任何限制&lt;/li&gt;
+&lt;li&gt;熔断开启状态（Open）&lt;br&gt;后续对该服务接口的调用不再经过网络，直接执行本地的fallback方法&lt;/li&gt;
+&lt;li&gt;半熔断状态（Half-Open）&lt;br&gt;尝试恢复服务调用，允许有限的流量调用该服务，并监控调用成功率。如果成功率达到预期，则说明服务已恢复，进入熔断关闭状态；如果成功率仍旧很低，则重新进入熔断关闭状态。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;降级&#34;&gt;&lt;a href=&#34;#降级&#34; class=&#34;headerlink&#34; title=&#34;降级&#34;&gt;&lt;/a&gt;降级&lt;/h3&gt;&lt;p&gt;降级其实就是为服务提供一个托底方案，一旦服务无法正常调用，就使用托底方案。&lt;/p&gt;
+&lt;h1 id=&#34;常见的容错组件&#34;&gt;&lt;a href=&#34;#常见的容错组件&#34; class=&#34;headerlink&#34; title=&#34;常见的容错组件&#34;&gt;&lt;/a&gt;常见的容错组件&lt;/h1&gt;&lt;h2 id=&#34;Hystrix&#34;&gt;&lt;a href=&#34;#Hystrix&#34; class=&#34;headerlink&#34; title=&#34;Hystrix&#34;&gt;&lt;/a&gt;Hystrix&lt;/h2&gt;&lt;p&gt;Hystrix是由Netflix开源的一个延迟和容错库，用于隔离访问远程系统、服务或者第三方库，防止级联失败，从而提升系统的可用性与容错性。&lt;/p&gt;
+&lt;h2 id=&#34;Resilience4J&#34;&gt;&lt;a href=&#34;#Resilience4J&#34; class=&#34;headerlink&#34; title=&#34;Resilience4J&#34;&gt;&lt;/a&gt;Resilience4J&lt;/h2&gt;&lt;p&gt;Resilicence4J一款非常轻量、简单，并且文档非常清晰、丰富的熔断工具，这也是Hystrix官方推荐的替代产品。不仅如此，Resilicence4j还原生支持Spring Boot 1.x/2.x，而且监控也支持和prometheus等多款主流产品进行整合。&lt;/p&gt;
+&lt;h2 id=&#34;Sentinel&#34;&gt;&lt;a href=&#34;#Sentinel&#34; class=&#34;headerlink&#34; title=&#34;Sentinel&#34;&gt;&lt;/a&gt;Sentinel&lt;/h2&gt;&lt;p&gt;Sentinel 是阿里巴巴开源的一款断路器实现，本身在阿里内部已经被大规模采用，非常稳定。&lt;/p&gt;
+&lt;h2 id=&#34;组件对比&#34;&gt;&lt;a href=&#34;#组件对比&#34; class=&#34;headerlink&#34; title=&#34;组件对比&#34;&gt;&lt;/a&gt;组件对比&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Sentinel&lt;/th&gt;
+&lt;th&gt;Hystrix&lt;/th&gt;
+&lt;th&gt;resilience4j&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;隔离策略&lt;/td&gt;
+&lt;td&gt;信号量隔离（并发线程数限流）&lt;/td&gt;
+&lt;td&gt;线程池隔离/信号隔离&lt;/td&gt;
+&lt;td&gt;信号量隔离&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;熔断降级策略&lt;/td&gt;
+&lt;td&gt;基于响应时间、异常比率、异常数&lt;/td&gt;
+&lt;td&gt;基于异常比率&lt;/td&gt;
+&lt;td&gt;基于异常比率、响应&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;实时统计实现&lt;/td&gt;
+&lt;td&gt;滑动窗口（LeapArray）&lt;/td&gt;
+&lt;td&gt;滑动窗口（基于RxJava)&lt;/td&gt;
+&lt;td&gt;Ring Bit Buffer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;动态规则配置&lt;/td&gt;
+&lt;td&gt;支持多种数据源&lt;/td&gt;
+&lt;td&gt;支持多种数据&lt;/td&gt;
+&lt;td&gt;有限支持&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;扩展性&lt;/td&gt;
+&lt;td&gt;多个扩展点&lt;/td&gt;
+&lt;td&gt;插件的形式&lt;/td&gt;
+&lt;td&gt;接口的形式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;基于注解的支持&lt;/td&gt;
+&lt;td&gt;:white_check_mark:&lt;/td&gt;
+&lt;td&gt;:white_check_mark:&lt;/td&gt;
+&lt;td&gt;:white_check_mark:&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;限流&lt;/td&gt;
+&lt;td&gt;基于 QPS，支持基于调用关系的限流&lt;/td&gt;
+&lt;td&gt;有限的支持&lt;/td&gt;
+&lt;td&gt;Rate Limiter&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;流量整形&lt;/td&gt;
+&lt;td&gt;支持预热模式、匀速器模式、预热排队模式&lt;/td&gt;
+&lt;td&gt;:x:&lt;/td&gt;
+&lt;td&gt;简单的RateLimiter&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;系统自适应保护&lt;/td&gt;
+&lt;td&gt;:white_check_mark:&lt;/td&gt;
+&lt;td&gt;:x:&lt;/td&gt;
+&lt;td&gt;:x:&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;控制台&lt;/td&gt;
+&lt;td&gt;提供开箱即用的控制台，可配置规则、查看秒级监控、机器发现等&lt;/td&gt;
+&lt;td&gt;简单的监控查看&lt;/td&gt;
+&lt;td&gt;不提供控制台，可对接其它监控系统&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h1 id=&#34;Sentinel入门&#34;&gt;&lt;a href=&#34;#Sentinel入门&#34; class=&#34;headerlink&#34; title=&#34;Sentinel入门&#34;&gt;&lt;/a&gt;Sentinel入门&lt;/h1&gt;&lt;h2 id=&#34;什么是Sentinel&#34;&gt;&lt;a href=&#34;#什么是Sentinel&#34; class=&#34;headerlink&#34; title=&#34;什么是Sentinel&#34;&gt;&lt;/a&gt;什么是Sentinel&lt;/h2&gt;&lt;p&gt;Sentinel (分布式系统的流量防卫兵) 是阿里开源的一套用于服务容错的综合性解决方案。它以流量为切入点, 从流量控制、熔断降级、系统负载保护等多个维度来保护服务的稳定性。&lt;/p&gt;
+&lt;p&gt;Sentinel 具有以下特征:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;丰富的应用场景：Sentinel 承接了阿里巴巴近 10 年的双十一大促流量的核心场景, 例如秒杀（即突发流量控制在系统容量可以承受的范围）、消息削峰填谷、集群流量控制、实时熔断下游不可用应用等。&lt;/li&gt;
+&lt;li&gt;完备的实时监控：Sentinel 提供了实时的监控功能。通过控制台可以看到接入应用的单台机器秒级数据, 甚至 500 台以下规模的集群的汇总运行情况。&lt;br&gt;广泛的开源生态：Sentinel 提供开箱即用的与其它开源框架/库的整合模块, 例如与 Spring Cloud、Dubbo、gRPC 的整合。只需要引入相应的依赖并进行简单的配置即可快速地接入Sentinel。&lt;/li&gt;
+&lt;li&gt;完善的 SPI 扩展点：Sentinel 提供简单易用、完善的 SPI 扩展接口。您可以通过实现扩展接口来快速地定制逻辑。例如定制规则管理、适配动态数据源等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sentinel 分为两个部分:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;核心库（Java 客户端）不依赖任何框架/库,能够运行于所有 Java 运行时环境，同时对 Dubbo /Spring Cloud 等框架也有较好的支持。&lt;/li&gt;
+&lt;li&gt;控制台（Dashboard）基于 Spring Boot 开发，打包后可以直接运行，不需要额外的 Tomcat 等应用容器。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;微服务集成Sentinel&#34;&gt;&lt;a href=&#34;#微服务集成Sentinel&#34; class=&#34;headerlink&#34; title=&#34;微服务集成Sentinel&#34;&gt;&lt;/a&gt;微服务集成Sentinel&lt;/h2&gt;&lt;p&gt;为微服务集成Sentinel非常简单, 只需要加入Sentinel的依赖即可&lt;/p&gt;
+&lt;h3 id=&#34;下载jar包&#34;&gt;&lt;a href=&#34;#下载jar包&#34; class=&#34;headerlink&#34; title=&#34;下载jar包&#34;&gt;&lt;/a&gt;下载jar包&lt;/h3&gt;&lt;p&gt;访问&lt;a href=&#34;https://github.com/alibaba/Sentinel/releases&#34;&gt;sentinel的官方&lt;code&gt;GitHub&lt;/code&gt;仓库下载jar包&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;启动jar包&#34;&gt;&lt;a href=&#34;#启动jar包&#34; class=&#34;headerlink&#34; title=&#34;启动jar包&#34;&gt;&lt;/a&gt;启动jar包&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;直接使用jar命令启动项目(控制台本身是一个SpringBoot项目)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;java -jar sentinel-dashboard-1.8.2.jar -Dserver.port=8080 -Dcsp.sentinel.dashboard.server=localhost:8080 -Dporject.name=sentinel-dashboard&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;在测试高并发专用接口&#34;&gt;&lt;a href=&#34;#在测试高并发专用接口&#34; class=&#34;headerlink&#34; title=&#34;在测试高并发专用接口&#34;&gt;&lt;/a&gt;在测试高并发专用接口&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;HighConcurrencyController&lt;/code&gt;中添加测试方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;@RequestMapping(&amp;quot;/message1&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; String &lt;span class=&#34;title&#34;&gt;message1&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;message1&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;@RequestMapping(&amp;quot;/message2&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; String &lt;span class=&#34;title&#34;&gt;message2&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;message2&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;引入依赖&#34;&gt;&lt;a href=&#34;#引入依赖&#34; class=&#34;headerlink&#34; title=&#34;引入依赖&#34;&gt;&lt;/a&gt;引入依赖&lt;/h3&gt;&lt;figure class=&#34;highlight xml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;&amp;lt;!--sentinel--&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;com.alibaba.cloud&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;spring-cloud-starter-alibaba-sentinel&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;添加配置&#34;&gt;&lt;a href=&#34;#添加配置&#34; class=&#34;headerlink&#34; title=&#34;添加配置&#34;&gt;&lt;/a&gt;添加配置&lt;/h3&gt;&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;sentinel:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;transport:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;port:&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;9999&lt;/span&gt; &lt;span class=&#34;comment&#34;&gt;#跟控制台交流的端口,随意指定一个未使用的端口即可&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;dashboard:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;localhost:8080&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;启动order服务测试&#34;&gt;&lt;a href=&#34;#启动order服务测试&#34; class=&#34;headerlink&#34; title=&#34;启动order服务测试&#34;&gt;&lt;/a&gt;启动order服务测试&lt;/h3&gt;&lt;p&gt;启动成功后访问地址：&lt;code&gt;localhost:8080&lt;/code&gt;，账号和密码默认都是sentinel，访问后你会发现服务信息为空白。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ftp.bmp.ovh/imgs/2021/07/d869eb55dcf31cd1.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;发送-highConcurrency-message1请求，再次测试&#34;&gt;&lt;a href=&#34;#发送-highConcurrency-message1请求，再次测试&#34; class=&#34;headerlink&#34; title=&#34;发送/highConcurrency/message1请求，再次测试&#34;&gt;&lt;/a&gt;发送&lt;code&gt;/highConcurrency/message1&lt;/code&gt;请求，再次测试&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://ftp.bmp.ovh/imgs/2021/07/70b99c97f9b0c76b.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;补充：了解控制台的使用原理&#34;&gt;&lt;a href=&#34;#补充：了解控制台的使用原理&#34; class=&#34;headerlink&#34; title=&#34;补充：了解控制台的使用原理&#34;&gt;&lt;/a&gt;补充：了解控制台的使用原理&lt;/h3&gt;&lt;p&gt;Sentinel的控制台其实就是一个SpringBoot编写的程序。我们需要将我们的微服务程序注册到控制台上,即在微服务中指定控制台的地址, 并且还要开启一个跟控制台传递数据的端口, 控制台也可以通过此端口调用微服务中的监控程序获取微服务的各种信息。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/9434884/53381986-a0b73f00-39ad-11e9-90cf-b49158ae4b6f.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;入门案例-实现一个接口的限流&#34;&gt;&lt;a href=&#34;#入门案例-实现一个接口的限流&#34; class=&#34;headerlink&#34; title=&#34;入门案例[实现一个接口的限流]&#34;&gt;&lt;/a&gt;入门案例[实现一个接口的限流]&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;通过控制台为message1添加一个流控规则&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W8YnaQ&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/07/18/W8YnaQ.png&#34; alt=&#34;W8YnaQ.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W8Yl2q&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/07/18/W8Yl2q.png&#34; alt=&#34;W8Yl2q.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过控制台快速频繁访问, 观察效果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W8YNa4&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/07/18/W8YNa4.png&#34; alt=&#34;W8YNa4.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;Sentinel的概念和功能&#34;&gt;&lt;a href=&#34;#Sentinel的概念和功能&#34; class=&#34;headerlink&#34; title=&#34;Sentinel的概念和功能&#34;&gt;&lt;/a&gt;Sentinel的概念和功能&lt;/h1&gt;&lt;h2 id=&#34;基本概念&#34;&gt;&lt;a href=&#34;#基本概念&#34; class=&#34;headerlink&#34; title=&#34;基本概念&#34;&gt;&lt;/a&gt;基本概念&lt;/h2&gt;&lt;h3 id=&#34;资源&#34;&gt;&lt;a href=&#34;#资源&#34; class=&#34;headerlink&#34; title=&#34;资源&#34;&gt;&lt;/a&gt;资源&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;资源就是Sentinel要保护的东西&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;资源是 Sentinel 的关键概念。它可以是 Java 应用程序中的任何内容，可以是一个服务，也可以是一个方法，甚至可以是一段代码。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们入门案例中的message1方法就可以认为是一个资源&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;规则&#34;&gt;&lt;a href=&#34;#规则&#34; class=&#34;headerlink&#34; title=&#34;规则&#34;&gt;&lt;/a&gt;规则&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;规则就是用来定义如何进行保护资源的&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;作用在资源之上, 定义以什么样的方式保护资源，主要包括流量控制规则、熔断降级规则以及系统保护规则。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们入门案例中就是为message1资源设置了一种流控规则, 限制了进入message1的流量&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;重要功能&#34;&gt;&lt;a href=&#34;#重要功能&#34; class=&#34;headerlink&#34; title=&#34;重要功能&#34;&gt;&lt;/a&gt;重要功能&lt;/h2&gt;&lt;p&gt;Sentinel的主要功能就是容错，主要体现为下面这三个：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;流量控制&lt;br&gt;流量控制在网络传输中是一个常用的概念，它用于调整网络包的数据。任意时间到来的请求往往是随机不可控的，而系统的处理能力是有限的。我们需要根据系统的处理能力对流量进行控制。Sentinel 作为一个调配器，可以根据需要把随机的请求调整成合适的形状。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;熔断降级&lt;br&gt;当检测到调用链路中某个资源出现不稳定的表现，例如请求响应时间长或异常比例升高的时候，则对这个资源的调用进行限制，让请求快速失败，避免影响到其它的资源而导致级联故障。Sentinel 对这个问题采取了两种手段:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过并发线程数进行限制&lt;br&gt;Sentinel 通过限制资源并发线程的数量，来减少不稳定资源对其它资源的影响。当某个资源出现不稳定的情况下，例如响应时间变长，对资源的直接影响就是会造成线程数的逐步堆积。当线程数在特定资源上堆积到一定的数量之后，对该资源的新请求就会被拒绝。堆积的线程完成任务后才开始继续接收请求。&lt;/li&gt;
+&lt;li&gt;通过响应时间对资源进行降级&lt;br&gt;除了对并发线程数进行控制以外，Sentinel 还可以通过响应时间来快速降级不稳定的资源。当依赖的资源出现响应时间过长后，所有对该资源的访问都会被直接拒绝，直到过了指定的时间窗口之后才重新恢复。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sentinel 和 Hystrix 的区别&lt;br&gt;两者的原则是一致的, 都是当一个资源出现问题时, 让其快速失败, 不要波及到其它服务但是在限制的手段上, 确采取了完全不一样的方法:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hystrix 采用的是线程池隔离的方式, 优点是做到了资源之间的隔离, 缺点是增加了线程切换的成本。&lt;/li&gt;
+&lt;li&gt;Sentinel 采用的是通过并发线程的数量和响应时间来对资源做限制。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;系统负载保护&lt;/p&gt;
+&lt;p&gt;Sentinel 同时提供系统维度的自适应保护能力。当系统负载较高的时候，如果还持续让请求进入可能会导致系统崩溃，无法响应。在集群环境下，会把本应这台机器承载的流量转发到其它的机器上去。如果这个时候其它的机器也处在一个边缘状态的时候，Sentinel 提供了对应的保护机制，让系统的入口流量和系统的负载达到一个平衡，保证系统在能力范围之内处理最多的请求。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;总之一句话: 我们需要做的事情，就是在Sentinel的资源上配置各种各样的规则，来实现各种容错的功能。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;Sentinel规则&#34;&gt;&lt;a href=&#34;#Sentinel规则&#34; class=&#34;headerlink&#34; title=&#34;Sentinel规则&#34;&gt;&lt;/a&gt;Sentinel规则&lt;/h2&gt;&lt;h3 id=&#34;流控规则&#34;&gt;&lt;a href=&#34;#流控规则&#34; class=&#34;headerlink&#34; title=&#34;流控规则&#34;&gt;&lt;/a&gt;流控规则&lt;/h3&gt;&lt;p&gt;流量控制，其原理是监控应用流量的QPS(每秒查询率) 或并发线程数等指标，当达到指定的阈值时对流量进行控制，以避免被瞬时的流量高峰冲垮，从而保障应用的高可用性。&lt;/p&gt;
+&lt;p&gt;点击簇点链路，我们就可以看到访问过的接口地址，然后点击对应的流控按钮，进入流控规则配置页面。新增流控规则界面如下:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W8YBxx&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/07/18/W8YBxx.png&#34; alt=&#34;W8YBxx.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;资源名：唯一名称，默认是请求路径，可自定义&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;针对来源：指定对哪个微服务进行限流，默认指default，意思是不区分来源，全部限制&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;阈值类型/单机阈值：&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;QPS（每秒请求数量）: 当调用该接口的QPS达到阈值的时候，进行限流&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;线程数：当调用该接口的线程数达到阈值的时候，进行限流&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;是否集群：暂不需要集群&lt;/strong&gt;&lt;br&gt;接下来我们以QPS为例来研究限流规则的配置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;简单配置&#34;&gt;&lt;a href=&#34;#简单配置&#34; class=&#34;headerlink&#34; title=&#34;简单配置&#34;&gt;&lt;/a&gt;简单配置&lt;/h4&gt;&lt;p&gt;我们先做一个简单配置，设置阈值类型为QPS，单机阈值为3。即每秒请求量大于3的时候开始限流。&lt;/p&gt;
+&lt;p&gt;接下来，在流控规则页面就可以看到这个配置。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W8YssK&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/07/18/W8YssK.png&#34; alt=&#34;W8YssK.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;然后快速访问&lt;code&gt;message1&lt;/code&gt; 接口，观察效果。此时发现，当QPS &amp;gt; 3的时候，服务就不能正常响应，而是返回Blocked by Sentinel (flow limiting)结果。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/07/18/W8YNa4.png&#34; alt=&#34;W8YNa4.png&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;配置流控模式&#34;&gt;&lt;a href=&#34;#配置流控模式&#34; class=&#34;headerlink&#34; title=&#34;配置流控模式&#34;&gt;&lt;/a&gt;配置流控模式&lt;/h4&gt;&lt;p&gt;点击上面设置流控规则的&lt;code&gt;编辑&lt;/code&gt;按钮，然后在编辑页面点击&lt;code&gt;高级选项&lt;/code&gt;，会看到有流控模式一栏。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W8YhRI&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/07/18/W8YhRI.png&#34; alt=&#34;W8YhRI.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;sentinel共有三种流控模式，分别是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接（默认）：接口达到限流条件时，开启限流&lt;/li&gt;
+&lt;li&gt;关联：当关联的资源达到限流条件时，开启限流 [适合做应用让步]&lt;/li&gt;
+&lt;li&gt;链路：当从某个接口过来的资源达到限流条件时，开启限流&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面呢分别演示三种模式.&lt;/p&gt;
+&lt;h5 id=&#34;直接流控模式&#34;&gt;&lt;a href=&#34;#直接流控模式&#34; class=&#34;headerlink&#34; title=&#34;直接流控模式&#34;&gt;&lt;/a&gt;直接流控模式&lt;/h5&gt;&lt;p&gt;直接流控模式是最简单的模式，当指定的接口达到限流条件时开启限流。上面案例使用的就是直接流控模式。&lt;/p&gt;
+&lt;h5 id=&#34;关联流控模式&#34;&gt;&lt;a href=&#34;#关联流控模式&#34; class=&#34;headerlink&#34; title=&#34;关联流控模式&#34;&gt;&lt;/a&gt;关联流控模式&lt;/h5&gt;&lt;p&gt;关联流控模式指的是，当指定接口关联的接口达到限流条件时，开启对指定接口开启限流。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;配置限流规则, 将流控模式设置为关联，关联资源设置为的&lt;code&gt;message2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;使用jmeter进行压力测试访问，&lt;strong&gt;注意QPS一定要大于0.3，即每秒请求大于等于三次。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;第4步：访问&lt;code&gt;message1&lt;/code&gt;,会发现已经被限流&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[&lt;img src=&#34;https://z3.ax1x.com/2021/07/18/W8YTL8.png&#34; alt=&#34;W8YTL8.png&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;链路流控模式&#34;&gt;&lt;a href=&#34;#链路流控模式&#34; class=&#34;headerlink&#34; title=&#34;链路流控模式&#34;&gt;&lt;/a&gt;链路流控模式&lt;/h5&gt;&lt;p&gt;链路流控模式指的是，当从某个接口过来的资源达到限流条件时，开启限流。它的功能有点类似于针对来源配置项，区别在于：针对来源是针对上级微服务，而链路流控是针对上级接口，也就是说它的粒度更细。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在&lt;code&gt;OrderService&lt;/code&gt;中新建抽象接口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;/**&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt; * 打印信息&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt; */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;printMessage&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;()&lt;/span&gt;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在&lt;code&gt;OrderServiceImpl&lt;/code&gt;进行实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;@Override&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;@SentinelResource(&amp;quot;message&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;printMessage&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    System.out.println(&lt;span class=&#34;string&#34;&gt;&amp;quot;OrderService.printMessage&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在&lt;code&gt;message1&lt;/code&gt;、&lt;code&gt;message2&lt;/code&gt;中分别增加该调用方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;@RequestMapping(&amp;quot;/message1&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; String &lt;span class=&#34;title&#34;&gt;message1&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    orderService.printMessage();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;message1&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;@RequestMapping(&amp;quot;/message2&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; String &lt;span class=&#34;title&#34;&gt;message2&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    orderService.printMessage();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;message2&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;禁止收敛URL的入口 context&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;从1.6.3 版本开始，Sentinel Web filter默认收敛所有URL的入口context，因此链路限流不生效。&lt;br&gt;1.7.0 版本开始（对应SCA的2.1.1.RELEASE)，官方在CommonFilter 引入了WEB_CONTEXT_UNIFY 参数，用于控制是否收敛context。将其配置为 false 即可根据不同的URL 进行链路限流。SCA 2.1.1.RELEASE之后的版本,可以通过配置spring.cloud.sentinel.web-context-unify=false即可关闭收敛&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;sentinel:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;web-context-unify:&lt;/span&gt; &lt;span class=&#34;literal&#34;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;@Configuration&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;class&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;FilterContextConfig&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;meta&#34;&gt;@Bean&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; FilterRegistrationBean &lt;span class=&#34;title&#34;&gt;sentinelFilterRegistrationBean&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        FilterRegistrationBean registration = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; FilterRegistrationBean();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        registration.setFilter(&lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; CommonFilter());&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        registration.addUrlPatterns(&lt;span class=&#34;string&#34;&gt;&amp;quot;/*&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       &lt;span class=&#34;comment&#34;&gt;// 入口资源关闭聚合&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        registration.addInitParameter(CommonFilter.WEB_CONTEXT_UNIFY,&lt;span class=&#34;string&#34;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        registration.setName(&lt;span class=&#34;string&#34;&gt;&amp;quot;sentinelFilter&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        registration.setOrder(&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; registration;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;控制台配置限流规则&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W8YzQ0&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/07/18/W8YzQ0.png&#34; alt=&#34;W8YzQ0.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分别通过&lt;code&gt;message1&lt;/code&gt; 和&lt;code&gt;message2&lt;/code&gt; 访问, 发现2没问题, 1的被限流了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;配置流控效果&#34;&gt;&lt;a href=&#34;#配置流控效果&#34; class=&#34;headerlink&#34; title=&#34;配置流控效果&#34;&gt;&lt;/a&gt;配置流控效果&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;快速失败（默认）: 直接失败，抛出异常，不做任何额外的处理，是最简单的效果&lt;/li&gt;
+&lt;li&gt;Warm Up：它从开始阈值到最大QPS阈值会有一个缓冲阶段，一开始的阈值是最大QPS阈值的1/3，然后慢慢增长，直到最大阈值，适用于将突然增大的流量转换为缓步增长的场景。&lt;/li&gt;
+&lt;li&gt;排队等待：让请求以均匀的速度通过，单机阈值为每秒通过数量，其余的排队等待； 它还会让设置一个超时时间，当请求超过超时间时间还未处理，则会被丢弃。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;配置降级规则&#34;&gt;&lt;a href=&#34;#配置降级规则&#34; class=&#34;headerlink&#34; title=&#34;配置降级规则&#34;&gt;&lt;/a&gt;配置降级规则&lt;/h4&gt;&lt;p&gt;降级规则就是设置当满足什么条件的时候，对服务进行降级。Sentinel提供了三个衡量条件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;平均响应时间 ：当资源的平均响应时间超过阈值（以 ms 为单位）之后，资源进入准降级状态。&lt;br&gt;如果接下来 1s 内持续进入 5 个请求，它们的 RT都持续超过这个阈值，那么在接下的时间窗口（以 s 为单位）之内，就会对这个方法进行服务降级。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/W8tio4&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/07/18/W8tio4.png&#34; alt=&#34;W8tio4.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上述配置为当响应时间大于1毫秒的时候，接下来的十秒内该服务进行降级，十秒后回复正常，进行下一轮的判断。&lt;/p&gt;
+&lt;p&gt;注意:&lt;/p&gt;
+&lt;p&gt; Sentinel 默认统计的 RT 上限是 4900 ms，超出此阈值的都会算作 4900 ms，若需要变更此上限可以通过启动配置项 -Dcsp.sentinel.statistic.max.rt=xxx 来配置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;异常比例：当资源的每秒异常总数占通过量的比值超过阈值之后，资源进入降级状态，即在接下的时间窗口（以 s 为单位）之内，对这个方法的调用都会自动地返回。异常比率的阈值范围是 [0.0,1.0]。&lt;/li&gt;
+&lt;/ul&gt;
 </content>
         <category term="Spring Cloud" />
-        <updated>2021-07-12T13:49:27.139Z</updated>
+        <updated>2021-07-18T13:59:35.883Z</updated>
     </entry>
     <entry>
         <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2021/07/12/Spring/Spring-Cloud-Alibaba(3)-%E6%9C%8D%E5%8A%A1%E6%B2%BB%E7%90%86/</id>
