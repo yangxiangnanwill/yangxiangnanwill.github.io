@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Will • Posts by &#34;node&#34; tag</title>
+        <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
+        <description>愿你一生努力，一生被爱</description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+        <lastBuildDate>Sun, 28 May 2023 21:00:29 +0800</lastBuildDate>
+        <category>感言</category>
+        <category>思考</category>
+        <category>开发习惯</category>
+        <category>Docker</category>
+        <category>LINUX</category>
+        <category>CentOS</category>
+        <category>Linux</category>
+        <category>Crontab</category>
+        <category>Jenkins</category>
+        <category>Maven</category>
+        <category>Node</category>
+        <category>前端</category>
+        <category>Nvm</category>
+        <category>Archery</category>
+        <category>MySql</category>
+        <category>工具</category>
+        <category>IDEA</category>
+        <category>Alibaba Cloud Toolkit</category>
+        <category>Git</category>
+        <category>BeetlSql</category>
+        <category>Beetl</category>
+        <category>JAVA</category>
+        <category>日期</category>
+        <category>枚举</category>
+        <category>异常</category>
+        <category>Spring</category>
+        <category>SpringCloud</category>
+        <category>SpringCloud Alibaba</category>
+        <category>POI</category>
+        <category>CentOS7</category>
+        <category>MongoDB</category>
+        <category>Spring Boot</category>
+        <category>Redis</category>
+        <category>ProtoBuffer</category>
+        <category>其他</category>
+        <category>博客园</category>
+        <category>博客</category>
+        <category>SOAR</category>
+        <category>VerificationCode</category>
+        <category>MongoDb</category>
+        <category>VinUtil</category>
+        <category>PostMan</category>
+        <category>Typora</category>
+        <category>Java8</category>
+        <category>特性</category>
+        <category>JDBC</category>
+        <category>Mysql</category>
+        <category>EasyExcel</category>
+        <category>Script</category>
+        <category>设计模式</category>
+        <category>MyBatis</category>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Node/Node%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</guid>
+            <title>Node安装与配置</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Node/Node%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</link>
+            <category>Node</category>
+            <category>前端</category>
+            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;Node安装和全局配置&#34;&gt;&lt;a href=&#34;#Node安装和全局配置&#34; class=&#34;headerlink&#34; title=&#34;Node安装和全局配置&#34;&gt;&lt;/a&gt;Node安装和全局配置&lt;/h1&gt;&lt;h2 id=&#34;安装&#34;&gt;&lt;a href=&#34;#安装&#34; class=&#34;headerlink&#34; title=&#34;安装&#34;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;h3 id=&#34;本文环境&#34;&gt;&lt;a href=&#34;#本文环境&#34; class=&#34;headerlink&#34; title=&#34;本文环境&#34;&gt;&lt;/a&gt;本文环境&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;WIN11，64位，家庭版&lt;/li&gt;
+&lt;li&gt;Node 16.13.0_LTS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装包下载&#34;&gt;&lt;a href=&#34;#安装包下载&#34; class=&#34;headerlink&#34; title=&#34;安装包下载&#34;&gt;&lt;/a&gt;安装包下载&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://nodejs.org/zh-cn/&#34;&gt;Node官网&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装node&#34;&gt;&lt;a href=&#34;#安装node&#34; class=&#34;headerlink&#34; title=&#34;安装node&#34;&gt;&lt;/a&gt;安装node&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;点击安装文件, 一键安装, 注意安装位置和添加到环境变量(xx to PATH)选项&lt;/li&gt;
+&lt;li&gt;打开控制台, 输入一下命令正常显示版本号则安装成功&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;node -v     # 查看node版本&lt;br&gt;npm -v      # 查看npm版本&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Nodejs的安装很简单，基本上小白操作，但是一般配置和安装C盘，博猪习惯一般开发软件会放在系统盘以外的一个盘里面，有的像maven私服这种的配置就无需重复配置了，这样重装系统啥的也不会丢失相关的东西，并且重新安装之后只需要相关配置一下环境变量就行了，还是挺方便的，下面放一张博猪的一个配置文件，可供参考&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/mw690/006seI3Egy1gwm2ltvpntj30jo07bq82.jpg&#34; alt=&#34;image-20211120233226273.png&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;npm全局配置&#34;&gt;&lt;a href=&#34;#npm全局配置&#34; class=&#34;headerlink&#34; title=&#34;npm全局配置&#34;&gt;&lt;/a&gt;npm全局配置&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;如果像博猪一样是重装系统的，一定先要把node配置到系统环境变量中。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;先找到node按照路径&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;D:\ProgramFiles\Node&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;在此目录下创建两个文件夹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;node_global, node_cache&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;在控制台分别运行以下两条命令(注意改成自己的路径)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 全局模块插件存放路径&lt;/p&gt;
+&lt;p&gt;npm config set prefix “D:\ProgramFiles\Node\node_global”&lt;/p&gt;
+&lt;p&gt;# 缓存路径&lt;/p&gt;
+&lt;p&gt;npm config set cache “D:\ProgramFiles\Node\node_cache”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;配置npm安装源为淘宝&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;#全局配置切换到淘宝源&lt;/p&gt;
+&lt;p&gt;npm config set registry &lt;a href=&#34;https://registry.npm.taobao.org/&#34;&gt;https://registry.npm.taobao.org&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;把&lt;code&gt;D:\ProgramFiles\Node\node_global\node_modules&lt;/code&gt;添加到系统环境变量(注意改成自己的路径)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我的电脑右击&amp;gt;属性&amp;gt;高级系统设置&amp;gt;环境变量&amp;gt;系统变量&amp;gt;新建 变量名: NODE_PATH 变量值:D:\ProgramFiles\Node\node_global\node_modules&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;常用命令和技巧&#34;&gt;&lt;a href=&#34;#常用命令和技巧&#34; class=&#34;headerlink&#34; title=&#34;常用命令和技巧&#34;&gt;&lt;/a&gt;常用命令和技巧&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;npm安装包, npm全局安装包&lt;/span&gt;&lt;br&gt;npm install [包名]/[包名@指定版本号]  # 当前工程安装&lt;br&gt;npm install [包名]/[包名@指定版本号] -g  # 全局安装&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;全局安装cnpm, 可以替换npm命令, 有时因为node和npm版本问题造成安装失败, 可使用cnpm安装, 用法和npm相同&lt;/span&gt;&lt;br&gt;npm install cnpm -g&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;安装npm已安装模块检查更新的包&lt;/span&gt;&lt;br&gt;cnpm install npm-check -g&lt;br&gt;npm-check -u -g  # 使用方法 &lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;查看npm所有已安装模块&lt;/span&gt;&lt;br&gt;npm list --depth=0 -global&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;查看npm配置源信息&lt;/span&gt;&lt;br&gt;npm config get registry&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;更新npm到最新稳定版本&lt;/span&gt;&lt;br&gt;npm install npm@latest -g&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Node/Nvm%E6%95%99%E7%A8%8B/</guid>
+            <title>Nvm教程</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Node/Nvm%E6%95%99%E7%A8%8B/</link>
+            <category>Node</category>
+            <category>前端</category>
+            <category>Nvm</category>
+            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;因为某些原因博猪的电脑GG了，SO,现在电脑好了，，，虽然还有某些无关痛痒的问题存在，但是还是够博猪继续折腾了，老样子重装电脑后第一部配置相关环境变量，然后安装软件。。。。&lt;/p&gt;
+&lt;p&gt;当一切都OK的时候，博猪浏览自己的博客的时候发现一些问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&amp;#x3D;&amp;#x3D;控制台有很多错误,这个对于我这个死肥处女座来说简直不可忍受&amp;#x3D;&amp;#x3D;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;复制、博猪特意放网抑云的歌曲、图片放大等效果失效了&lt;/li&gt;
+&lt;li&gt;博客部署的时候部署不了了，或者说经常部署失败&lt;/li&gt;
+&lt;li&gt;。。。。。。。。。。。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;OK，博猪简单说一下原因吧，原因很简单，由于博猪本次装机后对应的node版本使用的是最新的LTS版本，而node有没有相关的版本解决问题，所以我安装的时候默认安装的模块会是最新的，而最近的hexo和node有冲突，so，就导致本地可以运行，而使用相关功能的时候就有问题了。&lt;/p&gt;
+&lt;p&gt;so，很不幸，本文就由此出现了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;前景介绍&#34;&gt;&lt;a href=&#34;#前景介绍&#34; class=&#34;headerlink&#34; title=&#34;前景介绍&#34;&gt;&lt;/a&gt;前景介绍&lt;/h1&gt;&lt;p&gt;在我们的日常开发中经常会遇到这种情况：手上有好几个项目，每个项目的需求不同，进而不同项目必须依赖不同版的 NodeJS 运行环境。如果没有一个合适的工具，这个问题将非常棘手。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;nvm&lt;/a&gt; 应运而生，nvm 是 Mac 下的 node 管理工具，有点类似管理 Ruby 的 rvm，如果需要管理 Windows 下的 node，官方推荐使用 &lt;a href=&#34;https://github.com/hakobera/nvmw&#34;&gt;nvmw&lt;/a&gt; 或 &lt;a href=&#34;https://github.com/coreybutler/nvm-windows&#34;&gt;nvm-windows&lt;/a&gt;。不过，nvm-windows 并不是 nvm 的简单移植，他们也没有任何关系。但下面介绍的所有命令，都可以在 nvm-windows 中运行。&lt;/p&gt;
+&lt;h1 id=&#34;nvm-与-n-的区别&#34;&gt;&lt;a href=&#34;#nvm-与-n-的区别&#34; class=&#34;headerlink&#34; title=&#34;nvm 与 n 的区别&#34;&gt;&lt;/a&gt;nvm 与 n 的区别&lt;/h1&gt;&lt;p&gt;node 版本管理工具还有一个是 TJ大神的 &lt;a href=&#34;https://github.com/tj/n&#34;&gt;n&lt;/a&gt; 命令，n 命令是作为一个 node 的模块而存在，而 nvm 是一个独立于 node&amp;#x2F;npm 的外部 shell 脚本，因此 n 命令相比 nvm 更加局限。&lt;/p&gt;
+&lt;p&gt;由于 npm 安装的模块路径均为 &lt;strong&gt;&amp;#x2F;usr&amp;#x2F;local&amp;#x2F;lib&amp;#x2F;node_modules&lt;/strong&gt;，当使用 n 切换不同的 node 版本时，实际上会共用全局的 node&amp;#x2F;npm 目录。 因此不能很好的满足『按不同 node 版本使用不同全局 node 模块』的需求。&lt;/p&gt;
+&lt;h1 id=&#34;Windows-安装&#34;&gt;&lt;a href=&#34;#Windows-安装&#34; class=&#34;headerlink&#34; title=&#34;Windows 安装&#34;&gt;&lt;/a&gt;Windows 安装&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;由于博猪使用的是windows系统，所以博猪着重介绍windows安装，Mac、Linux安装请自行百度。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;首先最重要的是：一定要卸载已安装的 NodeJS，否则会发生冲突。然后下载 ​&lt;/strong&gt;​*&lt;em&gt;&lt;strong&gt;​&lt;/strong&gt;​ 最新安装包，直接安装即可。&lt;/em&gt;*&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGly1h2yvpq8um7j30td0f7n2z.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;选择nvm安装路径&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGly1h2yvrvlcujj30dx0bf76n.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;选择node环境变量文件夹(&lt;strong&gt;注意:一定要是空文件夹或者不存在的文件夹,安装时会自动创建，默认是一个快捷方式，即软连接&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGly1h2yvsjyoydj30ee0bbtaz.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安装完毕，打开命令行看是否安装成功&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGly1h2yvxauxidj30sl0d07c3.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果出现： nvm command is not defined 。表示你的全局环境变量没有配置或者配置出错了&lt;/p&gt;
+&lt;p&gt;如果环境变量都配置好了，还是nvm command is not defined ，这个时候建议重启vscode 或者重启电脑。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;更改下载源&#34;&gt;&lt;a href=&#34;#更改下载源&#34; class=&#34;headerlink&#34; title=&#34;更改下载源&#34;&gt;&lt;/a&gt;更改下载源&lt;/h1&gt;&lt;p&gt;找到nvm程序所在路径，例如博猪安装路径:&lt;code&gt;D:\LenovoSoftstore\Install\nvm&lt;/code&gt;，末尾添加以下内容：&lt;/p&gt;
+&lt;figure class=&#34;highlight properties&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs properties&#34;&gt;&lt;span class=&#34;hljs-attr&#34;&gt;node_mirror&lt;/span&gt;: &lt;span class=&#34;hljs-string&#34;&gt;http://npm.taobao.org/mirrors/node/&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;npm_mirror&lt;/span&gt;: &lt;span class=&#34;hljs-string&#34;&gt;https://npm.taobao.org/mirrors/npm/&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;nvm基本使用&#34;&gt;&lt;a href=&#34;#nvm基本使用&#34; class=&#34;headerlink&#34; title=&#34;nvm基本使用&#34;&gt;&lt;/a&gt;nvm基本使用&lt;/h1&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;列出当前电脑下的Node.js的版本列表&lt;/span&gt;&lt;br&gt;nvm list&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;显示所有可以下载的版本&lt;/span&gt;&lt;br&gt;nvm list available&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;切换指定版本的node&lt;/span&gt;&lt;br&gt;nvm use [version]&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;安装指定版本的node&lt;/span&gt;&lt;br&gt;nvm install [version]&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;卸载指定版本的node&lt;/span&gt;&lt;br&gt;nvm uninstall [version]&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;使用案例&#34;&gt;&lt;a href=&#34;#使用案例&#34; class=&#34;headerlink&#34; title=&#34;使用案例&#34;&gt;&lt;/a&gt;使用案例&lt;/h1&gt;&lt;h2 id=&#34;下载指定node版本&#34;&gt;&lt;a href=&#34;#下载指定node版本&#34; class=&#34;headerlink&#34; title=&#34;下载指定node版本&#34;&gt;&lt;/a&gt;下载指定node版本&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;本文模拟两个版本node，一个版本较低，一个版本较高&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;nvm install 10.24.1&lt;br&gt;nvm install 12.22.12&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGgy1h2ywdbtan0j30j405sq46.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这时候我们看nvm对应的按照目录，这时候我们会发现，我们下载的两个版本的node已经下载好了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGgy1h2ywfcx3c1j30pe098ae3.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;使用指定版本node&#34;&gt;&lt;a href=&#34;#使用指定版本node&#34; class=&#34;headerlink&#34; title=&#34;使用指定版本node&#34;&gt;&lt;/a&gt;使用指定版本node&lt;/h2&gt;&lt;p&gt;由于博猪hexo指定的node版本必须大于等于12，最新版本node还不支持，所以博猪索性下载了一个最新版本的12&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;nvm use 12.22.12&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGgy1h2ywhvggizj30au02kwes.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装hexo-cli&#34;&gt;&lt;a href=&#34;#安装hexo-cli&#34; class=&#34;headerlink&#34; title=&#34;安装hexo-cli&#34;&gt;&lt;/a&gt;安装hexo-cli&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGgy1h2ywj4xy0mj30vn07j77s.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;配置环境变量&#34;&gt;&lt;a href=&#34;#配置环境变量&#34; class=&#34;headerlink&#34; title=&#34;配置环境变量&#34;&gt;&lt;/a&gt;配置环境变量&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;hexo c&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这时候我们发现，全局node命令是使用不了的，这时候我们需要配置一下环境变量。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGgy1h2ywm3z2pdj30hl08442u.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;我们发现安装nvm时自动给我们配置两个环境变量，一个nvm软件的，一个node软连接使用的，这是我们需要配置对应的全局变量，即在&lt;code&gt;Path&lt;/code&gt;中配置&lt;code&gt;node_global&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGgy1h2ywp1p2slj30e506uact.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;配置完成后我们再次使用上述命令，发现可以使用了&lt;/p&gt;
+&lt;h2 id=&#34;使用node全局命令&#34;&gt;&lt;a href=&#34;#使用node全局命令&#34; class=&#34;headerlink&#34; title=&#34;使用node全局命令&#34;&gt;&lt;/a&gt;使用node全局命令&lt;/h2&gt;&lt;p&gt;使用hexo命令部署博客&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;hexo g --d&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGgy1h2ywry59z1j30pf09kdk3.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;登录博客再次查看相关失效功能&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGgy1h2ywt0q34uj311x0q1tka.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGgy1h2ywtlnmmjj3067057q2v.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGgy1h2ywuckvx3j31ii0punhw.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;完美，我的快乐又回来了。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

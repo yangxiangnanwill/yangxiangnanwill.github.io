@@ -1,0 +1,486 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
+    <title>Will • Posts by &#34;centos&#34; tag</title>
+    <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
+    <updated>2023-05-28T13:00:29.414Z</updated>
+    <category term="感言" />
+    <category term="思考" />
+    <category term="开发习惯" />
+    <category term="Docker" />
+    <category term="LINUX" />
+    <category term="CentOS" />
+    <category term="Linux" />
+    <category term="Crontab" />
+    <category term="Jenkins" />
+    <category term="Maven" />
+    <category term="Node" />
+    <category term="前端" />
+    <category term="Nvm" />
+    <category term="Archery" />
+    <category term="MySql" />
+    <category term="工具" />
+    <category term="IDEA" />
+    <category term="Alibaba Cloud Toolkit" />
+    <category term="Git" />
+    <category term="BeetlSql" />
+    <category term="Beetl" />
+    <category term="JAVA" />
+    <category term="日期" />
+    <category term="枚举" />
+    <category term="异常" />
+    <category term="Spring" />
+    <category term="SpringCloud" />
+    <category term="SpringCloud Alibaba" />
+    <category term="POI" />
+    <category term="CentOS7" />
+    <category term="MongoDB" />
+    <category term="Spring Boot" />
+    <category term="Redis" />
+    <category term="ProtoBuffer" />
+    <category term="其他" />
+    <category term="博客园" />
+    <category term="博客" />
+    <category term="SOAR" />
+    <category term="VerificationCode" />
+    <category term="MongoDb" />
+    <category term="VinUtil" />
+    <category term="PostMan" />
+    <category term="Typora" />
+    <category term="Java8" />
+    <category term="特性" />
+    <category term="JDBC" />
+    <category term="Mysql" />
+    <category term="EasyExcel" />
+    <category term="Script" />
+    <category term="设计模式" />
+    <category term="MyBatis" />
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/Jenkins/</id>
+        <title>Jenkins</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/Jenkins/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;持续集成：Continuous Integration，简称CI，意思是，在一个项目中，任何人对代码库的任何改动，都会触发CI服务器自动对项目进行构建，自动运行测试，甚至自动部署到测试环境。这样做的好处就是，随时发现问题，随时修复。因为修复问题的成本随着时间的推移而增长，越早发现，修复成本越低。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;持续集成工具&#34;&gt;&lt;a href=&#34;#持续集成工具&#34; class=&#34;headerlink&#34; title=&#34;持续集成工具&#34;&gt;&lt;/a&gt;持续集成工具&lt;/h1&gt;&lt;h2 id=&#34;Travis-CI&#34;&gt;&lt;a href=&#34;#Travis-CI&#34; class=&#34;headerlink&#34; title=&#34;Travis CI&#34;&gt;&lt;/a&gt;Travis CI&lt;/h2&gt;&lt;p&gt;在线托管的CI服务，用Travis来进行持续集成，不需要自己搭服务器，在网页上点几下就好，用起来更方便。最重要的是，它对开源项目是免费的。私有项目会收费。&lt;/p&gt;
+&lt;h2 id=&#34;Jenkins&#34;&gt;&lt;a href=&#34;#Jenkins&#34; class=&#34;headerlink&#34; title=&#34;Jenkins&#34;&gt;&lt;/a&gt;Jenkins&lt;/h2&gt;&lt;p&gt;Jenkins是一个用Java编写的开源的持续集成工具。官方网站：&lt;a href=&#34;https://jenkins.io/&#34;&gt;https://jenkins.io/&lt;/a&gt;&lt;br&gt;Jenkins能实时监控持续集成过程中所存在的问题，提供详细的日志文件和提醒功能，还能用图表的形式，形象地展示项目构建的趋势和稳定性。&lt;/p&gt;
+&lt;h1 id=&#34;简介&#34;&gt;&lt;a href=&#34;#简介&#34; class=&#34;headerlink&#34; title=&#34;简介&#34;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;Jenkins自动化部署可以解决集成、测试、部署等重复性的工作，工具集成的效率明显高于人工操作；并且持续集成可以更早的获取代码变更的信息，从而更早的进入测试阶段，更早的发现问题，这样解决问题的成本就会显著下降：持续集成缩短了从开发、集成、测试、部署各个环节的时间，从而也就缩短了中间出现的等待时间；持续集成也意味着开发、集成、测试、部署得以持续。。&lt;br&gt;使用Maven（Ant）等来实现lava项目自动化构建发布部署。这些工具可以帮助在构建过程中实现自动化发布、回滚等动作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Jenkins提供Docker、war等部署方式，博猪比较倾向于yum源安装方式，同时作为一个服务启动。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;安装教程&#34;&gt;&lt;a href=&#34;#安装教程&#34; class=&#34;headerlink&#34; title=&#34;安装教程&#34;&gt;&lt;/a&gt;安装教程&lt;/h1&gt;&lt;h2 id=&#34;系统要求&#34;&gt;&lt;a href=&#34;#系统要求&#34; class=&#34;headerlink&#34; title=&#34;系统要求&#34;&gt;&lt;/a&gt;系统要求&lt;/h2&gt;&lt;p&gt;最低推荐配置:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;256MB可用内存&lt;/li&gt;
+&lt;li&gt;1GB可用磁盘空间(作为一个Docker容器运行jenkins的话推荐10GB)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为小团队推荐的硬件配置:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1GB+可用内存&lt;/li&gt;
+&lt;li&gt;50 GB+ 可用磁盘空间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;软件配置:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java 8—无论是Java运行时环境（JRE）还是Java开发工具包（JDK）都可以。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意:&lt;/strong&gt; 如果将Jenkins作为Docker 容器运行，这不是必需的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;下载Jenkins&#34;&gt;&lt;a href=&#34;#下载Jenkins&#34; class=&#34;headerlink&#34; title=&#34;下载Jenkins&#34;&gt;&lt;/a&gt;下载Jenkins&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;sudo wget -O /etc/yum.repos.d/jenkins.repo \&lt;br&gt;    https://pkg.jenkins.io/redhat/jenkins.repo&lt;br&gt;sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key&lt;br&gt;sudo yum upgrade&lt;br&gt;sudo yum install epel-release java-11-openjdk-devel&lt;br&gt;sudo yum install jenkins&lt;br&gt;sudo systemctl daemon-reload&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;查看Jenkins状态&#34;&gt;&lt;a href=&#34;#查看Jenkins状态&#34; class=&#34;headerlink&#34; title=&#34;查看Jenkins状态&#34;&gt;&lt;/a&gt;查看Jenkins状态&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;sudo systemctl status jenkins&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如果是开启状态，关闭，以便更改配置。关闭命令如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;sudo systemctl stop jenkins&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;自定义配置&#34;&gt;&lt;a href=&#34;#自定义配置&#34; class=&#34;headerlink&#34; title=&#34;自定义配置&#34;&gt;&lt;/a&gt;自定义配置&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;配置路径如下：  &amp;#x2F;etc&amp;#x2F;sysconfig&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;自定义配置路径&#34;&gt;&lt;a href=&#34;#自定义配置路径&#34; class=&#34;headerlink&#34; title=&#34;自定义配置路径&#34;&gt;&lt;/a&gt;自定义配置路径&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;JENKINS_HOME=&amp;quot;/opt/jenkins&amp;quot;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;自定义默认用户&#34;&gt;&lt;a href=&#34;#自定义默认用户&#34; class=&#34;headerlink&#34; title=&#34;自定义默认用户&#34;&gt;&lt;/a&gt;自定义默认用户&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;JENKINS_USER=&amp;quot;root&amp;quot;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;自定义访问路径&#34;&gt;&lt;a href=&#34;#自定义访问路径&#34; class=&#34;headerlink&#34; title=&#34;自定义访问路径&#34;&gt;&lt;/a&gt;自定义访问路径&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;JENKINS_PORT=&amp;quot;9955&amp;quot;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;重启-amp-amp-启动Jenkins服务&#34;&gt;&lt;a href=&#34;#重启-amp-amp-启动Jenkins服务&#34; class=&#34;headerlink&#34; title=&#34;重启&amp;amp;&amp;amp;启动Jenkins服务&#34;&gt;&lt;/a&gt;重启&amp;amp;&amp;amp;启动Jenkins服务&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;sudo systemctl start jenkins&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;访问-amp-amp-解锁Jenkins&#34;&gt;&lt;a href=&#34;#访问-amp-amp-解锁Jenkins&#34; class=&#34;headerlink&#34; title=&#34;访问&amp;amp;&amp;amp;解锁Jenkins&#34;&gt;&lt;/a&gt;访问&amp;amp;&amp;amp;解锁Jenkins&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;访问地址为：linux+端口号，如上配置为：&lt;code&gt;http://192.168.56.121:9955&lt;/code&gt;，访问后，进入一下配置页面。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/04/Fwx6D1kGHqt2ogX.png&#34; alt=&#34;image-20211004202424221&#34;&gt;&lt;/p&gt;
+&lt;p&gt;按照上方提示，输入一下命令,输入密码：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;cat /opt/jenkins/secrets/initialAdminPassword&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;按照插件&#34;&gt;&lt;a href=&#34;#按照插件&#34; class=&#34;headerlink&#34; title=&#34;按照插件&#34;&gt;&lt;/a&gt;按照插件&lt;/h2&gt;&lt;p&gt;默认按照推荐按照即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/04/EZwmnHSxribWpd5.png&#34; alt=&#34;image-20211004203303329&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;初始化用户&#34;&gt;&lt;a href=&#34;#初始化用户&#34; class=&#34;headerlink&#34; title=&#34;初始化用户&#34;&gt;&lt;/a&gt;初始化用户&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;创建初始化用户，用户名：opser,密码：admin&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/04/OEiDtgdlAYW65kz.png&#34; alt=&#34;image-20211004204936715&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Jenkins初始URL默认不进行配置&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/04/YRJmbgUFoj1xhnB.png&#34; alt=&#34;image-20211004205136257&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装完成，开始使用&#34;&gt;&lt;a href=&#34;#安装完成，开始使用&#34; class=&#34;headerlink&#34; title=&#34;安装完成，开始使用&#34;&gt;&lt;/a&gt;安装完成，开始使用&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/04/kdETlSe1rw7N5py.png&#34; alt=&#34;image-20211004205218802&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;Jenkins优化&#34;&gt;&lt;a href=&#34;#Jenkins优化&#34; class=&#34;headerlink&#34; title=&#34;Jenkins优化&#34;&gt;&lt;/a&gt;Jenkins优化&lt;/h1&gt;&lt;h2 id=&#34;插件优化&#34;&gt;&lt;a href=&#34;#插件优化&#34; class=&#34;headerlink&#34; title=&#34;插件优化&#34;&gt;&lt;/a&gt;插件优化&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;由于Jenkins默认使用国外的镜像，所以插件下载安装速度极慢，所以我们需要更改插件仓库。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意：该仓库更改必须要在没有下载插件之前！&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;进入Jenkins目录，&lt;code&gt;/opt/jenkins&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;复制并重命名文件&lt;code&gt;hudson.model.UpdateCenter.xml&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;cp hudson.model.UpdateCenter.xml hudson.model.UpdateCenter.xml.bak&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改&lt;code&gt;hudson.model.UpdateCenter.xml&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;url改为&lt;br&gt;https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改&lt;code&gt;default.json&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;配置default.json&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;vim /var/lib/jenkins/updates/default.json&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;全局替换&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;把  updates.jenkins-ci.org&amp;#x2F;download  替换为  mirrors.tuna.tsinghua.edu.cn&amp;#x2F;jenkins&lt;/p&gt;
+&lt;p&gt;地址修改把  &lt;code&gt;www.google.com&lt;/code&gt; 替换为  &lt;code&gt;www.baidu.com&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;重启服务&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;systemctl restart jenkins&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;页面优化&#34;&gt;&lt;a href=&#34;#页面优化&#34; class=&#34;headerlink&#34; title=&#34;页面优化&#34;&gt;&lt;/a&gt;页面优化&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;装完Jenkins之后，我们发现有一部分菜单汉化了，有一部分菜单没有汉化，这让人很不爽，所以我们需要调整一下让页面保持统一！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;系统管理&lt;/code&gt;-&lt;code&gt;插件管理&lt;/code&gt;-&lt;code&gt;已安装&lt;/code&gt;，中搜索，&lt;code&gt;Localization: Chinese (Simplified)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;卸载，重装，同时安装&lt;code&gt;locale&lt;/code&gt;插件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;系统管理&lt;/code&gt;-&lt;code&gt;系统配置&lt;/code&gt;-&lt;code&gt;Locale&lt;/code&gt;-&lt;code&gt;Default Language&lt;/code&gt;,填写&lt;code&gt;zh_CN&lt;/code&gt;,勾选&lt;code&gt;Ignore browser preference and force this language to all users&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;重启&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;Jenkins操作&#34;&gt;&lt;a href=&#34;#Jenkins操作&#34; class=&#34;headerlink&#34; title=&#34;Jenkins操作&#34;&gt;&lt;/a&gt;Jenkins操作&lt;/h1&gt;&lt;h2 id=&#34;基本配置&#34;&gt;&lt;a href=&#34;#基本配置&#34; class=&#34;headerlink&#34; title=&#34;基本配置&#34;&gt;&lt;/a&gt;基本配置&lt;/h2&gt;&lt;h3 id=&#34;配置一览&#34;&gt;&lt;a href=&#34;#配置一览&#34; class=&#34;headerlink&#34; title=&#34;配置一览&#34;&gt;&lt;/a&gt;配置一览&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/KNfwrISu3cqpzoB.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;构建环境配置&#34;&gt;&lt;a href=&#34;#构建环境配置&#34; class=&#34;headerlink&#34; title=&#34;构建环境配置&#34;&gt;&lt;/a&gt;构建环境配置&lt;/h3&gt;&lt;p&gt;指定构建时所依赖的环境参数，如jdk版本，可以手动安装jdk，也可以在【全局工具配置】中指定好jdk版本，在首次构建时会自动安装，首次构建下载时间较长，耐心等待即可。&lt;/p&gt;
+&lt;p&gt;以NodeJS自动安装为例：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/w3ypsOPzqZ4QM2d.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;插件管理&#34;&gt;&lt;a href=&#34;#插件管理&#34; class=&#34;headerlink&#34; title=&#34;插件管理&#34;&gt;&lt;/a&gt;插件管理&lt;/h2&gt;&lt;p&gt;构建模块大多以插件形式存在，使用前需安装，否则无法找到对应构建项。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/BQ7LWwcZgriysMS.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;服务器配置&#34;&gt;&lt;a href=&#34;#服务器配置&#34; class=&#34;headerlink&#34; title=&#34;服务器配置&#34;&gt;&lt;/a&gt;服务器配置&lt;/h2&gt;&lt;p&gt;系统管理-&amp;gt;系统配置-&amp;gt;Publish over SSH，点击[新增]按钮添加服务器，按要求填写服务器信息，如果没有找到此选项，可先在【插件管理】中安装Publish over SSH插件。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/e96JzP8iSpvhcy7.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;说明：Remote Directory指定的目录会作为文件上传时的根目录。&lt;/p&gt;
+&lt;h2 id=&#34;Java应用构建配置&#34;&gt;&lt;a href=&#34;#Java应用构建配置&#34; class=&#34;headerlink&#34; title=&#34;Java应用构建配置&#34;&gt;&lt;/a&gt;Java应用构建配置&lt;/h2&gt;&lt;h3 id=&#34;新建任务&#34;&gt;&lt;a href=&#34;#新建任务&#34; class=&#34;headerlink&#34; title=&#34;新建任务&#34;&gt;&lt;/a&gt;新建任务&lt;/h3&gt;&lt;p&gt;以构建Maven项目为例，选择一个Maven构建风格，可以省去许多maven配置，如果已经有一个相同配置，可选择输入名称进行复制。&lt;/p&gt;
+&lt;p&gt;Maven setting.xml配置文件：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#x2F;var&amp;#x2F;lib&amp;#x2F;jenkins&amp;#x2F;tools&amp;#x2F;hudson.tasks.Maven_MavenInstallation&amp;#x2F;maven&amp;#x2F;conf&amp;#x2F;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/QqhzG2svYTgujEN.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;构建包留存策略&#34;&gt;&lt;a href=&#34;#构建包留存策略&#34; class=&#34;headerlink&#34; title=&#34;构建包留存策略&#34;&gt;&lt;/a&gt;构建包留存策略&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/BsxnbpaRHl6qdGM.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;源码仓库&#34;&gt;&lt;a href=&#34;#源码仓库&#34; class=&#34;headerlink&#34; title=&#34;源码仓库&#34;&gt;&lt;/a&gt;源码仓库&lt;/h3&gt;&lt;p&gt;正式环境采用参数化构建，只用Git参数指定构建tag分支，默认master分支&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/zMtvPDfjFoXyO8S.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;配置源码仓库，指定动态tag分支&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/sSY6haTOtJcqI2M.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;自动构建选项&#34;&gt;&lt;a href=&#34;#自动构建选项&#34; class=&#34;headerlink&#34; title=&#34;自动构建选项&#34;&gt;&lt;/a&gt;自动构建选项&lt;/h3&gt;&lt;p&gt;取消触发自动构建的选项&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/RBLYzZElcywuX7U.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;构建&#34;&gt;&lt;a href=&#34;#构建&#34; class=&#34;headerlink&#34; title=&#34;构建&#34;&gt;&lt;/a&gt;构建&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/i84axClGu2AokXY.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在jekenis服务器本地构建，使用jekenis服务器的maven配置进行编译构建&lt;/p&gt;
+&lt;h3 id=&#34;上传&#34;&gt;&lt;a href=&#34;#上传&#34; class=&#34;headerlink&#34; title=&#34;上传&#34;&gt;&lt;/a&gt;上传&lt;/h3&gt;&lt;p&gt;构建成功后上传到指定部署服务器，仅编译成功后进行上传&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/xyuPw2FXsRdIDpL.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Name：在服务列表中选择上传目标；&lt;/li&gt;
+&lt;li&gt;Source files：指定上传的jar包，支持正则通配（根据构建目录距离jar包位置的不同，会自动在服务器端创建不同深度的目录）。&lt;/li&gt;
+&lt;li&gt;Remote directory：可以指定上传目录，目录位于配置服务器时指定的根目录之下。&lt;/li&gt;
+&lt;li&gt;Exec command：上传成功后在上传后的服务器上执行的命令或脚本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：整体涉及到的编译脚本详见“项目编译脚本”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;Js应用构建&#34;&gt;&lt;a href=&#34;#Js应用构建&#34; class=&#34;headerlink&#34; title=&#34;Js应用构建&#34;&gt;&lt;/a&gt;Js应用构建&lt;/h2&gt;&lt;h3 id=&#34;新建任务-1&#34;&gt;&lt;a href=&#34;#新建任务-1&#34; class=&#34;headerlink&#34; title=&#34;新建任务&#34;&gt;&lt;/a&gt;新建任务&lt;/h3&gt;&lt;p&gt;选择一个自由风格的构建&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/W48lXhm1DkjRvag.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;构建包留存策略-1&#34;&gt;&lt;a href=&#34;#构建包留存策略-1&#34; class=&#34;headerlink&#34; title=&#34;构建包留存策略&#34;&gt;&lt;/a&gt;构建包留存策略&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/5XyWcCawtzI9JlV.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;源码仓库-1&#34;&gt;&lt;a href=&#34;#源码仓库-1&#34; class=&#34;headerlink&#34; title=&#34;源码仓库&#34;&gt;&lt;/a&gt;源码仓库&lt;/h3&gt;&lt;p&gt;正式环境采用参数化构建，只用Git参数指定构建tag分支，默认master分支&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/zMtvPDfjFoXyO8S.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;配置源码仓库，指定动态tag分支&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/06/sgqaEWYKMb5rA8z.png&#34; alt=&#34;image-20211006134146871&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;自动构建选项-1&#34;&gt;&lt;a href=&#34;#自动构建选项-1&#34; class=&#34;headerlink&#34; title=&#34;自动构建选项&#34;&gt;&lt;/a&gt;自动构建选项&lt;/h3&gt;&lt;p&gt;取消自动构建选项&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/WUG6PSjmNKFaH37.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;构建环境&#34;&gt;&lt;a href=&#34;#构建环境&#34; class=&#34;headerlink&#34; title=&#34;构建环境&#34;&gt;&lt;/a&gt;构建环境&lt;/h3&gt;&lt;p&gt;指定构建环境，选择已配置的nodejs构建环境，在jekenis本地服务器进行编译构建&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/gcNnHvzawXFKC76.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;构建-1&#34;&gt;&lt;a href=&#34;#构建-1&#34; class=&#34;headerlink&#34; title=&#34;构建&#34;&gt;&lt;/a&gt;构建&lt;/h3&gt;&lt;p&gt;在jekenis本地服务器进行编译构建&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/j2Z4QHn5qYSolFM.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;为方便后续上传，在构建环节执行了压缩命令，可视情况而定。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：整体涉及到的编译脚本详见“项目编译脚本”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;上传-1&#34;&gt;&lt;a href=&#34;#上传-1&#34; class=&#34;headerlink&#34; title=&#34;上传&#34;&gt;&lt;/a&gt;上传&lt;/h3&gt;&lt;p&gt;将编译并压缩后的前端文件上传到指定服务器&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/zjxrTqCF4QGvNLH.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在服务器列表中选择目标，指定上传文件，填写上传成功后需执行的命令。因VUE编译多次会生成不同的文件，故需将编译后的文件一次性上传多个负载的服务器。&lt;/p&gt;
+&lt;p&gt;即重新选择一次上传步骤：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/m5ODJEU6vIx9n3L.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/2Dsf1Mg7rq4vYdn.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：整体涉及到的编译脚本详见“项目编译脚本”&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="CentOS" />
+        <category term="Linux" />
+        <category term="Jenkins" />
+        <updated>2023-05-28T13:00:29.414Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/Maven/</id>
+        <title>Maven</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/Maven/"/>
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a href=&#34;#简介&#34; class=&#34;headerlink&#34; title=&#34;简介&#34;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;Maven是意第绪语，意思是“知识的积累者”，最初是为了简化Jakarta Turbine项目中的构建过程。有几个项目，每个项目都有自己的Ant构建文件，所有项目都略有不同。JAR已检入CVS。我们想要一种标准的方式来构建项目，清晰地定义项目的组成，一种简单的方式来发布项目信息，以及一种在多个项目中共享JAR的方式。&lt;/p&gt;
+&lt;p&gt;结果是一个可以用于构建和管理任何基于Java的项目的工具。我们希望我们已经创建了一些东西，可以使Java开发人员的日常工作更加轻松，并且通常有助于理解任何基于Java的项目。&lt;/p&gt;
+&lt;h1 id=&#34;安装&#34;&gt;&lt;a href=&#34;#安装&#34; class=&#34;headerlink&#34; title=&#34;安装&#34;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;h2 id=&#34;下载&#34;&gt;&lt;a href=&#34;#下载&#34; class=&#34;headerlink&#34; title=&#34;下载&#34;&gt;&lt;/a&gt;下载&lt;/h2&gt;&lt;p&gt;Maven官网地址：&lt;a href=&#34;https://maven.apache.org/&#34;&gt;https://maven.apache.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/06/wi56hbVS1LqjZYd.png&#34; alt=&#34;image-20211006143204542&#34;&gt;&lt;/p&gt;
+&lt;p&gt;进入上方官网地址，点击左侧&lt;code&gt;Download&lt;/code&gt;，进入下载页面。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/06/km3iteEFAHdKxsz.png&#34; alt=&#34;image-20211006143351772&#34;&gt;&lt;/p&gt;
+&lt;p&gt;右键点击超链接，复制链接地址。&lt;/p&gt;
+&lt;p&gt;链接服务器，进入安装目录,博猪安装在：&lt;code&gt;/opt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;使用&lt;code&gt;wget&lt;/code&gt;进行下载，如果没有&lt;code&gt;wget&lt;/code&gt;，请使用&lt;code&gt;yum -y install wget&lt;/code&gt;先用yum安装。&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;wget https://dlcdn.apache.org/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.tar.gz&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;解压&#34;&gt;&lt;a href=&#34;#解压&#34; class=&#34;headerlink&#34; title=&#34;解压&#34;&gt;&lt;/a&gt;解压&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;tar -zxvf apache-maven-3.8.3-bin.tar.gz&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;配置环境变量&#34;&gt;&lt;a href=&#34;#配置环境变量&#34; class=&#34;headerlink&#34; title=&#34;配置环境变量&#34;&gt;&lt;/a&gt;配置环境变量&lt;/h2&gt;&lt;p&gt;进入&lt;code&gt;/etc/profile.d/&lt;/code&gt;目录，增加&lt;code&gt;maven.sh&lt;/code&gt;环境脚本。&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs sh&#34;&gt;vim maven.sh&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;增加环境变量&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs sh&#34;&gt;&lt;span class=&#34;hljs-built_in&#34;&gt;export&lt;/span&gt; MAVEN_HOME=/opt/apache-maven-3.8.3&lt;br&gt;&lt;span class=&#34;hljs-built_in&#34;&gt;export&lt;/span&gt; PATH=&lt;span class=&#34;hljs-variable&#34;&gt;$&amp;#123;MAVEN_HOME&amp;#125;&lt;/span&gt;/bin:&lt;span class=&#34;hljs-variable&#34;&gt;$&amp;#123;PATH&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;注意：如果是以普通用户身份运行，则需要增加可执行权限&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs sh&#34;&gt;sudo &lt;span class=&#34;hljs-built_in&#34;&gt;chmod&lt;/span&gt; +x /etc/profile.d/maven.sh&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用&lt;code&gt;source&lt;/code&gt;命令加载环境变量：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;source /etc/profile.d/maven.sh&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;验证安装&#34;&gt;&lt;a href=&#34;#验证安装&#34; class=&#34;headerlink&#34; title=&#34;验证安装&#34;&gt;&lt;/a&gt;验证安装&lt;/h2&gt;&lt;p&gt;想要验证 Maven 软件安装，使用&lt;code&gt;mvn -version&lt;/code&gt;命令，它将会打印出 Maven 版本：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;mvn -version&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;你将会看到类似下面的输出：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;Apache Maven 3.8.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)&lt;br&gt;Maven home: /opt/apache-maven-3.8.3&lt;br&gt;Java version: 11.0.5, vendor: Oracle Corporation, runtime: /usr/lib/jvm/java-11-openjdk-11.0.5.10-0.el8_0.x86_64&lt;br&gt;Default locale: en_US, platform encoding: UTF-8&lt;br&gt;OS name: &amp;quot;linux&amp;quot;, version: &amp;quot;4.18.0-80.7.1.el8_0.x86_64&amp;quot;, arch: &amp;quot;amd64&amp;quot;, family: &amp;quot;unix&amp;quot;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;配置国内镜像仓库&#34;&gt;&lt;a href=&#34;#配置国内镜像仓库&#34; class=&#34;headerlink&#34; title=&#34;配置国内镜像仓库&#34;&gt;&lt;/a&gt;配置国内镜像仓库&lt;/h1&gt;&lt;p&gt;配置maven仓库，设置阿里镜像仓库，一定要配置一下，国内的下载jar快些。&lt;/p&gt;
+&lt;p&gt;设置本地仓库存储地址：&lt;code&gt;/opt/apache-maven-3.8.3/repo&lt;/code&gt;,进入配置路径&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;cd /opt/apache-maven-3.8.3/conf&lt;br&gt;vi settings.xml&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;修改仓库存储地址&lt;/p&gt;
+&lt;figure class=&#34;highlight awk&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs awk&#34;&gt;&amp;lt;localRepository&amp;gt;&lt;span class=&#34;hljs-regexp&#34;&gt;/opt/&lt;/span&gt;apache-maven-&lt;span class=&#34;hljs-number&#34;&gt;3.8&lt;/span&gt;.&lt;span class=&#34;hljs-number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;hljs-regexp&#34;&gt;/repo&amp;lt;/&lt;/span&gt;localRepository&amp;gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;修改镜像仓库&lt;/p&gt;
+&lt;figure class=&#34;highlight xml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs xml&#34;&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;mirror&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;      &lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;id&lt;/span&gt;&amp;gt;&lt;/span&gt;alimaven&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;id&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;      &lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;name&lt;/span&gt;&amp;gt;&lt;/span&gt;aliyun maven&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;name&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;       &lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;url&lt;/span&gt;&amp;gt;&lt;/span&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;url&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;      &lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;mirrorOf&lt;/span&gt;&amp;gt;&lt;/span&gt;central&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;mirrorOf&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;mirror&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+        <category term="CentOS" />
+        <category term="Linux" />
+        <category term="Maven" />
+        <updated>2023-05-28T13:00:29.414Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/Crontab-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</id>
+        <title>Crontab-定时任务</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/Crontab-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"/>
+        <content type="html">&lt;h1 id=&#34;Linux-Crontab-定时任务&#34;&gt;&lt;a href=&#34;#Linux-Crontab-定时任务&#34; class=&#34;headerlink&#34; title=&#34;Linux Crontab 定时任务&#34;&gt;&lt;/a&gt;Linux Crontab 定时任务&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;很多时候，我们需要定时执行某个应用或者某段脚本，在linux上，可以使用cron服务，它有点类似于Windows上的任务计划程序。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;crond和crontab&#34;&gt;&lt;a href=&#34;#crond和crontab&#34; class=&#34;headerlink&#34; title=&#34;crond和crontab&#34;&gt;&lt;/a&gt;crond和crontab&lt;/h2&gt;&lt;p&gt;首先需要分清楚两个概念：crond和crontab。crond是后台守护进程的名称（d代表daemon），用来实际执行脚本，它在系统中是一直运行的。可以通过下面的方式查看到它：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;systemctl | grep crond&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;crontab是一个工具，用来列出cron中当前运行的作业（应用或脚本等）、向cron中添加作业、编辑作业、删除作业。它并不是一直在后台运行的，是一个短时的命令行工具，执行完就结束了。&lt;/p&gt;
+&lt;p&gt;可以简单理解crond和crontab组合起来提供cron服务。&lt;/p&gt;
+&lt;p&gt;大体流程如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F634d76f98ad0252888ea044489e3d5bf.png&amp;refer=http%3A%2F%2Fimg-blog.csdnimg.cn&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1627445494&amp;t=e65617a03bb7ecea66217142dd0da756&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;crontab配置文件&#34;&gt;&lt;a href=&#34;#crontab配置文件&#34; class=&#34;headerlink&#34; title=&#34;crontab配置文件&#34;&gt;&lt;/a&gt;crontab配置文件&lt;/h2&gt;&lt;p&gt;Linux下的任务调度分为两类：系统任务调度和用户任务调度。Linux系统任务是由 cron (crond) 这个系统服务来控制的，这个系统服务是默认启动的。用户自己设置的计划任务则使用crontab命令。使用以下命令进行查看：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;cat /etc/crontab&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;配置文件可以看到如下解释：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;SHELL=/bin/bash&lt;br&gt;PATH=/sbin:/bin:/usr/sbin:/usr/bin&lt;br&gt;MAILTO=root&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;For details see man 4 crontabs&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;Example of job definition:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;.---------------- minute (0 - 59)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  .------------- hour (0 - 23)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  |  .---------- day of month (1 - 31)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  |  |  |  |&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;*  *  *  *  * user-name  &lt;span class=&#34;hljs-built_in&#34;&gt;command&lt;/span&gt; to be executed&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;前四行是用来配置crond任务运行的环境变量，第一行SHELL变量指定了系统要使用哪个shell，这里是bash；第二行PATH变量指定了系统执行命令的路径；第三行MAILTO变量指定了crond的任务执行信息将通过电子邮件发送给root用户，如果MAILTO变量的值为空，则表示不发送任务执行信息给用户；第四行的HOME变量指定了在执行命令或者脚本时使用的主目录。&lt;/p&gt;
+&lt;p&gt;用户定期要执行的工作，比如用户数据备份、定时邮件提醒等。用户可以使用 crontab 工具来定制自己的计划任务。所有用户定义的crontab 文件都被保存在 &amp;#x2F;var&amp;#x2F;spool&amp;#x2F;cron目录中。其文件名与用户名一致。&lt;/p&gt;
+&lt;h2 id=&#34;crontab文件含义&#34;&gt;&lt;a href=&#34;#crontab文件含义&#34; class=&#34;headerlink&#34; title=&#34;crontab文件含义&#34;&gt;&lt;/a&gt;crontab文件含义&lt;/h2&gt;&lt;p&gt;用户所建立的crontab文件中，每一行都代表一项任务，每行的每个字段代表一项设置，它的格式共分为六个字段，前五段是时间设定段，第六段是要执行的命令段，格式如下：&lt;br&gt;minute hour day month week command&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.linuxprobe.com/wp-content/uploads/2016/09/crontab.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在以上各个字段中，还可以使用以下特殊字符：&lt;/p&gt;
+&lt;p&gt;“&lt;em&gt;&amp;quot;代表所有的取值范围内的数字，如月份字段为&lt;/em&gt;，则表示1到12个月；&lt;/p&gt;
+&lt;p&gt;“&amp;#x2F;“代表每一定时间间隔的意思，如分钟字段为*&amp;#x2F;10，表示每10分钟执行1次。&lt;/p&gt;
+&lt;p&gt;“-“代表从某个区间范围，是闭区间。如“2-5”表示“2,3,4,5”，小时字段中0-23&amp;#x2F;2表示在0~23点范围内每2个小时执行一次。&lt;/p&gt;
+&lt;p&gt;“,”分散的数字（不一定连续），如1,2,3,4,7,9。&lt;/p&gt;
+&lt;p&gt;注：由于各个地方每周第一天不一样，因此Sunday&amp;#x3D;0（第一天）或Sunday&amp;#x3D;7（最后1天）。&lt;/p&gt;
+&lt;h2 id=&#34;crontab命令详解&#34;&gt;&lt;a href=&#34;#crontab命令详解&#34; class=&#34;headerlink&#34; title=&#34;crontab命令详解&#34;&gt;&lt;/a&gt;crontab命令详解&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;因为crond是一个守护进程，所以在系统开机后，通过&lt;code&gt;systemctl start crond&lt;/code&gt;启动一次以后（默认自动启动的），几乎就不需要再管它了，之后的操作都通过crontab来完成。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;查看现有任务&#34;&gt;&lt;a href=&#34;#查看现有任务&#34; class=&#34;headerlink&#34; title=&#34;查看现有任务&#34;&gt;&lt;/a&gt;查看现有任务&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;crontab -l&lt;/span&gt;&lt;br&gt;no crontab for root&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;因为现在没有任务，所以显示的是 no crontab for root，可见，任务是根据用户进行区分的。&lt;/p&gt;
+&lt;h3 id=&#34;添加定时任务&#34;&gt;&lt;a href=&#34;#添加定时任务&#34; class=&#34;headerlink&#34; title=&#34;添加定时任务&#34;&gt;&lt;/a&gt;添加定时任务&lt;/h3&gt;&lt;p&gt;为了便于测试，我们可以创建这样一个简单的脚本(位于~&amp;#x2F;tmp&amp;#x2F;job1.sh)：在一个文件末尾追加当前时间。脚本如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;date +&amp;#x27;%F %T&amp;#x27; &amp;gt;&amp;gt; ~/tmp/job1.log&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;创建完成后记得赋予一下执行权限：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;&lt;span class=&#34;hljs-built_in&#34;&gt;chmod&lt;/span&gt; 755 job1.sh&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;接下来，需要配置多久运行一次。这里通过cron表达式来设置，它非常灵活，可以很简单也可以很复杂。cron表达式的应用广泛，不止用在系统层面，在其他各种编程语言的类库当中，都有类似的实现，语法略有不同。使用下面的命令可以查看linux系统中cron表达式的写法：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;&lt;span class=&#34;hljs-built_in&#34;&gt;cat&lt;/span&gt; /etc/crontab&lt;/span&gt; &lt;br&gt;SHELL=/bin/bash&lt;br&gt;PATH=/sbin:/bin:/usr/sbin:/usr/bin&lt;br&gt;MAILTO=root&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;For details see man 4 crontabs&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;Example of job definition:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;.---------------- minute (0 - 59)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  .------------- hour (0 - 23)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  |  .---------- day of month (1 - 31)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  |  |  |  |&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;*  *  *  *  * user-name  &lt;span class=&#34;hljs-built_in&#34;&gt;command&lt;/span&gt; to be executed&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如果需要查看更详细的用法，可以使用 &lt;code&gt;# man crontab&lt;/code&gt; 命令查看。&lt;/p&gt;
+&lt;p&gt;整理后如下表所示：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;不同的cron应用存在很大差异，比如crontab不支持“秒”，特殊字符也支持的比较少（支持,-*&amp;#x2F;）。而其他一些应用，则支持“秒”和更多的特殊字符。这里为了更完备一些，所以全都列出来了，省的以后再去总结。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;名称&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;必须&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;取值范围&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;可设置的特殊字符&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;分&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;是&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0-59&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;,-*&amp;#x2F;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;时&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;是&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0-23&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;,-*&amp;#x2F;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;日(月)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;是&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1-31&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;,-*?&amp;#x2F;LW&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;月&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;是&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1-12 或者 jan-dec&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;,-*&amp;#x2F;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;日(周)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;是&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0-7（0和7都是星期天） 或者 sun-sat&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;,-*?&amp;#x2F;L#&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;年&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;否&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;留空，1970-2099&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;,-*&amp;#x2F;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;几个特殊字符的含义：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;字符&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;*&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;全部。意思是在该时间的任意点都应当执行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;?&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;不指定，任意。仅用于 日(月)和日(周)。0 0 5 * ? 代表每个月的第5天零点，不论星期几。 0 0 ? * 1 代表每周一，不论是当月的哪天。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;,&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;多个值的分隔符，例如1,5,10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;-&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;代表连续值，例如1-20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;#x2F;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;步长。例如 5&amp;#x2F;15，代表从5开始，以15为步长。因此，当5&amp;#x2F;15位于分钟的位置时，表示小时内的第5、20、35和50分钟。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;L&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;最后一天。可以是每月最后一天或者每周最后一天。如果用在 天(周)字段，并且前面加数字，则表示最后一个周N。例如5L，表示最后一个周五（5表示周五，L表示最后）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;W&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;工作日，指周一到周五的任意一天&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;#&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;表示第几个的意思，例如 6#3，表示当月第3个星期六（6表示周六，3表示第3个）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;几个简单的例子：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;表达式&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;* * * * *&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;每分钟执行一次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;30 * * * *&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;每小时的30分执行一次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;*&amp;#x2F;5 * * * *&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;每5分钟执行一次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;0&amp;#x2F;5 * * * *&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;每5分钟执行一次，且仅在0,5,15,20…55分执行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;5 0 * * *&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;每天的00:05执行一次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;crontab中 日(周)不接受“?”的写法，在很多其他应用中则可以，例如Quartz.Net库：&lt;a href=&#34;https://www.quartz-scheduler.net/documentation/quartz-2.x/tutorial/crontrigger.html&#34;&gt;https://www.quartz-scheduler.net/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;更多的用法，可以参考：&lt;a href=&#34;https://crontab.guru/&#34;&gt;https://crontab.guru&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;接下来，如果我们想要每分钟执行一下前面创建的job1.sh脚本，需要再创建一个crontab作业(jobs.cron，后缀名无所谓，这里只是为了便于识别)，其中包含了cron表达式，用于表明job1.sh执行的周期：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;* * * * * ~/tmp/job1.sh&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;使用crontab将它加入到计划中：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;crontab jobs.cron&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;再次查看当前计划，可以看到这样的结果：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;crontab -l&lt;/span&gt;&lt;br&gt;* * * * * ~/tmp/job1.sh&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;删除定时任务&#34;&gt;&lt;a href=&#34;#删除定时任务&#34; class=&#34;headerlink&#34; title=&#34;删除定时任务&#34;&gt;&lt;/a&gt;删除定时任务&lt;/h3&gt;&lt;p&gt;先将job1.sh复制一份，稍作修改，然后编辑一下jobs.cron，将job2.sh也加入进去：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;* * * * * ~/tmp/job1.sh&lt;br&gt;*/5 * * * * ~/tmp/job2.sh&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后重新加入到cron服务中。&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;crontab jobs.cron&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;接着查看一下当前cron中的作业：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;crontab -l&lt;/span&gt;&lt;br&gt;* * * * * ~/tmp/job1.sh&lt;br&gt;*/5 * * * * ~/tmp/job2.sh&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;可以看到上面有job1.sh和job2.sh两个作业，其效果相当于将jobs.cron文件的内容拷贝进去。&lt;/p&gt;
+&lt;p&gt;如果想要删除作业，则执行：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;crontab -r&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这样会删除所有作业，如果只想删除一个，或者想对作业进行编辑，可以使用下面的命令。&lt;/p&gt;
+&lt;h3 id=&#34;编辑定时任务&#34;&gt;&lt;a href=&#34;#编辑定时任务&#34; class=&#34;headerlink&#34; title=&#34;编辑定时任务&#34;&gt;&lt;/a&gt;编辑定时任务&lt;/h3&gt;&lt;p&gt;&lt;code&gt;crontab -e&lt;/code&gt; 命令会调用编辑器（通常是vi或者vim），直接编辑计划作业，相当于编辑jobs.cron。只不过编辑完立即生效，不需要再执行crontab进行加载。&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;crontab -e&lt;/span&gt;&lt;br&gt;crontab: installing new crontab&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;统一期间，个人不建议使用crontab -e编辑计划，而是编辑jobs.cron，然后进行加载。这样的话jobs.cron文件相当于一个备份，方便日后恢复。&lt;/p&gt;
+&lt;h2 id=&#34;查看作业日志&#34;&gt;&lt;a href=&#34;#查看作业日志&#34; class=&#34;headerlink&#34; title=&#34;查看作业日志&#34;&gt;&lt;/a&gt;查看作业日志&lt;/h2&gt;&lt;p&gt;在作业执行出现异常（或作业脚本写日志）时，cron服务会输出日志，在我的CentOS7系统上，查看的地址位于&amp;#x2F;var&amp;#x2F;log下。&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;&lt;span class=&#34;hljs-built_in&#34;&gt;ls&lt;/span&gt; /var/log | grep cron&lt;/span&gt;&lt;br&gt;cron&lt;br&gt;cron-20180819&lt;br&gt;cron-20180826&lt;br&gt;cron-20180902&lt;br&gt;cron-20180909&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如果想让自己编写的作业输出日志，可以这样编写jobs.cron：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;* * * * * ~/tmp/job1.sh &amp;gt;&amp;gt; /var/log/job1.log 2&amp;gt;&amp;amp;1&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;上面的意思是将stdout和stderr输出到&amp;#x2F;var&amp;#x2F;log&amp;#x2F;job1.log。&lt;/p&gt;
+&lt;p&gt;修改job1.sh，在底部加入&lt;code&gt;echo hello&lt;/code&gt;。然后调用&lt;code&gt;crontab jobs.cron&lt;/code&gt;重新加载，然后在&amp;#x2F;var&amp;#x2F;log目录下可以看到job1.log，其中包含了输出的文本“hello”。&lt;/p&gt;
+</content>
+        <category term="CentOS" />
+        <category term="Linux" />
+        <category term="Crontab" />
+        <updated>2023-05-28T13:00:29.413Z</updated>
+    </entry>
+</feed>

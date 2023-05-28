@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
+    <title>Will • Posts by &#34;archery&#34; tag</title>
+    <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
+    <updated>2023-05-28T13:00:29.417Z</updated>
+    <category term="感言" />
+    <category term="思考" />
+    <category term="开发习惯" />
+    <category term="Docker" />
+    <category term="LINUX" />
+    <category term="CentOS" />
+    <category term="Linux" />
+    <category term="Crontab" />
+    <category term="Jenkins" />
+    <category term="Maven" />
+    <category term="Node" />
+    <category term="前端" />
+    <category term="Nvm" />
+    <category term="Archery" />
+    <category term="MySql" />
+    <category term="工具" />
+    <category term="IDEA" />
+    <category term="Alibaba Cloud Toolkit" />
+    <category term="Git" />
+    <category term="BeetlSql" />
+    <category term="Beetl" />
+    <category term="JAVA" />
+    <category term="日期" />
+    <category term="枚举" />
+    <category term="异常" />
+    <category term="Spring" />
+    <category term="SpringCloud" />
+    <category term="SpringCloud Alibaba" />
+    <category term="POI" />
+    <category term="CentOS7" />
+    <category term="MongoDB" />
+    <category term="Spring Boot" />
+    <category term="Redis" />
+    <category term="ProtoBuffer" />
+    <category term="其他" />
+    <category term="博客园" />
+    <category term="博客" />
+    <category term="SOAR" />
+    <category term="VerificationCode" />
+    <category term="MongoDb" />
+    <category term="VinUtil" />
+    <category term="PostMan" />
+    <category term="Typora" />
+    <category term="Java8" />
+    <category term="特性" />
+    <category term="JDBC" />
+    <category term="Mysql" />
+    <category term="EasyExcel" />
+    <category term="Script" />
+    <category term="设计模式" />
+    <category term="MyBatis" />
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/%E5%B7%A5%E5%85%B7/Archery%E6%95%99%E7%A8%8B/</id>
+        <title>Archery教程</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/%E5%B7%A5%E5%85%B7/Archery%E6%95%99%E7%A8%8B/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文基于官方文档安装，有不太详细的地方请多多包涵，下方为官方文档连接：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://archerydms.com/&#34;&gt;Archery中文官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;简介&#34;&gt;&lt;a href=&#34;#简介&#34; class=&#34;headerlink&#34; title=&#34;简介&#34;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;Archery是&lt;a href=&#34;https://github.com/jly8866/archer&#34;&gt;archer&lt;/a&gt;的分支项目，定位于SQL审核查询平台，旨在提升DBA的工作效率，支持多数据库的SQL上线和查询，同时支持丰富的MySQL运维功能，所有功能都兼容手机端操作&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;功能清单&#34;&gt;&lt;a href=&#34;#功能清单&#34; class=&#34;headerlink&#34; title=&#34;功能清单&#34;&gt;&lt;/a&gt;功能清单&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;查询&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;审核&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;执行&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;备份&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;数据字典&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;慢日志&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;会话管理&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;账号管理&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;参数管理&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;数据归档&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;MySQL&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td&gt;√&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;MsSQL&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td&gt;×&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Redis&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td&gt;×&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;PgSQL&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td&gt;×&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Oracle&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td&gt;×&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;MongoDB&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;√&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;×&lt;/td&gt;
+&lt;td&gt;×&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h1 id=&#34;部署升级&#34;&gt;&lt;a href=&#34;#部署升级&#34; class=&#34;headerlink&#34; title=&#34;部署升级&#34;&gt;&lt;/a&gt;部署升级&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;支持docker部署、手动部署，支持升级。&lt;/p&gt;
+&lt;p&gt;由于安装包部署略微繁琐，本文不提供介绍，详细请看上方文档地址，自行搭建，本次只是提供基于docker的部署教程。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;docker部署&lt;/li&gt;
+&lt;li&gt;安装包部署&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;Docker部署&#34;&gt;&lt;a href=&#34;#Docker部署&#34; class=&#34;headerlink&#34; title=&#34;Docker部署&#34;&gt;&lt;/a&gt;Docker部署&lt;/h1&gt;&lt;h2 id=&#34;安装Docker-compose&#34;&gt;&lt;a href=&#34;#安装Docker-compose&#34; class=&#34;headerlink&#34; title=&#34;安装Docker-compose&#34;&gt;&lt;/a&gt;安装Docker-compose&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;安装Docker-compose有两种方法：一个通过Python的pip安装；另外一个是通过连接。&lt;/p&gt;
+&lt;p&gt;本文会详细介绍两种方法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;通过pip安装&#34;&gt;&lt;a href=&#34;#通过pip安装&#34; class=&#34;headerlink&#34; title=&#34;通过pip安装&#34;&gt;&lt;/a&gt;通过pip安装&lt;/h3&gt;&lt;h4 id=&#34;更新Python3-X版本&#34;&gt;&lt;a href=&#34;#更新Python3-X版本&#34; class=&#34;headerlink&#34; title=&#34;更新Python3.X版本&#34;&gt;&lt;/a&gt;更新Python3.X版本&lt;/h4&gt;&lt;figure class=&#34;highlight sh&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs sh&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 进入安装包目录&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-built_in&#34;&gt;cd&lt;/span&gt; /source&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 下载Python3安装包&lt;/span&gt;&lt;br&gt;wget https://www.python.org/ftp/python/3.7.10/Python-3.7.10.tgz&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 解压&lt;/span&gt;&lt;br&gt;tar xzvf Python-3.7.0.tgz&lt;br&gt;&lt;span class=&#34;hljs-built_in&#34;&gt;cd&lt;/span&gt; Python-3.7.0&lt;br&gt;&lt;span class=&#34;hljs-built_in&#34;&gt;mkdir&lt;/span&gt; /usr/local/src/python3   &lt;span class=&#34;hljs-comment&#34;&gt;#这个是个人喜好放在这个目录&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&#34;安装GC编译器&#34;&gt;&lt;a href=&#34;#安装GC编译器&#34; class=&#34;headerlink&#34; title=&#34;安装GC编译器&#34;&gt;&lt;/a&gt;安装GC编译器&lt;/h4&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum -y install gcc&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;先安装一下GC编译器，要不然编译失败，没办法安装。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;检查一下：&lt;/strong&gt;要注意的是产生了：python3和pip3.7&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight awk&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs awk&#34;&gt;ls &lt;span class=&#34;hljs-regexp&#34;&gt;/usr/&lt;/span&gt;local&lt;span class=&#34;hljs-regexp&#34;&gt;/src/&lt;/span&gt;python3/bin&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&#34;安装pip&#34;&gt;&lt;a href=&#34;#安装pip&#34; class=&#34;headerlink&#34; title=&#34;安装pip&#34;&gt;&lt;/a&gt;安装pip&lt;/h4&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;安装依赖&lt;/span&gt;&lt;br&gt;yum install -y epel-release&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;安装pip&lt;/span&gt;&lt;br&gt;yum install -y python-pip&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;查看pip版本&lt;/span&gt;&lt;br&gt;pip --version&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;升级pip版本&lt;/span&gt;&lt;br&gt;pip install -U pip&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&#34;安装docker-compose&#34;&gt;&lt;a href=&#34;#安装docker-compose&#34; class=&#34;headerlink&#34; title=&#34;安装docker-compose&#34;&gt;&lt;/a&gt;安装docker-compose&lt;/h4&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;安装&lt;/span&gt;&lt;br&gt;pip install docker-compose&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;通过docker安装&#34;&gt;&lt;a href=&#34;#通过docker安装&#34; class=&#34;headerlink&#34; title=&#34;通过docker安装&#34;&gt;&lt;/a&gt;通过docker安装&lt;/h3&gt;&lt;h4 id=&#34;安装docker&#34;&gt;&lt;a href=&#34;#安装docker&#34; class=&#34;headerlink&#34; title=&#34;安装docker&#34;&gt;&lt;/a&gt;安装docker&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;已安装docker该步骤略过。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;curl -fsSL https://get.docker.com -o get-docker.sh | sudo sh&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&#34;安装-Docker-Compos&#34;&gt;&lt;a href=&#34;#安装-Docker-Compos&#34; class=&#34;headerlink&#34; title=&#34;安装 Docker Compos&#34;&gt;&lt;/a&gt;安装 Docker Compos&lt;/h4&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;sudo curl -L &amp;quot;https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)&amp;quot; -o /usr/local/bin/docker-compose&lt;br&gt;sudo chmod +x /usr/local/bin/docker-compose&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;下载REALEASE文件&#34;&gt;&lt;a href=&#34;#下载REALEASE文件&#34; class=&#34;headerlink&#34; title=&#34;下载REALEASE文件&#34;&gt;&lt;/a&gt;下载REALEASE文件&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;下载下图路径下的文件，里面包含项目执行的所需要的SQL以及依赖。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20210316105046.png&#34; alt=&#34;image-20210316105036672&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;准备运行配置&#34;&gt;&lt;a href=&#34;#准备运行配置&#34; class=&#34;headerlink&#34; title=&#34;准备运行配置&#34;&gt;&lt;/a&gt;准备运行配置&lt;/h2&gt;&lt;p&gt;具体可参考：&lt;a href=&#34;https://github.com/hhyo/Archery/tree/master/src/docker-compose&#34;&gt;文档地址&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker-compose.yml文件内的services可按照本身的运行环境来调整，同时注意检查版本号是否正确，比如说外部已经装好了mysql、redis、inception，就可以将对应的services删除，但是需要注意修改settings.py文件的相关配置，具体可以参考&lt;a href=&#34;https://archerydms.com/installation/manual/#_5&#34;&gt;修改配置&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;启动部署&#34;&gt;&lt;a href=&#34;#启动部署&#34; class=&#34;headerlink&#34; title=&#34;启动部署&#34;&gt;&lt;/a&gt;启动部署&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;下载 &lt;a href=&#34;https://github.com/hhyo/archery/releases/&#34;&gt;Releases&lt;/a&gt;文件，解压后进入docker-compose文件夹,按照本文4.3步骤进行本地配置。&lt;/p&gt;
+&lt;p&gt;因本人使用的是新建的虚拟机，所以就按照默认配置进行执行了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;启动&lt;/span&gt;&lt;br&gt;docker-compose -f docker-compose.yml up -d&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;表结构初始化&lt;/span&gt;&lt;br&gt;docker exec -ti archery /bin/bash&lt;br&gt;cd /opt/archery&lt;br&gt;source /opt/venv4archery/bin/activate&lt;br&gt;python3 manage.py makemigrations sql  &lt;br&gt;python3 manage.py migrate &lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;数据初始化&lt;/span&gt;&lt;br&gt;python3 manage.py dbshell&amp;lt;sql/fixtures/auth_group.sql&lt;br&gt;python3 manage.py dbshell&amp;lt;src/init_sql/mysql_slow_query_review.sql&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;创建管理用户&lt;/span&gt;&lt;br&gt;python3 manage.py createsuperuser&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;重启&lt;/span&gt;&lt;br&gt;docker restart archery&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;日志查看和问题排查&lt;/span&gt;&lt;br&gt;docker logs archery -f --tail=50&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;访问&#34;&gt;&lt;a href=&#34;#访问&#34; class=&#34;headerlink&#34; title=&#34;访问&#34;&gt;&lt;/a&gt;访问&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;http://127.0.0.1:9123/&#34;&gt;http://127.0.0.1:9123&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;启动后配置&#34;&gt;&lt;a href=&#34;#启动后配置&#34; class=&#34;headerlink&#34; title=&#34;启动后配置&#34;&gt;&lt;/a&gt;启动后配置&lt;/h2&gt;&lt;p&gt;在启动后 Archery 有一些配置(如Inception , 资源组, 权限组等)需要按需配置, 请详细阅读 &lt;a href=&#34;https://archerydms.com/configuration/&#34;&gt;配置项说明&lt;/a&gt; , 按照自己的需要进行配置&lt;/p&gt;
+&lt;h2 id=&#34;运行界面&#34;&gt;&lt;a href=&#34;#运行界面&#34; class=&#34;headerlink&#34; title=&#34;运行界面&#34;&gt;&lt;/a&gt;运行界面&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20210316113345.png&#34; alt=&#34;image-20210316113342723&#34;&gt;&lt;/p&gt;
+</content>
+        <category term="Archery" />
+        <category term="MySql" />
+        <category term="工具" />
+        <updated>2023-05-28T13:00:29.417Z</updated>
+    </entry>
+</feed>

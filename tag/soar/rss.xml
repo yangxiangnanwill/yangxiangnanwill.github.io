@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Will • Posts by &#34;soar&#34; tag</title>
+        <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
+        <description>愿你一生努力，一生被爱</description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+        <lastBuildDate>Sun, 28 May 2023 21:00:29 +0800</lastBuildDate>
+        <category>感言</category>
+        <category>思考</category>
+        <category>开发习惯</category>
+        <category>Docker</category>
+        <category>LINUX</category>
+        <category>CentOS</category>
+        <category>Linux</category>
+        <category>Crontab</category>
+        <category>Jenkins</category>
+        <category>Maven</category>
+        <category>Node</category>
+        <category>前端</category>
+        <category>Nvm</category>
+        <category>Archery</category>
+        <category>MySql</category>
+        <category>工具</category>
+        <category>IDEA</category>
+        <category>Alibaba Cloud Toolkit</category>
+        <category>Git</category>
+        <category>BeetlSql</category>
+        <category>Beetl</category>
+        <category>JAVA</category>
+        <category>日期</category>
+        <category>枚举</category>
+        <category>异常</category>
+        <category>Spring</category>
+        <category>SpringCloud</category>
+        <category>SpringCloud Alibaba</category>
+        <category>POI</category>
+        <category>CentOS7</category>
+        <category>MongoDB</category>
+        <category>Spring Boot</category>
+        <category>Redis</category>
+        <category>ProtoBuffer</category>
+        <category>其他</category>
+        <category>博客园</category>
+        <category>博客</category>
+        <category>SOAR</category>
+        <category>VerificationCode</category>
+        <category>MongoDb</category>
+        <category>VinUtil</category>
+        <category>PostMan</category>
+        <category>Typora</category>
+        <category>Java8</category>
+        <category>特性</category>
+        <category>JDBC</category>
+        <category>Mysql</category>
+        <category>EasyExcel</category>
+        <category>Script</category>
+        <category>设计模式</category>
+        <category>MyBatis</category>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%85%B6%E4%BB%96/SOAR%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/</guid>
+            <title>SOAR基础教程</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%85%B6%E4%BB%96/SOAR%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/</link>
+            <category>其他</category>
+            <category>SOAR</category>
+            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;因博猪最近负责报表模块的相关的开发，虽然类似润乾、帆软这种报表工具对于大型SQL的运行做了一定的优化，但是具体优化还是需要书写者的上去了功底的，由于报表的SQL一般很复杂，再加上有一部分的因为历史原因建表的时候没有太多的关联关系，导致相关统计的时候不得不使用子查询，所以导致最后的SQL有可能会运行很久，所以博猪最近不得不的每次都在&lt;code&gt;EXPLIAN&lt;/code&gt;的道路上摸索，理解和转化SQL分析的过程很枯燥很机械，这个是博猪经朋友推荐使用的，感觉对于SQL分析挺方便的，特此记录一下，原因无他，唯懒而已。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;软件介绍&#34;&gt;&lt;a href=&#34;#软件介绍&#34; class=&#34;headerlink&#34; title=&#34;软件介绍&#34;&gt;&lt;/a&gt;软件介绍&lt;/h1&gt;&lt;p&gt;SOAR(SQL Optimizer And Rewriter)是一个对SQL进行优化和改写的自动化工具。 由小米人工智能与云平台的数据库团队开发与维护。&lt;/p&gt;
+&lt;h2 id=&#34;功能特点&#34;&gt;&lt;a href=&#34;#功能特点&#34; class=&#34;headerlink&#34; title=&#34;功能特点&#34;&gt;&lt;/a&gt;功能特点&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;跨平台支持（支持Linux, Mac环境，Windows环境理论上也支持，不过未全面测试）&lt;/li&gt;
+&lt;li&gt;目前只支持 MySQL 语法族协议的SQL优化&lt;/li&gt;
+&lt;li&gt;支持基于启发式算法的语句优化&lt;/li&gt;
+&lt;li&gt;支持复杂查询的多列索引优化（UPDATE, INSERT, DELETE, SELECT）&lt;/li&gt;
+&lt;li&gt;支持EXPLAIN信息丰富解读&lt;/li&gt;
+&lt;li&gt;支持SQL指纹、压缩和美化&lt;/li&gt;
+&lt;li&gt;支持同一张表多条ALTER请求合并&lt;/li&gt;
+&lt;li&gt;支持自定义规则的SQL改写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;环境搭建&#34;&gt;&lt;a href=&#34;#环境搭建&#34; class=&#34;headerlink&#34; title=&#34;环境搭建&#34;&gt;&lt;/a&gt;环境搭建&lt;/h1&gt;&lt;h2 id=&#34;安装基本环境&#34;&gt;&lt;a href=&#34;#安装基本环境&#34; class=&#34;headerlink&#34; title=&#34;安装基本环境&#34;&gt;&lt;/a&gt;安装基本环境&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;https://studygolang.com/dl&#34;&gt;下载Go&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;选择windows版本下载，安装。&lt;/p&gt;
+&lt;p&gt;安装完成后，cmd中输入 go version ，出现版本信息。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGgy1h2xcjbah2xj30b902x74h.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;soar下载&#34;&gt;&lt;a href=&#34;#soar下载&#34; class=&#34;headerlink&#34; title=&#34;soar下载&#34;&gt;&lt;/a&gt;soar下载&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/XiaoMi/soar&#34;&gt;GitHub地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/XiaoMi/soar/releases&#34;&gt;点击下载选择windows版本下载&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;eg:我放到了&lt;code&gt;D:\Program Files\soar&lt;/code&gt;目录下面，将soar.windows-amd64重命名为soar.exe&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;添加环境变量，方便往后使用。&lt;/p&gt;
+&lt;p&gt;cmd中 输入 soar -version命令，出行版本信息为安装成功。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGgy1h2xcrq99pej30g503mjs3.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;soar —help 查看帮助手册&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGgy1h2xcse7fc1j30ma0mbaht.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;进阶使用&#34;&gt;&lt;a href=&#34;#进阶使用&#34; class=&#34;headerlink&#34; title=&#34;进阶使用&#34;&gt;&lt;/a&gt;进阶使用&lt;/h1&gt;&lt;h2 id=&#34;相关配置&#34;&gt;&lt;a href=&#34;#相关配置&#34; class=&#34;headerlink&#34; title=&#34;相关配置&#34;&gt;&lt;/a&gt;相关配置&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;在&lt;code&gt;soar&lt;/code&gt;软件目录下面创建&lt;code&gt;etc&lt;/code&gt;文件夹，并建立&lt;code&gt;soar.yaml&lt;/code&gt;文件,并复制一下内容&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;59&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs yaml&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 线上环境配置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;online-dsn:&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;addr:&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;127.0&lt;/span&gt;&lt;span class=&#34;hljs-number&#34;&gt;.0&lt;/span&gt;&lt;span class=&#34;hljs-number&#34;&gt;.0&lt;/span&gt;&lt;span class=&#34;hljs-string&#34;&gt;:3306&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;schema:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;soar-test&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;user:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;root&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;password:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;admin&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;disable:&lt;/span&gt; &lt;span class=&#34;hljs-literal&#34;&gt;true&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 测试环境配置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;test-dsn:&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;addr:&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;127.0&lt;/span&gt;&lt;span class=&#34;hljs-number&#34;&gt;.0&lt;/span&gt;&lt;span class=&#34;hljs-number&#34;&gt;.0&lt;/span&gt;&lt;span class=&#34;hljs-string&#34;&gt;:3306&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;schema:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;soar-test&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;user:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;root&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;password:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;admin&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;disable:&lt;/span&gt; &lt;span class=&#34;hljs-literal&#34;&gt;true&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 是否允许测试环境与线上环境配置相同&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;allow-online-as-test:&lt;/span&gt; &lt;span class=&#34;hljs-literal&#34;&gt;true&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 是否清理测试时产生的临时文件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;drop-test-temporary:&lt;/span&gt; &lt;span class=&#34;hljs-literal&#34;&gt;true&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 语法检查小工具&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;only-syntax-check:&lt;/span&gt; &lt;span class=&#34;hljs-literal&#34;&gt;false&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;sampling-statistic-target:&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;100&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;sampling:&lt;/span&gt; &lt;span class=&#34;hljs-literal&#34;&gt;false&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 日志级别，[0:Emergency, 1:Alert, 2:Critical, 3:Error, 4:Warning, 5:Notice, 6:Informational, 7:Debug]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;log-level:&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;log-output:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;etc/soar.log&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 优化建议输出格式&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;report-type:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;markdown&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;ignore-rules:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 黑名单中的 SQL 将不会给评审意见。一行一条 SQL，可以是正则也可以是指纹，填写指纹时注意问号需要加反斜线转义。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;blacklist:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;etc/soar.blacklist&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 启发式算法相关配置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;max-join-table-count:&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;max-group-by-cols-count:&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;max-distinct-count:&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;max-index-cols-count:&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;max-total-rows:&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;9999999&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;spaghetti-query-length:&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;2048&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;allow-drop-index:&lt;/span&gt; &lt;span class=&#34;hljs-literal&#34;&gt;false&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# EXPLAIN相关配置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;explain-sql-report-type:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;pretty&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;explain-type:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;extended&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;explain-format:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;traditional&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;explain-warn-select-type:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;explain-warn-access-type:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;ALL&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;explain-max-keys:&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;explain-min-keys:&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;explain-max-rows:&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;10000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;explain-warn-extra:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;explain-max-filtered:&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;100&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;explain-warn-scalability:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;O(n)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;query:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;list-heuristic-rules:&lt;/span&gt; &lt;span class=&#34;hljs-literal&#34;&gt;false&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;list-test-sqls:&lt;/span&gt; &lt;span class=&#34;hljs-literal&#34;&gt;false&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;verbose:&lt;/span&gt; &lt;span class=&#34;hljs-literal&#34;&gt;true&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;运行&#34;&gt;&lt;a href=&#34;#运行&#34; class=&#34;headerlink&#34; title=&#34;运行&#34;&gt;&lt;/a&gt;运行&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;soar -query renewal_six_first_track.sql &amp;gt; ./renewal_six_first_track.md -test-dsn=&amp;quot;root:admin@127.0.0.0:3306/soar-test&amp;quot; -allow-online-as-test&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;查看生成报告&#34;&gt;&lt;a href=&#34;#查看生成报告&#34; class=&#34;headerlink&#34; title=&#34;查看生成报告&#34;&gt;&lt;/a&gt;查看生成报告&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;SQL代码分析报告会生成一个Markdown文件，可通过Markdown文件查看SQL性能分析情况。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGgy1h2xcvilni2j31eo0qu7ea.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

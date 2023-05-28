@@ -1,0 +1,1427 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Will • Posts by &#34;docker&#34; tag</title>
+        <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
+        <description>愿你一生努力，一生被爱</description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+        <lastBuildDate>Sun, 28 May 2023 21:00:29 +0800</lastBuildDate>
+        <category>感言</category>
+        <category>思考</category>
+        <category>开发习惯</category>
+        <category>Docker</category>
+        <category>LINUX</category>
+        <category>CentOS</category>
+        <category>Linux</category>
+        <category>Crontab</category>
+        <category>Jenkins</category>
+        <category>Maven</category>
+        <category>Node</category>
+        <category>前端</category>
+        <category>Nvm</category>
+        <category>Archery</category>
+        <category>MySql</category>
+        <category>工具</category>
+        <category>IDEA</category>
+        <category>Alibaba Cloud Toolkit</category>
+        <category>Git</category>
+        <category>BeetlSql</category>
+        <category>Beetl</category>
+        <category>JAVA</category>
+        <category>日期</category>
+        <category>枚举</category>
+        <category>异常</category>
+        <category>Spring</category>
+        <category>SpringCloud</category>
+        <category>SpringCloud Alibaba</category>
+        <category>POI</category>
+        <category>CentOS7</category>
+        <category>MongoDB</category>
+        <category>Spring Boot</category>
+        <category>Redis</category>
+        <category>ProtoBuffer</category>
+        <category>其他</category>
+        <category>博客园</category>
+        <category>博客</category>
+        <category>SOAR</category>
+        <category>VerificationCode</category>
+        <category>MongoDb</category>
+        <category>VinUtil</category>
+        <category>PostMan</category>
+        <category>Typora</category>
+        <category>Java8</category>
+        <category>特性</category>
+        <category>JDBC</category>
+        <category>Mysql</category>
+        <category>EasyExcel</category>
+        <category>Script</category>
+        <category>设计模式</category>
+        <category>MyBatis</category>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(8)-%E5%AE%89%E8%A3%85nacos/</guid>
+            <title>Docker(8)-安装nacos</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(8)-%E5%AE%89%E8%A3%85nacos/</link>
+            <category>Docker</category>
+            <category>LINUX</category>
+            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;日常开发使用springcloud-alibaba，为个人开发方便，本地搭建一个测试环境。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;安装Nacos&#34;&gt;&lt;a href=&#34;#安装Nacos&#34; class=&#34;headerlink&#34; title=&#34;安装Nacos&#34;&gt;&lt;/a&gt;安装Nacos&lt;/h1&gt;&lt;h2 id=&#34;拉取镜像&#34;&gt;&lt;a href=&#34;#拉取镜像&#34; class=&#34;headerlink&#34; title=&#34;拉取镜像&#34;&gt;&lt;/a&gt;拉取镜像&lt;/h2&gt;&lt;figure class=&#34;highlight axapta&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs axapta&#34;&gt;docker pull nacos/nacos-&lt;span class=&#34;hljs-keyword&#34;&gt;server&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;挂载目录&#34;&gt;&lt;a href=&#34;#挂载目录&#34; class=&#34;headerlink&#34; title=&#34;挂载目录&#34;&gt;&lt;/a&gt;挂载目录&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;mkdir -p /data/nacos/logs/                      #新建logs目录&lt;br&gt;mkdir -p /data/nacos/init.d/          &lt;br&gt;vim /data/nacos/init.d/custom.properties        #修改配置文件&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;mysql新建nacos的数据库，并执行脚本&#34;&gt;&lt;a href=&#34;#mysql新建nacos的数据库，并执行脚本&#34; class=&#34;headerlink&#34; title=&#34;mysql新建nacos的数据库，并执行脚本&#34;&gt;&lt;/a&gt;mysql新建nacos的数据库，并执行脚本&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/alibaba/nacos/blob/master/config/src/main/resources/META-INF/nacos-db.sql&#34;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;修改配置文件custom-properties&#34;&gt;&lt;a href=&#34;#修改配置文件custom-properties&#34; class=&#34;headerlink&#34; title=&#34;修改配置文件custom.properties&#34;&gt;&lt;/a&gt;修改配置文件&lt;code&gt;custom.properties&lt;/code&gt;&lt;/h2&gt;&lt;figure class=&#34;highlight properties&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs properties&#34;&gt;&lt;span class=&#34;hljs-attr&#34;&gt;server.contextPath&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;/nacos&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;server.servlet.contextPath&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;/nacos&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;server.port&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;8848&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;spring.datasource.platform&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;mysql&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;db.num&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;db.url.0&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;jdbc:mysql://192.168.56.120:3306/nacos_devtest_prod?characterEncoding=utf8&amp;amp;connectTimeout=1000&amp;amp;socketTimeout=3000&amp;amp;autoReconnect=true&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;db.user&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;user&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;db.password&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;pass&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;nacos.cmdb.dumpTaskInterval&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;3600&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;nacos.cmdb.eventTaskInterval&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;nacos.cmdb.labelTaskInterval&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;300&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;nacos.cmdb.loadDataAtStart&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;false&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;management.metrics.export.elastic.enabled&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;false&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;management.metrics.export.influx.enabled&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;false&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;server.tomcat.accesslog.enabled&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;true&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;server.tomcat.accesslog.pattern&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;%h %l %u %t &amp;quot;%r&amp;quot; %s %b %D %&amp;#123;User-Agent&amp;#125;i&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;nacos.security.ignore.urls&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;/,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-fe/public/**,/v1/auth/login,/v1/console/health/**,/v1/cs/**,/v1/ns/**,/v1/cmdb/**,/actuator/**,/v1/console/server/**&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;nacos.naming.distro.taskDispatchThreadCount&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;nacos.naming.distro.taskDispatchPeriod&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;200&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;nacos.naming.distro.batchSyncKeyCount&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;1000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;nacos.naming.distro.initDataRatio&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;0.9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;nacos.naming.distro.syncRetryDelay&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;5000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;nacos.naming.data.warmup&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;true&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;nacos.naming.expireInstance&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;true&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;启动容器&#34;&gt;&lt;a href=&#34;#启动容器&#34; class=&#34;headerlink&#34; title=&#34;启动容器&#34;&gt;&lt;/a&gt;启动容器&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker  run \&lt;br&gt;--name nacos -d \&lt;br&gt;-p 8848:8848 \&lt;br&gt;--privileged=true \&lt;br&gt;--restart=always \&lt;br&gt;-e JVM_XMS=256m \&lt;br&gt;-e JVM_XMX=256m \&lt;br&gt;-e MODE=standalone \&lt;br&gt;-e PREFER_HOST_MODE=hostname \&lt;br&gt;-v /data/nacos/logs:/home/nacos/logs \&lt;br&gt;-v /data/nacos/init.d/custom.properties:/home/nacos/init.d/custom.properties \&lt;br&gt;nacos/nacos-server&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;访问&#34;&gt;&lt;a href=&#34;#访问&#34; class=&#34;headerlink&#34; title=&#34;访问&#34;&gt;&lt;/a&gt;访问&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;地址&lt;/td&gt;
+&lt;td&gt;http:&amp;#x2F;&amp;#x2F;宿主ip:8848&amp;#x2F;nacos&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;用户名&lt;/td&gt;
+&lt;td&gt;nacos&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;密码&lt;/td&gt;
+&lt;td&gt;nacos&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(6)-%E5%AE%89%E8%A3%85Nginx/</guid>
+            <title>Docker(6)-安装Nginx</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(6)-%E5%AE%89%E8%A3%85Nginx/</link>
+            <category>Docker</category>
+            <category>LINUX</category>
+            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
+&lt;p&gt;公众号：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/icons/wx.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;QQ群：&lt;a href=&#34;http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21&#34;&gt;806951874&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;在Docker中安装Nginx&#34;&gt;&lt;a href=&#34;#在Docker中安装Nginx&#34; class=&#34;headerlink&#34; title=&#34;在Docker中安装Nginx&#34;&gt;&lt;/a&gt;在Docker中安装Nginx&lt;/h1&gt;&lt;h2 id=&#34;前言-1&#34;&gt;&lt;a href=&#34;#前言-1&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;由于nginx是一个反向代理服务器，涉及到一些配置。如果你对nginx一点都不懂的话，那么，你在学习下面的内容的时候，可能就会不太懂，因为我们是要在docker中操作nginx，同时需要编辑一些配置文件。&lt;/p&gt;
+&lt;p&gt;适合对于nginx有一定了解的朋友参考使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;下载nginx镜像&#34;&gt;&lt;a href=&#34;#下载nginx镜像&#34; class=&#34;headerlink&#34; title=&#34;下载nginx镜像&#34;&gt;&lt;/a&gt;下载nginx镜像&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker pull nginx&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;查看下载的nginx镜像&#34;&gt;&lt;a href=&#34;#查看下载的nginx镜像&#34; class=&#34;headerlink&#34; title=&#34;查看下载的nginx镜像&#34;&gt;&lt;/a&gt;查看下载的nginx镜像&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker images&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527832301031-bf1ad67d-a6a2-4c20-888e-970c41c7ae9d.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;启动nginx镜像容器&#34;&gt;&lt;a href=&#34;#启动nginx镜像容器&#34; class=&#34;headerlink&#34; title=&#34;启动nginx镜像容器&#34;&gt;&lt;/a&gt;启动nginx镜像容器&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -d -p 80:80 --name nginx nginx&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;nginx是一个代理，端口默认是80&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;访问服务器&#34;&gt;&lt;a href=&#34;#访问服务器&#34; class=&#34;headerlink&#34; title=&#34;访问服务器&#34;&gt;&lt;/a&gt;访问服务器&lt;/h2&gt;&lt;p&gt;在浏览器中输入：&lt;a href=&#34;http://192.168.56.128/%EF%BC%8C%E5%9B%9E%E8%BD%A6%E7%9C%8B%E4%B8%80%E4%B8%8B%E6%95%88%E6%9E%9C%EF%BC%9A&#34;&gt;http://192.168.56.128:80/，回车看一下效果：&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527832846216-4d03013e-d0cd-434f-9069-10f2e38e67bf.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;出现上面的页面，说明nginx已经正常启动了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;将nginx的配置文件、日志目录映射到宿主机&#34;&gt;&lt;a href=&#34;#将nginx的配置文件、日志目录映射到宿主机&#34; class=&#34;headerlink&#34; title=&#34;将nginx的配置文件、日志目录映射到宿主机&#34;&gt;&lt;/a&gt;将nginx的配置文件、日志目录映射到宿主机&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;在测试环境、生产环境的话，都是需要编辑一些nginx的配置的，最常见的修改就是nginx.conf文件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;将nginx的配置文件、日志目录等，映射到宿主机上进行管理维护，是很方便的，也是推荐的做法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;在宿主机中创建nginx相关目录&#34;&gt;&lt;a href=&#34;#在宿主机中创建nginx相关目录&#34; class=&#34;headerlink&#34; title=&#34;在宿主机中创建nginx相关目录&#34;&gt;&lt;/a&gt;在宿主机中创建nginx相关目录&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;首先在宿主机中创建一个用于存放nginx相关文件的目录，这里我就在 &amp;#x2F;opt 目录下新建了一个 docker_nginx 的目录文件。&lt;/p&gt;
+&lt;p&gt;然后在 docker_nginx 目录下新建 conf 、log 、www 这三个目录，目录含义是：&lt;/p&gt;
+&lt;p&gt;conf：存放nginx的相关配置文件，比如 nginx.conf&lt;/p&gt;
+&lt;p&gt;log：存放nginx的日志文件&lt;/p&gt;
+&lt;p&gt;www：存放相关静态资源文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最终的目录结构如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527833862890-ad0217c0-5bf3-46c9-b332-88a7b04da6ca.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
+&lt;p&gt;复制一份nginx.conf文件到宿主机对应的目录下：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker cp nginx:/etc/nginx/nginx.conf /opt/docker_nginx/conf/nginx.conf&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;这条命令的作用，就是复制nginx的docker容器中的 &amp;#x2F;etc&amp;#x2F;nginx&amp;#x2F;nginx.conf 文件到宿主机下的 &amp;#x2F;opt&amp;#x2F;docker_nginx&amp;#x2F;conf&amp;#x2F; 目录下。这样可以直接进行默认的配置文件的编辑。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;看一下默认的nginx.conf配置文件的内容：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527834624021-ba784d6a-6c4a-4d0d-a2dc-e2885999314d.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
+&lt;p&gt;编辑 nginx 的配置文件：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们暂时就修改其中的 access_log 、error_log 、root 这些基本配置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;从上图可以看到，配置文件最下面，有这样一段配置：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;include /etc/nginx/conf.d/*.conf;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;意思也就是引入了其他配置文件。&lt;/p&gt;
+&lt;p&gt;既然我们要在宿主机上管理nginx的配置文件，所以对于上面的include引入的文件，我们也要复制一份到对应的宿主机上。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们进入nginx容器，去查看一下这个路径下面有哪些文件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进入nginx容器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker exec -it e4 /bin/bash&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其中的 e4 指的是容器ID的前2位字符串。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;查看 &amp;#x2F;etc&amp;#x2F;nginx&amp;#x2F;conf.d&amp;#x2F; 目录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527835373585-7316d3b7-e789-4f62-8a6b-8c3953633697.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527835373585-7316d3b7-e789-4f62-8a6b-8c3953633697.png&#34;&gt;http://www.cicoding.cn/images/docker/1527835373585-7316d3b7-e789-4f62-8a6b-8c3953633697.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以看到，里面有一个default.conf配置文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查看 default.conf配置文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527835468543-cbfd5cfc-ffcf-4512-abb9-46331febd3ae.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527835468543-cbfd5cfc-ffcf-4512-abb9-46331febd3ae.png&#34;&gt;http://www.cicoding.cn/images/docker/1527835468543-cbfd5cfc-ffcf-4512-abb9-46331febd3ae.png&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其中用黄色圈起来的部分，是我们要修改的内容（上面说过了，目前就先简单修改基本的配置，只是方便大家看到一下效果，至于其他的配置，可自行按照这样的步骤自行编辑）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;复制一份default.conf文件到宿主机对应的目录下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker cp nginx:/etc/nginx/conf.d/default.conf /opt/docker_nginx/conf/default.conf&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;查看一下目前宿主机下面的nginx配置文件情况&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527837882497-2ef89731-6d8c-4639-b6cb-2c9d4034a2cd.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527837882497-2ef89731-6d8c-4639-b6cb-2c9d4034a2cd.png&#34;&gt;http://www.cicoding.cn/images/docker/1527837882497-2ef89731-6d8c-4639-b6cb-2c9d4034a2cd.png&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;同样的，我们也需要把nginx的默认首页文件，复制到宿主机下面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker cp nginx:/usr/share/nginx/html/index.html /opt/docker_nginx/www/&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;编辑宿主机上的nginx相关配置文件&#34;&gt;&lt;a href=&#34;#编辑宿主机上的nginx相关配置文件&#34; class=&#34;headerlink&#34; title=&#34;编辑宿主机上的nginx相关配置文件&#34;&gt;&lt;/a&gt;编辑宿主机上的nginx相关配置文件&lt;/h3&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;首先修改 nginx.conf 配置文件&lt;/strong&gt;，修改后结果是：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527838034307-65530160-3710-4246-a816-9703af4fc524.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527838034307-65530160-3710-4246-a816-9703af4fc524.png&#34;&gt;http://www.cicoding.cn/images/docker/1527838034307-65530160-3710-4246-a816-9703af4fc524.png&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其中error_log的配置，就是我们前面在宿主机下面创建的nginx的log目录。&lt;/p&gt;
+&lt;p&gt;注意需要修改最下面的include配置，指定宿主机下面的default.conf配置文件（default&amp;#x2F;conf与nginx.conf在相同目录下，所以直接写名称即可，无需指定具体目录路径）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;编辑default.conf文件&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;vim /opt/docker_nginx/conf/default.conf&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;修改文件中的 access_log 以及 root 配置，效果如下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527838387330-9501c9c8-1d8b-44e0-a177-d61a8c4699fa.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;同样，access_log 以及 root 的配置，就是我们前面在宿主机下面创建的nginx的相关目录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;重启nginx容器&#34;&gt;&lt;a href=&#34;#重启nginx容器&#34; class=&#34;headerlink&#34; title=&#34;重启nginx容器&#34;&gt;&lt;/a&gt;重启nginx容器&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;先停止之前启动的nginx容器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker stop e4s&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;重启nginx容器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这次重启nginx容器的话，就不能使用一开始那种简单的run命令了，需要添加一些参数，具体命令如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -p 80:80 --name nginx-new \&lt;br&gt;    -v /opt/docker_nginx/www:/usr/share/nginx/html \&lt;br&gt;    -v /opt/docker_nginx/log:/var/log/nginx \&lt;br&gt;    -v /opt/docker_nginx/conf/nginx.conf:/etc/nginx/conf \&lt;br&gt;    -d nginx&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;这里的 -v 参数的含义是，将宿主机上的目录挂载到容器中的对应目录。&lt;/p&gt;
+&lt;p&gt;“：”冒号前面是宿主机的目录，后面是容器中的目录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有些朋友可能会不搞不明白冒号后面的容器路径是怎么来的，这里解释一下，其实很简单，就是指的是nginx的默认的日志路径、配置文件路径。&lt;/p&gt;
+&lt;p&gt;你在nginx容器中去查看一下nginx.conf以及default.conf配置文件的内容，就可以看到log和配置文件的默认存储路径了。文章上面也有截图出来nginx.conf以及default.conf的默认配置截图，可自行翻阅到上面查看。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;查看启动的nginx容器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527839391119-1d98218f-62eb-46d4-8c8e-3047e30c773c.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;修改nginx默认首页内容&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;先看一下默认首页的样子：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527840233785-22a458d3-1123-4249-b671-179ccc7e41fe.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我们把这个首页内容全部删除掉，加入我们自己的内容！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;编辑宿主机下面的 &amp;#x2F;opt&amp;#x2F;docker_nginx&amp;#x2F;www&amp;#x2F;index.html 文件：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;vim /opt/docker_nginx/www/index.html&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;修改之后如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527840219657-335ad4a0-276f-47d3-b49a-0b55fa8299fd.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重新访问服务器域名，查看最终效果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527841014053-e2e485f8-a08e-40d7-bc05-603c7d32d43e.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果页面出现中文乱码的问题，可以在 index.html 好 标签里面加入：&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs html&#34;&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;meta&lt;/span&gt; &lt;span class=&#34;hljs-attr&#34;&gt;http-equiv&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;Content-Type&amp;quot;&lt;/span&gt; &lt;span class=&#34;hljs-attr&#34;&gt;content&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;text/html; charset=UTF-8&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最终index.html文件内容如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs html&#34;&gt;&lt;span class=&#34;hljs-meta&#34;&gt;&amp;lt;!DOCTYPE &lt;span class=&#34;hljs-keyword&#34;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;meta&lt;/span&gt; &lt;span class=&#34;hljs-attr&#34;&gt;http-equiv&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;Content-Type&amp;quot;&lt;/span&gt; &lt;span class=&#34;hljs-attr&#34;&gt;content&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;text/html; charset=UTF-8&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;Welcome to nginx!&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;language-css&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;    &lt;span class=&#34;hljs-selector-tag&#34;&gt;body&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;        &lt;span class=&#34;hljs-attribute&#34;&gt;width&lt;/span&gt;: &lt;span class=&#34;hljs-number&#34;&gt;35em&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;        &lt;span class=&#34;hljs-attribute&#34;&gt;margin&lt;/span&gt;: &lt;span class=&#34;hljs-number&#34;&gt;0&lt;/span&gt; auto;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;        &lt;span class=&#34;hljs-attribute&#34;&gt;font-family&lt;/span&gt;: Tahoma, Verdana, Arial, sans-serif;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;&lt;/span&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;h1&lt;/span&gt;&amp;gt;&lt;/span&gt;欢迎访问!&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;h1&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;当前nginx服务来源于Docker容器&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&amp;lt;/html&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(7)-Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+            <title>Docker(7)-Docker常用命令</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(7)-Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+            <category>Docker</category>
+            <category>LINUX</category>
+            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
+&lt;p&gt;公众号：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/icons/wx.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;QQ群：&lt;a href=&#34;http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21&#34;&gt;806951874&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;Docker常用命令大全&#34;&gt;&lt;a href=&#34;#Docker常用命令大全&#34; class=&#34;headerlink&#34; title=&#34;Docker常用命令大全&#34;&gt;&lt;/a&gt;Docker常用命令大全&lt;/h1&gt;&lt;h2 id=&#34;Docker帮助命令&#34;&gt;&lt;a href=&#34;#Docker帮助命令&#34; class=&#34;headerlink&#34; title=&#34;Docker帮助命令&#34;&gt;&lt;/a&gt;Docker帮助命令&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Docker 全部命令可通过：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker --help&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201009113009.png&#34; alt=&#34;image-20201009113001805&#34;&gt;&lt;/p&gt;
+&lt;p&gt;比如想查看日志操作方法可使用以下命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker logs --help&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201009113238.png&#34; alt=&#34;image-20201009113237094&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;镜像常用命令&#34;&gt;&lt;a href=&#34;#镜像常用命令&#34; class=&#34;headerlink&#34; title=&#34;镜像常用命令&#34;&gt;&lt;/a&gt;镜像常用命令&lt;/h2&gt;&lt;h3 id=&#34;docker-images-查看本地镜像&#34;&gt;&lt;a href=&#34;#docker-images-查看本地镜像&#34; class=&#34;headerlink&#34; title=&#34;docker images 查看本地镜像&#34;&gt;&lt;/a&gt;docker images 查看本地镜像&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker images [OPTIONS] [REPOSITORY[:TAG]]&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;OPTIONS说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;-a :&lt;/strong&gt; 列出本地所有的镜像（含中间映像层，默认情况下，过滤掉中间映像层）；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-q :&lt;/strong&gt; 只显示镜像ID。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–digests :&lt;/strong&gt; 显示镜像的摘要信息；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–no-trunc :&lt;/strong&gt; 显示完整的镜像信息；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-f :&lt;/strong&gt; 显示满足条件的镜像；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–format :&lt;/strong&gt; 指定返回值的模板文件；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;docker-search-从Docker-Hub查找镜像&#34;&gt;&lt;a href=&#34;#docker-search-从Docker-Hub查找镜像&#34; class=&#34;headerlink&#34; title=&#34;docker search : 从Docker Hub查找镜像&#34;&gt;&lt;/a&gt;docker search : 从Docker Hub查找镜像&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker search [OPTIONS] TERM&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;OPTIONS说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;-s :&lt;/strong&gt;&lt;/em&gt; &lt;strong&gt;列出收藏数不小于指定值的镜像。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–automated :&lt;/strong&gt; 只列出 automated build类型的镜像；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–no-trunc :&lt;/strong&gt; 显示完整的镜像描述；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;从Docker Hub查找所有镜像名包含java，并且收藏数大于10的镜像&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker search -s 10 java&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;docker-pull-从镜像仓库中拉取或者更新指定镜像&#34;&gt;&lt;a href=&#34;#docker-pull-从镜像仓库中拉取或者更新指定镜像&#34; class=&#34;headerlink&#34; title=&#34;docker pull :  从镜像仓库中拉取或者更新指定镜像&#34;&gt;&lt;/a&gt;docker pull :  从镜像仓库中拉取或者更新指定镜像&lt;/h3&gt;&lt;figure class=&#34;highlight elixir&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs elixir&#34;&gt;docker pull [&lt;span class=&#34;hljs-title class_&#34;&gt;OPTIONS&lt;/span&gt;] &lt;span class=&#34;hljs-title class_&#34;&gt;NAME&lt;/span&gt;[&lt;span class=&#34;hljs-symbol&#34;&gt;:TAG|&lt;/span&gt;&lt;span class=&#34;hljs-variable&#34;&gt;@DIGEST&lt;/span&gt;]&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;OPTIONS说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;-a :&lt;/strong&gt; 拉取所有 tagged 镜像&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–disable-content-trust :&lt;/strong&gt; 忽略镜像的校验,默认开启&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;docker pull redis等于一下命令，latest是最新的版本，也可以指定某个版本号&lt;/span&gt;&lt;br&gt;docker pull redis:latest&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;docker-rmi-删除本地一个或多少镜像。&#34;&gt;&lt;a href=&#34;#docker-rmi-删除本地一个或多少镜像。&#34; class=&#34;headerlink&#34; title=&#34;docker rmi : 删除本地一个或多少镜像。&#34;&gt;&lt;/a&gt;docker rmi : 删除本地一个或多少镜像。&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker rmi [OPTIONS] IMAGE [IMAGE...]&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;OPTIONS说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;-f :&lt;/strong&gt; 强制删除；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–no-prune :&lt;/strong&gt; 不移除该镜像的过程镜像，默认移除；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;容器常用命令&#34;&gt;&lt;a href=&#34;#容器常用命令&#34; class=&#34;headerlink&#34; title=&#34;容器常用命令&#34;&gt;&lt;/a&gt;容器常用命令&lt;/h2&gt;&lt;h3 id=&#34;docker-run-：创建一个新的容器并运行一个命令&#34;&gt;&lt;a href=&#34;#docker-run-：创建一个新的容器并运行一个命令&#34; class=&#34;headerlink&#34; title=&#34;docker run ：创建一个新的容器并运行一个命令&#34;&gt;&lt;/a&gt;docker run ：创建一个新的容器并运行一个命令&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run [OPTIONS] IMAGE [COMMAND] [ARG...]&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;OPTIONS说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;-d:&lt;/strong&gt;&lt;/em&gt;  &lt;strong&gt;后台运行容器，并返回容器ID;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;–name&amp;#x3D;&amp;quot;nginx-lb&amp;quot;:&lt;/strong&gt;&lt;/em&gt;  &lt;strong&gt;为容器指定一个名称；&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;-p:&lt;/strong&gt;&lt;/em&gt; &lt;strong&gt;指定端口映射，格式为：主机(宿主)端口:容器端口&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;–volume , -v:&lt;/strong&gt;&lt;/em&gt;  &lt;strong&gt;绑定一个卷&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;-i:&lt;/strong&gt;&lt;/em&gt; &lt;strong&gt;以交互模式运行容器，通常与 -t 同时使用；&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-a stdin:&lt;/strong&gt;  指定标准输入输出内容类型，可选 STDIN&amp;#x2F;STDOUT&amp;#x2F;STDERR 三项；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-P:&lt;/strong&gt;  随机端口映射，容器内部端口&lt;strong&gt;随机&lt;/strong&gt;映射到主机的高端口&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-t:&lt;/strong&gt;  为容器重新分配一个伪输入终端，通常与 -i 同时使用；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–dns 8.8.8.8:&lt;/strong&gt;  指定容器使用的DNS服务器，默认和宿主一致；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–dns-search example.com:&lt;/strong&gt;  指定容器DNS搜索域名，默认和宿主一致；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-h &amp;quot;mars&amp;quot;:&lt;/strong&gt;  指定容器的hostname；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-e username&amp;#x3D;&amp;quot;ritchie&amp;quot;:&lt;/strong&gt;  设置环境变量；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–env-file&amp;#x3D;[]:&lt;/strong&gt;  从指定文件读入环境变量；&lt;/li&gt;
+&lt;li&gt;–env key&amp;#x3D;value 添加配置变量&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–cpuset&amp;#x3D;&amp;quot;0-2&amp;quot; or –cpuset&amp;#x3D;&amp;quot;0,1,2&amp;quot;:&lt;/strong&gt;  绑定容器到指定CPU运行；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-m :&lt;/strong&gt; 设置容器使用内存最大值；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–net&amp;#x3D;&amp;quot;bridge&amp;quot;:&lt;/strong&gt;  指定容器的网络连接类型，支持 bridge&amp;#x2F;host&amp;#x2F;none&amp;#x2F;container:&amp;lt;name|id&amp;gt; 四种类型；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–link&amp;#x3D;[]:&lt;/strong&gt;  添加链接到另一个容器；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–expose&amp;#x3D;[]:&lt;/strong&gt;  开放一个端口或一组端口；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;docker-ps-查看当前运行容器&#34;&gt;&lt;a href=&#34;#docker-ps-查看当前运行容器&#34; class=&#34;headerlink&#34; title=&#34;docker ps  查看当前运行容器&#34;&gt;&lt;/a&gt;docker ps  查看当前运行容器&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527507117875-46795fe1-3255-46c0-a2bc-6bde4b1e51dd.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;docker-exec-：-在运行的容器中执行命令&#34;&gt;&lt;a href=&#34;#docker-exec-：-在运行的容器中执行命令&#34; class=&#34;headerlink&#34; title=&#34;docker exec ： 在运行的容器中执行命令&#34;&gt;&lt;/a&gt;docker exec ： 在运行的容器中执行命令&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker exec [OPTIONS] CONTAINER COMMAND [ARG...]　　&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;OPTIONS说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;-i :&lt;/strong&gt;&lt;/em&gt; &lt;strong&gt;即使没有附加也保持STDIN 打开&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;-t :&lt;/strong&gt;&lt;/em&gt; &lt;strong&gt;分配一个伪终端&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-d :&lt;/strong&gt; 分离模式: 在后台运行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;docker-start-x2F-stop-x2F-restart-docker-启动、停止、重启&#34;&gt;&lt;a href=&#34;#docker-start-x2F-stop-x2F-restart-docker-启动、停止、重启&#34; class=&#34;headerlink&#34; title=&#34;docker start&amp;#x2F;stop&amp;#x2F;restart (docker 启动、停止、重启)&#34;&gt;&lt;/a&gt;docker start&amp;#x2F;stop&amp;#x2F;restart (docker 启动、停止、重启)&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker kill CONTAINER 强制停止&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;退出容器-exit&#34;&gt;&lt;a href=&#34;#退出容器-exit&#34; class=&#34;headerlink&#34; title=&#34;退出容器 exit&#34;&gt;&lt;/a&gt;退出容器 exit&lt;/h3&gt;&lt;h3 id=&#34;删除container&#34;&gt;&lt;a href=&#34;#删除container&#34; class=&#34;headerlink&#34; title=&#34;删除container&#34;&gt;&lt;/a&gt;删除container&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker rm 镜像名称或者容器id(container)&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;批量删除 docker rm -f | $(docker ps -a -q)和docker ps -a -q | xargs docker rm&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;docker-logs-获取容器的日志&#34;&gt;&lt;a href=&#34;#docker-logs-获取容器的日志&#34; class=&#34;headerlink&#34; title=&#34;docker logs :  获取容器的日志&#34;&gt;&lt;/a&gt;docker logs :  获取容器的日志&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker logs [OPTIONS] CONTAINER&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;OPTIONS说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;-f :&lt;/strong&gt;  跟踪日志输出&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-t :&lt;/strong&gt;  显示时间戳&lt;/li&gt;
+&lt;li&gt;**–tail : **仅列出最新N条容器日志&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–since :&lt;/strong&gt; 显示某个开始时间的所有日志&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;查看nexus最新的200条实时日志：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker logs -f --tail=200 nexus3&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201009114334.png&#34; alt=&#34;image-20201009114332847&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;docker-top-查看容器中运行的进程信息，支持-ps-命令参数。&#34;&gt;&lt;a href=&#34;#docker-top-查看容器中运行的进程信息，支持-ps-命令参数。&#34; class=&#34;headerlink&#34; title=&#34;docker top : 查看容器中运行的进程信息，支持 ps 命令参数。&#34;&gt;&lt;/a&gt;docker top : 查看容器中运行的进程信息，支持 ps 命令参数。&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201009140626.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;查看所有运行容器的进程信息。&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;for i in  `docker ps |grep Up|awk &amp;#x27;&amp;#123;print $1&amp;#125;&amp;#x27;`;do echo \ &amp;amp;&amp;amp;docker top $i; done&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;docker-inspect-获取容器-x2F-镜像的元数据。&#34;&gt;&lt;a href=&#34;#docker-inspect-获取容器-x2F-镜像的元数据。&#34; class=&#34;headerlink&#34; title=&#34;docker inspect :  获取容器&amp;#x2F;镜像的元数据。&#34;&gt;&lt;/a&gt;docker inspect :  获取容器&amp;#x2F;镜像的元数据。&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker inspect [OPTIONS] NAME|ID [NAME|ID...]&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;OPTIONS说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;-f :&lt;/strong&gt; 指定返回值的模板文件。&lt;/li&gt;
+&lt;li&gt;**-s : **显示总的文件大小。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–type :&lt;/strong&gt; 为指定类型返回JSON。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;查看当前容器分配的ip&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201009140650.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;docker-cp-用于容器与主机之间的数据拷贝。&#34;&gt;&lt;a href=&#34;#docker-cp-用于容器与主机之间的数据拷贝。&#34; class=&#34;headerlink&#34; title=&#34;docker cp : 用于容器与主机之间的数据拷贝。&#34;&gt;&lt;/a&gt;docker cp : 用于容器与主机之间的数据拷贝。&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-&lt;br&gt;docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;OPTIONS说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;-L :&lt;/strong&gt; 保持源目标中的链接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;实例&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;将主机&amp;#x2F;www&amp;#x2F;runoob目录拷贝到容器96f7f14e99ab的&amp;#x2F;www目录下。&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker cp /www/runoob 96f7f14e99ab:/www/&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;将容器96f7f14e99ab的&amp;#x2F;www目录拷贝到主机的&amp;#x2F;tmp目录中。&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker cp  96f7f14e99ab:/www /tmp/&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;DockerFile&#34;&gt;&lt;a href=&#34;#DockerFile&#34; class=&#34;headerlink&#34; title=&#34;DockerFile&#34;&gt;&lt;/a&gt;DockerFile&lt;/h2&gt;&lt;h3 id=&#34;docker-build-命令用于使用-Dockerfile-创建镜像。&#34;&gt;&lt;a href=&#34;#docker-build-命令用于使用-Dockerfile-创建镜像。&#34; class=&#34;headerlink&#34; title=&#34;docker build  命令用于使用 Dockerfile 创建镜像。&#34;&gt;&lt;/a&gt;docker build  命令用于使用 Dockerfile 创建镜像。&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker build [OPTIONS] PATH | URL | -&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;OPTIONS说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;–build-arg&amp;#x3D;[] :&lt;/strong&gt; 设置镜像创建时的变量；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–cpu-shares :&lt;/strong&gt; 设置 cpu 使用权重；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–cpu-period :&lt;/strong&gt; 限制 CPU CFS周期；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–cpu-quota :&lt;/strong&gt; 限制 CPU CFS配额；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–cpuset-cpus :&lt;/strong&gt; 指定使用的CPU id；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–cpuset-mems :&lt;/strong&gt; 指定使用的内存 id；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–disable-content-trust :&lt;/strong&gt; 忽略校验，默认开启；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-f :&lt;/strong&gt; 指定要使用的Dockerfile路径；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–force-rm :&lt;/strong&gt; 设置镜像过程中删除中间容器；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–isolation :&lt;/strong&gt; 使用容器隔离技术；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–label&amp;#x3D;[] :&lt;/strong&gt; 设置镜像使用的元数据；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-m :&lt;/strong&gt; 设置内存最大值；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–memory-swap :&lt;/strong&gt; 设置Swap的最大值为内存+swap，”-1”表示不限swap；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–no-cache :&lt;/strong&gt; 创建镜像的过程不使用缓存；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–pull :&lt;/strong&gt; 尝试去更新镜像的新版本；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–quiet, -q :&lt;/strong&gt; 安静模式，成功后只输出镜像 ID；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–rm :&lt;/strong&gt; 设置镜像成功后删除中间容器；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–shm-size :&lt;/strong&gt; 设置&amp;#x2F;dev&amp;#x2F;shm的大小，默认值是64M；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–ulimit :&lt;/strong&gt; Ulimit配置。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–tag, -t:&lt;/strong&gt;  镜像的名字及标签，通常 name:tag 或者 name 格式；可以在一次构建中为一个镜像设置多个标签。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;–network:&lt;/strong&gt;  默认 default。在构建期间设置RUN指令的网络模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;实例&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用当前目录的 Dockerfile 创建镜像，标签为 runoob&amp;#x2F;ubuntu:v1。&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker build -t runoob/ubuntu:v1 .&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;使用URL &lt;strong&gt;github.com&amp;#x2F;creack&amp;#x2F;docker-firefox&lt;/strong&gt; 的 Dockerfile 创建镜像。&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker build github.com/creack/docker-firefox&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;也可以通过 -f Dockerfile 文件的位置：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker build -f /path/to/a/Dockerfile .&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(5)-%E5%AE%89%E8%A3%85MySQL/</guid>
+            <title>Docker(5)-安装MySQL</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(5)-%E5%AE%89%E8%A3%85MySQL/</link>
+            <category>Docker</category>
+            <category>LINUX</category>
+            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
+&lt;p&gt;公众号：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/icons/wx.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;QQ群：&lt;a href=&#34;http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21&#34;&gt;806951874&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;在Docker中安装Mysql&#34;&gt;&lt;a href=&#34;#在Docker中安装Mysql&#34; class=&#34;headerlink&#34; title=&#34;在Docker中安装Mysql&#34;&gt;&lt;/a&gt;在Docker中安装Mysql&lt;/h1&gt;&lt;h2 id=&#34;前言-1&#34;&gt;&lt;a href=&#34;#前言-1&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;前言&lt;/p&gt;
+&lt;p&gt;此篇幅内容较多，讲解的很详细，也有很多知识点。能耐心认真的读完，就很不错了~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一般情况下，都会永久性的配置镜像加速，在Linux中修改 &amp;#x2F;etc&amp;#x2F;docker&amp;#x2F;daemon.json 文件，填入以下内容：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&amp;#123;&lt;br&gt;    &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;https://registry.docker-cn.com&amp;quot;]&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果daemon.json不存在的话，需要自己创建一下。&lt;/p&gt;
+&lt;p&gt;文件修改保存成功之后，记得重启一下Docker服务，以便让这个镜像加速生效。&lt;/p&gt;
+&lt;p&gt;重启Docker服务&lt;/p&gt;
+&lt;p&gt;我们在【在centos系统中安装Docker】一节中讲过Docker随着服务器重启自动启动的内容，正好可以通过命令service docker restart来实现Docker服务的重启。&lt;/p&gt;
+&lt;p&gt;具体详情请查看 &lt;a href=&#34;https://yuque.com/zhoubang/docker/rqspmt#cuygcr&#34;&gt;https://yuque.com/zhoubang/docker/rqspmt#cuygcr&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;然后我们在Linux中执行命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;service docker restart&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;出现下图所示结果，表明Docker服务已经重新启动了！这样就可以永久性的使用Docker加速服务了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果不做特别的配置的话，之前处于运行状态的容器，随着Docker服务的重启也会停止运行。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;下载mysql镜像&#34;&gt;&lt;a href=&#34;#下载mysql镜像&#34; class=&#34;headerlink&#34; title=&#34;下载mysql镜像&#34;&gt;&lt;/a&gt;下载mysql镜像&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker pull mysql&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;如果配置了镜像加速，那么在下载mysql镜像或者其他比较大的文件的时候，会发现下载速度变得非常快！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;启动mysql容器&#34;&gt;&lt;a href=&#34;#启动mysql容器&#34; class=&#34;headerlink&#34; title=&#34;启动mysql容器&#34;&gt;&lt;/a&gt;启动mysql容器&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 --name=mysql mysql&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;其中 -e 的作用是用于设置环境变量，mysql默认用户名为root，则MYSQL_ROOT_PASSWORD即为root设置密码，即123456&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;查看运行的mysql容器&#34;&gt;&lt;a href=&#34;#查看运行的mysql容器&#34; class=&#34;headerlink&#34; title=&#34;查看运行的mysql容器&#34;&gt;&lt;/a&gt;查看运行的mysql容器&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker ps&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015011544.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;mysql容器已经正常启动了！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;进入mysql容器&#34;&gt;&lt;a href=&#34;#进入mysql容器&#34; class=&#34;headerlink&#34; title=&#34;进入mysql容器&#34;&gt;&lt;/a&gt;进入mysql容器&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;既然mysql服务启动了，如果我们想对mysql进行操作（比如进入命令行操作、客户端连接等操作），该怎么办？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;通过 docker exec 命令进入mysql容器：&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker exec -it c9 /bin/bash&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;其中的“c9”指的当前mysql容器ID的前面部分值（在上图就可以看出来mysql容器的ID是 c94faeed480a）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;回车运行效果如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015011544.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实这个时候，命令行控制台可以输入mysql相关的命令了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;连接mysql数据库&#34;&gt;&lt;a href=&#34;#连接mysql数据库&#34; class=&#34;headerlink&#34; title=&#34;连接mysql数据库&#34;&gt;&lt;/a&gt;连接mysql数据库&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;mysql -u root -p123456&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015011544.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这个就是我们非常熟悉的mysql命令行界面了！&lt;/p&gt;
+&lt;p&gt;我们可以在这里创建数据库、表等操作。再次印证了Docker的强大和方便！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527527324223-e0be6ce6-e27b-4ba9-9eb0-821cb8f0509e.jpeg&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;查看当前所有的数据库&#34;&gt;&lt;a href=&#34;#查看当前所有的数据库&#34; class=&#34;headerlink&#34; title=&#34;查看当前所有的数据库&#34;&gt;&lt;/a&gt;查看当前所有的数据库&lt;/h2&gt;&lt;p&gt;在mysql命令行中执行命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs mysql&#34;&gt;show databases;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015012343.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;完全就是和平常使用mysql一样。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;创建数据库、表、新增测试数据&#34;&gt;&lt;a href=&#34;#创建数据库、表、新增测试数据&#34; class=&#34;headerlink&#34; title=&#34;创建数据库、表、新增测试数据&#34;&gt;&lt;/a&gt;创建数据库、表、新增测试数据&lt;/h2&gt;&lt;h3 id=&#34;创建数据库&#34;&gt;&lt;a href=&#34;#创建数据库&#34; class=&#34;headerlink&#34; title=&#34;创建数据库&#34;&gt;&lt;/a&gt;创建数据库&lt;/h3&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs mysql&#34;&gt;create database docker_test;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;效果如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527527630068-b5963a1f-6e4b-4afb-90fa-6aff56bb5f2d.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里我就创建了一个数据库docker_test&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;选择数据库&#34;&gt;&lt;a href=&#34;#选择数据库&#34; class=&#34;headerlink&#34; title=&#34;选择数据库&#34;&gt;&lt;/a&gt;选择数据库&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;首先需要&lt;strong&gt;选择具体的数据库&lt;/strong&gt;，执行命令选择刚刚创建的数据库：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs mysql&#34;&gt;use docker_test&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;创建表&#34;&gt;&lt;a href=&#34;#创建表&#34; class=&#34;headerlink&#34; title=&#34;创建表&#34;&gt;&lt;/a&gt;创建表&lt;/h3&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs mysql&#34;&gt;create table test(name varchar(20),age int(11));&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;创建了test表，有2个字段：name、age&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;添加测试数据&#34;&gt;&lt;a href=&#34;#添加测试数据&#34; class=&#34;headerlink&#34; title=&#34;添加测试数据&#34;&gt;&lt;/a&gt;添加测试数据&lt;/h3&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs mysql&#34;&gt;insert into test values(&amp;quot;Kitty&amp;quot;,26),(&amp;quot;Tom&amp;quot;,18),(&amp;quot;Jack&amp;quot;,36);&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;这里就简单添加3条测试数据。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们查询一下数据是否存在于数据库中：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs mysql&#34;&gt;select * from test;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015013358.png&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一切OK！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;客户端连接mysql数据库&#34;&gt;&lt;a href=&#34;#客户端连接mysql数据库&#34; class=&#34;headerlink&#34; title=&#34;客户端连接mysql数据库&#34;&gt;&lt;/a&gt;客户端连接mysql数据库&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;既然mysql成功启动并运行，除了能在命令行中操作mysql数据库之外，肯定也是必须要能在客户端上连接和操作数据库才行。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;下面我就在我本地电脑上通过数据库客户端软件连接一下这个mysql数据库， 看看能不能正常连接和操作。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我使用的是IDEA自带的数据库软件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;新建连接mysql数据库&#34;&gt;&lt;a href=&#34;#新建连接mysql数据库&#34; class=&#34;headerlink&#34; title=&#34;新建连接mysql数据库&#34;&gt;&lt;/a&gt;新建连接mysql数据库&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015035759.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;输入正确的mysql相关信息，连接数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;输入完成之后，可以点击下方的 Test Connection 按钮，来测试连接是否正常。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;查看创建的数据库和表：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015040227.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;到此，mysql的相关服务已经正常访问和操作了。这和我们传统的使用mysql没有什么不同。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;客户端中操作表数据&#34;&gt;&lt;a href=&#34;#客户端中操作表数据&#34; class=&#34;headerlink&#34; title=&#34;客户端中操作表数据&#34;&gt;&lt;/a&gt;客户端中操作表数据&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;我们通过DataGrip客户端，在test表中手动再添加一条数据，然后我们在docker中看看是否能查看到新增的数据：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527529149115-b76ddbb0-d5d6-47c2-994a-5e6b7c86b9aa.png&#34; alt=&#34;在Docker中安装Mysql&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;【注意】：我这里添加了一条带有中文的数据。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;进入mysql容器中查询表数据&#34;&gt;&lt;a href=&#34;#进入mysql容器中查询表数据&#34; class=&#34;headerlink&#34; title=&#34;进入mysql容器中查询表数据&#34;&gt;&lt;/a&gt;进入mysql容器中查询表数据&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015040555.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;呀！是不是发现问题了~ 没错，中文乱码！怎么解决呢？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;mysql容器中解决表数据中文乱码&#34;&gt;&lt;a href=&#34;#mysql容器中解决表数据中文乱码&#34; class=&#34;headerlink&#34; title=&#34;mysql容器中解决表数据中文乱码&#34;&gt;&lt;/a&gt;mysql容器中解决表数据中文乱码&lt;/h3&gt;&lt;h4 id=&#34;查看mysql容器的ID&#34;&gt;&lt;a href=&#34;#查看mysql容器的ID&#34; class=&#34;headerlink&#34; title=&#34;查看mysql容器的ID&#34;&gt;&lt;/a&gt;查看mysql容器的ID&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015011544.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;进入mysql的docker容器&#34;&gt;&lt;a href=&#34;#进入mysql的docker容器&#34; class=&#34;headerlink&#34; title=&#34;进入mysql的docker容器&#34;&gt;&lt;/a&gt;进入mysql的docker容器&lt;/h4&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker exec -it 20 /bin/bash&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&#34;编辑mysql配置文件&#34;&gt;&lt;a href=&#34;#编辑mysql配置文件&#34; class=&#34;headerlink&#34; title=&#34;编辑mysql配置文件&#34;&gt;&lt;/a&gt;编辑mysql配置文件&lt;/h4&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;vim /etc/mysql/my.cnf&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;如果提示 vim: command not found 的错误信息，需要安装相关依赖包，执行下面两个命令即可：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;apt-get update&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;apt-get install vim&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;在my-cnf文件中加入以下配置&#34;&gt;&lt;a href=&#34;#在my-cnf文件中加入以下配置&#34; class=&#34;headerlink&#34; title=&#34;在my.cnf文件中加入以下配置&#34;&gt;&lt;/a&gt;在my.cnf文件中加入以下配置&lt;/h4&gt;&lt;figure class=&#34;highlight tex&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs tex&#34;&gt;[mysqld]&lt;br&gt;character-set-server=utf8 &lt;br&gt;[client]&lt;br&gt;default-character-set=utf8 &lt;br&gt;[mysql]&lt;br&gt;default-character-set=utf8&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;最终修改结果为：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527530651772-65e37c7b-f8bd-4600-82d3-bbc899c75588.png&#34; alt=&#34;在Docker中安装Mysql&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;重新进入mysql容器，查询表数据&lt;/strong&gt; ，显示结果为：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015041908.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可以看到，已经正常显示中文了！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;停止并重启mysql容器，再次查看效果&#34;&gt;&lt;a href=&#34;#停止并重启mysql容器，再次查看效果&#34; class=&#34;headerlink&#34; title=&#34;停止并重启mysql容器，再次查看效果&#34;&gt;&lt;/a&gt;停止并重启mysql容器，再次查看效果&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527531064156-dd3d8b97-58ea-45e1-a0a3-c197f1bf4053.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527531133633-c2fa79b6-d15b-4339-b062-ef0514e77940.png&#34; alt=&#34;在Docker中安装Mysql&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;客户端连接正常！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;进入mysql容器，查看表数据&#34;&gt;&lt;a href=&#34;#进入mysql容器，查看表数据&#34; class=&#34;headerlink&#34; title=&#34;进入mysql容器，查看表数据&#34;&gt;&lt;/a&gt;进入mysql容器，查看表数据&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201015085429.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;mysql容器重启之后，查询数据正常显示中文！一切没什么问题了~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;通过commit命令提交新的镜像&#34;&gt;&lt;a href=&#34;#通过commit命令提交新的镜像&#34; class=&#34;headerlink&#34; title=&#34;通过commit命令提交新的镜像&#34;&gt;&lt;/a&gt;通过commit命令提交新的镜像&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;根据在mysql容器中所做的更改，创建新的mysql镜像。&lt;/p&gt;
+&lt;p&gt;回想一下，我们在mysql容器中做了什么更改？&lt;/p&gt;
+&lt;p&gt;创建数据库、表、新增数据、修改my.cnf配置文件，就是这些吧~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用&lt;em&gt;&lt;strong&gt;commit&lt;/strong&gt;&lt;/em&gt;命令提交新镜像&lt;/p&gt;
+&lt;p&gt;通过在Linux命令行中执行命令，提交新的镜像：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker commit c9 mysql-new&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;其中，“c9”就是指的容器ID，新的镜像名称为“mysql-new”。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527531803451-9e5877e4-43d7-4661-a577-961c2332fe2d.png&#34; alt=&#34;在Docker中安装Mysql&#34;&gt;&lt;/p&gt;
+&lt;p&gt;查看所有镜像列表：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527532053082-2e7691e6-6219-455b-906d-f4534476b913.png&#34; alt=&#34;在Docker中安装Mysql&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;是不是发现了我们创建的新的镜像mysql-new了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;启动新创建的mysql镜像&#34;&gt;&lt;a href=&#34;#启动新创建的mysql镜像&#34; class=&#34;headerlink&#34; title=&#34;启动新创建的mysql镜像&#34;&gt;&lt;/a&gt;启动新创建的mysql镜像&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527532239704-6e772c1c-551f-42f6-9b45-39137f38bea5.png&#34; alt=&#34;在Docker中安装Mysql&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由于上面我们已经运行了一个mysql的容器了，端口是3306，所以我们新运行一个mysql容器的时候，端口号就不能是3306了，这里我指定为3307，且容器的别名是mysql-new，方便区分查看。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;进入新创建的mysql容器&#34;&gt;&lt;a href=&#34;#进入新创建的mysql容器&#34; class=&#34;headerlink&#34; title=&#34;进入新创建的mysql容器&#34;&gt;&lt;/a&gt;进入新创建的mysql容器&lt;/h3&gt;&lt;h4 id=&#34;查看mysql数据库信息&#34;&gt;&lt;a href=&#34;#查看mysql数据库信息&#34; class=&#34;headerlink&#34; title=&#34;查看mysql数据库信息&#34;&gt;&lt;/a&gt;查看mysql数据库信息&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527532534611-7677fed8-a17e-463c-93bb-62a1f7dfbb21.png&#34; alt=&#34;在Docker中安装Mysql&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;查看my-cnf配置文件内容&#34;&gt;&lt;a href=&#34;#查看my-cnf配置文件内容&#34; class=&#34;headerlink&#34; title=&#34;查看my.cnf配置文件内容&#34;&gt;&lt;/a&gt;查看my.cnf配置文件内容&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527532760600-5a1830ab-633e-4d00-a15a-23b6c2e0d677.png&#34; alt=&#34;在Docker中安装Mysql&#34;&gt;&lt;/p&gt;
+&lt;p&gt;从上面2张图中，可以明显的看到，我们之前创建的数据库docker_test、表test，都没有了！但是修改的my.cnf配置文件的内容还是保留着的。&lt;/p&gt;
+&lt;p&gt;why？？？ 为什么会这样呢？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;官方文档在commit命令的介绍中，有这样一段话：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The commit operation will not include any data contained in volumes mounted inside the container.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;意思是commit操作并不会包含容器内挂载数据卷中的数据。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;如果对于“数据卷”不了解的话，确实看不懂是什么意思。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;数据卷与数据卷容器&#34;&gt;&lt;a href=&#34;#数据卷与数据卷容器&#34; class=&#34;headerlink&#34; title=&#34;数据卷与数据卷容器&#34;&gt;&lt;/a&gt;数据卷与数据卷容器&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;数据卷与数据卷容器&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;生产环境中使用Docker的过程中，往往需要对数据进行持久化，或者需要在多个容器之间进行数据共享，这必然涉及容器的数据管理操作。&lt;/p&gt;
+&lt;p&gt;容器中管理数据主要有两种方式：&lt;/p&gt;
+&lt;p&gt;数据卷（Data Volumes）：数据卷是一个可供容器使用的特殊目录，它将主机操作系统目录直接映射进容器。&lt;/p&gt;
+&lt;p&gt;数据卷容器（Data Volume Containers）：数据卷容器也是一个容器，但是它的目的是专门用来提供数据卷，供其他容器挂载使用的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;根据官方文档对于commit的介绍中，可以猜测到为何之前创建的数据库、表都不见了，原因是因为mysql容器的挂载数据卷引起的。&lt;/p&gt;
+&lt;p&gt;我们可以通过命令查看到别名是“mysql”的容器挂载数据卷的目录。&lt;/p&gt;
+&lt;p&gt;看一下我们的“mysql”容器的ID信息，方便查看。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527546716034-2e7873e1-883c-4d60-bdd6-bd75962b403a.png&#34; alt=&#34;在Docker中安装Mysql&#34;&gt;&lt;/p&gt;
+&lt;p&gt;通过命令docker inspect查看mysql这个容器的数据卷挂载信息：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker inspect c9&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;执行命令之后，由于显示的内容比较多，这里我们就贴一下重要的信息：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527546766842-6a1ebb25-6a86-4a67-b202-05382a3ca083.png&#34; alt=&#34;在Docker中安装Mysql&#34;&gt;&lt;/p&gt;
+&lt;p&gt;通过图中可以看到，mysql容器将容器内的&amp;#x2F;var&amp;#x2F;lib&amp;#x2F;mysql路径作为volume挂载。真正的数据库相关数据文件所在的目录就是“Source”对应的目录，即：&amp;#x2F;var&amp;#x2F;lib&amp;#x2F;docker&amp;#x2F;volumes&amp;#x2F;1b0b17f6a4f78d357a187116d75991db8ee784213e67cc9b9988c8ef647fe563&amp;#x2F;_data&lt;/p&gt;
+&lt;p&gt;我们可以进入mysql容器查看&amp;#x2F;var&amp;#x2F;lib&amp;#x2F;mysql目录下的内容：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527546887058-112f86c9-f2ae-4cae-9540-6da58fe3e8aa.png&#34; alt=&#34;在Docker中安装Mysql&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;发现的确是mysql数据库的数据文件（红色区域）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这时候，我们切换到Linux命令行，进入到mysql容器的数据挂载目录，看看该目录下有什么内容：&lt;/p&gt;
+&lt;p&gt;&amp;#x2F;var&amp;#x2F;lib&amp;#x2F;docker&amp;#x2F;volumes&amp;#x2F;1b0b17f6a4f78d357a187116d75991db8ee784213e67cc9b9988c8ef647fe563&amp;#x2F;_data&lt;/p&gt;
+&lt;p&gt;如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527546977803-7124018a-3f0e-447b-88d8-80b442be4539.png&#34; alt=&#34;在Docker中安装Mysql&#34;&gt;&lt;/p&gt;
+&lt;p&gt;咦~ 是不是发现了什么！把黄色区域的内容与上图中红色区域内容进行对比，是不是内容一模一样！&lt;/p&gt;
+&lt;p&gt;这也就印证了，当初我们在mysql容器中创建的数据库、表等，真正的数据库文件存放的位置就是在宿主机下面，而不是存放在容器中。&lt;/p&gt;
+&lt;p&gt;到此，我们终于知道了为何mysql-new容器中的数据库、表都不见了，原来数据库文件是存放在宿主机上的。&lt;/p&gt;
+&lt;p&gt;那该如何解决这个问题呢？怎样才能让mysql-new容器启动之后可以正常加载我们之前创建的数据库、表等数据呢？这就引入了下面的正题 —— 数据挂载。&lt;/p&gt;
+&lt;h2 id=&#34;数据挂载&#34;&gt;&lt;a href=&#34;#数据挂载&#34; class=&#34;headerlink&#34; title=&#34;数据挂载&#34;&gt;&lt;/a&gt;数据挂载&lt;/h2&gt;&lt;p&gt;docker的数据挂载分为三种，volume、bind mount和tmpfs，关于三种的具体说明，有兴趣了解的可以看一下官网的文档 &lt;a href=&#34;https://docs.docker.com/storage/&#34;&gt;https://docs.docker.com/storage/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考文档 《基于docker部署mysql的数据持久化问题》 &lt;a href=&#34;https://www.jianshu.com/p/530d00f97cbf&#34;&gt;https://www.jianshu.com/p/530d00f97cbf&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上面的文章里面，把问题描述的非常详细清楚。我这里就不多做说明了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;使用-v-实现数据挂载（数据卷）&#34;&gt;&lt;a href=&#34;#使用-v-实现数据挂载（数据卷）&#34; class=&#34;headerlink&#34; title=&#34;使用 -v 实现数据挂载（数据卷）&#34;&gt;&lt;/a&gt;使用 &lt;strong&gt;-v 实现数据挂载（数据卷）&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;如果我们想在 run 一个新的mysql容器的时候，可以正常访问我们之前在mysql容器中创建的数据库、表数据，则在docker run命令启动容器的时候，就需要指定挂载目录。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意：要想让新的mysql容器能正常挂载名称是“mysql”容器，前提是需要先停止名称是“mysql”的容器&lt;/strong&gt;，不然的话，即使run命令配置正确，容器启动的时候会一直报错：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527547243072-cf5029a8-3d60-434f-aeba-f314633d6b0b.png&#34; alt=&#34;在Docker中安装Mysql&#34;&gt;&lt;/p&gt;
+&lt;p&gt;上图就是因为没有事先停止mysql容器导致的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;下面开始具体操作：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先停止mysql容器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527547465870-974cfc00-44b0-4a09-87a9-b6035b4adbf5.png&#34; alt=&#34;在Docker中安装Mysql&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重新启动一个新的mysql容器，命令如下：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -d -p 3308:3306 -e MYSQL_ROOT_PASSWORD=123456 --name mysql-v -v /var/lib/docker/volumes/1b0b17f6a4f78d357a187116d75991db8ee784213e67cc9b9988c8ef647fe563/_data:/var/lib/mysql mysql&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;最重要的一个参数 -v ：挂载数据卷。-v 后面的值中间有“：”号，前半部分指的是宿主机的目录（也就是我们上面的mysql容器的数据库存储的目录），后半部分指的是容器的目录。&lt;/p&gt;
+&lt;p&gt;实现的效果就是说：新启动的容器，挂载宿主机的目录，实现数据共享。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;运行结果：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527547916774-cd6487ee-4afc-42a6-b6bb-f2ce6cf71523.png&#34; alt=&#34;在Docker中安装Mysql&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;登录新的mysql-v容器，查看数据库信息&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;直接看下图的命令操作吧：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527548344772-a86dd217-1ad4-4a19-b443-d51d2d45a80a.png&#34; alt=&#34;在Docker中安装Mysql&#34;&gt;       看到效果了吧！在这个mysql-v的新容器里面，已经可以看到我们一开始在“mysql”容器中创建的数据库和表了。&lt;/p&gt;
+&lt;p&gt;也就实现了容器之间的数据共享。&lt;/p&gt;
+&lt;p&gt;核心的实现就是在run命令里面加入了 -v 参数。如果不太明白-v的含义的，可以自行网上查询资料了解学习，加深印象。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;上面我们解决了容器挂载数据卷的问题，但是细心的朋友，可能还有一个疑问：&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;为什么修改了my.cnf配置文件、以及运行mysql镜像时指定的MYSQL_ROOT_PASSWORD&amp;#x3D;123456，却依然可以在新容器mysql-new中使用呢，为什么这俩样数据不会消失呢？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;官方文档对于commit命令还有这样一段描述：&lt;/p&gt;
+&lt;p&gt;It can be useful to commit a container’s file changes or settings into a new image.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;谷歌翻译过来的意思就是：将容器的文件更改或设置提交到新映像可能很有用。&lt;/p&gt;
+&lt;p&gt;还记得我们当初运行第一个mysql容器的时候，docker run 命令是怎样的，这里贴一下当时启动容器的命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 --name=mysql mysql&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;其中，里面使用到了 -e 参数，设置了root用户的密码为123456。&lt;/p&gt;
+&lt;p&gt;所以，结合官方文档对commit的介绍（It can be useful to commit a container’s file changes or settings into a new image. ），就可以知道，通过 -e 设置的信息，在使用commit提交新镜像的时候，这些设置被容器保留了下来，commit命令使用这些设置构建了新的镜像，在新容器里面使用的是相同的设置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这也印证了，我们在mysql-new容器中登录数据库的时候，登录密码写的是123456。因为在第一次启动mysql服务的时候，用户root密码是通过 -e 指定的，所以在commit提交新的镜像的时候，是被一同提交到了新镜像mysql-new中。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;数据卷容器&#34;&gt;&lt;a href=&#34;#数据卷容器&#34; class=&#34;headerlink&#34; title=&#34;数据卷容器&#34;&gt;&lt;/a&gt;数据卷容器&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;通过数据卷容器也可以实现多个容器间的数据共享。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果要授权一个容器访问另一个容器的数据卷，我们可以使用-volumes-from参数来执行docker run。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;（这里就不多做说明了，有兴趣的可以网上自行查阅资料研究）&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(4)-%E5%AE%89%E8%A3%85Tomcat/</guid>
+            <title>Docker(4)-安装Tomcat</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(4)-%E5%AE%89%E8%A3%85Tomcat/</link>
+            <category>Docker</category>
+            <category>LINUX</category>
+            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
+&lt;p&gt;公众号：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/icons/wx.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;QQ群：&lt;a href=&#34;http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21&#34;&gt;806951874&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;在Docker中安装Tomcat&#34;&gt;&lt;a href=&#34;#在Docker中安装Tomcat&#34; class=&#34;headerlink&#34; title=&#34;在Docker中安装Tomcat&#34;&gt;&lt;/a&gt;在Docker中安装Tomcat&lt;/h1&gt;&lt;h2 id=&#34;前言-1&#34;&gt;&lt;a href=&#34;#前言-1&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Tomcat镜像中已经包含jdk环境依赖，所以我们可以不用去启动java容器，直接运行tomcat容器就可以正常访问tomcat服务的，当然，你启动了java容器，也不会有什么影响，因为容器之间是隔离的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;查询Tomcat镜像列表&#34;&gt;&lt;a href=&#34;#查询Tomcat镜像列表&#34; class=&#34;headerlink&#34; title=&#34;查询Tomcat镜像列表&#34;&gt;&lt;/a&gt;查询Tomcat镜像列表&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker search tomcat&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;运行结果如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010114436.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一般情况下，都会选择下载stars数量最多的那个镜像，排在第一位的，一般都是官方提供的镜像。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;下载Tomcat镜像&#34;&gt;&lt;a href=&#34;#下载Tomcat镜像&#34; class=&#34;headerlink&#34; title=&#34;下载Tomcat镜像&#34;&gt;&lt;/a&gt;下载Tomcat镜像&lt;/h2&gt;&lt;p&gt;执行命令下载tomcat镜像：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker pull tomcat&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;运行Tomcat镜像&#34;&gt;&lt;a href=&#34;#运行Tomcat镜像&#34; class=&#34;headerlink&#34; title=&#34;运行Tomcat镜像&#34;&gt;&lt;/a&gt;运行Tomcat镜像&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -p 8081:8080 tomcat&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;运行效果如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010114658.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;访问tomcat：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;访问地址为：ip:端口号，因为我的服务器地址为192.168.56.128，所以打开浏览器输入：&lt;strong&gt;192.168.56.128:8081&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;效果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010115113.png&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;运行Tomcat404问题&#34;&gt;&lt;a href=&#34;#运行Tomcat404问题&#34; class=&#34;headerlink&#34; title=&#34;运行Tomcat404问题&#34;&gt;&lt;/a&gt;运行Tomcat404问题&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;解决docker启动tomcat容器访问端口显示404的问题，页面显示 源服务器未能找到目标资源的表示或者是不愿公开一个已经存在&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;如果已经关闭防火墙，还出现404问题，那么就确定是tomcat的webapps文件夹下没有东西&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;启动Tomcat容器&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -p 8081:8080 tomcat&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;查看已经启动的容器&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker ps&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;访问部署环境地址&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用8011端口访问Tomcat失败&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/20200228164338431.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTg5MDUw,size_16,color_FFFFFF,t_70&#34; alt=&#34;ip:端口号&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;先查看防火墙状况&#34;&gt;&lt;a href=&#34;#先查看防火墙状况&#34; class=&#34;headerlink&#34; title=&#34;先查看防火墙状况&#34;&gt;&lt;/a&gt;先查看防火墙状况&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;先查看防火墙状态&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;service firewalld status&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;出现下图所示代码，表示已经关闭防火墙&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdnimg.cn/20200228164705354.png&#34; alt=&#34;在这里插入图片描述&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;防火墙未关闭&#34;&gt;&lt;a href=&#34;#防火墙未关闭&#34; class=&#34;headerlink&#34; title=&#34;防火墙未关闭&#34;&gt;&lt;/a&gt;防火墙未关闭&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;如果防火墙没关闭，先关闭防火墙&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;关闭防火墙&lt;/span&gt;&lt;br&gt;systemctl stop firewalld.service&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;禁止防火墙开机启动&lt;/span&gt;&lt;br&gt;systemctl disable firewalld.service&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;启动docker&lt;/span&gt;&lt;br&gt;systemctl start docker&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;重启docker&lt;/span&gt;&lt;br&gt;systemctl restart docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&#34;防火墙关闭&#34;&gt;&lt;a href=&#34;#防火墙关闭&#34; class=&#34;headerlink&#34; title=&#34;防火墙关闭&#34;&gt;&lt;/a&gt;防火墙关闭&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;如果防火墙已经关闭但访问tomcat还是失败，那么使用如下命名进入tomcat的目录&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker exec -it a5f02a3e6dde(启动的tomcat容器的容器id) /bin/bash&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;查看当前文件夹内的所有文件&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;ls&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;进入webapps文件夹下，如果显示total 0，我们就需要把webapps.dist中的内容复制到webapps文件夹下&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;cd webapps&lt;br&gt;rm -f webapps&lt;br&gt;cp -r webapps.dist webapps&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;访问ip:主机端口（8081）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010115113.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;后台运行Tomcat&#34;&gt;&lt;a href=&#34;#后台运行Tomcat&#34; class=&#34;headerlink&#34; title=&#34;后台运行Tomcat&#34;&gt;&lt;/a&gt;后台运行Tomcat&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;通过上述步骤搭建一个Tomcat，是不是很简单，一个tomcat就这样启动完成了！不得不说docker的强大！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;有没有觉得上面的启动方式存在什么问题？如果在命令行界面中按下 Ctrl+C快捷键，会有什么效果？&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;没错，当前的tomcat容器会停止运行，服务无法访问！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;有什么办法可以让tomcat容器一直运行呢？&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;解决办法其实很简单，答案就再在 docker run 命令里面设置一个 -d 的参数即可，如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -d -p 8081:8080 --name tomcat tomcat&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010164641.png&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;看到没有，和上面的启动tomcat的效果不同，控制台并未输出tomcat启动的日志信息，这时候我们打开浏览器，重新访问一下：  &lt;strong&gt;192.168.56.128:8081&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;效果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010115113.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;通过上面两次docker run 启动tomcat的效果对比，我想大家也应该看得出区别了。所以，如果想让应用在后台一直运行的话，通过在 docker run 命令中使用“-d”参数来让容器处于后台运行。&lt;/p&gt;
+&lt;h2 id=&#34;查看运行中的Tomcat容器&#34;&gt;&lt;a href=&#34;#查看运行中的Tomcat容器&#34; class=&#34;headerlink&#34; title=&#34;查看运行中的Tomcat容器&#34;&gt;&lt;/a&gt;查看运行中的Tomcat容器&lt;/h2&gt;&lt;p&gt;通过下面命令，来查看当前服务器上运行的docker容器列表：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker ps&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010165054.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;从图中可以看到tomcat容器的一些信息，在最后一列的“NAMES”显示的tomcat名称是“tomcat9”，这是因为你在docker run的时候，指定了“–name”别名，如果没有，docker会给你自动生成一个别名，一般情况下，我们还是建议使用–name来设置别名以及版本，方便实际使用容易区分。&lt;/p&gt;
+&lt;p&gt;然后tomcat容器的“PORTS”这一列，可以看到8081 &amp;gt; 8080 的信息，我们知道tomcat是运行在容器里面的，而tomcat默认的端口是8080，也就是说tomcat所在容器的对外端口是8080，我们如果想通过浏览器等访问到tomcat，就需要指定一个宿主机的端口与这个tomcat容器端口进行映射，也就是8081这个宿主机的端口。我们实际在浏览器访问的时候，就是通过8081来访问的，不能使用8080访问。端口号的话你也可以自定义的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;停止Tomcat容器&#34;&gt;&lt;a href=&#34;#停止Tomcat容器&#34; class=&#34;headerlink&#34; title=&#34;停止Tomcat容器&#34;&gt;&lt;/a&gt;停止Tomcat容器&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;我们在jdk的文章中已经提及到停止容器的命令。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;首先我们还是要查看一下目前正在运行状态的tomcat容器的信息（ID或者别名）：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker ps&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201010165054.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们可以看到tomcat容器的ID以及别名的信息，这里我就直接使用ID进行容器的操作了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;通过docker stop实现容器停止关闭&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker stop tomcat9&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;疑问解答&#34;&gt;&lt;a href=&#34;#疑问解答&#34; class=&#34;headerlink&#34; title=&#34;疑问解答&#34;&gt;&lt;/a&gt;疑问解答&lt;/h2&gt;&lt;h3 id=&#34;问题一&#34;&gt;&lt;a href=&#34;#问题一&#34; class=&#34;headerlink&#34; title=&#34;问题一&#34;&gt;&lt;/a&gt;问题一&lt;/h3&gt;&lt;h4 id=&#34;问题&#34;&gt;&lt;a href=&#34;#问题&#34; class=&#34;headerlink&#34; title=&#34;问题&#34;&gt;&lt;/a&gt;问题&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;之前启动了tomcat容器，最后又把它关闭了，那我如果想再运行这个tomcat服务，怎么办？难道是要重新执行docker run这个命令来运行一个tomcat容器吗？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;解答&#34;&gt;&lt;a href=&#34;#解答&#34; class=&#34;headerlink&#34; title=&#34;解答&#34;&gt;&lt;/a&gt;解答&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;我们要知道docker run这个命令的作用，其实是运行一个全新的容器。你执行一次docker run命令，就会生成一个新的容器，通过一个图来看一下具体情况：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527521919194-08e09ebc-778b-4f01-b5d0-bc9e229734da.png&#34; alt=&#34;在Docker中安装Tomcat&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527521919194-08e09ebc-778b-4f01-b5d0-bc9e229734da.png&#34;&gt;http://www.cicoding.cn/images/docker/1527521919194-08e09ebc-778b-4f01-b5d0-bc9e229734da.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;从图中可以看到，出现了很多tomcat的容器，而且“STATUS”状态为“Exited”。什么意思呢？因为我在操作的过程中，总共执行了5次docker run命令（这里忽略docker rm删除的容器），启动了5个全新的容器，每个容器之间是隔离的。同时，我又对每个tomcat容器执行了docker stop关闭命令，所以状态都是“Exited”。&lt;/p&gt;
+&lt;p&gt;所以，你每次启动的容器，docker都会给你保留下来，并不是说你执行了docker stop命令，容器就会被删除掉，答案是不会删除掉，只是标记一下容器的STATUS为Exited状态，处于未运行状态。&lt;/p&gt;
+&lt;p&gt;所以，如果想重新运行关闭状态下的容器，请使用docker start命令，比如我这里随便启动一个tomcat容器：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker start 22&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这时候通过docker ps查看处于运行状态的容器列表：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527522366260-fea95bcb-fced-4f46-8234-c8e39393a245.png&#34; alt=&#34;在Docker中安装Tomcat&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527522366260-fea95bcb-fced-4f46-8234-c8e39393a245.png&#34;&gt;http://www.cicoding.cn/images/docker/1527522366260-fea95bcb-fced-4f46-8234-c8e39393a245.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;说明tomcat容器已经启动成功了！&lt;/p&gt;
+&lt;p&gt;我们再通过docker ps -a查看所有的容器列表（包括未运行的容器），主要看一下tomcat容器的数量是否和上面的5个一致，并未重新运行一个全新的容器：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527522475276-0f83eb27-f7ef-4e5b-bcdc-39c32bdea54a.png&#34; alt=&#34;在Docker中安装Tomcat&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527522475276-0f83eb27-f7ef-4e5b-bcdc-39c32bdea54a.png&#34;&gt;http://www.cicoding.cn/images/docker/1527522475276-0f83eb27-f7ef-4e5b-bcdc-39c32bdea54a.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以看到，tomcat容器的数量并未发生变化，其中的一个tomcat容器处于运行状态，剩余4个都是Exited停止状态。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;问题二&#34;&gt;&lt;a href=&#34;#问题二&#34; class=&#34;headerlink&#34; title=&#34;问题二&#34;&gt;&lt;/a&gt;问题二&lt;/h3&gt;&lt;h4 id=&#34;问题-1&#34;&gt;&lt;a href=&#34;#问题-1&#34; class=&#34;headerlink&#34; title=&#34;问题&#34;&gt;&lt;/a&gt;问题&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;如果上图中代表当前服务器上的容器情况，如果这时候我执行以下命令，你觉得会出现什么问题？&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -d -p 8082:8080 --name quirky_mayer tomcat&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;命令的含义应该都明白吧。启动一个新的tomcat容器，映射的宿主机端口号是8082（因为之前已经启动了一个8081的容器，宿主机的端口号不能冲突），给该tomcat容器起了一个别名“quirky_mayer”，注意观察一下上图的tomcat容器的别名信息哦~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;解答-1&#34;&gt;&lt;a href=&#34;#解答-1&#34; class=&#34;headerlink&#34; title=&#34;解答&#34;&gt;&lt;/a&gt;解答&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;运行结果如下图：&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527522929924-fbeab3d9-8623-4239-b816-d041b8da890a.png&#34; alt=&#34;在Docker中安装Tomcat&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527522929924-fbeab3d9-8623-4239-b816-d041b8da890a.png&#34;&gt;http://www.cicoding.cn/images/docker/1527522929924-fbeab3d9-8623-4239-b816-d041b8da890a.png&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实错误信息很明显了，就是容器的别名“quirky_mayer”已经存在了，别的tomcat容器的别名也存在一个是“quirky_mayer”的。&lt;/p&gt;
+&lt;p&gt;这个别名校验是否重复，是针对所有容器而言的，并非是只判断运行状态的容器，那些Exited状态的容器也会进行校验。&lt;/p&gt;
+&lt;p&gt;因此，我们在使用–name指定别名的时候，不要出现重复。&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(2)-CentOS%E5%AE%89%E8%A3%85/</guid>
+            <title>Docker(2)-CentOS安装</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(2)-CentOS%E5%AE%89%E8%A3%85/</link>
+            <category>Docker</category>
+            <category>LINUX</category>
+            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
+&lt;p&gt;公众号：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/icons/wx.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;QQ群：&lt;a href=&#34;http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21&#34;&gt;806951874&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;在Centos系统中安装Docker&#34;&gt;&lt;a href=&#34;#在Centos系统中安装Docker&#34; class=&#34;headerlink&#34; title=&#34;在Centos系统中安装Docker&#34;&gt;&lt;/a&gt;在Centos系统中安装Docker&lt;/h1&gt;&lt;h2 id=&#34;前言-1&#34;&gt;&lt;a href=&#34;#前言-1&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;网上很多关于docker在centos系统上的安装教程，但是又各有异同，比较混乱。所以，此文章接下来的对于docker的安装，将参照官方的文档进行安装。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;官方文档地址：&lt;a href=&#34;https://docs.docker.com/install/linux/docker-ce/centos/&#34;&gt;https://docs.docker.com/install/linux/docker-ce/centos/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;Docker版本&#34;&gt;&lt;a href=&#34;#Docker版本&#34; class=&#34;headerlink&#34; title=&#34;Docker版本&#34;&gt;&lt;/a&gt;Docker版本&lt;/h2&gt;&lt;p&gt;Docker如今划分成了2个版本：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Docker CE（社区版）&lt;/li&gt;
+&lt;li&gt;Docker EE（企业版）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;具体详情以及区别，就不多做说明了。我们一般都会选择Docker CE（社区版），因为CE版本是开源免费的。对于大多数企业公司都比较节约成本。&lt;/p&gt;
+&lt;p&gt;因此，文章中所使用的Docker版本均为Docker CE版本。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装Docker CE版本的先决条件&lt;/p&gt;
+&lt;p&gt;官方文档中有这样一段描述：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight tex&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs tex&#34;&gt;&amp;gt;&amp;gt; OS requirements&lt;br&gt;&amp;gt;&amp;gt; To install Docker CE, you need a maintained version of CentOS 7. Archived versions aren’t supported or tested.&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;翻译过来的中文意思就是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OS要求&lt;/p&gt;
+&lt;p&gt;要安装Docker CE，您需要维护的CentOS 7版本。不支持或测试归档版本。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;官方推荐的系统是centos7以上，但其实centos6也是可以安装docker的，并没有强制必须是centos7。&lt;/p&gt;
+&lt;p&gt;但是我的文章是基于最新的centos7系统，所以对于低版本的centos系统如何安装docker，请自行网上查找资料或者实际操作。&lt;/p&gt;
+&lt;p&gt;卸载旧版本&lt;/p&gt;
+&lt;p&gt;老版本的Docker被称为docker或docker-engine。如果安装了它们，请卸载它们以及相关的依赖项。&lt;/p&gt;
+&lt;p&gt;在Linux命令行执行的命令如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum remove docker \&lt;br&gt;                  docker-client \&lt;br&gt;                  docker-client-latest \&lt;br&gt;                  docker-common \&lt;br&gt;                  docker-latest \&lt;br&gt;                  docker-latest-logrotate \&lt;br&gt;                  docker-logrotate \&lt;br&gt;                  docker-selinux \&lt;br&gt;                  docker-engine-selinux \&lt;br&gt;                  docker-engine \&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;安装Docker-CE&#34;&gt;&lt;a href=&#34;#安装Docker-CE&#34; class=&#34;headerlink&#34; title=&#34;安装Docker CE&#34;&gt;&lt;/a&gt;安装Docker CE&lt;/h2&gt;&lt;p&gt;Docker CE安装的不同方式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置Docker的存储库并从中进行安装，以便安装和升级任务。这是推荐的方法。&lt;/li&gt;
+&lt;li&gt;有些用户下载RPM软件包并手动安装，并完全手动管理升级。这对于在无法访问互联网的系统上安装Docker等情况很有用。&lt;/li&gt;
+&lt;li&gt;在测试和开发环境中，一些用户选择使用自动便利脚本来安装Docker。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里我们就选择第一种方式进行安装，这也是推荐的做法。&lt;/p&gt;
+&lt;p&gt;至于其他的安装方式，可自行网上学习，这里不做过多讲解。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用存储库进行安装&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;首次在新主机上安装Docker CE之前，需要设置Docker存储库。之后，您可以从存储库安装和更新Docker。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;设置存储库&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;安装所需的包。 yum-utils提供yum-config-manager实用程序，devicemapper存储驱动程序需要device-mapper-persistent-data和lvm2。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum install -y yum-utils \&lt;br&gt;  device-mapper-persistent-data \&lt;br&gt;  lvm2 \&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;使用以下命令设置稳定的存储库。 即使您想从边缘或测试存储库安装构建，也总是需要稳定的存储库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum-config-manager \&lt;br&gt;    --add-repo \&lt;br&gt;    https://download.docker.com/linux/centos/docker-ce.repo&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;（可选）：启用边缘和测试存储库。 这些存储库包含在上面的docker.repo文件中，但默认情况下处于禁用状态。 您可以将它们与稳定的存储库一起启用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum-config-manager --enable docker-ce-edge&lt;br&gt;yum-config-manager --enable docker-ce-test&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;（可选）：与上一步相反的作用。通过使用–disable标志运行yum-config-manager命令，可以禁用边缘或测试存储库。 要重新启用它，请使用–enable标志。 以下命令禁用边缘存储库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum-config-manager --disable docker-ce-edge&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：从Docker 17.06开始，稳定版本也被推到&lt;strong&gt;边缘&lt;/strong&gt;并&lt;strong&gt;测试&lt;/strong&gt;版本库。&lt;/p&gt;
+&lt;p&gt;了解稳定和边缘构建 :&lt;a href=&#34;https://docs.docker.com/install/&#34;&gt;https://docs.docker.com/install/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装Docker CE&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;安装最新版本的Docker CE：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum install docker-ce&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如果命令行下面出现如下图所示的确认信息，请输入“y”继续，主要是用于处理依赖包的事情&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527434165078-d4b449d2-24f3-4acc-90b1-033301c4fbce.png&#34; alt=&#34;在Centos系统中安装Docker&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如果没有，则需要添加yum源：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201002234210.png&#34; alt=&#34;QQ20201002-231329&#34;&gt;&lt;/p&gt;
+&lt;p&gt;上一步输入“y”之后，后面可能会遇到下图所示的确认提示信息，同样的输入“y”即可：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201002234320.png&#34; alt=&#34;QQ20201002-231411&#34;&gt;&lt;/p&gt;
+&lt;p&gt;稍作等待，当命令行最终输出“Complete！”即表示安装完成：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201002234614.png&#34; alt=&#34;QQ20201002-232659&#34;&gt;&lt;/p&gt;
+&lt;p&gt;启动Docker&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;systemctl start docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;验证Docker是否安装成功&#34;&gt;&lt;a href=&#34;#验证Docker是否安装成功&#34; class=&#34;headerlink&#34; title=&#34;验证Docker是否安装成功&#34;&gt;&lt;/a&gt;验证Docker是否安装成功&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;最简单的验证方式，就是使用 docker version 命令，类似于JDK的 java -version 一样的道理。&lt;/p&gt;
+&lt;p&gt;Docker安装成功的话，就可以直接在命令行运行Docker的命令的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker version&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如果出现如下图所示信息，说明Docker以及安装成功了！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201003172941.png&#34; alt=&#34;QQ20201002-232747&#34;&gt;&lt;/p&gt;
+&lt;p&gt;【可选】：当然，你也可以通过运行 hello-world 映像来检验Docker是否安装成功：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run hello-world&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;上面的命令含义：下载官方提供的用于测试使用的hello-world镜像并将其运行到容器中，来检验Docker服务是否正常安装并运行。&lt;/p&gt;
+&lt;p&gt;执行上面的命令之后，Docker会自动下载hello-world镜像并自动运行到容器中，当命令行中出现“Hello from Docker!”的字样，说明已经成功运行了hello-world镜像，一切就OK了！&lt;/p&gt;
+&lt;p&gt;这里就简单的作为Docker的入门操作，很简单的吧。让你有一个比较直观的感觉~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201003201011.png&#34; alt=&#34;截屏2020-10-03 下午5.35.22&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;Docker默认挂载目录&#34;&gt;&lt;a href=&#34;#Docker默认挂载目录&#34; class=&#34;headerlink&#34; title=&#34;Docker默认挂载目录&#34;&gt;&lt;/a&gt;Docker默认挂载目录&lt;/h2&gt;&lt;p&gt;Docker CE安装成功之后，你可以发现 &amp;#x2F;var&amp;#x2F;lib 目录下有一个 docker 目录，你可以进入Docker目录查看Docker的一些结构，如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201003201219.png&#34; alt=&#34;截屏2020-10-03 下午8.07.15&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其中有一个containers 目录，这个目录就是存放Docker容器的。上面我们有提及到 hello-world 镜像，如果你运行了 hello-world 镜像，那么这个镜像所生成的容器信息，就会存储在 containers 目录中。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;具体 containers 目录中存放了什么内容，可自行网上查询资料学习。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;启动Docker&#34;&gt;&lt;a href=&#34;#启动Docker&#34; class=&#34;headerlink&#34; title=&#34;启动Docker&#34;&gt;&lt;/a&gt;启动Docker&lt;/h2&gt;&lt;p&gt;配置Docker在系统启动时启动&lt;/p&gt;
+&lt;p&gt;未配置Docker在系统启动时启动，则系统重启之后，Docker服务是无法正常访问&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如何解决？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;手动启动Docker服务：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;通过在命令行中执行以下命令，即可实现Docker服务的启动：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;systemctl start docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这时候重新在命令行中执行 docker version命令，效果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201003201651.png&#34; alt=&#34;QQ20201002-232747&#34;&gt;&lt;/p&gt;
+&lt;p&gt;出现Server相关的信息，标明Docker服务正常启动了，就可以对Docker进行一系列操作&lt;/p&gt;
+&lt;p&gt;上面这种启动方式存在什么不足呢？&lt;/p&gt;
+&lt;p&gt;当服务器重启的时候，Docker服务依然不能自动启动，还是需要手工去启动Docker服务。&lt;/p&gt;
+&lt;p&gt;那能不能做到系统重启之后，Docker服务自动启动，答案肯定是有的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;实现Docker服务随着系统重启后自动启动&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;大多数当前的Linux发行版（RHEL，CentOS，Fedora，Ubuntu 16.04和更高版本）使用systemd来管理在系统启动时启动哪些服务。&lt;/p&gt;
+&lt;p&gt;通过在命令行执行以下命令，用于设置Docker在系统重启时，自动启动Docker服务&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;systemctl enable docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;执行该命令之后，会显示如下结果：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201003202021.png&#34; alt=&#34;QQ20201002-232845&#34;&gt;&lt;/p&gt;
+&lt;p&gt;主要的意思就是 设置Docker服务会随着服务器重启，会自动启动Docker服务。&lt;/p&gt;
+&lt;p&gt;当然，执行该命令之后，对于当前的Docker服务状况是没有启动服务的，需要手动启动Docker服务；只有下次服务器重启，就无需手动启动Docker服务了。&lt;/p&gt;
+&lt;p&gt;官方文档介绍：&lt;a href=&#34;https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot&#34;&gt;https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意一点：由于Linux不同版本的系统的差异、或者低版本的系统，命令或许会出现差异。如有遇到这样的问题，请自行网上查找资料解决。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;卸载Docker-CE&#34;&gt;&lt;a href=&#34;#卸载Docker-CE&#34; class=&#34;headerlink&#34; title=&#34;卸载Docker CE&#34;&gt;&lt;/a&gt;卸载Docker CE&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;如果需要卸载机器上已经安装的Docker CE，可以通过简单命令实现。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;卸载Docker包：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum remove docker-ce&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;上面的命令，不会自动删除主机上的图像，容器，卷或自定义配置文件。要想删除所有图像，容器和卷，执行以下命令：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;rm -rf /var/lib/docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;注意：必须手动删除任何已编辑的配置文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;shell一键安装&#34;&gt;&lt;a href=&#34;#shell一键安装&#34; class=&#34;headerlink&#34; title=&#34;shell一键安装&#34;&gt;&lt;/a&gt;shell一键安装&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;curl -fsSL get.docker.com -o get-docker.sh&lt;br&gt;sudo sh get-docker.sh&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这样执行完了就完成安装了，简单便捷&lt;/p&gt;
+&lt;p&gt;然后启动docker&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;sudo systemctl start docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(3)-%E5%AE%89%E8%A3%85jdk/</guid>
+            <title>Docker(3)-安装jdk</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(3)-%E5%AE%89%E8%A3%85jdk/</link>
+            <category>Docker</category>
+            <category>LINUX</category>
+            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
+&lt;p&gt;公众号：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/icons/wx.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;QQ群：&lt;a href=&#34;http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21&#34;&gt;806951874&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;#在Docker中安装JDK&#34; class=&#34;headerlink&#34; title=&#34;在Docker中安装JDK&#34;&gt;&lt;/a&gt;在Docker中安装JDK&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;所有的环境安装，都是在centos系统中操作的，并非本地windows系统。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Docker 中国官方镜像加速 &lt;a href=&#34;http://www.docker-cn.com/registry-mirror&#34;&gt;http://www.docker-cn.com/registry-mirror&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;获取JAVA镜像：&#34;&gt;&lt;a href=&#34;#获取JAVA镜像：&#34; class=&#34;headerlink&#34; title=&#34;获取JAVA镜像：&#34;&gt;&lt;/a&gt;获取JAVA镜像：&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;在终端客户端命令行输入以下命令，获取JAVA镜像。&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker pull java&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;默认是从Docker Hub官方的仓库中下载镜像的。如果没有指定对应的版本，默认会获取版本为latest的镜像。&lt;/p&gt;
+&lt;p&gt;注意：&lt;/p&gt;
+&lt;p&gt;latest是针对于镜像所在的仓库里面的软件最新版本。并非是软件本身的最新发布版本。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;回车执行，一开始会进行下载对应的依赖库，稍作等待：&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201006174731.png&#34; alt=&#34;QQ20201003-204338&#34;&gt;&lt;/p&gt;
+&lt;p&gt;出现下面的信息，说明镜像下载完成：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201006174818.png&#34; alt=&#34;截屏2020-10-03 下午8.44.19&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;查看下载的镜像&#34;&gt;&lt;a href=&#34;#查看下载的镜像&#34; class=&#34;headerlink&#34; title=&#34;查看下载的镜像&#34;&gt;&lt;/a&gt;查看下载的镜像&lt;/h2&gt;&lt;p&gt;命令行中执行命令，查看刚刚下载的JAVA镜像：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker images&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201006174929.png&#34; alt=&#34;截屏2020-10-03 下午8.44.54&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;启动容器&#34;&gt;&lt;a href=&#34;#启动容器&#34; class=&#34;headerlink&#34; title=&#34;启动容器&#34;&gt;&lt;/a&gt;启动容器&lt;/h2&gt;&lt;p&gt;命令行中执行命令，启动JAVA镜像容器：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -d -it --name java java&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如下图所示，说明成功启动了容器：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201006175022.png&#34; alt=&#34;截屏2020-10-03 下午8.46.03&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其中，–name后面的“java”是为容器指定了一个别名，而最后的那个“java”指的是下载镜像时的名称。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;命令以及参数的含义：&lt;/p&gt;
+&lt;p&gt;run：启动一个镜像容器&lt;/p&gt;
+&lt;p&gt;-d：指定容器运行于后台&lt;/p&gt;
+&lt;p&gt;-it：-i 和 -t 的缩写；&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-i：以交互模式运行容器，通常与 -t 同时使用&lt;/li&gt;
+&lt;li&gt;-t：为容器重新分配一个伪输入终端，通常与 -i 同时使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;–name：指定容器名字，后续可以通过名字进行容器管理&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;具体更多的参数含义，可自行网上学习。&lt;/p&gt;
+&lt;h2 id=&#34;查看运行的容器&#34;&gt;&lt;a href=&#34;#查看运行的容器&#34; class=&#34;headerlink&#34; title=&#34;查看运行的容器&#34;&gt;&lt;/a&gt;查看运行的容器&lt;/h2&gt;&lt;p&gt;首先我们在命令行中执行命令，查看处于运行状态的容器：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker ps&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;因为在上面的操作步骤中，我们运行了java镜像，所以你会看到有一个名称为java的容器正在运行，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201006175118.png&#34; alt=&#34;截屏2020-10-03 下午8.46.37&#34;&gt;&lt;/p&gt;
+&lt;p&gt;通过输出的信息可以看到，当前容器的ID是“9179eb86b007”，容器别名是java（最后一列的值）。&lt;/p&gt;
+&lt;h2 id=&#34;登录容器&#34;&gt;&lt;a href=&#34;#登录容器&#34; class=&#34;headerlink&#34; title=&#34;登录容器&#34;&gt;&lt;/a&gt;登录容器&lt;/h2&gt;&lt;p&gt;【询问】：如果想查看容器中安装的jdk版本，该怎么做呢？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果直接在命令行输入java -version会报错的，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527495437982-7aee34bf-9f5c-4ac5-8b8f-a3b21e9053c7.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527495437982-7aee34bf-9f5c-4ac5-8b8f-a3b21e9053c7.png&#34;&gt;http://www.cicoding.cn/images/docker/1527495437982-7aee34bf-9f5c-4ac5-8b8f-a3b21e9053c7.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;原因是因为：jdk是安装在容器里面的，需要进入容器，才能查看。意思就是说，jdk环境是在容器里面的，并非是宿主机。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;进入容器内部&#34;&gt;&lt;a href=&#34;#进入容器内部&#34; class=&#34;headerlink&#34; title=&#34;进入容器内部&#34;&gt;&lt;/a&gt;进入容器内部&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;使用attach进入容器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker attach 91&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;其中的 “91” 指的是什么呢？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上面有提到过，我们启动的java镜像的容器ID是“9179eb86b007”，所以， docker attach 命令后面，你可以指定容器ID来进入具体的容器。可以指定06等任意长度的值，都代表了当前的java容器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;回车，效果如下图：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527495610202-3995506a-85ac-4a97-aeef-0edf11a8339a.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527495610202-3995506a-85ac-4a97-aeef-0edf11a8339a.png&#34;&gt;http://www.cicoding.cn/images/docker/1527495610202-3995506a-85ac-4a97-aeef-0edf11a8339a.png&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果回车后没有反应，可以再次按下回车就可以进入容器的命令行模式了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;除了使用容器ID进入容器之外，也可以使用容器的别名进入容器：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker attach java&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;上面这种是通过容器的别名进入容器内部的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;使用exec命令进入容器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;【方式一】：通过容器别名进入容器：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker exec -it java /bin/bash&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;【方式二】：通过容器ID进入容器：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker exec -it 91 /bin/bash&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;回车之后，就会看到命令行发生了一些变化：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527506181535-4364031d-0caa-44fe-8a12-d87ccf46c97e.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527506181535-4364031d-0caa-44fe-8a12-d87ccf46c97e.png&#34;&gt;http://www.cicoding.cn/images/docker/1527506181535-4364031d-0caa-44fe-8a12-d87ccf46c97e.png&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;仔细看第二行的开头，@符号后面的“9179eb86b007”就是我们的java容器的ID吧，这也就说明，我们已经进入了容器内部了，可以对容器进行操作了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;进入容器后，输入-java-version-查看JDK版本信息&#34;&gt;&lt;a href=&#34;#进入容器后，输入-java-version-查看JDK版本信息&#34; class=&#34;headerlink&#34; title=&#34;进入容器后，输入 java -version 查看JDK版本信息&#34;&gt;&lt;/a&gt;进入容器后，输入 java -version 查看JDK版本信息&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;java -version&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;无论是通过attach还是exec进入的容器，我们都可以在命令行中输入命令“java -version”来查看JDK版本信息。&lt;/p&gt;
+&lt;p&gt;下面我们就分别使用这2个命令进入容器，来看看效果，如下图所示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;attach命令进入容器，查看JDK版本信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527504069333-c1266217-f560-4a9d-b0d3-cac9f273dff0.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527504069333-c1266217-f560-4a9d-b0d3-cac9f273dff0.png&#34;&gt;http://www.cicoding.cn/images/docker/1527504069333-c1266217-f560-4a9d-b0d3-cac9f273dff0.png&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;exec命令进入容器，查看JDK版本信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527506442973-e6d97093-08df-46a7-89f8-7bd314c4733e.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527506442973-e6d97093-08df-46a7-89f8-7bd314c4733e.png&#34;&gt;http://www.cicoding.cn/images/docker/1527506442973-e6d97093-08df-46a7-89f8-7bd314c4733e.png&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;登陆Docker容器的方式&#34;&gt;&lt;a href=&#34;#登陆Docker容器的方式&#34; class=&#34;headerlink&#34; title=&#34;登陆Docker容器的方式&#34;&gt;&lt;/a&gt;登陆Docker容器的方式&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;上面已经简单的介绍了attach、exec命令的使用，下面讲解一下这两个命令之间的区别。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对于运行在后台的Docker容器，我们运维人员时常是有登陆进去的需求。登陆Docker容器的方式：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;使用ssh登陆容器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这种方法需要在容器中启动sshd，存在开销和攻击面增大的问题。同时也违反了Docker所倡导的一个容器一个进程的原则。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;使用自带命令docker attach登陆容器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker attach存在的问题是：当多个窗口同时attach到同一个容器时，所有的窗口都会同步的显示，假如其中的一个窗口发生阻塞时，其它的窗口也会阻塞，docker attach命令可以说是最不方便的进入后台docker容器的方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;使用自带命令docker exec登陆容器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker exec和docker attach是Docker的原生方法，大多数情况下就使用这两种命令登陆容器。docker exec命令是在docker1.3之后出现的，比docker attach命令更加方便&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;分别使用attach与exec进入容器，查看它们的区别&#34;&gt;&lt;a href=&#34;#分别使用attach与exec进入容器，查看它们的区别&#34; class=&#34;headerlink&#34; title=&#34;分别使用attach与exec进入容器，查看它们的区别&#34;&gt;&lt;/a&gt;分别使用attach与exec进入容器，查看它们的区别&lt;/h3&gt;&lt;p&gt;1、Docker attach必须是登陆到一个已经运行的容器里。需要注意的是如果从这个容器中exit退出的话，就会导致容器停止！！这是极其不方便的！&lt;/p&gt;
+&lt;p&gt;见下图所示结果：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527507117875-46795fe1-3255-46c0-a2bc-6bde4b1e51dd.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527507117875-46795fe1-3255-46c0-a2bc-6bde4b1e51dd.png&#34;&gt;http://www.cicoding.cn/images/docker/1527507117875-46795fe1-3255-46c0-a2bc-6bde4b1e51dd.png&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你会发现通过attach进入容器的话，当使用exit退出容器的时候，对应的容器也停止运行了，所以在生产环境中很少使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2、docker exec登陆容器，注意有两个参数：-t和-i，这两个参数很重要！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对于 -t 、-i 的具体作用，可以参考 &lt;a href=&#34;https://www.cnblogs.com/kevingrace/p/6656095.html&#34;&gt;https://www.cnblogs.com/kevingrace/p/6656095.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用docker exec -it 进入容器和我们平常操作console界面类似。而且不像attach方式退出，导致整个容器退出，exec在生产环境中用的比较多。exec 比使用ssh 、nsenter、nsinit方式更方便，生产中常用的方式。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在使用docker exec登陆容器或执行容器中的命令时，最好都带上-t和-i参数。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;退出Docker容器&#34;&gt;&lt;a href=&#34;#退出Docker容器&#34; class=&#34;headerlink&#34; title=&#34;退出Docker容器&#34;&gt;&lt;/a&gt;退出Docker容器&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;如果是通过 attach 进入的容器，在退出容器的时候，如果不想让容器停止运行的话，就不能使用exit命令或者Ctrl+D快捷键的形式退出，而是使用 Ctrl + P + Q 组合键退出容器。&lt;/li&gt;
+&lt;li&gt;如果是通过 exec 命令进入的容器，在退出容器的时候，就可以使用exit或者Ctrl+D快捷键退出容器，同时容器不会停止运行，这也是exec与attach的最大区别。当然，你也可以使用Ctrl + P + Q 组合键退出容器，容器一样不会停止运行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;所以，通过上面的比较，也就印证了exec在实际使用过程中用的最多的，也是建议使用的一种方式。尤其是生产环境下，强烈建议使用exec的方式。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;停止容器&#34;&gt;&lt;a href=&#34;#停止容器&#34; class=&#34;headerlink&#34; title=&#34;停止容器&#34;&gt;&lt;/a&gt;停止容器&lt;/h2&gt;&lt;p&gt;通过 docker stop (容器ID | 容器别名) 的命令，可以停止正在运行状态的容器：&lt;/p&gt;
+&lt;figure class=&#34;highlight arduino&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs arduino&#34;&gt;docker stop java&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;上面是通过容器别名来停止容器的，你也可以使用容器ID。&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(1)-%E5%88%9D%E8%AF%86Docker/</guid>
+            <title>Docker(1)-初识Docker</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(1)-%E5%88%9D%E8%AF%86Docker/</link>
+            <category>Docker</category>
+            <category>LINUX</category>
+            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
+&lt;p&gt;公众号：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/icons/wx.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;QQ群：&lt;a href=&#34;http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21&#34;&gt;806951874&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;Docker的前世今生&#34;&gt;&lt;a href=&#34;#Docker的前世今生&#34; class=&#34;headerlink&#34; title=&#34;Docker的前世今生&#34;&gt;&lt;/a&gt;Docker的前世今生&lt;/h1&gt;&lt;h2 id=&#34;传统项目开发部署的流程是怎样的？&#34;&gt;&lt;a href=&#34;#传统项目开发部署的流程是怎样的？&#34; class=&#34;headerlink&#34; title=&#34;传统项目开发部署的流程是怎样的？&#34;&gt;&lt;/a&gt;传统项目开发部署的流程是怎样的？&lt;/h2&gt;&lt;h3 id=&#34;传统项目开发部署的基本流程&#34;&gt;&lt;a href=&#34;#传统项目开发部署的基本流程&#34; class=&#34;headerlink&#34; title=&#34;传统项目开发部署的基本流程&#34;&gt;&lt;/a&gt;传统项目开发部署的基本流程&lt;/h3&gt;&lt;p&gt;这里只简单描述一下，项目发布的基本流程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本地开发+测试，没有问题的话，编译打包发布到测试环境&lt;/li&gt;
+&lt;li&gt;在测试环境中进行测试，测试完成后，发布到生产环境&lt;/li&gt;
+&lt;li&gt;在生产环境中进行最后的测试，如果没有问题，那么一切就OK了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;存在什么问题？&#34;&gt;&lt;a href=&#34;#存在什么问题？&#34; class=&#34;headerlink&#34; title=&#34;存在什么问题？&#34;&gt;&lt;/a&gt;存在什么问题？&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;存在问题：不同机器上的软件环境不一致。（比较核心的问题)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;软件环境的配置繁多、命令记不清楚。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重复性搭建软件环境、效率低下。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;对照传统虚拟机总结&#34;&gt;&lt;a href=&#34;#对照传统虚拟机总结&#34; class=&#34;headerlink&#34; title=&#34;对照传统虚拟机总结&#34;&gt;&lt;/a&gt;对照传统虚拟机总结&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;特性&lt;/th&gt;
+&lt;th&gt;容器&lt;/th&gt;
+&lt;th&gt;虚拟机&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;启动&lt;/td&gt;
+&lt;td&gt;秒级&lt;/td&gt;
+&lt;td&gt;分钟级&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;硬盘使用&lt;/td&gt;
+&lt;td&gt;一般为MB&lt;/td&gt;
+&lt;td&gt;一般为GB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;性能&lt;/td&gt;
+&lt;td&gt;接近原生&lt;/td&gt;
+&lt;td&gt;弱于&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;系统支持量&lt;/td&gt;
+&lt;td&gt;单机支持上千个容器&lt;/td&gt;
+&lt;td&gt;一般几十个&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h1 id=&#34;Docker是干什么用的？&#34;&gt;&lt;a href=&#34;#Docker是干什么用的？&#34; class=&#34;headerlink&#34; title=&#34;Docker是干什么用的？&#34;&gt;&lt;/a&gt;Docker是干什么用的？&lt;/h1&gt;&lt;h2 id=&#34;Docker解决的问题&#34;&gt;&lt;a href=&#34;#Docker解决的问题&#34; class=&#34;headerlink&#34; title=&#34;Docker解决的问题&#34;&gt;&lt;/a&gt;Docker解决的问题&lt;/h2&gt;&lt;p&gt;由于不同的机器有不同的操作系统，以及不同的库和组件，在将一个应用部署到多台机器上需要进行大量的环境配置操作。&lt;br&gt;Docker 主要解决环境配置问题，它是一种虚拟化技术，对进程进行隔离，被隔离的进程独立于宿主操作系统和其它隔离的进程。使用 Docker 可以不修改应用程序代码，不需要开发人员学习特定环境下的技术，就能够将现有的应用程序部署在其它机器上。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2520176274,3530821872&amp;fm=26&amp;gp=0.jpg&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;与虚拟机的比较&#34;&gt;&lt;a href=&#34;#与虚拟机的比较&#34; class=&#34;headerlink&#34; title=&#34;与虚拟机的比较&#34;&gt;&lt;/a&gt;与虚拟机的比较&lt;/h2&gt;&lt;p&gt;虚拟机也是一种虚拟化技术，它与 Docker 最大的区别在于它是通过模拟硬件，并在硬件上安装操作系统来实现。&lt;/p&gt;
+&lt;p&gt;so&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#x3D;&amp;#x3D;&lt;strong&gt;Docker不是虚拟机&lt;/strong&gt;&amp;#x3D;&amp;#x3D;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对Docker的感受：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;比如公司买了一台新服务器，系统是centos，你要想把项目部署到服务器上，而且项目中使用到了mysql、redis、activemq、zookeeper等技术，要想项目能在服务器上正常运行，必须在新的服务器上搭建好mysql、redis、activemq、zookeeper服务环境。这样的话，在环境搭建和配置上就要花费太多的时间了（因为需要配置很多的配置文件、需要手动启动服务等）。&lt;/p&gt;
+&lt;p&gt;又或者每次重装一次系统或者换一个机器，你就要把环境重装一次，东西越多花费的时间越多、很麻烦、浪费时间和精力。&lt;/p&gt;
+&lt;p&gt;而使用Docker的话，你只需要一条命令，你就可以在你的centos系统上运行你需要的软件，比如mysql、tomcat、jdk、redis等。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;举个栗子&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;【示例1】：Docker上安装mysql&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你需要MySQL服务，那么在docker中通过简单的命令就可以安装一个MySQL数据库服务：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker pull mysql&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;启动mysql命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -d -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=123456 mysql&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;很简单吧，一个mysql服务就启动完成了，就可以正常使用了。可以通过mysql客户端（Navicat、DataGrip等）连接这个mysql数据库。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;【示例2】：Docker上安装jdk&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你需要JDK环境，那么在Docker中通过简单的命令安装一个JDK的镜像， 然后通过一条命令启动这个容器就行了，容器会自动给你安装配置好JDK环境。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker pull java&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;就这么简单的一条命令，JDK就安装好了。你可以在Docker容器的命令行中通过java -version来检测jdk是否安装成功。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;镜像、容器&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;对于新手而言，或许有点不明白镜像和容器分别是个什么东东，还是有点不明白。&lt;/p&gt;
+&lt;p&gt;你可以这样感官的理解：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;镜像 —— 相当于ISO操作系统的安装包，ISO镜像的内容是固定的，不会发生改变，可以重复使用。&lt;/p&gt;
+&lt;p&gt;容器 —— 类似于使用 ISO镜像安装的新的操作系统，可以使用一个相同的ISO镜像，安装很多操作系统。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Docker占用的资源很小。启动一个容器一般都是秒级的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;Docker镜像、容器、仓库的介绍&#34;&gt;&lt;a href=&#34;#Docker镜像、容器、仓库的介绍&#34; class=&#34;headerlink&#34; title=&#34;Docker镜像、容器、仓库的介绍&#34;&gt;&lt;/a&gt;Docker镜像、容器、仓库的介绍&lt;/h1&gt;&lt;h2 id=&#34;Docker镜像&#34;&gt;&lt;a href=&#34;#Docker镜像&#34; class=&#34;headerlink&#34; title=&#34;Docker镜像&#34;&gt;&lt;/a&gt;Docker镜像&lt;/h2&gt;&lt;p&gt;通俗的理解镜像&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Docker的镜像是一个只读的模板，一个独立的文件系统，包括运行容器所需的数据，可以用来创建新的容器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Docker的镜像相当于ISO操作系统的安装包，ISO镜像的内容是固定的，不会发生改变，可以重复使用。&lt;/p&gt;
+&lt;p&gt;如果上面的形容还无法让你理解Docker镜像，那我再举一个例子：&lt;/p&gt;
+&lt;p&gt;从事Java开发的人都知道类和实例的关系。直观的感觉，类就像是一个模板，根据这个类模板，可以生成很多个具体的对象实例。&lt;/p&gt;
+&lt;p&gt;则，&lt;strong&gt;Docker镜像就相当于Java的类，而通过Docker镜像生成出来的东西，我们就叫他它“容器”&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;通过上面的形容，应该可以感觉的到镜像和容器之间的关系了吧。&lt;/p&gt;
+&lt;h2 id=&#34;Docker容器&#34;&gt;&lt;a href=&#34;#Docker容器&#34; class=&#34;headerlink&#34; title=&#34;Docker容器&#34;&gt;&lt;/a&gt;Docker容器&lt;/h2&gt;&lt;p&gt;通俗的理解容器&lt;/p&gt;
+&lt;p&gt;在上一节已经介绍了镜像与容器的关系。&lt;/p&gt;
+&lt;p&gt;这里就直接copy文档中的一句话，来简单形容一下容器：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Docker镜像就相当于Java的类，而通过Docker镜像生成出来的东西，我们就叫他它“容器”&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;Docker仓库&#34;&gt;&lt;a href=&#34;#Docker仓库&#34; class=&#34;headerlink&#34; title=&#34;Docker仓库&#34;&gt;&lt;/a&gt;Docker仓库&lt;/h2&gt;&lt;p&gt;通俗的理解Docker仓库&lt;/p&gt;
+&lt;p&gt;仓库支持的操作类似git，当用户创建了自己的镜像之后就可以使用 push 命令将它上传到公有或者私有仓库，这样下次在另外一台机器上使用这个镜像时候，只需要从仓库上 pull 下来就可以了。&lt;/p&gt;
+&lt;p&gt;类似于，将某项目模块打成jar包，然后上传到私有或者公有的maven仓库，然后在其他的所有支持maven环境的机器上，都可以拉取这个jar进行使用。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

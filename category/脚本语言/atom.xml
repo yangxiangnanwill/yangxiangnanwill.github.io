@@ -1,0 +1,449 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
+    <title>Will • Posts by &#34;脚本语言&#34; category</title>
+    <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
+    <updated>2023-05-28T13:00:29.409Z</updated>
+    <category term="感言" />
+    <category term="思考" />
+    <category term="开发习惯" />
+    <category term="Docker" />
+    <category term="LINUX" />
+    <category term="CentOS" />
+    <category term="Linux" />
+    <category term="Crontab" />
+    <category term="Jenkins" />
+    <category term="Maven" />
+    <category term="Node" />
+    <category term="前端" />
+    <category term="Nvm" />
+    <category term="Archery" />
+    <category term="MySql" />
+    <category term="工具" />
+    <category term="IDEA" />
+    <category term="Alibaba Cloud Toolkit" />
+    <category term="Git" />
+    <category term="BeetlSql" />
+    <category term="Beetl" />
+    <category term="JAVA" />
+    <category term="日期" />
+    <category term="枚举" />
+    <category term="异常" />
+    <category term="Spring" />
+    <category term="SpringCloud" />
+    <category term="SpringCloud Alibaba" />
+    <category term="POI" />
+    <category term="CentOS7" />
+    <category term="MongoDB" />
+    <category term="Spring Boot" />
+    <category term="Redis" />
+    <category term="ProtoBuffer" />
+    <category term="其他" />
+    <category term="博客园" />
+    <category term="博客" />
+    <category term="SOAR" />
+    <category term="VerificationCode" />
+    <category term="MongoDb" />
+    <category term="VinUtil" />
+    <category term="PostMan" />
+    <category term="Typora" />
+    <category term="Java8" />
+    <category term="特性" />
+    <category term="JDBC" />
+    <category term="Mysql" />
+    <category term="EasyExcel" />
+    <category term="Script" />
+    <category term="设计模式" />
+    <category term="MyBatis" />
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/Aviator/</id>
+        <title>Aviator</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/Aviator/"/>
+        <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;最近项目业务中有关于价格计算的模块，项目用到这个东西，感觉很方便和灵活，特地看了一下官方文档。&lt;/p&gt;
+&lt;p&gt;官方文档地址如下：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/boyan-avfmj/aviatorscript&#34;&gt;点击跳转官方最新文档地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参照博客地址：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/csguo/p/7614893.html&#34;&gt;博客地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;软件简介&#34;&gt;&lt;a href=&#34;#软件简介&#34; class=&#34;headerlink&#34; title=&#34;软件简介&#34;&gt;&lt;/a&gt;软件简介&lt;/h2&gt;&lt;p&gt;&lt;code&gt;AviatorScript&lt;/code&gt; 是一门高性能、轻量级寄宿于 JVM 之上的脚本语言。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;备注：版本5之前都叫&lt;code&gt;Aviator&lt;/code&gt;, 5版本重大升级改名&lt;code&gt;​ AviatorScript&lt;/code&gt;,详情请看官方文档介绍。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Aviator是一个高性能、轻量级的java语言实现的表达式求值引擎，主要用于各种表达式的动态求值。现在已经有很多开源可用的java表达式求值引擎，为什么还需要Avaitor呢？&lt;/p&gt;
+&lt;p&gt;Aviator的设计目标是&lt;strong&gt;轻量级&lt;/strong&gt;和&lt;strong&gt;高性能&lt;/strong&gt; ，相比于Groovy、JRuby的笨重，Aviator非常小，加上依赖包也才450K,不算依赖包的话只有70K；当然，Aviator的语法是受限的，它不是一门完整的语言，而只是语言的一小部分集合。&lt;/p&gt;
+&lt;p&gt;其次，Aviator的实现思路与其他轻量级的求值器很不相同，其他求值器一般都是通过解释的方式运行，而Aviator则是直接将表达式&lt;strong&gt;编译成Java字节码&lt;/strong&gt;，交给JVM去执行。简单来说，Aviator的定位是介于Groovy这样的重量级脚本语言和IKExpression这样的轻量级表达式引擎之间。&lt;/p&gt;
+&lt;h2 id=&#34;特性介绍&#34;&gt;&lt;a href=&#34;#特性介绍&#34; class=&#34;headerlink&#34; title=&#34;特性介绍&#34;&gt;&lt;/a&gt;特性介绍&lt;/h2&gt;&lt;p&gt;Aviator的特性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持大部分运算操作符，包括算术操作符、关系运算符、逻辑操作符、正则匹配操作符(&amp;#x3D;~)、三元表达式?: ，并且支持操作符的优先级和括号强制优先级，具体请看后面的操作符列表。&lt;/li&gt;
+&lt;li&gt;支持函数调用和自定义函数&lt;/li&gt;
+&lt;li&gt;支持正则表达式匹配，类似Ruby、Perl的匹配语法，并且支持类Ruby的$digit指向匹配分组。&lt;/li&gt;
+&lt;li&gt;自动类型转换，当执行操作的时候，会自动判断操作数类型并做相应转换，无法转换即抛异常。&lt;/li&gt;
+&lt;li&gt;支持传入变量，支持类似a.b.c的嵌套变量访问。&lt;/li&gt;
+&lt;li&gt;性能优秀&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Aviator的限制：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;没有if else、do while等语句，没有赋值语句，仅支持逻辑表达式、算术表达式、三元表达式和正则匹配。&lt;/li&gt;
+&lt;li&gt;没有位运算符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用场景包括：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;规则判断及规则引擎&lt;/li&gt;
+&lt;li&gt;公式计算&lt;/li&gt;
+&lt;li&gt;动态脚本控制&lt;/li&gt;
+&lt;li&gt;集合数据 ELT 等 ……&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;整体结构&#34;&gt;&lt;a href=&#34;#整体结构&#34; class=&#34;headerlink&#34; title=&#34;整体结构&#34;&gt;&lt;/a&gt;整体结构&lt;/h3&gt;&lt;p&gt;Aviator的结构非常简单，一个典型的求值器的结构&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201101215837.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;Demo&#34;&gt;&lt;a href=&#34;#Demo&#34; class=&#34;headerlink&#34; title=&#34;Demo&#34;&gt;&lt;/a&gt;Demo&lt;/h1&gt;&lt;h2 id=&#34;创建项目&#34;&gt;&lt;a href=&#34;#创建项目&#34; class=&#34;headerlink&#34; title=&#34;创建项目&#34;&gt;&lt;/a&gt;创建项目&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;创建一个空的Maven项目&lt;/li&gt;
+&lt;li&gt;导入以下依赖&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight xml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs xml&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;&amp;lt;!--表达式求值引擎--&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;com.googlecode.aviator&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;aviator&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;5.1.4&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;junit&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;junit&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;4.12&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;scope&lt;/span&gt;&amp;gt;&lt;/span&gt;compile&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;scope&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;执行表达式&#34;&gt;&lt;a href=&#34;#执行表达式&#34; class=&#34;headerlink&#34; title=&#34;执行表达式&#34;&gt;&lt;/a&gt;执行表达式&lt;/h2&gt;&lt;p&gt;Aviator的使用都是集中通过com.googlecode.aviator.AviatorEvaluator这个入口类来处理，最简单的例子，执行一个计算1+2+3的表达式：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; * 计算1+2+3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; */&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;test01&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;()&lt;/span&gt; &amp;#123;&lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;Long&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; (Long) AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;1+2+3&amp;quot;&lt;/span&gt;);&lt;br&gt;    System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;result = &amp;quot;&lt;/span&gt; + result);&lt;span class=&#34;hljs-comment&#34;&gt;//6&lt;/span&gt;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;细心的朋友肯定注意到结果是Long，而不是Integer。这是因为Aviator的数值类型仅支持Long和Double，任何整数都将转换成Long，任何浮点数都将转换为Double，包括用户传入的变量数值。这个例子的打印结果将是正确答案6。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;使用变量&#34;&gt;&lt;a href=&#34;#使用变量&#34; class=&#34;headerlink&#34; title=&#34;使用变量&#34;&gt;&lt;/a&gt;使用变量&lt;/h2&gt;&lt;p&gt;想让Aviator对你say hello吗？很简单，传入你的名字，让Aviator负责字符串的相加：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; * 测试使用变量&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; */&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;test02&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;()&lt;/span&gt; &amp;#123;&lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;yourName&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;will&amp;quot;&lt;/span&gt;;&lt;br&gt;    Map&amp;lt;String, Object&amp;gt; env = &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;HashMap&lt;/span&gt;&amp;lt;String, Object&amp;gt;();&lt;br&gt;    env.put(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;yourName&amp;quot;&lt;/span&gt;, yourName);&lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; (String) AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot; &amp;#x27;hello &amp;#x27; + yourName &amp;quot;&lt;/span&gt;, env);&lt;br&gt;    System.out.println(result);&lt;span class=&#34;hljs-comment&#34;&gt;//hello will&lt;/span&gt;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;上面的例子演示了怎么向表达式传入变量值，表达式中的yourname是一个变量，默认为null，通过传入Map&amp;lt;String,Object&amp;gt;的变量绑定环境，将yourname设置为你输入的名称。env的key是变量名，value是变量的值。&lt;/p&gt;
+&lt;p&gt;上面例子中的’hello ‘是一个Aviator的String，Aviator的String是任何用单引号或者双引号括起来的字符序列，String可以比较大小（基于unicode顺序），可以参与正则匹配，可以与任何对象相加，任何对象与String相加结果为String。String中也可以有转义字符，如&amp;#x2F;n、&amp;#x2F;&amp;#x2F;、&amp;#x2F;‘等。&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot; &amp;#x27;a\\&amp;quot;&lt;/span&gt;b&lt;span class=&#34;hljs-string&#34;&gt;&amp;#x27; &amp;quot;);   //字符串 a&amp;#x27;&lt;/span&gt;b &lt;br&gt;AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot; \\&amp;quot;&lt;/span&gt;a\\&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;b &amp;quot;&lt;/span&gt;);  &lt;span class=&#34;hljs-comment&#34;&gt;//字符串 a&amp;quot;b &lt;/span&gt;&lt;br&gt;AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot; &amp;#x27;hello&amp;#x27; + 3 &amp;quot;&lt;/span&gt;);  &lt;span class=&#34;hljs-comment&#34;&gt;//字符串 hello 3 &lt;/span&gt;&lt;br&gt;AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot; &amp;#x27;hello &amp;#x27;+ unknow &amp;quot;&lt;/span&gt;);  &lt;span class=&#34;hljs-comment&#34;&gt;//字符串 hello null&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;调用函数&#34;&gt;&lt;a href=&#34;#调用函数&#34; class=&#34;headerlink&#34; title=&#34;调用函数&#34;&gt;&lt;/a&gt;调用函数&lt;/h2&gt;&lt;p&gt;Aviator支持函数调用，函数调用的风格类似lua，下面的例子获取字符串的长度：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;string.length(&amp;#x27;hello&amp;#x27;)&amp;quot;&lt;/span&gt;);&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;string.length(‘hello’)是一个函数调用，string.length是一个函数,’hello’是调用的参数。&lt;/p&gt;
+&lt;p&gt;再用string.substring来截取字符串：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;string.contains(/&amp;quot;&lt;/span&gt;test/&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;,string.substring(&amp;#x27;hello&amp;#x27;,1,2))&amp;quot;&lt;/span&gt;);&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;通过string.substring(‘hello’,1,2)获取字符串’e’，然后通过函数string.contains判断e是否在’test’中。可以看到，函数可以嵌套调用。&lt;/p&gt;
+&lt;p&gt;完整代码：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; * 调用函数&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; */&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;test03&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;()&lt;/span&gt; &amp;#123;&lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;Long&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;strLen&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; (Long) AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;string.length(&amp;#x27;hello will&amp;#x27;)&amp;quot;&lt;/span&gt;);&lt;br&gt;    System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;strLen = &amp;quot;&lt;/span&gt; + strLen); &lt;span class=&#34;hljs-comment&#34;&gt;// 10&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;Boolean&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;strContainsFlag&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; (Boolean) AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;string.contains(&amp;#x27;test&amp;#x27;,string.substring(&amp;#x27;hello&amp;#x27;,1,2))&amp;quot;&lt;/span&gt;);&lt;br&gt;    System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;strContainsFlag = &amp;quot;&lt;/span&gt; + strContainsFlag);&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;Aviator的内置函数列表请看后面。&lt;/p&gt;
+&lt;h2 id=&#34;自定义函数&#34;&gt;&lt;a href=&#34;#自定义函数&#34; class=&#34;headerlink&#34; title=&#34;自定义函数&#34;&gt;&lt;/a&gt;自定义函数&lt;/h2&gt;&lt;p&gt;Aviator除了内置的函数之外，还允许用户自定义函数，只要实现com.googlecode.aviator.runtime.type.AviatorFunction接口，并注册到AviatorEvaluator即可使用。&lt;/p&gt;
+&lt;p&gt;接口信息如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201101213259.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以看一个例子，我们实现一个add函数来做数值的相加：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先创建一个类实现&lt;code&gt;AbstractFunction&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;package&lt;/span&gt; com.bossyang.demo.aviator;&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; com.googlecode.aviator.runtime.function.AbstractFunction;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; com.googlecode.aviator.runtime.function.FunctionUtils;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; com.googlecode.aviator.runtime.type.AviatorDouble;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; com.googlecode.aviator.runtime.type.AviatorObject;&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; java.util.Map;&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; * &lt;span class=&#34;hljs-doctag&#34;&gt;@ClassName&lt;/span&gt; MyAddFunction&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; * &lt;span class=&#34;hljs-doctag&#34;&gt;@Description&lt;/span&gt; 自定义实现增加方法&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; * &lt;span class=&#34;hljs-doctag&#34;&gt;@Author&lt;/span&gt; will&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; * &lt;span class=&#34;hljs-doctag&#34;&gt;@Date&lt;/span&gt; 2020/11/1 8:05 PM&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; */&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;MyAddFunction&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;AbstractFunction&lt;/span&gt; &amp;#123;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;hljs-meta&#34;&gt;@Override&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; AviatorObject &lt;span class=&#34;hljs-title function_&#34;&gt;call&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;(Map&amp;lt;String, Object&amp;gt; env,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-params&#34;&gt;                              AviatorObject arg1, AviatorObject arg2)&lt;/span&gt; &amp;#123;&lt;br&gt;        &lt;span class=&#34;hljs-type&#34;&gt;Number&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;left&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; FunctionUtils.getNumberValue(arg1, env);&lt;br&gt;        &lt;span class=&#34;hljs-type&#34;&gt;Number&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;right&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; FunctionUtils.getNumberValue(arg2, env);&lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;AviatorDouble&lt;/span&gt;(left.doubleValue() + right.doubleValue());&lt;br&gt;    &amp;#125;&lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; String &lt;span class=&#34;hljs-title function_&#34;&gt;getName&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;()&lt;/span&gt; &amp;#123;&lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;add&amp;quot;&lt;/span&gt;;&lt;br&gt;    &amp;#125;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;注册到AviatorEvaluator并调用如下：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; * 使用自定义函数&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; */&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;test04&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;()&lt;/span&gt; &amp;#123;&lt;br&gt;    &lt;span class=&#34;hljs-comment&#34;&gt;//注册函数&lt;/span&gt;&lt;br&gt;    AviatorEvaluator.addFunction(&lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;MyAddFunction&lt;/span&gt;());&lt;br&gt;    System.out.println(AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;add(1,2)&amp;quot;&lt;/span&gt;)); &lt;span class=&#34;hljs-comment&#34;&gt;//3.0&lt;/span&gt;&lt;br&gt;    System.out.println(AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;add(add(1,2),100)&amp;quot;&lt;/span&gt;)); &lt;span class=&#34;hljs-comment&#34;&gt;//103.0&lt;/span&gt;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;注册函数通过AviatorEvaluator.addFunction方法，移除可以通过removeFunction。&lt;/p&gt;
+&lt;h2 id=&#34;编译表达式&#34;&gt;&lt;a href=&#34;#编译表达式&#34; class=&#34;headerlink&#34; title=&#34;编译表达式&#34;&gt;&lt;/a&gt;编译表达式&lt;/h2&gt;&lt;p&gt;上面提到的例子都是直接执行表达式，事实上Aviator背后都帮你做了编译并执行的工作。你可以自己先编译表达式，返回一个编译的结果，然后传入不同的env来复用编译结果，提高性能，这是更推荐的使用方式：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;//使用编译表达式&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;test05&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;()&lt;/span&gt; &amp;#123;&lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;expression&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;a-(b-c)&amp;gt;100&amp;quot;&lt;/span&gt;;&lt;br&gt;    &lt;span class=&#34;hljs-comment&#34;&gt;// 编译表达式&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;Expression&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;compiledExp&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; AviatorEvaluator.compile(expression);&lt;br&gt;&lt;br&gt;    Map&amp;lt;String, Object&amp;gt; env = &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;HashMap&lt;/span&gt;&amp;lt;String, Object&amp;gt;();&lt;br&gt;    env.put(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;a&amp;quot;&lt;/span&gt;, &lt;span class=&#34;hljs-number&#34;&gt;100.3&lt;/span&gt;);&lt;br&gt;    env.put(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;b&amp;quot;&lt;/span&gt;, &lt;span class=&#34;hljs-number&#34;&gt;45&lt;/span&gt;);&lt;br&gt;    env.put(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;c&amp;quot;&lt;/span&gt;, -&lt;span class=&#34;hljs-number&#34;&gt;199.100&lt;/span&gt;);&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;hljs-comment&#34;&gt;// 执行表达式&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;Boolean&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; (Boolean) compiledExp.execute(env);&lt;br&gt;    System.out.println(result);&lt;span class=&#34;hljs-comment&#34;&gt;//false&lt;/span&gt;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;通过compile方法可以将表达式编译成Expression的中间对象，当要执行表达式的时候传入env并调用Expression的execute方法即可。表达式中使用了括号来强制优先级，这个例子还使用了&amp;gt;用于比较数值大小，比较运算符!&amp;#x3D;、&amp;#x3D;&amp;#x3D;、&amp;gt;、&amp;gt;&amp;#x3D;、&amp;lt;、&amp;lt;&amp;#x3D;不仅可以用于数值，也可以用于String、Pattern、Boolean等等，甚至是任何用户传入的两个都实现了java.lang。Comparable接口的对象之间。&lt;/p&gt;
+&lt;p&gt;编译后的结果你可以自己缓存，也可以交给Aviator帮你缓存，AviatorEvaluator内部有一个全局的缓存池，如果你决定缓存编译结果，可以通过：&lt;/p&gt;
+&lt;figure class=&#34;highlight arduino&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs arduino&#34;&gt;&lt;span class=&#34;hljs-function&#34;&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-type&#34;&gt;static&lt;/span&gt; Expression &lt;span class=&#34;hljs-title&#34;&gt;compile&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;(&lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; expression, &lt;span class=&#34;hljs-type&#34;&gt;boolean&lt;/span&gt; cached)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;将cached设置为true即可，那么下次编译同一个表达式的时候将直接返回上一次编译的结果。使缓存失效通过：&lt;/p&gt;
+&lt;figure class=&#34;highlight arduino&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs arduino&#34;&gt;&lt;span class=&#34;hljs-function&#34;&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-type&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;hljs-type&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title&#34;&gt;invalidateCache&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;(&lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; expression)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这个方法。&lt;/p&gt;
+&lt;h2 id=&#34;访问数组和集合&#34;&gt;&lt;a href=&#34;#访问数组和集合&#34; class=&#34;headerlink&#34; title=&#34;访问数组和集合&#34;&gt;&lt;/a&gt;访问数组和集合&lt;/h2&gt;&lt;p&gt;可以通过中括号去访问数组和java.util.List对象，可以通过map.key访问java.util.Map中key对应的value，一个例子：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;//操作数组&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;test06&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;()&lt;/span&gt; &amp;#123;&lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;final&lt;/span&gt; List&amp;lt;String&amp;gt; list = &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;ArrayList&lt;/span&gt;&amp;lt;String&amp;gt;();&lt;br&gt;    list.add(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;);&lt;br&gt;    list.add(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot; world&amp;quot;&lt;/span&gt;);&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;hljs-type&#34;&gt;int&lt;/span&gt;[] array = &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;int&lt;/span&gt;[&lt;span class=&#34;hljs-number&#34;&gt;3&lt;/span&gt;];&lt;br&gt;    array[&lt;span class=&#34;hljs-number&#34;&gt;0&lt;/span&gt;] = &lt;span class=&#34;hljs-number&#34;&gt;0&lt;/span&gt;;&lt;br&gt;    array[&lt;span class=&#34;hljs-number&#34;&gt;1&lt;/span&gt;] = &lt;span class=&#34;hljs-number&#34;&gt;1&lt;/span&gt;;&lt;br&gt;    array[&lt;span class=&#34;hljs-number&#34;&gt;2&lt;/span&gt;] = &lt;span class=&#34;hljs-number&#34;&gt;3&lt;/span&gt;;&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;final&lt;/span&gt; Map&amp;lt;String, Date&amp;gt; map = &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;HashMap&lt;/span&gt;&amp;lt;String, Date&amp;gt;();&lt;br&gt;    map.put(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;date&amp;quot;&lt;/span&gt;, &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;Date&lt;/span&gt;());&lt;br&gt;&lt;br&gt;    Map&amp;lt;String, Object&amp;gt; env = &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;HashMap&lt;/span&gt;&amp;lt;String, Object&amp;gt;();&lt;br&gt;    env.put(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;list&amp;quot;&lt;/span&gt;, list);&lt;br&gt;    env.put(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;array&amp;quot;&lt;/span&gt;, array);&lt;br&gt;    env.put(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;map&amp;quot;&lt;/span&gt;, map);&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;hljs-comment&#34;&gt;/**&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;     * hello world/array[0]+array[1]+array[2]=4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;     *  today is Sun Nov 01 20:31:32 CST 2020&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;     */&lt;/span&gt;&lt;br&gt;    System.out.println(AviatorEvaluator.execute(&lt;br&gt;            &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;list[0]+list[1]+&amp;#x27;/array[0]+array[1]+array[2]=&amp;#x27;+(array[0]+array[1]+array[2]) +&amp;#x27; \n today is &amp;#x27;+map.date &amp;quot;&lt;/span&gt;, env));&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;三元操作符&#34;&gt;&lt;a href=&#34;#三元操作符&#34; class=&#34;headerlink&#34; title=&#34;三元操作符&#34;&gt;&lt;/a&gt;三元操作符&lt;/h2&gt;&lt;p&gt;Aviator不提供if else语句，但是提供了三元操作符?:用于条件判断，使用上与java没有什么不同：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;//三元运算符&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;test07&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;()&lt;/span&gt; &amp;#123;&lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;num&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;6&lt;/span&gt;;&lt;br&gt;    Map&amp;lt;String, Object&amp;gt; env = &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;HashMap&lt;/span&gt;&amp;lt;String, Object&amp;gt;();&lt;br&gt;    env.put(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;a&amp;quot;&lt;/span&gt;, num);&lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; (String) AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;a &amp;gt; 0? &amp;#x27;yes&amp;#x27;:&amp;#x27;no&amp;#x27;&amp;quot;&lt;/span&gt;, env);&lt;br&gt;    System.out.println(result);&lt;span class=&#34;hljs-comment&#34;&gt;//yes&lt;/span&gt;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这个例子用来判断用户传入的数字是否是正整数，是的话打印yes。&lt;/p&gt;
+&lt;p&gt;Aviator的三元表达式对于两个分支的结果类型并不要求一致，可以是任何类型，这一点与java不同。&lt;/p&gt;
+&lt;h2 id=&#34;正则表达式匹配&#34;&gt;&lt;a href=&#34;#正则表达式匹配&#34; class=&#34;headerlink&#34; title=&#34;正则表达式匹配&#34;&gt;&lt;/a&gt;正则表达式匹配&lt;/h2&gt;&lt;p&gt;Aviator支持类Ruby和Perl风格的表达式匹配运算，通过&amp;#x3D;~操作符，如下面这个例子匹配email并提取用户名返回：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;//正则表达式&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;test08&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;()&lt;/span&gt;&amp;#123;&lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;email&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;will2020@qq.com&amp;quot;&lt;/span&gt;;&lt;br&gt;    Map&amp;lt;String, Object&amp;gt; env = &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;HashMap&lt;/span&gt;&amp;lt;String, Object&amp;gt;();&lt;br&gt;    env.put(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;email&amp;quot;&lt;/span&gt;, email);&lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;username&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; (String) AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;email=~/([\\w0-8]+@\\w+[\\.\\w+]+)/ ? $1:&amp;#x27;unknow&amp;#x27;&amp;quot;&lt;/span&gt;, env);&lt;br&gt;    System.out.println(username);&lt;span class=&#34;hljs-comment&#34;&gt;//will2020@qq.com&lt;/span&gt;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;email与正则表达式&amp;#x2F;&amp;#x2F;(&amp;#x2F;&amp;#x2F;w0-8+@&amp;#x2F;&amp;#x2F;w+&amp;#x2F;&amp;#x2F;.&amp;#x2F;&amp;#x2F;w++)&amp;#x2F;通过&amp;#x3D;~操作符来匹配，结果为一个Boolean类型，因此可以用于三元表达式判断，匹配成功的时候返回$1，指代正则表达式的分组1，也就是用户名，否则返回unknown。这个例子将打印killme2008这个用户名。&lt;/p&gt;
+&lt;p&gt;Aviator在表达式级别支持正则表达式，通过&amp;#x2F;&amp;#x2F;括起来的字符序列构成一个正则表达式，正则表达式可以用于匹配（作为&amp;#x3D;~的右操作数)、比较大小，匹配仅能与字符串进行匹配。匹配成功后，Aviator会自动将匹配成功的分组放入$num的变量中，其中$0指代整个匹配的字符串，而$1表示第一个分组，以此类推。&lt;/p&gt;
+&lt;p&gt;Aviator的正则表达式规则跟Java完全一样，因为内部其实就是使用java.util.regex.Pattern做编译的。&lt;/p&gt;
+&lt;h2 id=&#34;变量的语法糖衣&#34;&gt;&lt;a href=&#34;#变量的语法糖衣&#34; class=&#34;headerlink&#34; title=&#34;变量的语法糖衣&#34;&gt;&lt;/a&gt;变量的语法糖衣&lt;/h2&gt;&lt;p&gt;Aviator有个方便用户使用变量的语法糖衣，当你要访问变量a中的某个属性b，那么你可以通过a.b访问到，更进一步，a.b.c将访问变量a的b属性中的c属性值，推广开来也就是说Aviator可以将变量声明为嵌套访问的形式，一个例子，Foo类有属性i、f、date：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;package&lt;/span&gt; com.bossyang.demo.aviator;&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; java.util.Date;&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;Foo&lt;/span&gt; &amp;#123;&lt;br&gt;        &lt;span class=&#34;hljs-type&#34;&gt;int&lt;/span&gt; i; &lt;br&gt;        &lt;span class=&#34;hljs-type&#34;&gt;float&lt;/span&gt; f; &lt;br&gt;        &lt;span class=&#34;hljs-type&#34;&gt;Date&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;date&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;Date&lt;/span&gt;();&lt;br&gt; &lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;Foo&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;(&lt;span class=&#34;hljs-type&#34;&gt;int&lt;/span&gt; i, &lt;span class=&#34;hljs-type&#34;&gt;float&lt;/span&gt; f, Date date)&lt;/span&gt; &amp;#123; &lt;br&gt;            &lt;span class=&#34;hljs-built_in&#34;&gt;super&lt;/span&gt;(); &lt;br&gt;            &lt;span class=&#34;hljs-built_in&#34;&gt;this&lt;/span&gt;.i = i; &lt;br&gt;            &lt;span class=&#34;hljs-built_in&#34;&gt;this&lt;/span&gt;.f = f; &lt;br&gt;            &lt;span class=&#34;hljs-built_in&#34;&gt;this&lt;/span&gt;.date = date; &lt;br&gt;        &amp;#125; &lt;br&gt; &lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;getI&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;()&lt;/span&gt; &amp;#123; &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; i; &lt;br&gt;        &amp;#125; &lt;br&gt; &lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;setI&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;(&lt;span class=&#34;hljs-type&#34;&gt;int&lt;/span&gt; i)&lt;/span&gt; &amp;#123; &lt;br&gt;            &lt;span class=&#34;hljs-built_in&#34;&gt;this&lt;/span&gt;.i = i; &lt;br&gt;        &amp;#125; &lt;br&gt; &lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-type&#34;&gt;float&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;getF&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;()&lt;/span&gt; &amp;#123; &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; f; &lt;br&gt;        &amp;#125; &lt;br&gt; &lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;setF&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;(&lt;span class=&#34;hljs-type&#34;&gt;float&lt;/span&gt; f)&lt;/span&gt; &amp;#123; &lt;br&gt;            &lt;span class=&#34;hljs-built_in&#34;&gt;this&lt;/span&gt;.f = f; &lt;br&gt;        &amp;#125; &lt;br&gt; &lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; Date &lt;span class=&#34;hljs-title function_&#34;&gt;getDate&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;()&lt;/span&gt; &amp;#123; &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; date; &lt;br&gt;        &amp;#125; &lt;br&gt; &lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;setDate&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;(Date date)&lt;/span&gt; &amp;#123; &lt;br&gt;            &lt;span class=&#34;hljs-built_in&#34;&gt;this&lt;/span&gt;.date = date; &lt;br&gt;        &amp;#125; &lt;br&gt;    &amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;Foo类符合JavaBean规范，并且是public的，我们执行一个表达式来描述Foo:&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;//变量的语法糖&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;test09&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;()&lt;/span&gt;&amp;#123;&lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;Foo&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;foo&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;Foo&lt;/span&gt;(&lt;span class=&#34;hljs-number&#34;&gt;100&lt;/span&gt;, &lt;span class=&#34;hljs-number&#34;&gt;3.14f&lt;/span&gt;, &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;Date&lt;/span&gt;());&lt;br&gt;    Map&amp;lt;String, Object&amp;gt; env = &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;HashMap&lt;/span&gt;&amp;lt;String, Object&amp;gt;();&lt;br&gt;    env.put(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;, foo);&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt;&lt;br&gt;            (String) AviatorEvaluator.execute(&lt;br&gt;                    &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot; &amp;#x27;[foo i=&amp;#x27;+ foo.i + &amp;#x27; f=&amp;#x27;+foo.f+&amp;#x27; year=&amp;#x27;+(foo.date.year+1900)+ &amp;#x27; month=&amp;#x27;+foo.date.month +&amp;#x27;]&amp;#x27;  &amp;quot;&lt;/span&gt;,&lt;br&gt;                    env);&lt;br&gt;    &lt;span class=&#34;hljs-comment&#34;&gt;//因为获取的是year调用的是Date对象的getYear方法，而getYear方法默认获取的是公元元年&lt;/span&gt;&lt;br&gt;    System.out.println(result);&lt;span class=&#34;hljs-comment&#34;&gt;//[foo i=100 f=3.14 year=2020 month=10]&lt;/span&gt;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;细看下表达式：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-string&#34;&gt;&amp;#x27;[foo i=&amp;#x27;&lt;/span&gt;+ foo.i + &lt;span class=&#34;hljs-string&#34;&gt;&amp;#x27; f=&amp;#x27;&lt;/span&gt;+foo.f+&lt;span class=&#34;hljs-string&#34;&gt;&amp;#x27; year=&amp;#x27;&lt;/span&gt;+(foo.date.year+&lt;span class=&#34;hljs-number&#34;&gt;1900&lt;/span&gt;)+ &lt;span class=&#34;hljs-string&#34;&gt;&amp;#x27; month=&amp;#x27;&lt;/span&gt;+foo.date.month +&lt;span class=&#34;hljs-string&#34;&gt;&amp;#x27;]&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;可以看到我们通过foo.i和foo.f的方式来访问foo变量中的i和f属性，并且通过foo.date.year的方式来访问foo中date对象的year属性（其实是getYear方法）。&lt;/p&gt;
+&lt;h2 id=&#34;nil对象&#34;&gt;&lt;a href=&#34;#nil对象&#34; class=&#34;headerlink&#34; title=&#34;nil对象&#34;&gt;&lt;/a&gt;nil对象&lt;/h2&gt;&lt;p&gt;nil是Aviator内置的常量，类似java中的null，表示空的值。nil跟null不同的在于，在java中null只能使用在&amp;#x3D;&amp;#x3D;、!&amp;#x3D;的比较运算符，而nil还可以使用&amp;gt;、&amp;gt;&amp;#x3D;、&amp;lt;、&amp;lt;&amp;#x3D;等比较运算符。Aviator规定，任何对象都比nil大除了nil本身。用户传入的变量如果为null，将自动以nil替代。&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;//nil对象&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;test10&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;()&lt;/span&gt;&amp;#123;&lt;br&gt;    System.out.println(AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;nil == nil&amp;quot;&lt;/span&gt;)); &lt;span class=&#34;hljs-comment&#34;&gt;// true&lt;/span&gt;&lt;br&gt;    System.out.println(AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;3 &amp;gt; nil&amp;quot;&lt;/span&gt;)); &lt;span class=&#34;hljs-comment&#34;&gt;// true&lt;/span&gt;&lt;br&gt;    System.out.println(AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot; true!= nil&amp;quot;&lt;/span&gt;)); &lt;span class=&#34;hljs-comment&#34;&gt;// true&lt;/span&gt;&lt;br&gt;    System.out.println(AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot; &amp;#x27;&amp;#x27; &amp;gt;nil &amp;quot;&lt;/span&gt;)); &lt;span class=&#34;hljs-comment&#34;&gt;// true&lt;/span&gt;&lt;br&gt;    System.out.println(AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot; a == nil &amp;quot;&lt;/span&gt;)); &lt;span class=&#34;hljs-comment&#34;&gt;// true&lt;/span&gt;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;nil与String相加的时候，跟java一样显示为null&lt;/p&gt;
+&lt;h2 id=&#34;日期比较&#34;&gt;&lt;a href=&#34;#日期比较&#34; class=&#34;headerlink&#34; title=&#34;日期比较&#34;&gt;&lt;/a&gt;日期比较&lt;/h2&gt;&lt;p&gt;Aviator并不支持日期类型，如果要比较日期，你需要将日期写字符串的形式，并且要求是形如”yyyy-MM-dd HH:mm:ss:SS”的字符串，否则都将报错。 字符串跟java.util.Date比较的时候将自动转换为Date对象进行比较：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;//日期格式比较&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta&#34;&gt;@Test&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;test11&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;()&lt;/span&gt;&amp;#123;&lt;br&gt;    Map&amp;lt;String, Object&amp;gt; env = &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;HashMap&lt;/span&gt;&amp;lt;String, Object&amp;gt;();&lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;hljs-type&#34;&gt;Date&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;date&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;Date&lt;/span&gt;();&lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;dateStr&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;SimpleDateFormat&lt;/span&gt;(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;yyyy-MM-dd HH:mm:ss:SS&amp;quot;&lt;/span&gt;).format(date);&lt;br&gt;    env.put(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;date&amp;quot;&lt;/span&gt;, date);&lt;br&gt;    env.put(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;dateStr&amp;quot;&lt;/span&gt;, dateStr);&lt;br&gt;&lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;Boolean&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; (Boolean) AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;date == dateStr&amp;quot;&lt;/span&gt;, env);&lt;br&gt;    System.out.println(result); &lt;span class=&#34;hljs-comment&#34;&gt;//true&lt;/span&gt;&lt;br&gt;&lt;br&gt;    result = (Boolean) AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;date &amp;gt; &amp;#x27;2009-12-20 00:00:00:00&amp;#x27; &amp;quot;&lt;/span&gt;, env);&lt;br&gt;    System.out.println(result);&lt;span class=&#34;hljs-comment&#34;&gt;//true&lt;/span&gt;&lt;br&gt;&lt;br&gt;    result = (Boolean) AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;date &amp;lt; &amp;#x27;2200-12-20 00:00:00:00&amp;#x27; &amp;quot;&lt;/span&gt;, env);&lt;br&gt;    System.out.println(result);&lt;span class=&#34;hljs-comment&#34;&gt;//true&lt;/span&gt;&lt;br&gt;&lt;br&gt;    result = (Boolean) AviatorEvaluator.execute(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;date == date &amp;quot;&lt;/span&gt;, env);&lt;br&gt;    System.out.println(result);&lt;span class=&#34;hljs-comment&#34;&gt;//true&lt;/span&gt;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;也就是说String除了能跟String比较之外，还能跟nil和date字符串比较。&lt;/p&gt;
+&lt;h2 id=&#34;两种模式&#34;&gt;&lt;a href=&#34;#两种模式&#34; class=&#34;headerlink&#34; title=&#34;两种模式&#34;&gt;&lt;/a&gt;两种模式&lt;/h2&gt;&lt;p&gt;默认AviatorEvaluator以编译速度优先：&lt;/p&gt;
+&lt;figure class=&#34;highlight reasonml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs reasonml&#34;&gt;&lt;span class=&#34;hljs-module-access&#34;&gt;&lt;span class=&#34;hljs-module&#34;&gt;&lt;span class=&#34;hljs-identifier&#34;&gt;AviatorEvaluator&lt;/span&gt;.&lt;/span&gt;&lt;/span&gt;set&lt;span class=&#34;hljs-constructor&#34;&gt;Optimize(AviatorEvaluator.COMPILE)&lt;/span&gt;;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;你可以修改为运行速度优先，这会做更多的编译优化：&lt;/p&gt;
+&lt;figure class=&#34;highlight reasonml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs reasonml&#34;&gt;&lt;span class=&#34;hljs-module-access&#34;&gt;&lt;span class=&#34;hljs-module&#34;&gt;&lt;span class=&#34;hljs-identifier&#34;&gt;AviatorEvaluator&lt;/span&gt;.&lt;/span&gt;&lt;/span&gt;set&lt;span class=&#34;hljs-constructor&#34;&gt;Optimize(AviatorEvaluator.EVAL)&lt;/span&gt;;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;语法手册&#34;&gt;&lt;a href=&#34;#语法手册&#34; class=&#34;headerlink&#34; title=&#34;语法手册&#34;&gt;&lt;/a&gt;语法手册&lt;/h1&gt;&lt;p&gt;下面是Aviator详细的语法规则定义。&lt;/p&gt;
+&lt;h2 id=&#34;数据类型&#34;&gt;&lt;a href=&#34;#数据类型&#34; class=&#34;headerlink&#34; title=&#34;数据类型&#34;&gt;&lt;/a&gt;数据类型&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Number类型：数字类型，支持两种类型，分别对应Java的Long和Double，也就是说任何整数都将被转换为Long，而任何浮点数都将被转换为Double，包括用户传入的数值也是如此转换。不支持科学计数法，仅支持十进制。如-1、100、2.3等。&lt;/li&gt;
+&lt;li&gt;String类型： 字符串类型，单引号或者双引号括起来的文本串，如’hello world’，变量如果传入的是String或者Character也将转为String类型。&lt;/li&gt;
+&lt;li&gt;Bool类型： 常量true和false，表示真值和假值，与java的Boolean.TRUE和Boolean.False对应。&lt;/li&gt;
+&lt;li&gt;Pattern类型： 类似Ruby、perl的正则表达式，以&amp;#x2F;&amp;#x2F;括起来的字符串，如&amp;#x2F;&amp;#x2F;d+&amp;#x2F;，内部实现为java.util.Pattern。&lt;/li&gt;
+&lt;li&gt;变量类型： 与Java的变量命名规则相同，变量的值由用户传入，如”a”、”&lt;em&gt;b&amp;quot;等&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;nil类型: 常量nil,类似java中的null，但是nil比较特殊，nil不仅可以参与&lt;code&gt;==&lt;/code&gt;、&lt;code&gt;!=&lt;/code&gt;的比较，也可以参与&lt;code&gt;&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;gt;=&lt;/code&gt;、&lt;code&gt;&amp;lt;&lt;/code&gt;、&lt;code&gt;&amp;lt;=&lt;/code&gt;的比较，Aviator规定任何类型都n大于nil除了nil本身，nil&lt;code&gt;==&lt;/code&gt;nil返回true。用户传入的变量值如果为null，那么也将作为nil处理，nil打印为null。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;操作符&#34;&gt;&lt;a href=&#34;#操作符&#34; class=&#34;headerlink&#34; title=&#34;操作符&#34;&gt;&lt;/a&gt;操作符&lt;/h2&gt;&lt;h3 id=&#34;算术运算符&#34;&gt;&lt;a href=&#34;#算术运算符&#34; class=&#34;headerlink&#34; title=&#34;算术运算符&#34;&gt;&lt;/a&gt;算术运算符&lt;/h3&gt;&lt;p&gt;Aviator支持常见的算术运算符，包括+ - &lt;code&gt;*&lt;/code&gt; &amp;#x2F; % 五个二元运算符，和一元运算符”-“。其中 - &lt;code&gt;*&lt;/code&gt; &amp;#x2F; %和一元的”-“仅能作用于Number类型。&lt;/p&gt;
+&lt;p&gt;“+”不仅能用于Number类型，还可以用于String的相加，或者字符串与其他对象的相加。Aviator规定，任何类型与String相加，结果为String。&lt;/p&gt;
+&lt;h3 id=&#34;逻辑运算符&#34;&gt;&lt;a href=&#34;#逻辑运算符&#34; class=&#34;headerlink&#34; title=&#34;逻辑运算符&#34;&gt;&lt;/a&gt;逻辑运算符&lt;/h3&gt;&lt;p&gt;Avaitor的支持的逻辑运算符包括，一元否定运算符”!”，以及逻辑与的”&amp;amp;&amp;amp;”，逻辑或的”||”。逻辑运算符的操作数只能为Boolean。&lt;/p&gt;
+&lt;h3 id=&#34;关系运算符&#34;&gt;&lt;a href=&#34;#关系运算符&#34; class=&#34;headerlink&#34; title=&#34;关系运算符&#34;&gt;&lt;/a&gt;关系运算符&lt;/h3&gt;&lt;p&gt;Aviator支持的关系运算符包括”&amp;lt;” “&amp;lt;&amp;#x3D;” “&amp;gt;” “&amp;gt;&amp;#x3D;” 以及”&amp;#x3D;&amp;#x3D;”和”!&amp;#x3D;” 。&lt;/p&gt;
+&lt;p&gt;&amp;amp;&amp;amp;和||都执行短路规则。&lt;/p&gt;
+&lt;p&gt;关系运算符可以作用于Number之间、String之间、Pattern之间、Boolean之间、变量之间以及其他类型与nil之间的关系比较，不同类型除了nil之外不能相互比较。&lt;/p&gt;
+&lt;p&gt;Aviator规定任何对象都比nil大除了nil之外。&lt;/p&gt;
+&lt;h3 id=&#34;匹配运算符&#34;&gt;&lt;a href=&#34;#匹配运算符&#34; class=&#34;headerlink&#34; title=&#34;匹配运算符&#34;&gt;&lt;/a&gt;匹配运算符&lt;/h3&gt;&lt;p&gt;匹配运算符”&amp;#x3D;~”用于String和Pattern的匹配，它的左操作数必须为String，右操作数必须为Pattern。匹配成功后，Pattern的分组将存于变量$num，num为分组索引。&lt;/p&gt;
+&lt;h3 id=&#34;三元运算符&#34;&gt;&lt;a href=&#34;#三元运算符&#34; class=&#34;headerlink&#34; title=&#34;三元运算符&#34;&gt;&lt;/a&gt;三元运算符&lt;/h3&gt;&lt;p&gt;Aviator没有提供if else语句，但是提供了三元运算符 “?:”，形式为 bool ? exp1: exp2。 其中bool必须为结果为Boolean类型的表达式，而exp1和exp2可以为任何合法的Aviator表达式，并且不要求exp1和exp2返回的结果类型一致。&lt;/p&gt;
+&lt;h3 id=&#34;操作符列表&#34;&gt;&lt;a href=&#34;#操作符列表&#34; class=&#34;headerlink&#34; title=&#34;操作符列表&#34;&gt;&lt;/a&gt;操作符列表&lt;/h3&gt;&lt;h3 id=&#34;Aviator支持操作符的优先级，并且允许通过括号来强制优先级，下面是完整的操作符列表，按照优先级从高到低的顺序排列：&#34;&gt;&lt;a href=&#34;#Aviator支持操作符的优先级，并且允许通过括号来强制优先级，下面是完整的操作符列表，按照优先级从高到低的顺序排列：&#34; class=&#34;headerlink&#34; title=&#34;Aviator支持操作符的优先级，并且允许通过括号来强制优先级，下面是完整的操作符列表，按照优先级从高到低的顺序排列：&#34;&gt;&lt;/a&gt;Aviator支持操作符的优先级，并且允许通过括号来强制优先级，下面是完整的操作符列表，按照优先级从高到低的顺序排列：&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;序号&lt;/th&gt;
+&lt;th&gt;操作符&lt;/th&gt;
+&lt;th&gt;结合性&lt;/th&gt;
+&lt;th&gt;操作数限制&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;() &lt;code&gt;[&lt;/code&gt; &lt;code&gt;]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;从左到右&lt;/td&gt;
+&lt;td&gt;()用于函数调用，&lt;code&gt;[&lt;/code&gt; &lt;code&gt;]&lt;/code&gt;用于数组和java.util.List的元素访问，要求&lt;code&gt;[&lt;/code&gt;indx&lt;code&gt;]&lt;/code&gt;中的index必须为整型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;! -&lt;/td&gt;
+&lt;td&gt;从右到左&lt;/td&gt;
+&lt;td&gt;! 能用于Boolean,- 仅能用于Number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;*&lt;/code&gt; &amp;#x2F; %&lt;/td&gt;
+&lt;td&gt;从左到右&lt;/td&gt;
+&lt;td&gt;Number之间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;+ -&lt;/td&gt;
+&lt;td&gt;从左到右&lt;/td&gt;
+&lt;td&gt;+ - 都能用于Number之间, + 还能用于String之间，或者String和其他对象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;&amp;lt; &amp;lt;&amp;#x3D; &amp;gt; &amp;gt;&amp;#x3D;&lt;/td&gt;
+&lt;td&gt;从左到右&lt;/td&gt;
+&lt;td&gt;Number之间、String之间、Pattern之间、变量之间、其他类型与nil之间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;&amp;#x3D;&amp;#x3D; !&amp;#x3D; &amp;#x3D;~&lt;/td&gt;
+&lt;td&gt;从左到右&lt;/td&gt;
+&lt;td&gt;&amp;#x3D;&amp;#x3D;和!&amp;#x3D;作用于Number之间、String之间、Pattern之间、变量之间、其他类型与nil之间以及String和java.util.Date之间，&amp;#x3D;~仅能作用于String和Pattern之间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;&amp;amp;&amp;amp;&lt;/td&gt;
+&lt;td&gt;从左到右&lt;/td&gt;
+&lt;td&gt;Boolean之间，短路&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;&amp;#96;&lt;/td&gt;
+&lt;td&gt;&amp;#96;&amp;#96;|&amp;#96;&lt;/td&gt;
+&lt;td&gt;从左到右&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;? :&lt;/td&gt;
+&lt;td&gt;从右到左&lt;/td&gt;
+&lt;td&gt;第一个操作数的结果必须为Boolean，第二和第三操作数结果无限制&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h2 id=&#34;类型转换规则&#34;&gt;&lt;a href=&#34;#类型转换规则&#34; class=&#34;headerlink&#34; title=&#34;类型转换规则&#34;&gt;&lt;/a&gt;类型转换规则&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Java的byte short int long都转化为Long类型，Java的float,double都将转化为Double类型。Java的char String都将转化为String。Java的null都将转为nil。&lt;/li&gt;
+&lt;li&gt;当两个操作符都是Double或者都是Long的时候，各自按照Double或者Long的类型执行&lt;/li&gt;
+&lt;li&gt;当两个操作符中某一个是Double的时候，另一个操作数也将转换成Double，按照Double类型执行。&lt;/li&gt;
+&lt;li&gt;任何类型与String相加，结果为String&lt;/li&gt;
+&lt;li&gt;任何类型都比nil大，除了nil本身。&lt;/li&gt;
+&lt;li&gt;nil在打印或者与字符串相加的时候，显示为null&lt;/li&gt;
+&lt;li&gt;形如”yyyy-MM-dd HH:mm:ss:SS”的字符串，在与java.util.Date做比较的时候将尝试转换成java.util.Date对象比较。&lt;/li&gt;
+&lt;li&gt;没有规定的类型转换操作，除了未知的变量类型之间，都将抛出异常。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;常量和变量&#34;&gt;&lt;a href=&#34;#常量和变量&#34; class=&#34;headerlink&#34; title=&#34;常量和变量&#34;&gt;&lt;/a&gt;常量和变量&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;true&lt;/th&gt;
+&lt;th&gt;真值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;td&gt;假值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;nil&lt;/td&gt;
+&lt;td&gt;空值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$digit&lt;/td&gt;
+&lt;td&gt;正则表达式匹配成功后的分组，$0表示匹配的字符串，$1表示第一个分组 etc.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h2 id=&#34;内置函数&#34;&gt;&lt;a href=&#34;#内置函数&#34; class=&#34;headerlink&#34; title=&#34;内置函数&#34;&gt;&lt;/a&gt;内置函数&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;函数名称&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;sysdate()&lt;/td&gt;
+&lt;td&gt;返回当前日期对象java.util.Date&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rand()&lt;/td&gt;
+&lt;td&gt;返回一个介于0-1的随机数，double类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;print(&lt;code&gt;[&lt;/code&gt;out&lt;code&gt;]&lt;/code&gt;,obj)&lt;/td&gt;
+&lt;td&gt;打印对象，如果指定out，向out打印，否则输出到控制台&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;println(&lt;code&gt;[&lt;/code&gt;out&lt;code&gt;]&lt;/code&gt;,obj)&lt;/td&gt;
+&lt;td&gt;与print类似，但是在输出后换行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;now()&lt;/td&gt;
+&lt;td&gt;返回System.currentTimeMillis&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;string.contains(s1,s2)&lt;/td&gt;
+&lt;td&gt;判断s1是否包含s2，返回Boolean&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;string.length(s)&lt;/td&gt;
+&lt;td&gt;求字符串长度,返回Long&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;string.startsWith(s1,s2)&lt;/td&gt;
+&lt;td&gt;s1是否以s2开始，返回Boolean&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;string.endsWith(s1,s2)&lt;/td&gt;
+&lt;td&gt;s1是否以s2结尾,返回Boolean&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;string.substring(s,begin&lt;code&gt;[&lt;/code&gt;,end&lt;code&gt;]&lt;/code&gt;)&lt;/td&gt;
+&lt;td&gt;截取字符串s，从begin到end，end如果忽略的话，将从begin到结尾，与java.util.String.substring一样。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;math.abs(d)&lt;/td&gt;
+&lt;td&gt;求d的绝对值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;math.sqrt(d)&lt;/td&gt;
+&lt;td&gt;求d的平方根&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;math.pow(d1,d2)&lt;/td&gt;
+&lt;td&gt;求d1的d2次方&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;math.log(d)&lt;/td&gt;
+&lt;td&gt;求d的自然对数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;math.log10(d)&lt;/td&gt;
+&lt;td&gt;求d以10为底的对数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;math.sin(d)&lt;/td&gt;
+&lt;td&gt;正弦函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;math.cos(d)&lt;/td&gt;
+&lt;td&gt;余弦函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;math.tan(d)&lt;/td&gt;
+&lt;td&gt;正切函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;map(seq,fun)&lt;/td&gt;
+&lt;td&gt;将函数fun作用到集合seq每个元素上，返回新元素组成的集合&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;filter(seq,predicate)&lt;/td&gt;
+&lt;td&gt;将谓词predicate作用在集合的每个元素上，返回谓词为true的元素组成的集合&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;count(seq)&lt;/td&gt;
+&lt;td&gt;返回集合大小&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;include(seq,element)&lt;/td&gt;
+&lt;td&gt;判断element是否在集合seq中，返回boolean值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sort(seq)&lt;/td&gt;
+&lt;td&gt;排序集合，仅对数组和List有效，返回排序后的新集合&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;reduce(seq,fun,init)&lt;/td&gt;
+&lt;td&gt;fun接收两个参数，第一个是集合元素，第二个是累积的init，本函数用于将fun作用在集合每个元素和初始值上面，返回最终的init值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;seq.eq(value)&lt;/td&gt;
+&lt;td&gt;返回一个谓词，用来判断传入的参数是否跟value相等,用于filter函数，如filter(seq,seq.eq(3)) 过滤返回等于3的元素组成的集合&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;seq.neq(value)&lt;/td&gt;
+&lt;td&gt;与seq.eq类似，返回判断不等于的谓词&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;seq.gt(value)&lt;/td&gt;
+&lt;td&gt;返回判断大于value的谓词&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;seq.ge(value)&lt;/td&gt;
+&lt;td&gt;返回判断大于等于value的谓词&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;seq.lt(value)&lt;/td&gt;
+&lt;td&gt;返回判断小于value的谓词&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;seq.le(value)&lt;/td&gt;
+&lt;td&gt;返回判断小于等于value的谓词&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;seq.nil()&lt;/td&gt;
+&lt;td&gt;返回判断是否为nil的谓词&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;seq.exists()&lt;/td&gt;
+&lt;td&gt;返回判断不为nil的谓词&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+</content>
+        <category term="JAVA" />
+        <category term="Script" />
+        <updated>2023-05-28T13:00:29.409Z</updated>
+    </entry>
+</feed>

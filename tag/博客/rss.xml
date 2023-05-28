@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Will • Posts by &#34;博客&#34; tag</title>
+        <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
+        <description>愿你一生努力，一生被爱</description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+        <lastBuildDate>Sun, 28 May 2023 21:00:29 +0800</lastBuildDate>
+        <category>感言</category>
+        <category>思考</category>
+        <category>开发习惯</category>
+        <category>Docker</category>
+        <category>LINUX</category>
+        <category>CentOS</category>
+        <category>Linux</category>
+        <category>Crontab</category>
+        <category>Jenkins</category>
+        <category>Maven</category>
+        <category>Node</category>
+        <category>前端</category>
+        <category>Nvm</category>
+        <category>Archery</category>
+        <category>MySql</category>
+        <category>工具</category>
+        <category>IDEA</category>
+        <category>Alibaba Cloud Toolkit</category>
+        <category>Git</category>
+        <category>BeetlSql</category>
+        <category>Beetl</category>
+        <category>JAVA</category>
+        <category>日期</category>
+        <category>枚举</category>
+        <category>异常</category>
+        <category>Spring</category>
+        <category>SpringCloud</category>
+        <category>SpringCloud Alibaba</category>
+        <category>POI</category>
+        <category>CentOS7</category>
+        <category>MongoDB</category>
+        <category>Spring Boot</category>
+        <category>Redis</category>
+        <category>ProtoBuffer</category>
+        <category>其他</category>
+        <category>博客园</category>
+        <category>博客</category>
+        <category>SOAR</category>
+        <category>VerificationCode</category>
+        <category>MongoDb</category>
+        <category>VinUtil</category>
+        <category>PostMan</category>
+        <category>Typora</category>
+        <category>Java8</category>
+        <category>特性</category>
+        <category>JDBC</category>
+        <category>Mysql</category>
+        <category>EasyExcel</category>
+        <category>Script</category>
+        <category>设计模式</category>
+        <category>MyBatis</category>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2%E5%9B%AD%E4%BC%98%E5%8C%96/</guid>
+            <title>博客园优化</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2%E5%9B%AD%E4%BC%98%E5%8C%96/</link>
+            <category>其他</category>
+            <category>博客园</category>
+            <category>博客</category>
+            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;博客园美化&#34;&gt;&lt;a href=&#34;#博客园美化&#34; class=&#34;headerlink&#34; title=&#34;博客园美化&#34;&gt;&lt;/a&gt;博客园美化&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;由于博猪最近网络比较坑爹，又不满足于CSDN这个坑爹的社区，所以博猪的瞄向了博客园，但是博客园的主题太丑了，所以这里提供一个美化的解决方案：&lt;a href=&#34;https://www.yuque.com/awescnb/user/tmpomo&#34;&gt;awescnb&lt;/a&gt;,由于官方文档比较完整这里不提供教程了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;博客园Markdown上传&#34;&gt;&lt;a href=&#34;#博客园Markdown上传&#34; class=&#34;headerlink&#34; title=&#34;博客园Markdown上传&#34;&gt;&lt;/a&gt;博客园Markdown上传&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;首先需要电脑内置Python3的环境！！！！&lt;/p&gt;
+&lt;p&gt;功能很香！！！！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;下载&#34;&gt;&lt;a href=&#34;#下载&#34; class=&#34;headerlink&#34; title=&#34;下载&#34;&gt;&lt;/a&gt;下载&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;git clone git@github.com:dongfanger/pycnblog.git&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;或者直接手动下载：&lt;a href=&#34;https://github.com/dongfanger/pycnblog&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;安装依赖库&#34;&gt;&lt;a href=&#34;#安装依赖库&#34; class=&#34;headerlink&#34; title=&#34;安装依赖库&#34;&gt;&lt;/a&gt;安装依赖库&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;pip install pyyaml&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;配置脚本&#34;&gt;&lt;a href=&#34;#配置脚本&#34; class=&#34;headerlink&#34; title=&#34;配置脚本&#34;&gt;&lt;/a&gt;配置脚本&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;在config.yaml中，填写博客配置信息。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs yaml&#34;&gt;&lt;span class=&#34;hljs-attr&#34;&gt;blog_url:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;https://rpc.cnblogs.com/metaweblog/testblog&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;blog_id:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;testblog&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;username:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;zhangsan&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;password:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;123456&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs yaml&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# blog_url在博客后台&amp;gt;设置，页面最下方的MetaWeblog访问地址。 https://rpc.cnblogs.com/metaweblog/testblog&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# blog_id就是访问地址的尾巴， testblog。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# username是登录用户名，跟blog_id不一定是同一个。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 是否生成图片替换后本地文件,默认False关闭&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 上传后是否发布，默认未发布，设置True为发布&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 图片自定义显示格式，默认不设置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 如设置width和居中，&amp;lt;center&amp;gt;&amp;lt;img src=&amp;quot;&amp;#123;&amp;#125;&amp;quot; style=&amp;quot;width:100%&amp;quot; /&amp;gt;&amp;lt;/center&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;运行脚本&#34;&gt;&lt;a href=&#34;#运行脚本&#34; class=&#34;headerlink&#34; title=&#34;运行脚本&#34;&gt;&lt;/a&gt;运行脚本&lt;/h2&gt;&lt;p&gt;打开 &lt;code&gt;cnblog_markdown.cmd&lt;/code&gt;（windows里面双击此文件即可），提示&lt;code&gt;Please input file path:&lt;/code&gt;把文件往里一拖，回车就完事了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最后别忘了，博客后台看一下，没问题就确认发布草稿。&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

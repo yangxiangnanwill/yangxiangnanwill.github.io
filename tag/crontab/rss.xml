@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Will • Posts by &#34;crontab&#34; tag</title>
+        <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
+        <description>愿你一生努力，一生被爱</description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+        <lastBuildDate>Sun, 28 May 2023 21:00:29 +0800</lastBuildDate>
+        <category>感言</category>
+        <category>思考</category>
+        <category>开发习惯</category>
+        <category>Docker</category>
+        <category>LINUX</category>
+        <category>CentOS</category>
+        <category>Linux</category>
+        <category>Crontab</category>
+        <category>Jenkins</category>
+        <category>Maven</category>
+        <category>Node</category>
+        <category>前端</category>
+        <category>Nvm</category>
+        <category>Archery</category>
+        <category>MySql</category>
+        <category>工具</category>
+        <category>IDEA</category>
+        <category>Alibaba Cloud Toolkit</category>
+        <category>Git</category>
+        <category>BeetlSql</category>
+        <category>Beetl</category>
+        <category>JAVA</category>
+        <category>日期</category>
+        <category>枚举</category>
+        <category>异常</category>
+        <category>Spring</category>
+        <category>SpringCloud</category>
+        <category>SpringCloud Alibaba</category>
+        <category>POI</category>
+        <category>CentOS7</category>
+        <category>MongoDB</category>
+        <category>Spring Boot</category>
+        <category>Redis</category>
+        <category>ProtoBuffer</category>
+        <category>其他</category>
+        <category>博客园</category>
+        <category>博客</category>
+        <category>SOAR</category>
+        <category>VerificationCode</category>
+        <category>MongoDb</category>
+        <category>VinUtil</category>
+        <category>PostMan</category>
+        <category>Typora</category>
+        <category>Java8</category>
+        <category>特性</category>
+        <category>JDBC</category>
+        <category>Mysql</category>
+        <category>EasyExcel</category>
+        <category>Script</category>
+        <category>设计模式</category>
+        <category>MyBatis</category>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/Crontab-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</guid>
+            <title>Crontab-定时任务</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/Crontab-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</link>
+            <category>CentOS</category>
+            <category>Linux</category>
+            <category>Crontab</category>
+            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;Linux-Crontab-定时任务&#34;&gt;&lt;a href=&#34;#Linux-Crontab-定时任务&#34; class=&#34;headerlink&#34; title=&#34;Linux Crontab 定时任务&#34;&gt;&lt;/a&gt;Linux Crontab 定时任务&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;很多时候，我们需要定时执行某个应用或者某段脚本，在linux上，可以使用cron服务，它有点类似于Windows上的任务计划程序。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;crond和crontab&#34;&gt;&lt;a href=&#34;#crond和crontab&#34; class=&#34;headerlink&#34; title=&#34;crond和crontab&#34;&gt;&lt;/a&gt;crond和crontab&lt;/h2&gt;&lt;p&gt;首先需要分清楚两个概念：crond和crontab。crond是后台守护进程的名称（d代表daemon），用来实际执行脚本，它在系统中是一直运行的。可以通过下面的方式查看到它：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;systemctl | grep crond&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;crontab是一个工具，用来列出cron中当前运行的作业（应用或脚本等）、向cron中添加作业、编辑作业、删除作业。它并不是一直在后台运行的，是一个短时的命令行工具，执行完就结束了。&lt;/p&gt;
+&lt;p&gt;可以简单理解crond和crontab组合起来提供cron服务。&lt;/p&gt;
+&lt;p&gt;大体流程如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2F634d76f98ad0252888ea044489e3d5bf.png&amp;refer=http%3A%2F%2Fimg-blog.csdnimg.cn&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1627445494&amp;t=e65617a03bb7ecea66217142dd0da756&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;crontab配置文件&#34;&gt;&lt;a href=&#34;#crontab配置文件&#34; class=&#34;headerlink&#34; title=&#34;crontab配置文件&#34;&gt;&lt;/a&gt;crontab配置文件&lt;/h2&gt;&lt;p&gt;Linux下的任务调度分为两类：系统任务调度和用户任务调度。Linux系统任务是由 cron (crond) 这个系统服务来控制的，这个系统服务是默认启动的。用户自己设置的计划任务则使用crontab命令。使用以下命令进行查看：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;cat /etc/crontab&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;配置文件可以看到如下解释：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;SHELL=/bin/bash&lt;br&gt;PATH=/sbin:/bin:/usr/sbin:/usr/bin&lt;br&gt;MAILTO=root&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;For details see man 4 crontabs&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;Example of job definition:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;.---------------- minute (0 - 59)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  .------------- hour (0 - 23)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  |  .---------- day of month (1 - 31)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  |  |  |  |&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;*  *  *  *  * user-name  &lt;span class=&#34;hljs-built_in&#34;&gt;command&lt;/span&gt; to be executed&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;前四行是用来配置crond任务运行的环境变量，第一行SHELL变量指定了系统要使用哪个shell，这里是bash；第二行PATH变量指定了系统执行命令的路径；第三行MAILTO变量指定了crond的任务执行信息将通过电子邮件发送给root用户，如果MAILTO变量的值为空，则表示不发送任务执行信息给用户；第四行的HOME变量指定了在执行命令或者脚本时使用的主目录。&lt;/p&gt;
+&lt;p&gt;用户定期要执行的工作，比如用户数据备份、定时邮件提醒等。用户可以使用 crontab 工具来定制自己的计划任务。所有用户定义的crontab 文件都被保存在 &amp;#x2F;var&amp;#x2F;spool&amp;#x2F;cron目录中。其文件名与用户名一致。&lt;/p&gt;
+&lt;h2 id=&#34;crontab文件含义&#34;&gt;&lt;a href=&#34;#crontab文件含义&#34; class=&#34;headerlink&#34; title=&#34;crontab文件含义&#34;&gt;&lt;/a&gt;crontab文件含义&lt;/h2&gt;&lt;p&gt;用户所建立的crontab文件中，每一行都代表一项任务，每行的每个字段代表一项设置，它的格式共分为六个字段，前五段是时间设定段，第六段是要执行的命令段，格式如下：&lt;br&gt;minute hour day month week command&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.linuxprobe.com/wp-content/uploads/2016/09/crontab.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在以上各个字段中，还可以使用以下特殊字符：&lt;/p&gt;
+&lt;p&gt;“&lt;em&gt;&amp;quot;代表所有的取值范围内的数字，如月份字段为&lt;/em&gt;，则表示1到12个月；&lt;/p&gt;
+&lt;p&gt;“&amp;#x2F;“代表每一定时间间隔的意思，如分钟字段为*&amp;#x2F;10，表示每10分钟执行1次。&lt;/p&gt;
+&lt;p&gt;“-“代表从某个区间范围，是闭区间。如“2-5”表示“2,3,4,5”，小时字段中0-23&amp;#x2F;2表示在0~23点范围内每2个小时执行一次。&lt;/p&gt;
+&lt;p&gt;“,”分散的数字（不一定连续），如1,2,3,4,7,9。&lt;/p&gt;
+&lt;p&gt;注：由于各个地方每周第一天不一样，因此Sunday&amp;#x3D;0（第一天）或Sunday&amp;#x3D;7（最后1天）。&lt;/p&gt;
+&lt;h2 id=&#34;crontab命令详解&#34;&gt;&lt;a href=&#34;#crontab命令详解&#34; class=&#34;headerlink&#34; title=&#34;crontab命令详解&#34;&gt;&lt;/a&gt;crontab命令详解&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;因为crond是一个守护进程，所以在系统开机后，通过&lt;code&gt;systemctl start crond&lt;/code&gt;启动一次以后（默认自动启动的），几乎就不需要再管它了，之后的操作都通过crontab来完成。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;查看现有任务&#34;&gt;&lt;a href=&#34;#查看现有任务&#34; class=&#34;headerlink&#34; title=&#34;查看现有任务&#34;&gt;&lt;/a&gt;查看现有任务&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;crontab -l&lt;/span&gt;&lt;br&gt;no crontab for root&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;因为现在没有任务，所以显示的是 no crontab for root，可见，任务是根据用户进行区分的。&lt;/p&gt;
+&lt;h3 id=&#34;添加定时任务&#34;&gt;&lt;a href=&#34;#添加定时任务&#34; class=&#34;headerlink&#34; title=&#34;添加定时任务&#34;&gt;&lt;/a&gt;添加定时任务&lt;/h3&gt;&lt;p&gt;为了便于测试，我们可以创建这样一个简单的脚本(位于~&amp;#x2F;tmp&amp;#x2F;job1.sh)：在一个文件末尾追加当前时间。脚本如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;date +&amp;#x27;%F %T&amp;#x27; &amp;gt;&amp;gt; ~/tmp/job1.log&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;创建完成后记得赋予一下执行权限：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;&lt;span class=&#34;hljs-built_in&#34;&gt;chmod&lt;/span&gt; 755 job1.sh&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;接下来，需要配置多久运行一次。这里通过cron表达式来设置，它非常灵活，可以很简单也可以很复杂。cron表达式的应用广泛，不止用在系统层面，在其他各种编程语言的类库当中，都有类似的实现，语法略有不同。使用下面的命令可以查看linux系统中cron表达式的写法：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;&lt;span class=&#34;hljs-built_in&#34;&gt;cat&lt;/span&gt; /etc/crontab&lt;/span&gt; &lt;br&gt;SHELL=/bin/bash&lt;br&gt;PATH=/sbin:/bin:/usr/sbin:/usr/bin&lt;br&gt;MAILTO=root&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;For details see man 4 crontabs&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;Example of job definition:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;.---------------- minute (0 - 59)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  .------------- hour (0 - 23)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  |  .---------- day of month (1 - 31)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;|  |  |  |  |&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;*  *  *  *  * user-name  &lt;span class=&#34;hljs-built_in&#34;&gt;command&lt;/span&gt; to be executed&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如果需要查看更详细的用法，可以使用 &lt;code&gt;# man crontab&lt;/code&gt; 命令查看。&lt;/p&gt;
+&lt;p&gt;整理后如下表所示：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;不同的cron应用存在很大差异，比如crontab不支持“秒”，特殊字符也支持的比较少（支持,-*&amp;#x2F;）。而其他一些应用，则支持“秒”和更多的特殊字符。这里为了更完备一些，所以全都列出来了，省的以后再去总结。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;名称&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;必须&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;取值范围&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;可设置的特殊字符&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;分&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;是&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0-59&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;,-*&amp;#x2F;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;时&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;是&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0-23&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;,-*&amp;#x2F;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;日(月)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;是&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1-31&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;,-*?&amp;#x2F;LW&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;月&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;是&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1-12 或者 jan-dec&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;,-*&amp;#x2F;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;日(周)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;是&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;0-7（0和7都是星期天） 或者 sun-sat&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;,-*?&amp;#x2F;L#&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;年&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;否&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;留空，1970-2099&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;,-*&amp;#x2F;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;几个特殊字符的含义：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;字符&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;*&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;全部。意思是在该时间的任意点都应当执行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;?&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;不指定，任意。仅用于 日(月)和日(周)。0 0 5 * ? 代表每个月的第5天零点，不论星期几。 0 0 ? * 1 代表每周一，不论是当月的哪天。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;,&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;多个值的分隔符，例如1,5,10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;-&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;代表连续值，例如1-20&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&amp;#x2F;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;步长。例如 5&amp;#x2F;15，代表从5开始，以15为步长。因此，当5&amp;#x2F;15位于分钟的位置时，表示小时内的第5、20、35和50分钟。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;L&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;最后一天。可以是每月最后一天或者每周最后一天。如果用在 天(周)字段，并且前面加数字，则表示最后一个周N。例如5L，表示最后一个周五（5表示周五，L表示最后）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;W&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;工作日，指周一到周五的任意一天&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;#&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;表示第几个的意思，例如 6#3，表示当月第3个星期六（6表示周六，3表示第3个）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;几个简单的例子：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;表达式&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;* * * * *&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;每分钟执行一次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;30 * * * *&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;每小时的30分执行一次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;*&amp;#x2F;5 * * * *&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;每5分钟执行一次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;0&amp;#x2F;5 * * * *&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;每5分钟执行一次，且仅在0,5,15,20…55分执行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;5 0 * * *&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;每天的00:05执行一次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;crontab中 日(周)不接受“?”的写法，在很多其他应用中则可以，例如Quartz.Net库：&lt;a href=&#34;https://www.quartz-scheduler.net/documentation/quartz-2.x/tutorial/crontrigger.html&#34;&gt;https://www.quartz-scheduler.net/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;更多的用法，可以参考：&lt;a href=&#34;https://crontab.guru/&#34;&gt;https://crontab.guru&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;接下来，如果我们想要每分钟执行一下前面创建的job1.sh脚本，需要再创建一个crontab作业(jobs.cron，后缀名无所谓，这里只是为了便于识别)，其中包含了cron表达式，用于表明job1.sh执行的周期：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;* * * * * ~/tmp/job1.sh&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;使用crontab将它加入到计划中：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;crontab jobs.cron&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;再次查看当前计划，可以看到这样的结果：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;crontab -l&lt;/span&gt;&lt;br&gt;* * * * * ~/tmp/job1.sh&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;删除定时任务&#34;&gt;&lt;a href=&#34;#删除定时任务&#34; class=&#34;headerlink&#34; title=&#34;删除定时任务&#34;&gt;&lt;/a&gt;删除定时任务&lt;/h3&gt;&lt;p&gt;先将job1.sh复制一份，稍作修改，然后编辑一下jobs.cron，将job2.sh也加入进去：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;* * * * * ~/tmp/job1.sh&lt;br&gt;*/5 * * * * ~/tmp/job2.sh&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后重新加入到cron服务中。&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;crontab jobs.cron&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;接着查看一下当前cron中的作业：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;crontab -l&lt;/span&gt;&lt;br&gt;* * * * * ~/tmp/job1.sh&lt;br&gt;*/5 * * * * ~/tmp/job2.sh&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;可以看到上面有job1.sh和job2.sh两个作业，其效果相当于将jobs.cron文件的内容拷贝进去。&lt;/p&gt;
+&lt;p&gt;如果想要删除作业，则执行：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;crontab -r&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这样会删除所有作业，如果只想删除一个，或者想对作业进行编辑，可以使用下面的命令。&lt;/p&gt;
+&lt;h3 id=&#34;编辑定时任务&#34;&gt;&lt;a href=&#34;#编辑定时任务&#34; class=&#34;headerlink&#34; title=&#34;编辑定时任务&#34;&gt;&lt;/a&gt;编辑定时任务&lt;/h3&gt;&lt;p&gt;&lt;code&gt;crontab -e&lt;/code&gt; 命令会调用编辑器（通常是vi或者vim），直接编辑计划作业，相当于编辑jobs.cron。只不过编辑完立即生效，不需要再执行crontab进行加载。&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;crontab -e&lt;/span&gt;&lt;br&gt;crontab: installing new crontab&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;统一期间，个人不建议使用crontab -e编辑计划，而是编辑jobs.cron，然后进行加载。这样的话jobs.cron文件相当于一个备份，方便日后恢复。&lt;/p&gt;
+&lt;h2 id=&#34;查看作业日志&#34;&gt;&lt;a href=&#34;#查看作业日志&#34; class=&#34;headerlink&#34; title=&#34;查看作业日志&#34;&gt;&lt;/a&gt;查看作业日志&lt;/h2&gt;&lt;p&gt;在作业执行出现异常（或作业脚本写日志）时，cron服务会输出日志，在我的CentOS7系统上，查看的地址位于&amp;#x2F;var&amp;#x2F;log下。&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;&lt;span class=&#34;hljs-built_in&#34;&gt;ls&lt;/span&gt; /var/log | grep cron&lt;/span&gt;&lt;br&gt;cron&lt;br&gt;cron-20180819&lt;br&gt;cron-20180826&lt;br&gt;cron-20180902&lt;br&gt;cron-20180909&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如果想让自己编写的作业输出日志，可以这样编写jobs.cron：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;* * * * * ~/tmp/job1.sh &amp;gt;&amp;gt; /var/log/job1.log 2&amp;gt;&amp;amp;1&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;上面的意思是将stdout和stderr输出到&amp;#x2F;var&amp;#x2F;log&amp;#x2F;job1.log。&lt;/p&gt;
+&lt;p&gt;修改job1.sh，在底部加入&lt;code&gt;echo hello&lt;/code&gt;。然后调用&lt;code&gt;crontab jobs.cron&lt;/code&gt;重新加载，然后在&amp;#x2F;var&amp;#x2F;log目录下可以看到job1.log，其中包含了输出的文本“hello”。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

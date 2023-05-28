@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
+    <title>Will • Posts by &#34;开发习惯&#34; tag</title>
+    <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
+    <updated>2023-05-28T13:00:29.423Z</updated>
+    <category term="感言" />
+    <category term="思考" />
+    <category term="开发习惯" />
+    <category term="Docker" />
+    <category term="LINUX" />
+    <category term="CentOS" />
+    <category term="Linux" />
+    <category term="Crontab" />
+    <category term="Jenkins" />
+    <category term="Maven" />
+    <category term="Node" />
+    <category term="前端" />
+    <category term="Nvm" />
+    <category term="Archery" />
+    <category term="MySql" />
+    <category term="工具" />
+    <category term="IDEA" />
+    <category term="Alibaba Cloud Toolkit" />
+    <category term="Git" />
+    <category term="BeetlSql" />
+    <category term="Beetl" />
+    <category term="JAVA" />
+    <category term="日期" />
+    <category term="枚举" />
+    <category term="异常" />
+    <category term="Spring" />
+    <category term="SpringCloud" />
+    <category term="SpringCloud Alibaba" />
+    <category term="POI" />
+    <category term="CentOS7" />
+    <category term="MongoDB" />
+    <category term="Spring Boot" />
+    <category term="Redis" />
+    <category term="ProtoBuffer" />
+    <category term="其他" />
+    <category term="博客园" />
+    <category term="博客" />
+    <category term="SOAR" />
+    <category term="VerificationCode" />
+    <category term="MongoDb" />
+    <category term="VinUtil" />
+    <category term="PostMan" />
+    <category term="Typora" />
+    <category term="Java8" />
+    <category term="特性" />
+    <category term="JDBC" />
+    <category term="Mysql" />
+    <category term="EasyExcel" />
+    <category term="Script" />
+    <category term="设计模式" />
+    <category term="MyBatis" />
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E8%A6%81%E6%9C%89%E4%B8%80%E9%A2%97%E5%A4%A7%E5%BF%83%E8%84%8F/%E5%BC%80%E5%8F%91%E5%A5%BD%E4%B9%A0%E6%83%AF/</id>
+        <title>开发好习惯</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E8%A6%81%E6%9C%89%E4%B8%80%E9%A2%97%E5%A4%A7%E5%BF%83%E8%84%8F/%E5%BC%80%E5%8F%91%E5%A5%BD%E4%B9%A0%E6%83%AF/"/>
+        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;写干净的代码，做风一样的男子！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;编程5分钟，查代码2小时!&lt;/p&gt;
+&lt;p&gt;在程序员的编程生涯，免不了和BUG打交道，甚至有些程序员被BUG虐杀的苦不堪言。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://p3-tt.byteimg.com/origin/4ada0003ada15e3b0683?from=pc&#34; alt=&#34;程序员减少代码BUG的7种方法，写干净的代码，做风一样的男子！&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;当有人指出程序员代码有BUG时，程序员的回答各有不同：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不可能啊，在我电脑上运行没有问题呀!&lt;/li&gt;
+&lt;li&gt;我已经一星期没碰这块代码啦!&lt;/li&gt;
+&lt;li&gt;没事，我改一行代码就可以了，不影响程序。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;
+&lt;center&gt;程序员调 Bug 的样子，非常真实~&lt;/center&gt;
+&lt;/div&gt;
+
+&lt;p&gt;​                                                                                                                         &lt;center&gt;↓↓↓&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ss.csdn.net/p?http://mmbiz.qpic.cn/mmbiz_gif/2A8tXicCG8yka2rcVsmkqPjN4taJfwp3wUy7KTTM4IhnOjTMdC3zXRYGElM7Pia1AhvV02UlibtPKoRFc9icv40dHA/0?wx_fmt=gif&amp;wxfrom=5&amp;wx_lazy=1&#34; alt=&#34;0?wx_fmt=gif&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ss.csdn.net/p?http://mmbiz.qpic.cn/mmbiz_gif/2A8tXicCG8yka2rcVsmkqPjN4taJfwp3wxQKXe3ibNiadib0xqp2uYXribWiby2WCrXmO4q1CXAibbpugibUNvdA2yuuNQ/0?wx_fmt=gif&amp;wxfrom=5&amp;wx_lazy=1&#34; alt=&#34;0?wx_fmt=gif&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_gif/2A8tXicCG8yka2rcVsmkqPjN4taJfwp3w5fLdGxLudXOB5pdrwh2vbClrZU7KC5QysFhibrkP9spDK2kONPHTUnw/0?wx_fmt=gif&#34; alt=&#34;0?wx_fmt=gif&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;调bug是火，bug是烟。一处点火，四处冒烟&lt;/p&gt;
+&lt;p&gt;下面奉上我日常开发的一些总结.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;如何减少代码的BUG呢-在此分享几个技巧&#34;&gt;&lt;a href=&#34;#如何减少代码的BUG呢-在此分享几个技巧&#34; class=&#34;headerlink&#34; title=&#34;如何减少代码的BUG呢?在此分享几个技巧&#34;&gt;&lt;/a&gt;如何减少代码的BUG呢?在此分享几个技巧&lt;/h1&gt;&lt;h2 id=&#34;别对警告视而不见&#34;&gt;&lt;a href=&#34;#别对警告视而不见&#34; class=&#34;headerlink&#34; title=&#34;别对警告视而不见&#34;&gt;&lt;/a&gt;别对警告视而不见&lt;/h2&gt;&lt;p&gt;相信不少的程序员会使用IDEA，使用它敲代码，有时候会出现警告，那么这时你对警告就不能视而不见了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我们的目标是，写干净的代码，做风一样的男子!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://p1-tt.byteimg.com/origin/4add00036e54d5cefc42?from=pc&#34; alt=&#34;程序员减少代码BUG的7种方法，写干净的代码，做风一样的男子！&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;编程习惯&#34;&gt;&lt;a href=&#34;#编程习惯&#34; class=&#34;headerlink&#34; title=&#34;编程习惯&#34;&gt;&lt;/a&gt;编程习惯&lt;/h2&gt;&lt;p&gt;种瓜得瓜种豆得豆，好的编程习惯可以大大降低BUG数量。譬如有if必须写else，即使else是个空语句 。&lt;/p&gt;
+&lt;h2 id=&#34;写代码的时间问题&#34;&gt;&lt;a href=&#34;#写代码的时间问题&#34; class=&#34;headerlink&#34; title=&#34;写代码的时间问题&#34;&gt;&lt;/a&gt;写代码的时间问题&lt;/h2&gt;&lt;p&gt;对于程序员而言，千万别熬夜写代码。一些程序员在晚上11点，仍然在敲代码。&lt;/p&gt;
+&lt;p&gt;虽然你自己觉得头脑其实很清醒，但是第二天自测，或者QA测试的时候你有可能就会发现问题很多。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我们一般不提倡长期加班写代码，因为那样会导致Bug率直线上升。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://p1-tt.byteimg.com/origin/4ade00036510b0efbb55?from=pc&#34; alt=&#34;程序员减少代码BUG的7种方法，写干净的代码，做风一样的男子！&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;验证、自测&#34;&gt;&lt;a href=&#34;#验证、自测&#34; class=&#34;headerlink&#34; title=&#34;验证、自测&#34;&gt;&lt;/a&gt;验证、自测&lt;/h2&gt;&lt;p&gt;在提交测试前要多验证，其中包括自动化测试、手动跑用例等。&lt;/p&gt;
+&lt;p&gt;有一句话说的好，千万别怕麻烦，不然你会麻烦一辈子。&lt;/p&gt;
+&lt;p&gt;这也是我认为我现在坚持的比较好的一点，自测ok，然后交给业务测试&lt;/p&gt;
+&lt;h2 id=&#34;仔细的DEBUG&#34;&gt;&lt;a href=&#34;#仔细的DEBUG&#34; class=&#34;headerlink&#34; title=&#34;仔细的DEBUG&#34;&gt;&lt;/a&gt;仔细的DEBUG&lt;/h2&gt;&lt;p&gt;在2.4基础上建议自测是仔细的DEBUG一遍，这样能对自己的代码心里有个范围，大体知道风险点和错误是便于直接调整自己的代码。&lt;/p&gt;
+&lt;h2 id=&#34;仔细的设计&#34;&gt;&lt;a href=&#34;#仔细的设计&#34; class=&#34;headerlink&#34; title=&#34;仔细的设计&#34;&gt;&lt;/a&gt;仔细的设计&lt;/h2&gt;&lt;p&gt;在程序员编写代码之前，必须对代码的整个结构以及逻辑结构胸有成竹。&lt;/p&gt;
+&lt;h2 id=&#34;避免干扰&#34;&gt;&lt;a href=&#34;#避免干扰&#34; class=&#34;headerlink&#34; title=&#34;避免干扰&#34;&gt;&lt;/a&gt;避免干扰&lt;/h2&gt;&lt;p&gt;有部分的程序员敲代码的时候，经常会一边听音乐一边敲代码，这样效率不仅仅低，而且也更容易产生BUG。&lt;/p&gt;
+&lt;h2 id=&#34;注释&#34;&gt;&lt;a href=&#34;#注释&#34; class=&#34;headerlink&#34; title=&#34;注释&#34;&gt;&lt;/a&gt;注释&lt;/h2&gt;&lt;p&gt;写注释，写注释，写注释。重要的事情说三遍。&lt;/p&gt;
+&lt;p&gt;因为前期的注释有利于后续开发的时候容易减少bug。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;自从修改了注释模板，整个人精神多了，bug也明显少了，如图：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201215145135.png&#34; alt=&#34;image-20201215145125620&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;敢于维护上古代码&#34;&gt;&lt;a href=&#34;#敢于维护上古代码&#34; class=&#34;headerlink&#34; title=&#34;敢于维护上古代码&#34;&gt;&lt;/a&gt;敢于维护上古代码&lt;/h2&gt;&lt;p&gt;博猪开发时间其实很少，只有一年的时间，其实上古代码对于博猪的历练很大，俗话说的好多吃BUG,身体棒棒。博猪入职之后前半年一直维护一个SSI项目，里面用的技术很杂，有的在网上找不到，包括前端和后台，其次最重要的是业务方面，更是不懂，业务一般人不是给你讲的，所以我就一遍遍的启动本地DEBUG,慢慢啃下来的。&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+</content>
+        <category term="思考" />
+        <category term="开发习惯" />
+        <updated>2023-05-28T13:00:29.423Z</updated>
+    </entry>
+</feed>

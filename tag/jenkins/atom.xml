@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
+    <title>Will • Posts by &#34;jenkins&#34; tag</title>
+    <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
+    <updated>2023-05-28T13:00:29.414Z</updated>
+    <category term="感言" />
+    <category term="思考" />
+    <category term="开发习惯" />
+    <category term="Docker" />
+    <category term="LINUX" />
+    <category term="CentOS" />
+    <category term="Linux" />
+    <category term="Crontab" />
+    <category term="Jenkins" />
+    <category term="Maven" />
+    <category term="Node" />
+    <category term="前端" />
+    <category term="Nvm" />
+    <category term="Archery" />
+    <category term="MySql" />
+    <category term="工具" />
+    <category term="IDEA" />
+    <category term="Alibaba Cloud Toolkit" />
+    <category term="Git" />
+    <category term="BeetlSql" />
+    <category term="Beetl" />
+    <category term="JAVA" />
+    <category term="日期" />
+    <category term="枚举" />
+    <category term="异常" />
+    <category term="Spring" />
+    <category term="SpringCloud" />
+    <category term="SpringCloud Alibaba" />
+    <category term="POI" />
+    <category term="CentOS7" />
+    <category term="MongoDB" />
+    <category term="Spring Boot" />
+    <category term="Redis" />
+    <category term="ProtoBuffer" />
+    <category term="其他" />
+    <category term="博客园" />
+    <category term="博客" />
+    <category term="SOAR" />
+    <category term="VerificationCode" />
+    <category term="MongoDb" />
+    <category term="VinUtil" />
+    <category term="PostMan" />
+    <category term="Typora" />
+    <category term="Java8" />
+    <category term="特性" />
+    <category term="JDBC" />
+    <category term="Mysql" />
+    <category term="EasyExcel" />
+    <category term="Script" />
+    <category term="设计模式" />
+    <category term="MyBatis" />
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/Jenkins/</id>
+        <title>Jenkins</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/Jenkins/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;持续集成：Continuous Integration，简称CI，意思是，在一个项目中，任何人对代码库的任何改动，都会触发CI服务器自动对项目进行构建，自动运行测试，甚至自动部署到测试环境。这样做的好处就是，随时发现问题，随时修复。因为修复问题的成本随着时间的推移而增长，越早发现，修复成本越低。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;持续集成工具&#34;&gt;&lt;a href=&#34;#持续集成工具&#34; class=&#34;headerlink&#34; title=&#34;持续集成工具&#34;&gt;&lt;/a&gt;持续集成工具&lt;/h1&gt;&lt;h2 id=&#34;Travis-CI&#34;&gt;&lt;a href=&#34;#Travis-CI&#34; class=&#34;headerlink&#34; title=&#34;Travis CI&#34;&gt;&lt;/a&gt;Travis CI&lt;/h2&gt;&lt;p&gt;在线托管的CI服务，用Travis来进行持续集成，不需要自己搭服务器，在网页上点几下就好，用起来更方便。最重要的是，它对开源项目是免费的。私有项目会收费。&lt;/p&gt;
+&lt;h2 id=&#34;Jenkins&#34;&gt;&lt;a href=&#34;#Jenkins&#34; class=&#34;headerlink&#34; title=&#34;Jenkins&#34;&gt;&lt;/a&gt;Jenkins&lt;/h2&gt;&lt;p&gt;Jenkins是一个用Java编写的开源的持续集成工具。官方网站：&lt;a href=&#34;https://jenkins.io/&#34;&gt;https://jenkins.io/&lt;/a&gt;&lt;br&gt;Jenkins能实时监控持续集成过程中所存在的问题，提供详细的日志文件和提醒功能，还能用图表的形式，形象地展示项目构建的趋势和稳定性。&lt;/p&gt;
+&lt;h1 id=&#34;简介&#34;&gt;&lt;a href=&#34;#简介&#34; class=&#34;headerlink&#34; title=&#34;简介&#34;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;Jenkins自动化部署可以解决集成、测试、部署等重复性的工作，工具集成的效率明显高于人工操作；并且持续集成可以更早的获取代码变更的信息，从而更早的进入测试阶段，更早的发现问题，这样解决问题的成本就会显著下降：持续集成缩短了从开发、集成、测试、部署各个环节的时间，从而也就缩短了中间出现的等待时间；持续集成也意味着开发、集成、测试、部署得以持续。。&lt;br&gt;使用Maven（Ant）等来实现lava项目自动化构建发布部署。这些工具可以帮助在构建过程中实现自动化发布、回滚等动作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Jenkins提供Docker、war等部署方式，博猪比较倾向于yum源安装方式，同时作为一个服务启动。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;安装教程&#34;&gt;&lt;a href=&#34;#安装教程&#34; class=&#34;headerlink&#34; title=&#34;安装教程&#34;&gt;&lt;/a&gt;安装教程&lt;/h1&gt;&lt;h2 id=&#34;系统要求&#34;&gt;&lt;a href=&#34;#系统要求&#34; class=&#34;headerlink&#34; title=&#34;系统要求&#34;&gt;&lt;/a&gt;系统要求&lt;/h2&gt;&lt;p&gt;最低推荐配置:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;256MB可用内存&lt;/li&gt;
+&lt;li&gt;1GB可用磁盘空间(作为一个Docker容器运行jenkins的话推荐10GB)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为小团队推荐的硬件配置:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1GB+可用内存&lt;/li&gt;
+&lt;li&gt;50 GB+ 可用磁盘空间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;软件配置:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java 8—无论是Java运行时环境（JRE）还是Java开发工具包（JDK）都可以。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意:&lt;/strong&gt; 如果将Jenkins作为Docker 容器运行，这不是必需的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;下载Jenkins&#34;&gt;&lt;a href=&#34;#下载Jenkins&#34; class=&#34;headerlink&#34; title=&#34;下载Jenkins&#34;&gt;&lt;/a&gt;下载Jenkins&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;sudo wget -O /etc/yum.repos.d/jenkins.repo \&lt;br&gt;    https://pkg.jenkins.io/redhat/jenkins.repo&lt;br&gt;sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key&lt;br&gt;sudo yum upgrade&lt;br&gt;sudo yum install epel-release java-11-openjdk-devel&lt;br&gt;sudo yum install jenkins&lt;br&gt;sudo systemctl daemon-reload&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;查看Jenkins状态&#34;&gt;&lt;a href=&#34;#查看Jenkins状态&#34; class=&#34;headerlink&#34; title=&#34;查看Jenkins状态&#34;&gt;&lt;/a&gt;查看Jenkins状态&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;sudo systemctl status jenkins&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如果是开启状态，关闭，以便更改配置。关闭命令如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;sudo systemctl stop jenkins&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;自定义配置&#34;&gt;&lt;a href=&#34;#自定义配置&#34; class=&#34;headerlink&#34; title=&#34;自定义配置&#34;&gt;&lt;/a&gt;自定义配置&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;配置路径如下：  &amp;#x2F;etc&amp;#x2F;sysconfig&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;自定义配置路径&#34;&gt;&lt;a href=&#34;#自定义配置路径&#34; class=&#34;headerlink&#34; title=&#34;自定义配置路径&#34;&gt;&lt;/a&gt;自定义配置路径&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;JENKINS_HOME=&amp;quot;/opt/jenkins&amp;quot;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;自定义默认用户&#34;&gt;&lt;a href=&#34;#自定义默认用户&#34; class=&#34;headerlink&#34; title=&#34;自定义默认用户&#34;&gt;&lt;/a&gt;自定义默认用户&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;JENKINS_USER=&amp;quot;root&amp;quot;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;自定义访问路径&#34;&gt;&lt;a href=&#34;#自定义访问路径&#34; class=&#34;headerlink&#34; title=&#34;自定义访问路径&#34;&gt;&lt;/a&gt;自定义访问路径&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;JENKINS_PORT=&amp;quot;9955&amp;quot;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;重启-amp-amp-启动Jenkins服务&#34;&gt;&lt;a href=&#34;#重启-amp-amp-启动Jenkins服务&#34; class=&#34;headerlink&#34; title=&#34;重启&amp;amp;&amp;amp;启动Jenkins服务&#34;&gt;&lt;/a&gt;重启&amp;amp;&amp;amp;启动Jenkins服务&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;sudo systemctl start jenkins&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;访问-amp-amp-解锁Jenkins&#34;&gt;&lt;a href=&#34;#访问-amp-amp-解锁Jenkins&#34; class=&#34;headerlink&#34; title=&#34;访问&amp;amp;&amp;amp;解锁Jenkins&#34;&gt;&lt;/a&gt;访问&amp;amp;&amp;amp;解锁Jenkins&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;访问地址为：linux+端口号，如上配置为：&lt;code&gt;http://192.168.56.121:9955&lt;/code&gt;，访问后，进入一下配置页面。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/04/Fwx6D1kGHqt2ogX.png&#34; alt=&#34;image-20211004202424221&#34;&gt;&lt;/p&gt;
+&lt;p&gt;按照上方提示，输入一下命令,输入密码：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;cat /opt/jenkins/secrets/initialAdminPassword&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;按照插件&#34;&gt;&lt;a href=&#34;#按照插件&#34; class=&#34;headerlink&#34; title=&#34;按照插件&#34;&gt;&lt;/a&gt;按照插件&lt;/h2&gt;&lt;p&gt;默认按照推荐按照即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/04/EZwmnHSxribWpd5.png&#34; alt=&#34;image-20211004203303329&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;初始化用户&#34;&gt;&lt;a href=&#34;#初始化用户&#34; class=&#34;headerlink&#34; title=&#34;初始化用户&#34;&gt;&lt;/a&gt;初始化用户&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;创建初始化用户，用户名：opser,密码：admin&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/04/OEiDtgdlAYW65kz.png&#34; alt=&#34;image-20211004204936715&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Jenkins初始URL默认不进行配置&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/04/YRJmbgUFoj1xhnB.png&#34; alt=&#34;image-20211004205136257&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装完成，开始使用&#34;&gt;&lt;a href=&#34;#安装完成，开始使用&#34; class=&#34;headerlink&#34; title=&#34;安装完成，开始使用&#34;&gt;&lt;/a&gt;安装完成，开始使用&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/04/kdETlSe1rw7N5py.png&#34; alt=&#34;image-20211004205218802&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;Jenkins优化&#34;&gt;&lt;a href=&#34;#Jenkins优化&#34; class=&#34;headerlink&#34; title=&#34;Jenkins优化&#34;&gt;&lt;/a&gt;Jenkins优化&lt;/h1&gt;&lt;h2 id=&#34;插件优化&#34;&gt;&lt;a href=&#34;#插件优化&#34; class=&#34;headerlink&#34; title=&#34;插件优化&#34;&gt;&lt;/a&gt;插件优化&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;由于Jenkins默认使用国外的镜像，所以插件下载安装速度极慢，所以我们需要更改插件仓库。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意：该仓库更改必须要在没有下载插件之前！&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;进入Jenkins目录，&lt;code&gt;/opt/jenkins&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;复制并重命名文件&lt;code&gt;hudson.model.UpdateCenter.xml&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;cp hudson.model.UpdateCenter.xml hudson.model.UpdateCenter.xml.bak&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改&lt;code&gt;hudson.model.UpdateCenter.xml&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;url改为&lt;br&gt;https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改&lt;code&gt;default.json&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;配置default.json&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;vim /var/lib/jenkins/updates/default.json&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;全局替换&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;把  updates.jenkins-ci.org&amp;#x2F;download  替换为  mirrors.tuna.tsinghua.edu.cn&amp;#x2F;jenkins&lt;/p&gt;
+&lt;p&gt;地址修改把  &lt;code&gt;www.google.com&lt;/code&gt; 替换为  &lt;code&gt;www.baidu.com&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;重启服务&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;systemctl restart jenkins&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;页面优化&#34;&gt;&lt;a href=&#34;#页面优化&#34; class=&#34;headerlink&#34; title=&#34;页面优化&#34;&gt;&lt;/a&gt;页面优化&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;装完Jenkins之后，我们发现有一部分菜单汉化了，有一部分菜单没有汉化，这让人很不爽，所以我们需要调整一下让页面保持统一！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;系统管理&lt;/code&gt;-&lt;code&gt;插件管理&lt;/code&gt;-&lt;code&gt;已安装&lt;/code&gt;，中搜索，&lt;code&gt;Localization: Chinese (Simplified)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;卸载，重装，同时安装&lt;code&gt;locale&lt;/code&gt;插件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;系统管理&lt;/code&gt;-&lt;code&gt;系统配置&lt;/code&gt;-&lt;code&gt;Locale&lt;/code&gt;-&lt;code&gt;Default Language&lt;/code&gt;,填写&lt;code&gt;zh_CN&lt;/code&gt;,勾选&lt;code&gt;Ignore browser preference and force this language to all users&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;重启&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;Jenkins操作&#34;&gt;&lt;a href=&#34;#Jenkins操作&#34; class=&#34;headerlink&#34; title=&#34;Jenkins操作&#34;&gt;&lt;/a&gt;Jenkins操作&lt;/h1&gt;&lt;h2 id=&#34;基本配置&#34;&gt;&lt;a href=&#34;#基本配置&#34; class=&#34;headerlink&#34; title=&#34;基本配置&#34;&gt;&lt;/a&gt;基本配置&lt;/h2&gt;&lt;h3 id=&#34;配置一览&#34;&gt;&lt;a href=&#34;#配置一览&#34; class=&#34;headerlink&#34; title=&#34;配置一览&#34;&gt;&lt;/a&gt;配置一览&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/KNfwrISu3cqpzoB.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;构建环境配置&#34;&gt;&lt;a href=&#34;#构建环境配置&#34; class=&#34;headerlink&#34; title=&#34;构建环境配置&#34;&gt;&lt;/a&gt;构建环境配置&lt;/h3&gt;&lt;p&gt;指定构建时所依赖的环境参数，如jdk版本，可以手动安装jdk，也可以在【全局工具配置】中指定好jdk版本，在首次构建时会自动安装，首次构建下载时间较长，耐心等待即可。&lt;/p&gt;
+&lt;p&gt;以NodeJS自动安装为例：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/w3ypsOPzqZ4QM2d.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;插件管理&#34;&gt;&lt;a href=&#34;#插件管理&#34; class=&#34;headerlink&#34; title=&#34;插件管理&#34;&gt;&lt;/a&gt;插件管理&lt;/h2&gt;&lt;p&gt;构建模块大多以插件形式存在，使用前需安装，否则无法找到对应构建项。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/BQ7LWwcZgriysMS.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;服务器配置&#34;&gt;&lt;a href=&#34;#服务器配置&#34; class=&#34;headerlink&#34; title=&#34;服务器配置&#34;&gt;&lt;/a&gt;服务器配置&lt;/h2&gt;&lt;p&gt;系统管理-&amp;gt;系统配置-&amp;gt;Publish over SSH，点击[新增]按钮添加服务器，按要求填写服务器信息，如果没有找到此选项，可先在【插件管理】中安装Publish over SSH插件。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/e96JzP8iSpvhcy7.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;说明：Remote Directory指定的目录会作为文件上传时的根目录。&lt;/p&gt;
+&lt;h2 id=&#34;Java应用构建配置&#34;&gt;&lt;a href=&#34;#Java应用构建配置&#34; class=&#34;headerlink&#34; title=&#34;Java应用构建配置&#34;&gt;&lt;/a&gt;Java应用构建配置&lt;/h2&gt;&lt;h3 id=&#34;新建任务&#34;&gt;&lt;a href=&#34;#新建任务&#34; class=&#34;headerlink&#34; title=&#34;新建任务&#34;&gt;&lt;/a&gt;新建任务&lt;/h3&gt;&lt;p&gt;以构建Maven项目为例，选择一个Maven构建风格，可以省去许多maven配置，如果已经有一个相同配置，可选择输入名称进行复制。&lt;/p&gt;
+&lt;p&gt;Maven setting.xml配置文件：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#x2F;var&amp;#x2F;lib&amp;#x2F;jenkins&amp;#x2F;tools&amp;#x2F;hudson.tasks.Maven_MavenInstallation&amp;#x2F;maven&amp;#x2F;conf&amp;#x2F;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/QqhzG2svYTgujEN.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;构建包留存策略&#34;&gt;&lt;a href=&#34;#构建包留存策略&#34; class=&#34;headerlink&#34; title=&#34;构建包留存策略&#34;&gt;&lt;/a&gt;构建包留存策略&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/BsxnbpaRHl6qdGM.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;源码仓库&#34;&gt;&lt;a href=&#34;#源码仓库&#34; class=&#34;headerlink&#34; title=&#34;源码仓库&#34;&gt;&lt;/a&gt;源码仓库&lt;/h3&gt;&lt;p&gt;正式环境采用参数化构建，只用Git参数指定构建tag分支，默认master分支&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/zMtvPDfjFoXyO8S.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;配置源码仓库，指定动态tag分支&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/sSY6haTOtJcqI2M.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;自动构建选项&#34;&gt;&lt;a href=&#34;#自动构建选项&#34; class=&#34;headerlink&#34; title=&#34;自动构建选项&#34;&gt;&lt;/a&gt;自动构建选项&lt;/h3&gt;&lt;p&gt;取消触发自动构建的选项&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/RBLYzZElcywuX7U.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;构建&#34;&gt;&lt;a href=&#34;#构建&#34; class=&#34;headerlink&#34; title=&#34;构建&#34;&gt;&lt;/a&gt;构建&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/i84axClGu2AokXY.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在jekenis服务器本地构建，使用jekenis服务器的maven配置进行编译构建&lt;/p&gt;
+&lt;h3 id=&#34;上传&#34;&gt;&lt;a href=&#34;#上传&#34; class=&#34;headerlink&#34; title=&#34;上传&#34;&gt;&lt;/a&gt;上传&lt;/h3&gt;&lt;p&gt;构建成功后上传到指定部署服务器，仅编译成功后进行上传&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/xyuPw2FXsRdIDpL.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Name：在服务列表中选择上传目标；&lt;/li&gt;
+&lt;li&gt;Source files：指定上传的jar包，支持正则通配（根据构建目录距离jar包位置的不同，会自动在服务器端创建不同深度的目录）。&lt;/li&gt;
+&lt;li&gt;Remote directory：可以指定上传目录，目录位于配置服务器时指定的根目录之下。&lt;/li&gt;
+&lt;li&gt;Exec command：上传成功后在上传后的服务器上执行的命令或脚本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：整体涉及到的编译脚本详见“项目编译脚本”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;Js应用构建&#34;&gt;&lt;a href=&#34;#Js应用构建&#34; class=&#34;headerlink&#34; title=&#34;Js应用构建&#34;&gt;&lt;/a&gt;Js应用构建&lt;/h2&gt;&lt;h3 id=&#34;新建任务-1&#34;&gt;&lt;a href=&#34;#新建任务-1&#34; class=&#34;headerlink&#34; title=&#34;新建任务&#34;&gt;&lt;/a&gt;新建任务&lt;/h3&gt;&lt;p&gt;选择一个自由风格的构建&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/W48lXhm1DkjRvag.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;构建包留存策略-1&#34;&gt;&lt;a href=&#34;#构建包留存策略-1&#34; class=&#34;headerlink&#34; title=&#34;构建包留存策略&#34;&gt;&lt;/a&gt;构建包留存策略&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/5XyWcCawtzI9JlV.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;源码仓库-1&#34;&gt;&lt;a href=&#34;#源码仓库-1&#34; class=&#34;headerlink&#34; title=&#34;源码仓库&#34;&gt;&lt;/a&gt;源码仓库&lt;/h3&gt;&lt;p&gt;正式环境采用参数化构建，只用Git参数指定构建tag分支，默认master分支&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/zMtvPDfjFoXyO8S.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;配置源码仓库，指定动态tag分支&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/06/sgqaEWYKMb5rA8z.png&#34; alt=&#34;image-20211006134146871&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;自动构建选项-1&#34;&gt;&lt;a href=&#34;#自动构建选项-1&#34; class=&#34;headerlink&#34; title=&#34;自动构建选项&#34;&gt;&lt;/a&gt;自动构建选项&lt;/h3&gt;&lt;p&gt;取消自动构建选项&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/WUG6PSjmNKFaH37.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;构建环境&#34;&gt;&lt;a href=&#34;#构建环境&#34; class=&#34;headerlink&#34; title=&#34;构建环境&#34;&gt;&lt;/a&gt;构建环境&lt;/h3&gt;&lt;p&gt;指定构建环境，选择已配置的nodejs构建环境，在jekenis本地服务器进行编译构建&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/gcNnHvzawXFKC76.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;构建-1&#34;&gt;&lt;a href=&#34;#构建-1&#34; class=&#34;headerlink&#34; title=&#34;构建&#34;&gt;&lt;/a&gt;构建&lt;/h3&gt;&lt;p&gt;在jekenis本地服务器进行编译构建&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/j2Z4QHn5qYSolFM.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;为方便后续上传，在构建环节执行了压缩命令，可视情况而定。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：整体涉及到的编译脚本详见“项目编译脚本”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;上传-1&#34;&gt;&lt;a href=&#34;#上传-1&#34; class=&#34;headerlink&#34; title=&#34;上传&#34;&gt;&lt;/a&gt;上传&lt;/h3&gt;&lt;p&gt;将编译并压缩后的前端文件上传到指定服务器&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/zjxrTqCF4QGvNLH.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在服务器列表中选择目标，指定上传文件，填写上传成功后需执行的命令。因VUE编译多次会生成不同的文件，故需将编译后的文件一次性上传多个负载的服务器。&lt;/p&gt;
+&lt;p&gt;即重新选择一次上传步骤：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/m5ODJEU6vIx9n3L.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.loli.net/2021/10/05/2Dsf1Mg7rq4vYdn.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：整体涉及到的编译脚本详见“项目编译脚本”&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="CentOS" />
+        <category term="Linux" />
+        <category term="Jenkins" />
+        <updated>2023-05-28T13:00:29.414Z</updated>
+    </entry>
+</feed>
