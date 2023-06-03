@@ -1847,6 +1847,10 @@
 <p>如果，之前你没有觉得这是一种负罪需要自我的救赎，你觉得不少人也都这样，所以我这样也是被逼无奈；那么之后，请你明白，你就是你，你的决定也就只是你的决定，与他人无关，即使你可以声称是受了他人的影响，是受了社会的胁迫，但请记住，你的人生最终只由你个人书写。</p>
 <p>所以，如果在某一天里，或是读了这篇文章过后，无论是为谁，就当是为我们自己，为那些生命里为你默默付出过，你却还没来得及感谢的人，回到那里，别只顾着斗风筝，为他们追一次风筝，哪怕就一次！</p>
 ]]></content>
+      <categories>
+        <category>拥抱世界吧</category>
+        <category>读书笔记</category>
+      </categories>
       <tags>
         <tag>感言</tag>
         <tag>思考</tag>
@@ -3155,6 +3159,11 @@
 <h3 id="用法-6"><a href="#用法-6" class="headerlink" title="用法"></a>用法</h3><figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">Instant</span> <span class="hljs-variable">first</span> <span class="hljs-operator">=</span> Instant.now();<br><span class="hljs-comment">// wait some time while something happens</span><br><span class="hljs-type">Instant</span> <span class="hljs-variable">second</span> <span class="hljs-operator">=</span> Instant.now();<br><span class="hljs-type">Duration</span> <span class="hljs-variable">duration</span> <span class="hljs-operator">=</span> Duration.between(first, second);<br></code></pre></td></tr></table></figure>
 <h2 id="DateTimeFormatter"><a href="#DateTimeFormatter" class="headerlink" title="DateTimeFormatter"></a>DateTimeFormatter</h2><h3 id="详解-7"><a href="#详解-7" class="headerlink" title="详解"></a>详解</h3><p>DateTimeFormatter类是Java 8中日期时间功能里，线程安全。用于解析和格式化日期时间的类。</p>
 <h3 id="用法-7"><a href="#用法-7" class="headerlink" title="用法"></a>用法</h3><figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//pattern.format(LocalDateTime.now()) = 2023/05/29 14:46:25  </span><br><span class="hljs-type">DateTimeFormatter</span> <span class="hljs-variable">pattern</span> <span class="hljs-operator">=</span> DateTimeFormatter.ofPattern(<span class="hljs-string">&quot;yyyy/MM/dd HH:mm:ss&quot;</span>);  <br>System.out.println(<span class="hljs-string">&quot;pattern.format(LocalDateTime.now()) = &quot;</span> + pattern.format(LocalDateTime.now()));<br></code></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>好好码代码吖</category>
+        <category>JAVA</category>
+        <category>JAVA特性</category>
+      </categories>
       <tags>
         <tag>思考</tag>
         <tag>JAVA</tag>
@@ -3175,6 +3184,11 @@
 <li><code>codePoints()</code>：返回一个 IntStream，其中包含此字符串中的 Unicode 代码点。</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>好好码代码吖</category>
+        <category>JAVA</category>
+        <category>JAVA特性</category>
+      </categories>
       <tags>
         <tag>思考</tag>
         <tag>JAVA</tag>
@@ -4000,6 +4014,11 @@
 <li>线程管理(可选):有的异步方式需要手动管理执行线程,有的则通过线程池等机制自动管理。<br>所以,总体来说,Java异步编程的关键就是启动一个与主程序分离的异步任务,并让其在后台运行,而主程序可以继续流程,不等待其完成。在需要结果或异常时,再通过相应机制获取或处理。<br>这一模式允许程序同时处理多个任务,提高了程序的并发能力和响应性。线程的自动管理也简化了手动管理线程的难度。Java提供了多种实现异步编程的方式,比如线程、Future、CompletableFuture、响应式框架等。随着Java的发展,这些方式越来越简便高效。<br>但其核心思想仍然是让异步任务独立于主程序执行,以实现并发和提高响应性。</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>好好码代码吖</category>
+        <category>JAVA</category>
+        <category>异步编程</category>
+      </categories>
       <tags>
         <tag>思考</tag>
         <tag>JAVA</tag>
@@ -4066,6 +4085,11 @@
 <p>&#x3D;&#x3D;这里先说明一下，示例代码只关注核心功能，如果要实际使用需要考虑超时和异常情况，大家需要注意。&#x3D;&#x3D;</p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java">CompletableFuture&lt;String&gt; f1 = CompletableFuture  <br>        .supplyAsync(() -&gt; &#123;  <br>            System.out.println(<span class="hljs-string">&quot;...开始执行hello&quot;</span>);  <br>            <span class="hljs-type">String</span> <span class="hljs-variable">hello</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;hello! &quot;</span>;  <br>            <span class="hljs-comment">//int i = 1/0;  </span><br>            System.out.println(<span class="hljs-string">&quot;...执行hello完毕，执行结果：&quot;</span> + hello);  <br>            <span class="hljs-keyword">return</span> hello;  <br>        &#125;).thenApplyAsync(s -&gt; &#123;  <br>            <span class="hljs-type">String</span> <span class="hljs-variable">world</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;world!&quot;</span>;  <br>            System.out.println(<span class="hljs-string">&quot;...获取上一步结果,结果为：&quot;</span> + s);  <br>            System.out.println(<span class="hljs-string">&quot;开始输出 &quot;</span> + world);  <br>            <span class="hljs-keyword">return</span> s + world;  <br>        &#125;);  <br>System.out.println(<span class="hljs-string">&quot;f1.get() = &quot;</span> + f1.get());<br></code></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>好好码代码吖</category>
+        <category>JAVA</category>
+        <category>异步编程</category>
+      </categories>
       <tags>
         <tag>JAVA</tag>
         <tag>异步编程</tag>
@@ -8109,6 +8133,11 @@
 <p>后台运行结果：</p>
 <p><img src="https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201007195837.png" alt="image-20201007195836747"></p>
 ]]></content>
+      <categories>
+        <category>好好码代码吖</category>
+        <category>JAVA</category>
+        <category>Beetl&amp;BeetlSql</category>
+      </categories>
       <tags>
         <tag>BeetlSql</tag>
         <tag>Beetl</tag>
