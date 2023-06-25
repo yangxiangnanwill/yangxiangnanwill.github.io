@@ -5,51 +5,53 @@
         <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
         <description>愿你一生努力，一生被爱</description>
         <language>zh-CN</language>
-        <pubDate>Wed, 31 May 2023 09:03:15 +0800</pubDate>
-        <lastBuildDate>Wed, 31 May 2023 09:03:15 +0800</lastBuildDate>
-        <category>感言</category>
-        <category>思考</category>
+        <pubDate>Tue, 30 May 2023 11:38:55 +0800</pubDate>
+        <lastBuildDate>Tue, 30 May 2023 11:38:55 +0800</lastBuildDate>
         <category>开发习惯</category>
+        <category>思考</category>
         <category>Docker</category>
         <category>LINUX</category>
+        <category>感言</category>
         <category>CentOS</category>
         <category>Linux</category>
-        <category>Jenkins</category>
         <category>Crontab</category>
-        <category>Maven</category>
+        <category>Jenkins</category>
         <category>Node</category>
         <category>前端</category>
+        <category>Maven</category>
         <category>Nvm</category>
-        <category>读书笔记</category>
         <category>IDEA</category>
         <category>Alibaba Cloud Toolkit</category>
         <category>Archery</category>
         <category>MySql</category>
         <category>工具</category>
         <category>Git</category>
+        <category>读书笔记</category>
         <category>BeetlSql</category>
         <category>Beetl</category>
+        <category>Java IO-初识IO</category>
         <category>JAVA</category>
         <category>枚举</category>
         <category>异常</category>
-        <category>Spring</category>
-        <category>SpringCloud</category>
-        <category>SpringCloud Alibaba</category>
         <category>POI</category>
+        <category>CentOS7</category>
+        <category>MongoDB</category>
+        <category>Redis</category>
         <category>ProtoBuffer</category>
         <category>其他</category>
         <category>SOAR</category>
-        <category>Spring Boot</category>
+        <category>Spring</category>
+        <category>SpringCloud</category>
+        <category>SpringCloud Alibaba</category>
         <category>博客园</category>
         <category>博客</category>
         <category>VerificationCode</category>
+        <category>Spring Boot</category>
+        <category>MongoDb</category>
+        <category>VinUtil</category>
+        <category>常见软件开源协议详解</category>
         <category>异步编程</category>
         <category>线程</category>
-        <category>MongoDb</category>
-        <category>CentOS7</category>
-        <category>MongoDB</category>
-        <category>VinUtil</category>
-        <category>Redis</category>
         <category>Typora</category>
         <category>PostMan</category>
         <category>JDBC</category>
@@ -57,74 +59,9 @@
         <category>Java8</category>
         <category>特性</category>
         <category>EasyExcel</category>
-        <category>Script</category>
         <category>设计模式</category>
+        <category>Script</category>
         <category>MyBatis</category>
-        <item>
-            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/31/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B(2)-Java%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8C%97/</guid>
-            <title>异步编程(2)-Java异步编程指北</title>
-            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/31/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B(2)-Java%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8C%97/</link>
-            <category>JAVA</category>
-            <category>异步编程</category>
-            <category>线程</category>
-            <pubDate>Wed, 31 May 2023 09:03:15 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;本文简要介绍一下Java中可支持异步编程的类和使用方法，方便后期回顾和汇总。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;同步异步优缺点&#34;&gt;&lt;a href=&#34;#同步异步优缺点&#34; class=&#34;headerlink&#34; title=&#34;同步异步优缺点&#34;&gt;&lt;/a&gt;同步异步优缺点&lt;/h1&gt;&lt;p&gt;在我们平时开发中或多或少都会遇到需要调用接口来完成一个功能的需求，这个接口可以是内部系统也可以是外部的，然后等到接口返回数据了才能继续其他的业务流程，这就是传统的 &lt;code&gt;同步&lt;/code&gt;模式。&lt;/p&gt;
-&lt;p&gt;同步模式虽然简单但缺点也很明显，如果对方服务处理缓慢迟迟未能返回数据，或网络问题导致响应变长，就会阻塞我们调用方的线程，导致我们主流程的耗时的延迟，传统的解决方式是增加接口、网关的超时(timeout)设置，防止无限期等待。但即使这样还是会占用CPU资源。&lt;/p&gt;
-&lt;p&gt;在我们做rpc远程调用，redis，数据库访问等比较耗时的网络请求时经常要面对这样的问题，这种业务场景我们可以引入&lt;code&gt;异步&lt;/code&gt;的编程思想，即主流程不需要阻塞等待接口返回数据，而是继续往下执行，当真正需要这个接口返回结果时再通过回调或阻塞的方式获取，此时我们的主流程和异步任务是并行执行的。&lt;/p&gt;
-&lt;p&gt;Java中实现异步主要是通过Future，CompletableFuture，Guava ListenableFuture以及一些异步响应式框架如RxJava实现。&lt;/p&gt;
-&lt;p&gt;下面我们主要看下这几种组件适用的业务场景和需要注意的地方，避免踩坑。&lt;/p&gt;
-&lt;h1 id=&#34;Future&#34;&gt;&lt;a href=&#34;#Future&#34; class=&#34;headerlink&#34; title=&#34;Future&#34;&gt;&lt;/a&gt;Future&lt;/h1&gt;&lt;p&gt;Future 表示异步计算的结果。提供了检查计算是否完成、等待计算完成以及检索计算结果的方法。只有在计算完成后才能使用方法 get 检索结果，必要时阻止，直到准备就绪。取消是通过该方法 cancel 执行的。提供了其他方法来确定任务是正常完成还是已取消。计算完成后，无法取消计算。如果您想为了可取消性而使用Future ，但不提供可用的结果，则可以声明&lt;code&gt; Future&amp;lt;?&amp;gt;&lt;/code&gt; 的类型并作为基础任务的结果返回 null。&lt;br&gt;接口信息如下图所示：&lt;br&gt;&lt;img src=&#34;https://s3.bmp.ovh/imgs/2023/05/31/b2baebe6d50661a8.png&#34;&gt;&lt;br&gt;实际开发中我们一般会结合线程池的submit配合使用，代码如下：&lt;/p&gt;
-&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; java.util.concurrent.ExecutorService;  &lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; java.util.concurrent.Executors;  &lt;br&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;import&lt;/span&gt; java.util.concurrent.Future;  &lt;br&gt;  &lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;/**  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; * AsyncTest 异步  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; * &lt;span class=&#34;hljs-doctag&#34;&gt;@author&lt;/span&gt; will  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt; */&lt;/span&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;FutureTest&lt;/span&gt; &amp;#123;  &lt;br&gt; &lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;(String[] args)&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;throws&lt;/span&gt; Exception&amp;#123;  &lt;br&gt;        &lt;span class=&#34;hljs-comment&#34;&gt;//创建线程池  &lt;/span&gt;&lt;br&gt;        &lt;span class=&#34;hljs-type&#34;&gt;ExecutorService&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;executor&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; Executors.newCachedThreadPool();  &lt;br&gt;        &lt;span class=&#34;hljs-comment&#34;&gt;// 模拟接口调用  &lt;/span&gt;&lt;br&gt;        Future&amp;lt;String&amp;gt; submit = executor.submit(() -&amp;gt; &amp;#123;  &lt;br&gt;            Thread.sleep(&lt;span class=&#34;hljs-number&#34;&gt;2&lt;/span&gt;*&lt;span class=&#34;hljs-number&#34;&gt;1000&lt;/span&gt;);  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;hello world&amp;quot;&lt;/span&gt;;  &lt;br&gt;        &amp;#125;);  &lt;br&gt;  &lt;br&gt;        System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;异步执行结果 = &amp;quot;&lt;/span&gt; + submit.get());  &lt;br&gt;        System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;submit.isDone() = &amp;quot;&lt;/span&gt; + submit.isDone());  &lt;br&gt;  &lt;br&gt;    &amp;#125;  &lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;简单的说我有一个任务，提交给了Future，Future替我完成这个任务，这期间我可以去做别的事情。一段时间之后，我再从Future取出结果。&lt;/p&gt;
-&lt;p&gt;上面的代码有2个地方需要注意:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;不建议使用future.get()方式，而应该使用future.get(long timeout, TimeUnit unit)&lt;br&gt;  尤其是在生产环境一定要设置合理的超时时间，防止程序无限期等待下去&lt;/li&gt;
-&lt;li&gt;另外就是要考虑异步任务执行过程中报错抛出异常的情况，需要捕获future的异常信息。&lt;br&gt;通过代码可以看出一些简单的异步场景可以使用Future解决，但是对于结果的获取却不是很方便，只能通过阻塞或者轮询的方式得到任务的结果。阻塞的方式相当于把异步变成了同步，显然和异步编程的初衷相违背，轮询的方式又会浪费CPU资源。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;Future没有提供通知的机制，就是回调，我们无法知道它什么时间完成任务。&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;而且在复杂一点的情况下，比如多个异步任务的场景，一个异步任务依赖上一个异步任务的执行结果，异步任务合并等，Future无法满足需求。&lt;/p&gt;
-&lt;h1 id=&#34;ListenableFuture&#34;&gt;&lt;a href=&#34;#ListenableFuture&#34; class=&#34;headerlink&#34; title=&#34;ListenableFuture&#34;&gt;&lt;/a&gt;ListenableFuture&lt;/h1&gt;&lt;p&gt;Google并发包下的listenableFuture对Java原生的future做了扩展，顾名思义就是使用监听器模式实现的回调，所以叫可监听的future。&lt;/p&gt;
-&lt;p&gt;要使用listenableFuture还要结合MoreExecutor线程池，MoreExecutor是对Java原生线程池的封装，比如常用的MoreExecutors.listeningDecorator(threadPool); 修改Java原生线程池的submit方法，封装了future返回listenableFuture。&lt;br&gt;接口信息如下图所示：&lt;br&gt;&lt;img src=&#34;https://s3.bmp.ovh/imgs/2023/05/31/38d7ecdc6230f9e8.png&#34;&gt;&lt;br&gt;代码示例如下：&lt;br&gt;首先还是创建线程池,模拟业务调用&lt;/p&gt;
-&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;//创建线程池  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-type&#34;&gt;ListeningExecutorService&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;executor&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; MoreExecutors.listeningDecorator(Executors.newCachedThreadPool());  &lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;// 模拟接口调用  &lt;/span&gt;&lt;br&gt;ListenableFuture&amp;lt;String&amp;gt; future = executor.submit(() -&amp;gt; &amp;#123;  &lt;br&gt;    Thread.sleep(&lt;span class=&#34;hljs-number&#34;&gt;2&lt;/span&gt;*&lt;span class=&#34;hljs-number&#34;&gt;1000&lt;/span&gt;);  &lt;br&gt;    &lt;span class=&#34;hljs-comment&#34;&gt;// int i = 1 / 0;  &lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;hello world&amp;quot;&lt;/span&gt;;  &lt;br&gt;&amp;#125;);&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面的代码是构造了一个ListenableFuture的异步任务，调用它的结果一般有两种方式：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;基于监听器(addListener)&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;// 基于监听机制  &lt;/span&gt;&lt;br&gt;future.addListener(() -&amp;gt; &amp;#123;  &lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;try&lt;/span&gt; &amp;#123;  &lt;br&gt;        System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;异步结果:&amp;quot;&lt;/span&gt; + future.get());  &lt;br&gt;    &amp;#125; &lt;span class=&#34;hljs-keyword&#34;&gt;catch&lt;/span&gt; (Exception e) &amp;#123;  &lt;br&gt;        e.printStackTrace();  &lt;br&gt;    &amp;#125;  &lt;br&gt;&amp;#125;, executor);&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;基于回调（addCallback）&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;// 基于回调机制  &lt;/span&gt;&lt;br&gt;Futures.addCallback(future, &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;FutureCallback&lt;/span&gt;&amp;lt;String&amp;gt;() &amp;#123;  &lt;br&gt;    &lt;span class=&#34;hljs-meta&#34;&gt;@Override&lt;/span&gt;  &lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;onSuccess&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;(&lt;span class=&#34;hljs-meta&#34;&gt;@Nullable&lt;/span&gt; String result)&lt;/span&gt; &amp;#123;  &lt;br&gt;        System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;异步结果:&amp;quot;&lt;/span&gt; + result);  &lt;br&gt;    &amp;#125;  &lt;br&gt;    &lt;span class=&#34;hljs-meta&#34;&gt;@Override&lt;/span&gt;  &lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;hljs-title function_&#34;&gt;onFailure&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;(Throwable t)&lt;/span&gt; &amp;#123;  &lt;br&gt;        System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;异步结果错误:&amp;quot;&lt;/span&gt; + t.getMessage());  &lt;br&gt;    &amp;#125;  &lt;br&gt;&amp;#125;);&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-上述代码用例可以发现我注释掉了一个&lt;code&gt;int i = 1 / 0&lt;/code&gt;,在学习过程中可以放开来看看结果，对比验证一下。&lt;br&gt;OK，上述如果验证完毕后，可以比对看下面的汇总，加深一下使用区别。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;方法&lt;/th&gt;
-&lt;th&gt;使用说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;addListener&lt;/td&gt;
-&lt;td&gt;需要自己代码里捕获处理异常情况，最好设置超时时间&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;addCallback&lt;/td&gt;
-&lt;td&gt;把正常返回和异常情况做了分离，方便我们针对不同情况做处理&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;另外Futures里还有很多其他的api，可以满足我们负责场景，比如transform()可以处理异步任务之间的依赖情况，allAsList()将多个ListenableFuture合并成一个。&lt;/p&gt;
-&lt;h1 id=&#34;CompletableFuture&#34;&gt;&lt;a href=&#34;#CompletableFuture&#34; class=&#34;headerlink&#34; title=&#34;CompletableFuture&#34;&gt;&lt;/a&gt;CompletableFuture&lt;/h1&gt;&lt;p&gt;如果你们公司的jdk是8或以上的版本，那可以直接使用CompletableFuture类来实现异步编程。&lt;/p&gt;
-&lt;p&gt;Java8新增的CompletableFuture类借鉴了Google Guava的ListenableFuture，它包含50多个方法，默认使用forkJoinPool线程池，提供了非常强大的Future扩展功能，可以帮助我们简化异步编程的复杂性，结合函数式编程，通过回调的方式处理计算结果，并且提供了转换和组合CompletableFuture的多种方法，可以满足大部分异步回调场景。&lt;br&gt;接口信息如下图所示：&lt;br&gt;&lt;img src=&#34;https://s3.bmp.ovh/imgs/2023/06/01/6aac59f5cb214601.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;虽然方法很多但有个特征：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;以Async结尾的方法签名表示是在异步线程里执行，没有以Async结尾的方法则是由主线程调用&lt;/li&gt;
-&lt;li&gt;如果参数里有Runnable类型，则没有返回结果，即纯消费的方法  &lt;/li&gt;
-&lt;li&gt;如果参数里没有指定executor则默认使用forkJoinPool线程池，指定了则以指定的线程池来执行任务&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;thenApplyAsync&#34;&gt;&lt;a href=&#34;#thenApplyAsync&#34; class=&#34;headerlink&#34; title=&#34;thenApplyAsync&#34;&gt;&lt;/a&gt;thenApplyAsync&lt;/h2&gt;&lt;h3 id=&#34;示例代码&#34;&gt;&lt;a href=&#34;#示例代码&#34; class=&#34;headerlink&#34; title=&#34;示例代码&#34;&gt;&lt;/a&gt;示例代码&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&amp;#x3D;&amp;#x3D;这里先说明一下，示例代码只关注核心功能，如果要实际使用需要考虑超时和异常情况，大家需要注意。&amp;#x3D;&amp;#x3D;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;CompletableFuture&amp;lt;String&amp;gt; f1 = CompletableFuture  &lt;br&gt;        .supplyAsync(() -&amp;gt; &amp;#123;  &lt;br&gt;            System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;...开始执行hello&amp;quot;&lt;/span&gt;);  &lt;br&gt;            &lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;hello&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;hello! &amp;quot;&lt;/span&gt;;  &lt;br&gt;            &lt;span class=&#34;hljs-comment&#34;&gt;//int i = 1/0;  &lt;/span&gt;&lt;br&gt;            System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;...执行hello完毕，执行结果：&amp;quot;&lt;/span&gt; + hello);  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; hello;  &lt;br&gt;        &amp;#125;).thenApplyAsync(s -&amp;gt; &amp;#123;  &lt;br&gt;            &lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;world&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;world!&amp;quot;&lt;/span&gt;;  &lt;br&gt;            System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;...获取上一步结果,结果为：&amp;quot;&lt;/span&gt; + s);  &lt;br&gt;            System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;开始输出 &amp;quot;&lt;/span&gt; + world);  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; s + world;  &lt;br&gt;        &amp;#125;);  &lt;br&gt;System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;f1.get() = &amp;quot;&lt;/span&gt; + f1.get());&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
-        </item>
         <item>
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/30/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B(1)-%E5%88%9D%E8%AF%86%E5%BC%82%E6%AD%A5/</guid>
             <title>异步编程(1)-初识异步</title>

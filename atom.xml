@@ -3,50 +3,52 @@
     <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
     <title>Will</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
-    <updated>2023-06-03T13:44:53.229Z</updated>
-    <category term="感言" />
-    <category term="思考" />
+    <updated>2023-06-25T08:17:05.751Z</updated>
     <category term="开发习惯" />
+    <category term="思考" />
     <category term="Docker" />
     <category term="LINUX" />
+    <category term="感言" />
     <category term="CentOS" />
     <category term="Linux" />
-    <category term="Jenkins" />
     <category term="Crontab" />
-    <category term="Maven" />
+    <category term="Jenkins" />
     <category term="Node" />
     <category term="前端" />
+    <category term="Maven" />
     <category term="Nvm" />
-    <category term="读书笔记" />
     <category term="IDEA" />
     <category term="Alibaba Cloud Toolkit" />
     <category term="Archery" />
     <category term="MySql" />
     <category term="工具" />
     <category term="Git" />
+    <category term="读书笔记" />
     <category term="BeetlSql" />
     <category term="Beetl" />
+    <category term="Java IO-初识IO" />
     <category term="JAVA" />
     <category term="枚举" />
     <category term="异常" />
-    <category term="Spring" />
-    <category term="SpringCloud" />
-    <category term="SpringCloud Alibaba" />
     <category term="POI" />
+    <category term="CentOS7" />
+    <category term="MongoDB" />
+    <category term="Redis" />
     <category term="ProtoBuffer" />
     <category term="其他" />
     <category term="SOAR" />
-    <category term="Spring Boot" />
+    <category term="Spring" />
+    <category term="SpringCloud" />
+    <category term="SpringCloud Alibaba" />
     <category term="博客园" />
     <category term="博客" />
     <category term="VerificationCode" />
+    <category term="Spring Boot" />
+    <category term="MongoDb" />
+    <category term="VinUtil" />
+    <category term="常见软件开源协议详解" />
     <category term="异步编程" />
     <category term="线程" />
-    <category term="MongoDb" />
-    <category term="CentOS7" />
-    <category term="MongoDB" />
-    <category term="VinUtil" />
-    <category term="Redis" />
     <category term="Typora" />
     <category term="PostMan" />
     <category term="JDBC" />
@@ -54,9 +56,149 @@
     <category term="Java8" />
     <category term="特性" />
     <category term="EasyExcel" />
-    <category term="Script" />
     <category term="设计模式" />
+    <category term="Script" />
     <category term="MyBatis" />
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/06/25/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE/%E5%B8%B8%E8%A7%81%E8%BD%AF%E4%BB%B6%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3/</id>
+        <title>常见软件开源协议详解</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/06/25/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/%E6%96%B9%E6%B3%95%E8%AE%BA/%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE/%E5%B8%B8%E8%A7%81%E8%BD%AF%E4%BB%B6%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;开源不等于免费！为了加速我们的开发，我们会使用开源的软件和源码； 为避免商业风险，需要在使用时了解第三方如软件协议，版本，和已知CVE风险(CVE高危漏洞)等；本文旨在从开源软件再发布过程使用权限的角度入手，总结各个常见开源协议的异同，方便理解。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;什么是开源协议&#34;&gt;&lt;a href=&#34;#什么是开源协议&#34; class=&#34;headerlink&#34; title=&#34;什么是开源协议&#34;&gt;&lt;/a&gt;什么是开源协议&lt;/h1&gt;&lt;p&gt;大部分人都希望作品能够被多数人分享查阅。这样不仅提高自己业界的知名度，同时也方便了需要的人为开源做出了贡献。但是代码一旦被贴出来，任何人都可以看到并获取，之后发生的事情你就无法控制了。所以为了公开分享你的代码，同时又让你对代码保留一定权利，在作品中声明一个许可协议是非常有必要的。有协议和没声明协议的裸代码是有非常重要区别的，一般作品当中没声明协议的默认为Copy right的，也就是版权保留。此种情况表明他人没有任何授权，不得复制分发修改使用等等。有了协议的声明，在未来你的维权上面会方便很多，让你的作品在分享的同时保留了自身的一些权利。&lt;/p&gt;
+&lt;p&gt;License是软件的授权许可，里面详尽表述了你获得代码后拥有的权利，可以对别人的作品进行何种操作，何种操作又是被禁止的。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;软件协议可分为开源和商业&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对于商业协议，或者叫法律声明、许可协议，每个软件会有自己的一套行文，由软件作者或专门律师撰写。因为涉及到以后侵权打官司这种事情，这种商业条款的行文是非常严谨而讲究的，读起来很晦涩难懂。&lt;/li&gt;
+&lt;li&gt;对于开源协议，要知道开源不等于免费，也不等于没有约束。虽然相对商业协议要更加简明，但对于很多人来说还是像在看天书一样。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;开源协议&#34;&gt;&lt;a href=&#34;#开源协议&#34; class=&#34;headerlink&#34; title=&#34;开源协议&#34;&gt;&lt;/a&gt;开源协议&lt;/h1&gt;&lt;p&gt;首先一共有哪些公开的协议:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://opensource.org/licenses/alphabetical&#34;&gt;https://opensource.org/licenses/alphabetical&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;常用协议&#34;&gt;&lt;a href=&#34;#常用协议&#34; class=&#34;headerlink&#34; title=&#34;常用协议&#34;&gt;&lt;/a&gt;常用协议&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;最流行的六种—-GPL、BSD、MIT、Mozilla、Apache和LGPL。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这里引用阮一峰大神制作的中文版的分析图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.bmp.ovh/imgs/2023/06/25/14d31fc400958163.jpg&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;Apache-许可协议&#34;&gt;&lt;a href=&#34;#Apache-许可协议&#34; class=&#34;headerlink&#34; title=&#34;Apache 许可协议&#34;&gt;&lt;/a&gt;Apache 许可协议&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Apache许可证(Apache License)，是一个在Apache软件基金会发布的自由软件许可证，最初为Apache http服务器而撰写。Apache许可证要求被授权者保留版权和放弃权利的申明，但它不是一个反版权的许可证。 此许可证最新版本为“版本2”，于2004年1月发布。 Apache许可证在Apache社区内外被广泛使用。Apache基金会下属所有项目都使用Apache许可证，许多非Apache基金会项目也使用了Apache许可证: 据统计，截至2008年4月，在sourceforge上有超过3000个项目使用了Apache许可证。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Apache 许可协议, 2.0 版本, 授予了用户大量的权利。这些权利可以应用于拷贝权，也可以用于专利权。因为很多许可协议只能适用于拷贝权，不适用于专利权，所以这个灵活性就成了让有专利的开发者们选择许可协议时的一个显著参考因素 (要想明白两者之间的不同，请参考 How Stuff Works 上的这篇文章 )。&lt;/p&gt;
+&lt;p&gt;下面是关于 Apache 许可协议所允许的事项的详细说明:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;权利永恒。 一旦被授权，权利永久不失。&lt;/li&gt;
+&lt;li&gt;权利无疆界。 在一个国家里被授权，形同于在所有国家被授权。例如，你在美国，但许可权最初在印度被授予，你同样可以使用这个被授权的程序。 &lt;/li&gt;
+&lt;li&gt;授权无需付费和支付酬劳。 你既不需要在使用之前支付任何的费用，也无需在每次使用时支付任何的费用，或者其它类似情况。&lt;/li&gt;
+&lt;li&gt;权利不排他。 使用这种许可协议下的软件时，不妨碍你使用其它软件。&lt;/li&gt;
+&lt;li&gt;权利不可变更。 权利一旦授予，不可剥夺。也就是说，你在使用这个软件的过程中，你无需担心这种情况: 当你开发出了令人羡慕的基于这种授权软件的衍生产品时，有人突然跳出来对你说，抱歉，你将不再被允许使用这个程序。(在这个协议里有个条款声明: 如果你控告别人在这个许可协议下的产品有侵犯专利的行为，那你的授权将会自动终止，但这只是适用于有专利权的作品。只要你不搞有专利作品的诉讼，你永远无需担心这种问题。)&lt;/li&gt;
+&lt;li&gt;对再分发的作品还有个特殊要求，总的就是说要给予这些程序的作者和许可协议的维护者适当的名誉。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;MIT-许可协议&#34;&gt;&lt;a href=&#34;#MIT-许可协议&#34; class=&#34;headerlink&#34; title=&#34;MIT 许可协议&#34;&gt;&lt;/a&gt;MIT 许可协议&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;MIT 协议应该是在流行的开源协议中最简短的、使用最广泛的一种协议。它的条款非常的宽松，而且跟其它协议相比更自由。 MIT 协议是目前最少限制的协议。它基本上就是任何人可以对这个协议下的软件的做任何的事情，只要你能认可这个协议。这种协议最基本的条款 ( the information that it is provided without warranty, which comprises the final paragraph)如下:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;特此授权，任何人都可免费获得这个软件以及相关文档(the Software)的拷贝，可以无限制的使用这个软件，包括无限制的权利去使用、复制、修改、合并、发布、附加从属协议，以及&amp;#x2F;或者出售软件的拷贝， 同时，为了让软件的提供者有权利做到这些，下面的条件必须遵守:&lt;/p&gt;
+&lt;p&gt;上面的拷贝权声明和许可声明必须包含在所有的这个软件拷贝里和实际分署部分里。&lt;/p&gt;
+&lt;p&gt;这也就是说:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你可以随意使用，复制，修改这个软件。没有人能够阻止你在任何工程里使用它，你可以复制任意次数、以任何形式，或按你的愿望修改它。&lt;/li&gt;
+&lt;li&gt;你可以向外免费发放，或出售。你可以随意的分发它，没有任何限制。&lt;/li&gt;
+&lt;li&gt;唯一的限制是你必须接受协议条款。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;BSD-许可协议&#34;&gt;&lt;a href=&#34;#BSD-许可协议&#34; class=&#34;headerlink&#34; title=&#34;BSD 许可协议&#34;&gt;&lt;/a&gt;BSD 许可协议&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;BSD 协议有很多分支，它们都代表了一种宽松的自由软件协议，相对其它协议，例如GPL，来说，它们对软件的传播给予了更少的限制。 在这种协议的各种版本中，有两个版本格外的重要: 新 BSD 协议&amp;#x2F;修订版 BSD 协议和简化 BSD 协议&amp;#x2F;FreeBSD 协议。这两类协议都实现的对 GPL 兼容的自由软件协议，而且被 Open Source Initiative 认可为开源软件协议。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;新 BSD 协议(3-clause license)无任何限制的允许你以任何目的二次分发这种软件，唯一的要求是必须保留拷贝权的声明和协议里的软件权利放弃条款。这种协议还有一个限制，未经许可不得使用这个作品的所有曾经捐助者的署名。 新 BSD 协议和简化 BSD 协议的最主要的区别是后者删除了署名条款。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;BSD开源协议是一个给于使用者很大自由的协议。基本上使用者可以”为所欲为”，可以自由的使用，修改源代码，也可以将修改后的代码作为开源或者专有软件再发布。&lt;/p&gt;
+&lt;p&gt;但”为所欲为”的前提当你发布使用了BSD协议的代码，或则以BSD协议代码为基础做二次开发自己的产品时，需要满足三个条件:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果再发布的产品中包含源代码，则在源代码中必须带有原来代码中的BSD协议。&lt;/li&gt;
+&lt;li&gt;如果再发布的只是二进制类库&amp;#x2F;软件，则需要在类库&amp;#x2F;软件的文档和版权声明中包含原来代码中的BSD协议。&lt;/li&gt;
+&lt;li&gt;不可以用开源代码的作者&amp;#x2F;机构名字和原来产品的名字做市场推广。&lt;/li&gt;
+&lt;li&gt;BSD 代码鼓励代码共享，但需要尊重代码作者的著作权。BSD由于允许使用者修改和重新发布代码，也允许使用或在BSD代码上开发商业软件发布和销售，因此是对商业集成很友好的协议。而很多的公司企业在选用开源产品的时候都首选BSD协议，因为可以完全控制这些第三方的代码，在必要的时候可以修改或者二次开发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;GPL&#34;&gt;&lt;a href=&#34;#GPL&#34; class=&#34;headerlink&#34; title=&#34;GPL&#34;&gt;&lt;/a&gt;GPL&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;我们很熟悉的Linux就是采用了GPL。GPL协议和BSD， Apache License等鼓励代码重用的许可很不一样。GPL的出发点是代码的开源&amp;#x2F;免费使用和引用&amp;#x2F;修改&amp;#x2F;衍生代码的开源&amp;#x2F;免费使用，但不允许修改后和衍生的代 码做为闭源的商业软件发布和销售。这也就是为什么我们能用免费的各种linux，包括商业公司的linux和linux上各种各样的由个人，组织，以及商 业软件公司开发的免费软件了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;GPL协议的主要内容是只要在一个软件中使用(”使用”指类库引用，修改后的代码或者衍生代码)GPL 协议的产品，则该软件产品必须也采用GPL协议，既必须也是开源和免费。这就是所谓的”传染性”。GPL协议的产品作为一个单独的产品使用没有任何问题， 还可以享受免费的优势。&lt;/p&gt;
+&lt;p&gt;由于GPL严格要求使用了GPL类库的软件产品必须使用GPL协议，对于使用GPL协议的开源代码，商业软件或者对代码有保密要求的部门就不适合集成&amp;#x2F;采用作为类库和二次开发的基础。&lt;/p&gt;
+&lt;p&gt;其它细节如再发布的时候需要伴随GPL协议等和BSD&amp;#x2F;Apache等类似。&lt;/p&gt;
+&lt;h2 id=&#34;LGPL&#34;&gt;&lt;a href=&#34;#LGPL&#34; class=&#34;headerlink&#34; title=&#34;LGPL&#34;&gt;&lt;/a&gt;LGPL&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;LGPL 是GPL的一个为主要为类库使用设计的开源协议。和GPL要求任何使用&amp;#x2F;修改&amp;#x2F;衍生之GPL类库的的软件必须采用GPL协议不同。LGPL 允许商业软件通过类库引用(link)方式使用LGPL类库而不需要开源商业软件的代码。这使得采用LGPL协议的开源代码可以被商业软件作为类库引用并发布和销售。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但是如果修改LGPL协议的代码或者衍生，则所有修改的代码，涉及修改部分的额外代码和衍生的代码都必须采用LGPL协议。因此LGPL协议的开源代码很适合作为第三方类库被商业软件引用，但不适合希望以LGPL协议代码为基础，通过修改和衍生的方式做二次开发的商业软件采用。&lt;/p&gt;
+&lt;p&gt;GPL&amp;#x2F;LGPL都保障原作者的知识产权，避免有人利用开源代码复制并开发类似的产品。&lt;/p&gt;
+&lt;h2 id=&#34;MPL&#34;&gt;&lt;a href=&#34;#MPL&#34; class=&#34;headerlink&#34; title=&#34;MPL&#34;&gt;&lt;/a&gt;MPL&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;MPL是The Mozilla Public License的简写，是1998年初Netscape的 Mozilla小组为其开源软件项目设计的软件许可证。MPL许可证出现的最重要原因就是，Netscape公司认为GPL许可证没有很好地平衡开发者对源代码的需求和他们利用源代码获得的利益。同著名的GPL许可证和BSD许可证相比，MPL在许多权利与义务的约定方面与它们相同(因为都是符合OSIA认定的开源软件许可证)。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但是，相比而言MPL还有以下几个显著的不同之处:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MPL虽然要求对于经MPL许可证发布的源代码的修改也要以MPL许可证的方式再许可出来，以保证其他人可以在MPL的条款下共享源代码。但是，在MPL许可证中对“发布”的定义是“以源代码方式发布的文件”，这就意味着MPL允许一个企业在自己已有的源代码库上加一个接口，除了接口程序的源代码以MPL许可证的形式对外许可外，源代码库中的源代码就可以不用MPL许可证的方式强制对外许可。这些，就为借鉴别人的源代码用做自己商业软件开发的行为留了一个豁口。&lt;/li&gt;
+&lt;li&gt;MPL许可证第三条第7款中允许被许可人将经过MPL许可证获得的源代码同自己其他类型的代码混合得到自己的软件程序。&lt;/li&gt;
+&lt;li&gt;对软件专利的态度，MPL许可证不像GPL许可证那样明确表示反对软件专利，但是却明确要求源代码的提供者不能提供已经受专利保护的源代码(除非他本人是专利权人，并书面向公众免费许可这些源代码)，也不能在将这些源代码以开放源代码许可证形式许可后再去申请与这些源代码有关的专利。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;对源代码的定义&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;而在MPL(1.1版本)许可证中，对源代码的定义是:“源代码指的是对作品进行修改最优先择取的形式，它包括:所有模块的所有源程序，加上有关的接口的定义，加上控制可执行作品的安装和编译的‘原本’(原文为‘Script’)，或者不是与初始源代码显著不同的源代码就是被源代码贡献者选择的从公共领域可以得到的程序代码。”&lt;/li&gt;
+&lt;li&gt;MPL许可证第3条有专门的一款是关于对源代码修改进行描述的规定，就是要求所有再发布者都得有一个专门的文件就对源代码程序修改的时间和修改的方式有描述。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;小结&#34;&gt;&lt;a href=&#34;#小结&#34; class=&#34;headerlink&#34; title=&#34;小结&#34;&gt;&lt;/a&gt;小结&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;GPL协议、LGPL协议与BSD协议的法律区别。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;简而言之，GPL协议就是一个开放源代码协议，软件的初始开发者使用了GPL协议并公开软件的源程序后，后续使用该软件源程序开发软件者亦应当根据GPL协议把自己编写的源程序进行公开。GPL协议要求的关键在于开放源程序，但并不排斥软件作者向用户收费。虽然如此，很多大公司对GPL协议还是又爱又恨，爱的是这个协议项下的软件历经众多程序员千锤百炼的修改，已经非常成熟完善，恨的是必须开放自己后续的源程序，导致竞争对手也可以根据自己修改的源程序开发竞争产品。&lt;/p&gt;
+&lt;p&gt;正因大公司对GPL协议在商业上存在顾虑，因此，另两种协议被采用的更多，第一种是LGPL(亦称GPL V2)协议，可以翻译为更宽松的GPL协议。与GPL协议的区别为，后者如果只是对LGPL软件的程序库的程序进行调用而不是包含其源代码时，相关的源程序无需开源。调用和包含的区别类似在互联网网网页上对他人网页内容的引用: 如果把他人的内容全部或部分复制到自己的网页上，就类似包含，如果只是贴一个他人网页的网址链接而不引用内容，就类似调用。有了这个协议，很多大公司就可以把很多自己后续开发内容的源程序隐藏起来。&lt;/p&gt;
+&lt;p&gt;第二种是BSD协议(类似的还有MIT协议)。BSD协议鼓励软件的作者公开自己后续开发的源代码，但不强求。在BSD协议项下开发的软件，原始的源程序是开放源代码的，但使用者修改以后，可以自行选择发布源程序或者二进制程序(即目标程序)，当然，使用者有义务把自己原来使用的源程序与BSD协议在软件对外发布时一并发布。因为比较灵活，所以BSD深受大公司的欢迎。&lt;/p&gt;
+&lt;h1 id=&#34;参考文章&#34;&gt;&lt;a href=&#34;#参考文章&#34; class=&#34;headerlink&#34; title=&#34;参考文章&#34;&gt;&lt;/a&gt;参考文章&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;常用开源软件许可协议简介 &lt;a href=&#34;https://www.cnblogs.com/yefengmeander/p/4173673.html&#34;&gt;https://www.cnblogs.com/yefengmeander/p/4173673.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;开源协议在再发布过程中的授权总结 &lt;a href=&#34;http://blog.csdn.net/bqlyj/article/details/60322655&#34;&gt;http://blog.csdn.net/bqlyj/article/details/60322655&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;如何为你的代码选择一个开源协议 - 刘哇勇的部落格 &lt;a href=&#34;http://www.cnblogs.com/Wayou/p/how_to_choose_a_license.html&#34;&gt;http://www.cnblogs.com/Wayou/p/how_to_choose_a_license.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;重要开源协议的比较(BSD,Apache,GPL,LGPL,MIT) – TechBirds在路上 &lt;a href=&#34;http://blog.csdn.net/techbirds_bao/article/details/8785413&#34;&gt;http://blog.csdn.net/techbirds_bao/article/details/8785413&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;游云庭律师的回答 - 主流开源协议之间有何异同? - 知乎 &lt;a href=&#34;https://www.zhihu.com/question/19568896/answer/12284793&#34;&gt;https://www.zhihu.com/question/19568896/answer/12284793&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Choose a license &lt;a href=&#34;https://choosealicense.com/licenses/&#34;&gt;https://choosealicense.com/licenses/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Understanding Copyright And License &lt;a href=&#34;https://www.smashingmagazine.com/2011/06/understanding-copyright-and-licenses/&#34;&gt;https://www.smashingmagazine.com/2011/06/understanding-copyright-and-licenses/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;开源协议 - 百度百科 &lt;a href=&#34;http://baike.baidu.com/item/%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE&#34;&gt;http://baike.baidu.com/item/%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;如何选择开源许可证? &lt;a href=&#34;http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses&#34;&gt;http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;常见软件开源协议详解 &lt;a href=&#34;https://www.pdai.tech/md/dev-spec/opensource/dev-opensource.html&#34;&gt;https://www.pdai.tech/md/dev-spec/opensource/dev-opensource.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="常见软件开源协议详解" />
+        <updated>2023-06-25T08:17:05.751Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/06/23/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/IO&amp;NIO&amp;AIO/Java%20IO-%E5%88%9D%E8%AF%86IO/</id>
+        <title>Java IO-初识IO</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/06/23/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/IO&amp;NIO&amp;AIO/Java%20IO-%E5%88%9D%E8%AF%86IO/"/>
+        <content type="html">&lt;h1 id=&#34;知识体系&#34;&gt;&lt;a href=&#34;#知识体系&#34; class=&#34;headerlink&#34; title=&#34;知识体系&#34;&gt;&lt;/a&gt;知识体系&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://s3.bmp.ovh/imgs/2023/06/23/f10285a1ab40fb85.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;IO理解分类-从传输方式上&#34;&gt;&lt;a href=&#34;#IO理解分类-从传输方式上&#34; class=&#34;headerlink&#34; title=&#34;IO理解分类 - 从传输方式上&#34;&gt;&lt;/a&gt;IO理解分类 - 从传输方式上&lt;/h1&gt;&lt;p&gt;从数据传输方式或者说是运输方式角度看，可以将 IO 类分为:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;字节流&lt;/li&gt;
+&lt;li&gt;字符流&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;字节&lt;/code&gt;是个计算机看的，&lt;code&gt;字符&lt;/code&gt;才是给人看的&lt;/p&gt;
+&lt;h1 id=&#34;字节流和字符流的区别&#34;&gt;&lt;a href=&#34;#字节流和字符流的区别&#34; class=&#34;headerlink&#34; title=&#34;字节流和字符流的区别&#34;&gt;&lt;/a&gt;字节流和字符流的区别&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;字节流读取单个字节，字符流读取单个字符(一个字符根据编码的不同，对应的字节也不同，如 UTF-8 编码中文汉字是 3 个字节，GBK编码中文汉字是 2 个字节。)&lt;/li&gt;
+&lt;li&gt;字节流用来处理二进制文件(图片、MP3、视频文件)，字符流用来处理文本文件(可以看做是特殊的二进制文件，使用了某种编码，人可以阅读)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;简而言之，字节是给计算机看的，字符才是给人看的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;字节转字符Input-x2F-OutputStreamReader-x2F-Writer&#34;&gt;&lt;a href=&#34;#字节转字符Input-x2F-OutputStreamReader-x2F-Writer&#34; class=&#34;headerlink&#34; title=&#34;字节转字符Input&amp;#x2F;OutputStreamReader&amp;#x2F;Writer&#34;&gt;&lt;/a&gt;字节转字符Input&amp;#x2F;OutputStreamReader&amp;#x2F;Writer&lt;/h3&gt;&lt;p&gt;编码就是把字符转换为字节，而解码是把字节重新组合成字符。&lt;/p&gt;
+&lt;p&gt;如果编码和解码过程使用不同的编码方式那么就出现了乱码。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GBK 编码中，中文字符占 2 个字节，英文字符占 1 个字节；&lt;/li&gt;
+&lt;li&gt;UTF-8 编码中，中文字符占 3 个字节，英文字符占 1 个字节；&lt;/li&gt;
+&lt;li&gt;UTF-16be 编码中，中文字符和英文字符都占 2 个字节。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;UTF-16be 中的 be 指的是 Big Endian，也就是大端。相应地也有 UTF-16le，le 指的是 Little Endian，也就是小端。&lt;/p&gt;
+&lt;p&gt;Java 使用双字节编码 UTF-16be，这不是指 Java 只支持这一种编码方式，而是说 char 这种类型使用 UTF-16be 进行编码。char 类型占 16 位，也就是两个字节，Java 使用这种双字节编码是为了让一个中文或者一个英文都能使用一个 char 来存储。&lt;/p&gt;
+&lt;h1 id=&#34;设计模式-装饰器模式&#34;&gt;&lt;a href=&#34;#设计模式-装饰器模式&#34; class=&#34;headerlink&#34; title=&#34;设计模式-装饰器模式&#34;&gt;&lt;/a&gt;设计模式-装饰器模式&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;在原有Java的IO操作中使用了特别&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="Java IO-初识IO" />
+        <updated>2023-06-23T09:43:13.580Z</updated>
+    </entry>
     <entry>
         <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/06/03/%E6%8B%A5%E6%8A%B1%E4%B8%96%E7%95%8C%E5%90%A7/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA%E8%A7%82%E5%90%8E%E6%84%9F/</id>
         <title>追风筝的人观后感</title>
@@ -105,8 +247,8 @@
 &lt;p&gt;如果，之前你没有觉得这是一种负罪需要自我的救赎，你觉得不少人也都这样，所以我这样也是被逼无奈；那么之后，请你明白，你就是你，你的决定也就只是你的决定，与他人无关，即使你可以声称是受了他人的影响，是受了社会的胁迫，但请记住，你的人生最终只由你个人书写。&lt;/p&gt;
 &lt;p&gt;所以，如果在某一天里，或是读了这篇文章过后，无论是为谁，就当是为我们自己，为那些生命里为你默默付出过，你却还没来得及感谢的人，回到那里，别只顾着斗风筝，为他们追一次风筝，哪怕就一次！&lt;/p&gt;
 </content>
-        <category term="感言" />
         <category term="思考" />
+        <category term="感言" />
         <category term="读书笔记" />
         <updated>2023-06-03T13:44:53.229Z</updated>
     </entry>
@@ -169,7 +311,66 @@
 &lt;h2 id=&#34;thenApplyAsync&#34;&gt;&lt;a href=&#34;#thenApplyAsync&#34; class=&#34;headerlink&#34; title=&#34;thenApplyAsync&#34;&gt;&lt;/a&gt;thenApplyAsync&lt;/h2&gt;&lt;h3 id=&#34;示例代码&#34;&gt;&lt;a href=&#34;#示例代码&#34; class=&#34;headerlink&#34; title=&#34;示例代码&#34;&gt;&lt;/a&gt;示例代码&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;&amp;#x3D;&amp;#x3D;这里先说明一下，示例代码只关注核心功能，如果要实际使用需要考虑超时和异常情况，大家需要注意。&amp;#x3D;&amp;#x3D;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;CompletableFuture&amp;lt;String&amp;gt; f1 = CompletableFuture  &lt;br&gt;        .supplyAsync(() -&amp;gt; &amp;#123;  &lt;br&gt;            System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;...开始执行hello&amp;quot;&lt;/span&gt;);  &lt;br&gt;            &lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;hello&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;hello! &amp;quot;&lt;/span&gt;;  &lt;br&gt;            &lt;span class=&#34;hljs-comment&#34;&gt;//int i = 1/0;  &lt;/span&gt;&lt;br&gt;            System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;...执行hello完毕，执行结果：&amp;quot;&lt;/span&gt; + hello);  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; hello;  &lt;br&gt;        &amp;#125;).thenApplyAsync(s -&amp;gt; &amp;#123;  &lt;br&gt;            &lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;world&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;world!&amp;quot;&lt;/span&gt;;  &lt;br&gt;            System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;...获取上一步结果,结果为：&amp;quot;&lt;/span&gt; + s);  &lt;br&gt;            System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;开始输出 &amp;quot;&lt;/span&gt; + world);  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; s + world;  &lt;br&gt;        &amp;#125;);  &lt;br&gt;System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;f1.get() = &amp;quot;&lt;/span&gt; + f1.get());&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;CompletableFuture&amp;lt;String&amp;gt; f1 = CompletableFuture  &lt;br&gt;        .supplyAsync(() -&amp;gt; &amp;#123;  &lt;br&gt;            System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;...开始执行 hello&amp;quot;&lt;/span&gt;);  &lt;br&gt;            &lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;hello&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;hello! &amp;quot;&lt;/span&gt;;  &lt;br&gt;            &lt;span class=&#34;hljs-type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;1&lt;/span&gt;/&lt;span class=&#34;hljs-number&#34;&gt;0&lt;/span&gt;;  &lt;br&gt;            System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;...执行hello完毕，执行结果：&amp;quot;&lt;/span&gt; + hello);  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; hello;  &lt;br&gt;        &amp;#125;);  &lt;br&gt;CompletableFuture&amp;lt;String&amp;gt; f2 = f1.thenApplyAsync(s -&amp;gt; &amp;#123;  &lt;br&gt;    System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;...开始执行 world&amp;quot;&lt;/span&gt;);  &lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;world&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;world!&amp;quot;&lt;/span&gt;;  &lt;br&gt;    System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;...获取上一步结果,结果为：&amp;quot;&lt;/span&gt; + s);  &lt;br&gt;    System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;开始输出 &amp;quot;&lt;/span&gt; + world);  &lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; s + world;  &lt;br&gt;&amp;#125;);  &lt;br&gt;System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;f2.get() = &amp;quot;&lt;/span&gt; + f2.get());&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;在上面的代码中异步任务f2需要异步任务f1的结果才能执行，但对于我们的主线程来说，无须等到f1返回结果后再调用函数f2，即不会阻塞主流程，而是告诉CompletableFuture当执行完了f1的方法再去执行f2，只有当需要最后的结果时再获取。&lt;/p&gt;
+&lt;h2 id=&#34;thenComposeAsync&#34;&gt;&lt;a href=&#34;#thenComposeAsync&#34; class=&#34;headerlink&#34; title=&#34;thenComposeAsync&#34;&gt;&lt;/a&gt;thenComposeAsync&lt;/h2&gt;&lt;h3 id=&#34;示例代码-1&#34;&gt;&lt;a href=&#34;#示例代码-1&#34; class=&#34;headerlink&#34; title=&#34;示例代码&#34;&gt;&lt;/a&gt;示例代码&lt;/h3&gt;&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;CompletableFuture&amp;lt;String&amp;gt; f1 = CompletableFuture  &lt;br&gt;        .supplyAsync(() -&amp;gt; &amp;#123;  &lt;br&gt;            System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;...开始执行 hello&amp;quot;&lt;/span&gt;);  &lt;br&gt;            &lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;hello&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;hello! &amp;quot;&lt;/span&gt;;  &lt;br&gt;            &lt;span class=&#34;hljs-type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-number&#34;&gt;1&lt;/span&gt;/&lt;span class=&#34;hljs-number&#34;&gt;0&lt;/span&gt;;  &lt;br&gt;            System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;...执行hello完毕，执行结果：&amp;quot;&lt;/span&gt; + hello);  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; hello;  &lt;br&gt;        &amp;#125;);  &lt;br&gt;CompletableFuture&amp;lt;String&amp;gt; f2 = f1.thenComposeAsync(t -&amp;gt; CompletableFuture.supplyAsync(()-&amp;gt;&amp;#123;  &lt;br&gt;    System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;...开始执行 world&amp;quot;&lt;/span&gt;);  &lt;br&gt;    &lt;span class=&#34;hljs-type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;world&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;world!&amp;quot;&lt;/span&gt;;  &lt;br&gt;    System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;...获取上一步结果,结果为：&amp;quot;&lt;/span&gt; + t);  &lt;br&gt;    System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;开始输出 &amp;quot;&lt;/span&gt; + world);  &lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; t + world;  &lt;br&gt;&amp;#125;));  &lt;br&gt;System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;f2.get() = &amp;quot;&lt;/span&gt; + f2.get());&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面两个案例的输出结果相同，但是两者还是有细微的差异的，差异信息如下方所示：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方法名称&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;thenComposeAsync&lt;/td&gt;
+&lt;td&gt;将异步操作的结果保存到 CompletableFuture 中，并返回一个新的 CompletableFuture&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;thenApplyAsync&lt;/td&gt;
+&lt;td&gt;将异步操作的结果应用于输入参数，并返回一个新的 CompletableFuture&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;通过代码注释能看出thenCompose相当于flatMap,避免&lt;code&gt;CompletableFuture&amp;lt;CompletableFuture&amp;gt;&lt;/code&gt;这种写法。&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;这也是&lt;code&gt;thenCompose&lt;/code&gt;和&lt;code&gt;thenApply&lt;/code&gt;的区别，通过查看api也能看出：&lt;br&gt;thenApply：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &amp;lt;U&amp;gt; CompletableFuture&amp;lt;U&amp;gt; &lt;span class=&#34;hljs-title function_&#34;&gt;thenApply&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;(Function&amp;lt;? &lt;span class=&#34;hljs-built_in&#34;&gt;super&lt;/span&gt; T,? extends U&amp;gt; fn)&lt;/span&gt; &amp;#123;&lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; uniApplyStage(&lt;span class=&#34;hljs-literal&#34;&gt;null&lt;/span&gt;, fn);&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;thenCompose：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;public&lt;/span&gt; &amp;lt;U&amp;gt; CompletableFuture&amp;lt;U&amp;gt; &lt;span class=&#34;hljs-title function_&#34;&gt;thenCompose&lt;/span&gt;&lt;span class=&#34;hljs-params&#34;&gt;(Function&amp;lt;? &lt;span class=&#34;hljs-built_in&#34;&gt;super&lt;/span&gt; T, ? extends CompletionStage&amp;lt;U&amp;gt;&amp;gt; fn)&lt;/span&gt; &amp;#123;&lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; uniComposeStage(screenExecutor(executor), fn);&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;thenCombineAsync&#34;&gt;&lt;a href=&#34;#thenCombineAsync&#34; class=&#34;headerlink&#34; title=&#34;thenCombineAsync&#34;&gt;&lt;/a&gt;thenCombineAsync&lt;/h2&gt;&lt;h3 id=&#34;示例代码-2&#34;&gt;&lt;a href=&#34;#示例代码-2&#34; class=&#34;headerlink&#34; title=&#34;示例代码&#34;&gt;&lt;/a&gt;示例代码&lt;/h3&gt;&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;&lt;span class=&#34;hljs-type&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;hljs-variable&#34;&gt;time&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; System.currentTimeMillis();  &lt;br&gt;CompletableFuture&amp;lt;String&amp;gt; f1 = CompletableFuture.supplyAsync(() -&amp;gt; &amp;#123;  &lt;br&gt;    &lt;span class=&#34;hljs-comment&#34;&gt;// 模拟接口耗时，1s  &lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;try&lt;/span&gt; &amp;#123;  &lt;br&gt;        Thread.sleep(&lt;span class=&#34;hljs-number&#34;&gt;1000&lt;/span&gt;);  &lt;br&gt;    &amp;#125; &lt;span class=&#34;hljs-keyword&#34;&gt;catch&lt;/span&gt; (InterruptedException e) &amp;#123;  &lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;throw&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;RuntimeException&lt;/span&gt;(e);  &lt;br&gt;    &amp;#125;  &lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;hello! &amp;quot;&lt;/span&gt;;  &lt;br&gt;&amp;#125;);  &lt;br&gt;CompletableFuture&amp;lt;String&amp;gt; f2 = CompletableFuture.supplyAsync(() -&amp;gt; &amp;#123;  &lt;br&gt;    &lt;span class=&#34;hljs-comment&#34;&gt;// 模拟接口耗时，1s  &lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;try&lt;/span&gt; &amp;#123;  &lt;br&gt;        Thread.sleep(&lt;span class=&#34;hljs-number&#34;&gt;1000&lt;/span&gt;);  &lt;br&gt;    &amp;#125; &lt;span class=&#34;hljs-keyword&#34;&gt;catch&lt;/span&gt; (InterruptedException e) &amp;#123;  &lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;throw&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;RuntimeException&lt;/span&gt;(e);  &lt;br&gt;    &amp;#125;  &lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;world! &amp;quot;&lt;/span&gt;;  &lt;br&gt;&amp;#125;);  &lt;br&gt;CompletableFuture&amp;lt;String&amp;gt; f3 = f1.thenCombineAsync(f2, (s1, s2) -&amp;gt; s1 + s2);  &lt;br&gt;System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;异步结果:&amp;quot;&lt;/span&gt; + f3.get());  &lt;br&gt;System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;耗时:&amp;quot;&lt;/span&gt; + (System.currentTimeMillis() - time));&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;从代码输出结果可以看到两个异步任务f1、f2是并行执行，彼此无先后依赖顺序，&lt;code&gt;thenCombineAsync&lt;/code&gt;适合将两个并行执行的异步任务的结果合并返回成一个新的future。&lt;/p&gt;
+&lt;p&gt;还有一个类似的方法&lt;code&gt;thenAcceptBoth&lt;/code&gt;也是合并两个future的结果，但是不会返回新的值，内部消费掉了。&lt;/p&gt;
+&lt;h2 id=&#34;applyToEitherAsync&#34;&gt;&lt;a href=&#34;#applyToEitherAsync&#34; class=&#34;headerlink&#34; title=&#34;applyToEitherAsync&#34;&gt;&lt;/a&gt;applyToEitherAsync&lt;/h2&gt;&lt;h3 id=&#34;示例代码-3&#34;&gt;&lt;a href=&#34;#示例代码-3&#34; class=&#34;headerlink&#34; title=&#34;示例代码&#34;&gt;&lt;/a&gt;示例代码&lt;/h3&gt;&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;CompletableFuture&amp;lt;String&amp;gt; f1 = CompletableFuture.supplyAsync(() -&amp;gt; &amp;#123;  &lt;br&gt;    &lt;span class=&#34;hljs-comment&#34;&gt;// 模拟接口耗时，1s  &lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;try&lt;/span&gt; &amp;#123;  &lt;br&gt;        Thread.sleep(&lt;span class=&#34;hljs-number&#34;&gt;2000&lt;/span&gt;);  &lt;br&gt;    &amp;#125; &lt;span class=&#34;hljs-keyword&#34;&gt;catch&lt;/span&gt; (InterruptedException e) &amp;#123;  &lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;throw&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;RuntimeException&lt;/span&gt;(e);  &lt;br&gt;    &amp;#125;  &lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;hello! &amp;quot;&lt;/span&gt;;  &lt;br&gt;&amp;#125;);  &lt;br&gt;CompletableFuture&amp;lt;String&amp;gt; f2 = CompletableFuture.supplyAsync(() -&amp;gt; &amp;#123;  &lt;br&gt;    &lt;span class=&#34;hljs-comment&#34;&gt;// 模拟接口耗时，1s  &lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;try&lt;/span&gt; &amp;#123;  &lt;br&gt;        Thread.sleep(&lt;span class=&#34;hljs-number&#34;&gt;1000&lt;/span&gt;);  &lt;br&gt;    &amp;#125; &lt;span class=&#34;hljs-keyword&#34;&gt;catch&lt;/span&gt; (InterruptedException e) &amp;#123;  &lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;throw&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;hljs-title class_&#34;&gt;RuntimeException&lt;/span&gt;(e);  &lt;br&gt;    &amp;#125;  &lt;br&gt;    &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;world! &amp;quot;&lt;/span&gt;;  &lt;br&gt;&amp;#125;);  &lt;br&gt;CompletableFuture&amp;lt;String&amp;gt; f3 = f1.applyToEitherAsync(f2, t -&amp;gt; t);  &lt;br&gt;System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;异步结果:&amp;quot;&lt;/span&gt; + f3.get());&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;输出的结果:world，哪个future先执行完就根据它的结果计算，取两个future最先返回的。&lt;/p&gt;
+&lt;p&gt;这里要说明一点，&lt;code&gt;如果两个future是同时返回结果，那么applyToEitherAsync永远以第一个future的结果为准&lt;/code&gt;，大家可以把上面代码的Thread.sleep注释掉测试下。&lt;/p&gt;
+&lt;p&gt;另外acceptEither方法和这个类似，但是没有返回值。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;allOf / anyOf&lt;/code&gt;&lt;br&gt;前面讲的compose,combine,either都是处理两个future的方法，如果是超过2个的可以使用allOf或anyOf&lt;/p&gt;
+&lt;h2 id=&#34;allOf&#34;&gt;&lt;a href=&#34;#allOf&#34; class=&#34;headerlink&#34; title=&#34;allOf&#34;&gt;&lt;/a&gt;allOf&lt;/h2&gt;&lt;h3 id=&#34;示例代码-4&#34;&gt;&lt;a href=&#34;#示例代码-4&#34; class=&#34;headerlink&#34; title=&#34;示例代码&#34;&gt;&lt;/a&gt;示例代码&lt;/h3&gt;&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;CompletableFuture&amp;lt;Void&amp;gt; f1 = CompletableFuture.allOf(  &lt;br&gt;        CompletableFuture.supplyAsync(() -&amp;gt; &amp;#123;  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;try&lt;/span&gt; &amp;#123;  &lt;br&gt;                &lt;span class=&#34;hljs-comment&#34;&gt;// 模拟接口调用耗时1秒  &lt;/span&gt;&lt;br&gt;                Thread.sleep(&lt;span class=&#34;hljs-number&#34;&gt;1000&lt;/span&gt;);  &lt;br&gt;            &amp;#125; &lt;span class=&#34;hljs-keyword&#34;&gt;catch&lt;/span&gt; (InterruptedException e) &amp;#123;  &lt;br&gt;                e.printStackTrace();  &lt;br&gt;            &amp;#125;  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;;  &lt;br&gt;        &amp;#125;), CompletableFuture.supplyAsync(() -&amp;gt; &amp;#123;  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;try&lt;/span&gt; &amp;#123;  &lt;br&gt;                &lt;span class=&#34;hljs-comment&#34;&gt;// 模拟接口调用耗时1秒  &lt;/span&gt;&lt;br&gt;                Thread.sleep(&lt;span class=&#34;hljs-number&#34;&gt;1000&lt;/span&gt;);  &lt;br&gt;            &amp;#125; &lt;span class=&#34;hljs-keyword&#34;&gt;catch&lt;/span&gt; (InterruptedException e) &amp;#123;  &lt;br&gt;                e.printStackTrace();  &lt;br&gt;            &amp;#125;  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;world&amp;quot;&lt;/span&gt;;  &lt;br&gt;        &amp;#125;), CompletableFuture.supplyAsync(() -&amp;gt; &amp;#123;  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;try&lt;/span&gt; &amp;#123;  &lt;br&gt;                &lt;span class=&#34;hljs-comment&#34;&gt;// 模拟接口调用耗时1秒  &lt;/span&gt;&lt;br&gt;                Thread.sleep(&lt;span class=&#34;hljs-number&#34;&gt;1000&lt;/span&gt;);  &lt;br&gt;            &amp;#125; &lt;span class=&#34;hljs-keyword&#34;&gt;catch&lt;/span&gt; (InterruptedException e) &amp;#123;  &lt;br&gt;                e.printStackTrace();  &lt;br&gt;            &amp;#125;  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;!!!!!!&amp;quot;&lt;/span&gt;;  &lt;br&gt;        &amp;#125;)  &lt;br&gt;);  &lt;br&gt;System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;f1.get() = &amp;quot;&lt;/span&gt; + f1.get());&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;allOf&lt;/code&gt;方法是当所有的CompletableFuture都执行完后执行计算，&lt;strong&gt;无返回值&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;anyOf&#34;&gt;&lt;a href=&#34;#anyOf&#34; class=&#34;headerlink&#34; title=&#34;anyOf&#34;&gt;&lt;/a&gt;anyOf&lt;/h2&gt;&lt;h3 id=&#34;示例代码-5&#34;&gt;&lt;a href=&#34;#示例代码-5&#34; class=&#34;headerlink&#34; title=&#34;示例代码&#34;&gt;&lt;/a&gt;示例代码&lt;/h3&gt;&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs java&#34;&gt;CompletableFuture&amp;lt;Object&amp;gt; f1 = CompletableFuture.anyOf(  &lt;br&gt;        CompletableFuture.supplyAsync(() -&amp;gt; &amp;#123;  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;try&lt;/span&gt; &amp;#123;  &lt;br&gt;                &lt;span class=&#34;hljs-comment&#34;&gt;// 模拟接口调用耗时1秒  &lt;/span&gt;&lt;br&gt;                Thread.sleep(&lt;span class=&#34;hljs-number&#34;&gt;3000&lt;/span&gt;);  &lt;br&gt;            &amp;#125; &lt;span class=&#34;hljs-keyword&#34;&gt;catch&lt;/span&gt; (InterruptedException e) &amp;#123;  &lt;br&gt;                e.printStackTrace();  &lt;br&gt;            &amp;#125;  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;;  &lt;br&gt;        &amp;#125;), CompletableFuture.supplyAsync(() -&amp;gt; &amp;#123;  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;try&lt;/span&gt; &amp;#123;  &lt;br&gt;                &lt;span class=&#34;hljs-comment&#34;&gt;// 模拟接口调用耗时1秒  &lt;/span&gt;&lt;br&gt;                Thread.sleep(&lt;span class=&#34;hljs-number&#34;&gt;2000&lt;/span&gt;);  &lt;br&gt;            &amp;#125; &lt;span class=&#34;hljs-keyword&#34;&gt;catch&lt;/span&gt; (InterruptedException e) &amp;#123;  &lt;br&gt;                e.printStackTrace();  &lt;br&gt;            &amp;#125;  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;world&amp;quot;&lt;/span&gt;;  &lt;br&gt;        &amp;#125;), CompletableFuture.supplyAsync(() -&amp;gt; &amp;#123;  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;try&lt;/span&gt; &amp;#123;  &lt;br&gt;                &lt;span class=&#34;hljs-comment&#34;&gt;// 模拟接口调用耗时1秒  &lt;/span&gt;&lt;br&gt;                Thread.sleep(&lt;span class=&#34;hljs-number&#34;&gt;1000&lt;/span&gt;);  &lt;br&gt;            &amp;#125; &lt;span class=&#34;hljs-keyword&#34;&gt;catch&lt;/span&gt; (InterruptedException e) &amp;#123;  &lt;br&gt;                e.printStackTrace();  &lt;br&gt;            &amp;#125;  &lt;br&gt;            &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;!!!!!!&amp;quot;&lt;/span&gt;;  &lt;br&gt;        &amp;#125;)  &lt;br&gt;);  &lt;br&gt;System.out.println(&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;f1.get() = &amp;quot;&lt;/span&gt; + f1.get());&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;多次执行,执行结果为”!!!!!!”，anyOf方法当任意一个CompletableFuture执行完后就会执行计算。&lt;/p&gt;
+&lt;p&gt;虽然说CompletableFuture更适合I&amp;#x2F;O场景，但使用时一定要结合具体业务，比如说有些公共方法处理异步任务时需要考虑异常情况，这时候使用&lt;code&gt;CompletableFuture.handle(BiFunction&amp;lt;? super T, Throwable, ? extends U&amp;gt; fn)&lt;/code&gt;更合适，handle方法会处理正常计算值和异常，因此它可以屏蔽异常，避免异常继续抛出。&lt;/p&gt;
+&lt;p&gt;CompletableFuture还有一个坑需要注意：如果线上流量比较大的情况下会出现响应缓慢的问题。&lt;/p&gt;
+&lt;p&gt;因为CompletableFuture默认使用的线程池是forkJoinPool，当时对一台使用了CompletableFuture实现异步回调功能的接口做压测，通过监控系统发现有大量的ForkJoinPool.commonPool-worker-* 线程处于等待状态，进一步分析dump信息发现是forkJoinPool的makeCommonPool问题。&lt;br&gt;具体原因为：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;java.util.concurrent.ForkJoinPool.common.parallelism的值，那么forkJoinPool线程池的线程数就是(cpu-1)，如果我们机器是2核，这样实际执行任务的线程数只有1个，当有大量请求过来时，如果有耗时高的io操作，势必会造成更多的线程等待，进而拖累服务响应时间。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;解决方案一个是设置java.util.concurrent.ForkJoinPool.common.parallelism这个值(要在项目启动时指定)，或者指定线程池不使用默认的forkJoinPool。根据阿里巴巴规范建议使用自定义的线程池。&lt;/p&gt;
+&lt;p&gt;那么如何比较好的设置线程数量，以下参考《Java并发编程实战》中的公式：&lt;br&gt;$$threads &amp;#x3D; N CPU * U CPU * (1 + W&amp;#x2F;C)$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;N CPU 是处理器的核数&lt;/li&gt;
+&lt;li&gt;U CPU 是期望的CPU利用率（介于0和1之间）&lt;/li&gt;
+&lt;li&gt;W&amp;#x2F;C是等待时间与计算时间的比率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;网上也有这么区分的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果服务是cpu密集型的，设置为电脑的核数&lt;/li&gt;
+&lt;li&gt;如果服务是io密集型的，设置为电脑的核数*2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其实并不严谨，尤其是io密集型的还要参考QPS和web服务器的配置。&lt;/p&gt;
+</content>
         <category term="JAVA" />
         <category term="异步编程" />
         <category term="线程" />
@@ -266,8 +467,8 @@
 &lt;h2 id=&#34;敢于维护上古代码&#34;&gt;&lt;a href=&#34;#敢于维护上古代码&#34; class=&#34;headerlink&#34; title=&#34;敢于维护上古代码&#34;&gt;&lt;/a&gt;敢于维护上古代码&lt;/h2&gt;&lt;p&gt;博猪开发时间其实很少，只有一年的时间，其实上古代码对于博猪的历练很大，俗话说的好多吃BUG,身体棒棒。博猪入职之后前半年一直维护一个SSI项目，里面用的技术很杂，有的在网上找不到，包括前端和后台，其次最重要的是业务方面，更是不懂，业务一般人不是给你讲的，所以我就一遍遍的启动本地DEBUG,慢慢啃下来的。&lt;/p&gt;
 &lt;p&gt;‍&lt;/p&gt;
 </content>
-        <category term="思考" />
         <category term="开发习惯" />
+        <category term="思考" />
         <updated>2023-05-28T13:00:29.423Z</updated>
     </entry>
     <entry>
@@ -7936,8 +8137,61 @@
 &lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201026135857.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;​&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201026135915.jpg&#34;&gt;​&lt;/p&gt;
 </content>
-        <category term="感言" />
         <category term="思考" />
+        <category term="感言" />
         <updated>2023-05-25T07:06:19.610Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/25/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/%E5%BC%80%E5%8F%91%E6%84%9F%E6%82%9F/%E5%BC%80%E5%8F%91%E5%A5%BD%E4%B9%A0%E6%83%AF/</id>
+        <title>开发好习惯</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/25/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/%E5%BC%80%E5%8F%91%E6%84%9F%E6%82%9F/%E5%BC%80%E5%8F%91%E5%A5%BD%E4%B9%A0%E6%83%AF/"/>
+        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;写干净的代码，做风一样的男子！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;编程5分钟，查代码2小时!&lt;/p&gt;
+&lt;p&gt;在程序员的编程生涯，免不了和BUG打交道，甚至有些程序员被BUG虐杀的苦不堪言。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://p3-tt.byteimg.com/origin/4ada0003ada15e3b0683?from=pc&#34; alt=&#34;程序员减少代码BUG的7种方法，写干净的代码，做风一样的男子！&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;当有人指出程序员代码有BUG时，程序员的回答各有不同：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不可能啊，在我电脑上运行没有问题呀!&lt;/li&gt;
+&lt;li&gt;我已经一星期没碰这块代码啦!&lt;/li&gt;
+&lt;li&gt;没事，我改一行代码就可以了，不影响程序。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;
+&lt;center&gt;程序员调 Bug 的样子，非常真实~&lt;/center&gt;
+&lt;/div&gt;
+
+&lt;p&gt;​                                                                                                                         &lt;center&gt;↓↓↓&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ss.csdn.net/p?http://mmbiz.qpic.cn/mmbiz_gif/2A8tXicCG8yka2rcVsmkqPjN4taJfwp3wUy7KTTM4IhnOjTMdC3zXRYGElM7Pia1AhvV02UlibtPKoRFc9icv40dHA/0?wx_fmt=gif&amp;wxfrom=5&amp;wx_lazy=1&#34; alt=&#34;0?wx_fmt=gif&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ss.csdn.net/p?http://mmbiz.qpic.cn/mmbiz_gif/2A8tXicCG8yka2rcVsmkqPjN4taJfwp3wxQKXe3ibNiadib0xqp2uYXribWiby2WCrXmO4q1CXAibbpugibUNvdA2yuuNQ/0?wx_fmt=gif&amp;wxfrom=5&amp;wx_lazy=1&#34; alt=&#34;0?wx_fmt=gif&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_gif/2A8tXicCG8yka2rcVsmkqPjN4taJfwp3w5fLdGxLudXOB5pdrwh2vbClrZU7KC5QysFhibrkP9spDK2kONPHTUnw/0?wx_fmt=gif&#34; alt=&#34;0?wx_fmt=gif&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;调bug是火，bug是烟。一处点火，四处冒烟&lt;/p&gt;
+&lt;p&gt;下面奉上我日常开发的一些总结.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;如何减少代码的BUG呢-在此分享几个技巧&#34;&gt;&lt;a href=&#34;#如何减少代码的BUG呢-在此分享几个技巧&#34; class=&#34;headerlink&#34; title=&#34;如何减少代码的BUG呢?在此分享几个技巧&#34;&gt;&lt;/a&gt;如何减少代码的BUG呢?在此分享几个技巧&lt;/h1&gt;&lt;h2 id=&#34;别对警告视而不见&#34;&gt;&lt;a href=&#34;#别对警告视而不见&#34; class=&#34;headerlink&#34; title=&#34;别对警告视而不见&#34;&gt;&lt;/a&gt;别对警告视而不见&lt;/h2&gt;&lt;p&gt;相信不少的程序员会使用IDEA，使用它敲代码，有时候会出现警告，那么这时你对警告就不能视而不见了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我们的目标是，写干净的代码，做风一样的男子!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://p1-tt.byteimg.com/origin/4add00036e54d5cefc42?from=pc&#34; alt=&#34;程序员减少代码BUG的7种方法，写干净的代码，做风一样的男子！&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;编程习惯&#34;&gt;&lt;a href=&#34;#编程习惯&#34; class=&#34;headerlink&#34; title=&#34;编程习惯&#34;&gt;&lt;/a&gt;编程习惯&lt;/h2&gt;&lt;p&gt;种瓜得瓜种豆得豆，好的编程习惯可以大大降低BUG数量。譬如有if必须写else，即使else是个空语句 。&lt;/p&gt;
+&lt;h2 id=&#34;写代码的时间问题&#34;&gt;&lt;a href=&#34;#写代码的时间问题&#34; class=&#34;headerlink&#34; title=&#34;写代码的时间问题&#34;&gt;&lt;/a&gt;写代码的时间问题&lt;/h2&gt;&lt;p&gt;对于程序员而言，千万别熬夜写代码。一些程序员在晚上11点，仍然在敲代码。&lt;/p&gt;
+&lt;p&gt;虽然你自己觉得头脑其实很清醒，但是第二天自测，或者QA测试的时候你有可能就会发现问题很多。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我们一般不提倡长期加班写代码，因为那样会导致Bug率直线上升。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://p1-tt.byteimg.com/origin/4ade00036510b0efbb55?from=pc&#34; alt=&#34;程序员减少代码BUG的7种方法，写干净的代码，做风一样的男子！&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;验证、自测&#34;&gt;&lt;a href=&#34;#验证、自测&#34; class=&#34;headerlink&#34; title=&#34;验证、自测&#34;&gt;&lt;/a&gt;验证、自测&lt;/h2&gt;&lt;p&gt;在提交测试前要多验证，其中包括自动化测试、手动跑用例等。&lt;/p&gt;
+&lt;p&gt;有一句话说的好，千万别怕麻烦，不然你会麻烦一辈子。&lt;/p&gt;
+&lt;p&gt;这也是我认为我现在坚持的比较好的一点，自测ok，然后交给业务测试&lt;/p&gt;
+&lt;h2 id=&#34;仔细的DEBUG&#34;&gt;&lt;a href=&#34;#仔细的DEBUG&#34; class=&#34;headerlink&#34; title=&#34;仔细的DEBUG&#34;&gt;&lt;/a&gt;仔细的DEBUG&lt;/h2&gt;&lt;p&gt;在2.4基础上建议自测是仔细的DEBUG一遍，这样能对自己的代码心里有个范围，大体知道风险点和错误是便于直接调整自己的代码。&lt;/p&gt;
+&lt;h2 id=&#34;仔细的设计&#34;&gt;&lt;a href=&#34;#仔细的设计&#34; class=&#34;headerlink&#34; title=&#34;仔细的设计&#34;&gt;&lt;/a&gt;仔细的设计&lt;/h2&gt;&lt;p&gt;在程序员编写代码之前，必须对代码的整个结构以及逻辑结构胸有成竹。&lt;/p&gt;
+&lt;h2 id=&#34;避免干扰&#34;&gt;&lt;a href=&#34;#避免干扰&#34; class=&#34;headerlink&#34; title=&#34;避免干扰&#34;&gt;&lt;/a&gt;避免干扰&lt;/h2&gt;&lt;p&gt;有部分的程序员敲代码的时候，经常会一边听音乐一边敲代码，这样效率不仅仅低，而且也更容易产生BUG。&lt;/p&gt;
+&lt;h2 id=&#34;注释&#34;&gt;&lt;a href=&#34;#注释&#34; class=&#34;headerlink&#34; title=&#34;注释&#34;&gt;&lt;/a&gt;注释&lt;/h2&gt;&lt;p&gt;写注释，写注释，写注释。重要的事情说三遍。&lt;/p&gt;
+&lt;p&gt;因为前期的注释有利于后续开发的时候容易减少bug。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;自从修改了注释模板，整个人精神多了，bug也明显少了，如图：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201215145135.png&#34; alt=&#34;image-20201215145125620&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;敢于维护上古代码&#34;&gt;&lt;a href=&#34;#敢于维护上古代码&#34; class=&#34;headerlink&#34; title=&#34;敢于维护上古代码&#34;&gt;&lt;/a&gt;敢于维护上古代码&lt;/h2&gt;&lt;p&gt;博猪开发时间其实很少，只有一年的时间，其实上古代码对于博猪的历练很大，俗话说的好多吃BUG,身体棒棒。博猪入职之后前半年一直维护一个SSI项目，里面用的技术很杂，有的在网上找不到，包括前端和后台，其次最重要的是业务方面，更是不懂，业务一般人不是给你讲的，所以我就一遍遍的启动本地DEBUG,慢慢啃下来的。&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+</content>
+        <category term="开发习惯" />
+        <category term="思考" />
+        <updated>2023-05-25T06:03:25.912Z</updated>
     </entry>
 </feed>
