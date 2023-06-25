@@ -4,62 +4,126 @@
     <title>Will • Posts by &#34;node&#34; tag</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
     <updated>2023-05-28T13:00:29.415Z</updated>
-    <category term="感言" />
+    <category term="开发习惯" />
     <category term="思考" />
+    <category term="感言" />
     <category term="Docker" />
     <category term="LINUX" />
-    <category term="开发习惯" />
     <category term="CentOS" />
     <category term="Linux" />
     <category term="Crontab" />
     <category term="Jenkins" />
     <category term="Maven" />
-    <category term="Node" />
-    <category term="Nvm" />
-    <category term="前端" />
     <category term="IDEA" />
     <category term="Alibaba Cloud Toolkit" />
-    <category term="Git" />
-    <category term="工具" />
     <category term="Archery" />
     <category term="MySql" />
+    <category term="工具" />
+    <category term="Git" />
+    <category term="Node" />
+    <category term="前端" />
+    <category term="Nvm" />
     <category term="读书笔记" />
-    <category term="CentOS7" />
-    <category term="MongoDB" />
-    <category term="Redis" />
-    <category term="Java IO-初识IO" />
     <category term="BeetlSql" />
     <category term="Beetl" />
+    <category term="Java IO-初识IO" />
     <category term="JAVA" />
-    <category term="异常" />
     <category term="枚举" />
+    <category term="异常" />
     <category term="POI" />
     <category term="Spring" />
     <category term="SpringCloud" />
     <category term="SpringCloud Alibaba" />
     <category term="Spring Boot" />
-    <category term="ProtoBuffer" />
-    <category term="其他" />
-    <category term="SOAR" />
     <category term="VerificationCode" />
+    <category term="VinUtil" />
+    <category term="SOAR" />
+    <category term="其他" />
+    <category term="MongoDb" />
     <category term="博客园" />
     <category term="博客" />
+    <category term="ProtoBuffer" />
     <category term="异步编程" />
     <category term="线程" />
-    <category term="VinUtil" />
-    <category term="MongoDb" />
-    <category term="方法论" />
-    <category term="开源协议" />
-    <category term="Typora" />
+    <category term="CentOS7" />
+    <category term="MongoDB" />
+    <category term="Redis" />
     <category term="PostMan" />
-    <category term="Java8" />
-    <category term="特性" />
+    <category term="Typora" />
     <category term="JDBC" />
     <category term="Mysql" />
+    <category term="方法论" />
+    <category term="开源协议" />
+    <category term="Java8" />
+    <category term="特性" />
     <category term="EasyExcel" />
     <category term="Script" />
     <category term="设计模式" />
     <category term="MyBatis" />
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Node/Node%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</id>
+        <title>Node安装与配置</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Node/Node%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
+        <content type="html">&lt;h1 id=&#34;Node安装和全局配置&#34;&gt;&lt;a href=&#34;#Node安装和全局配置&#34; class=&#34;headerlink&#34; title=&#34;Node安装和全局配置&#34;&gt;&lt;/a&gt;Node安装和全局配置&lt;/h1&gt;&lt;h2 id=&#34;安装&#34;&gt;&lt;a href=&#34;#安装&#34; class=&#34;headerlink&#34; title=&#34;安装&#34;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;h3 id=&#34;本文环境&#34;&gt;&lt;a href=&#34;#本文环境&#34; class=&#34;headerlink&#34; title=&#34;本文环境&#34;&gt;&lt;/a&gt;本文环境&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;WIN11，64位，家庭版&lt;/li&gt;
+&lt;li&gt;Node 16.13.0_LTS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装包下载&#34;&gt;&lt;a href=&#34;#安装包下载&#34; class=&#34;headerlink&#34; title=&#34;安装包下载&#34;&gt;&lt;/a&gt;安装包下载&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://nodejs.org/zh-cn/&#34;&gt;Node官网&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装node&#34;&gt;&lt;a href=&#34;#安装node&#34; class=&#34;headerlink&#34; title=&#34;安装node&#34;&gt;&lt;/a&gt;安装node&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;点击安装文件, 一键安装, 注意安装位置和添加到环境变量(xx to PATH)选项&lt;/li&gt;
+&lt;li&gt;打开控制台, 输入一下命令正常显示版本号则安装成功&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;node -v     # 查看node版本&lt;br&gt;npm -v      # 查看npm版本&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Nodejs的安装很简单，基本上小白操作，但是一般配置和安装C盘，博猪习惯一般开发软件会放在系统盘以外的一个盘里面，有的像maven私服这种的配置就无需重复配置了，这样重装系统啥的也不会丢失相关的东西，并且重新安装之后只需要相关配置一下环境变量就行了，还是挺方便的，下面放一张博猪的一个配置文件，可供参考&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/mw690/006seI3Egy1gwm2ltvpntj30jo07bq82.jpg&#34; alt=&#34;image-20211120233226273.png&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;npm全局配置&#34;&gt;&lt;a href=&#34;#npm全局配置&#34; class=&#34;headerlink&#34; title=&#34;npm全局配置&#34;&gt;&lt;/a&gt;npm全局配置&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;如果像博猪一样是重装系统的，一定先要把node配置到系统环境变量中。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;先找到node按照路径&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;D:\ProgramFiles\Node&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;在此目录下创建两个文件夹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;node_global, node_cache&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;在控制台分别运行以下两条命令(注意改成自己的路径)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;# 全局模块插件存放路径&lt;/p&gt;
+&lt;p&gt;npm config set prefix “D:\ProgramFiles\Node\node_global”&lt;/p&gt;
+&lt;p&gt;# 缓存路径&lt;/p&gt;
+&lt;p&gt;npm config set cache “D:\ProgramFiles\Node\node_cache”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;配置npm安装源为淘宝&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;#全局配置切换到淘宝源&lt;/p&gt;
+&lt;p&gt;npm config set registry &lt;a href=&#34;https://registry.npm.taobao.org/&#34;&gt;https://registry.npm.taobao.org&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;把&lt;code&gt;D:\ProgramFiles\Node\node_global\node_modules&lt;/code&gt;添加到系统环境变量(注意改成自己的路径)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我的电脑右击&amp;gt;属性&amp;gt;高级系统设置&amp;gt;环境变量&amp;gt;系统变量&amp;gt;新建 变量名: NODE_PATH 变量值:D:\ProgramFiles\Node\node_global\node_modules&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;常用命令和技巧&#34;&gt;&lt;a href=&#34;#常用命令和技巧&#34; class=&#34;headerlink&#34; title=&#34;常用命令和技巧&#34;&gt;&lt;/a&gt;常用命令和技巧&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;npm安装包, npm全局安装包&lt;/span&gt;&lt;br&gt;npm install [包名]/[包名@指定版本号]  # 当前工程安装&lt;br&gt;npm install [包名]/[包名@指定版本号] -g  # 全局安装&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;全局安装cnpm, 可以替换npm命令, 有时因为node和npm版本问题造成安装失败, 可使用cnpm安装, 用法和npm相同&lt;/span&gt;&lt;br&gt;npm install cnpm -g&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;安装npm已安装模块检查更新的包&lt;/span&gt;&lt;br&gt;cnpm install npm-check -g&lt;br&gt;npm-check -u -g  # 使用方法 &lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;查看npm所有已安装模块&lt;/span&gt;&lt;br&gt;npm list --depth=0 -global&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;查看npm配置源信息&lt;/span&gt;&lt;br&gt;npm config get registry&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;更新npm到最新稳定版本&lt;/span&gt;&lt;br&gt;npm install npm@latest -g&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+        <category term="Node" />
+        <category term="前端" />
+        <updated>2023-05-28T13:00:29.415Z</updated>
+    </entry>
     <entry>
         <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Node/Nvm%E6%95%99%E7%A8%8B/</id>
         <title>Nvm教程</title>
@@ -132,72 +196,8 @@
 &lt;p&gt;完美，我的快乐又回来了。&lt;/p&gt;
 </content>
         <category term="Node" />
+        <category term="前端" />
         <category term="Nvm" />
-        <category term="前端" />
-        <updated>2023-05-28T13:00:29.415Z</updated>
-    </entry>
-    <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Node/Node%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</id>
-        <title>Node安装与配置</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Node/Node%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
-        <content type="html">&lt;h1 id=&#34;Node安装和全局配置&#34;&gt;&lt;a href=&#34;#Node安装和全局配置&#34; class=&#34;headerlink&#34; title=&#34;Node安装和全局配置&#34;&gt;&lt;/a&gt;Node安装和全局配置&lt;/h1&gt;&lt;h2 id=&#34;安装&#34;&gt;&lt;a href=&#34;#安装&#34; class=&#34;headerlink&#34; title=&#34;安装&#34;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;h3 id=&#34;本文环境&#34;&gt;&lt;a href=&#34;#本文环境&#34; class=&#34;headerlink&#34; title=&#34;本文环境&#34;&gt;&lt;/a&gt;本文环境&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;WIN11，64位，家庭版&lt;/li&gt;
-&lt;li&gt;Node 16.13.0_LTS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;安装包下载&#34;&gt;&lt;a href=&#34;#安装包下载&#34; class=&#34;headerlink&#34; title=&#34;安装包下载&#34;&gt;&lt;/a&gt;安装包下载&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://nodejs.org/zh-cn/&#34;&gt;Node官网&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;安装node&#34;&gt;&lt;a href=&#34;#安装node&#34; class=&#34;headerlink&#34; title=&#34;安装node&#34;&gt;&lt;/a&gt;安装node&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;点击安装文件, 一键安装, 注意安装位置和添加到环境变量(xx to PATH)选项&lt;/li&gt;
-&lt;li&gt;打开控制台, 输入一下命令正常显示版本号则安装成功&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;node -v     # 查看node版本&lt;br&gt;npm -v      # 查看npm版本&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Nodejs的安装很简单，基本上小白操作，但是一般配置和安装C盘，博猪习惯一般开发软件会放在系统盘以外的一个盘里面，有的像maven私服这种的配置就无需重复配置了，这样重装系统啥的也不会丢失相关的东西，并且重新安装之后只需要相关配置一下环境变量就行了，还是挺方便的，下面放一张博猪的一个配置文件，可供参考&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/mw690/006seI3Egy1gwm2ltvpntj30jo07bq82.jpg&#34; alt=&#34;image-20211120233226273.png&#34;&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;npm全局配置&#34;&gt;&lt;a href=&#34;#npm全局配置&#34; class=&#34;headerlink&#34; title=&#34;npm全局配置&#34;&gt;&lt;/a&gt;npm全局配置&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;如果像博猪一样是重装系统的，一定先要把node配置到系统环境变量中。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;先找到node按照路径&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;D:\ProgramFiles\Node&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;在此目录下创建两个文件夹&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;node_global, node_cache&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;在控制台分别运行以下两条命令(注意改成自己的路径)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;# 全局模块插件存放路径&lt;/p&gt;
-&lt;p&gt;npm config set prefix “D:\ProgramFiles\Node\node_global”&lt;/p&gt;
-&lt;p&gt;# 缓存路径&lt;/p&gt;
-&lt;p&gt;npm config set cache “D:\ProgramFiles\Node\node_cache”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;配置npm安装源为淘宝&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;#全局配置切换到淘宝源&lt;/p&gt;
-&lt;p&gt;npm config set registry &lt;a href=&#34;https://registry.npm.taobao.org/&#34;&gt;https://registry.npm.taobao.org&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;把&lt;code&gt;D:\ProgramFiles\Node\node_global\node_modules&lt;/code&gt;添加到系统环境变量(注意改成自己的路径)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我的电脑右击&amp;gt;属性&amp;gt;高级系统设置&amp;gt;环境变量&amp;gt;系统变量&amp;gt;新建 变量名: NODE_PATH 变量值:D:\ProgramFiles\Node\node_global\node_modules&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;常用命令和技巧&#34;&gt;&lt;a href=&#34;#常用命令和技巧&#34; class=&#34;headerlink&#34; title=&#34;常用命令和技巧&#34;&gt;&lt;/a&gt;常用命令和技巧&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;npm安装包, npm全局安装包&lt;/span&gt;&lt;br&gt;npm install [包名]/[包名@指定版本号]  # 当前工程安装&lt;br&gt;npm install [包名]/[包名@指定版本号] -g  # 全局安装&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;全局安装cnpm, 可以替换npm命令, 有时因为node和npm版本问题造成安装失败, 可使用cnpm安装, 用法和npm相同&lt;/span&gt;&lt;br&gt;npm install cnpm -g&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;安装npm已安装模块检查更新的包&lt;/span&gt;&lt;br&gt;cnpm install npm-check -g&lt;br&gt;npm-check -u -g  # 使用方法 &lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;查看npm所有已安装模块&lt;/span&gt;&lt;br&gt;npm list --depth=0 -global&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;查看npm配置源信息&lt;/span&gt;&lt;br&gt;npm config get registry&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;更新npm到最新稳定版本&lt;/span&gt;&lt;br&gt;npm install npm@latest -g&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-        <category term="Node" />
-        <category term="前端" />
         <updated>2023-05-28T13:00:29.415Z</updated>
     </entry>
 </feed>
