@@ -4,32 +4,35 @@
     <title>Will • Posts by &#34;读书笔记&#34; tag</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
     <updated>2023-06-03T13:44:53.229Z</updated>
-    <category term="开发习惯" />
-    <category term="思考" />
     <category term="感言" />
+    <category term="思考" />
+    <category term="开发习惯" />
     <category term="Docker" />
     <category term="LINUX" />
-    <category term="Node" />
-    <category term="前端" />
-    <category term="Nvm" />
     <category term="CentOS" />
     <category term="Linux" />
     <category term="Crontab" />
-    <category term="读书笔记" />
     <category term="Jenkins" />
     <category term="Maven" />
+    <category term="Node" />
+    <category term="Nvm" />
+    <category term="前端" />
+    <category term="IDEA" />
+    <category term="Alibaba Cloud Toolkit" />
     <category term="Archery" />
     <category term="MySql" />
     <category term="工具" />
-    <category term="IDEA" />
-    <category term="Alibaba Cloud Toolkit" />
     <category term="Git" />
-    <category term="Java IO-初识IO" />
+    <category term="读书笔记" />
+    <category term="CentOS7" />
+    <category term="MongoDB" />
+    <category term="Redis" />
     <category term="BeetlSql" />
     <category term="Beetl" />
+    <category term="Java IO-初识IO" />
     <category term="JAVA" />
-    <category term="异常" />
     <category term="枚举" />
+    <category term="异常" />
     <category term="POI" />
     <category term="Spring" />
     <category term="SpringCloud" />
@@ -40,14 +43,11 @@
     <category term="SOAR" />
     <category term="博客园" />
     <category term="博客" />
+    <category term="MongoDb" />
     <category term="VerificationCode" />
+    <category term="VinUtil" />
     <category term="异步编程" />
     <category term="线程" />
-    <category term="MongoDb" />
-    <category term="VinUtil" />
-    <category term="CentOS7" />
-    <category term="MongoDB" />
-    <category term="Redis" />
     <category term="方法论" />
     <category term="开源协议" />
     <category term="PostMan" />
@@ -108,8 +108,8 @@
 &lt;p&gt;如果，之前你没有觉得这是一种负罪需要自我的救赎，你觉得不少人也都这样，所以我这样也是被逼无奈；那么之后，请你明白，你就是你，你的决定也就只是你的决定，与他人无关，即使你可以声称是受了他人的影响，是受了社会的胁迫，但请记住，你的人生最终只由你个人书写。&lt;/p&gt;
 &lt;p&gt;所以，如果在某一天里，或是读了这篇文章过后，无论是为谁，就当是为我们自己，为那些生命里为你默默付出过，你却还没来得及感谢的人，回到那里，别只顾着斗风筝，为他们追一次风筝，哪怕就一次！&lt;/p&gt;
 </content>
-        <category term="思考" />
         <category term="感言" />
+        <category term="思考" />
         <category term="读书笔记" />
         <updated>2023-06-03T13:44:53.229Z</updated>
     </entry>

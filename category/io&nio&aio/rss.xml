@@ -7,32 +7,35 @@
         <language>zh-CN</language>
         <pubDate>Fri, 23 Jun 2023 17:43:13 +0800</pubDate>
         <lastBuildDate>Fri, 23 Jun 2023 17:43:13 +0800</lastBuildDate>
-        <category>开发习惯</category>
-        <category>思考</category>
         <category>感言</category>
+        <category>思考</category>
+        <category>开发习惯</category>
         <category>Docker</category>
         <category>LINUX</category>
-        <category>Node</category>
-        <category>前端</category>
-        <category>Nvm</category>
         <category>CentOS</category>
         <category>Linux</category>
         <category>Crontab</category>
-        <category>读书笔记</category>
         <category>Jenkins</category>
         <category>Maven</category>
+        <category>Node</category>
+        <category>Nvm</category>
+        <category>前端</category>
+        <category>IDEA</category>
+        <category>Alibaba Cloud Toolkit</category>
         <category>Archery</category>
         <category>MySql</category>
         <category>工具</category>
-        <category>IDEA</category>
-        <category>Alibaba Cloud Toolkit</category>
         <category>Git</category>
-        <category>Java IO-初识IO</category>
+        <category>读书笔记</category>
+        <category>CentOS7</category>
+        <category>MongoDB</category>
+        <category>Redis</category>
         <category>BeetlSql</category>
         <category>Beetl</category>
+        <category>Java IO-初识IO</category>
         <category>JAVA</category>
-        <category>异常</category>
         <category>枚举</category>
+        <category>异常</category>
         <category>POI</category>
         <category>Spring</category>
         <category>SpringCloud</category>
@@ -43,14 +46,11 @@
         <category>SOAR</category>
         <category>博客园</category>
         <category>博客</category>
+        <category>MongoDb</category>
         <category>VerificationCode</category>
+        <category>VinUtil</category>
         <category>异步编程</category>
         <category>线程</category>
-        <category>MongoDb</category>
-        <category>VinUtil</category>
-        <category>CentOS7</category>
-        <category>MongoDB</category>
-        <category>Redis</category>
         <category>方法论</category>
         <category>开源协议</category>
         <category>PostMan</category>

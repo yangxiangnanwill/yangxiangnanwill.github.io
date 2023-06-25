@@ -7,32 +7,35 @@
         <language>zh-CN</language>
         <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
         <lastBuildDate>Sun, 28 May 2023 21:00:29 +0800</lastBuildDate>
-        <category>开发习惯</category>
-        <category>思考</category>
         <category>感言</category>
+        <category>思考</category>
+        <category>开发习惯</category>
         <category>Docker</category>
         <category>LINUX</category>
-        <category>Node</category>
-        <category>前端</category>
-        <category>Nvm</category>
         <category>CentOS</category>
         <category>Linux</category>
         <category>Crontab</category>
-        <category>读书笔记</category>
         <category>Jenkins</category>
         <category>Maven</category>
+        <category>Node</category>
+        <category>Nvm</category>
+        <category>前端</category>
+        <category>IDEA</category>
+        <category>Alibaba Cloud Toolkit</category>
         <category>Archery</category>
         <category>MySql</category>
         <category>工具</category>
-        <category>IDEA</category>
-        <category>Alibaba Cloud Toolkit</category>
         <category>Git</category>
-        <category>Java IO-初识IO</category>
+        <category>读书笔记</category>
+        <category>CentOS7</category>
+        <category>MongoDB</category>
+        <category>Redis</category>
         <category>BeetlSql</category>
         <category>Beetl</category>
+        <category>Java IO-初识IO</category>
         <category>JAVA</category>
-        <category>异常</category>
         <category>枚举</category>
+        <category>异常</category>
         <category>POI</category>
         <category>Spring</category>
         <category>SpringCloud</category>
@@ -43,14 +46,11 @@
         <category>SOAR</category>
         <category>博客园</category>
         <category>博客</category>
+        <category>MongoDb</category>
         <category>VerificationCode</category>
+        <category>VinUtil</category>
         <category>异步编程</category>
         <category>线程</category>
-        <category>MongoDb</category>
-        <category>VinUtil</category>
-        <category>CentOS7</category>
-        <category>MongoDB</category>
-        <category>Redis</category>
         <category>方法论</category>
         <category>开源协议</category>
         <category>PostMan</category>
@@ -941,189 +941,6 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(3)-%E5%AE%89%E8%A3%85jdk/</guid>
-            <title>Docker(3)-安装jdk</title>
-            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(3)-%E5%AE%89%E8%A3%85jdk/</link>
-            <category>Docker</category>
-            <category>LINUX</category>
-            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
-&lt;p&gt;公众号：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/icons/wx.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;QQ群：&lt;a href=&#34;http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21&#34;&gt;806951874&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;#在Docker中安装JDK&#34; class=&#34;headerlink&#34; title=&#34;在Docker中安装JDK&#34;&gt;&lt;/a&gt;在Docker中安装JDK&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;所有的环境安装，都是在centos系统中操作的，并非本地windows系统。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Docker 中国官方镜像加速 &lt;a href=&#34;http://www.docker-cn.com/registry-mirror&#34;&gt;http://www.docker-cn.com/registry-mirror&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;获取JAVA镜像：&#34;&gt;&lt;a href=&#34;#获取JAVA镜像：&#34; class=&#34;headerlink&#34; title=&#34;获取JAVA镜像：&#34;&gt;&lt;/a&gt;获取JAVA镜像：&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;在终端客户端命令行输入以下命令，获取JAVA镜像。&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker pull java&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;默认是从Docker Hub官方的仓库中下载镜像的。如果没有指定对应的版本，默认会获取版本为latest的镜像。&lt;/p&gt;
-&lt;p&gt;注意：&lt;/p&gt;
-&lt;p&gt;latest是针对于镜像所在的仓库里面的软件最新版本。并非是软件本身的最新发布版本。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;回车执行，一开始会进行下载对应的依赖库，稍作等待：&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201006174731.png&#34; alt=&#34;QQ20201003-204338&#34;&gt;&lt;/p&gt;
-&lt;p&gt;出现下面的信息，说明镜像下载完成：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201006174818.png&#34; alt=&#34;截屏2020-10-03 下午8.44.19&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;查看下载的镜像&#34;&gt;&lt;a href=&#34;#查看下载的镜像&#34; class=&#34;headerlink&#34; title=&#34;查看下载的镜像&#34;&gt;&lt;/a&gt;查看下载的镜像&lt;/h2&gt;&lt;p&gt;命令行中执行命令，查看刚刚下载的JAVA镜像：&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker images&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;如下图所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201006174929.png&#34; alt=&#34;截屏2020-10-03 下午8.44.54&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;启动容器&#34;&gt;&lt;a href=&#34;#启动容器&#34; class=&#34;headerlink&#34; title=&#34;启动容器&#34;&gt;&lt;/a&gt;启动容器&lt;/h2&gt;&lt;p&gt;命令行中执行命令，启动JAVA镜像容器：&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -d -it --name java java&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;如下图所示，说明成功启动了容器：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201006175022.png&#34; alt=&#34;截屏2020-10-03 下午8.46.03&#34;&gt;&lt;/p&gt;
-&lt;p&gt;其中，–name后面的“java”是为容器指定了一个别名，而最后的那个“java”指的是下载镜像时的名称。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;命令以及参数的含义：&lt;/p&gt;
-&lt;p&gt;run：启动一个镜像容器&lt;/p&gt;
-&lt;p&gt;-d：指定容器运行于后台&lt;/p&gt;
-&lt;p&gt;-it：-i 和 -t 的缩写；&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;-i：以交互模式运行容器，通常与 -t 同时使用&lt;/li&gt;
-&lt;li&gt;-t：为容器重新分配一个伪输入终端，通常与 -i 同时使用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;–name：指定容器名字，后续可以通过名字进行容器管理&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;具体更多的参数含义，可自行网上学习。&lt;/p&gt;
-&lt;h2 id=&#34;查看运行的容器&#34;&gt;&lt;a href=&#34;#查看运行的容器&#34; class=&#34;headerlink&#34; title=&#34;查看运行的容器&#34;&gt;&lt;/a&gt;查看运行的容器&lt;/h2&gt;&lt;p&gt;首先我们在命令行中执行命令，查看处于运行状态的容器：&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker ps&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;因为在上面的操作步骤中，我们运行了java镜像，所以你会看到有一个名称为java的容器正在运行，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201006175118.png&#34; alt=&#34;截屏2020-10-03 下午8.46.37&#34;&gt;&lt;/p&gt;
-&lt;p&gt;通过输出的信息可以看到，当前容器的ID是“9179eb86b007”，容器别名是java（最后一列的值）。&lt;/p&gt;
-&lt;h2 id=&#34;登录容器&#34;&gt;&lt;a href=&#34;#登录容器&#34; class=&#34;headerlink&#34; title=&#34;登录容器&#34;&gt;&lt;/a&gt;登录容器&lt;/h2&gt;&lt;p&gt;【询问】：如果想查看容器中安装的jdk版本，该怎么做呢？&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;如果直接在命令行输入java -version会报错的，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527495437982-7aee34bf-9f5c-4ac5-8b8f-a3b21e9053c7.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527495437982-7aee34bf-9f5c-4ac5-8b8f-a3b21e9053c7.png&#34;&gt;http://www.cicoding.cn/images/docker/1527495437982-7aee34bf-9f5c-4ac5-8b8f-a3b21e9053c7.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;原因是因为：jdk是安装在容器里面的，需要进入容器，才能查看。意思就是说，jdk环境是在容器里面的，并非是宿主机。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;进入容器内部&#34;&gt;&lt;a href=&#34;#进入容器内部&#34; class=&#34;headerlink&#34; title=&#34;进入容器内部&#34;&gt;&lt;/a&gt;进入容器内部&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;使用attach进入容器&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker attach 91&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;其中的 “91” 指的是什么呢？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;上面有提到过，我们启动的java镜像的容器ID是“9179eb86b007”，所以， docker attach 命令后面，你可以指定容器ID来进入具体的容器。可以指定06等任意长度的值，都代表了当前的java容器。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;回车，效果如下图：&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527495610202-3995506a-85ac-4a97-aeef-0edf11a8339a.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527495610202-3995506a-85ac-4a97-aeef-0edf11a8339a.png&#34;&gt;http://www.cicoding.cn/images/docker/1527495610202-3995506a-85ac-4a97-aeef-0edf11a8339a.png&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;如果回车后没有反应，可以再次按下回车就可以进入容器的命令行模式了。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;除了使用容器ID进入容器之外，也可以使用容器的别名进入容器：&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker attach java&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;上面这种是通过容器的别名进入容器内部的。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;使用exec命令进入容器&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;【方式一】：通过容器别名进入容器：&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker exec -it java /bin/bash&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;【方式二】：通过容器ID进入容器：&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker exec -it 91 /bin/bash&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;回车之后，就会看到命令行发生了一些变化：&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527506181535-4364031d-0caa-44fe-8a12-d87ccf46c97e.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527506181535-4364031d-0caa-44fe-8a12-d87ccf46c97e.png&#34;&gt;http://www.cicoding.cn/images/docker/1527506181535-4364031d-0caa-44fe-8a12-d87ccf46c97e.png&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;仔细看第二行的开头，@符号后面的“9179eb86b007”就是我们的java容器的ID吧，这也就说明，我们已经进入了容器内部了，可以对容器进行操作了。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;进入容器后，输入-java-version-查看JDK版本信息&#34;&gt;&lt;a href=&#34;#进入容器后，输入-java-version-查看JDK版本信息&#34; class=&#34;headerlink&#34; title=&#34;进入容器后，输入 java -version 查看JDK版本信息&#34;&gt;&lt;/a&gt;进入容器后，输入 java -version 查看JDK版本信息&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;java -version&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;无论是通过attach还是exec进入的容器，我们都可以在命令行中输入命令“java -version”来查看JDK版本信息。&lt;/p&gt;
-&lt;p&gt;下面我们就分别使用这2个命令进入容器，来看看效果，如下图所示：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;attach命令进入容器，查看JDK版本信息&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527504069333-c1266217-f560-4a9d-b0d3-cac9f273dff0.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527504069333-c1266217-f560-4a9d-b0d3-cac9f273dff0.png&#34;&gt;http://www.cicoding.cn/images/docker/1527504069333-c1266217-f560-4a9d-b0d3-cac9f273dff0.png&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;exec命令进入容器，查看JDK版本信息&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527506442973-e6d97093-08df-46a7-89f8-7bd314c4733e.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527506442973-e6d97093-08df-46a7-89f8-7bd314c4733e.png&#34;&gt;http://www.cicoding.cn/images/docker/1527506442973-e6d97093-08df-46a7-89f8-7bd314c4733e.png&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;登陆Docker容器的方式&#34;&gt;&lt;a href=&#34;#登陆Docker容器的方式&#34; class=&#34;headerlink&#34; title=&#34;登陆Docker容器的方式&#34;&gt;&lt;/a&gt;登陆Docker容器的方式&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;上面已经简单的介绍了attach、exec命令的使用，下面讲解一下这两个命令之间的区别。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;对于运行在后台的Docker容器，我们运维人员时常是有登陆进去的需求。登陆Docker容器的方式：&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;使用ssh登陆容器&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这种方法需要在容器中启动sshd，存在开销和攻击面增大的问题。同时也违反了Docker所倡导的一个容器一个进程的原则。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;使用自带命令docker attach登陆容器&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;docker attach存在的问题是：当多个窗口同时attach到同一个容器时，所有的窗口都会同步的显示，假如其中的一个窗口发生阻塞时，其它的窗口也会阻塞，docker attach命令可以说是最不方便的进入后台docker容器的方法&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;使用自带命令docker exec登陆容器&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;docker exec和docker attach是Docker的原生方法，大多数情况下就使用这两种命令登陆容器。docker exec命令是在docker1.3之后出现的，比docker attach命令更加方便&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;分别使用attach与exec进入容器，查看它们的区别&#34;&gt;&lt;a href=&#34;#分别使用attach与exec进入容器，查看它们的区别&#34; class=&#34;headerlink&#34; title=&#34;分别使用attach与exec进入容器，查看它们的区别&#34;&gt;&lt;/a&gt;分别使用attach与exec进入容器，查看它们的区别&lt;/h3&gt;&lt;p&gt;1、Docker attach必须是登陆到一个已经运行的容器里。需要注意的是如果从这个容器中exit退出的话，就会导致容器停止！！这是极其不方便的！&lt;/p&gt;
-&lt;p&gt;见下图所示结果：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527507117875-46795fe1-3255-46c0-a2bc-6bde4b1e51dd.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527507117875-46795fe1-3255-46c0-a2bc-6bde4b1e51dd.png&#34;&gt;http://www.cicoding.cn/images/docker/1527507117875-46795fe1-3255-46c0-a2bc-6bde4b1e51dd.png&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;你会发现通过attach进入容器的话，当使用exit退出容器的时候，对应的容器也停止运行了，所以在生产环境中很少使用。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;2、docker exec登陆容器，注意有两个参数：-t和-i，这两个参数很重要！&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;对于 -t 、-i 的具体作用，可以参考 &lt;a href=&#34;https://www.cnblogs.com/kevingrace/p/6656095.html&#34;&gt;https://www.cnblogs.com/kevingrace/p/6656095.html&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;使用docker exec -it 进入容器和我们平常操作console界面类似。而且不像attach方式退出，导致整个容器退出，exec在生产环境中用的比较多。exec 比使用ssh 、nsenter、nsinit方式更方便，生产中常用的方式。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在使用docker exec登陆容器或执行容器中的命令时，最好都带上-t和-i参数。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;退出Docker容器&#34;&gt;&lt;a href=&#34;#退出Docker容器&#34; class=&#34;headerlink&#34; title=&#34;退出Docker容器&#34;&gt;&lt;/a&gt;退出Docker容器&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;如果是通过 attach 进入的容器，在退出容器的时候，如果不想让容器停止运行的话，就不能使用exit命令或者Ctrl+D快捷键的形式退出，而是使用 Ctrl + P + Q 组合键退出容器。&lt;/li&gt;
-&lt;li&gt;如果是通过 exec 命令进入的容器，在退出容器的时候，就可以使用exit或者Ctrl+D快捷键退出容器，同时容器不会停止运行，这也是exec与attach的最大区别。当然，你也可以使用Ctrl + P + Q 组合键退出容器，容器一样不会停止运行。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;所以，通过上面的比较，也就印证了exec在实际使用过程中用的最多的，也是建议使用的一种方式。尤其是生产环境下，强烈建议使用exec的方式。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;停止容器&#34;&gt;&lt;a href=&#34;#停止容器&#34; class=&#34;headerlink&#34; title=&#34;停止容器&#34;&gt;&lt;/a&gt;停止容器&lt;/h2&gt;&lt;p&gt;通过 docker stop (容器ID | 容器别名) 的命令，可以停止正在运行状态的容器：&lt;/p&gt;
-&lt;figure class=&#34;highlight arduino&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs arduino&#34;&gt;docker stop java&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;上面是通过容器别名来停止容器的，你也可以使用容器ID。&lt;/p&gt;
-&lt;/blockquote&gt;
- ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(2)-CentOS%E5%AE%89%E8%A3%85/</guid>
             <title>Docker(2)-CentOS安装</title>
             <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(2)-CentOS%E5%AE%89%E8%A3%85/</link>
@@ -1304,6 +1121,189 @@
 &lt;p&gt;这样执行完了就完成安装了，简单便捷&lt;/p&gt;
 &lt;p&gt;然后启动docker&lt;/p&gt;
 &lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;sudo systemctl start docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(3)-%E5%AE%89%E8%A3%85jdk/</guid>
+            <title>Docker(3)-安装jdk</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(3)-%E5%AE%89%E8%A3%85jdk/</link>
+            <category>Docker</category>
+            <category>LINUX</category>
+            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
+&lt;p&gt;公众号：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/icons/wx.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;QQ群：&lt;a href=&#34;http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21&#34;&gt;806951874&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;#在Docker中安装JDK&#34; class=&#34;headerlink&#34; title=&#34;在Docker中安装JDK&#34;&gt;&lt;/a&gt;在Docker中安装JDK&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;所有的环境安装，都是在centos系统中操作的，并非本地windows系统。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Docker 中国官方镜像加速 &lt;a href=&#34;http://www.docker-cn.com/registry-mirror&#34;&gt;http://www.docker-cn.com/registry-mirror&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;获取JAVA镜像：&#34;&gt;&lt;a href=&#34;#获取JAVA镜像：&#34; class=&#34;headerlink&#34; title=&#34;获取JAVA镜像：&#34;&gt;&lt;/a&gt;获取JAVA镜像：&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;在终端客户端命令行输入以下命令，获取JAVA镜像。&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker pull java&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;默认是从Docker Hub官方的仓库中下载镜像的。如果没有指定对应的版本，默认会获取版本为latest的镜像。&lt;/p&gt;
+&lt;p&gt;注意：&lt;/p&gt;
+&lt;p&gt;latest是针对于镜像所在的仓库里面的软件最新版本。并非是软件本身的最新发布版本。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;回车执行，一开始会进行下载对应的依赖库，稍作等待：&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201006174731.png&#34; alt=&#34;QQ20201003-204338&#34;&gt;&lt;/p&gt;
+&lt;p&gt;出现下面的信息，说明镜像下载完成：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201006174818.png&#34; alt=&#34;截屏2020-10-03 下午8.44.19&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;查看下载的镜像&#34;&gt;&lt;a href=&#34;#查看下载的镜像&#34; class=&#34;headerlink&#34; title=&#34;查看下载的镜像&#34;&gt;&lt;/a&gt;查看下载的镜像&lt;/h2&gt;&lt;p&gt;命令行中执行命令，查看刚刚下载的JAVA镜像：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker images&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201006174929.png&#34; alt=&#34;截屏2020-10-03 下午8.44.54&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;启动容器&#34;&gt;&lt;a href=&#34;#启动容器&#34; class=&#34;headerlink&#34; title=&#34;启动容器&#34;&gt;&lt;/a&gt;启动容器&lt;/h2&gt;&lt;p&gt;命令行中执行命令，启动JAVA镜像容器：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -d -it --name java java&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如下图所示，说明成功启动了容器：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201006175022.png&#34; alt=&#34;截屏2020-10-03 下午8.46.03&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其中，–name后面的“java”是为容器指定了一个别名，而最后的那个“java”指的是下载镜像时的名称。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;命令以及参数的含义：&lt;/p&gt;
+&lt;p&gt;run：启动一个镜像容器&lt;/p&gt;
+&lt;p&gt;-d：指定容器运行于后台&lt;/p&gt;
+&lt;p&gt;-it：-i 和 -t 的缩写；&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-i：以交互模式运行容器，通常与 -t 同时使用&lt;/li&gt;
+&lt;li&gt;-t：为容器重新分配一个伪输入终端，通常与 -i 同时使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;–name：指定容器名字，后续可以通过名字进行容器管理&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;具体更多的参数含义，可自行网上学习。&lt;/p&gt;
+&lt;h2 id=&#34;查看运行的容器&#34;&gt;&lt;a href=&#34;#查看运行的容器&#34; class=&#34;headerlink&#34; title=&#34;查看运行的容器&#34;&gt;&lt;/a&gt;查看运行的容器&lt;/h2&gt;&lt;p&gt;首先我们在命令行中执行命令，查看处于运行状态的容器：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker ps&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;因为在上面的操作步骤中，我们运行了java镜像，所以你会看到有一个名称为java的容器正在运行，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201006175118.png&#34; alt=&#34;截屏2020-10-03 下午8.46.37&#34;&gt;&lt;/p&gt;
+&lt;p&gt;通过输出的信息可以看到，当前容器的ID是“9179eb86b007”，容器别名是java（最后一列的值）。&lt;/p&gt;
+&lt;h2 id=&#34;登录容器&#34;&gt;&lt;a href=&#34;#登录容器&#34; class=&#34;headerlink&#34; title=&#34;登录容器&#34;&gt;&lt;/a&gt;登录容器&lt;/h2&gt;&lt;p&gt;【询问】：如果想查看容器中安装的jdk版本，该怎么做呢？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果直接在命令行输入java -version会报错的，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527495437982-7aee34bf-9f5c-4ac5-8b8f-a3b21e9053c7.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527495437982-7aee34bf-9f5c-4ac5-8b8f-a3b21e9053c7.png&#34;&gt;http://www.cicoding.cn/images/docker/1527495437982-7aee34bf-9f5c-4ac5-8b8f-a3b21e9053c7.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;原因是因为：jdk是安装在容器里面的，需要进入容器，才能查看。意思就是说，jdk环境是在容器里面的，并非是宿主机。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;进入容器内部&#34;&gt;&lt;a href=&#34;#进入容器内部&#34; class=&#34;headerlink&#34; title=&#34;进入容器内部&#34;&gt;&lt;/a&gt;进入容器内部&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;使用attach进入容器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker attach 91&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;其中的 “91” 指的是什么呢？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上面有提到过，我们启动的java镜像的容器ID是“9179eb86b007”，所以， docker attach 命令后面，你可以指定容器ID来进入具体的容器。可以指定06等任意长度的值，都代表了当前的java容器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;回车，效果如下图：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527495610202-3995506a-85ac-4a97-aeef-0edf11a8339a.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527495610202-3995506a-85ac-4a97-aeef-0edf11a8339a.png&#34;&gt;http://www.cicoding.cn/images/docker/1527495610202-3995506a-85ac-4a97-aeef-0edf11a8339a.png&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果回车后没有反应，可以再次按下回车就可以进入容器的命令行模式了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;除了使用容器ID进入容器之外，也可以使用容器的别名进入容器：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker attach java&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;上面这种是通过容器的别名进入容器内部的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;使用exec命令进入容器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;【方式一】：通过容器别名进入容器：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker exec -it java /bin/bash&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;【方式二】：通过容器ID进入容器：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker exec -it 91 /bin/bash&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;回车之后，就会看到命令行发生了一些变化：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527506181535-4364031d-0caa-44fe-8a12-d87ccf46c97e.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527506181535-4364031d-0caa-44fe-8a12-d87ccf46c97e.png&#34;&gt;http://www.cicoding.cn/images/docker/1527506181535-4364031d-0caa-44fe-8a12-d87ccf46c97e.png&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;仔细看第二行的开头，@符号后面的“9179eb86b007”就是我们的java容器的ID吧，这也就说明，我们已经进入了容器内部了，可以对容器进行操作了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;进入容器后，输入-java-version-查看JDK版本信息&#34;&gt;&lt;a href=&#34;#进入容器后，输入-java-version-查看JDK版本信息&#34; class=&#34;headerlink&#34; title=&#34;进入容器后，输入 java -version 查看JDK版本信息&#34;&gt;&lt;/a&gt;进入容器后，输入 java -version 查看JDK版本信息&lt;/h3&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;java -version&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;无论是通过attach还是exec进入的容器，我们都可以在命令行中输入命令“java -version”来查看JDK版本信息。&lt;/p&gt;
+&lt;p&gt;下面我们就分别使用这2个命令进入容器，来看看效果，如下图所示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;attach命令进入容器，查看JDK版本信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527504069333-c1266217-f560-4a9d-b0d3-cac9f273dff0.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527504069333-c1266217-f560-4a9d-b0d3-cac9f273dff0.png&#34;&gt;http://www.cicoding.cn/images/docker/1527504069333-c1266217-f560-4a9d-b0d3-cac9f273dff0.png&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;exec命令进入容器，查看JDK版本信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527506442973-e6d97093-08df-46a7-89f8-7bd314c4733e.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527506442973-e6d97093-08df-46a7-89f8-7bd314c4733e.png&#34;&gt;http://www.cicoding.cn/images/docker/1527506442973-e6d97093-08df-46a7-89f8-7bd314c4733e.png&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;登陆Docker容器的方式&#34;&gt;&lt;a href=&#34;#登陆Docker容器的方式&#34; class=&#34;headerlink&#34; title=&#34;登陆Docker容器的方式&#34;&gt;&lt;/a&gt;登陆Docker容器的方式&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;上面已经简单的介绍了attach、exec命令的使用，下面讲解一下这两个命令之间的区别。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对于运行在后台的Docker容器，我们运维人员时常是有登陆进去的需求。登陆Docker容器的方式：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;使用ssh登陆容器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这种方法需要在容器中启动sshd，存在开销和攻击面增大的问题。同时也违反了Docker所倡导的一个容器一个进程的原则。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;使用自带命令docker attach登陆容器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker attach存在的问题是：当多个窗口同时attach到同一个容器时，所有的窗口都会同步的显示，假如其中的一个窗口发生阻塞时，其它的窗口也会阻塞，docker attach命令可以说是最不方便的进入后台docker容器的方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;使用自带命令docker exec登陆容器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker exec和docker attach是Docker的原生方法，大多数情况下就使用这两种命令登陆容器。docker exec命令是在docker1.3之后出现的，比docker attach命令更加方便&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;分别使用attach与exec进入容器，查看它们的区别&#34;&gt;&lt;a href=&#34;#分别使用attach与exec进入容器，查看它们的区别&#34; class=&#34;headerlink&#34; title=&#34;分别使用attach与exec进入容器，查看它们的区别&#34;&gt;&lt;/a&gt;分别使用attach与exec进入容器，查看它们的区别&lt;/h3&gt;&lt;p&gt;1、Docker attach必须是登陆到一个已经运行的容器里。需要注意的是如果从这个容器中exit退出的话，就会导致容器停止！！这是极其不方便的！&lt;/p&gt;
+&lt;p&gt;见下图所示结果：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527507117875-46795fe1-3255-46c0-a2bc-6bde4b1e51dd.png&#34; alt=&#34;在Docker中安装JDK&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527507117875-46795fe1-3255-46c0-a2bc-6bde4b1e51dd.png&#34;&gt;http://www.cicoding.cn/images/docker/1527507117875-46795fe1-3255-46c0-a2bc-6bde4b1e51dd.png&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你会发现通过attach进入容器的话，当使用exit退出容器的时候，对应的容器也停止运行了，所以在生产环境中很少使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2、docker exec登陆容器，注意有两个参数：-t和-i，这两个参数很重要！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对于 -t 、-i 的具体作用，可以参考 &lt;a href=&#34;https://www.cnblogs.com/kevingrace/p/6656095.html&#34;&gt;https://www.cnblogs.com/kevingrace/p/6656095.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用docker exec -it 进入容器和我们平常操作console界面类似。而且不像attach方式退出，导致整个容器退出，exec在生产环境中用的比较多。exec 比使用ssh 、nsenter、nsinit方式更方便，生产中常用的方式。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在使用docker exec登陆容器或执行容器中的命令时，最好都带上-t和-i参数。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;退出Docker容器&#34;&gt;&lt;a href=&#34;#退出Docker容器&#34; class=&#34;headerlink&#34; title=&#34;退出Docker容器&#34;&gt;&lt;/a&gt;退出Docker容器&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;如果是通过 attach 进入的容器，在退出容器的时候，如果不想让容器停止运行的话，就不能使用exit命令或者Ctrl+D快捷键的形式退出，而是使用 Ctrl + P + Q 组合键退出容器。&lt;/li&gt;
+&lt;li&gt;如果是通过 exec 命令进入的容器，在退出容器的时候，就可以使用exit或者Ctrl+D快捷键退出容器，同时容器不会停止运行，这也是exec与attach的最大区别。当然，你也可以使用Ctrl + P + Q 组合键退出容器，容器一样不会停止运行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;所以，通过上面的比较，也就印证了exec在实际使用过程中用的最多的，也是建议使用的一种方式。尤其是生产环境下，强烈建议使用exec的方式。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;停止容器&#34;&gt;&lt;a href=&#34;#停止容器&#34; class=&#34;headerlink&#34; title=&#34;停止容器&#34;&gt;&lt;/a&gt;停止容器&lt;/h2&gt;&lt;p&gt;通过 docker stop (容器ID | 容器别名) 的命令，可以停止正在运行状态的容器：&lt;/p&gt;
+&lt;figure class=&#34;highlight arduino&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs arduino&#34;&gt;docker stop java&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;上面是通过容器别名来停止容器的，你也可以使用容器ID。&lt;/p&gt;
+&lt;/blockquote&gt;
  ]]></description>
         </item>
         <item>
