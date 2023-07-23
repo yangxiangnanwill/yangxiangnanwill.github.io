@@ -9,57 +9,66 @@
     <category term="感言" />
     <category term="Docker" />
     <category term="LINUX" />
+    <category term="Node" />
+    <category term="Nvm" />
+    <category term="前端" />
     <category term="CentOS" />
     <category term="Linux" />
     <category term="Crontab" />
     <category term="Jenkins" />
     <category term="Maven" />
-    <category term="IDEA" />
-    <category term="Alibaba Cloud Toolkit" />
+    <category term="读书笔记" />
     <category term="Archery" />
     <category term="MySql" />
     <category term="工具" />
+    <category term="IDEA" />
+    <category term="Alibaba Cloud Toolkit" />
     <category term="Git" />
-    <category term="Node" />
-    <category term="前端" />
-    <category term="Nvm" />
-    <category term="读书笔记" />
     <category term="BeetlSql" />
     <category term="Beetl" />
     <category term="Java IO-初识IO" />
     <category term="JAVA" />
     <category term="枚举" />
     <category term="异常" />
-    <category term="POI" />
     <category term="Spring" />
     <category term="SpringCloud" />
     <category term="SpringCloud Alibaba" />
+    <category term="POI" />
     <category term="Spring Boot" />
-    <category term="VerificationCode" />
-    <category term="VinUtil" />
-    <category term="SOAR" />
+    <category term="ProtoBuffer" />
     <category term="其他" />
-    <category term="MongoDb" />
+    <category term="SOAR" />
     <category term="博客园" />
     <category term="博客" />
-    <category term="ProtoBuffer" />
+    <category term="Hutool" />
+    <category term="工具类" />
+    <category term="常用开发库" />
+    <category term="JSON类库详解" />
+    <category term="Spring常用工具类" />
+    <category term="Lombok工具库详解" />
+    <category term="VerificationCode" />
+    <category term="MongoDb" />
+    <category term="VinUtil" />
     <category term="异步编程" />
     <category term="线程" />
     <category term="CentOS7" />
     <category term="MongoDB" />
     <category term="Redis" />
-    <category term="PostMan" />
-    <category term="Typora" />
-    <category term="JDBC" />
-    <category term="Mysql" />
     <category term="方法论" />
     <category term="开源协议" />
+    <category term="Typora" />
+    <category term="PostMan" />
     <category term="Java8" />
     <category term="特性" />
+    <category term="JDBC" />
+    <category term="Mysql" />
     <category term="EasyExcel" />
+    <category term="日志类库详解" />
     <category term="Script" />
     <category term="设计模式" />
     <category term="MyBatis" />
+    <category term="Apache Common" />
+    <category term="Google Guava" />
     <entry>
         <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/06/23/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/IO&amp;NIO&amp;AIO/Java%20IO-%E5%88%9D%E8%AF%86IO/</id>
         <title>Java IO-初识IO</title>
@@ -1020,8 +1029,8 @@
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGgy1h2xcvilni2j31eo0qu7ea.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
 </content>
-        <category term="SOAR" />
         <category term="其他" />
+        <category term="SOAR" />
         <updated>2023-05-28T13:00:29.405Z</updated>
     </entry>
     <entry>
@@ -1116,8 +1125,8 @@
 &lt;h4 id=&#34;2、枚举第一个常量的值必须是0&#34;&gt;&lt;a href=&#34;#2、枚举第一个常量的值必须是0&#34; class=&#34;headerlink&#34; title=&#34;2、枚举第一个常量的值必须是0&#34;&gt;&lt;/a&gt;2、枚举第一个常量的值必须是0&lt;/h4&gt;&lt;p&gt;eg:&lt;/p&gt;
 &lt;figure class=&#34;highlight protobuf&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs protobuf&#34;&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;enum &lt;/span&gt;&lt;span class=&#34;hljs-title class_&#34;&gt;BallTypeEnum&lt;/span&gt; &amp;#123;&lt;br&gt;    BALL_TYPE_UNSPECIFIED = &lt;span class=&#34;hljs-number&#34;&gt;0&lt;/span&gt;;&lt;br&gt;    BASKETBALL = &lt;span class=&#34;hljs-number&#34;&gt;1&lt;/span&gt;;&lt;br&gt;    FOOTBALL = &lt;span class=&#34;hljs-number&#34;&gt;2&lt;/span&gt;;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
-        <category term="其他" />
         <category term="ProtoBuffer" />
+        <category term="其他" />
         <updated>2023-05-28T13:00:29.404Z</updated>
     </entry>
     <entry>

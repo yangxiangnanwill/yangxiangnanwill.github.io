@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Will • Posts by &#34;hutool&#34; tag</title>
+        <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
+        <description>愿你一生努力，一生被爱</description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 16 Jul 2023 16:54:49 +0800</pubDate>
+        <lastBuildDate>Sun, 16 Jul 2023 16:54:49 +0800</lastBuildDate>
+        <category>开发习惯</category>
+        <category>思考</category>
+        <category>感言</category>
+        <category>Docker</category>
+        <category>LINUX</category>
+        <category>Node</category>
+        <category>Nvm</category>
+        <category>前端</category>
+        <category>CentOS</category>
+        <category>Linux</category>
+        <category>Crontab</category>
+        <category>Jenkins</category>
+        <category>Maven</category>
+        <category>读书笔记</category>
+        <category>Archery</category>
+        <category>MySql</category>
+        <category>工具</category>
+        <category>IDEA</category>
+        <category>Alibaba Cloud Toolkit</category>
+        <category>Git</category>
+        <category>BeetlSql</category>
+        <category>Beetl</category>
+        <category>Java IO-初识IO</category>
+        <category>JAVA</category>
+        <category>枚举</category>
+        <category>异常</category>
+        <category>Spring</category>
+        <category>SpringCloud</category>
+        <category>SpringCloud Alibaba</category>
+        <category>POI</category>
+        <category>Spring Boot</category>
+        <category>ProtoBuffer</category>
+        <category>其他</category>
+        <category>SOAR</category>
+        <category>博客园</category>
+        <category>博客</category>
+        <category>Hutool</category>
+        <category>工具类</category>
+        <category>常用开发库</category>
+        <category>JSON类库详解</category>
+        <category>Spring常用工具类</category>
+        <category>Lombok工具库详解</category>
+        <category>VerificationCode</category>
+        <category>MongoDb</category>
+        <category>VinUtil</category>
+        <category>异步编程</category>
+        <category>线程</category>
+        <category>CentOS7</category>
+        <category>MongoDB</category>
+        <category>Redis</category>
+        <category>方法论</category>
+        <category>开源协议</category>
+        <category>Typora</category>
+        <category>PostMan</category>
+        <category>Java8</category>
+        <category>特性</category>
+        <category>JDBC</category>
+        <category>Mysql</category>
+        <category>EasyExcel</category>
+        <category>日志类库详解</category>
+        <category>Script</category>
+        <category>设计模式</category>
+        <category>MyBatis</category>
+        <category>Apache Common</category>
+        <category>Google Guava</category>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/07/16/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/Hutool/</guid>
+            <title>Hutool</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/07/16/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/Hutool/</link>
+            <category>Hutool</category>
+            <category>工具类</category>
+            <category>常用开发库</category>
+            <pubDate>Sun, 16 Jul 2023 16:54:49 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;Hutool作为后起之秀，功能上也比较全。但是要注意一点，它的开源协议是：中国第一个开源协议&lt;a href=&#34;http://license.coscl.org.cn/MulanPSL&#34;&gt;木兰宽松许可证, 第1版&lt;/a&gt;，对此在商业项目中需要谨慎些，在个人项目无所谓。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;简介&#34;&gt;&lt;a href=&#34;#简介&#34; class=&#34;headerlink&#34; title=&#34;简介&#34;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;Hutool是一个小而全的Java工具类库，通过静态方法封装，降低相关API的学习成本，提高工作效率，使Java拥有函数式语言般的优雅，让Java语言也可以“甜甜的”。&lt;/p&gt;
+&lt;p&gt;Hutool中的工具方法来自于每个用户的精雕细琢，它涵盖了Java开发底层代码中的方方面面，它既是大型项目开发中解决小问题的利器，也是小型项目中的效率担当；&lt;/p&gt;
+&lt;p&gt;Hutool是项目中“util”包友好的替代，它节省了开发人员对项目中公用类和公用工具方法的封装时间，使开发专注于业务，同时可以最大限度的避免封装不完善带来的bug。&lt;/p&gt;
+&lt;h2 id=&#34;Hutool名称的由来&#34;&gt;&lt;a href=&#34;#Hutool名称的由来&#34; class=&#34;headerlink&#34; title=&#34;Hutool名称的由来&#34;&gt;&lt;/a&gt;Hutool名称的由来&lt;/h2&gt;&lt;p&gt;Hutool &amp;#x3D; Hu + tool，是原公司项目底层代码剥离后的开源库，“Hu”是公司名称的表示，tool表示工具。Hutool谐音“糊涂”，一方面简洁易懂，一方面寓意“难得糊涂”。&lt;/p&gt;
+&lt;h2 id=&#34;Hutool如何改变我们的coding方式&#34;&gt;&lt;a href=&#34;#Hutool如何改变我们的coding方式&#34; class=&#34;headerlink&#34; title=&#34;Hutool如何改变我们的coding方式&#34;&gt;&lt;/a&gt;Hutool如何改变我们的coding方式&lt;/h2&gt;&lt;p&gt;Hutool的目标是使用一个工具方法代替一段复杂代码，从而最大限度的避免“复制粘贴”代码的问题，彻底改变我们写代码的方式。&lt;/p&gt;
+&lt;p&gt;以计算MD5为例：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;【以前】打开搜索引擎 -&amp;gt; 搜“Java MD5加密” -&amp;gt; 打开某篇博客-&amp;gt; 复制粘贴 -&amp;gt; 改改好用&lt;/li&gt;
+&lt;li&gt;【现在】引入Hutool -&amp;gt; SecureUtil.md5()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hutool的存在就是为了减少代码搜索成本，避免网络上参差不齐的代码出现导致的bug。&lt;/p&gt;
+&lt;h1 id=&#34;包含组件&#34;&gt;&lt;a href=&#34;#包含组件&#34; class=&#34;headerlink&#34; title=&#34;包含组件&#34;&gt;&lt;/a&gt;包含组件&lt;/h1&gt;&lt;p&gt;一个Java基础工具类，对文件、流、加密解密、转码、正则、线程、XML等JDK方法进行封装，组成各种Util工具类，同时提供以下组件：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;模块&lt;/th&gt;
+&lt;th&gt;介绍&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;hutool-aop&lt;/td&gt;
+&lt;td&gt;JDK动态代理封装，提供非IOC下的切面支持&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-bloomFilter&lt;/td&gt;
+&lt;td&gt;布隆过滤，提供一些Hash算法的布隆过滤&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-cache&lt;/td&gt;
+&lt;td&gt;简单缓存实现&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-core&lt;/td&gt;
+&lt;td&gt;核心，包括Bean操作、日期、各种Util等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-cron&lt;/td&gt;
+&lt;td&gt;定时任务模块，提供类Crontab表达式的定时任务&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-crypto&lt;/td&gt;
+&lt;td&gt;加密解密模块，提供对称、非对称和摘要算法封装&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-db&lt;/td&gt;
+&lt;td&gt;JDBC封装后的数据操作，基于ActiveRecord思想&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-dfa&lt;/td&gt;
+&lt;td&gt;基于DFA模型的多关键字查找&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-extra&lt;/td&gt;
+&lt;td&gt;扩展模块，对第三方封装（模板引擎、邮件、Servlet、二维码、Emoji、FTP、分词等）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-http&lt;/td&gt;
+&lt;td&gt;基于HttpUrlConnection的Http客户端封装&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-log&lt;/td&gt;
+&lt;td&gt;自动识别日志实现的日志门面&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-script&lt;/td&gt;
+&lt;td&gt;脚本执行封装，例如Javascript&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-setting&lt;/td&gt;
+&lt;td&gt;功能更强大的Setting配置文件和Properties封装&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-system&lt;/td&gt;
+&lt;td&gt;系统参数调用封装（JVM信息等）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-json&lt;/td&gt;
+&lt;td&gt;JSON实现&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-captcha&lt;/td&gt;
+&lt;td&gt;图片验证码实现&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-poi&lt;/td&gt;
+&lt;td&gt;针对POI中Excel的封装&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hutool-socket&lt;/td&gt;
+&lt;td&gt;基于Java的NIO和AIO的Socket封装&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;可以根据需求对每个模块单独引入，也可以通过引入&lt;code&gt;hutool-all&lt;/code&gt;方式引入所有模块。&lt;/p&gt;
+&lt;h1 id=&#34;文档&#34;&gt;&lt;a href=&#34;#文档&#34; class=&#34;headerlink&#34; title=&#34;文档&#34;&gt;&lt;/a&gt;文档&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hutool.cn/docs/&#34;&gt;中文文档&lt;/a&gt; 看这里&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hutool.club/docs/&#34;&gt;中文文档（备用）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://apidoc.gitee.com/loolly/hutool/&#34;&gt;参考API&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;安装&#34;&gt;&lt;a href=&#34;#安装&#34; class=&#34;headerlink&#34; title=&#34;安装&#34;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;h2 id=&#34;Maven&#34;&gt;&lt;a href=&#34;#Maven&#34; class=&#34;headerlink&#34; title=&#34;Maven&#34;&gt;&lt;/a&gt;Maven&lt;/h2&gt;&lt;p&gt;在项目的pom.xml的dependencies中加入以下内容:&lt;/p&gt;
+&lt;figure class=&#34;highlight xml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs xml&#34;&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;cn.hutool&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;hutool-all&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;              &lt;br&gt;    &lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;5.1.0&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;Gradle&#34;&gt;&lt;a href=&#34;#Gradle&#34; class=&#34;headerlink&#34; title=&#34;Gradle&#34;&gt;&lt;/a&gt;Gradle&lt;/h2&gt;&lt;figure class=&#34;highlight gradle&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs gradle&#34;&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;compile&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;#x27;cn.hutool:hutool-all:5.1.0&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;非Maven项目&#34;&gt;&lt;a href=&#34;#非Maven项目&#34; class=&#34;headerlink&#34; title=&#34;非Maven项目&#34;&gt;&lt;/a&gt;非Maven项目&lt;/h2&gt;&lt;p&gt;点击以下任一链接，下载&lt;code&gt;hutool-all-X.X.X.jar&lt;/code&gt;即可：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/cn/hutool/hutool-all/5.1.0/&#34;&gt;Maven中央库1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://repo2.maven.org/maven2/cn/hutool/hutool-all/5.1.0/&#34;&gt;Maven中央库2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意 Hutool 5.x支持JDK8+，对Android平台没有测试，不能保证所有工具类获工具方法可用。 如果你的项目使用JDK7，请使用Hutool 4.x版本&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;编译安装&#34;&gt;&lt;a href=&#34;#编译安装&#34; class=&#34;headerlink&#34; title=&#34;编译安装&#34;&gt;&lt;/a&gt;编译安装&lt;/h2&gt;&lt;p&gt;访问Hutool的码云主页：&lt;a href=&#34;https://gitee.com/loolly/hutool&#34;&gt;https://gitee.com/loolly/hutool在新窗口打开&lt;/a&gt; 下载整个项目源码（v5-master或v5-dev分支都可）然后进入Hutool项目目录执行：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;./hutool.sh install&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后就可以使用Maven引入了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;著作权归@pdai所有 原文链接：&lt;a href=&#34;https://pdai.tech/md/develop/package/dev-package-x-hu-tool.html&#34;&gt;https://pdai.tech/md/develop/package/dev-package-x-hu-tool.html&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
