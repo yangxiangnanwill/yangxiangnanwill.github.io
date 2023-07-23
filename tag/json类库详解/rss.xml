@@ -10,68 +10,68 @@
         <category>开发习惯</category>
         <category>思考</category>
         <category>感言</category>
+        <category>读书笔记</category>
         <category>Docker</category>
         <category>LINUX</category>
-        <category>Node</category>
-        <category>Nvm</category>
-        <category>前端</category>
         <category>CentOS</category>
         <category>Linux</category>
         <category>Crontab</category>
         <category>Jenkins</category>
         <category>Maven</category>
-        <category>读书笔记</category>
+        <category>Node</category>
+        <category>前端</category>
+        <category>IDEA</category>
+        <category>Alibaba Cloud Toolkit</category>
         <category>Archery</category>
         <category>MySql</category>
         <category>工具</category>
-        <category>IDEA</category>
-        <category>Alibaba Cloud Toolkit</category>
+        <category>Nvm</category>
         <category>Git</category>
+        <category>CentOS7</category>
+        <category>MongoDB</category>
+        <category>Redis</category>
         <category>BeetlSql</category>
         <category>Beetl</category>
         <category>Java IO-初识IO</category>
         <category>JAVA</category>
         <category>枚举</category>
         <category>异常</category>
+        <category>POI</category>
         <category>Spring</category>
         <category>SpringCloud</category>
         <category>SpringCloud Alibaba</category>
-        <category>POI</category>
         <category>Spring Boot</category>
         <category>ProtoBuffer</category>
         <category>其他</category>
         <category>SOAR</category>
         <category>博客园</category>
         <category>博客</category>
-        <category>Hutool</category>
-        <category>工具类</category>
-        <category>常用开发库</category>
-        <category>JSON类库详解</category>
-        <category>Spring常用工具类</category>
-        <category>Lombok工具库详解</category>
+        <category>异步编程</category>
+        <category>线程</category>
         <category>VerificationCode</category>
         <category>MongoDb</category>
         <category>VinUtil</category>
-        <category>异步编程</category>
-        <category>线程</category>
-        <category>CentOS7</category>
-        <category>MongoDB</category>
-        <category>Redis</category>
+        <category>Hutool</category>
+        <category>工具类</category>
+        <category>常用开发库</category>
+        <category>Lombok工具库详解</category>
+        <category>JSON类库详解</category>
+        <category>Spring常用工具类</category>
         <category>方法论</category>
         <category>开源协议</category>
-        <category>Typora</category>
         <category>PostMan</category>
+        <category>Typora</category>
         <category>Java8</category>
         <category>特性</category>
+        <category>EasyExcel</category>
         <category>JDBC</category>
         <category>Mysql</category>
-        <category>EasyExcel</category>
         <category>日志类库详解</category>
         <category>Script</category>
         <category>设计模式</category>
         <category>MyBatis</category>
-        <category>Apache Common</category>
         <category>Google Guava</category>
+        <category>Apache Common</category>
         <item>
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/07/19/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/JSON%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/</guid>
             <title>JSON类库详解</title>
@@ -165,7 +165,7 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/alibaba/fastjson/issues&#34;&gt;alibaba&amp;#x2F;fastjson&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/44199956/answer/112224034&#34;&gt;fastjson这么快老外为啥还是热衷 jackson?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs ad-warning&#34;&gt;尽量使用最新版本。&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight django&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs django&#34;&gt;&lt;span class=&#34;hljs-template-tag&#34;&gt;&amp;#123;% &lt;span class=&#34;hljs-name&#34;&gt;note&lt;/span&gt; warning %&amp;#125;&lt;/span&gt;&lt;span class=&#34;language-xml&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-xml&#34;&gt;&lt;/span&gt;&lt;span class=&#34;hljs-template-tag&#34;&gt;&amp;#123;% &lt;span class=&#34;hljs-name&#34;&gt;label&lt;/span&gt; primary 警告 %&amp;#125;&lt;/span&gt;&lt;span class=&#34;language-xml&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-xml&#34;&gt;尽量使用最新版本。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-xml&#34;&gt;&lt;/span&gt;&lt;span class=&#34;hljs-template-tag&#34;&gt;&amp;#123;% &lt;span class=&#34;hljs-name&#34;&gt;endnote&lt;/span&gt; %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;h1 id=&#34;JackSon&#34;&gt;&lt;a href=&#34;#JackSon&#34; class=&#34;headerlink&#34; title=&#34;JackSon&#34;&gt;&lt;/a&gt;JackSon&lt;/h1&gt;&lt;h2 id=&#34;简介-1&#34;&gt;&lt;a href=&#34;#简介-1&#34; class=&#34;headerlink&#34; title=&#34;简介&#34;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/FasterXML/jackson&#34;&gt;Jackson Github&lt;/a&gt; &lt;/li&gt;
