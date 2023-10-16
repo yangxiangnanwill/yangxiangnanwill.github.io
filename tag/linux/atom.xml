@@ -3,72 +3,158 @@
     <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
     <title>Will • Posts by &#34;linux&#34; tag</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
-    <updated>2023-05-28T13:00:29.416Z</updated>
-    <category term="开发习惯" />
-    <category term="思考" />
+    <updated>2023-09-18T00:44:37.642Z</updated>
     <category term="感言" />
-    <category term="读书笔记" />
+    <category term="思考" />
+    <category term="开发习惯" />
     <category term="Docker" />
     <category term="LINUX" />
     <category term="CentOS" />
     <category term="Linux" />
-    <category term="Crontab" />
     <category term="Jenkins" />
+    <category term="Crontab" />
     <category term="Maven" />
-    <category term="Node" />
-    <category term="前端" />
-    <category term="IDEA" />
-    <category term="Alibaba Cloud Toolkit" />
     <category term="Archery" />
     <category term="MySql" />
     <category term="工具" />
-    <category term="Nvm" />
+    <category term="IDEA" />
+    <category term="Alibaba Cloud Toolkit" />
     <category term="Git" />
-    <category term="CentOS7" />
-    <category term="MongoDB" />
-    <category term="Redis" />
+    <category term="PostMan" />
+    <category term="Typora" />
+    <category term="Node" />
+    <category term="前端" />
+    <category term="Nvm" />
+    <category term="信息安全等级保护认证" />
+    <category term="系统认证" />
+    <category term="读书笔记" />
+    <category term="JAVA" />
+    <category term="Java8" />
+    <category term="特性" />
+    <category term="枚举" />
     <category term="BeetlSql" />
     <category term="Beetl" />
-    <category term="Java IO-初识IO" />
-    <category term="JAVA" />
-    <category term="枚举" />
+    <category term="ProtoBuffer" />
     <category term="异常" />
+    <category term="Java IO-初识IO" />
+    <category term="JDBC" />
+    <category term="Mysql" />
     <category term="POI" />
+    <category term="EasyExcel" />
+    <category term="MyBatis" />
     <category term="Spring" />
     <category term="SpringCloud" />
     <category term="SpringCloud Alibaba" />
     <category term="Spring Boot" />
-    <category term="ProtoBuffer" />
     <category term="其他" />
     <category term="SOAR" />
+    <category term="VerificationCode" />
+    <category term="VinUtil" />
+    <category term="MongoDb" />
     <category term="博客园" />
     <category term="博客" />
-    <category term="异步编程" />
-    <category term="线程" />
-    <category term="VerificationCode" />
-    <category term="MongoDb" />
-    <category term="VinUtil" />
-    <category term="Hutool" />
+    <category term="Apache Common" />
     <category term="工具类" />
     <category term="常用开发库" />
+    <category term="Google Guava" />
+    <category term="Hutool" />
     <category term="Lombok工具库详解" />
     <category term="JSON类库详解" />
     <category term="Spring常用工具类" />
+    <category term="日志类库详解" />
+    <category term="异步编程" />
+    <category term="线程" />
+    <category term="CentOS7" />
+    <category term="MongoDB" />
+    <category term="Redis" />
+    <category term="设计模式" />
+    <category term="VMware" />
     <category term="方法论" />
     <category term="开源协议" />
-    <category term="PostMan" />
-    <category term="Typora" />
-    <category term="Java8" />
-    <category term="特性" />
-    <category term="EasyExcel" />
-    <category term="JDBC" />
-    <category term="Mysql" />
-    <category term="日志类库详解" />
     <category term="Script" />
-    <category term="设计模式" />
-    <category term="MyBatis" />
-    <category term="Google Guava" />
-    <category term="Apache Common" />
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/09/18/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/VMware/VMware-%E5%A4%8D%E5%88%B6%E8%99%9A%E6%8B%9F%E6%9C%BA&amp;%E5%85%8B%E9%9A%86%E8%99%9A%E6%8B%9F%E6%9C%BA/</id>
+        <title>VMware-复制虚拟机&amp;克隆虚拟机</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/09/18/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/VMware/VMware-%E5%A4%8D%E5%88%B6%E8%99%9A%E6%8B%9F%E6%9C%BA&amp;%E5%85%8B%E9%9A%86%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;关于虚拟机提示选择“我已移动该虚拟机”或“我已复制该虚拟机”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;我已移动该虚拟机&lt;blockquote&gt;
+&lt;p&gt;表示打开后，虚拟机的网卡的mac地址不变，如果复制的是本地的虚拟机，复制前的虚拟机和复制后的虚拟机同时开机会造成网络冲突。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;我已复制该虚拟机&lt;blockquote&gt;
+&lt;p&gt;表示打开复制后的虚拟机的网卡的物理地址是新生成的，这样怎么开机都不会有网卡问题，所以VMware本身也是建议不知道的就选这个选项。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;复制虚拟机&#34;&gt;&lt;a href=&#34;#复制虚拟机&#34; class=&#34;headerlink&#34; title=&#34;复制虚拟机&#34;&gt;&lt;/a&gt;复制虚拟机&lt;/h1&gt;&lt;p&gt;VMware 上创建的虚拟机是可以重复使用的，安装好的虚拟机可以直接复制或者剪切到其它任意电脑上，然后使用 VMware 打开使用，两者的虚拟机设置以及登录密码都完全一样。&lt;/p&gt;
+&lt;p&gt;比如在某台电脑 A 上创建了 CentOS 7.2 的虚拟机（其它系统虚拟机如 windows、Red hat 也是同理），某一天在电脑 B 上也需要使用虚拟机，此时在电脑 B 上只需要安装 VMware 软件，然后从电脑 A 复制创建好的虚拟机文件目录到电脑 B，然后打开启动虚拟机即可。虚拟机的配置，如内存大小，处理器，磁盘大小等等，电脑 B 都会与电脑 A 中的保持一致，连登陆密码都是一致。&lt;/p&gt;
+&lt;p&gt;这样的情况其实挺多的，比如从自己的旧电脑复制到新电脑上，或者从家里的笔记本复制到公司的台式机等等，如下动图所示，就是将旧电脑上创建好了的 CentOS 虚拟机整个目录复制到了新电脑上，然后运行 VMware 打开即可运行。&lt;/p&gt;
+&lt;p&gt;注意：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;虽然虚拟机系统可以复制或者剪切重复使用，但是虚拟机系统内部安装的软件（比如 Java、mysql、docker等等）可能需要重新安装，造成原因如下：&lt;ul&gt;
+&lt;li&gt;新旧电脑的环境不一致&lt;/li&gt;
+&lt;li&gt;因为旧电脑上使用的是 VMware 12，而新电脑使用的是 VMware 15&lt;/li&gt;
+&lt;li&gt;直接复制的系统里面的程序本身真的需要重新安装。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;克隆虚拟机&#34;&gt;&lt;a href=&#34;#克隆虚拟机&#34; class=&#34;headerlink&#34; title=&#34;克隆虚拟机&#34;&gt;&lt;/a&gt;克隆虚拟机&lt;/h1&gt;&lt;p&gt;平时开发的时候需要做集群，比如 Redis 集群、Kafka 集群、微服务集群等等，为了更贴实际，就需要多台虚拟机，使用一个 VMware 开启多个 虚拟机系统，此时固然可以重新创建虚拟机、或者复制虚拟机，但是都没有克隆虚拟机来的快。&lt;/p&gt;
+&lt;p&gt;克隆虚拟机只需简单几步，就能克隆一个一模一样的系统，虚拟机配置、登陆账户及密码等等完全一样、更重要的是连原系统安装的程序在新克隆的系统中都能继续使用。&lt;/p&gt;
+&lt;h2 id=&#34;注意事项&#34;&gt;&lt;a href=&#34;#注意事项&#34; class=&#34;headerlink&#34; title=&#34;注意事项&#34;&gt;&lt;/a&gt;注意事项&lt;/h2&gt;&lt;p&gt;&lt;font color=&#34;#c00000&#34;&gt;无法为已经开启或者挂起的虚拟机克隆，所以克隆前需要关闭虚拟机。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&#34;克隆步骤&#34;&gt;&lt;a href=&#34;#克隆步骤&#34; class=&#34;headerlink&#34; title=&#34;克隆步骤&#34;&gt;&lt;/a&gt;克隆步骤&lt;/h2&gt;&lt;p&gt;右键要克隆的虚拟机、选择管理 ——&amp;gt; 克隆，进入克隆虚拟机向导，然后根据向导即可轻松创建。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;克隆源&lt;ul&gt;
+&lt;li&gt;虚拟机中的当前状态&lt;/li&gt;
+&lt;li&gt;现有快照(仅限关闭的虚拟机)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;克隆类型&lt;ul&gt;
+&lt;li&gt;创建链接克隆&lt;/li&gt;
+&lt;li&gt;创建完整克隆&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;克隆后修改事项&#34;&gt;&lt;a href=&#34;#克隆后修改事项&#34; class=&#34;headerlink&#34; title=&#34;克隆后修改事项&#34;&gt;&lt;/a&gt;克隆后修改事项&lt;/h2&gt;&lt;p&gt;克隆后并不是直接能用，而是需要进行一些调试。 因为刚刚克隆完之后，克隆机和母机MAC地址一样，我们需要重新配置和删除网卡信息&lt;/p&gt;
+&lt;h3 id=&#34;修改MAC地址&#34;&gt;&lt;a href=&#34;#修改MAC地址&#34; class=&#34;headerlink&#34; title=&#34;修改MAC地址&#34;&gt;&lt;/a&gt;修改MAC地址&lt;/h3&gt;&lt;p&gt;通过虚拟机设置进行修改，点击生成即可&lt;br&gt;虚拟机设置-&amp;gt;网络适配器-&amp;gt;高级-&amp;gt;MAC地址-&amp;gt;生成&lt;/p&gt;
+&lt;h3 id=&#34;修改主机名&#34;&gt;&lt;a href=&#34;#修改主机名&#34; class=&#34;headerlink&#34; title=&#34;修改主机名&#34;&gt;&lt;/a&gt;修改主机名&lt;/h3&gt;&lt;p&gt;出于程序开发的需要，需要区别各个服务器的名称，所以修改新系统的主机名称，它默认是：localhost.localdomain&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;hostname&lt;/th&gt;
+&lt;th&gt;查看系统主机名称&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;hostnamectl set-hostname xxx&lt;/td&gt;
+&lt;td&gt;修改系统主机名称&lt;br/&gt;1、主机名称中的特殊字符或空白字符都将会被移除，大写字母会自动转化成小写&lt;br/&gt;2、执行命令之后，会自动修改 &amp;#x2F;etc&amp;#x2F;hostname 文件&lt;br/&gt;3、执行命令之后，会立即生效，且重启系统也会生效&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cat &amp;#x2F;etc&amp;#x2F;hostname&lt;/td&gt;
+&lt;td&gt;查看 &amp;#x2F;etc&amp;#x2F;hostname 文件内容，里面配置的就是系统主机名称&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h3 id=&#34;IP-地址修改&#34;&gt;&lt;a href=&#34;#IP-地址修改&#34; class=&#34;headerlink&#34; title=&#34;IP 地址修改&#34;&gt;&lt;/a&gt;IP 地址修改&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;如果是静态地址的话需要手动修改一下ip地址，如果是DHCP动态分配则无需配置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;查看网络信息&#34;&gt;&lt;a href=&#34;#查看网络信息&#34; class=&#34;headerlink&#34; title=&#34;查看网络信息&#34;&gt;&lt;/a&gt;查看网络信息&lt;/h4&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;ifconfig&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;假如是静态  ip，则可以手动修改 &amp;#x2F;etc&amp;#x2F;sysconfig&amp;#x2F;network-scripts&amp;#x2F; 目录下的网卡文件，如 ifcfg-ens33（ifcfg-是前缀，ens33是网卡名称），网卡名称可以使用 ifconfig 命令查看。静态 ip 时，BOOTPROTO&amp;#x3D;”static”，还会多一行 IPADDR&amp;#x3D;x.x.x.x，修改此 IPADDR 即可修改 ip 地址。&lt;/p&gt;
+&lt;p&gt;&lt;font color=&#34;#c00000&#34;&gt;特别提醒：如果克隆出来的新系统的网卡文件名称仍然和原系统的网卡名称一致，则需要手动修改文件名称为新系统的网卡名称，同时也要修改网卡文件内的 NAME、DEVICE 属性和新系统网卡名称一致。&lt;/font&gt;&lt;/p&gt;
+&lt;h4 id=&#34;重启网络&#34;&gt;&lt;a href=&#34;#重启网络&#34; class=&#34;headerlink&#34; title=&#34;重启网络&#34;&gt;&lt;/a&gt;重启网络&lt;/h4&gt;&lt;p&gt;使用 nmcli c reload（centos 8） 命令或 service network restart (centos 7)命令重启虚拟网卡，查看本机 ip 如果不是设置的则重启虚拟机&lt;/p&gt;
+&lt;h3 id=&#34;删除网卡信息&#34;&gt;&lt;a href=&#34;#删除网卡信息&#34; class=&#34;headerlink&#34; title=&#34;删除网卡信息&#34;&gt;&lt;/a&gt;删除网卡信息&lt;/h3&gt;&lt;p&gt;如果上述配置完了还有问题，就把网卡信息文件删掉重启，当然你也可以在配置的时候就直接删掉网卡信息，他在重启的时候会自动生成。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-built_in&#34;&gt;rm&lt;/span&gt; -rf /etc/udev/rules.d/70-persistent-ipoib.rules &lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;重启虚拟机&#34;&gt;&lt;a href=&#34;#重启虚拟机&#34; class=&#34;headerlink&#34; title=&#34;重启虚拟机&#34;&gt;&lt;/a&gt;重启虚拟机&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;init 6&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;此时就可以正常应用已经克隆好的虚拟机了。&lt;/p&gt;
+</content>
+        <category term="LINUX" />
+        <category term="VMware" />
+        <updated>2023-09-18T00:44:37.642Z</updated>
+    </entry>
     <entry>
         <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/%E5%B7%A5%E5%85%B7/Alibaba-Cloud-Toolkit/</id>
         <title>Alibaba Cloud Toolkit</title>
@@ -678,190 +764,6 @@
         <updated>2023-05-28T13:00:29.387Z</updated>
     </entry>
     <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(6)-%E5%AE%89%E8%A3%85Nginx/</id>
-        <title>Docker(6)-安装Nginx</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(6)-%E5%AE%89%E8%A3%85Nginx/"/>
-        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
-&lt;p&gt;公众号：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/icons/wx.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;QQ群：&lt;a href=&#34;http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21&#34;&gt;806951874&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;在Docker中安装Nginx&#34;&gt;&lt;a href=&#34;#在Docker中安装Nginx&#34; class=&#34;headerlink&#34; title=&#34;在Docker中安装Nginx&#34;&gt;&lt;/a&gt;在Docker中安装Nginx&lt;/h1&gt;&lt;h2 id=&#34;前言-1&#34;&gt;&lt;a href=&#34;#前言-1&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;由于nginx是一个反向代理服务器，涉及到一些配置。如果你对nginx一点都不懂的话，那么，你在学习下面的内容的时候，可能就会不太懂，因为我们是要在docker中操作nginx，同时需要编辑一些配置文件。&lt;/p&gt;
-&lt;p&gt;适合对于nginx有一定了解的朋友参考使用。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;下载nginx镜像&#34;&gt;&lt;a href=&#34;#下载nginx镜像&#34; class=&#34;headerlink&#34; title=&#34;下载nginx镜像&#34;&gt;&lt;/a&gt;下载nginx镜像&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker pull nginx&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;查看下载的nginx镜像&#34;&gt;&lt;a href=&#34;#查看下载的nginx镜像&#34; class=&#34;headerlink&#34; title=&#34;查看下载的nginx镜像&#34;&gt;&lt;/a&gt;查看下载的nginx镜像&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker images&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;如下图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527832301031-bf1ad67d-a6a2-4c20-888e-970c41c7ae9d.png&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;启动nginx镜像容器&#34;&gt;&lt;a href=&#34;#启动nginx镜像容器&#34; class=&#34;headerlink&#34; title=&#34;启动nginx镜像容器&#34;&gt;&lt;/a&gt;启动nginx镜像容器&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -d -p 80:80 --name nginx nginx&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;nginx是一个代理，端口默认是80&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;访问服务器&#34;&gt;&lt;a href=&#34;#访问服务器&#34; class=&#34;headerlink&#34; title=&#34;访问服务器&#34;&gt;&lt;/a&gt;访问服务器&lt;/h2&gt;&lt;p&gt;在浏览器中输入：&lt;a href=&#34;http://192.168.56.128/%EF%BC%8C%E5%9B%9E%E8%BD%A6%E7%9C%8B%E4%B8%80%E4%B8%8B%E6%95%88%E6%9E%9C%EF%BC%9A&#34;&gt;http://192.168.56.128:80/，回车看一下效果：&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527832846216-4d03013e-d0cd-434f-9069-10f2e38e67bf.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;出现上面的页面，说明nginx已经正常启动了。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;将nginx的配置文件、日志目录映射到宿主机&#34;&gt;&lt;a href=&#34;#将nginx的配置文件、日志目录映射到宿主机&#34; class=&#34;headerlink&#34; title=&#34;将nginx的配置文件、日志目录映射到宿主机&#34;&gt;&lt;/a&gt;将nginx的配置文件、日志目录映射到宿主机&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;在测试环境、生产环境的话，都是需要编辑一些nginx的配置的，最常见的修改就是nginx.conf文件。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;将nginx的配置文件、日志目录等，映射到宿主机上进行管理维护，是很方便的，也是推荐的做法。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;在宿主机中创建nginx相关目录&#34;&gt;&lt;a href=&#34;#在宿主机中创建nginx相关目录&#34; class=&#34;headerlink&#34; title=&#34;在宿主机中创建nginx相关目录&#34;&gt;&lt;/a&gt;在宿主机中创建nginx相关目录&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;首先在宿主机中创建一个用于存放nginx相关文件的目录，这里我就在 &amp;#x2F;opt 目录下新建了一个 docker_nginx 的目录文件。&lt;/p&gt;
-&lt;p&gt;然后在 docker_nginx 目录下新建 conf 、log 、www 这三个目录，目录含义是：&lt;/p&gt;
-&lt;p&gt;conf：存放nginx的相关配置文件，比如 nginx.conf&lt;/p&gt;
-&lt;p&gt;log：存放nginx的日志文件&lt;/p&gt;
-&lt;p&gt;www：存放相关静态资源文件&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;最终的目录结构如下：&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527833862890-ad0217c0-5bf3-46c9-b332-88a7b04da6ca.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
-&lt;p&gt;复制一份nginx.conf文件到宿主机对应的目录下：&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker cp nginx:/etc/nginx/nginx.conf /opt/docker_nginx/conf/nginx.conf&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;这条命令的作用，就是复制nginx的docker容器中的 &amp;#x2F;etc&amp;#x2F;nginx&amp;#x2F;nginx.conf 文件到宿主机下的 &amp;#x2F;opt&amp;#x2F;docker_nginx&amp;#x2F;conf&amp;#x2F; 目录下。这样可以直接进行默认的配置文件的编辑。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;看一下默认的nginx.conf配置文件的内容：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527834624021-ba784d6a-6c4a-4d0d-a2dc-e2885999314d.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
-&lt;p&gt;编辑 nginx 的配置文件：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我们暂时就修改其中的 access_log 、error_log 、root 这些基本配置。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;从上图可以看到，配置文件最下面，有这样一段配置：&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;include /etc/nginx/conf.d/*.conf;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;意思也就是引入了其他配置文件。&lt;/p&gt;
-&lt;p&gt;既然我们要在宿主机上管理nginx的配置文件，所以对于上面的include引入的文件，我们也要复制一份到对应的宿主机上。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我们进入nginx容器，去查看一下这个路径下面有哪些文件：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;进入nginx容器&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker exec -it e4 /bin/bash&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;其中的 e4 指的是容器ID的前2位字符串。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;查看 &amp;#x2F;etc&amp;#x2F;nginx&amp;#x2F;conf.d&amp;#x2F; 目录&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527835373585-7316d3b7-e789-4f62-8a6b-8c3953633697.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527835373585-7316d3b7-e789-4f62-8a6b-8c3953633697.png&#34;&gt;http://www.cicoding.cn/images/docker/1527835373585-7316d3b7-e789-4f62-8a6b-8c3953633697.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;可以看到，里面有一个default.conf配置文件&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;查看 default.conf配置文件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527835468543-cbfd5cfc-ffcf-4512-abb9-46331febd3ae.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527835468543-cbfd5cfc-ffcf-4512-abb9-46331febd3ae.png&#34;&gt;http://www.cicoding.cn/images/docker/1527835468543-cbfd5cfc-ffcf-4512-abb9-46331febd3ae.png&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;其中用黄色圈起来的部分，是我们要修改的内容（上面说过了，目前就先简单修改基本的配置，只是方便大家看到一下效果，至于其他的配置，可自行按照这样的步骤自行编辑）。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;复制一份default.conf文件到宿主机对应的目录下&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker cp nginx:/etc/nginx/conf.d/default.conf /opt/docker_nginx/conf/default.conf&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;查看一下目前宿主机下面的nginx配置文件情况&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527837882497-2ef89731-6d8c-4639-b6cb-2c9d4034a2cd.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527837882497-2ef89731-6d8c-4639-b6cb-2c9d4034a2cd.png&#34;&gt;http://www.cicoding.cn/images/docker/1527837882497-2ef89731-6d8c-4639-b6cb-2c9d4034a2cd.png&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;同样的，我们也需要把nginx的默认首页文件，复制到宿主机下面&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker cp nginx:/usr/share/nginx/html/index.html /opt/docker_nginx/www/&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;编辑宿主机上的nginx相关配置文件&#34;&gt;&lt;a href=&#34;#编辑宿主机上的nginx相关配置文件&#34; class=&#34;headerlink&#34; title=&#34;编辑宿主机上的nginx相关配置文件&#34;&gt;&lt;/a&gt;编辑宿主机上的nginx相关配置文件&lt;/h3&gt;&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;首先修改 nginx.conf 配置文件&lt;/strong&gt;，修改后结果是：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527838034307-65530160-3710-4246-a816-9703af4fc524.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527838034307-65530160-3710-4246-a816-9703af4fc524.png&#34;&gt;http://www.cicoding.cn/images/docker/1527838034307-65530160-3710-4246-a816-9703af4fc524.png&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;其中error_log的配置，就是我们前面在宿主机下面创建的nginx的log目录。&lt;/p&gt;
-&lt;p&gt;注意需要修改最下面的include配置，指定宿主机下面的default.conf配置文件（default&amp;#x2F;conf与nginx.conf在相同目录下，所以直接写名称即可，无需指定具体目录路径）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;编辑default.conf文件&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;vim /opt/docker_nginx/conf/default.conf&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;修改文件中的 access_log 以及 root 配置，效果如下&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527838387330-9501c9c8-1d8b-44e0-a177-d61a8c4699fa.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;同样，access_log 以及 root 的配置，就是我们前面在宿主机下面创建的nginx的相关目录。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;重启nginx容器&#34;&gt;&lt;a href=&#34;#重启nginx容器&#34; class=&#34;headerlink&#34; title=&#34;重启nginx容器&#34;&gt;&lt;/a&gt;重启nginx容器&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;先停止之前启动的nginx容器&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker stop e4s&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;重启nginx容器&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这次重启nginx容器的话，就不能使用一开始那种简单的run命令了，需要添加一些参数，具体命令如下：&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -p 80:80 --name nginx-new \&lt;br&gt;    -v /opt/docker_nginx/www:/usr/share/nginx/html \&lt;br&gt;    -v /opt/docker_nginx/log:/var/log/nginx \&lt;br&gt;    -v /opt/docker_nginx/conf/nginx.conf:/etc/nginx/conf \&lt;br&gt;    -d nginx&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;这里的 -v 参数的含义是，将宿主机上的目录挂载到容器中的对应目录。&lt;/p&gt;
-&lt;p&gt;“：”冒号前面是宿主机的目录，后面是容器中的目录。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;有些朋友可能会不搞不明白冒号后面的容器路径是怎么来的，这里解释一下，其实很简单，就是指的是nginx的默认的日志路径、配置文件路径。&lt;/p&gt;
-&lt;p&gt;你在nginx容器中去查看一下nginx.conf以及default.conf配置文件的内容，就可以看到log和配置文件的默认存储路径了。文章上面也有截图出来nginx.conf以及default.conf的默认配置截图，可自行翻阅到上面查看。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;查看启动的nginx容器&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527839391119-1d98218f-62eb-46d4-8c8e-3047e30c773c.png&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;修改nginx默认首页内容&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;先看一下默认首页的样子：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527840233785-22a458d3-1123-4249-b671-179ccc7e41fe.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;我们把这个首页内容全部删除掉，加入我们自己的内容！&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;编辑宿主机下面的 &amp;#x2F;opt&amp;#x2F;docker_nginx&amp;#x2F;www&amp;#x2F;index.html 文件：&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;vim /opt/docker_nginx/www/index.html&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;修改之后如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527840219657-335ad4a0-276f-47d3-b49a-0b55fa8299fd.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;重新访问服务器域名，查看最终效果&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527841014053-e2e485f8-a08e-40d7-bc05-603c7d32d43e.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;如果页面出现中文乱码的问题，可以在 index.html 好 标签里面加入：&lt;/p&gt;
-&lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs html&#34;&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;meta&lt;/span&gt; &lt;span class=&#34;hljs-attr&#34;&gt;http-equiv&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;Content-Type&amp;quot;&lt;/span&gt; &lt;span class=&#34;hljs-attr&#34;&gt;content&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;text/html; charset=UTF-8&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;最终index.html文件内容如下：&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs html&#34;&gt;&lt;span class=&#34;hljs-meta&#34;&gt;&amp;lt;!DOCTYPE &lt;span class=&#34;hljs-keyword&#34;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;meta&lt;/span&gt; &lt;span class=&#34;hljs-attr&#34;&gt;http-equiv&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;Content-Type&amp;quot;&lt;/span&gt; &lt;span class=&#34;hljs-attr&#34;&gt;content&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;text/html; charset=UTF-8&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;Welcome to nginx!&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;language-css&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;    &lt;span class=&#34;hljs-selector-tag&#34;&gt;body&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;        &lt;span class=&#34;hljs-attribute&#34;&gt;width&lt;/span&gt;: &lt;span class=&#34;hljs-number&#34;&gt;35em&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;        &lt;span class=&#34;hljs-attribute&#34;&gt;margin&lt;/span&gt;: &lt;span class=&#34;hljs-number&#34;&gt;0&lt;/span&gt; auto;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;        &lt;span class=&#34;hljs-attribute&#34;&gt;font-family&lt;/span&gt;: Tahoma, Verdana, Arial, sans-serif;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;&lt;/span&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;h1&lt;/span&gt;&amp;gt;&lt;/span&gt;欢迎访问!&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;h1&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;当前nginx服务来源于Docker容器&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&amp;lt;/html&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-        <category term="Docker" />
-        <category term="LINUX" />
-        <updated>2023-05-28T13:00:29.386Z</updated>
-    </entry>
-    <entry>
         <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(7)-Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
         <title>Docker(7)-Docker常用命令</title>
         <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(7)-Docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
@@ -1044,6 +946,190 @@
 &lt;p&gt;也可以通过 -f Dockerfile 文件的位置：&lt;/p&gt;
 &lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker build -f /path/to/a/Dockerfile .&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/blockquote&gt;
+</content>
+        <category term="Docker" />
+        <category term="LINUX" />
+        <updated>2023-05-28T13:00:29.386Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(6)-%E5%AE%89%E8%A3%85Nginx/</id>
+        <title>Docker(6)-安装Nginx</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(6)-%E5%AE%89%E8%A3%85Nginx/"/>
+        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
+&lt;p&gt;公众号：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/icons/wx.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;QQ群：&lt;a href=&#34;http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21&#34;&gt;806951874&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;在Docker中安装Nginx&#34;&gt;&lt;a href=&#34;#在Docker中安装Nginx&#34; class=&#34;headerlink&#34; title=&#34;在Docker中安装Nginx&#34;&gt;&lt;/a&gt;在Docker中安装Nginx&lt;/h1&gt;&lt;h2 id=&#34;前言-1&#34;&gt;&lt;a href=&#34;#前言-1&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;由于nginx是一个反向代理服务器，涉及到一些配置。如果你对nginx一点都不懂的话，那么，你在学习下面的内容的时候，可能就会不太懂，因为我们是要在docker中操作nginx，同时需要编辑一些配置文件。&lt;/p&gt;
+&lt;p&gt;适合对于nginx有一定了解的朋友参考使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;下载nginx镜像&#34;&gt;&lt;a href=&#34;#下载nginx镜像&#34; class=&#34;headerlink&#34; title=&#34;下载nginx镜像&#34;&gt;&lt;/a&gt;下载nginx镜像&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker pull nginx&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;查看下载的nginx镜像&#34;&gt;&lt;a href=&#34;#查看下载的nginx镜像&#34; class=&#34;headerlink&#34; title=&#34;查看下载的nginx镜像&#34;&gt;&lt;/a&gt;查看下载的nginx镜像&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker images&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527832301031-bf1ad67d-a6a2-4c20-888e-970c41c7ae9d.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;启动nginx镜像容器&#34;&gt;&lt;a href=&#34;#启动nginx镜像容器&#34; class=&#34;headerlink&#34; title=&#34;启动nginx镜像容器&#34;&gt;&lt;/a&gt;启动nginx镜像容器&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -d -p 80:80 --name nginx nginx&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;nginx是一个代理，端口默认是80&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;访问服务器&#34;&gt;&lt;a href=&#34;#访问服务器&#34; class=&#34;headerlink&#34; title=&#34;访问服务器&#34;&gt;&lt;/a&gt;访问服务器&lt;/h2&gt;&lt;p&gt;在浏览器中输入：&lt;a href=&#34;http://192.168.56.128/%EF%BC%8C%E5%9B%9E%E8%BD%A6%E7%9C%8B%E4%B8%80%E4%B8%8B%E6%95%88%E6%9E%9C%EF%BC%9A&#34;&gt;http://192.168.56.128:80/，回车看一下效果：&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527832846216-4d03013e-d0cd-434f-9069-10f2e38e67bf.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;出现上面的页面，说明nginx已经正常启动了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;将nginx的配置文件、日志目录映射到宿主机&#34;&gt;&lt;a href=&#34;#将nginx的配置文件、日志目录映射到宿主机&#34; class=&#34;headerlink&#34; title=&#34;将nginx的配置文件、日志目录映射到宿主机&#34;&gt;&lt;/a&gt;将nginx的配置文件、日志目录映射到宿主机&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;在测试环境、生产环境的话，都是需要编辑一些nginx的配置的，最常见的修改就是nginx.conf文件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;将nginx的配置文件、日志目录等，映射到宿主机上进行管理维护，是很方便的，也是推荐的做法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;在宿主机中创建nginx相关目录&#34;&gt;&lt;a href=&#34;#在宿主机中创建nginx相关目录&#34; class=&#34;headerlink&#34; title=&#34;在宿主机中创建nginx相关目录&#34;&gt;&lt;/a&gt;在宿主机中创建nginx相关目录&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;首先在宿主机中创建一个用于存放nginx相关文件的目录，这里我就在 &amp;#x2F;opt 目录下新建了一个 docker_nginx 的目录文件。&lt;/p&gt;
+&lt;p&gt;然后在 docker_nginx 目录下新建 conf 、log 、www 这三个目录，目录含义是：&lt;/p&gt;
+&lt;p&gt;conf：存放nginx的相关配置文件，比如 nginx.conf&lt;/p&gt;
+&lt;p&gt;log：存放nginx的日志文件&lt;/p&gt;
+&lt;p&gt;www：存放相关静态资源文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最终的目录结构如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527833862890-ad0217c0-5bf3-46c9-b332-88a7b04da6ca.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
+&lt;p&gt;复制一份nginx.conf文件到宿主机对应的目录下：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker cp nginx:/etc/nginx/nginx.conf /opt/docker_nginx/conf/nginx.conf&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;这条命令的作用，就是复制nginx的docker容器中的 &amp;#x2F;etc&amp;#x2F;nginx&amp;#x2F;nginx.conf 文件到宿主机下的 &amp;#x2F;opt&amp;#x2F;docker_nginx&amp;#x2F;conf&amp;#x2F; 目录下。这样可以直接进行默认的配置文件的编辑。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;看一下默认的nginx.conf配置文件的内容：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527834624021-ba784d6a-6c4a-4d0d-a2dc-e2885999314d.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
+&lt;p&gt;编辑 nginx 的配置文件：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们暂时就修改其中的 access_log 、error_log 、root 这些基本配置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;从上图可以看到，配置文件最下面，有这样一段配置：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;include /etc/nginx/conf.d/*.conf;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;意思也就是引入了其他配置文件。&lt;/p&gt;
+&lt;p&gt;既然我们要在宿主机上管理nginx的配置文件，所以对于上面的include引入的文件，我们也要复制一份到对应的宿主机上。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们进入nginx容器，去查看一下这个路径下面有哪些文件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进入nginx容器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker exec -it e4 /bin/bash&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其中的 e4 指的是容器ID的前2位字符串。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;查看 &amp;#x2F;etc&amp;#x2F;nginx&amp;#x2F;conf.d&amp;#x2F; 目录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527835373585-7316d3b7-e789-4f62-8a6b-8c3953633697.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527835373585-7316d3b7-e789-4f62-8a6b-8c3953633697.png&#34;&gt;http://www.cicoding.cn/images/docker/1527835373585-7316d3b7-e789-4f62-8a6b-8c3953633697.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以看到，里面有一个default.conf配置文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查看 default.conf配置文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527835468543-cbfd5cfc-ffcf-4512-abb9-46331febd3ae.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527835468543-cbfd5cfc-ffcf-4512-abb9-46331febd3ae.png&#34;&gt;http://www.cicoding.cn/images/docker/1527835468543-cbfd5cfc-ffcf-4512-abb9-46331febd3ae.png&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其中用黄色圈起来的部分，是我们要修改的内容（上面说过了，目前就先简单修改基本的配置，只是方便大家看到一下效果，至于其他的配置，可自行按照这样的步骤自行编辑）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;复制一份default.conf文件到宿主机对应的目录下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker cp nginx:/etc/nginx/conf.d/default.conf /opt/docker_nginx/conf/default.conf&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;查看一下目前宿主机下面的nginx配置文件情况&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527837882497-2ef89731-6d8c-4639-b6cb-2c9d4034a2cd.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527837882497-2ef89731-6d8c-4639-b6cb-2c9d4034a2cd.png&#34;&gt;http://www.cicoding.cn/images/docker/1527837882497-2ef89731-6d8c-4639-b6cb-2c9d4034a2cd.png&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;同样的，我们也需要把nginx的默认首页文件，复制到宿主机下面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker cp nginx:/usr/share/nginx/html/index.html /opt/docker_nginx/www/&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;编辑宿主机上的nginx相关配置文件&#34;&gt;&lt;a href=&#34;#编辑宿主机上的nginx相关配置文件&#34; class=&#34;headerlink&#34; title=&#34;编辑宿主机上的nginx相关配置文件&#34;&gt;&lt;/a&gt;编辑宿主机上的nginx相关配置文件&lt;/h3&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;首先修改 nginx.conf 配置文件&lt;/strong&gt;，修改后结果是：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527838034307-65530160-3710-4246-a816-9703af4fc524.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;a href=&#34;http://www.cicoding.cn/images/docker/1527838034307-65530160-3710-4246-a816-9703af4fc524.png&#34;&gt;http://www.cicoding.cn/images/docker/1527838034307-65530160-3710-4246-a816-9703af4fc524.png&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其中error_log的配置，就是我们前面在宿主机下面创建的nginx的log目录。&lt;/p&gt;
+&lt;p&gt;注意需要修改最下面的include配置，指定宿主机下面的default.conf配置文件（default&amp;#x2F;conf与nginx.conf在相同目录下，所以直接写名称即可，无需指定具体目录路径）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;编辑default.conf文件&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;vim /opt/docker_nginx/conf/default.conf&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;修改文件中的 access_log 以及 root 配置，效果如下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527838387330-9501c9c8-1d8b-44e0-a177-d61a8c4699fa.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;同样，access_log 以及 root 的配置，就是我们前面在宿主机下面创建的nginx的相关目录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;重启nginx容器&#34;&gt;&lt;a href=&#34;#重启nginx容器&#34; class=&#34;headerlink&#34; title=&#34;重启nginx容器&#34;&gt;&lt;/a&gt;重启nginx容器&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;先停止之前启动的nginx容器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker stop e4s&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;重启nginx容器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这次重启nginx容器的话，就不能使用一开始那种简单的run命令了，需要添加一些参数，具体命令如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run -p 80:80 --name nginx-new \&lt;br&gt;    -v /opt/docker_nginx/www:/usr/share/nginx/html \&lt;br&gt;    -v /opt/docker_nginx/log:/var/log/nginx \&lt;br&gt;    -v /opt/docker_nginx/conf/nginx.conf:/etc/nginx/conf \&lt;br&gt;    -d nginx&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;这里的 -v 参数的含义是，将宿主机上的目录挂载到容器中的对应目录。&lt;/p&gt;
+&lt;p&gt;“：”冒号前面是宿主机的目录，后面是容器中的目录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有些朋友可能会不搞不明白冒号后面的容器路径是怎么来的，这里解释一下，其实很简单，就是指的是nginx的默认的日志路径、配置文件路径。&lt;/p&gt;
+&lt;p&gt;你在nginx容器中去查看一下nginx.conf以及default.conf配置文件的内容，就可以看到log和配置文件的默认存储路径了。文章上面也有截图出来nginx.conf以及default.conf的默认配置截图，可自行翻阅到上面查看。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;查看启动的nginx容器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527839391119-1d98218f-62eb-46d4-8c8e-3047e30c773c.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;修改nginx默认首页内容&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;先看一下默认首页的样子：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527840233785-22a458d3-1123-4249-b671-179ccc7e41fe.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我们把这个首页内容全部删除掉，加入我们自己的内容！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;编辑宿主机下面的 &amp;#x2F;opt&amp;#x2F;docker_nginx&amp;#x2F;www&amp;#x2F;index.html 文件：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;vim /opt/docker_nginx/www/index.html&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;修改之后如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527840219657-335ad4a0-276f-47d3-b49a-0b55fa8299fd.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重新访问服务器域名，查看最终效果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527841014053-e2e485f8-a08e-40d7-bc05-603c7d32d43e.png&#34; alt=&#34;在Docker中安装Nginx&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果页面出现中文乱码的问题，可以在 index.html 好 标签里面加入：&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs html&#34;&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;meta&lt;/span&gt; &lt;span class=&#34;hljs-attr&#34;&gt;http-equiv&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;Content-Type&amp;quot;&lt;/span&gt; &lt;span class=&#34;hljs-attr&#34;&gt;content&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;text/html; charset=UTF-8&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最终index.html文件内容如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs html&#34;&gt;&lt;span class=&#34;hljs-meta&#34;&gt;&amp;lt;!DOCTYPE &lt;span class=&#34;hljs-keyword&#34;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;meta&lt;/span&gt; &lt;span class=&#34;hljs-attr&#34;&gt;http-equiv&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;Content-Type&amp;quot;&lt;/span&gt; &lt;span class=&#34;hljs-attr&#34;&gt;content&lt;/span&gt;=&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;text/html; charset=UTF-8&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;Welcome to nginx!&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;title&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;language-css&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;    &lt;span class=&#34;hljs-selector-tag&#34;&gt;body&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;        &lt;span class=&#34;hljs-attribute&#34;&gt;width&lt;/span&gt;: &lt;span class=&#34;hljs-number&#34;&gt;35em&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;        &lt;span class=&#34;hljs-attribute&#34;&gt;margin&lt;/span&gt;: &lt;span class=&#34;hljs-number&#34;&gt;0&lt;/span&gt; auto;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;        &lt;span class=&#34;hljs-attribute&#34;&gt;font-family&lt;/span&gt;: Tahoma, Verdana, Arial, sans-serif;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-css&#34;&gt;&lt;/span&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;style&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;head&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;h1&lt;/span&gt;&amp;gt;&lt;/span&gt;欢迎访问!&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;h1&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;&lt;span class=&#34;hljs-name&#34;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;当前nginx服务来源于Docker容器&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-tag&#34;&gt;&amp;lt;/&lt;span class=&#34;hljs-name&#34;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&amp;lt;/html&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
         <category term="Docker" />
         <category term="LINUX" />
@@ -1512,189 +1598,6 @@
         <updated>2023-05-28T13:00:29.384Z</updated>
     </entry>
     <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(2)-CentOS%E5%AE%89%E8%A3%85/</id>
-        <title>Docker(2)-CentOS安装</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(2)-CentOS%E5%AE%89%E8%A3%85/"/>
-        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
-&lt;p&gt;公众号：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/icons/wx.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;QQ群：&lt;a href=&#34;http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21&#34;&gt;806951874&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;在Centos系统中安装Docker&#34;&gt;&lt;a href=&#34;#在Centos系统中安装Docker&#34; class=&#34;headerlink&#34; title=&#34;在Centos系统中安装Docker&#34;&gt;&lt;/a&gt;在Centos系统中安装Docker&lt;/h1&gt;&lt;h2 id=&#34;前言-1&#34;&gt;&lt;a href=&#34;#前言-1&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;网上很多关于docker在centos系统上的安装教程，但是又各有异同，比较混乱。所以，此文章接下来的对于docker的安装，将参照官方的文档进行安装。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;官方文档地址：&lt;a href=&#34;https://docs.docker.com/install/linux/docker-ce/centos/&#34;&gt;https://docs.docker.com/install/linux/docker-ce/centos/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;Docker版本&#34;&gt;&lt;a href=&#34;#Docker版本&#34; class=&#34;headerlink&#34; title=&#34;Docker版本&#34;&gt;&lt;/a&gt;Docker版本&lt;/h2&gt;&lt;p&gt;Docker如今划分成了2个版本：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Docker CE（社区版）&lt;/li&gt;
-&lt;li&gt;Docker EE（企业版）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;具体详情以及区别，就不多做说明了。我们一般都会选择Docker CE（社区版），因为CE版本是开源免费的。对于大多数企业公司都比较节约成本。&lt;/p&gt;
-&lt;p&gt;因此，文章中所使用的Docker版本均为Docker CE版本。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;安装Docker CE版本的先决条件&lt;/p&gt;
-&lt;p&gt;官方文档中有这样一段描述：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;figure class=&#34;highlight tex&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs tex&#34;&gt;&amp;gt;&amp;gt; OS requirements&lt;br&gt;&amp;gt;&amp;gt; To install Docker CE, you need a maintained version of CentOS 7. Archived versions aren’t supported or tested.&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;翻译过来的中文意思就是：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;OS要求&lt;/p&gt;
-&lt;p&gt;要安装Docker CE，您需要维护的CentOS 7版本。不支持或测试归档版本。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;官方推荐的系统是centos7以上，但其实centos6也是可以安装docker的，并没有强制必须是centos7。&lt;/p&gt;
-&lt;p&gt;但是我的文章是基于最新的centos7系统，所以对于低版本的centos系统如何安装docker，请自行网上查找资料或者实际操作。&lt;/p&gt;
-&lt;p&gt;卸载旧版本&lt;/p&gt;
-&lt;p&gt;老版本的Docker被称为docker或docker-engine。如果安装了它们，请卸载它们以及相关的依赖项。&lt;/p&gt;
-&lt;p&gt;在Linux命令行执行的命令如下：&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum remove docker \&lt;br&gt;                  docker-client \&lt;br&gt;                  docker-client-latest \&lt;br&gt;                  docker-common \&lt;br&gt;                  docker-latest \&lt;br&gt;                  docker-latest-logrotate \&lt;br&gt;                  docker-logrotate \&lt;br&gt;                  docker-selinux \&lt;br&gt;                  docker-engine-selinux \&lt;br&gt;                  docker-engine \&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;安装Docker-CE&#34;&gt;&lt;a href=&#34;#安装Docker-CE&#34; class=&#34;headerlink&#34; title=&#34;安装Docker CE&#34;&gt;&lt;/a&gt;安装Docker CE&lt;/h2&gt;&lt;p&gt;Docker CE安装的不同方式&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;设置Docker的存储库并从中进行安装，以便安装和升级任务。这是推荐的方法。&lt;/li&gt;
-&lt;li&gt;有些用户下载RPM软件包并手动安装，并完全手动管理升级。这对于在无法访问互联网的系统上安装Docker等情况很有用。&lt;/li&gt;
-&lt;li&gt;在测试和开发环境中，一些用户选择使用自动便利脚本来安装Docker。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这里我们就选择第一种方式进行安装，这也是推荐的做法。&lt;/p&gt;
-&lt;p&gt;至于其他的安装方式，可自行网上学习，这里不做过多讲解。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;使用存储库进行安装&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;首次在新主机上安装Docker CE之前，需要设置Docker存储库。之后，您可以从存储库安装和更新Docker。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;设置存储库&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;安装所需的包。 yum-utils提供yum-config-manager实用程序，devicemapper存储驱动程序需要device-mapper-persistent-data和lvm2。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum install -y yum-utils \&lt;br&gt;  device-mapper-persistent-data \&lt;br&gt;  lvm2 \&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-&lt;li&gt;使用以下命令设置稳定的存储库。 即使您想从边缘或测试存储库安装构建，也总是需要稳定的存储库。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum-config-manager \&lt;br&gt;    --add-repo \&lt;br&gt;    https://download.docker.com/linux/centos/docker-ce.repo&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-&lt;li&gt;（可选）：启用边缘和测试存储库。 这些存储库包含在上面的docker.repo文件中，但默认情况下处于禁用状态。 您可以将它们与稳定的存储库一起启用。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum-config-manager --enable docker-ce-edge&lt;br&gt;yum-config-manager --enable docker-ce-test&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-&lt;li&gt;（可选）：与上一步相反的作用。通过使用–disable标志运行yum-config-manager命令，可以禁用边缘或测试存储库。 要重新启用它，请使用–enable标志。 以下命令禁用边缘存储库。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum-config-manager --disable docker-ce-edge&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：从Docker 17.06开始，稳定版本也被推到&lt;strong&gt;边缘&lt;/strong&gt;并&lt;strong&gt;测试&lt;/strong&gt;版本库。&lt;/p&gt;
-&lt;p&gt;了解稳定和边缘构建 :&lt;a href=&#34;https://docs.docker.com/install/&#34;&gt;https://docs.docker.com/install/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;安装Docker CE&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;安装最新版本的Docker CE：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum install docker-ce&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;如果命令行下面出现如下图所示的确认信息，请输入“y”继续，主要是用于处理依赖包的事情&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527434165078-d4b449d2-24f3-4acc-90b1-033301c4fbce.png&#34; alt=&#34;在Centos系统中安装Docker&#34;&gt;&lt;/p&gt;
-&lt;p&gt;如果没有，则需要添加yum源：&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201002234210.png&#34; alt=&#34;QQ20201002-231329&#34;&gt;&lt;/p&gt;
-&lt;p&gt;上一步输入“y”之后，后面可能会遇到下图所示的确认提示信息，同样的输入“y”即可：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201002234320.png&#34; alt=&#34;QQ20201002-231411&#34;&gt;&lt;/p&gt;
-&lt;p&gt;稍作等待，当命令行最终输出“Complete！”即表示安装完成：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201002234614.png&#34; alt=&#34;QQ20201002-232659&#34;&gt;&lt;/p&gt;
-&lt;p&gt;启动Docker&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;systemctl start docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;验证Docker是否安装成功&#34;&gt;&lt;a href=&#34;#验证Docker是否安装成功&#34; class=&#34;headerlink&#34; title=&#34;验证Docker是否安装成功&#34;&gt;&lt;/a&gt;验证Docker是否安装成功&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;最简单的验证方式，就是使用 docker version 命令，类似于JDK的 java -version 一样的道理。&lt;/p&gt;
-&lt;p&gt;Docker安装成功的话，就可以直接在命令行运行Docker的命令的。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker version&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;如果出现如下图所示信息，说明Docker以及安装成功了！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201003172941.png&#34; alt=&#34;QQ20201002-232747&#34;&gt;&lt;/p&gt;
-&lt;p&gt;【可选】：当然，你也可以通过运行 hello-world 映像来检验Docker是否安装成功：&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run hello-world&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;上面的命令含义：下载官方提供的用于测试使用的hello-world镜像并将其运行到容器中，来检验Docker服务是否正常安装并运行。&lt;/p&gt;
-&lt;p&gt;执行上面的命令之后，Docker会自动下载hello-world镜像并自动运行到容器中，当命令行中出现“Hello from Docker!”的字样，说明已经成功运行了hello-world镜像，一切就OK了！&lt;/p&gt;
-&lt;p&gt;这里就简单的作为Docker的入门操作，很简单的吧。让你有一个比较直观的感觉~&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201003201011.png&#34; alt=&#34;截屏2020-10-03 下午5.35.22&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;Docker默认挂载目录&#34;&gt;&lt;a href=&#34;#Docker默认挂载目录&#34; class=&#34;headerlink&#34; title=&#34;Docker默认挂载目录&#34;&gt;&lt;/a&gt;Docker默认挂载目录&lt;/h2&gt;&lt;p&gt;Docker CE安装成功之后，你可以发现 &amp;#x2F;var&amp;#x2F;lib 目录下有一个 docker 目录，你可以进入Docker目录查看Docker的一些结构，如下图所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201003201219.png&#34; alt=&#34;截屏2020-10-03 下午8.07.15&#34;&gt;&lt;/p&gt;
-&lt;p&gt;其中有一个containers 目录，这个目录就是存放Docker容器的。上面我们有提及到 hello-world 镜像，如果你运行了 hello-world 镜像，那么这个镜像所生成的容器信息，就会存储在 containers 目录中。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;具体 containers 目录中存放了什么内容，可自行网上查询资料学习。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;启动Docker&#34;&gt;&lt;a href=&#34;#启动Docker&#34; class=&#34;headerlink&#34; title=&#34;启动Docker&#34;&gt;&lt;/a&gt;启动Docker&lt;/h2&gt;&lt;p&gt;配置Docker在系统启动时启动&lt;/p&gt;
-&lt;p&gt;未配置Docker在系统启动时启动，则系统重启之后，Docker服务是无法正常访问&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;如何解决？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;手动启动Docker服务：&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;通过在命令行中执行以下命令，即可实现Docker服务的启动：&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;systemctl start docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;这时候重新在命令行中执行 docker version命令，效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201003201651.png&#34; alt=&#34;QQ20201002-232747&#34;&gt;&lt;/p&gt;
-&lt;p&gt;出现Server相关的信息，标明Docker服务正常启动了，就可以对Docker进行一系列操作&lt;/p&gt;
-&lt;p&gt;上面这种启动方式存在什么不足呢？&lt;/p&gt;
-&lt;p&gt;当服务器重启的时候，Docker服务依然不能自动启动，还是需要手工去启动Docker服务。&lt;/p&gt;
-&lt;p&gt;那能不能做到系统重启之后，Docker服务自动启动，答案肯定是有的。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;实现Docker服务随着系统重启后自动启动&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;大多数当前的Linux发行版（RHEL，CentOS，Fedora，Ubuntu 16.04和更高版本）使用systemd来管理在系统启动时启动哪些服务。&lt;/p&gt;
-&lt;p&gt;通过在命令行执行以下命令，用于设置Docker在系统重启时，自动启动Docker服务&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;systemctl enable docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;执行该命令之后，会显示如下结果：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201003202021.png&#34; alt=&#34;QQ20201002-232845&#34;&gt;&lt;/p&gt;
-&lt;p&gt;主要的意思就是 设置Docker服务会随着服务器重启，会自动启动Docker服务。&lt;/p&gt;
-&lt;p&gt;当然，执行该命令之后，对于当前的Docker服务状况是没有启动服务的，需要手动启动Docker服务；只有下次服务器重启，就无需手动启动Docker服务了。&lt;/p&gt;
-&lt;p&gt;官方文档介绍：&lt;a href=&#34;https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot&#34;&gt;https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;注意一点：由于Linux不同版本的系统的差异、或者低版本的系统，命令或许会出现差异。如有遇到这样的问题，请自行网上查找资料解决。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;卸载Docker-CE&#34;&gt;&lt;a href=&#34;#卸载Docker-CE&#34; class=&#34;headerlink&#34; title=&#34;卸载Docker CE&#34;&gt;&lt;/a&gt;卸载Docker CE&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;如果需要卸载机器上已经安装的Docker CE，可以通过简单命令实现。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;卸载Docker包：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum remove docker-ce&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;ol&gt;
-&lt;li&gt;上面的命令，不会自动删除主机上的图像，容器，卷或自定义配置文件。要想删除所有图像，容器和卷，执行以下命令：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;rm -rf /var/lib/docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;注意：必须手动删除任何已编辑的配置文件&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;shell一键安装&#34;&gt;&lt;a href=&#34;#shell一键安装&#34; class=&#34;headerlink&#34; title=&#34;shell一键安装&#34;&gt;&lt;/a&gt;shell一键安装&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;curl -fsSL get.docker.com -o get-docker.sh&lt;br&gt;sudo sh get-docker.sh&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;这样执行完了就完成安装了，简单便捷&lt;/p&gt;
-&lt;p&gt;然后启动docker&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;sudo systemctl start docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-        <category term="Docker" />
-        <category term="LINUX" />
-        <updated>2023-05-28T13:00:29.383Z</updated>
-    </entry>
-    <entry>
         <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(3)-%E5%AE%89%E8%A3%85jdk/</id>
         <title>Docker(3)-安装jdk</title>
         <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(3)-%E5%AE%89%E8%A3%85jdk/"/>
@@ -1872,6 +1775,189 @@
 &lt;blockquote&gt;
 &lt;p&gt;上面是通过容器别名来停止容器的，你也可以使用容器ID。&lt;/p&gt;
 &lt;/blockquote&gt;
+</content>
+        <category term="Docker" />
+        <category term="LINUX" />
+        <updated>2023-05-28T13:00:29.383Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(2)-CentOS%E5%AE%89%E8%A3%85/</id>
+        <title>Docker(2)-CentOS安装</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Docker/Docker(2)-CentOS%E5%AE%89%E8%A3%85/"/>
+        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;本人文章均引用或者复制：&lt;/p&gt;
+&lt;p&gt;公众号：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/icons/wx.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;QQ群：&lt;a href=&#34;http://shang.qq.com/wpa/qunwpa?idkey=85cfa5c4c8fbe9859b7166a33d84c32f2def325c4d29f35f299a5756a955ab21&#34;&gt;806951874&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;在Centos系统中安装Docker&#34;&gt;&lt;a href=&#34;#在Centos系统中安装Docker&#34; class=&#34;headerlink&#34; title=&#34;在Centos系统中安装Docker&#34;&gt;&lt;/a&gt;在Centos系统中安装Docker&lt;/h1&gt;&lt;h2 id=&#34;前言-1&#34;&gt;&lt;a href=&#34;#前言-1&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;网上很多关于docker在centos系统上的安装教程，但是又各有异同，比较混乱。所以，此文章接下来的对于docker的安装，将参照官方的文档进行安装。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;官方文档地址：&lt;a href=&#34;https://docs.docker.com/install/linux/docker-ce/centos/&#34;&gt;https://docs.docker.com/install/linux/docker-ce/centos/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;Docker版本&#34;&gt;&lt;a href=&#34;#Docker版本&#34; class=&#34;headerlink&#34; title=&#34;Docker版本&#34;&gt;&lt;/a&gt;Docker版本&lt;/h2&gt;&lt;p&gt;Docker如今划分成了2个版本：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Docker CE（社区版）&lt;/li&gt;
+&lt;li&gt;Docker EE（企业版）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;具体详情以及区别，就不多做说明了。我们一般都会选择Docker CE（社区版），因为CE版本是开源免费的。对于大多数企业公司都比较节约成本。&lt;/p&gt;
+&lt;p&gt;因此，文章中所使用的Docker版本均为Docker CE版本。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装Docker CE版本的先决条件&lt;/p&gt;
+&lt;p&gt;官方文档中有这样一段描述：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight tex&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs tex&#34;&gt;&amp;gt;&amp;gt; OS requirements&lt;br&gt;&amp;gt;&amp;gt; To install Docker CE, you need a maintained version of CentOS 7. Archived versions aren’t supported or tested.&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;翻译过来的中文意思就是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OS要求&lt;/p&gt;
+&lt;p&gt;要安装Docker CE，您需要维护的CentOS 7版本。不支持或测试归档版本。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;官方推荐的系统是centos7以上，但其实centos6也是可以安装docker的，并没有强制必须是centos7。&lt;/p&gt;
+&lt;p&gt;但是我的文章是基于最新的centos7系统，所以对于低版本的centos系统如何安装docker，请自行网上查找资料或者实际操作。&lt;/p&gt;
+&lt;p&gt;卸载旧版本&lt;/p&gt;
+&lt;p&gt;老版本的Docker被称为docker或docker-engine。如果安装了它们，请卸载它们以及相关的依赖项。&lt;/p&gt;
+&lt;p&gt;在Linux命令行执行的命令如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum remove docker \&lt;br&gt;                  docker-client \&lt;br&gt;                  docker-client-latest \&lt;br&gt;                  docker-common \&lt;br&gt;                  docker-latest \&lt;br&gt;                  docker-latest-logrotate \&lt;br&gt;                  docker-logrotate \&lt;br&gt;                  docker-selinux \&lt;br&gt;                  docker-engine-selinux \&lt;br&gt;                  docker-engine \&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;安装Docker-CE&#34;&gt;&lt;a href=&#34;#安装Docker-CE&#34; class=&#34;headerlink&#34; title=&#34;安装Docker CE&#34;&gt;&lt;/a&gt;安装Docker CE&lt;/h2&gt;&lt;p&gt;Docker CE安装的不同方式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置Docker的存储库并从中进行安装，以便安装和升级任务。这是推荐的方法。&lt;/li&gt;
+&lt;li&gt;有些用户下载RPM软件包并手动安装，并完全手动管理升级。这对于在无法访问互联网的系统上安装Docker等情况很有用。&lt;/li&gt;
+&lt;li&gt;在测试和开发环境中，一些用户选择使用自动便利脚本来安装Docker。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里我们就选择第一种方式进行安装，这也是推荐的做法。&lt;/p&gt;
+&lt;p&gt;至于其他的安装方式，可自行网上学习，这里不做过多讲解。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用存储库进行安装&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;首次在新主机上安装Docker CE之前，需要设置Docker存储库。之后，您可以从存储库安装和更新Docker。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;设置存储库&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;安装所需的包。 yum-utils提供yum-config-manager实用程序，devicemapper存储驱动程序需要device-mapper-persistent-data和lvm2。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum install -y yum-utils \&lt;br&gt;  device-mapper-persistent-data \&lt;br&gt;  lvm2 \&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;使用以下命令设置稳定的存储库。 即使您想从边缘或测试存储库安装构建，也总是需要稳定的存储库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum-config-manager \&lt;br&gt;    --add-repo \&lt;br&gt;    https://download.docker.com/linux/centos/docker-ce.repo&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;（可选）：启用边缘和测试存储库。 这些存储库包含在上面的docker.repo文件中，但默认情况下处于禁用状态。 您可以将它们与稳定的存储库一起启用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum-config-manager --enable docker-ce-edge&lt;br&gt;yum-config-manager --enable docker-ce-test&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;（可选）：与上一步相反的作用。通过使用–disable标志运行yum-config-manager命令，可以禁用边缘或测试存储库。 要重新启用它，请使用–enable标志。 以下命令禁用边缘存储库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum-config-manager --disable docker-ce-edge&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：从Docker 17.06开始，稳定版本也被推到&lt;strong&gt;边缘&lt;/strong&gt;并&lt;strong&gt;测试&lt;/strong&gt;版本库。&lt;/p&gt;
+&lt;p&gt;了解稳定和边缘构建 :&lt;a href=&#34;https://docs.docker.com/install/&#34;&gt;https://docs.docker.com/install/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;安装Docker CE&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;安装最新版本的Docker CE：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum install docker-ce&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如果命令行下面出现如下图所示的确认信息，请输入“y”继续，主要是用于处理依赖包的事情&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.cicoding.cn/images/docker/1527434165078-d4b449d2-24f3-4acc-90b1-033301c4fbce.png&#34; alt=&#34;在Centos系统中安装Docker&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如果没有，则需要添加yum源：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201002234210.png&#34; alt=&#34;QQ20201002-231329&#34;&gt;&lt;/p&gt;
+&lt;p&gt;上一步输入“y”之后，后面可能会遇到下图所示的确认提示信息，同样的输入“y”即可：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201002234320.png&#34; alt=&#34;QQ20201002-231411&#34;&gt;&lt;/p&gt;
+&lt;p&gt;稍作等待，当命令行最终输出“Complete！”即表示安装完成：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201002234614.png&#34; alt=&#34;QQ20201002-232659&#34;&gt;&lt;/p&gt;
+&lt;p&gt;启动Docker&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;systemctl start docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;验证Docker是否安装成功&#34;&gt;&lt;a href=&#34;#验证Docker是否安装成功&#34; class=&#34;headerlink&#34; title=&#34;验证Docker是否安装成功&#34;&gt;&lt;/a&gt;验证Docker是否安装成功&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;最简单的验证方式，就是使用 docker version 命令，类似于JDK的 java -version 一样的道理。&lt;/p&gt;
+&lt;p&gt;Docker安装成功的话，就可以直接在命令行运行Docker的命令的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker version&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如果出现如下图所示信息，说明Docker以及安装成功了！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201003172941.png&#34; alt=&#34;QQ20201002-232747&#34;&gt;&lt;/p&gt;
+&lt;p&gt;【可选】：当然，你也可以通过运行 hello-world 映像来检验Docker是否安装成功：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;docker run hello-world&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;上面的命令含义：下载官方提供的用于测试使用的hello-world镜像并将其运行到容器中，来检验Docker服务是否正常安装并运行。&lt;/p&gt;
+&lt;p&gt;执行上面的命令之后，Docker会自动下载hello-world镜像并自动运行到容器中，当命令行中出现“Hello from Docker!”的字样，说明已经成功运行了hello-world镜像，一切就OK了！&lt;/p&gt;
+&lt;p&gt;这里就简单的作为Docker的入门操作，很简单的吧。让你有一个比较直观的感觉~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201003201011.png&#34; alt=&#34;截屏2020-10-03 下午5.35.22&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;Docker默认挂载目录&#34;&gt;&lt;a href=&#34;#Docker默认挂载目录&#34; class=&#34;headerlink&#34; title=&#34;Docker默认挂载目录&#34;&gt;&lt;/a&gt;Docker默认挂载目录&lt;/h2&gt;&lt;p&gt;Docker CE安装成功之后，你可以发现 &amp;#x2F;var&amp;#x2F;lib 目录下有一个 docker 目录，你可以进入Docker目录查看Docker的一些结构，如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201003201219.png&#34; alt=&#34;截屏2020-10-03 下午8.07.15&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其中有一个containers 目录，这个目录就是存放Docker容器的。上面我们有提及到 hello-world 镜像，如果你运行了 hello-world 镜像，那么这个镜像所生成的容器信息，就会存储在 containers 目录中。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;具体 containers 目录中存放了什么内容，可自行网上查询资料学习。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;启动Docker&#34;&gt;&lt;a href=&#34;#启动Docker&#34; class=&#34;headerlink&#34; title=&#34;启动Docker&#34;&gt;&lt;/a&gt;启动Docker&lt;/h2&gt;&lt;p&gt;配置Docker在系统启动时启动&lt;/p&gt;
+&lt;p&gt;未配置Docker在系统启动时启动，则系统重启之后，Docker服务是无法正常访问&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如何解决？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;手动启动Docker服务：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;通过在命令行中执行以下命令，即可实现Docker服务的启动：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;systemctl start docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这时候重新在命令行中执行 docker version命令，效果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201003201651.png&#34; alt=&#34;QQ20201002-232747&#34;&gt;&lt;/p&gt;
+&lt;p&gt;出现Server相关的信息，标明Docker服务正常启动了，就可以对Docker进行一系列操作&lt;/p&gt;
+&lt;p&gt;上面这种启动方式存在什么不足呢？&lt;/p&gt;
+&lt;p&gt;当服务器重启的时候，Docker服务依然不能自动启动，还是需要手工去启动Docker服务。&lt;/p&gt;
+&lt;p&gt;那能不能做到系统重启之后，Docker服务自动启动，答案肯定是有的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;实现Docker服务随着系统重启后自动启动&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;大多数当前的Linux发行版（RHEL，CentOS，Fedora，Ubuntu 16.04和更高版本）使用systemd来管理在系统启动时启动哪些服务。&lt;/p&gt;
+&lt;p&gt;通过在命令行执行以下命令，用于设置Docker在系统重启时，自动启动Docker服务&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;systemctl enable docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;执行该命令之后，会显示如下结果：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/yangxiangnanWorkSpace/uploadImages/raw/master/static/20201003202021.png&#34; alt=&#34;QQ20201002-232845&#34;&gt;&lt;/p&gt;
+&lt;p&gt;主要的意思就是 设置Docker服务会随着服务器重启，会自动启动Docker服务。&lt;/p&gt;
+&lt;p&gt;当然，执行该命令之后，对于当前的Docker服务状况是没有启动服务的，需要手动启动Docker服务；只有下次服务器重启，就无需手动启动Docker服务了。&lt;/p&gt;
+&lt;p&gt;官方文档介绍：&lt;a href=&#34;https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot&#34;&gt;https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意一点：由于Linux不同版本的系统的差异、或者低版本的系统，命令或许会出现差异。如有遇到这样的问题，请自行网上查找资料解决。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;卸载Docker-CE&#34;&gt;&lt;a href=&#34;#卸载Docker-CE&#34; class=&#34;headerlink&#34; title=&#34;卸载Docker CE&#34;&gt;&lt;/a&gt;卸载Docker CE&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;如果需要卸载机器上已经安装的Docker CE，可以通过简单命令实现。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;卸载Docker包：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;yum remove docker-ce&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;上面的命令，不会自动删除主机上的图像，容器，卷或自定义配置文件。要想删除所有图像，容器和卷，执行以下命令：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;rm -rf /var/lib/docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;注意：必须手动删除任何已编辑的配置文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;shell一键安装&#34;&gt;&lt;a href=&#34;#shell一键安装&#34; class=&#34;headerlink&#34; title=&#34;shell一键安装&#34;&gt;&lt;/a&gt;shell一键安装&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;curl -fsSL get.docker.com -o get-docker.sh&lt;br&gt;sudo sh get-docker.sh&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这样执行完了就完成安装了，简单便捷&lt;/p&gt;
+&lt;p&gt;然后启动docker&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;sudo systemctl start docker&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
         <category term="Docker" />
         <category term="LINUX" />

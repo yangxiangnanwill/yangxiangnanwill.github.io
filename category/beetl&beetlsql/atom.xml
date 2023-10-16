@@ -4,125 +4,74 @@
     <title>Will • Posts by &#34;beetl&amp;beetlsql&#34; category</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
     <updated>2023-05-28T13:00:29.389Z</updated>
-    <category term="开发习惯" />
-    <category term="思考" />
     <category term="感言" />
-    <category term="读书笔记" />
+    <category term="思考" />
+    <category term="开发习惯" />
     <category term="Docker" />
     <category term="LINUX" />
     <category term="CentOS" />
     <category term="Linux" />
-    <category term="Crontab" />
     <category term="Jenkins" />
+    <category term="Crontab" />
     <category term="Maven" />
-    <category term="Node" />
-    <category term="前端" />
-    <category term="IDEA" />
-    <category term="Alibaba Cloud Toolkit" />
     <category term="Archery" />
     <category term="MySql" />
     <category term="工具" />
-    <category term="Nvm" />
+    <category term="IDEA" />
+    <category term="Alibaba Cloud Toolkit" />
     <category term="Git" />
-    <category term="CentOS7" />
-    <category term="MongoDB" />
-    <category term="Redis" />
+    <category term="PostMan" />
+    <category term="Typora" />
+    <category term="Node" />
+    <category term="前端" />
+    <category term="Nvm" />
+    <category term="信息安全等级保护认证" />
+    <category term="系统认证" />
+    <category term="读书笔记" />
+    <category term="JAVA" />
+    <category term="Java8" />
+    <category term="特性" />
+    <category term="枚举" />
     <category term="BeetlSql" />
     <category term="Beetl" />
-    <category term="Java IO-初识IO" />
-    <category term="JAVA" />
-    <category term="枚举" />
+    <category term="ProtoBuffer" />
     <category term="异常" />
+    <category term="Java IO-初识IO" />
+    <category term="JDBC" />
+    <category term="Mysql" />
     <category term="POI" />
+    <category term="EasyExcel" />
+    <category term="MyBatis" />
     <category term="Spring" />
     <category term="SpringCloud" />
     <category term="SpringCloud Alibaba" />
     <category term="Spring Boot" />
-    <category term="ProtoBuffer" />
     <category term="其他" />
     <category term="SOAR" />
+    <category term="VerificationCode" />
+    <category term="VinUtil" />
+    <category term="MongoDb" />
     <category term="博客园" />
     <category term="博客" />
-    <category term="异步编程" />
-    <category term="线程" />
-    <category term="VerificationCode" />
-    <category term="MongoDb" />
-    <category term="VinUtil" />
-    <category term="Hutool" />
+    <category term="Apache Common" />
     <category term="工具类" />
     <category term="常用开发库" />
+    <category term="Google Guava" />
+    <category term="Hutool" />
     <category term="Lombok工具库详解" />
     <category term="JSON类库详解" />
     <category term="Spring常用工具类" />
+    <category term="日志类库详解" />
+    <category term="异步编程" />
+    <category term="线程" />
+    <category term="CentOS7" />
+    <category term="MongoDB" />
+    <category term="Redis" />
+    <category term="设计模式" />
+    <category term="VMware" />
     <category term="方法论" />
     <category term="开源协议" />
-    <category term="PostMan" />
-    <category term="Typora" />
-    <category term="Java8" />
-    <category term="特性" />
-    <category term="EasyExcel" />
-    <category term="JDBC" />
-    <category term="Mysql" />
-    <category term="日志类库详解" />
     <category term="Script" />
-    <category term="设计模式" />
-    <category term="MyBatis" />
-    <category term="Google Guava" />
-    <category term="Apache Common" />
-    <entry>
-        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/Beetl&amp;BeetlSql/BeetlSql/</id>
-        <title>BeetlSql</title>
-        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/Beetl&amp;BeetlSql/BeetlSql/"/>
-        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;因本人项目需要接触了一下国内一款ORM框架，感觉用着很爽，项目易于管理，特此介绍一下。详情请点解下方官网：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://ibeetl.com/&#34;&gt;BeetlSql官网&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;BeetlSql是什么&#34;&gt;&lt;a href=&#34;#BeetlSql是什么&#34; class=&#34;headerlink&#34; title=&#34;BeetlSql是什么&#34;&gt;&lt;/a&gt;BeetlSql是什么&lt;/h1&gt;&lt;p&gt;BeetlSQL 是一个全功能 DAO 工具，同时具有 Hibernate 优点 &amp;amp; Mybatis 优点功能，适用于承认以 SQL 为中心，同时又需求工具能自动能生成大量常用的 SQL 的应用。&lt;/p&gt;
-&lt;h1 id=&#34;BeetlSql优点&#34;&gt;&lt;a href=&#34;#BeetlSql优点&#34; class=&#34;headerlink&#34; title=&#34;BeetlSql优点&#34;&gt;&lt;/a&gt;BeetlSql优点&lt;/h1&gt;&lt;p&gt;BeetSql是一个全功能DAO工具， 同时具有Hibernate 优点 &amp;amp; Mybatis优点功能，适用于承认以SQL为中心，同时又需求工具能自动能生成大量常用的SQL的应用。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;开发效率高&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;无需注解，自动使用大量内置SQL，轻易完成增删改查功能，节省50%的开发工作量。 数据模型支持Pojo，也支持Map&amp;#x2F;List这种快速模型，也支持混合模型。 SQL 模板基于Beetl实现，更容易写和调试，以及扩展。 可以针对单个表(或者视图）代码生成pojo类和sql模版，甚至是整个数据库。能减少代码编写工作量。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;易于维护&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;SQL 以更简洁的方式，Markdown方式集中管理，同时方便程序开发和数据库SQL调试。可以自动将sql文件映射为dao接口类。灵活直观的支持支持一对一，一对多，多对多关系映射而不引入复杂的OR Mapping概念和技术。具备Interceptor功能，可以调试，性能诊断SQL，以及扩展其他功能&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;其他特色&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;内置支持主从数据库支持的开源工具，支持跨数据库平台，开发者所需工作减少到最小，目前跨数据库支持MySql、Postgres、Oracle、SQLServer、h2、SQLite、DB2。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;p&gt;以上来自官网介绍。一下为本人感受：&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;中文文档全面&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;中文官网解析非常全面清晰，API解释非常清晰，易于理解。&lt;/li&gt;
-&lt;li&gt;方法内部参数解析清晰、完成，可随时观看&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;SQL默认debug，输出打印美化，方便排查问题和SQL分析&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;相对于复杂SQL分析排查我觉得BeetlSql自带的console日志打印输出非常好用。&lt;/li&gt;
-&lt;li&gt;SQLconsole打印优雅。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;BeetlSql缺点&#34;&gt;&lt;a href=&#34;#BeetlSql缺点&#34; class=&#34;headerlink&#34; title=&#34;BeetlSql缺点&#34;&gt;&lt;/a&gt;BeetlSql缺点&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;小众，使用数量较少&lt;/li&gt;
-&lt;li&gt;社区不够活跃&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-        <category term="BeetlSql" />
-        <category term="Beetl" />
-        <updated>2023-05-28T13:00:29.389Z</updated>
-    </entry>
     <entry>
         <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/Beetl&amp;BeetlSql/BeetlSql&amp;ProtoBuffer%E5%AE%9E%E8%B7%B5Demo/</id>
         <title>BeetlSql&amp;ProtoBuffer实践Demo</title>
@@ -331,6 +280,60 @@
         <category term="BeetlSql" />
         <category term="Beetl" />
         <category term="ProtoBuffer" />
+        <updated>2023-05-28T13:00:29.389Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/Beetl&amp;BeetlSql/BeetlSql/</id>
+        <title>BeetlSql</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/Beetl&amp;BeetlSql/BeetlSql/"/>
+        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;因本人项目需要接触了一下国内一款ORM框架，感觉用着很爽，项目易于管理，特此介绍一下。详情请点解下方官网：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://ibeetl.com/&#34;&gt;BeetlSql官网&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;BeetlSql是什么&#34;&gt;&lt;a href=&#34;#BeetlSql是什么&#34; class=&#34;headerlink&#34; title=&#34;BeetlSql是什么&#34;&gt;&lt;/a&gt;BeetlSql是什么&lt;/h1&gt;&lt;p&gt;BeetlSQL 是一个全功能 DAO 工具，同时具有 Hibernate 优点 &amp;amp; Mybatis 优点功能，适用于承认以 SQL 为中心，同时又需求工具能自动能生成大量常用的 SQL 的应用。&lt;/p&gt;
+&lt;h1 id=&#34;BeetlSql优点&#34;&gt;&lt;a href=&#34;#BeetlSql优点&#34; class=&#34;headerlink&#34; title=&#34;BeetlSql优点&#34;&gt;&lt;/a&gt;BeetlSql优点&lt;/h1&gt;&lt;p&gt;BeetSql是一个全功能DAO工具， 同时具有Hibernate 优点 &amp;amp; Mybatis优点功能，适用于承认以SQL为中心，同时又需求工具能自动能生成大量常用的SQL的应用。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;开发效率高&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;无需注解，自动使用大量内置SQL，轻易完成增删改查功能，节省50%的开发工作量。 数据模型支持Pojo，也支持Map&amp;#x2F;List这种快速模型，也支持混合模型。 SQL 模板基于Beetl实现，更容易写和调试，以及扩展。 可以针对单个表(或者视图）代码生成pojo类和sql模版，甚至是整个数据库。能减少代码编写工作量。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;易于维护&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SQL 以更简洁的方式，Markdown方式集中管理，同时方便程序开发和数据库SQL调试。可以自动将sql文件映射为dao接口类。灵活直观的支持支持一对一，一对多，多对多关系映射而不引入复杂的OR Mapping概念和技术。具备Interceptor功能，可以调试，性能诊断SQL，以及扩展其他功能&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;其他特色&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;内置支持主从数据库支持的开源工具，支持跨数据库平台，开发者所需工作减少到最小，目前跨数据库支持MySql、Postgres、Oracle、SQLServer、h2、SQLite、DB2。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;以上来自官网介绍。一下为本人感受：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;中文文档全面&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;中文官网解析非常全面清晰，API解释非常清晰，易于理解。&lt;/li&gt;
+&lt;li&gt;方法内部参数解析清晰、完成，可随时观看&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SQL默认debug，输出打印美化，方便排查问题和SQL分析&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;相对于复杂SQL分析排查我觉得BeetlSql自带的console日志打印输出非常好用。&lt;/li&gt;
+&lt;li&gt;SQLconsole打印优雅。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;BeetlSql缺点&#34;&gt;&lt;a href=&#34;#BeetlSql缺点&#34; class=&#34;headerlink&#34; title=&#34;BeetlSql缺点&#34;&gt;&lt;/a&gt;BeetlSql缺点&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;小众，使用数量较少&lt;/li&gt;
+&lt;li&gt;社区不够活跃&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="BeetlSql" />
+        <category term="Beetl" />
         <updated>2023-05-28T13:00:29.389Z</updated>
     </entry>
 </feed>

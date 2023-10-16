@@ -4,71 +4,74 @@
     <title>Will • Posts by &#34;json类库详解&#34; tag</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
     <updated>2023-07-19T05:14:41.186Z</updated>
-    <category term="开发习惯" />
-    <category term="思考" />
     <category term="感言" />
-    <category term="读书笔记" />
+    <category term="思考" />
+    <category term="开发习惯" />
     <category term="Docker" />
     <category term="LINUX" />
     <category term="CentOS" />
     <category term="Linux" />
-    <category term="Crontab" />
     <category term="Jenkins" />
+    <category term="Crontab" />
     <category term="Maven" />
-    <category term="Node" />
-    <category term="前端" />
-    <category term="IDEA" />
-    <category term="Alibaba Cloud Toolkit" />
     <category term="Archery" />
     <category term="MySql" />
     <category term="工具" />
-    <category term="Nvm" />
+    <category term="IDEA" />
+    <category term="Alibaba Cloud Toolkit" />
     <category term="Git" />
-    <category term="CentOS7" />
-    <category term="MongoDB" />
-    <category term="Redis" />
+    <category term="PostMan" />
+    <category term="Typora" />
+    <category term="Node" />
+    <category term="前端" />
+    <category term="Nvm" />
+    <category term="信息安全等级保护认证" />
+    <category term="系统认证" />
+    <category term="读书笔记" />
+    <category term="JAVA" />
+    <category term="Java8" />
+    <category term="特性" />
+    <category term="枚举" />
     <category term="BeetlSql" />
     <category term="Beetl" />
-    <category term="Java IO-初识IO" />
-    <category term="JAVA" />
-    <category term="枚举" />
+    <category term="ProtoBuffer" />
     <category term="异常" />
+    <category term="Java IO-初识IO" />
+    <category term="JDBC" />
+    <category term="Mysql" />
     <category term="POI" />
+    <category term="EasyExcel" />
+    <category term="MyBatis" />
     <category term="Spring" />
     <category term="SpringCloud" />
     <category term="SpringCloud Alibaba" />
     <category term="Spring Boot" />
-    <category term="ProtoBuffer" />
     <category term="其他" />
     <category term="SOAR" />
+    <category term="VerificationCode" />
+    <category term="VinUtil" />
+    <category term="MongoDb" />
     <category term="博客园" />
     <category term="博客" />
-    <category term="异步编程" />
-    <category term="线程" />
-    <category term="VerificationCode" />
-    <category term="MongoDb" />
-    <category term="VinUtil" />
-    <category term="Hutool" />
+    <category term="Apache Common" />
     <category term="工具类" />
     <category term="常用开发库" />
+    <category term="Google Guava" />
+    <category term="Hutool" />
     <category term="Lombok工具库详解" />
     <category term="JSON类库详解" />
     <category term="Spring常用工具类" />
+    <category term="日志类库详解" />
+    <category term="异步编程" />
+    <category term="线程" />
+    <category term="CentOS7" />
+    <category term="MongoDB" />
+    <category term="Redis" />
+    <category term="设计模式" />
+    <category term="VMware" />
     <category term="方法论" />
     <category term="开源协议" />
-    <category term="PostMan" />
-    <category term="Typora" />
-    <category term="Java8" />
-    <category term="特性" />
-    <category term="EasyExcel" />
-    <category term="JDBC" />
-    <category term="Mysql" />
-    <category term="日志类库详解" />
     <category term="Script" />
-    <category term="设计模式" />
-    <category term="MyBatis" />
-    <category term="Google Guava" />
-    <category term="Apache Common" />
     <entry>
         <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/07/19/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/JSON%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/</id>
         <title>JSON类库详解</title>
@@ -159,7 +162,10 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/alibaba/fastjson/issues&#34;&gt;alibaba&amp;#x2F;fastjson&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/question/44199956/answer/112224034&#34;&gt;fastjson这么快老外为啥还是热衷 jackson?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&#34;highlight django&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs django&#34;&gt;&lt;span class=&#34;hljs-template-tag&#34;&gt;&amp;#123;% &lt;span class=&#34;hljs-name&#34;&gt;note&lt;/span&gt; warning %&amp;#125;&lt;/span&gt;&lt;span class=&#34;language-xml&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-xml&#34;&gt;&lt;/span&gt;&lt;span class=&#34;hljs-template-tag&#34;&gt;&amp;#123;% &lt;span class=&#34;hljs-name&#34;&gt;label&lt;/span&gt; primary 警告 %&amp;#125;&lt;/span&gt;&lt;span class=&#34;language-xml&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-xml&#34;&gt;尽量使用最新版本。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;language-xml&#34;&gt;&lt;/span&gt;&lt;span class=&#34;hljs-template-tag&#34;&gt;&amp;#123;% &lt;span class=&#34;hljs-name&#34;&gt;endnote&lt;/span&gt; %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p class=&#34;note note-warning&#34;&gt;
+&lt;span class=&#34;label label-primary&#34;&gt;警告&lt;/span&gt;
+尽量使用最新版本。
+&lt;/p&gt;
 
 &lt;h1 id=&#34;JackSon&#34;&gt;&lt;a href=&#34;#JackSon&#34; class=&#34;headerlink&#34; title=&#34;JackSon&#34;&gt;&lt;/a&gt;JackSon&lt;/h1&gt;&lt;h2 id=&#34;简介-1&#34;&gt;&lt;a href=&#34;#简介-1&#34; class=&#34;headerlink&#34; title=&#34;简介&#34;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/FasterXML/jackson&#34;&gt;Jackson Github&lt;/a&gt; &lt;/li&gt;

@@ -4,71 +4,74 @@
     <title>Will • Posts by &#34;要有一颗大心脏&#34; category</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
     <updated>2023-05-28T13:00:29.423Z</updated>
-    <category term="开发习惯" />
-    <category term="思考" />
     <category term="感言" />
-    <category term="读书笔记" />
+    <category term="思考" />
+    <category term="开发习惯" />
     <category term="Docker" />
     <category term="LINUX" />
     <category term="CentOS" />
     <category term="Linux" />
-    <category term="Crontab" />
     <category term="Jenkins" />
+    <category term="Crontab" />
     <category term="Maven" />
-    <category term="Node" />
-    <category term="前端" />
-    <category term="IDEA" />
-    <category term="Alibaba Cloud Toolkit" />
     <category term="Archery" />
     <category term="MySql" />
     <category term="工具" />
-    <category term="Nvm" />
+    <category term="IDEA" />
+    <category term="Alibaba Cloud Toolkit" />
     <category term="Git" />
-    <category term="CentOS7" />
-    <category term="MongoDB" />
-    <category term="Redis" />
+    <category term="PostMan" />
+    <category term="Typora" />
+    <category term="Node" />
+    <category term="前端" />
+    <category term="Nvm" />
+    <category term="信息安全等级保护认证" />
+    <category term="系统认证" />
+    <category term="读书笔记" />
+    <category term="JAVA" />
+    <category term="Java8" />
+    <category term="特性" />
+    <category term="枚举" />
     <category term="BeetlSql" />
     <category term="Beetl" />
-    <category term="Java IO-初识IO" />
-    <category term="JAVA" />
-    <category term="枚举" />
+    <category term="ProtoBuffer" />
     <category term="异常" />
+    <category term="Java IO-初识IO" />
+    <category term="JDBC" />
+    <category term="Mysql" />
     <category term="POI" />
+    <category term="EasyExcel" />
+    <category term="MyBatis" />
     <category term="Spring" />
     <category term="SpringCloud" />
     <category term="SpringCloud Alibaba" />
     <category term="Spring Boot" />
-    <category term="ProtoBuffer" />
     <category term="其他" />
     <category term="SOAR" />
+    <category term="VerificationCode" />
+    <category term="VinUtil" />
+    <category term="MongoDb" />
     <category term="博客园" />
     <category term="博客" />
-    <category term="异步编程" />
-    <category term="线程" />
-    <category term="VerificationCode" />
-    <category term="MongoDb" />
-    <category term="VinUtil" />
-    <category term="Hutool" />
+    <category term="Apache Common" />
     <category term="工具类" />
     <category term="常用开发库" />
+    <category term="Google Guava" />
+    <category term="Hutool" />
     <category term="Lombok工具库详解" />
     <category term="JSON类库详解" />
     <category term="Spring常用工具类" />
+    <category term="日志类库详解" />
+    <category term="异步编程" />
+    <category term="线程" />
+    <category term="CentOS7" />
+    <category term="MongoDB" />
+    <category term="Redis" />
+    <category term="设计模式" />
+    <category term="VMware" />
     <category term="方法论" />
     <category term="开源协议" />
-    <category term="PostMan" />
-    <category term="Typora" />
-    <category term="Java8" />
-    <category term="特性" />
-    <category term="EasyExcel" />
-    <category term="JDBC" />
-    <category term="Mysql" />
-    <category term="日志类库详解" />
     <category term="Script" />
-    <category term="设计模式" />
-    <category term="MyBatis" />
-    <category term="Google Guava" />
-    <category term="Apache Common" />
     <entry>
         <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E8%A6%81%E6%9C%89%E4%B8%80%E9%A2%97%E5%A4%A7%E5%BF%83%E8%84%8F/%E5%BC%80%E5%8F%91%E5%A5%BD%E4%B9%A0%E6%83%AF/</id>
         <title>开发好习惯</title>
@@ -118,8 +121,8 @@
 &lt;h2 id=&#34;敢于维护上古代码&#34;&gt;&lt;a href=&#34;#敢于维护上古代码&#34; class=&#34;headerlink&#34; title=&#34;敢于维护上古代码&#34;&gt;&lt;/a&gt;敢于维护上古代码&lt;/h2&gt;&lt;p&gt;博猪开发时间其实很少，只有一年的时间，其实上古代码对于博猪的历练很大，俗话说的好多吃BUG,身体棒棒。博猪入职之后前半年一直维护一个SSI项目，里面用的技术很杂，有的在网上找不到，包括前端和后台，其次最重要的是业务方面，更是不懂，业务一般人不是给你讲的，所以我就一遍遍的启动本地DEBUG,慢慢啃下来的。&lt;/p&gt;
 &lt;p&gt;‍&lt;/p&gt;
 </content>
-        <category term="开发习惯" />
         <category term="思考" />
+        <category term="开发习惯" />
         <updated>2023-05-28T13:00:29.423Z</updated>
     </entry>
 </feed>
