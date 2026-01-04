@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Will • Posts by &#34;ureport&#34; tag</title>
+        <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
+        <description>愿你一生努力，一生被爱</description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 04 Jan 2026 10:06:38 +0800</pubDate>
+        <lastBuildDate>Sun, 04 Jan 2026 10:06:38 +0800</lastBuildDate>
+        <category>感言</category>
+        <category>思考</category>
+        <category>开发习惯</category>
+        <category>Docker</category>
+        <category>LINUX</category>
+        <category>CentOS</category>
+        <category>Linux</category>
+        <category>Jenkins</category>
+        <category>Crontab</category>
+        <category>Maven</category>
+        <category>Archery</category>
+        <category>MySql</category>
+        <category>工具</category>
+        <category>IDEA</category>
+        <category>Alibaba Cloud Toolkit</category>
+        <category>Git</category>
+        <category>PostMan</category>
+        <category>Typora</category>
+        <category>Node</category>
+        <category>前端</category>
+        <category>Nvm</category>
+        <category>信息安全等级保护认证</category>
+        <category>系统认证</category>
+        <category>读书笔记</category>
+        <category>JAVA</category>
+        <category>Java8</category>
+        <category>特性</category>
+        <category>枚举</category>
+        <category>BeetlSql</category>
+        <category>Beetl</category>
+        <category>ProtoBuffer</category>
+        <category>异常</category>
+        <category>Java IO-初识IO</category>
+        <category>JDBC</category>
+        <category>Mysql</category>
+        <category>POI</category>
+        <category>EasyExcel</category>
+        <category>MyBatis</category>
+        <category>Spring</category>
+        <category>SpringCloud</category>
+        <category>SpringCloud Alibaba</category>
+        <category>Spring Boot</category>
+        <category>其他</category>
+        <category>SOAR</category>
+        <category>VerificationCode</category>
+        <category>VinUtil</category>
+        <category>MongoDb</category>
+        <category>博客园</category>
+        <category>博客</category>
+        <category>Apache Common</category>
+        <category>工具类</category>
+        <category>常用开发库</category>
+        <category>Google Guava</category>
+        <category>Hutool</category>
+        <category>Lombok工具库详解</category>
+        <category>JSON类库详解</category>
+        <category>Spring常用工具类</category>
+        <category>日志类库详解</category>
+        <category>异步编程</category>
+        <category>线程</category>
+        <category>CentOS7</category>
+        <category>MongoDB</category>
+        <category>Redis</category>
+        <category>设计模式</category>
+        <category>VMware</category>
+        <category>方法论</category>
+        <category>开源协议</category>
+        <category>Script</category>
+        <category>思维习惯</category>
+        <category>shell</category>
+        <category>LLM</category>
+        <category>人工智能</category>
+        <category>ClaudeCode</category>
+        <category>开发错误</category>
+        <category>Ureport</category>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/04/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/Ureport/Ureport%E6%8A%A5%E8%A1%A8/</guid>
+            <title>Ureport报表</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/04/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/Ureport/Ureport%E6%8A%A5%E8%A1%A8/</link>
+            <category>JAVA</category>
+            <category>Ureport</category>
+            <pubDate>Sun, 04 Jan 2026 10:06:38 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;集成及配置&#34;&gt;&lt;a href=&#34;#集成及配置&#34; class=&#34;headerlink&#34; title=&#34;集成及配置&#34;&gt;&lt;/a&gt;集成及配置&lt;/h1&gt;&lt;h2 id=&#34;简述&#34;&gt;&lt;a href=&#34;#简述&#34; class=&#34;headerlink&#34; title=&#34;简述&#34;&gt;&lt;/a&gt;简述&lt;/h2&gt;&lt;h3 id=&#34;报表简介&#34;&gt;&lt;a href=&#34;#报表简介&#34; class=&#34;headerlink&#34; title=&#34;报表简介&#34;&gt;&lt;/a&gt;报表简介&lt;/h3&gt;&lt;p&gt;UReport2是一款基于架构在Spring之上纯Java的高性能报表引擎，通过迭代单元格可以实现任意复杂的中国式报表。 在UReport2中，提供了全新的基于网页的报表设计器，可以在Chrome、Firefox 等各种主流浏览器运行 （不支持IE）。 使用UReport2，打开浏览器即可完成各种复杂报表的设计制作。&lt;/p&gt;
+&lt;h3 id=&#34;主体功能&#34;&gt;&lt;a href=&#34;#主体功能&#34; class=&#34;headerlink&#34; title=&#34;主体功能&#34;&gt;&lt;/a&gt;主体功能&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;UReport2支持创建数据源、添加数据集，并对数据集进行函数、表达式处理；&lt;/li&gt;
+&lt;li&gt;UReport2支持对数据集形成可视化报表，包括饼状图、柱状图、曲线图等等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;优缺点阐述&#34;&gt;&lt;a href=&#34;#优缺点阐述&#34; class=&#34;headerlink&#34; title=&#34;优缺点阐述&#34;&gt;&lt;/a&gt;优缺点阐述&lt;/h3&gt;&lt;p&gt;优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开源、免费，集成即可使用，可二开后商用；&lt;/li&gt;
+&lt;li&gt;轻量级、易集成，工程中添加依赖即可进行集成使用；&lt;/li&gt;
+&lt;li&gt;支持多函数处理，包括常用函数（sum、count、max、min、avg）、数学函数、字符串函数、日期函数等等；&lt;/li&gt;
+&lt;li&gt;支持多种图表展示，包括饼状图、柱状图、曲线图、圆环图、雷达图、散点图等等；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;缺点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据集查询简易，sql拼接不友好、不直观；&lt;/li&gt;
+&lt;li&gt;支持数据源类型少，当前支持：mysql、SQLserver、oracle、db2等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;集成及配置-1&#34;&gt;&lt;a href=&#34;#集成及配置-1&#34; class=&#34;headerlink&#34; title=&#34;集成及配置&#34;&gt;&lt;/a&gt;集成及配置&lt;/h2&gt;&lt;p&gt;目前基于原有Ureport2代码已经拆分成前后台分离模式，前后台已集成现有架构体系，针对现有我们的易企积架构体系可直接使用。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如现有项目A需增加报表服务，仅需以下几步：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;从现有GitLab仓库中fork出Ureport项目后，取消关联关系&lt;/li&gt;
+&lt;li&gt;更改项目数据库、Redis配置信息，&lt;font color=&#34;red&#34;&gt;Redis配置要与网关鉴权、用户服务共用一个桶，要不然权限信息获取失败！&lt;/font&gt;&lt;/li&gt;
+&lt;li&gt;配置jenkins，发版项目。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;报表基础配置&#34;&gt;&lt;a href=&#34;#报表基础配置&#34; class=&#34;headerlink&#34; title=&#34;报表基础配置&#34;&gt;&lt;/a&gt;报表基础配置&lt;/h1&gt;&lt;h2 id=&#34;基本概念&#34;&gt;&lt;a href=&#34;#基本概念&#34; class=&#34;headerlink&#34; title=&#34;基本概念&#34;&gt;&lt;/a&gt;基本概念&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;报表计算模型&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在设计器中单元格之间存在依赖关系，对于任意一个单元格都可以设置它的左父格与上父格。单元格父格是可选的，默认情况下，单元格的左父格就是其最近左边与其位于同一行的单元格；上父格则是其最近上方与其位于同一列的的单元格。如果一个单元格位于第一行，那默认它就没有上父格，同样，如果位于第一列，默认它就没有左父格。打开报表设计器，选中任意单元格，都可以在其属性面板看到它的默认上父格或左父格。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;行类型&#34;&gt;&lt;a href=&#34;#行类型&#34; class=&#34;headerlink&#34; title=&#34;行类型&#34;&gt;&lt;/a&gt;行类型&lt;/h2&gt;&lt;p&gt;单元格栏，可针对指定单元格进行单元格样式及数据的设置，鼠标右键可设置单元格；&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;标题行&lt;br&gt;在报表计算后分页时只会出现在第一页第一行的行，如果定义了多个行为标题行类型，那么这些行将在报表运行后分页输出时第一页最前面插入标题行。需要注意的是，我们在报表中可以将位于任意位置的行定义成标题行，但报表计算分页输出时，总会将这些定义为标题行的行放在报表的第一页最前端显示；&lt;/li&gt;
+&lt;li&gt;重复表头&lt;br&gt;与标题行不同的是，定义为重复表头行的行，在报表计算分页输出时会将定义成重复表头行的行放在每一页的前端进行显示。如果当前报表中定义的有标题行，那么对于第一页，标题前将位于最上面，其下才是重复表头行定义的行;&lt;/li&gt;
+&lt;li&gt;重复表尾&lt;br&gt;与重复表头行类型，它也会在报表计算分页输出时放在每一页中显示，只是它会在每一页的最下端显示；&lt;/li&gt;
+&lt;li&gt;总结行&lt;br&gt;与标题行对应，总结行会出现在报表计算后分页输出时最后一页的最下端显示。如果当前报表中定义了重复表尾行，那么在报表计算后分页输出的最后一页中总结后将位于重复表尾行下方显示。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;数据集&#34;&gt;&lt;a href=&#34;#数据集&#34; class=&#34;headerlink&#34; title=&#34;数据集&#34;&gt;&lt;/a&gt;数据集&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;SQL输入区同样支持表达式语法，表达式以${}进行包裹&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;表达式模式&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;param是固定表达，表示参数。当参数为空或为null时，全查询，否则查询指定类型的表记录，&lt;strong&gt;主要用于后续处理数据，在设计表单时可针对当前参数设置查询条件&lt;/strong&gt;，可以使用如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs sql&#34;&gt;$&amp;#123;&lt;br&gt;    if(param(&amp;quot;job_type&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;hljs-string&#34;&gt;&amp;#x27;&amp;#x27;&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;||&lt;/span&gt; param(&amp;quot;job_type&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;hljs-operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;hljs-keyword&#34;&gt;null&lt;/span&gt;)&amp;#123;&lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt;   &amp;quot;select * from transfer_task&amp;quot;&lt;br&gt;    &amp;#125;&lt;span class=&#34;hljs-keyword&#34;&gt;else&lt;/span&gt;&amp;#123;&lt;br&gt;        &lt;span class=&#34;hljs-keyword&#34;&gt;return&lt;/span&gt;   &amp;quot;select * from transfer_task where job_type=:job_type&amp;quot;&lt;br&gt;    &amp;#125;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这里我以一个统计阳性率的sql为例，sql信息拼接以及参数拼接如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：&lt;/p&gt;
+&lt;p&gt;报表服务因为已经集成的现有鉴权体系，所以现有userId、tenantId、orgId、orgPath信息从token中获取，如有使用数据权限等信息可直接拼接参数，不用通过报表查询参数获取即可。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;51&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs sql&#34;&gt;$&amp;#123;&lt;br&gt;  &amp;quot;SELECT&lt;br&gt;	\&amp;#x27;阳性率\&amp;#x27; type,&lt;br&gt;    \&amp;#x27;调查时效\&amp;#x27; type1,&lt;br&gt;	tmp.investigator,&lt;br&gt;	tmp.real_name,&lt;br&gt;	tmp.totalNum,&lt;br&gt;	tmp.positiveNum,&lt;br&gt;	tmp.positiveNum / tmp.totalNum positiveRate,&lt;br&gt;	FORMAT( times / 86400000 / tmp.totalNum, 9 ) timeLimit &lt;br&gt;FROM&lt;br&gt;	(&lt;br&gt;	SELECT&lt;br&gt;		temp.investigator,&lt;br&gt;		temp.real_name,&lt;br&gt;		SUM( temp.num ) totalNum,&lt;br&gt;		SUM( times ) times,&lt;br&gt;		sum( CASE temp.positive WHEN \&amp;#x27;1\&amp;#x27; THEN temp.num ELSE 0 END ) positiveNum &lt;br&gt;	FROM&lt;br&gt;		(&lt;br&gt;		SELECT&lt;br&gt;			t.investigator,&lt;br&gt;			ai.real_name,&lt;br&gt;			atf.positive,&lt;br&gt;			COUNT( 1 ) num,&lt;br&gt;			sum( t.complete_time - t.accept_time ) times &lt;br&gt;		FROM&lt;br&gt;			ass_task t&lt;br&gt;			INNER JOIN ass_case ac ON ac.id = t.case_id&lt;br&gt;			INNER JOIN ass_task_feedback atf ON atf.task_id = t.id&lt;br&gt;			INNER JOIN ass_investigator ai ON ai.id = t.investigator &lt;br&gt;&lt;br&gt;		WHERE&lt;br&gt;			ac.status = \&amp;#x27;6\&amp;#x27;&amp;quot;&lt;br&gt;  			&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;(param(&amp;quot;orgId&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;!=&lt;/span&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;null&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; param(&amp;quot;orgId&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;!=&lt;/span&gt;&amp;quot;&amp;quot; ? &amp;quot; and ac.ass_company_id = \&amp;#x27;&amp;quot;&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;param(&amp;quot;orgId&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;&amp;quot;\&amp;#x27;&amp;quot;:&amp;quot; &amp;quot;)&lt;br&gt;  			&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;(param(&amp;quot;companyId&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;!=&lt;/span&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;null&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; param(&amp;quot;companyId&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;!=&lt;/span&gt;&amp;quot;&amp;quot; ? &amp;quot; and ac.company_id = \&amp;#x27;&amp;quot;&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;param(&amp;quot;companyId&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;&amp;quot;\&amp;#x27;&amp;quot;:&amp;quot; &amp;quot;)&lt;br&gt;  			&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;(param(&amp;quot;provinceCode&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;!=&lt;/span&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;null&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; param(&amp;quot;provinceCode&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;!=&lt;/span&gt;&amp;quot;&amp;quot; ? &amp;quot; and t.province_code = \&amp;#x27;&amp;quot;&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;param(&amp;quot;provinceCode&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;&amp;quot;\&amp;#x27;&amp;quot;:&amp;quot; &amp;quot;)&lt;br&gt;  			&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;(param(&amp;quot;cityCode&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;!=&lt;/span&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;null&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; param(&amp;quot;cityCode&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;!=&lt;/span&gt;&amp;quot;&amp;quot; ? &amp;quot; and t.city_code = \&amp;#x27;&amp;quot;&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;param(&amp;quot;cityCode&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;&amp;quot;\&amp;#x27;&amp;quot;:&amp;quot; &amp;quot;)&lt;br&gt;			&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;(param(&amp;quot;writeOffTime_GE&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;!=&lt;/span&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;null&lt;/span&gt; &lt;span class=&#34;hljs-operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; param(&amp;quot;writeOffTime_LE&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;!=&lt;/span&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;null&lt;/span&gt; ? &amp;quot; and ac.write_off_time &amp;gt;= &amp;quot;&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;param(&amp;quot;writeOffTime_GE&amp;quot;)&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;&amp;quot; and ac.write_off_time &amp;lt;= &amp;quot;&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;param(&amp;quot;writeOffTime_LE&amp;quot;):&amp;quot; &amp;quot;)&lt;br&gt;			&lt;span class=&#34;hljs-operator&#34;&gt;+&lt;/span&gt;&amp;quot; GROUP BY&lt;br&gt;			t.investigator,&lt;br&gt;			ai.real_name,&lt;br&gt;			atf.positive &lt;br&gt;		) temp &lt;br&gt;	GROUP BY&lt;br&gt;		temp.investigator,&lt;br&gt;		temp.real_name &lt;br&gt;	) tmp &lt;br&gt;ORDER BY&lt;br&gt;	tmp.totalNum desc&amp;quot;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;配置数据集后可预览结果查看SQL的执行结果，如果没有问题则保存后，把对应的字段直接拖拽到表格中，点击预览查看具体结果即可。&lt;/p&gt;
+&lt;h1 id=&#34;数据处理&#34;&gt;&lt;a href=&#34;#数据处理&#34; class=&#34;headerlink&#34; title=&#34;数据处理&#34;&gt;&lt;/a&gt;数据处理&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.w3cschool.cn/ureport/ureport-wh8q2had.html&#34;&gt;点我访问官网文档&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;单元格引用&#34;&gt;&lt;a href=&#34;#单元格引用&#34; class=&#34;headerlink&#34; title=&#34;单元格引用&#34;&gt;&lt;/a&gt;单元格引用&lt;/h2&gt;&lt;p&gt;在报表当中，大多数的计算都是针对单元格或与单元格有关，因为报表中单元格多数都与数据绑定，而数据往往又是多条，所以计算后的报表一个单元格会产生多个，这样对于单元格的引用就变的比较复杂。在报表设计器中，引用的目标单元格是相对当前单元格来进行计算的，引用方法就是直接在表达式里书写单元格名称，比如引用A1单元格，就直接写A1即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.bmp.ovh/imgs/2024/10/30/5d853961662c740d.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在上图当中，我们在D1单元格中输入表达式A1，这就表示，在D1单元格里填入相对当前D1单元格的A1单元格的值，运行后的效果如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.bmp.ovh/imgs/2024/10/30/32dcc9365afb93ef.webp&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可以看到，因为D1是A1的子格，A1单元格绑定的数据就是分组结构，根据当前D1单元格的位置，就产生的上图所示的结果。如果在D1单元格中输入B1，那么运行后的效果又是下图的样子：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.bmp.ovh/imgs/2024/10/30/e38887ba5184b80e.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;通过上面的例子我们可以看到，某个单元格的表达式引用目标单元格，首先判断的是目标单元格与其所在单元格是否位于同一行或行，如果是则直接取对应行或列上目标单元格的值。如果当前单元格与目标单元格不在同一行或列，那情况又不一样了，我们来看下一个例子。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.bmp.ovh/imgs/2024/10/30/a6f24f5f7b6010e3.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在上面的例子中，我们在C2单元格的表达式中输入B1，表示取B1单元格的值，但B1单元格又和C2不在同一行或列上，同时B1单元格展开后会有多个值，但B1单元格和C2单元格都拥有一个共同的父格或间接父格A1（C2单元格的左父格是B2，而B2单元格的左父格又是A1，所以A1是C2单元格的间接左父格），所以它会取他们共同父格A1下所有B1的值，运行结果如下图所示：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.bmp.ovh/imgs/2024/10/30/0e2a94a00bcf3315.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;针对上面的例子，如果我们在上面的单元格中输入C1，那结果又不一样；因为C1是C2的上父格，所以将直接取与其位于同一列的上父格单元格的值，运行效果如下图所示：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.bmp.ovh/imgs/2024/10/30/c9382a17f318793f.webp&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;再看下面的报表示例：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.bmp.ovh/imgs/2024/10/30/976af9422b657084.webp&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在上面的例子中，B2单元格表达里输入C1，因为B2和C2既不在同一行或列，也没有共同的父格，所以B2中将取到所有的C1单元格的值，如下图所示：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.bmp.ovh/imgs/2024/10/30/3c03275dc9857a4c.webp&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;单元格坐标&#34;&gt;&lt;a href=&#34;#单元格坐标&#34; class=&#34;headerlink&#34; title=&#34;单元格坐标&#34;&gt;&lt;/a&gt;单元格坐标&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;为了实现更为复杂的单元格引用，设计器引用了单元格坐标的概念。单元格坐标，也是相对于当前单元格来进行计算的，同样遵循上面的介绍的优先取同行、同列或共同父格的原则，一个标准的单元格坐标格式如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;单元格坐标格式:单元格名称[Li:li,Li-1:li-1,…;Ti:ti,Ti-1:ti-1…]{条件…}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;L表示左父格，l表示左父格展示后的序号，序号为负值，表示向上位移；T表示上父格，t表示上父格展开后的序号，序号为负值，表示相对于当前单元格向上位移，正值则表示向下位移，如果只有左父格，那么直接写L部分即可；如果只是上父格，那么前面需要加上“;”号，然后写T部分，后面的大括号中是条件部分，多个条件之间用and&amp;#x2F;or连接，表示对通过坐标取到的单元格进行条件过滤（如果取到多个单元格的话），条件部分是可选的，相关示例如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;单元格坐标示例&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;C1[A1:2,B1:1]&lt;/td&gt;
+&lt;td&gt;在找C1时先找单元格A1展开后的第2格；再找第二个A1下的B1单元格展开后的第一个单元格，然后再找这个B1单元格对应的C1单元格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C2[A1:2,B1:2;C1:3]&lt;/td&gt;
+&lt;td&gt;在找C2时，先找A1单元格展开后的第二格，再找第二个A1单元格下B2单元格展开后的第二格，再根据第二个展开的B2单元格找其下名为C2单元格的左子格；然后再找到C1单元格展开后的第三格，再看其下的C2单元格，取C2单元格的交集&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C2[A1:2,B2:2]{C2&amp;gt;1000}&lt;/td&gt;
+&lt;td&gt;表示取A2单元格展开后的第二格，再取其下B2单元格展开后第二格，再取B2下所有的C2单元格，最后再对取到的C2单元格进行条件过滤，只取出C2单元格值大于1000的所有C2单元格。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C2[A1:2,B2:2]{C2&amp;gt;1000 and C2&amp;lt;10000}&lt;/td&gt;
+&lt;td&gt;表示取A2单元格展开后的第二格，再取其下B2单元格展开后第二格，再取B2下所有的C2单元格，最后再对取到的C2单元格进行条件过滤，只取出C2单元格值大于1000且小于10000的所有C2单元格的值。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;我们来看一个具体的示例，报表模版如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.bmp.ovh/imgs/2024/10/30/47839757ee095890.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在上面的报表模版中，在B2单元格表达式里，我们输入了C1[A1:2,B1:1]，这就表示取A1单元格展开后第二格下B1单元格展开后第一格下对应的C1单元格的值，所以运行后我们可以看到如下图所示效果：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.bmp.ovh/imgs/2024/10/30/a93c9bdf776ad4b9.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt; 我们首先来看一个环比的例子。&lt;/p&gt;
+&lt;h4 id=&#34;环比&#34;&gt;&lt;a href=&#34;#环比&#34; class=&#34;headerlink&#34; title=&#34;环比&#34;&gt;&lt;/a&gt;环比&lt;/h4&gt;&lt;p&gt;​    报表模版如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://atts.w3cschool.cn/attachments/day_220905/202209051347316060.png&#34; alt=&#34;s5&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在上面的报表模版中，D2 单元格中的表达式为 C2 - C2[A2:-1] ，这就表示在D2单元格中首先取到 C2 单元格的值， 因为 C2 单元格与 D2 位于同一行，所以可以直接取到，且只有一个；下一个C2采用了坐标A2:-1，那就表示取相对于当前单元格的 A2 单元格上一格(负值表示向上位移)的A2单元格所对应的 C2 单元格，运行后的效果如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://atts.w3cschool.cn/attachments/day_220905/202209051347323519.png&#34; alt=&#34;s5-runtime&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  从运行结果中可以看到，第一行环比的值为0，这是因为对于第一行的 D2 单元格来说，其上一行其实是不存在的，所以 UReport2 默认就取了第一个 C2 单元格的值，所以两个值减下来就是0。&lt;/p&gt;
+&lt;p&gt;​    下一个例子我们来看看同比。&lt;/p&gt;
+&lt;h4 id=&#34;同比&#34;&gt;&lt;a href=&#34;#同比&#34; class=&#34;headerlink&#34; title=&#34;同比&#34;&gt;&lt;/a&gt;同比&lt;/h4&gt;&lt;p&gt;​    报表模版如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://atts.w3cschool.cn/attachments/day_220905/202209051347323284.png&#34; alt=&#34;s6&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​    在上面的模版当中，D2 单元格中首先取到与其同行的 C2 单元格的值，然后利用单元格坐格，先取到当前 D2 单元格所在行的 A2 单元格的上一条 A2 单元格记录（-1表示坐标上移），然后再取这个 A2 下对应的 C2 单元格，但由于其下 C2 单元格还是有多个，所以这里加了个条件B2&amp;#x3D;&amp;#x3D;$B2，这里的第一个 B2 表示当前单元格所在行对应的 B2 的值，$B2 表示坐标定位后 C2 单元格对应的 B2 单元格的值，条件就是他们俩要相等，实际上就是月份相等，这样就达到了我们要实现的同比的目的，运行后的效果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://atts.w3cschool.cn/attachments/day_220905/202209051347337894.png&#34; alt=&#34;s6-runtime&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;关于$B2在UReport2当中，在单元格名称前加$符号，表示取相对于目标单元格的单元格的值，多用在条件比较当中，比如上面的C2[A2:-1]{B2&amp;#x3D;&amp;#x3D;$B2}，这里的$B2就是指取到的C2单元格对应的B2单元格的值。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;​    在上面的例子中，第一个分组2000下，所有的同比值都为0，这是因为这个分组下不存在 A2:-1 这个坐标，没法上移，所以系统默认取了当前记录自身，所以计算后的值都是0。如果我们不希望显示0，那么可以加个 if 条件判断表达式，如果当前位于第一个分组，就输出空字符串，否则输出实际计算后的值，修改后的报表模版如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://atts.w3cschool.cn/attachments/day_220905/202209051347333337.png&#34; alt=&#34;s7&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​    D2 单元格对应的表达内容如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://atts.w3cschool.cn/attachments/day_220905/202209051347346232.png&#34; alt=&#34;s7-expr&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​    运行后的效果如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://atts.w3cschool.cn/attachments/day_220905/202209051347347748.png&#34; alt=&#34;s7-runtime&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​    在上面的例子中，我们使用了 if 判断表达式，当然你也可以换成三元表达式判断或 case 判断，在这个 if 判断中，首先我们判断的是 &amp;amp;A2&amp;#x3D;&amp;#x3D;1 是否成立，这里的 &amp;amp;A2 指的是相对于当前单元格 A2 单元格展开后的序号，在 UReport2 中，可以采用“&amp;amp;单元格名称”的方式标记某个单元格展开后的序号，需要注意的是，使用“&amp;amp;单元格名称”来标记目标单元格展开后的序号时，当前单元格必须是目标单元格的子格或间接子格；比如，在上面的例子中，使用 &amp;amp;A2 的单元格是 D2，D2 是 A2 单元格的间接子格，这样就可以正确取到 A2 展开后的序号值。&lt;/p&gt;
+&lt;p&gt;关于&amp;amp;标记的使用&lt;/p&gt;
+&lt;p&gt;在使用“&amp;amp;单元格名称”来标记目标单元格展开后的序号时，除上需要注意上面描述的内容外，还需要注意，取序号将以他们共同的父格为基准，如果他们有共同的父格，那么将以这个父格里目标单元格的数量来进行序号编排，这在之前视频教程介绍报表计算模型中，实现明细型主从报表，对从表数据进行编号时就有体现。&lt;/p&gt;
+&lt;h4 id=&#34;逐层累加&#34;&gt;&lt;a href=&#34;#逐层累加&#34; class=&#34;headerlink&#34; title=&#34;逐层累加&#34;&gt;&lt;/a&gt;逐层累加&lt;/h4&gt;&lt;p&gt;​    报表模版如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://atts.w3cschool.cn/attachments/day_220905/202209051347352363.png&#34; alt=&#34;s8&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​    D2 单元格对应的表达式如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://atts.w3cschool.cn/attachments/day_220905/202209051347355330.png&#34; alt=&#34;s8-expr&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​    在上面的表达式中，我们采用了 if 判断（同样你可以换成三元判断或 case 判断），当相对当前单元格A2展开后的序号为1时，那么直接取当前行的 C2 单元格值，否则就拿当前行的 C2 单元格值加上，上一行D2 单元格值，这样就实现了逐层累加的需求，运行后的效果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://atts.w3cschool.cn/attachments/day_220905/202209051347362395.png&#34; alt=&#34;s8-runtime&#34;&gt;&lt;/p&gt;
+&lt;p&gt;回到报表设计界面，查看表格具体参数配置，当前所有字段默认聚合方式均为：分组；&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;聚合方式&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;列表(select)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;对数据不作处理完整展示&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;分组(group)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;将数据相同的作为一组进行展示&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;自定义分组&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;对数据自定义条件并进行分组，比如reader_number大于1000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;汇总(sum)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;针对数值型字段数据，统计该字段值相加的和，比如transfer_task记录中reader_number的和&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;统计数量(count)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;针对数值型字段数据，统计所有记录中记录的条数，比如139条transfer_task记录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;最大值(max)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;针对数值型字段数据，展示当前记录中该字段值最大的那条记录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;最小值(min)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;针对数值型字段数据，展示当前记录中该字段值最小的那条记录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;平均值(avg)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;针对数值型字段数据，展示当前记录中该字段的平均值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h2 id=&#34;图表展示&#34;&gt;&lt;a href=&#34;#图表展示&#34; class=&#34;headerlink&#34; title=&#34;图表展示&#34;&gt;&lt;/a&gt;图表展示&lt;/h2&gt;&lt;p&gt;UReport2中支持10种类型的图表，分别是：饼状图、圆环图、曲线图、柱状图、水平柱状图、面积图、雷达图、极坐标图、散点图以及气泡图，选择单元格类型为图表，在下方弹出的菜单中选择目标图表类型，即可完成图表的添加工作。&lt;/p&gt;
+&lt;p&gt;选中图表所在单元格，即可在属性面板中配置图表的相关属性。在UReport2中，图表的属性有三类，分别是与数据集绑定的属性、配置XY轴的相关属性以及配置图例标题之类的属性。 &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;对于饼状图、圆环图、雷达图、极坐标图图表来说，由于它们没有XY轴，所以在属性面板中看不到XY轴配置标签页&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;在绑定数据集配置的的标签页中，可以用来配置图表要表现的具体数据，在UReport2中图表绑定的&lt;strong&gt;数据都来自数据源&lt;/strong&gt;，所以在配置图表之前，我们需要&lt;strong&gt;准备好需要用图表展示的具体数据的数据集&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;对于饼状图、圆环图、曲线图、柱状图、水平柱状图、面积图、雷达图、极坐标图几种图表来说，它们要展示数据结构一样。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

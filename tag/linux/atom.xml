@@ -3,7 +3,7 @@
     <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
     <title>Will • Posts by &#34;linux&#34; tag</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
-    <updated>2023-09-18T00:44:37.642Z</updated>
+    <updated>2026-01-04T02:06:38.338Z</updated>
     <category term="感言" />
     <category term="思考" />
     <category term="开发习惯" />
@@ -72,6 +72,24 @@
     <category term="方法论" />
     <category term="开源协议" />
     <category term="Script" />
+    <category term="思维习惯" />
+    <category term="shell" />
+    <category term="LLM" />
+    <category term="人工智能" />
+    <category term="ClaudeCode" />
+    <category term="开发错误" />
+    <category term="Ureport" />
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/04/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/%E5%AE%89%E8%A3%85Java8/</id>
+        <title>安装Java8</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/04/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/%E5%AE%89%E8%A3%85Java8/"/>
+        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;最近&lt;/p&gt;
+</content>
+        <category term="LINUX" />
+        <category term="JAVA" />
+        <category term="shell" />
+        <updated>2026-01-04T02:06:38.338Z</updated>
+    </entry>
     <entry>
         <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/09/18/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/VMware/VMware-%E5%A4%8D%E5%88%B6%E8%99%9A%E6%8B%9F%E6%9C%BA&amp;%E5%85%8B%E9%9A%86%E8%99%9A%E6%8B%9F%E6%9C%BA/</id>
         <title>VMware-复制虚拟机&amp;克隆虚拟机</title>

@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
+    <title>Will • Posts by &#34;大模型简介&#34; category</title>
+    <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
+    <updated>2026-01-04T02:06:38.333Z</updated>
+    <category term="感言" />
+    <category term="思考" />
+    <category term="开发习惯" />
+    <category term="Docker" />
+    <category term="LINUX" />
+    <category term="CentOS" />
+    <category term="Linux" />
+    <category term="Jenkins" />
+    <category term="Crontab" />
+    <category term="Maven" />
+    <category term="Archery" />
+    <category term="MySql" />
+    <category term="工具" />
+    <category term="IDEA" />
+    <category term="Alibaba Cloud Toolkit" />
+    <category term="Git" />
+    <category term="PostMan" />
+    <category term="Typora" />
+    <category term="Node" />
+    <category term="前端" />
+    <category term="Nvm" />
+    <category term="信息安全等级保护认证" />
+    <category term="系统认证" />
+    <category term="读书笔记" />
+    <category term="JAVA" />
+    <category term="Java8" />
+    <category term="特性" />
+    <category term="枚举" />
+    <category term="BeetlSql" />
+    <category term="Beetl" />
+    <category term="ProtoBuffer" />
+    <category term="异常" />
+    <category term="Java IO-初识IO" />
+    <category term="JDBC" />
+    <category term="Mysql" />
+    <category term="POI" />
+    <category term="EasyExcel" />
+    <category term="MyBatis" />
+    <category term="Spring" />
+    <category term="SpringCloud" />
+    <category term="SpringCloud Alibaba" />
+    <category term="Spring Boot" />
+    <category term="其他" />
+    <category term="SOAR" />
+    <category term="VerificationCode" />
+    <category term="VinUtil" />
+    <category term="MongoDb" />
+    <category term="博客园" />
+    <category term="博客" />
+    <category term="Apache Common" />
+    <category term="工具类" />
+    <category term="常用开发库" />
+    <category term="Google Guava" />
+    <category term="Hutool" />
+    <category term="Lombok工具库详解" />
+    <category term="JSON类库详解" />
+    <category term="Spring常用工具类" />
+    <category term="日志类库详解" />
+    <category term="异步编程" />
+    <category term="线程" />
+    <category term="CentOS7" />
+    <category term="MongoDB" />
+    <category term="Redis" />
+    <category term="设计模式" />
+    <category term="VMware" />
+    <category term="方法论" />
+    <category term="开源协议" />
+    <category term="Script" />
+    <category term="思维习惯" />
+    <category term="shell" />
+    <category term="LLM" />
+    <category term="人工智能" />
+    <category term="ClaudeCode" />
+    <category term="开发错误" />
+    <category term="Ureport" />
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/04/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/LLM/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/%E5%A4%A7%E5%9E%8B%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%88LLM%EF%BC%89%E7%90%86%E8%AE%BA%E7%AE%80%E4%BB%8B/</id>
+        <title>大型语言模型（LLM）理论简介</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/04/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/LLM/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/%E5%A4%A7%E5%9E%8B%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%88LLM%EF%BC%89%E7%90%86%E8%AE%BA%E7%AE%80%E4%BB%8B/"/>
+        <content type="html">&lt;h1 id=&#34;什么是大型语言模型（LLM）&#34;&gt;&lt;a href=&#34;#什么是大型语言模型（LLM）&#34; class=&#34;headerlink&#34; title=&#34;什么是大型语言模型（LLM）&#34;&gt;&lt;/a&gt;什么是大型语言模型（LLM）&lt;/h1&gt;&lt;h2 id=&#34;大型语言模型（LLM）的概念&#34;&gt;&lt;a href=&#34;#大型语言模型（LLM）的概念&#34; class=&#34;headerlink&#34; title=&#34;大型语言模型（LLM）的概念&#34;&gt;&lt;/a&gt;大型语言模型（LLM）的概念&lt;/h2&gt;&lt;p&gt;大语言模型（LLM，Large Language Model），也称大型语言模型，是一种旨在理解和生成人类语言的人工智能模型。&lt;/p&gt;
+&lt;p&gt;LLM 通常指包含数百亿（或更多）参数的语言模型，它们在海量的文本数据上进行训练，从而获得对语言深层次的理解。目前，国外的知名 LLM 有 GPT-3.5、GPT-4、PaLM、Claude 和 LLaMA 等，国内的有文心一言、讯飞星火、通义千问、ChatGLM、百川等。&lt;/p&gt;
+&lt;p&gt;为了探索性能的极限，许多研究人员开始训练越来越庞大的语言模型，例如拥有 1750 亿参数的 GPT-3 和 5400 亿参数的 PaLM 。尽管这些大型语言模型与小型语言模型（例如 3.3 亿参数的 BERT 和 15 亿参数的 GPT-2）使用相似的架构和预训练任务，但它们展现出截然不同的能力，尤其在解决复杂任务时表现出了惊人的潜力，这被称为“涌现能力”。以 GPT-3 和 GPT-2 为例，GPT-3 可以通过学习上下文来解决少样本任务，而 GPT-2 在这方面表现较差。因此，科研界给这些庞大的语言模型起了个名字，称之为“大语言模型（LLM）”。LLM 的一个杰出应用就是 ChatGPT ，它是 GPT 系列 LLM 用于与人类对话式应用的大胆尝试，展现出了非常流畅和自然的表现。&lt;/p&gt;
+&lt;h2 id=&#34;LLM-的发展历程&#34;&gt;&lt;a href=&#34;#LLM-的发展历程&#34; class=&#34;headerlink&#34; title=&#34;LLM 的发展历程&#34;&gt;&lt;/a&gt;LLM 的发展历程&lt;/h2&gt;&lt;p&gt;语言建模的研究可以追溯到20 世纪 90 年代，当时的研究主要集中在采用统计学习方法来预测词汇，通过分析前面的词汇来预测下一个词汇。但在理解复杂语言规则方面存在一定局限性。&lt;/p&gt;
+&lt;p&gt;随后，研究人员不断尝试改进，2003 年深度学习先驱 Bengio 在他的经典论文 《A Neural Probabilistic Language Model》中，首次将深度学习的思想融入到语言模型中。强大的神经网络模型，相当于为计算机提供了强大的”大脑”来理解语言，让模型可以更好地捕捉和理解语言中的复杂关系。&lt;/p&gt;
+&lt;p&gt;2018 年左右，Transformer 架构的神经网络模型开始崭露头角。通过大量文本数据训练这些模型，使它们能够通过阅读大量文本来深入理解语言规则和模式，就像让计算机阅读整个互联网一样，对语言有了更深刻的理解，极大地提升了模型在各种自然语言处理任务上的表现。&lt;/p&gt;
+&lt;p&gt;与此同时，研究人员发现，随着语言模型规模的扩大（增加模型大小或使用更多数据），模型展现出了一些惊人的能力，在各种任务中的表现均显著提升。这一发现标志着大型语言模型（LLM）时代的开启。&lt;/p&gt;
+&lt;h2 id=&#34;常见的-LLM-模型&#34;&gt;&lt;a href=&#34;#常见的-LLM-模型&#34; class=&#34;headerlink&#34; title=&#34;常见的 LLM 模型&#34;&gt;&lt;/a&gt;常见的 LLM 模型&lt;/h2&gt;&lt;p&gt;主要介绍几个国内外常见的大模型（包括开源和闭源）。&lt;/p&gt;
+&lt;h3 id=&#34;闭源-LLM-未公开源代码&#34;&gt;&lt;a href=&#34;#闭源-LLM-未公开源代码&#34; class=&#34;headerlink&#34; title=&#34;闭源 LLM (未公开源代码)&#34;&gt;&lt;/a&gt;闭源 LLM (未公开源代码)&lt;/h3&gt;&lt;h4 id=&#34;GPT-系列&#34;&gt;&lt;a href=&#34;#GPT-系列&#34; class=&#34;headerlink&#34; title=&#34;GPT 系列&#34;&gt;&lt;/a&gt;GPT 系列&lt;/h4&gt;&lt;p&gt;OpenAI 公司在 2018 年提出的 GPT（Generative Pre-Training） 模型是典型的 生成式预训练语言模型 之一。&lt;/p&gt;
+&lt;p&gt;GPT 模型的基本原则是通过语言建模将世界知识压缩到仅解码器 (decoder-only) 的 Transformer 模型中，这样它就可以恢复(或记忆)世界知识的语义，并充当通用任务求解器。它能够成功的两个关键点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;训练能够准确预测下一个单词的 decoder-only 的 Transformer 语言模型&lt;/li&gt;
+&lt;li&gt;扩展语言模型的大小&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;ChatGPT&#34;&gt;&lt;a href=&#34;#ChatGPT&#34; class=&#34;headerlink&#34; title=&#34;ChatGPT&#34;&gt;&lt;/a&gt;ChatGPT&lt;/h5&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://chat.openai.com/&#34;&gt;ChatGPT 使用地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;2022 年 11 月&lt;/code&gt;，&lt;strong&gt;OpenAI&lt;/strong&gt; 发布了基于 GPT 模型（GPT-3.5 和 GPT-4） 的&lt;strong&gt;会话应用 ChatGPT&lt;/strong&gt;。由于与人类交流的出色能力，ChatGPT 自发布以来就引发了人工智能社区的兴奋。ChatGPT 是基于强大的 GPT 模型开发的，具有特别优化的会话能力。&lt;/p&gt;
+&lt;p&gt;ChatGPT 从本质上来说是一个 LLM 应用，是基于基座模型开发出来的，与基座模型有本质的区别。其支持 GPT-3.5 和 GPT-4 两个版本。&lt;/p&gt;
+&lt;p&gt;现在的 ChatGPT 支持最长达 32,000 个字符，知识截止日期是 2021 年 9 月，它可以执行各种任务，包括&lt;strong&gt;代码编写、数学问题求解、写作建议&lt;/strong&gt;等。ChatGPT 在与人类交流方面表现出了卓越的能力：拥有丰富的知识储备，对数学问题进行推理的技能，在多回合对话中准确追踪上下文，并且与人类安全使用的价值观非常一致。后来，ChatGPT 支持插件机制，这进一步扩展了 ChatGPT 与现有工具或应用程序的能力。到目前为止，它似乎是人工智能历史上最强大的聊天机器人。ChatGPT 的推出对未来的人工智能研究具有重大影响，它为探索类人人工智能系统提供了启示。&lt;/p&gt;
+&lt;h5 id=&#34;GPT-4&#34;&gt;&lt;a href=&#34;#GPT-4&#34; class=&#34;headerlink&#34; title=&#34;GPT-4&#34;&gt;&lt;/a&gt;GPT-4&lt;/h5&gt;&lt;p&gt;&lt;code&gt;2023 年 3 月&lt;/code&gt;发布的 GPT-4，它将&lt;strong&gt;文本输入扩展到多模态信号&lt;/strong&gt;。GPT3.5 拥有 1750 亿 个参数，而 GPT4 的参数量官方并没有公布，但有相关人员猜测，GPT-4 在 120 层中总共包含了 1.8 万亿参数，也就是说，GPT-4 的规模是 GPT-3 的 10 倍以上。因此，GPT-4 比 GPT-3.5 &lt;strong&gt;解决复杂任务的能力更强，在许多评估任务上表现出较大的性能提升&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;最近的一项研究通过对人为生成的问题进行定性测试来研究 GPT-4 的能力，这些问题包含了各种各样的困难任务，并表明 GPT-4 可以比之前的 GPT 模型(如 GPT3.5 )实现更优越的性能。此外，由于六个月的迭代校准(在 RLHF 训练中有额外的安全奖励信号)，GPT-4 对恶意或挑衅性查询的响应更安全，并应用了一些干预策略来缓解 LLM 可能出现的问题，如幻觉、隐私和过度依赖。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：2023 年 11 月 7 日， OpenAI 召开了首个开发者大会，会上推出了最新的大语言模型 GPT-4 Turbo，Turbo 相当于进阶版。它将上下文长度扩展到 128k，相当于 300 页文本，并且训练知识更新到 2023 年 4 月&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;GPT3.5 是免费的，而 GPT-4 是收费的。需要开通 plus 会员 20 美元&amp;#x2F;月。&lt;/p&gt;
+&lt;h4 id=&#34;Claude系列&#34;&gt;&lt;a href=&#34;#Claude系列&#34; class=&#34;headerlink&#34; title=&#34;Claude系列&#34;&gt;&lt;/a&gt;Claude系列&lt;/h4&gt;&lt;p&gt;Claude 系列模型是由 OpenAI 离职人员创建的 &lt;strong&gt;Anthropic&lt;/strong&gt; 公司开发的闭源语言大模型。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://claude.ai/chats&#34;&gt;Claude 使用地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最早的 &lt;strong&gt;Claude&lt;/strong&gt; 于 &lt;code&gt;2023 年 3 月 15 日&lt;/code&gt;发布，在 2023 年 7 月 11 日，更新至 &lt;strong&gt;Claude-2&lt;/strong&gt;， 并在 &lt;code&gt;2024 年 3 月 4 日&lt;/code&gt;更新至 &lt;strong&gt;Claude-3&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Claude 3 系列包括三个不同的模型，分别是 Claude 3 Haiku、Claude 3 Sonnet 和 Claude 3 Opus，它们的能力依次递增，旨在满足不同用户和应用场景的需求。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;模型名称&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;上下文长度&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;特点&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;input 费用($&amp;#x2F;1M tokens)&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;output 费用($&amp;#x2F;1M tokens)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Claude 3 Haiku&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;200k&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;速度最快&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0.25&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1.25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Claude 3 Sonnet&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;200k&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;平衡&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3git&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Claude 3 Opus&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;200k&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;性能最强&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;15&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;75&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h4 id=&#34;PaLM-x2F-Gemini-系列&#34;&gt;&lt;a href=&#34;#PaLM-x2F-Gemini-系列&#34; class=&#34;headerlink&#34; title=&#34;PaLM&amp;#x2F;Gemini 系列&#34;&gt;&lt;/a&gt;PaLM&amp;#x2F;Gemini 系列&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;PaLM 系列&lt;/strong&gt;语言大模型由 &lt;strong&gt;Google&lt;/strong&gt; 开发。其初始版本于 &lt;code&gt;2022 年 4 月&lt;/code&gt;发布，并在 2023 年 3 月公开了 API。2023 年 5 月，Google 发布了 &lt;strong&gt;PaLM 2&lt;/strong&gt;，&lt;code&gt;2024 年 2 月 1 日&lt;/code&gt;，Google 将 Bard(之前发布的对话应用) 的底层大模型驱动由 PaLM2 更改为 &lt;strong&gt;Gemini&lt;/strong&gt;，同时也将原先的 Bard 更名为 &lt;strong&gt;Gemini&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://ai.google/discover/palm2/&#34;&gt;PaLM 官方地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://gemini.google.com/&#34;&gt;Gemini 使用地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;目前的 Gemini 是第一个版本，即 Gemini 1.0，根据参数量不同分为 Ultra, Pro 和 Nano 三个版本。&lt;/p&gt;
+&lt;h4 id=&#34;文心一言&#34;&gt;&lt;a href=&#34;#文心一言&#34; class=&#34;headerlink&#34; title=&#34;文心一言&#34;&gt;&lt;/a&gt;文心一言&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://yiyan.baidu.com/&#34;&gt;文心一言使用地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;文心一言是基于百度文心大模型的知识增强语言大模型&lt;/strong&gt;，于 &lt;code&gt;2023 年 3 月&lt;/code&gt;在国内率先开启邀测。文心一言的基础模型文心大模型于 2019 年发布 1.0 版，现已更新到 &lt;strong&gt;4.0&lt;/strong&gt; 版本。更进一步划分，文心大模型包括 NLP 大模型、CV 大模型、跨模态大模型、生物计算大模型、行业大模型。中文能力相对来说非常不错的闭源模型。&lt;/p&gt;
+&lt;p&gt;文心一言网页版分为&lt;strong&gt;免费版&lt;/strong&gt;和&lt;strong&gt;专业版&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;免费版使用文心 3.5 版本，已经能够满足个人用户或小型企业的大部分需求。&lt;/li&gt;
+&lt;li&gt;专业版使用文心 4.0 版本。定价为 59.9 元&amp;#x2F;月，连续包月优惠价为 49.9 元&amp;#x2F;月&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;同时也可以使用 API 进行调用（&lt;a href=&#34;https://console.bce.baidu.com/qianfan/chargemanage/list&#34;&gt;计费详情&lt;/a&gt;）。&lt;/p&gt;
+&lt;h4 id=&#34;星火大模型&#34;&gt;&lt;a href=&#34;#星火大模型&#34; class=&#34;headerlink&#34; title=&#34;星火大模型&#34;&gt;&lt;/a&gt;星火大模型&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://xinghuo.xfyun.cn/&#34;&gt;星火大模型使用地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;讯飞星火认知大模型&lt;/strong&gt;是&lt;strong&gt;科大讯飞&lt;/strong&gt;发布的语言大模型，支持多种自然语言处理任务。该模型于 &lt;code&gt;2023 年 5 月&lt;/code&gt;首次发布，后续经过多次升级。&lt;code&gt;2023 年 10 月&lt;/code&gt;，讯飞发布了&lt;strong&gt;讯飞星火认知大模型 V3.0&lt;/strong&gt;。&lt;code&gt;2024 年 1 月&lt;/code&gt;，讯飞发布了&lt;strong&gt;讯飞星火认知大模型 V3.5&lt;/strong&gt;，在语言理解，文本生成，知识问答等七个方面进行了升级，并且支持 system 指令，插件调用等多项功能。&lt;/p&gt;
+&lt;h3 id=&#34;开源LLM&#34;&gt;&lt;a href=&#34;#开源LLM&#34; class=&#34;headerlink&#34; title=&#34;开源LLM&#34;&gt;&lt;/a&gt;开源LLM&lt;/h3&gt;&lt;h4 id=&#34;LLaMA-系列&#34;&gt;&lt;a href=&#34;#LLaMA-系列&#34; class=&#34;headerlink&#34; title=&#34;LLaMA 系列&#34;&gt;&lt;/a&gt;LLaMA 系列&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://llama.meta.com/&#34;&gt;LLaMA 官方地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/facebookresearch/llama&#34;&gt;LLaMA 开源地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;LLaMA 系列模型&lt;/strong&gt;是 &lt;strong&gt;Meta&lt;/strong&gt; 开源的一组参数规模 &lt;strong&gt;从 7B 到 70B&lt;/strong&gt; 的基础语言模型。LLaMA 于&lt;code&gt;2023 年 2 月&lt;/code&gt;发布，并于 &lt;code&gt;2023 年 7 月&lt;/code&gt;发布了 &lt;strong&gt;LLaMA2&lt;/strong&gt; 模型。它们都是在数万亿个字符上训练的，展示了如何&lt;strong&gt;仅使用公开可用的数据集来训练最先进的模型&lt;/strong&gt;，而不需要依赖专有或不可访问的数据集。这些数据集包括 Common Crawl、Wikipedia、OpenWebText2、RealNews、Books 等。LLaMA 模型使用了&lt;strong&gt;大规模的数据过滤和清洗技术&lt;/strong&gt;，以提高数据质量和多样性，减少噪声和偏见。LLaMA 模型还使用了高效的&lt;strong&gt;数据并行&lt;/strong&gt;和&lt;strong&gt;流水线并行&lt;/strong&gt;技术，以加速模型的训练和扩展。特别地，LLaMA 13B 在 CommonsenseQA 等 9 个基准测试中超过了 GPT-3 (175B)，而 &lt;strong&gt;LLaMA 65B 与最优秀的模型 Chinchilla-70B 和 PaLM-540B 相媲美&lt;/strong&gt;。LLaMA 通过使用更少的字符来达到最佳性能，从而在各种推理预算下具有优势。&lt;/p&gt;
+&lt;p&gt;与 GPT 系列相同，LLaMA 模型也采用了 &lt;strong&gt;decoder-only&lt;/strong&gt; 架构，同时结合了一些前人工作的改进：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Pre-normalization 正则化&lt;/code&gt;：为了提高训练稳定性，LLaMA 对每个 Transformer 子层的输入进行了 RMSNorm 归一化，这种归一化方法可以避免梯度爆炸和消失的问题，提高模型的收敛速度和性能；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SwiGLU 激活函数&lt;/code&gt;：将 ReLU 非线性替换为 SwiGLU 激活函数，增加网络的表达能力和非线性，同时减少参数量和计算量；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;旋转位置编码（RoPE，Rotary Position Embedding）&lt;/code&gt;：模型的输入不再使用位置编码，而是在网络的每一层添加了位置编码，RoPE 位置编码可以有效地捕捉输入序列中的相对位置信息，并且具有更好的泛化能力。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;LLaMA2&lt;/strong&gt; 在 LLaMA 系列模型的基础上进行了改进，提高了模型的性能和效率：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;更多的训练数据量&lt;/code&gt;：LLaMA2 在 2 万亿个 token 的数据上进行预训练，相比 LLaMA1 的训练数据量增加了 40%。LLaMA2 能够接触到更多的文本信息，从而提高了其理解和生成文本的能力。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;更长的上下文长度&lt;/code&gt;：LLaMA2 的上下文长度增加了一倍，从 LLaMA1 的 2048 个 token 增加到了 4096。这使得 LLaMA2 能够处理更长的文本序列，改善了对长文本的理解和生成能力。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;分组查询注意力（GQA，Grouped-Query Attention）&lt;/code&gt;：通过将查询（query）分组并在组内共享键（key）和值（value），减少了计算量，同时保持了模型性能，提高了大型模型的推理效率。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;通义千问&#34;&gt;&lt;a href=&#34;#通义千问&#34; class=&#34;headerlink&#34; title=&#34;通义千问&#34;&gt;&lt;/a&gt;通义千问&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://tongyi.aliyun.com/&#34;&gt;通义千问使用地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/QwenLM/Qwen1.5&#34;&gt;通义千问开源地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;通义千问由阿里巴巴基于“通义”大模型研发&lt;/strong&gt;，于 &lt;code&gt;2023 年 4 月&lt;/code&gt;正式发布。2023 年 9 月，阿里云开源了 Qwen（通义千问）系列工作。并于 &lt;code&gt;2024 年 2 月 5 日&lt;/code&gt;，开源了 &lt;strong&gt;Qwen1.5&lt;/strong&gt;（Qwen2 的测试版）是一个 &lt;strong&gt;decoder-Only&lt;/strong&gt; 的模型，采用 &lt;code&gt;SwiGLU 激活&lt;/code&gt;、&lt;code&gt;RoPE&lt;/code&gt;、&lt;code&gt;multi-head attention&lt;/code&gt;的架构。中文能力相对来说非常不错的闭源模型。&lt;/p&gt;
+&lt;p&gt;目前，已经开源了 7 种模型大小：&lt;strong&gt;0.5B、1.8B、4B、7B、14B 、72B 的 Dense 模型和 14B (A2.7B)的 MoE 模型&lt;/strong&gt;；所有模型均支持长度为 &lt;strong&gt;32768 token&lt;/strong&gt; 的上下文；&lt;/p&gt;
+&lt;h4 id=&#34;GLM-系列&#34;&gt;&lt;a href=&#34;#GLM-系列&#34; class=&#34;headerlink&#34; title=&#34;GLM 系列&#34;&gt;&lt;/a&gt;GLM 系列&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://chatglm.cn/&#34;&gt;ChatGLM 使用地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/THUDM&#34;&gt;ChatGLM 开源地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;GLM 系列模型&lt;/strong&gt;是&lt;strong&gt;清华大学和智谱 AI 等&lt;/strong&gt;合作研发的语言大模型。2023 年 3 月 发布了 &lt;strong&gt;ChatGLM&lt;/strong&gt;。2023 年 6 月发布了 &lt;strong&gt;ChatGLM 2&lt;/strong&gt;。2023 年 10 月推出了 &lt;strong&gt;ChatGLM3&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ChatGLM3-6B&lt;/strong&gt; 支持正常的多轮对话的同时，原生支持工具调用（Function Call）、代码执行（Code Interpreter）和 Agent 任务等复杂场景。&lt;/p&gt;
+&lt;p&gt;开源了&lt;code&gt;对话模型&lt;/code&gt; &lt;strong&gt;ChatGLM3-6B&lt;/strong&gt;、&lt;code&gt;基础模型&lt;/code&gt; &lt;strong&gt;ChatGLM3-6B-Base&lt;/strong&gt;、&lt;code&gt;长文本对话模型&lt;/code&gt; &lt;strong&gt;ChatGLM3-6B-32K&lt;/strong&gt;、&lt;code&gt;多模态&lt;/code&gt; &lt;strong&gt;CogVLM-17B&lt;/strong&gt; 、以及 &lt;code&gt;智能体&lt;/code&gt; &lt;strong&gt;AgentLM&lt;/strong&gt; 等全面对标 OpenAI。&lt;/p&gt;
+&lt;h4 id=&#34;Baichuan-系列&#34;&gt;&lt;a href=&#34;#Baichuan-系列&#34; class=&#34;headerlink&#34; title=&#34;Baichuan 系列&#34;&gt;&lt;/a&gt;Baichuan 系列&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.baichuan-ai.com/chat&#34;&gt;百川使用地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/baichuan-inc&#34;&gt;百川开源地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Baichuan&lt;/strong&gt; 是由&lt;strong&gt;百川智能&lt;/strong&gt;开发的&lt;strong&gt;开源可商用&lt;/strong&gt;的语言大模型。其基于&lt;strong&gt;Transformer 解码器架构（decoder-only）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;2023 年 6 月 15 日发布了 &lt;strong&gt;Baichuan-7B&lt;/strong&gt; 和 &lt;strong&gt;Baichuan-13B&lt;/strong&gt;。百川同时开源了&lt;strong&gt;预训练&lt;/strong&gt;和&lt;strong&gt;对齐&lt;/strong&gt;模型，&lt;code&gt;预训练模型是面向开发者的“基座”&lt;/code&gt;，而&lt;code&gt;对齐模型则面向广大需要对话功能的普通用户&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Baichuan2&lt;/strong&gt; 于 &lt;code&gt;2023年 9 月 6 日&lt;/code&gt;推出。发布了 &lt;strong&gt;7B、13B&lt;/strong&gt; 的 &lt;strong&gt;Base&lt;/strong&gt; 和 &lt;strong&gt;Chat&lt;/strong&gt; 版本，并提供了 Chat 版本的 &lt;strong&gt;4bits 量化&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;2024 年 1 月 29 日&lt;/code&gt; 发布了 &lt;strong&gt;Baichuan 3&lt;/strong&gt;。但是&lt;strong&gt;目前还没有开源&lt;/strong&gt;。&lt;/p&gt;
+</content>
+        <category term="LLM" />
+        <category term="人工智能" />
+        <updated>2026-01-04T02:06:38.333Z</updated>
+    </entry>
+</feed>

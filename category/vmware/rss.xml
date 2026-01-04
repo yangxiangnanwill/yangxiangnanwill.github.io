@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Will • Posts by &#34;vmware&#34; category</title>
+        <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
+        <description>愿你一生努力，一生被爱</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 18 Sep 2023 13:41:29 +0800</pubDate>
+        <lastBuildDate>Mon, 18 Sep 2023 13:41:29 +0800</lastBuildDate>
+        <category>感言</category>
+        <category>思考</category>
+        <category>开发习惯</category>
+        <category>Docker</category>
+        <category>LINUX</category>
+        <category>CentOS</category>
+        <category>Linux</category>
+        <category>Jenkins</category>
+        <category>Crontab</category>
+        <category>Maven</category>
+        <category>Archery</category>
+        <category>MySql</category>
+        <category>工具</category>
+        <category>IDEA</category>
+        <category>Alibaba Cloud Toolkit</category>
+        <category>Git</category>
+        <category>PostMan</category>
+        <category>Typora</category>
+        <category>Node</category>
+        <category>前端</category>
+        <category>Nvm</category>
+        <category>信息安全等级保护认证</category>
+        <category>系统认证</category>
+        <category>读书笔记</category>
+        <category>JAVA</category>
+        <category>Java8</category>
+        <category>特性</category>
+        <category>枚举</category>
+        <category>BeetlSql</category>
+        <category>Beetl</category>
+        <category>ProtoBuffer</category>
+        <category>异常</category>
+        <category>Java IO-初识IO</category>
+        <category>JDBC</category>
+        <category>Mysql</category>
+        <category>POI</category>
+        <category>EasyExcel</category>
+        <category>MyBatis</category>
+        <category>Spring</category>
+        <category>SpringCloud</category>
+        <category>SpringCloud Alibaba</category>
+        <category>Spring Boot</category>
+        <category>其他</category>
+        <category>SOAR</category>
+        <category>VerificationCode</category>
+        <category>VinUtil</category>
+        <category>MongoDb</category>
+        <category>博客园</category>
+        <category>博客</category>
+        <category>Apache Common</category>
+        <category>工具类</category>
+        <category>常用开发库</category>
+        <category>Google Guava</category>
+        <category>Hutool</category>
+        <category>Lombok工具库详解</category>
+        <category>JSON类库详解</category>
+        <category>Spring常用工具类</category>
+        <category>日志类库详解</category>
+        <category>异步编程</category>
+        <category>线程</category>
+        <category>CentOS7</category>
+        <category>MongoDB</category>
+        <category>Redis</category>
+        <category>设计模式</category>
+        <category>VMware</category>
+        <category>方法论</category>
+        <category>开源协议</category>
+        <category>Script</category>
+        <category>思维习惯</category>
+        <category>shell</category>
+        <category>LLM</category>
+        <category>人工智能</category>
+        <category>ClaudeCode</category>
+        <category>开发错误</category>
+        <category>Ureport</category>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/09/18/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/VMware/VMware-%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
+            <title>VMware-安装虚拟机</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/09/18/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/VMware/VMware-%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
+            <category>VMware</category>
+            <pubDate>Mon, 18 Sep 2023 13:41:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;准备&#34;&gt;&lt;a href=&#34;#准备&#34; class=&#34;headerlink&#34; title=&#34;准备&#34;&gt;&lt;/a&gt;准备&lt;/h1&gt;&lt;p&gt;在安装vmware前，需要确认是否开启虚拟化&lt;br&gt;任务管理器-&amp;gt;性能-&amp;gt;虚拟化&lt;br&gt;如果没有开启则需要开启相关配置&lt;/p&gt;
+&lt;h1 id=&#34;安装&#34;&gt;&lt;a href=&#34;#安装&#34; class=&#34;headerlink&#34; title=&#34;安装&#34;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;h2 id=&#34;创建虚拟机，选择安装类型&#34;&gt;&lt;a href=&#34;#创建虚拟机，选择安装类型&#34; class=&#34;headerlink&#34; title=&#34;创建虚拟机，选择安装类型&#34;&gt;&lt;/a&gt;创建虚拟机，选择安装类型&lt;/h2&gt;&lt;p&gt;创建虚拟机时，需要选择虚拟机安装类型。&lt;br&gt;这里默认安装自定义安装。&lt;/p&gt;
+&lt;p&gt;典型安装与自定义安装的差别：通常设计人员使用自定义安装（高级）。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;典型安装：&lt;br&gt;这种安装方式将默认选项用于所有安装设置，包括安装位置、虚拟网络配置等。&lt;br&gt;这通常是新用户使用的方法，因为它省去了诸如配置选项之类的繁琐步骤，使得安装非常简便快捷。&lt;/li&gt;
+&lt;li&gt;自定义安装：&lt;br&gt;这种安装方式允许您自己选择要安装的组件和默认选项。&lt;br&gt;通过自定义安装，您可以选择特定的安装位置、禁用不需要的组件、自定义虚拟网络配置等。&lt;br&gt;自定义安装通常是高级用户使用的方法，因为它提供了更大的灵活性和控制权。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;虚拟机硬件兼容性&#34;&gt;&lt;a href=&#34;#虚拟机硬件兼容性&#34; class=&#34;headerlink&#34; title=&#34;虚拟机硬件兼容性&#34;&gt;&lt;/a&gt;虚拟机硬件兼容性&lt;/h2&gt;&lt;p&gt;虚拟机硬件兼容性是一个重要的选项，它决定了虚拟机能够在哪些版本的VMware产品上运行在选择虚拟机硬件兼容性选项时，需要考虑主机系统的版本以及目标环境的版本，以确保虚拟机可以在目标环境中正常运行。同时，不同的硬件兼容性选项可能会影响虚拟机所支持的特性和性能，因此需要根据实际需求进行选。&lt;br&gt;​ 例如：&lt;br&gt;​ Workstation 16.x：该选项表示虚拟机仅能在VMware Workstation 16或更高版本上运行&lt;br&gt;​ Workstation 15.x：该选项表示虚拟机可以在VMware Workstation 15或更高版本上运行&lt;br&gt;​ Workstation 14.x：该选项表示虚拟机可以在VMware Workstation 14或更高版本上运行。&lt;br&gt;​ 这个选项意义比如：&lt;br&gt;​ 在a机器上创建的虚拟机 在未来可能要移入到b机器&lt;br&gt;​ 如果a机器是Workstation 16.x&lt;br&gt;​ 但是b机器是Workstation 15.x 会存在兼容性问题&lt;br&gt;​ 如果是相反的操作&lt;br&gt;​ 如果a机器是Workstation 15.x&lt;br&gt;​ b机器是Workstation 16.x&lt;br&gt;​ a机器上创建的虚拟机移入到b机器，则可以使用，因为16.x是兼容15.x的&lt;/p&gt;
+&lt;h2 id=&#34;安装镜像文件&#34;&gt;&lt;a href=&#34;#安装镜像文件&#34; class=&#34;headerlink&#34; title=&#34;安装镜像文件&#34;&gt;&lt;/a&gt;安装镜像文件&lt;/h2&gt;&lt;p&gt;这一步选择稍后安装操作系统。&lt;/p&gt;
+&lt;p&gt;安装方式分为三种安装方式 ：&lt;br&gt;​ 第一种是通过电脑外，光盘驱动安装 (使用很少)&lt;br&gt;​ 第二种是通过电脑内，下载的镜像文件 (常用)&lt;br&gt;​ 第三种是先创建空虚拟机，稍后再安装系统 (常用)&lt;/p&gt;
+&lt;h2 id=&#34;选择版本&#34;&gt;&lt;a href=&#34;#选择版本&#34; class=&#34;headerlink&#34; title=&#34;选择版本&#34;&gt;&lt;/a&gt;选择版本&lt;/h2&gt;&lt;p&gt;操作系统选择Linux,CentOS8版本&lt;/p&gt;
+&lt;h2 id=&#34;命名虚拟机以及安装路径&#34;&gt;&lt;a href=&#34;#命名虚拟机以及安装路径&#34; class=&#34;headerlink&#34; title=&#34;命名虚拟机以及安装路径&#34;&gt;&lt;/a&gt;命名虚拟机以及安装路径&lt;/h2&gt;&lt;p&gt;给虚拟机一个合适的名称即可&lt;/p&gt;
+&lt;h2 id=&#34;处理器配置选择&#34;&gt;&lt;a href=&#34;#处理器配置选择&#34; class=&#34;headerlink&#34; title=&#34;处理器配置选择&#34;&gt;&lt;/a&gt;处理器配置选择&lt;/h2&gt;&lt;p&gt;处理器数量：&lt;br&gt;​ 可以根据虚拟机的需求选择使用的物理CPU核心数。但是，需要确认主机系统的CPU是否支持所需的核心数，否则可能会导致虚拟机无法启动或性能不佳。&lt;br&gt;查看主机CPU可以选择任务管理-&amp;gt;资源监视器&lt;br&gt;cpu内核总数是cpu&amp;#x3D;n+1&lt;br&gt;再选择虚拟机的cpu核心数（注意：你需要同时开启的虚拟机内核数相加不能超过你电脑cpu内核总数）&lt;/p&gt;
+&lt;h2 id=&#34;虚拟机内存配置选择&#34;&gt;&lt;a href=&#34;#虚拟机内存配置选择&#34; class=&#34;headerlink&#34; title=&#34;虚拟机内存配置选择&#34;&gt;&lt;/a&gt;虚拟机内存配置选择&lt;/h2&gt;&lt;p&gt;虚拟机内存配置的合适数值取决于许多因素，例如虚拟机运行的操作系统、应用程序的类型和数量、主机系统的硬件配置等。一般来说，以下是一些关于虚拟机内存配置的推荐：&lt;/p&gt;
+&lt;p&gt;对于桌面虚拟机（例如Windows 10），最低配置为2GB，推荐4GB或更高。&lt;br&gt;对于服务器虚拟机（例如Windows Server、Linux服务器），至少需要4GB，推荐8GB及以上。&lt;br&gt;可以在虚拟机中，根据实际需求增加内存。&lt;/p&gt;
+&lt;h2 id=&#34;虚拟机网络配置选择&#34;&gt;&lt;a href=&#34;#虚拟机网络配置选择&#34; class=&#34;headerlink&#34; title=&#34;虚拟机网络配置选择&#34;&gt;&lt;/a&gt;虚拟机网络配置选择&lt;/h2&gt;&lt;p&gt;以下是VMware虚拟网络中的三种常见网络连接方式：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;网络模式&lt;/th&gt;
+&lt;th&gt;网络模式含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;桥接（Bridged）&lt;/td&gt;
+&lt;td&gt;将虚拟机网络透明地连接到物理网络中，并且虚拟机可获得与物理网络相同的IP地址段。&lt;br/&gt;这种连接方式可以让虚拟机直接访问物理网络上的其他设备，同时也能让物理网络上的其他设备访问到虚拟机。&lt;br/&gt;在桥接模式下，你需要手工为虚拟系统配置IP地址、子网掩码，而且还要和宿主机器处于同一网段，这样虚拟系统才能和宿主机器进行通信。&lt;br/&gt;同时，由于这个虚拟系统是局域网中的一个独立的主机系统，那么就可以手工配置它的TCP&amp;#x2F;IP配置信息，以实现通过局域网的网关或路由器访问互联网&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NAT（Network Address Translation）&lt;/td&gt;
+&lt;td&gt;在主机和虚拟机之间建立一个私有网络，并通过虚拟网络适配器对连接进行管理。虚拟机使用虚拟网络适配器向外部发送请求，而请求的源IP地址被转换为主机的IP地址。&lt;br/&gt;这种连接方式可以提供一定的安全性，防止虚拟机受到来自外部的攻击，并且允许虚拟机访问Internet。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;仅主机（Host-Only）&lt;/td&gt;
+&lt;td&gt;创建一个独立的虚拟网络，只包含主机和虚拟机，而不与任何物理网络连接。&lt;br/&gt;这种连接方式可以提供一定的安全性，因为虚拟机无法从Internet或局域网中访问其他设备，但是不允许虚拟机之间直接通信。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;桥接模式的细则理解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;桥接模式可以让虚拟机透明地连接到物理网络中，并且虚拟机可获得与物理网络相同的IP地址段。在桥接模式下，VMware虚拟网络适配器会创建一个虚拟交换机（Virtual Switch），这个虚拟交换机类似于物理网络交换机，用于将虚拟机和物理网络之间进行通信。虚拟机和主机之间的通信并非直接发生，而是通过虚拟交换机（Virtual Switch）进行传递。虚拟交换机类似于物理网络交换机，用于将虚拟机和物理网络之间进行通信。当虚拟机向主机发送数据包时，数据包会先通过虚拟交换机，然后再传递给主机系统；反之，当主机向虚拟机发送数据包时，数据包也会经过虚拟交换机转发给虚拟机。&lt;/li&gt;
+&lt;li&gt;当虚拟机使用桥接模式连接网络时，它们就像物理计算机一样被分配了一个唯一的MAC地址和IP地址。这使得虚拟机能够直接访问物理网络上的其他设备，同时也能让物理网络上的其他设备访问到虚拟机。因此，在桥接模式下，虚拟机可以像物理计算机一样访问网络资源、共享文件等。&lt;br&gt;3、需要注意的是，使用桥接模式需要根据实际需求进行设置，并确保主机系统的网络适配器正确配置。如果网络适配器未正确配置，可能导致虚拟机无法访问网络或访问速度缓慢。同时，为避免安全问题，建议对虚拟机启用防火墙或其他安全功能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;NAT模式的细则理解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NAT模式（Network Address Translation）在主机和虚拟机之间建立一个私有网络，通过虚拟网络适配器对连接进行管理，使得虚拟机可以使用主机的Internet连接。具体来说，在NAT模式下，VMware会创建一个虚拟DHCP服务器，并为虚拟机分配一个虚拟IP地址，同时将本地主机的IP地址作为NAT路由器的出口IP地址&lt;/li&gt;
+&lt;li&gt;当虚拟机使用NAT模式连接到Internet时，虚拟机的所有网络通信都是通过主机系统进行转发和管理的。虚拟机的访问请求先被发送到虚拟DHCP服务器，然后经由主机进行NAT转换，返回数据则也会经过主机的NAT转换后再传递给虚拟机。这种连接方式可以提供一定的安全性，防止虚拟机受到来自外部的攻击，并且允许虚拟机访问Internet。&lt;/li&gt;
+&lt;li&gt;需要注意的是，使用NAT模式需要根据实际需求进行设置，并确保主机系统的网络适配器正确配置。如果网络适配器未正确配置，可能导致虚拟机无法访问网络或访问速度缓慢。同时，建议对虚拟机启用防火墙或其他安全功能，以保护虚拟机免受来自外部的攻击。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;仅主机模式的细则理解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;仅主机模式（Host-Only）创建一个独立的虚拟网络，只包含主机和虚拟机，而不与任何物理网络连接。在这种模式下，虚拟机只能与主机进行通信，而无法直接访问Internet或局域网上的其他设备。为了实现这种连接方式，VMware会创建一个虚拟网络适配器，并将其配置为与主机系统共享。&lt;/li&gt;
+&lt;li&gt;当虚拟机使用仅主机模式连接网络时，它们就像被放置在一个私有网络中，可以相互通信、共享资源等，但是无法从Internet或局域网中访问其他设备。这种连接方式可以提供一定的安全性，因为虚拟机无法从Internet或局域网中访问其他设备，同时也不会受到来自外部的攻击。&lt;/li&gt;
+&lt;li&gt;需要注意的是，在仅主机模式下，虚拟机之间可以直接通信，但不能与主机所在的物理网络（例如家庭或企业网络）通信。如果需要让虚拟机与物理网络通信，可以考虑使用桥接或NAT模式。同时，在使用仅主机模式时，建议对虚拟机启用防火墙或其他安全功能，以保护虚拟机免受来自虚拟机之间的攻击。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;I-x2F-O控制器配置选择&#34;&gt;&lt;a href=&#34;#I-x2F-O控制器配置选择&#34; class=&#34;headerlink&#34; title=&#34;I&amp;#x2F;O控制器配置选择&#34;&gt;&lt;/a&gt;I&amp;#x2F;O控制器配置选择&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;BusLogic&lt;/td&gt;
+&lt;td&gt;是第一个被支持的SCSI控制器类型，适用于早期的Windows操作系统和其他一些老旧的操作系统。在性能方面，BusLogic相对较慢，因为它使用CPU软件仿真来处理I&amp;#x2F;O请求。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LSI Logic&lt;/td&gt;
+&lt;td&gt;是一种较新的SCSI控制器类型，适用于大多数现代操作系统和应用程序。与BusLogic相比，LSI Logic使用更先进的技术来处理I&amp;#x2F;O请求，具有更好的性能和可靠性。(推荐)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LSI Logic SAS&lt;/td&gt;
+&lt;td&gt;是一种基于SAS架构的SCSI控制器，适用于需要高速存储和高并发I&amp;#x2F;O的应用场景。与LSI Logic相比，LSI Logic SAS提供了更高的带宽和更低的延迟。(推荐) Paravirtualized SCSI：是一种特殊类型的SCSI控制器，使用虚拟化技术来提高性能和效率。它可以通过直接访问物理设备来避免CPU软件仿真，提供更低的延迟和更高的吞吐量。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h2 id=&#34;磁盘类型选择&#34;&gt;&lt;a href=&#34;#磁盘类型选择&#34; class=&#34;headerlink&#34; title=&#34;磁盘类型选择&#34;&gt;&lt;/a&gt;磁盘类型选择&lt;/h2&gt;&lt;p&gt;在VMware虚拟机中，IDE磁盘类型、SCSI磁盘类型、SATA磁盘类型和NVMe磁盘类型都有各自的特点和适用场景。以下是它们的主要特点和适用场景：&lt;/p&gt;
+&lt;p&gt;IDE磁盘类型：适用于较早的操作系统和应用程序，如MS-DOS和Windows 95&amp;#x2F;98等。它可以连接两个IDE硬盘或CD&amp;#x2F;DVD-ROM设备，但不支持热插拔功能，且性能相对较差。&lt;/p&gt;
+&lt;p&gt;SCSI磁盘类型：适用于大多数现代操作系统和应用程序，特别是需要高性能存储的应用场景。它支持多达15个SCSI设备，包括硬盘、CD&amp;#x2F;DVD-ROM、磁带机等，并提供了更好的性能和可靠性。&lt;/p&gt;
+&lt;p&gt;SATA磁盘类型：适用于较新的Windows、Linux和其他操作系统，特别是桌面和笔记本电脑的虚拟机。它可以连接多个SATA硬盘和CD&amp;#x2F;DVD-ROM设备，并提供了较好的性能和扩展性。与IDE相比，SATA磁盘类型支持更高的数据传输速率和更大的存储容量。&lt;/p&gt;
+&lt;p&gt;NVMe磁盘类型：适用于需要极高性能存储的应用场景，如大规模数据分析和高性能计算等。它可以连接多个NVMe硬盘，并提供了较低的延迟和更高的带宽。与SCSI和SATA相比，NVMe具有更高的I&amp;#x2F;O吞吐量和更低的访问延迟。&lt;/p&gt;
+&lt;p&gt;IDE磁盘类型适用于较早的系统和应用程序，而SCSI、SATA和NVMe则适用于现代的操作系统和应用程序。在选择磁盘类型时，应该根据实际需求进行权衡，考虑到性能、兼容性和扩展性等因素。需要注意的是，在更改磁盘类型时，可能需要重新安装操作系统或驱动程序，以确保虚拟机可以正常工作。&lt;/p&gt;
+&lt;h2 id=&#34;磁盘选择&#34;&gt;&lt;a href=&#34;#磁盘选择&#34; class=&#34;headerlink&#34; title=&#34;磁盘选择&#34;&gt;&lt;/a&gt;磁盘选择&lt;/h2&gt;&lt;p&gt;在VMware虚拟机中，创建新的虚拟磁盘、使用现有的虚拟磁盘和使用物理磁盘都有各自的优缺点和适用场景。以下是它们的主要区别：&lt;br&gt;​ 创建新的虚拟磁盘：这种方法可以为虚拟机分配一个新的虚拟磁盘，并将其格式化为所需的文件系统。创建新的虚拟磁盘通常比较简单，且不会影响其他虚拟机或主机系统。&lt;/p&gt;
+&lt;p&gt;​ 使用现有的虚拟磁盘：这种方法可以利用已经存在的虚拟磁盘，避免重复创建和占用存储空间。如果虚拟机需要多个磁盘，使用现有的虚拟磁盘也可以提高磁盘管理的效率和便捷性。&lt;/p&gt;
+&lt;p&gt;​ 使用物理磁盘：这种方法可以将物理磁盘直接映射到虚拟机中，使得虚拟机可以直接读写物理磁盘上的数据。使用物理磁盘可以获得更好的性能和可靠性，但需要注意保护物理磁盘的数据安全性。&lt;/p&gt;
+&lt;p&gt;​ 需要注意的是，在使用以上任何一种方法时，都需要考虑到存储空间、性能和安全等方面的问题，并根据实际需求进行权衡选择。同时，在使用物理磁盘时，需要特别小心，以避免对宿主机上的数据造成损坏或泄露。&lt;/p&gt;
+&lt;h2 id=&#34;磁盘容量选择&#34;&gt;&lt;a href=&#34;#磁盘容量选择&#34; class=&#34;headerlink&#34; title=&#34;磁盘容量选择&#34;&gt;&lt;/a&gt;磁盘容量选择&lt;/h2&gt;&lt;p&gt;如无特殊需求，大小和分配类型根据红框选择即可，如有特殊需求可自行调配。&lt;/p&gt;
+&lt;h2 id=&#34;磁盘存储路径&#34;&gt;&lt;a href=&#34;#磁盘存储路径&#34; class=&#34;headerlink&#34; title=&#34;磁盘存储路径&#34;&gt;&lt;/a&gt;磁盘存储路径&lt;/h2&gt;&lt;p&gt;依据自己真实情况进行选择配置。&lt;/p&gt;
+&lt;h2 id=&#34;创建虚拟机&#34;&gt;&lt;a href=&#34;#创建虚拟机&#34; class=&#34;headerlink&#34; title=&#34;创建虚拟机&#34;&gt;&lt;/a&gt;创建虚拟机&lt;/h2&gt;&lt;p&gt;可自定义配置虚拟机硬件配置信息，如博猪会把USB驱动、声卡等非必要的硬件配置信息，配置完成后，点击完成即可。&lt;/p&gt;
+&lt;h1 id=&#34;初始配置&#34;&gt;&lt;a href=&#34;#初始配置&#34; class=&#34;headerlink&#34; title=&#34;初始配置&#34;&gt;&lt;/a&gt;初始配置&lt;/h1&gt;&lt;h2 id=&#34;虚拟网卡区别&#34;&gt;&lt;a href=&#34;#虚拟网卡区别&#34; class=&#34;headerlink&#34; title=&#34;虚拟网卡区别&#34;&gt;&lt;/a&gt;虚拟网卡区别&lt;/h2&gt;&lt;h3 id=&#34;VMnet1-和-VMnet8区别：&#34;&gt;&lt;a href=&#34;#VMnet1-和-VMnet8区别：&#34; class=&#34;headerlink&#34; title=&#34;VMnet1 和 VMnet8区别：&#34;&gt;&lt;/a&gt;VMnet1 和 VMnet8区别：&lt;/h3&gt;&lt;p&gt;vmnet1和vmnet8是两个虚拟网卡，主要作用是让虚拟机可以通过我们的宿主机的网线上网。&lt;/p&gt;
+&lt;p&gt;&lt;font color=&#34;#c00000&#34;&gt;注意：如果有“！”，说明不能用。&lt;/font&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;vmnet1是为host-only方式服务的，vmnet8是为NAT方式服务的。设置私有网络（Host-Only）时，用来和主机通信，禁用以后就无法正常使用Host-Only模式了；设置网络地址翻译（NAT）时，和主机通讯使用，如果禁用，那么虚拟机在NAT模式下依然可以通过主机网卡访问外网，但不能通过内部网络和主机直接通信。而使用桥接网络时，则不需要这两个网卡了。&#34;&gt;&lt;a href=&#34;#vmnet1是为host-only方式服务的，vmnet8是为NAT方式服务的。设置私有网络（Host-Only）时，用来和主机通信，禁用以后就无法正常使用Host-Only模式了；设置网络地址翻译（NAT）时，和主机通讯使用，如果禁用，那么虚拟机在NAT模式下依然可以通过主机网卡访问外网，但不能通过内部网络和主机直接通信。而使用桥接网络时，则不需要这两个网卡了。&#34; class=&#34;headerlink&#34; title=&#34;vmnet1是为host-only方式服务的，vmnet8是为NAT方式服务的。设置私有网络（Host Only）时，用来和主机通信，禁用以后就无法正常使用Host-Only模式了；设置网络地址翻译（NAT）时，和主机通讯使用，如果禁用，那么虚拟机在NAT模式下依然可以通过主机网卡访问外网，但不能通过内部网络和主机直接通信。而使用桥接网络时，则不需要这两个网卡了。&#34;&gt;&lt;/a&gt;vmnet1是为host-only方式服务的，vmnet8是为NAT方式服务的。&lt;br&gt;设置私有网络（Host Only）时，用来和主机通信，禁用以后就无法正常使用Host-Only模式了；&lt;br&gt;设置网络地址翻译（NAT）时，和主机通讯使用，如果禁用，那么虚拟机在NAT模式下依然可以通过主机网卡访问外网，但不能通过内部网络和主机直接通信。&lt;br&gt;而使用桥接网络时，则不需要这两个网卡了。&lt;/h2&gt;&lt;p&gt;使用Host-Only模式的guest系统与主机通信需要VMnet1网卡的支持；&lt;br&gt;通过NAT方式上网的guest系统与主机通信需要VMnet8网卡的支持；&lt;br&gt;使用桥接模式上网需要网络中存在DHCP服务器，且提供服务。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;再来区分一下应用场景：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VMnet1&lt;br&gt;使用Host-Only模式的guest系统与主机通信需要VMnet1网卡的支持&lt;/li&gt;
+&lt;li&gt;VMnet8&lt;br&gt;使用NAT网络模式，在宿主机安装多台虚拟机，和宿主组成一个小局域网，宿主机，虚拟机之间都可以互相通信，虚拟机也可访问外网，例如 搭建 hadoop 集群，分布式服务&lt;/li&gt;
+&lt;li&gt;VMNet0&lt;br&gt;使用桥接模式，安装VM后，在VM里建立虚拟机 默认 就是该模式。&lt;br&gt;如果你只是需要一台虚拟机可以和宿主互通，并可以访问外网，此模式即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;安装虚拟机系统后不需要调整网络，物理网络中的 “路由” 所包含的DHCP服务器会自动识别该虚拟机并为其分配IP地址；&lt;br&gt;如果没有路由，可以自己手动在系统分配，原则是和宿主机在同一网段并指向相同的网关即可通信。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;配置虚拟机网络配置&#34;&gt;&lt;a href=&#34;#配置虚拟机网络配置&#34; class=&#34;headerlink&#34; title=&#34;配置虚拟机网络配置&#34;&gt;&lt;/a&gt;配置虚拟机网络配置&lt;/h2&gt;&lt;p&gt;&lt;font color=&#34;#c00000&#34;&gt;网络模式默认配置为NAT模式&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;既然要网络模式要设置为NAT模式，即对应VMware中的&lt;code&gt;VMware Network Adapter VMnet8&lt;/code&gt;网卡设备，这个是虚拟网卡。&lt;/p&gt;
+&lt;p&gt;VMware-&amp;gt;编辑-&amp;gt;选择VMnet8&lt;br&gt;配置子网地址、子网掩码、网关信息，如果需要动态分配IP地址的话则需要配置DHCP信息。&lt;/p&gt;
+&lt;h2 id=&#34;编辑网卡配置文件&#34;&gt;&lt;a href=&#34;#编辑网卡配置文件&#34; class=&#34;headerlink&#34; title=&#34;编辑网卡配置文件&#34;&gt;&lt;/a&gt;编辑网卡配置文件&lt;/h2&gt;&lt;p&gt;编辑网卡配置文件，进入 &amp;#x2F;etc&amp;#x2F;sysconfig&amp;#x2F;network-scripts 目录，网卡名称可能不同，查看 ip (使用 ifconfig 或 ip addr 命令)，可以找到网卡名，进入网卡名对应的文件。&lt;br&gt;一般虚拟机网卡信息为：&lt;code&gt;ifcfg-ens160&lt;/code&gt;,如果存在多个网卡配置信息，可以使用&lt;code&gt;ifconfig&lt;/code&gt;查询虚拟机网卡信息，找到对应网段的信息配置。&lt;br&gt;这里就以&lt;code&gt;ifcfg-ens160&lt;/code&gt;为例。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;vim ifcfg-ens160&lt;/code&gt; 修改配置文件&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;TYPE=Ethernet&lt;br&gt;PROXY_METHOD=none&lt;br&gt;BROWSER_ONLY=no&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 这里默认为DHCP,即动态分配，现在修改为静态地址&lt;/span&gt;&lt;br&gt;BOOTPROTO=static&lt;br&gt;DEFROUTE=&lt;span class=&#34;hljs-built_in&#34;&gt;yes&lt;/span&gt;&lt;br&gt;IPV4_FAILURE_FATAL=no&lt;br&gt;IPV6INIT=&lt;span class=&#34;hljs-built_in&#34;&gt;yes&lt;/span&gt;&lt;br&gt;IPV6_AUTOCONF=&lt;span class=&#34;hljs-built_in&#34;&gt;yes&lt;/span&gt;&lt;br&gt;IPV6_DEFROUTE=&lt;span class=&#34;hljs-built_in&#34;&gt;yes&lt;/span&gt;&lt;br&gt;IPV6_FAILURE_FATAL=no&lt;br&gt;NAME=ens160&lt;br&gt;UUID=79179731-c3c5-4ba8-8b78-b54af474f1b7&lt;br&gt;DEVICE=ens160&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 开机自启动&lt;/span&gt;&lt;br&gt;ONBOOT=&lt;span class=&#34;hljs-built_in&#34;&gt;yes&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 静态IP地址&lt;/span&gt;&lt;br&gt;IPADDR=192.168.122.128&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 静态IP掩码信息&lt;/span&gt;&lt;br&gt;NETMASK=255.255.255.0&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 静态IP网关&lt;/span&gt;&lt;br&gt;GATEWAY=192.168.122.2&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;重启网卡配置信息&#34;&gt;&lt;a href=&#34;#重启网卡配置信息&#34; class=&#34;headerlink&#34; title=&#34;重启网卡配置信息&#34;&gt;&lt;/a&gt;重启网卡配置信息&lt;/h2&gt;&lt;p&gt;使用 &lt;code&gt;nmcli c reload&lt;/code&gt;（centos 8） 命令或 &lt;code&gt;service network restart&lt;/code&gt; (centos 7)命令重启虚拟网卡，查看本机 ip 如果不是设置的则重启虚拟机&lt;/p&gt;
+&lt;h1 id=&#34;桌面调整设置&#34;&gt;&lt;a href=&#34;#桌面调整设置&#34; class=&#34;headerlink&#34; title=&#34;桌面调整设置&#34;&gt;&lt;/a&gt;桌面调整设置&lt;/h1&gt;&lt;p&gt;centos中的6种运行级别如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;0：关机 runlevel0 poweroff.target&lt;/li&gt;
+&lt;li&gt;1：单用户 runlevel1 rescue.target&lt;/li&gt;
+&lt;li&gt;2：多用户无网络 runlevel2 multi-user.target&lt;/li&gt;
+&lt;li&gt;3：多用户有网络 runlevel3 multi-user.target&lt;/li&gt;
+&lt;li&gt;4：保留 runlevel4 multi-user.target&lt;/li&gt;
+&lt;li&gt;5：图形界面 runlevel5 graphical.target&lt;/li&gt;
+&lt;li&gt;6：关机并重启 runlevel6 reboot.target&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;1-centos7以下的版本&#34;&gt;&lt;a href=&#34;#1-centos7以下的版本&#34; class=&#34;headerlink&#34; title=&#34;1. centos7以下的版本&#34;&gt;&lt;/a&gt;1. centos7以下的版本&lt;/h2&gt;&lt;p&gt;通过有以下方式进行设置默认启动方式&lt;br&gt;&lt;code&gt;vim /etc/inittab&lt;/code&gt;&lt;br&gt;找到id:5:initdefault,将 5 修改为3即可&lt;/p&gt;
+&lt;h2 id=&#34;2-centos7-含-以上的版本&#34;&gt;&lt;a href=&#34;#2-centos7-含-以上的版本&#34; class=&#34;headerlink&#34; title=&#34;2. centos7(含)以上的版本&#34;&gt;&lt;/a&gt;2. centos7(含)以上的版本&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;设置成默认命令模式启动&lt;br&gt;  &lt;code&gt;systemctl set-default multi-user.target 或者 systemctl set-default runlevel3&lt;/code&gt;&lt;br&gt;  等同于&lt;br&gt;  &lt;code&gt;rm /etc/systemd/system/default.target &amp;amp;&amp;amp; ln -sf /lib/systemd/system/multi-user.target /etc/systemd/system/default.target&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;设置成默认图形模式启动&lt;br&gt;  &lt;code&gt;systemctl set-default graphical.target 或者 systemctl set-default runlevel5&lt;/code&gt;&lt;br&gt;  等同于&lt;br&gt;  &lt;code&gt;rm /etc/systemd/system/default.target &amp;amp;&amp;amp; ln -sf /lib/systemd/system/graphical.target /etc/systemd/system/default.target&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以看到他们的关系：  &lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-built_in&#34;&gt;ls&lt;/span&gt; -l /etc/systemd/system/default.target&lt;br&gt;&lt;span class=&#34;hljs-built_in&#34;&gt;ls&lt;/span&gt; -l /lib/systemd/system/runlevel*&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;3-手动启动某个模式&#34;&gt;&lt;a href=&#34;#3-手动启动某个模式&#34; class=&#34;headerlink&#34; title=&#34;3. 手动启动某个模式&#34;&gt;&lt;/a&gt;3. 手动启动某个模式&lt;/h2&gt;&lt;p&gt;&lt;code&gt;init 3 //运行命令行模式&lt;/code&gt;&lt;br&gt;&lt;code&gt;init 5 //运行图形模式&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;4-安装图像界面&#34;&gt;&lt;a href=&#34;#4-安装图像界面&#34; class=&#34;headerlink&#34; title=&#34;4. 安装图像界面&#34;&gt;&lt;/a&gt;4. 安装图像界面&lt;/h2&gt;&lt;p&gt;&lt;code&gt;dnf groupinstall &amp;quot;GNOME Desktop&amp;quot; &amp;quot;Graphical Administration Tools&amp;quot;&lt;/code&gt;&lt;br&gt;centos8以下版本，把dnf改为yum&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/09/18/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/VMware/VMware-%E5%A4%8D%E5%88%B6%E8%99%9A%E6%8B%9F%E6%9C%BA&amp;%E5%85%8B%E9%9A%86%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
+            <title>VMware-复制虚拟机&amp;克隆虚拟机</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/09/18/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/VMware/VMware-%E5%A4%8D%E5%88%B6%E8%99%9A%E6%8B%9F%E6%9C%BA&amp;%E5%85%8B%E9%9A%86%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
+            <category>LINUX</category>
+            <category>VMware</category>
+            <pubDate>Mon, 18 Sep 2023 08:44:37 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;关于虚拟机提示选择“我已移动该虚拟机”或“我已复制该虚拟机”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;我已移动该虚拟机&lt;blockquote&gt;
+&lt;p&gt;表示打开后，虚拟机的网卡的mac地址不变，如果复制的是本地的虚拟机，复制前的虚拟机和复制后的虚拟机同时开机会造成网络冲突。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;我已复制该虚拟机&lt;blockquote&gt;
+&lt;p&gt;表示打开复制后的虚拟机的网卡的物理地址是新生成的，这样怎么开机都不会有网卡问题，所以VMware本身也是建议不知道的就选这个选项。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;复制虚拟机&#34;&gt;&lt;a href=&#34;#复制虚拟机&#34; class=&#34;headerlink&#34; title=&#34;复制虚拟机&#34;&gt;&lt;/a&gt;复制虚拟机&lt;/h1&gt;&lt;p&gt;VMware 上创建的虚拟机是可以重复使用的，安装好的虚拟机可以直接复制或者剪切到其它任意电脑上，然后使用 VMware 打开使用，两者的虚拟机设置以及登录密码都完全一样。&lt;/p&gt;
+&lt;p&gt;比如在某台电脑 A 上创建了 CentOS 7.2 的虚拟机（其它系统虚拟机如 windows、Red hat 也是同理），某一天在电脑 B 上也需要使用虚拟机，此时在电脑 B 上只需要安装 VMware 软件，然后从电脑 A 复制创建好的虚拟机文件目录到电脑 B，然后打开启动虚拟机即可。虚拟机的配置，如内存大小，处理器，磁盘大小等等，电脑 B 都会与电脑 A 中的保持一致，连登陆密码都是一致。&lt;/p&gt;
+&lt;p&gt;这样的情况其实挺多的，比如从自己的旧电脑复制到新电脑上，或者从家里的笔记本复制到公司的台式机等等，如下动图所示，就是将旧电脑上创建好了的 CentOS 虚拟机整个目录复制到了新电脑上，然后运行 VMware 打开即可运行。&lt;/p&gt;
+&lt;p&gt;注意：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;虽然虚拟机系统可以复制或者剪切重复使用，但是虚拟机系统内部安装的软件（比如 Java、mysql、docker等等）可能需要重新安装，造成原因如下：&lt;ul&gt;
+&lt;li&gt;新旧电脑的环境不一致&lt;/li&gt;
+&lt;li&gt;因为旧电脑上使用的是 VMware 12，而新电脑使用的是 VMware 15&lt;/li&gt;
+&lt;li&gt;直接复制的系统里面的程序本身真的需要重新安装。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;克隆虚拟机&#34;&gt;&lt;a href=&#34;#克隆虚拟机&#34; class=&#34;headerlink&#34; title=&#34;克隆虚拟机&#34;&gt;&lt;/a&gt;克隆虚拟机&lt;/h1&gt;&lt;p&gt;平时开发的时候需要做集群，比如 Redis 集群、Kafka 集群、微服务集群等等，为了更贴实际，就需要多台虚拟机，使用一个 VMware 开启多个 虚拟机系统，此时固然可以重新创建虚拟机、或者复制虚拟机，但是都没有克隆虚拟机来的快。&lt;/p&gt;
+&lt;p&gt;克隆虚拟机只需简单几步，就能克隆一个一模一样的系统，虚拟机配置、登陆账户及密码等等完全一样、更重要的是连原系统安装的程序在新克隆的系统中都能继续使用。&lt;/p&gt;
+&lt;h2 id=&#34;注意事项&#34;&gt;&lt;a href=&#34;#注意事项&#34; class=&#34;headerlink&#34; title=&#34;注意事项&#34;&gt;&lt;/a&gt;注意事项&lt;/h2&gt;&lt;p&gt;&lt;font color=&#34;#c00000&#34;&gt;无法为已经开启或者挂起的虚拟机克隆，所以克隆前需要关闭虚拟机。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&#34;克隆步骤&#34;&gt;&lt;a href=&#34;#克隆步骤&#34; class=&#34;headerlink&#34; title=&#34;克隆步骤&#34;&gt;&lt;/a&gt;克隆步骤&lt;/h2&gt;&lt;p&gt;右键要克隆的虚拟机、选择管理 ——&amp;gt; 克隆，进入克隆虚拟机向导，然后根据向导即可轻松创建。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;克隆源&lt;ul&gt;
+&lt;li&gt;虚拟机中的当前状态&lt;/li&gt;
+&lt;li&gt;现有快照(仅限关闭的虚拟机)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;克隆类型&lt;ul&gt;
+&lt;li&gt;创建链接克隆&lt;/li&gt;
+&lt;li&gt;创建完整克隆&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;克隆后修改事项&#34;&gt;&lt;a href=&#34;#克隆后修改事项&#34; class=&#34;headerlink&#34; title=&#34;克隆后修改事项&#34;&gt;&lt;/a&gt;克隆后修改事项&lt;/h2&gt;&lt;p&gt;克隆后并不是直接能用，而是需要进行一些调试。 因为刚刚克隆完之后，克隆机和母机MAC地址一样，我们需要重新配置和删除网卡信息&lt;/p&gt;
+&lt;h3 id=&#34;修改MAC地址&#34;&gt;&lt;a href=&#34;#修改MAC地址&#34; class=&#34;headerlink&#34; title=&#34;修改MAC地址&#34;&gt;&lt;/a&gt;修改MAC地址&lt;/h3&gt;&lt;p&gt;通过虚拟机设置进行修改，点击生成即可&lt;br&gt;虚拟机设置-&amp;gt;网络适配器-&amp;gt;高级-&amp;gt;MAC地址-&amp;gt;生成&lt;/p&gt;
+&lt;h3 id=&#34;修改主机名&#34;&gt;&lt;a href=&#34;#修改主机名&#34; class=&#34;headerlink&#34; title=&#34;修改主机名&#34;&gt;&lt;/a&gt;修改主机名&lt;/h3&gt;&lt;p&gt;出于程序开发的需要，需要区别各个服务器的名称，所以修改新系统的主机名称，它默认是：localhost.localdomain&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;hostname&lt;/th&gt;
+&lt;th&gt;查看系统主机名称&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;hostnamectl set-hostname xxx&lt;/td&gt;
+&lt;td&gt;修改系统主机名称&lt;br/&gt;1、主机名称中的特殊字符或空白字符都将会被移除，大写字母会自动转化成小写&lt;br/&gt;2、执行命令之后，会自动修改 &amp;#x2F;etc&amp;#x2F;hostname 文件&lt;br/&gt;3、执行命令之后，会立即生效，且重启系统也会生效&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cat &amp;#x2F;etc&amp;#x2F;hostname&lt;/td&gt;
+&lt;td&gt;查看 &amp;#x2F;etc&amp;#x2F;hostname 文件内容，里面配置的就是系统主机名称&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h3 id=&#34;IP-地址修改&#34;&gt;&lt;a href=&#34;#IP-地址修改&#34; class=&#34;headerlink&#34; title=&#34;IP 地址修改&#34;&gt;&lt;/a&gt;IP 地址修改&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;如果是静态地址的话需要手动修改一下ip地址，如果是DHCP动态分配则无需配置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;查看网络信息&#34;&gt;&lt;a href=&#34;#查看网络信息&#34; class=&#34;headerlink&#34; title=&#34;查看网络信息&#34;&gt;&lt;/a&gt;查看网络信息&lt;/h4&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;ifconfig&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;假如是静态  ip，则可以手动修改 &amp;#x2F;etc&amp;#x2F;sysconfig&amp;#x2F;network-scripts&amp;#x2F; 目录下的网卡文件，如 ifcfg-ens33（ifcfg-是前缀，ens33是网卡名称），网卡名称可以使用 ifconfig 命令查看。静态 ip 时，BOOTPROTO&amp;#x3D;”static”，还会多一行 IPADDR&amp;#x3D;x.x.x.x，修改此 IPADDR 即可修改 ip 地址。&lt;/p&gt;
+&lt;p&gt;&lt;font color=&#34;#c00000&#34;&gt;特别提醒：如果克隆出来的新系统的网卡文件名称仍然和原系统的网卡名称一致，则需要手动修改文件名称为新系统的网卡名称，同时也要修改网卡文件内的 NAME、DEVICE 属性和新系统网卡名称一致。&lt;/font&gt;&lt;/p&gt;
+&lt;h4 id=&#34;重启网络&#34;&gt;&lt;a href=&#34;#重启网络&#34; class=&#34;headerlink&#34; title=&#34;重启网络&#34;&gt;&lt;/a&gt;重启网络&lt;/h4&gt;&lt;p&gt;使用 nmcli c reload（centos 8） 命令或 service network restart (centos 7)命令重启虚拟网卡，查看本机 ip 如果不是设置的则重启虚拟机&lt;/p&gt;
+&lt;h3 id=&#34;删除网卡信息&#34;&gt;&lt;a href=&#34;#删除网卡信息&#34; class=&#34;headerlink&#34; title=&#34;删除网卡信息&#34;&gt;&lt;/a&gt;删除网卡信息&lt;/h3&gt;&lt;p&gt;如果上述配置完了还有问题，就把网卡信息文件删掉重启，当然你也可以在配置的时候就直接删掉网卡信息，他在重启的时候会自动生成。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-built_in&#34;&gt;rm&lt;/span&gt; -rf /etc/udev/rules.d/70-persistent-ipoib.rules &lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;重启虚拟机&#34;&gt;&lt;a href=&#34;#重启虚拟机&#34; class=&#34;headerlink&#34; title=&#34;重启虚拟机&#34;&gt;&lt;/a&gt;重启虚拟机&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;init 6&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;此时就可以正常应用已经克隆好的虚拟机了。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

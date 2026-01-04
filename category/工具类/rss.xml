@@ -75,6 +75,13 @@
         <category>方法论</category>
         <category>开源协议</category>
         <category>Script</category>
+        <category>思维习惯</category>
+        <category>shell</category>
+        <category>LLM</category>
+        <category>人工智能</category>
+        <category>ClaudeCode</category>
+        <category>开发错误</category>
+        <category>Ureport</category>
         <item>
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%B7%A5%E5%85%B7%E7%B1%BB/%E5%9F%BA%E4%BA%8EMongoDB%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%A2%9EID/</guid>
             <title>基于MongoDB实现自增ID</title>

@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Will • All posts by \"shell\" tag",
+    "description": "愿你一生努力，一生被爱",
+    "home_page_url": "https://github.com/yangxiangnanwill/yangxiangnanwill.github.io",
+    "items": [
+        {
+            "id": "https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/04/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/%E5%AE%89%E8%A3%85Java8/",
+            "url": "https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/04/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/%E5%AE%89%E8%A3%85Java8/",
+            "title": "安装Java8",
+            "date_published": "2026-01-04T02:06:38.338Z",
+            "content_html": "<h1 id=\"前言\"><a href=\"#前言\" class=\"headerlink\" title=\"前言\"></a>前言</h1><p>最近</p>\n",
+            "tags": [
+                "LINUX",
+                "JAVA",
+                "shell"
+            ]
+        }
+    ]
+}

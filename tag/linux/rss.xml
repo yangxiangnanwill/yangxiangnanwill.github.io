@@ -5,8 +5,8 @@
         <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
         <description>愿你一生努力，一生被爱</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 18 Sep 2023 08:44:37 +0800</pubDate>
-        <lastBuildDate>Mon, 18 Sep 2023 08:44:37 +0800</lastBuildDate>
+        <pubDate>Sun, 04 Jan 2026 10:06:38 +0800</pubDate>
+        <lastBuildDate>Sun, 04 Jan 2026 10:06:38 +0800</lastBuildDate>
         <category>感言</category>
         <category>思考</category>
         <category>开发习惯</category>
@@ -75,6 +75,24 @@
         <category>方法论</category>
         <category>开源协议</category>
         <category>Script</category>
+        <category>思维习惯</category>
+        <category>shell</category>
+        <category>LLM</category>
+        <category>人工智能</category>
+        <category>ClaudeCode</category>
+        <category>开发错误</category>
+        <category>Ureport</category>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/04/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/%E5%AE%89%E8%A3%85Java8/</guid>
+            <title>安装Java8</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/04/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/%E5%AE%89%E8%A3%85Java8/</link>
+            <category>LINUX</category>
+            <category>JAVA</category>
+            <category>shell</category>
+            <pubDate>Sun, 04 Jan 2026 10:06:38 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;最近&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/09/18/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/Linux/VMware/VMware-%E5%A4%8D%E5%88%B6%E8%99%9A%E6%8B%9F%E6%9C%BA&amp;%E5%85%8B%E9%9A%86%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
             <title>VMware-复制虚拟机&amp;克隆虚拟机</title>
