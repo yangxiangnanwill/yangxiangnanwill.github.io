@@ -3,37 +3,38 @@
     <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</id>
     <title>Will • Posts by &#34;claudecode&#34; tag</title>
     <link href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io" />
-    <updated>2026-01-04T07:24:49.995Z</updated>
-    <category term="开发习惯" />
+    <updated>2026-01-05T07:23:03.228Z</updated>
+    <category term="感言" />
     <category term="思考" />
     <category term="思维习惯" />
-    <category term="感言" />
+    <category term="开发习惯" />
+    <category term="ClaudeCode" />
     <category term="Docker" />
     <category term="LINUX" />
     <category term="CentOS" />
     <category term="Linux" />
+    <category term="Crontab" />
     <category term="Maven" />
     <category term="Jenkins" />
-    <category term="Crontab" />
     <category term="JAVA" />
     <category term="shell" />
+    <category term="Node" />
+    <category term="前端" />
+    <category term="Nvm" />
     <category term="IDEA" />
     <category term="Alibaba Cloud Toolkit" />
+    <category term="Git" />
+    <category term="工具" />
     <category term="Archery" />
     <category term="MySql" />
-    <category term="工具" />
-    <category term="Git" />
-    <category term="Node" />
-    <category term="Nvm" />
-    <category term="前端" />
     <category term="信息安全等级保护认证" />
     <category term="系统认证" />
     <category term="读书笔记" />
-    <category term="Java IO-初识IO" />
     <category term="BeetlSql" />
     <category term="Beetl" />
     <category term="枚举" />
     <category term="异常" />
+    <category term="Java IO-初识IO" />
     <category term="POI" />
     <category term="Spring" />
     <category term="SpringCloud" />
@@ -41,37 +42,36 @@
     <category term="Spring Boot" />
     <category term="ProtoBuffer" />
     <category term="其他" />
+    <category term="SOAR" />
     <category term="博客园" />
     <category term="博客" />
-    <category term="SOAR" />
     <category term="VerificationCode" />
-    <category term="MongoDb" />
     <category term="VinUtil" />
-    <category term="JSON类库详解" />
-    <category term="常用开发库" />
-    <category term="Lombok工具库详解" />
+    <category term="MongoDb" />
     <category term="Hutool" />
     <category term="工具类" />
+    <category term="常用开发库" />
+    <category term="JSON类库详解" />
     <category term="Spring常用工具类" />
+    <category term="Lombok工具库详解" />
     <category term="异步编程" />
     <category term="线程" />
-    <category term="LLM" />
-    <category term="人工智能" />
-    <category term="方法论" />
-    <category term="开源协议" />
     <category term="CentOS7" />
     <category term="MongoDB" />
     <category term="Redis" />
+    <category term="方法论" />
+    <category term="开源协议" />
+    <category term="LLM" />
+    <category term="人工智能" />
     <category term="VMware" />
-    <category term="ClaudeCode" />
-    <category term="PostMan" />
-    <category term="Typora" />
     <category term="开发错误" />
-    <category term="JDBC" />
-    <category term="Mysql" />
+    <category term="Typora" />
+    <category term="PostMan" />
     <category term="Java8" />
     <category term="特性" />
     <category term="EasyExcel" />
+    <category term="JDBC" />
+    <category term="Mysql" />
     <category term="Ureport" />
     <category term="日志类库详解" />
     <category term="Script" />
@@ -80,6 +80,403 @@
     <category term="MyBatis" />
     <category term="Apache Common" />
     <category term="Google Guava" />
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/05/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/AI/ClaudeCode%E6%95%99%E7%A8%8B(5)-%E4%BD%BF%E7%94%A8CCR&amp;CCW%E7%AD%89%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7/</id>
+        <title>ClaudeCode教程(5)-使用CCR&amp;CCW等可视化工具</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/05/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/AI/ClaudeCode%E6%95%99%E7%A8%8B(5)-%E4%BD%BF%E7%94%A8CCR&amp;CCW%E7%AD%89%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7/"/>
+        <content type="html">&lt;h2 id=&#34;概述&#34;&gt;&lt;a href=&#34;#概述&#34; class=&#34;headerlink&#34; title=&#34;概述&#34;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;Claude Code默认需要直接连接到Anthropic的API服务器，但在某些情况下，如A畜对国内用户就不太友好，那我们可能就不能使用Claude Code默认的模型，上文介绍了使用修改配置文件的形式来使用国内的大模型，但是这个配置是反人类的，同时随着现在CLI工具的普及和一些协议的规范，其已经形成一套约定俗称配置信息，那也就延伸出了一些可视化的管理工具&lt;br&gt;这里着重介绍一下我使用的&lt;strong&gt;cc-switch&lt;/strong&gt;,其他自行百度。&lt;/p&gt;
+&lt;h2 id=&#34;cc-switch&#34;&gt;&lt;a href=&#34;#cc-switch&#34; class=&#34;headerlink&#34; title=&#34;cc-switch&#34;&gt;&lt;/a&gt;cc-switch&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;cc-switch&lt;/strong&gt; 是一款基于 Rust + Tauri 开发的全能AI编程Agent辅助工具。&lt;br&gt;目前支持 Claude Code、Codex、Gemini CLI 的快速配置切换。&lt;br&gt;也提供了一个可视化的 MCP 管理面板，并且集成了最新的 Skills 技能库，可一键安装 GitHub 上的 Skills 仓库，用于扩展技能到你的 AI 工具中。&lt;/p&gt;
+&lt;p&gt;它把那些晦涩的 JSON 配置，变成了我们熟悉的下拉菜单、开关按钮和可视化列表。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/farion1231/cc-switch/raw/main/assets/screenshots/main-zh.png&#34; alt=&#34;https://github.com/farion1231/cc-switch/raw/main/assets/screenshots/main-zh.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/farion1231/cc-switch/raw/main/assets/screenshots/add-zh.png&#34; alt=&#34;https://github.com/farion1231/cc-switch/raw/main/assets/screenshots/add-zh.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;主要功能&#34;&gt;&lt;a href=&#34;#主要功能&#34; class=&#34;headerlink&#34; title=&#34;主要功能&#34;&gt;&lt;/a&gt;主要功能&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;一键切换配置&lt;/strong&gt;：一键切换 Claude Code、Codex、Gemini CLI的不同供应商配置。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;双层数据架构&lt;/strong&gt;：采用SQLite + JSON 双层架构，实现数据分层管理，也为未来云同步功能奠定基础。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;双文件配置支持&lt;/strong&gt;：环境变量（.env） + JSON配置（settings.json）。&lt;/li&gt;
+&lt;li&gt; &lt;strong&gt;MCP 服务器管理&lt;/strong&gt;：支持统一导入&amp;#x2F;导出 + 双向同步。&lt;/li&gt;
+&lt;li&gt; &lt;strong&gt;Skills 递归扫描&lt;/strong&gt;：Skills 管理系统支持递归扫描仓库目录，自动发现嵌套的技能文件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;海量供应商图标配置&lt;/strong&gt;：供应商预设支持自定义图标配置。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多语言界面支持&lt;/strong&gt;：目前支持中文&amp;#x2F;英文&amp;#x2F;日语设置。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;全新用户界面&lt;/strong&gt;：完整重构的 UI 设计，提供更现代化的视觉体验。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;cc-switch 这个工具都会实时根据Issue和社区生态来进行功能新增和优化的,目前已经到达9K+的Star。&lt;/p&gt;
+&lt;p&gt;而且它还把当下最火热的 Skills（技能扩展）集成了进来，是真的懂 Claude 生态。&lt;br&gt;cc-switch 支持：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;扫描 GitHub 上的 Skills 仓库&lt;/li&gt;
+&lt;li&gt;一键安装&amp;#x2F;卸载&lt;/li&gt;
+&lt;li&gt;直接注入到Claude Code&amp;#x2F;Gemini CLI&lt;br&gt;如果你最近在折腾 Claude Skills，这一点非常关键。&lt;br&gt;同时还提供了一个支持 Markdown 的 System Prompt 编辑器。&lt;br&gt;你可以创建多个预设：&lt;/li&gt;
+&lt;li&gt;**预设 A (架构师)**：“你是一个资深架构师，专注于代码的可扩展性，使用 DDD 方法论…”&lt;/li&gt;
+&lt;li&gt;**预设 B (测试员)**：“你是一个 QA，专注于找出代码的边界条件漏洞…”&lt;/li&gt;
+&lt;li&gt; **预设 C (文档工程师)**：“你专注于为代码编写清晰的注释和 Readme…”&lt;br&gt;做不同的任务时，在 cc-switch 里点一下对应的预设，你的 Claude Code 瞬间变身。这种 &lt;strong&gt;“角色切换”&lt;/strong&gt; 的流畅感，能极大地提升工作效率。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;快速使用&#34;&gt;&lt;a href=&#34;#快速使用&#34; class=&#34;headerlink&#34; title=&#34;快速使用&#34;&gt;&lt;/a&gt;快速使用&lt;/h3&gt;&lt;p&gt;该工具 Windows、MacOS、Linux 三大 PC 端系统都支持。&lt;br&gt;可直接在项目Release页面下载安装。&lt;br&gt;&lt;a href=&#34;https://github.com/farion1231/cc-switch/releases&#34;&gt;https://github.com/farion1231/cc-switch/releases&lt;/a&gt;&lt;br&gt;MacOS 用于支持一键安装指令：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;brew tap farion1231/ccswitch  &lt;br&gt;brew install --cask cc-switch&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装之后，如配置模型厂商之后点击添加即可：&lt;br&gt;&lt;img src=&#34;https://github.com/farion1231/cc-switch/raw/main/assets/screenshots/add-zh.png&#34; alt=&#34;https://github.com/farion1231/cc-switch/raw/main/assets/screenshots/add-zh.png&#34;&gt;&lt;br&gt;配置完成后点击启用即可：&lt;br&gt;&lt;img src=&#34;https://github.com/farion1231/cc-switch/raw/main/assets/screenshots/main-zh.png&#34; alt=&#34;https://github.com/farion1231/cc-switch/raw/main/assets/screenshots/main-zh.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tip]&lt;br&gt;注意上方截图为ClaudeCode的预设厂商，因大多数国内大模型厂商都支持A畜的协议，所以基本上支持Claude Code的比较多，其他的比较少，如Codex，总所周知OpenAI，不Open，目前大多数支持OpenAI协议的仅仅是Chat的形式，不是Agent的形式，所以国内的大模型是不推荐在CodeX上使用的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;其他常用中转工具&#34;&gt;&lt;a href=&#34;#其他常用中转工具&#34; class=&#34;headerlink&#34; title=&#34;其他常用中转工具&#34;&gt;&lt;/a&gt;其他常用中转工具&lt;/h2&gt;&lt;h3 id=&#34;AnyRouter&#34;&gt;&lt;a href=&#34;#AnyRouter&#34; class=&#34;headerlink&#34; title=&#34;AnyRouter&#34;&gt;&lt;/a&gt;AnyRouter&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：功能强大的API路由和转发工具&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优势&lt;/strong&gt;：支持多种API协议，提供丰富的路由规则&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;使用方式&lt;/strong&gt;：下载并部署AnyRouter，配置路由规则&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;Cloudflare-Workers&#34;&gt;&lt;a href=&#34;#Cloudflare-Workers&#34; class=&#34;headerlink&#34; title=&#34;Cloudflare Workers&#34;&gt;&lt;/a&gt;Cloudflare Workers&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：基于Cloudflare边缘网络的无服务器函数&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优势&lt;/strong&gt;：全球边缘节点，低延迟访问&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;使用方式&lt;/strong&gt;：编写并部署Cloudflare Worker脚本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;Claude-Code-Router&#34;&gt;&lt;a href=&#34;#Claude-Code-Router&#34; class=&#34;headerlink&#34; title=&#34;Claude Code Router&#34;&gt;&lt;/a&gt;Claude Code Router&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：专为Claude AI代码开发场景设计的智能路由代理工具，可将编码请求路由到不同的大语言模型，并支持高度自定义请求。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优势&lt;/strong&gt;：无需Anthropic账户即可使用Claude Code功能；支持多模型智能路由（如OpenAI、Qwen等），可根据任务类型自动选择最优模型，兼顾性能与成本；可通过JSON配置灵活设定默认模型及后台任务处理策略。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;使用方式&lt;/strong&gt;：下载并部署开源的Claude Code Router工具，通过编辑配置文件（如JSON）定义路由规则和模型映射，即可将代码请求分发至指定AI模型。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;注意事项&#34;&gt;&lt;a href=&#34;#注意事项&#34; class=&#34;headerlink&#34; title=&#34;注意事项&#34;&gt;&lt;/a&gt;注意事项&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;网络安全&lt;/strong&gt;：使用中转工具时，注意保护API密钥和敏感数据&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性能影响&lt;/strong&gt;：中转工具可能会对请求响应时间产生一定影响&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可靠性&lt;/strong&gt;：自行部署的中转服务需要考虑高可用性和故障恢复&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;合规性&lt;/strong&gt;：确保使用中转工具符合相关法律法规和服务条款&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成本控制&lt;/strong&gt;：使用第三方中转服务时，注意了解相关费用和使用限制&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;更新维护&lt;/strong&gt;：定期更新中转工具和配置，确保安全性和稳定性&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="ClaudeCode" />
+        <updated>2026-01-05T07:23:03.228Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/05/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/AI/ClaudeCode%E6%95%99%E7%A8%8B(4)-%E4%BD%BF%E7%94%A8%E5%9B%BD%E5%86%85%E5%A4%A7%E6%A8%A1%E5%9E%8B/</id>
+        <title>ClaudeCode教程(4)-使用国内大模型</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/05/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/AI/ClaudeCode%E6%95%99%E7%A8%8B(4)-%E4%BD%BF%E7%94%A8%E5%9B%BD%E5%86%85%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+        <content type="html">&lt;h2 id=&#34;概述&#34;&gt;&lt;a href=&#34;#概述&#34; class=&#34;headerlink&#34; title=&#34;概述&#34;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;随着国内大模型技术的快速发展，越来越多的国内大模型平台推出了Coding Plan，支持Claude Code的接入和使用。这些国内大模型通常具有更低的使用成本和更好的本地化支持，为用户提供了更多选择。本节将介绍如何在Claude Code中使用国内大模型，包括支持的平台和配置方法。&lt;/p&gt;
+&lt;h2 id=&#34;支持的国内大模型&#34;&gt;&lt;a href=&#34;#支持的国内大模型&#34; class=&#34;headerlink&#34; title=&#34;支持的国内大模型&#34;&gt;&lt;/a&gt;支持的国内大模型&lt;/h2&gt;&lt;p&gt;目前，以下国内大模型平台支持Claude Code的接入和使用：&lt;/p&gt;
+&lt;h3 id=&#34;GLM&#34;&gt;&lt;a href=&#34;#GLM&#34; class=&#34;headerlink&#34; title=&#34;GLM&#34;&gt;&lt;/a&gt;GLM&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Coding Plan&lt;/strong&gt;：提供专门的编程模型GLM-4.7、4.6等模型，据称能使用户仅用1&amp;#x2F;7的价格即享受到接近Claude Sonnet 4的代码能力&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：支持多语言代码生成、代码审查、调试等功能，具有良好的中文理解能力&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;接入方式&lt;/strong&gt;：通过API密钥接入，支持Claude Code的所有核心功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;通义千问-Qwen&#34;&gt;&lt;a href=&#34;#通义千问-Qwen&#34; class=&#34;headerlink&#34; title=&#34;通义千问 (Qwen)&#34;&gt;&lt;/a&gt;通义千问 (Qwen)&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Coding Plan&lt;/strong&gt;：提供Qwen3-Coder-Plus模型，专门针对编程场景优化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：支持代码生成、代码补全、代码解释等功能，在中文编程场景中表现优异&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;接入方式&lt;/strong&gt;：通过百炼平台获取API密钥，支持Claude Code无缝对接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;DeepSeek&#34;&gt;&lt;a href=&#34;#DeepSeek&#34; class=&#34;headerlink&#34; title=&#34;DeepSeek&#34;&gt;&lt;/a&gt;DeepSeek&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Coding Plan&lt;/strong&gt;：提供DeepSeek V3模型，专注于代码生成和理解&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：在代码生成速度和准确性方面表现出色，支持多种编程语言&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;接入方式&lt;/strong&gt;：通过官方API平台获取密钥，支持Claude Code集成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;MiniMax&#34;&gt;&lt;a href=&#34;#MiniMax&#34; class=&#34;headerlink&#34; title=&#34;MiniMax&#34;&gt;&lt;/a&gt;MiniMax&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Coding Plan&lt;/strong&gt;：提供MiniMax 2.1模型，专注于代码生成和理解&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：支持代码生成、代码审查、文档生成等功能，具有良好的用户体验&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;接入方式&lt;/strong&gt;：通过官方API平台获取密钥，支持Claude Code集成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;Kimi&#34;&gt;&lt;a href=&#34;#Kimi&#34; class=&#34;headerlink&#34; title=&#34;Kimi&#34;&gt;&lt;/a&gt;Kimi&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Coding Plan&lt;/strong&gt;：提供Kimi 2模型，支持代码生成和理解&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：在长上下文代码理解方面表现出色，支持大型代码库分析&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;接入方式&lt;/strong&gt;：通过官方平台获取API密钥，支持Claude Code集成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;配置方法&#34;&gt;&lt;a href=&#34;#配置方法&#34; class=&#34;headerlink&#34; title=&#34;配置方法&#34;&gt;&lt;/a&gt;配置方法&lt;/h2&gt;&lt;h3 id=&#34;准备工作&#34;&gt;&lt;a href=&#34;#准备工作&#34; class=&#34;headerlink&#34; title=&#34;准备工作&#34;&gt;&lt;/a&gt;准备工作&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;注册并登录所选国内大模型平台的账号&lt;/li&gt;
+&lt;li&gt;开通Coding Plan或编程模型服务&lt;/li&gt;
+&lt;li&gt;获取API密钥和API端点信息&lt;/li&gt;
+&lt;li&gt;确保已安装最新版本的Claude Code&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;在VS-Code中配置&#34;&gt;&lt;a href=&#34;#在VS-Code中配置&#34; class=&#34;headerlink&#34; title=&#34;在VS Code中配置&#34;&gt;&lt;/a&gt;在VS Code中配置&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;打开VS Code&lt;/li&gt;
+&lt;li&gt;点击左侧边栏的&lt;strong&gt;Claude Code&lt;/strong&gt;图标&lt;/li&gt;
+&lt;li&gt;点击右上角的&lt;strong&gt;设置&lt;/strong&gt;按钮（齿轮图标）&lt;/li&gt;
+&lt;li&gt;选择&lt;strong&gt;模型设置&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;选择&lt;strong&gt;自定义模型&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;输入以下信息：&lt;ul&gt;
+&lt;li&gt;模型名称：自定义名称（如”GLM-4.6”）&lt;/li&gt;
+&lt;li&gt;API端点：国内大模型平台提供的API地址&lt;/li&gt;
+&lt;li&gt;API密钥：你的API密钥&lt;/li&gt;
+&lt;li&gt;模型类型：选择适合的模型类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;点击&lt;strong&gt;保存&lt;/strong&gt;按钮&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;在命令行中配置&#34;&gt;&lt;a href=&#34;#在命令行中配置&#34; class=&#34;headerlink&#34; title=&#34;在命令行中配置&#34;&gt;&lt;/a&gt;在命令行中配置&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;打开终端或命令提示符&lt;/li&gt;
+&lt;li&gt;运行以下命令配置自定义模型： &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;claude config &lt;span class=&#34;hljs-built_in&#34;&gt;set&lt;/span&gt; custom-model &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;&amp;#123;\n  \&amp;quot;name\&amp;quot;: \&amp;quot;GLM-4.6\&amp;quot;,\n  \&amp;quot;endpoint\&amp;quot;: \&amp;quot;https://api.example.com/v1/chat/completions\&amp;quot;,\n  \&amp;quot;api_key\&amp;quot;: \&amp;quot;your-api-key-here\&amp;quot;,\n  \&amp;quot;model_type\&amp;quot;: \&amp;quot;code\&amp;quot;\n&amp;#125;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;设置默认使用的模型： &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;claude config &lt;span class=&#34;hljs-built_in&#34;&gt;set&lt;/span&gt; model custom:GLM-4.6&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;直接修改配置文件&#34;&gt;&lt;a href=&#34;#直接修改配置文件&#34; class=&#34;headerlink&#34; title=&#34;直接修改配置文件&#34;&gt;&lt;/a&gt;直接修改配置文件&lt;/h3&gt;&lt;p&gt;除了上述方法外，您还可以直接编辑Claude Code的配置文件来设置国内大模型。&lt;/p&gt;
+&lt;h4 id=&#34;2-7-3-4-1-配置文件位置&#34;&gt;&lt;a href=&#34;#2-7-3-4-1-配置文件位置&#34; class=&#34;headerlink&#34; title=&#34;2.7.3.4.1 配置文件位置&#34;&gt;&lt;/a&gt;2.7.3.4.1 配置文件位置&lt;/h4&gt;&lt;p&gt;Claude Code的配置文件位于用户目录下的&lt;code&gt;.claude/settings.json&lt;/code&gt;文件中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows: &lt;code&gt;C:\Users\YourUsername\.claude\settings.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;macOS&amp;#x2F;Linux: &lt;code&gt;~/.claude/settings.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果该文件不存在，可以手动创建。&lt;/p&gt;
+&lt;h4 id=&#34;2-7-3-4-2-配置文件格式&#34;&gt;&lt;a href=&#34;#2-7-3-4-2-配置文件格式&#34; class=&#34;headerlink&#34; title=&#34;2.7.3.4.2 配置文件格式&#34;&gt;&lt;/a&gt;2.7.3.4.2 配置文件格式&lt;/h4&gt;&lt;p&gt;使用文本编辑器打开&lt;code&gt;settings.json&lt;/code&gt;文件，并添加以下配置：&lt;/p&gt;
+&lt;figure class=&#34;highlight json&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs json&#34;&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;env&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;ANTHROPIC_BASE_URL&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;https://api.example.com/v1&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;ANTHROPIC_AUTH_TOKEN&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;your-api-key-here&amp;quot;&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;model&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;glm-4.6&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;custom-model&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;GLM-4.6&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;endpoint&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;https://api.example.com/v1/chat/completions&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;api_key&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;your-api-key-here&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;model_type&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;code&amp;quot;&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h4 id=&#34;2-7-3-4-3-配置说明&#34;&gt;&lt;a href=&#34;#2-7-3-4-3-配置说明&#34; class=&#34;headerlink&#34; title=&#34;2.7.3.4.3 配置说明&#34;&gt;&lt;/a&gt;2.7.3.4.3 配置说明&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;env.ANTHROPIC_BASE_URL&lt;/strong&gt;: 国内大模型的API端点URL&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;env.ANTHROPIC_AUTH_TOKEN&lt;/strong&gt;: 您的API密钥&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;model&lt;/strong&gt;: 默认使用的模型名称&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;custom-model&lt;/strong&gt;: 自定义模型配置&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: 模型名称（自定义）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;endpoint&lt;/strong&gt;: API端点URL&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;api_key&lt;/strong&gt;: API密钥&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;model_type&lt;/strong&gt;: 模型类型（通常为”code”）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-7-3-4-4-示例：配置GLM&#34;&gt;&lt;a href=&#34;#2-7-3-4-4-示例：配置GLM&#34; class=&#34;headerlink&#34; title=&#34;2.7.3.4.4 示例：配置GLM&#34;&gt;&lt;/a&gt;2.7.3.4.4 示例：配置GLM&lt;/h4&gt;&lt;figure class=&#34;highlight json&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs json&#34;&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;env&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;ANTHROPIC_BASE_URL&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;https://open.bigmodel.cn/api/paas/v4&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;ANTHROPIC_AUTH_TOKEN&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;your-glm-api-key&amp;quot;&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;model&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;glm-4.6&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;custom-model&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;GLM-4.6&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;endpoint&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;https://open.bigmodel.cn/api/paas/v4/chat/completions&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;api_key&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;your-glm-api-key&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;model_type&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;code&amp;quot;&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;保存配置文件后，重启Claude Code或VS Code插件使配置生效。&lt;/p&gt;
+&lt;h2 id=&#34;注意事项&#34;&gt;&lt;a href=&#34;#注意事项&#34; class=&#34;headerlink&#34; title=&#34;注意事项&#34;&gt;&lt;/a&gt;注意事项&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;API兼容性&lt;/strong&gt;：确保所选国内大模型的API与Claude Code兼容&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成本控制&lt;/strong&gt;：国内大模型通常提供更优惠的价格，但仍需注意使用量和成本控制&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;功能差异&lt;/strong&gt;：不同大模型在功能和性能上可能存在差异，建议根据实际需求选择&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据隐私&lt;/strong&gt;：使用国内大模型时，注意数据隐私和安全保护&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;更新维护&lt;/strong&gt;：定期关注国内大模型平台的更新和维护信息&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="ClaudeCode" />
+        <updated>2026-01-05T07:15:58.418Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/05/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/AI/ClaudeCode%E6%95%99%E7%A8%8B(3)-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85/</id>
+        <title>ClaudeCode教程(3)-命令行工具安装</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/05/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/AI/ClaudeCode%E6%95%99%E7%A8%8B(3)-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85/"/>
+        <content type="html">&lt;h1 id=&#34;命令行工具安装&#34;&gt;&lt;a href=&#34;#命令行工具安装&#34; class=&#34;headerlink&#34; title=&#34;命令行工具安装&#34;&gt;&lt;/a&gt;命令行工具安装&lt;/h1&gt;&lt;h2 id=&#34;概述&#34;&gt;&lt;a href=&#34;#概述&#34; class=&#34;headerlink&#34; title=&#34;概述&#34;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;Claude Code提供了命令行工具，允许开发者在终端或命令提示符中使用Claude Code的功能。命令行工具特别适合那些更喜欢使用终端进行开发的开发者，或者需要在CI&amp;#x2F;CD流水线中集成Claude Code的场景。&lt;/p&gt;
+&lt;h2 id=&#34;安装命令行工具&#34;&gt;&lt;a href=&#34;#安装命令行工具&#34; class=&#34;headerlink&#34; title=&#34;安装命令行工具&#34;&gt;&lt;/a&gt;安装命令行工具&lt;/h2&gt;&lt;h3 id=&#34;使用npm安装（推荐）&#34;&gt;&lt;a href=&#34;#使用npm安装（推荐）&#34; class=&#34;headerlink&#34; title=&#34;使用npm安装（推荐）&#34;&gt;&lt;/a&gt;使用npm安装（推荐）&lt;/h3&gt;&lt;p&gt;Claude Code的命令行工具可以通过npm全局安装：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;npm install -g claude-code&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;使用yarn安装&#34;&gt;&lt;a href=&#34;#使用yarn安装&#34; class=&#34;headerlink&#34; title=&#34;使用yarn安装&#34;&gt;&lt;/a&gt;使用yarn安装&lt;/h3&gt;&lt;p&gt;如果你使用yarn作为包管理器，可以使用以下命令安装：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;yarn global add claude-code&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;使用pnpm安装&#34;&gt;&lt;a href=&#34;#使用pnpm安装&#34; class=&#34;headerlink&#34; title=&#34;使用pnpm安装&#34;&gt;&lt;/a&gt;使用pnpm安装&lt;/h3&gt;&lt;p&gt;如果你使用pnpm作为包管理器，可以使用以下命令安装：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;pnpm add -g claude-code&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;验证安装&#34;&gt;&lt;a href=&#34;#验证安装&#34; class=&#34;headerlink&#34; title=&#34;验证安装&#34;&gt;&lt;/a&gt;验证安装&lt;/h2&gt;&lt;p&gt;安装完成后，可以通过以下命令验证Claude Code命令行工具是否已正确安装：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 检查Claude Code版本&lt;/span&gt;&lt;br&gt;claude --version&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 或使用缩写&lt;/span&gt;&lt;br&gt;cl --version&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;配置命令行工具&#34;&gt;&lt;a href=&#34;#配置命令行工具&#34; class=&#34;headerlink&#34; title=&#34;配置命令行工具&#34;&gt;&lt;/a&gt;配置命令行工具&lt;/h2&gt;&lt;p&gt;安装完成后，需要进行一些基本配置才能使用Claude Code命令行工具。&lt;/p&gt;
+&lt;h3 id=&#34;登录Claude账户&#34;&gt;&lt;a href=&#34;#登录Claude账户&#34; class=&#34;headerlink&#34; title=&#34;登录Claude账户&#34;&gt;&lt;/a&gt;登录Claude账户&lt;/h3&gt;&lt;p&gt;在使用命令行工具之前，需要先登录Claude账户：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 登录Claude账户&lt;/span&gt;&lt;br&gt;claude login&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 或使用缩写&lt;/span&gt;&lt;br&gt;cl login&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;执行上述命令后，会打开默认浏览器，跳转到Claude Code的登录页面。输入你的Claude账户凭据进行登录，登录成功后，浏览器会显示”授权成功”的提示，命令行工具会自动完成授权。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!help]&lt;br&gt;如果第一安装运行此命令会默认打开浏览器进行认证，由于A畜对国内用户不太友好，下一章节会讲述如何通过代理等形式跳过认证环节使用国内大模型厂商&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;配置默认模型&#34;&gt;&lt;a href=&#34;#配置默认模型&#34; class=&#34;headerlink&#34; title=&#34;配置默认模型&#34;&gt;&lt;/a&gt;配置默认模型&lt;/h3&gt;&lt;p&gt;可以通过以下命令配置默认使用的Claude模型：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 配置默认模型为Opus 4&lt;/span&gt;&lt;br&gt;claude config &lt;span class=&#34;hljs-built_in&#34;&gt;set&lt;/span&gt; model claude-4-opus&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 或配置为Sonnet 4&lt;/span&gt;&lt;br&gt;claude config &lt;span class=&#34;hljs-built_in&#34;&gt;set&lt;/span&gt; model claude-4-sonnet&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;查看配置&#34;&gt;&lt;a href=&#34;#查看配置&#34; class=&#34;headerlink&#34; title=&#34;查看配置&#34;&gt;&lt;/a&gt;查看配置&lt;/h3&gt;&lt;p&gt;可以通过以下命令查看当前的配置：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 查看所有配置&lt;/span&gt;&lt;br&gt;claude config list&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 查看特定配置项&lt;/span&gt;&lt;br&gt;claude config get model&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;基本命令使用&#34;&gt;&lt;a href=&#34;#基本命令使用&#34; class=&#34;headerlink&#34; title=&#34;基本命令使用&#34;&gt;&lt;/a&gt;基本命令使用&lt;/h2&gt;&lt;h3 id=&#34;帮助命令&#34;&gt;&lt;a href=&#34;#帮助命令&#34; class=&#34;headerlink&#34; title=&#34;帮助命令&#34;&gt;&lt;/a&gt;帮助命令&lt;/h3&gt;&lt;p&gt;可以使用以下命令查看Claude Code命令行工具的帮助信息：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 查看所有命令&lt;/span&gt;&lt;br&gt;claude &lt;span class=&#34;hljs-built_in&#34;&gt;help&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 查看特定命令的帮助&lt;/span&gt;&lt;br&gt;claude &lt;span class=&#34;hljs-built_in&#34;&gt;help&lt;/span&gt; chat&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;### 2.3.5.2 聊天命令&lt;/span&gt;&lt;br&gt;&lt;br&gt;可以使用`chat`命令与Claude Code进行对话：&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 启动交互式聊天&lt;/span&gt;&lt;br&gt;claude chat&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 或使用缩写&lt;/span&gt;&lt;br&gt;cl chat&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;代码生成命令&#34;&gt;&lt;a href=&#34;#代码生成命令&#34; class=&#34;headerlink&#34; title=&#34;代码生成命令&#34;&gt;&lt;/a&gt;代码生成命令&lt;/h3&gt;&lt;p&gt;可以使用&lt;code&gt;code&lt;/code&gt;命令生成代码：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 生成一个简单的Python函数&lt;/span&gt;&lt;br&gt;claude code &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;write a Python function to calculate Fibonacci numbers&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;代码解释命令&#34;&gt;&lt;a href=&#34;#代码解释命令&#34; class=&#34;headerlink&#34; title=&#34;代码解释命令&#34;&gt;&lt;/a&gt;代码解释命令&lt;/h3&gt;&lt;p&gt;可以使用&lt;code&gt;explain&lt;/code&gt;命令解释代码：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 解释一个Python函数&lt;/span&gt;&lt;br&gt;claude explain &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;def fib(n): return 1 if n &amp;lt;= 1 else fib(n-1) + fib(n-2)&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;代码执行命令&#34;&gt;&lt;a href=&#34;#代码执行命令&#34; class=&#34;headerlink&#34; title=&#34;代码执行命令&#34;&gt;&lt;/a&gt;代码执行命令&lt;/h3&gt;&lt;p&gt;可以使用&lt;code&gt;run&lt;/code&gt;命令执行生成的代码：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 执行一个Python函数&lt;/span&gt;&lt;br&gt;claude run &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;def fib(n): return 1 if n &amp;lt;= 1 else fib(n-1) + fib(n-2)&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;命令行工具的高级配置&#34;&gt;&lt;a href=&#34;#命令行工具的高级配置&#34; class=&#34;headerlink&#34; title=&#34;命令行工具的高级配置&#34;&gt;&lt;/a&gt;命令行工具的高级配置&lt;/h2&gt;&lt;h3 id=&#34;配置输出格式&#34;&gt;&lt;a href=&#34;#配置输出格式&#34; class=&#34;headerlink&#34; title=&#34;配置输出格式&#34;&gt;&lt;/a&gt;配置输出格式&lt;/h3&gt;&lt;p&gt;可以配置命令行工具的输出格式：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 配置输出格式为JSON&lt;/span&gt;&lt;br&gt;claude config &lt;span class=&#34;hljs-built_in&#34;&gt;set&lt;/span&gt; output-format json&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 配置输出格式为文本（默认）&lt;/span&gt;&lt;br&gt;claude config &lt;span class=&#34;hljs-built_in&#34;&gt;set&lt;/span&gt; output-format text&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;### 2.3.6.2 配置超时时间&lt;/span&gt;&lt;br&gt;&lt;br&gt;可以配置命令行工具的超时时间：&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 配置超时时间为60秒&lt;/span&gt;&lt;br&gt;claude config &lt;span class=&#34;hljs-built_in&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;hljs-built_in&#34;&gt;timeout&lt;/span&gt; 60&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;配置代理&#34;&gt;&lt;a href=&#34;#配置代理&#34; class=&#34;headerlink&#34; title=&#34;配置代理&#34;&gt;&lt;/a&gt;配置代理&lt;/h3&gt;&lt;p&gt;如果你的网络环境需要使用代理，可以配置命令行工具的代理：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 配置HTTP代理&lt;/span&gt;&lt;br&gt;claude config &lt;span class=&#34;hljs-built_in&#34;&gt;set&lt;/span&gt; proxy http://proxy.example.com:8080&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 取消代理配置&lt;/span&gt;&lt;br&gt;claude config &lt;span class=&#34;hljs-built_in&#34;&gt;unset&lt;/span&gt; proxy&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+&lt;h2 id=&#34;常见问题与解决方案&#34;&gt;&lt;a href=&#34;#常见问题与解决方案&#34; class=&#34;headerlink&#34; title=&#34;常见问题与解决方案&#34;&gt;&lt;/a&gt;常见问题与解决方案&lt;/h2&gt;&lt;h3 id=&#34;命令未找到&#34;&gt;&lt;a href=&#34;#命令未找到&#34; class=&#34;headerlink&#34; title=&#34;命令未找到&#34;&gt;&lt;/a&gt;命令未找到&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：运行&lt;code&gt;claude&lt;/code&gt;命令时显示”command not found”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;确保已正确安装Claude Code命令行工具&lt;/li&gt;
+&lt;li&gt;检查npm全局安装路径是否已添加到系统环境变量中&lt;/li&gt;
+&lt;li&gt;对于macOS和Linux，可以将以下行添加到&lt;code&gt;~/.bashrc&lt;/code&gt;或&lt;code&gt;~/.zshrc&lt;/code&gt;文件中： bash export PATH&amp;#x3D;”$HOME&amp;#x2F;.npm&amp;#x2F;bin:$PATH”&lt;ul&gt;
+&lt;li&gt;对于Windows，确保&lt;code&gt;%USERPROFILE%\AppData\Roaming\npm&lt;/code&gt;已添加到系统环境变量中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;登录失败&#34;&gt;&lt;a href=&#34;#登录失败&#34; class=&#34;headerlink&#34; title=&#34;登录失败&#34;&gt;&lt;/a&gt;登录失败&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：执行&lt;code&gt;claude login&lt;/code&gt;命令后，浏览器打开但无法登录&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查网络连接&lt;/li&gt;
+&lt;li&gt;确保你使用的是正确的Claude账户凭据&lt;/li&gt;
+&lt;li&gt;检查浏览器是否阻止了弹出窗口&lt;/li&gt;
+&lt;li&gt;尝试清除浏览器缓存和Cookie&lt;/li&gt;
+&lt;li&gt;尝试使用不同的浏览器进行授权&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;命令执行失败&#34;&gt;&lt;a href=&#34;#命令执行失败&#34; class=&#34;headerlink&#34; title=&#34;命令执行失败&#34;&gt;&lt;/a&gt;命令执行失败&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：执行Claude Code命令时显示”API request failed”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查网络连接&lt;/li&gt;
+&lt;li&gt;确保已正确登录Claude账户&lt;/li&gt;
+&lt;li&gt;检查配置的模型是否可用&lt;/li&gt;
+&lt;li&gt;尝试增加超时时间&lt;/li&gt;
+&lt;li&gt;检查是否有防火墙或代理设置阻止了API请求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;命令行工具更新&#34;&gt;&lt;a href=&#34;#命令行工具更新&#34; class=&#34;headerlink&#34; title=&#34;命令行工具更新&#34;&gt;&lt;/a&gt;命令行工具更新&lt;/h2&gt;&lt;p&gt;可以通过以下命令更新Claude Code命令行工具：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 使用npm更新&lt;/span&gt;&lt;br&gt;npm update -g claude-code&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 使用yarn更新&lt;/span&gt;&lt;br&gt;yarn global upgrade claude-code&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 使用pnpm更新&lt;/span&gt;&lt;br&gt;pnpm update -g claude-code&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;卸载命令行工具&#34;&gt;&lt;a href=&#34;#卸载命令行工具&#34; class=&#34;headerlink&#34; title=&#34;卸载命令行工具&#34;&gt;&lt;/a&gt;卸载命令行工具&lt;/h2&gt;&lt;p&gt;如果需要卸载Claude Code命令行工具，可以使用以下命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 使用npm卸载&lt;/span&gt;&lt;br&gt;npm uninstall -g claude-code&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 使用yarn卸载&lt;/span&gt;&lt;br&gt;yarn global remove claude-code&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 使用pnpm卸载&lt;/span&gt;&lt;br&gt;pnpm remove -g claude-code&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+        <category term="ClaudeCode" />
+        <updated>2026-01-05T06:50:45.299Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/05/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/AI/ClaudeCode%E6%95%99%E7%A8%8B(2)-%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/</id>
+        <title>ClaudeCode教程(2)-插件安装</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/05/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/AI/ClaudeCode%E6%95%99%E7%A8%8B(2)-%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+        <content type="html">&lt;h1 id=&#34;VS-Code插件安装&#34;&gt;&lt;a href=&#34;#VS-Code插件安装&#34; class=&#34;headerlink&#34; title=&#34;VS Code插件安装&#34;&gt;&lt;/a&gt;VS Code插件安装&lt;/h1&gt;&lt;h2 id=&#34;安装VS-Code&#34;&gt;&lt;a href=&#34;#安装VS-Code&#34; class=&#34;headerlink&#34; title=&#34;安装VS Code&#34;&gt;&lt;/a&gt;安装VS Code&lt;/h2&gt;&lt;p&gt;Claude Code提供了VS Code插件，因此在安装Claude Code插件之前，需要先确保已安装VS Code。&lt;/p&gt;
+&lt;h3 id=&#34;检查VS-Code是否已安装&#34;&gt;&lt;a href=&#34;#检查VS-Code是否已安装&#34; class=&#34;headerlink&#34; title=&#34;检查VS Code是否已安装&#34;&gt;&lt;/a&gt;检查VS Code是否已安装&lt;/h3&gt;&lt;p&gt;打开终端或命令提示符，运行以下命令检查VS Code是否已安装：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 检查VS Code版本&lt;/span&gt;&lt;br&gt;code --version&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如果输出显示VS Code版本信息，则说明VS Code已安装，可以跳过安装步骤。&lt;/p&gt;
+&lt;h3 id=&#34;安装VS-Code-1&#34;&gt;&lt;a href=&#34;#安装VS-Code-1&#34; class=&#34;headerlink&#34; title=&#34;安装VS Code&#34;&gt;&lt;/a&gt;安装VS Code&lt;/h3&gt;&lt;p&gt;如果没有安装VS Code，可以通过以下方式安装：&lt;/p&gt;
+&lt;h4 id=&#34;方式一：使用官方安装包&#34;&gt;&lt;a href=&#34;#方式一：使用官方安装包&#34; class=&#34;headerlink&#34; title=&#34;方式一：使用官方安装包&#34;&gt;&lt;/a&gt;方式一：使用官方安装包&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;访问VS Code官方网站：&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;https://code.visualstudio.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;下载适合你操作系统的安装包&lt;/li&gt;
+&lt;li&gt;运行安装程序，按照提示完成安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;方式二：使用包管理器（推荐）&#34;&gt;&lt;a href=&#34;#方式二：使用包管理器（推荐）&#34; class=&#34;headerlink&#34; title=&#34;方式二：使用包管理器（推荐）&#34;&gt;&lt;/a&gt;方式二：使用包管理器（推荐）&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;对于macOS：&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 使用Homebrew安装&lt;/span&gt;&lt;br&gt;brew install --cask visual-studio-code&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;对于Linux：&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# Ubuntu/Debian&lt;/span&gt;&lt;br&gt;wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &amp;gt; packages.microsoft.gpg&lt;br&gt;sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/&lt;br&gt;sudo sh -c &lt;span class=&#34;hljs-string&#34;&gt;&amp;#x27;echo &amp;quot;deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main&amp;quot; &amp;gt; /etc/apt/sources.list.d/vscode.list&amp;#x27;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-built_in&#34;&gt;rm&lt;/span&gt; -f packages.microsoft.gpg&lt;br&gt;sudo apt update&lt;br&gt;sudo apt install code&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# Fedora&lt;/span&gt;&lt;br&gt;sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc&lt;br&gt;sudo sh -c &lt;span class=&#34;hljs-string&#34;&gt;&amp;#x27;echo -e &amp;quot;[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc&amp;quot; &amp;gt; /etc/yum.repos.d/vscode.repo&amp;#x27;&lt;/span&gt;&lt;br&gt;sudo dnf install code&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# arch&lt;/span&gt;&lt;br&gt;yay -S visual-studio-code-bin&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;安装Claude-Code插件&#34;&gt;&lt;a href=&#34;#安装Claude-Code插件&#34; class=&#34;headerlink&#34; title=&#34;安装Claude Code插件&#34;&gt;&lt;/a&gt;安装Claude Code插件&lt;/h2&gt;&lt;p&gt;安装完VS Code后，现在可以安装Claude Code插件了。&lt;/p&gt;
+&lt;h3 id=&#34;从VS-Code市场安装（推荐）&#34;&gt;&lt;a href=&#34;#从VS-Code市场安装（推荐）&#34; class=&#34;headerlink&#34; title=&#34;从VS Code市场安装（推荐）&#34;&gt;&lt;/a&gt;从VS Code市场安装（推荐）&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;打开VS Code&lt;/li&gt;
+&lt;li&gt;点击左侧边栏的&lt;strong&gt;扩展&lt;/strong&gt;图标（或使用快捷键&lt;code&gt;Ctrl+Shift+X&lt;/code&gt;&amp;#x2F;&lt;code&gt;Cmd+Shift+X&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;在搜索框中输入&lt;code&gt;Claude Code&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在搜索结果中找到Claude Code插件，点击&lt;strong&gt;安装&lt;/strong&gt;按钮&lt;/li&gt;
+&lt;li&gt;安装完成后，插件会自动启用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;手动安装插件&#34;&gt;&lt;a href=&#34;#手动安装插件&#34; class=&#34;headerlink&#34; title=&#34;手动安装插件&#34;&gt;&lt;/a&gt;手动安装插件&lt;/h3&gt;&lt;p&gt;如果无法从VS Code市场安装插件，可以使用以下方式手动安装：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;访问Claude Code插件的GitHub仓库或官方网站，下载最新的VSIX文件&lt;/li&gt;
+&lt;li&gt;打开VS Code&lt;/li&gt;
+&lt;li&gt;点击左侧边栏的&lt;strong&gt;扩展&lt;/strong&gt;图标（或使用快捷键&lt;code&gt;Ctrl+Shift+X&lt;/code&gt;&amp;#x2F;&lt;code&gt;Cmd+Shift+X&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;点击扩展面板右上角的&lt;strong&gt;更多操作&lt;/strong&gt;按钮（三个点）&lt;/li&gt;
+&lt;li&gt;选择&lt;strong&gt;从VSIX安装&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;选择下载的VSIX文件，点击&lt;strong&gt;安装&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;安装完成后，重新加载VS Code以启用插件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;验证插件安装&#34;&gt;&lt;a href=&#34;#验证插件安装&#34; class=&#34;headerlink&#34; title=&#34;验证插件安装&#34;&gt;&lt;/a&gt;验证插件安装&lt;/h3&gt;&lt;p&gt;安装完成后，可以通过以下方式验证插件是否成功安装：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开VS Code&lt;/li&gt;
+&lt;li&gt;点击左侧边栏的&lt;strong&gt;Claude Code&lt;/strong&gt;图标（如果已添加到边栏）&lt;/li&gt;
+&lt;li&gt;或者，使用快捷键&lt;code&gt;Ctrl+Shift+P&lt;/code&gt;&amp;#x2F;&lt;code&gt;Cmd+Shift+P&lt;/code&gt;打开命令面板&lt;/li&gt;
+&lt;li&gt;输入&lt;code&gt;Claude Code&lt;/code&gt;，如果看到相关命令，则说明插件已成功安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;插件更新&#34;&gt;&lt;a href=&#34;#插件更新&#34; class=&#34;headerlink&#34; title=&#34;插件更新&#34;&gt;&lt;/a&gt;插件更新&lt;/h3&gt;&lt;p&gt;Claude Code插件会定期更新，提供新功能和修复bug。可以通过以下方式更新插件：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开VS Code&lt;/li&gt;
+&lt;li&gt;点击左侧边栏的&lt;strong&gt;扩展&lt;/strong&gt;图标（或使用快捷键&lt;code&gt;Ctrl+Shift+X&lt;/code&gt;&amp;#x2F;&lt;code&gt;Cmd+Shift+X&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;点击扩展面板右上角的&lt;strong&gt;更多操作&lt;/strong&gt;按钮（三个点）&lt;/li&gt;
+&lt;li&gt;选择&lt;strong&gt;检查更新&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;如果有更新可用，点击&lt;strong&gt;更新&lt;/strong&gt;按钮即可更新插件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;或者，在扩展面板中找到Claude Code插件，如果有更新可用，会显示&lt;strong&gt;更新&lt;/strong&gt;按钮。&lt;/p&gt;
+</content>
+        <category term="ClaudeCode" />
+        <updated>2026-01-05T06:49:55.556Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/05/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/AI/ClaudeCode%E6%95%99%E7%A8%8B(1)-%E7%B3%BB%E7%BB%9F%E8%A6%81%E6%B1%82%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/</id>
+        <title>ClaudeCode教程(1)-系统要求与环境准备</title>
+        <link rel="alternate" href="https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/05/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/AI/ClaudeCode%E6%95%99%E7%A8%8B(1)-%E7%B3%BB%E7%BB%9F%E8%A6%81%E6%B1%82%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/"/>
+        <content type="html">&lt;h1 id=&#34;系统要求与环境准备&#34;&gt;&lt;a href=&#34;#系统要求与环境准备&#34; class=&#34;headerlink&#34; title=&#34;系统要求与环境准备&#34;&gt;&lt;/a&gt;系统要求与环境准备&lt;/h1&gt;&lt;h2 id=&#34;系统要求&#34;&gt;&lt;a href=&#34;#系统要求&#34; class=&#34;headerlink&#34; title=&#34;系统要求&#34;&gt;&lt;/a&gt;系统要求&lt;/h2&gt;&lt;p&gt;在安装Claude Code之前，确保你的系统满足以下要求：&lt;/p&gt;
+&lt;h3 id=&#34;操作系统&#34;&gt;&lt;a href=&#34;#操作系统&#34; class=&#34;headerlink&#34; title=&#34;操作系统&#34;&gt;&lt;/a&gt;操作系统&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt;: Windows 10 或更高版本，64位&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;macOS&lt;/strong&gt;: macOS 10.15 (Catalina) 或更高版本&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Linux&lt;/strong&gt;: Ubuntu 18.04 或更高版本，或其他兼容的Linux发行版&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;硬件要求&#34;&gt;&lt;a href=&#34;#硬件要求&#34; class=&#34;headerlink&#34; title=&#34;硬件要求&#34;&gt;&lt;/a&gt;硬件要求&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CPU&lt;/strong&gt;: 至少4核处理器&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内存&lt;/strong&gt;: 至少8GB RAM（推荐16GB或更高）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;磁盘空间&lt;/strong&gt;: 至少1GB可用空间&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;网络&lt;/strong&gt;: 稳定的互联网连接（用于授权验证和功能更新）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;软件要求&#34;&gt;&lt;a href=&#34;#软件要求&#34; class=&#34;headerlink&#34; title=&#34;软件要求&#34;&gt;&lt;/a&gt;软件要求&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Node.js&lt;/strong&gt;: 版本16.0或更高（用于命令行工具）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;npm&lt;/strong&gt;: 版本8.0或更高（Node.js包管理器）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;: 版本2.0或更高（用于代码管理和插件安装）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;环境准备&#34;&gt;&lt;a href=&#34;#环境准备&#34; class=&#34;headerlink&#34; title=&#34;环境准备&#34;&gt;&lt;/a&gt;环境准备&lt;/h2&gt;&lt;h3 id=&#34;安装Node-js和npm&#34;&gt;&lt;a href=&#34;#安装Node-js和npm&#34; class=&#34;headerlink&#34; title=&#34;安装Node.js和npm&#34;&gt;&lt;/a&gt;安装Node.js和npm&lt;/h3&gt;&lt;p&gt;Claude Code的命令行工具依赖Node.js和npm，因此需要先确保它们已正确安装。&lt;/p&gt;
+&lt;h4 id=&#34;检查Node-js和npm版本&#34;&gt;&lt;a href=&#34;#检查Node-js和npm版本&#34; class=&#34;headerlink&#34; title=&#34;检查Node.js和npm版本&#34;&gt;&lt;/a&gt;检查Node.js和npm版本&lt;/h4&gt;&lt;p&gt;打开终端或命令提示符，运行以下命令检查Node.js和npm版本：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 检查Node.js版本&lt;/span&gt;&lt;br&gt;node --version&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 检查npm版本&lt;/span&gt;&lt;br&gt;npm --version&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如果输出显示Node.js版本≥16.0和npm版本≥8.0，则可以跳过安装步骤。&lt;/p&gt;
+&lt;h4 id=&#34;安装Node-js&#34;&gt;&lt;a href=&#34;#安装Node-js&#34; class=&#34;headerlink&#34; title=&#34;安装Node.js&#34;&gt;&lt;/a&gt;安装Node.js&lt;/h4&gt;&lt;p&gt;如果没有安装Node.js或版本不符合要求，可以通过以下方式安装：&lt;/p&gt;
+&lt;h5 id=&#34;方式一：使用官方安装包&#34;&gt;&lt;a href=&#34;#方式一：使用官方安装包&#34; class=&#34;headerlink&#34; title=&#34;方式一：使用官方安装包&#34;&gt;&lt;/a&gt;方式一：使用官方安装包&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;访问Node.js官方网站：&lt;a href=&#34;https://nodejs.org/&#34;&gt;https://nodejs.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;下载适合你操作系统的LTS（长期支持）版本&lt;/li&gt;
+&lt;li&gt;运行安装程序，按照提示完成安装&lt;/li&gt;
+&lt;li&gt;安装完成后，重新打开终端，验证Node.js和npm版本&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;方式二：使用Node版本管理器（推荐）&#34;&gt;&lt;a href=&#34;#方式二：使用Node版本管理器（推荐）&#34; class=&#34;headerlink&#34; title=&#34;方式二：使用Node版本管理器（推荐）&#34;&gt;&lt;/a&gt;方式二：使用Node版本管理器（推荐）&lt;/h5&gt;&lt;p&gt;使用Node版本管理器可以方便地管理多个Node.js版本，推荐使用nvm（Node Version Manager）： &lt;strong&gt;对于macOS和Linux：&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 安装nvm&lt;/span&gt;&lt;br&gt;curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 或使用wget&lt;/span&gt;&lt;br&gt;wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 安装完成后，重新打开终端，安装Node.js LTS版本&lt;/span&gt;&lt;br&gt;nvm install --lts&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 验证安装&lt;/span&gt;&lt;br&gt;node --version&lt;br&gt;npm --version&lt;br&gt;&lt;br&gt;nvm install lts&lt;br&gt;nvm use lts&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 验证安装&lt;/span&gt;&lt;br&gt;node --version&lt;br&gt;npm --version&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;[!attention]&lt;br&gt;使用nvm一定要保证没有node服务，如果有要卸载掉，要不然会导致环境问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;安装Git&#34;&gt;&lt;a href=&#34;#安装Git&#34; class=&#34;headerlink&#34; title=&#34;安装Git&#34;&gt;&lt;/a&gt;安装Git&lt;/h3&gt;&lt;p&gt;Claude Code使用Git进行代码管理和插件安装，因此需要确保Git已正确安装。&lt;/p&gt;
+&lt;h4 id=&#34;检查Git版本&#34;&gt;&lt;a href=&#34;#检查Git版本&#34; class=&#34;headerlink&#34; title=&#34;检查Git版本&#34;&gt;&lt;/a&gt;检查Git版本&lt;/h4&gt;&lt;p&gt;打开终端或命令提示符，运行以下命令检查Git版本：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;git --version&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如果输出显示Git版本≥2.0，则可以跳过安装步骤。&lt;/p&gt;
+&lt;h4 id=&#34;安装Git-1&#34;&gt;&lt;a href=&#34;#安装Git-1&#34; class=&#34;headerlink&#34; title=&#34;安装Git&#34;&gt;&lt;/a&gt;安装Git&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;对于macOS：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;macOS系统可能已预装Git，你可以通过以下方式更新到最新版本：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 使用Homebrew安装（推荐）&lt;/span&gt;&lt;br&gt;brew install git&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 或使用Xcode Command Line Tools&lt;/span&gt;&lt;br&gt;xcode-select --install&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;对于Windows：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;访问Git官方网站：&lt;a href=&#34;https://git-scm.com/&#34;&gt;https://git-scm.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;下载适合Windows的Git安装程序&lt;/li&gt;
+&lt;li&gt;运行安装程序，按照提示完成安装（建议使用默认配置） &lt;strong&gt;对于Linux：&lt;/strong&gt; 使用包管理器安装Git：&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# Ubuntu/Debian&lt;/span&gt;&lt;br&gt;sudo apt-get update&lt;br&gt;sudo apt-get install git&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# CentOS/RHEL&lt;/span&gt;&lt;br&gt;sudo yum install git&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# Fedora&lt;/span&gt;&lt;br&gt;sudo dnf install git&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2-1-2-3-配置Git&#34;&gt;&lt;a href=&#34;#2-1-2-3-配置Git&#34; class=&#34;headerlink&#34; title=&#34;2.1.2.3 配置Git&#34;&gt;&lt;/a&gt;2.1.2.3 配置Git&lt;/h3&gt;&lt;p&gt;安装Git后，需要配置用户名和电子邮件，这些信息将用于代码提交：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;git config --global user.name &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;Your Name&amp;quot;&lt;/span&gt;&lt;br&gt;git config --global user.email &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;your.email@example.com&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;2-1-3-环境验证&#34;&gt;&lt;a href=&#34;#2-1-3-环境验证&#34; class=&#34;headerlink&#34; title=&#34;2.1.3 环境验证&#34;&gt;&lt;/a&gt;2.1.3 环境验证&lt;/h2&gt;&lt;p&gt;完成上述安装后，运行以下命令验证环境是否准备就绪：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 验证Node.js版本&lt;/span&gt;&lt;br&gt;node --version&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 验证npm版本&lt;/span&gt;&lt;br&gt;npm --version&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 验证Git版本&lt;/span&gt;&lt;br&gt;git --version&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;常见问题与解决方案&#34;&gt;&lt;a href=&#34;#常见问题与解决方案&#34; class=&#34;headerlink&#34; title=&#34;常见问题与解决方案&#34;&gt;&lt;/a&gt;常见问题与解决方案&lt;/h2&gt;&lt;h3 id=&#34;Node-js安装失败&#34;&gt;&lt;a href=&#34;#Node-js安装失败&#34; class=&#34;headerlink&#34; title=&#34;Node.js安装失败&#34;&gt;&lt;/a&gt;Node.js安装失败&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：运行&lt;code&gt;node --version&lt;/code&gt;时显示”command not found”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查安装过程是否有错误&lt;/li&gt;
+&lt;li&gt;确保Node.js的安装路径已添加到系统环境变量中&lt;/li&gt;
+&lt;li&gt;重新启动终端或命令提示符&lt;/li&gt;
+&lt;li&gt;尝试使用Node版本管理器重新安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;npm安装包失败&#34;&gt;&lt;a href=&#34;#npm安装包失败&#34; class=&#34;headerlink&#34; title=&#34;npm安装包失败&#34;&gt;&lt;/a&gt;npm安装包失败&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：使用npm安装包时显示网络错误或权限错误&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查网络连接&lt;/li&gt;
+&lt;li&gt;尝试使用npm镜像（如淘宝镜像）：&lt;code&gt;npm config set registry https://registry.npmmirror.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;对于权限错误，尝试使用&lt;code&gt;sudo&lt;/code&gt;（Linux&amp;#x2F;macOS）或以管理员身份运行命令提示符（Windows）&lt;/li&gt;
+&lt;li&gt;检查npm配置：&lt;code&gt;npm config list&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;Git配置错误&#34;&gt;&lt;a href=&#34;#Git配置错误&#34; class=&#34;headerlink&#34; title=&#34;Git配置错误&#34;&gt;&lt;/a&gt;Git配置错误&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：Git提交时显示用户名或电子邮件未配置&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;确保已正确配置Git用户名和电子邮件&lt;/li&gt;
+&lt;li&gt;检查配置：&lt;code&gt;git config --list&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;如果全局配置不起作用，尝试在项目目录中进行本地配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;高级环境配置&#34;&gt;&lt;a href=&#34;#高级环境配置&#34; class=&#34;headerlink&#34; title=&#34;高级环境配置&#34;&gt;&lt;/a&gt;高级环境配置&lt;/h2&gt;&lt;h3 id=&#34;使用yarn或pnpm替代npm&#34;&gt;&lt;a href=&#34;#使用yarn或pnpm替代npm&#34; class=&#34;headerlink&#34; title=&#34;使用yarn或pnpm替代npm&#34;&gt;&lt;/a&gt;使用yarn或pnpm替代npm&lt;/h3&gt;&lt;p&gt;如果你更喜欢使用yarn或pnpm作为包管理器，Claude Code也支持它们：&lt;br&gt;&lt;strong&gt;安装yarn：&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;npm install -g yarn&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;安装pnpm：&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;npm install -g pnpm&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;配置npm镜像&#34;&gt;&lt;a href=&#34;#配置npm镜像&#34; class=&#34;headerlink&#34; title=&#34;配置npm镜像&#34;&gt;&lt;/a&gt;配置npm镜像&lt;/h3&gt;&lt;p&gt;为了提高npm包的下载速度，可以配置npm镜像：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 使用淘宝镜像&lt;/span&gt;&lt;br&gt;npm config &lt;span class=&#34;hljs-built_in&#34;&gt;set&lt;/span&gt; registry https://registry.npmmirror.com&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 或使用npm官方镜像&lt;/span&gt;&lt;br&gt;npm config &lt;span class=&#34;hljs-built_in&#34;&gt;set&lt;/span&gt; registry https://registry.npmjs.org/&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;配置HTTP代理&#34;&gt;&lt;a href=&#34;#配置HTTP代理&#34; class=&#34;headerlink&#34; title=&#34;配置HTTP代理&#34;&gt;&lt;/a&gt;配置HTTP代理&lt;/h3&gt;&lt;p&gt;如果你的网络环境需要使用HTTP代理，可以配置npm和Git的代理设置： &lt;strong&gt;配置npm代理：&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs bash&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 设置HTTP代理&lt;/span&gt;&lt;br&gt;npm config &lt;span class=&#34;hljs-built_in&#34;&gt;set&lt;/span&gt; proxy http://proxy.example.com:8080&lt;br&gt;npm config &lt;span class=&#34;hljs-built_in&#34;&gt;set&lt;/span&gt; https-proxy http://proxy.example.com:8080&lt;br&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 取消代理设置&lt;/span&gt;&lt;br&gt;npm config delete proxy&lt;br&gt;npm config delete https-proxy&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+        <category term="ClaudeCode" />
+        <updated>2026-01-05T06:26:54.445Z</updated>
+    </entry>
     <entry>
         <id>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/04/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/AI/ClaudeCode%E5%AE%9E%E8%B7%B5%E6%80%BB%E7%BB%93/</id>
         <title>ClaudeCode实践总结</title>

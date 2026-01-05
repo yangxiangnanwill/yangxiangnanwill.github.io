@@ -7,36 +7,37 @@
         <language>zh-CN</language>
         <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
         <lastBuildDate>Sun, 28 May 2023 21:00:29 +0800</lastBuildDate>
-        <category>开发习惯</category>
+        <category>感言</category>
         <category>思考</category>
         <category>思维习惯</category>
-        <category>感言</category>
+        <category>开发习惯</category>
+        <category>ClaudeCode</category>
         <category>Docker</category>
         <category>LINUX</category>
         <category>CentOS</category>
         <category>Linux</category>
+        <category>Crontab</category>
         <category>Maven</category>
         <category>Jenkins</category>
-        <category>Crontab</category>
         <category>JAVA</category>
         <category>shell</category>
+        <category>Node</category>
+        <category>前端</category>
+        <category>Nvm</category>
         <category>IDEA</category>
         <category>Alibaba Cloud Toolkit</category>
+        <category>Git</category>
+        <category>工具</category>
         <category>Archery</category>
         <category>MySql</category>
-        <category>工具</category>
-        <category>Git</category>
-        <category>Node</category>
-        <category>Nvm</category>
-        <category>前端</category>
         <category>信息安全等级保护认证</category>
         <category>系统认证</category>
         <category>读书笔记</category>
-        <category>Java IO-初识IO</category>
         <category>BeetlSql</category>
         <category>Beetl</category>
         <category>枚举</category>
         <category>异常</category>
+        <category>Java IO-初识IO</category>
         <category>POI</category>
         <category>Spring</category>
         <category>SpringCloud</category>
@@ -44,37 +45,36 @@
         <category>Spring Boot</category>
         <category>ProtoBuffer</category>
         <category>其他</category>
+        <category>SOAR</category>
         <category>博客园</category>
         <category>博客</category>
-        <category>SOAR</category>
         <category>VerificationCode</category>
-        <category>MongoDb</category>
         <category>VinUtil</category>
-        <category>JSON类库详解</category>
-        <category>常用开发库</category>
-        <category>Lombok工具库详解</category>
+        <category>MongoDb</category>
         <category>Hutool</category>
         <category>工具类</category>
+        <category>常用开发库</category>
+        <category>JSON类库详解</category>
         <category>Spring常用工具类</category>
+        <category>Lombok工具库详解</category>
         <category>异步编程</category>
         <category>线程</category>
-        <category>LLM</category>
-        <category>人工智能</category>
-        <category>方法论</category>
-        <category>开源协议</category>
         <category>CentOS7</category>
         <category>MongoDB</category>
         <category>Redis</category>
+        <category>方法论</category>
+        <category>开源协议</category>
+        <category>LLM</category>
+        <category>人工智能</category>
         <category>VMware</category>
-        <category>ClaudeCode</category>
-        <category>PostMan</category>
-        <category>Typora</category>
         <category>开发错误</category>
-        <category>JDBC</category>
-        <category>Mysql</category>
+        <category>Typora</category>
+        <category>PostMan</category>
         <category>Java8</category>
         <category>特性</category>
         <category>EasyExcel</category>
+        <category>JDBC</category>
+        <category>Mysql</category>
         <category>Ureport</category>
         <category>日志类库详解</category>
         <category>Script</category>
@@ -87,8 +87,8 @@
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/%E5%B7%A5%E5%85%B7/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B/</guid>
             <title>Git分支管理流程</title>
             <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/%E5%B7%A5%E5%85%B7/Git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86%E6%B5%81%E7%A8%8B/</link>
-            <category>工具</category>
             <category>Git</category>
+            <category>工具</category>
             <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;有幸参与一次大型项目，人员较多，需求较多，代码管理方面值得学习，记录总结一下分支管理。&lt;/p&gt;

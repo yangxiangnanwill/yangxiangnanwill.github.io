@@ -7,36 +7,37 @@
         <language>zh-CN</language>
         <pubDate>Sun, 04 Jan 2026 10:06:38 +0800</pubDate>
         <lastBuildDate>Sun, 04 Jan 2026 10:06:38 +0800</lastBuildDate>
-        <category>开发习惯</category>
+        <category>感言</category>
         <category>思考</category>
         <category>思维习惯</category>
-        <category>感言</category>
+        <category>开发习惯</category>
+        <category>ClaudeCode</category>
         <category>Docker</category>
         <category>LINUX</category>
         <category>CentOS</category>
         <category>Linux</category>
+        <category>Crontab</category>
         <category>Maven</category>
         <category>Jenkins</category>
-        <category>Crontab</category>
         <category>JAVA</category>
         <category>shell</category>
+        <category>Node</category>
+        <category>前端</category>
+        <category>Nvm</category>
         <category>IDEA</category>
         <category>Alibaba Cloud Toolkit</category>
+        <category>Git</category>
+        <category>工具</category>
         <category>Archery</category>
         <category>MySql</category>
-        <category>工具</category>
-        <category>Git</category>
-        <category>Node</category>
-        <category>Nvm</category>
-        <category>前端</category>
         <category>信息安全等级保护认证</category>
         <category>系统认证</category>
         <category>读书笔记</category>
-        <category>Java IO-初识IO</category>
         <category>BeetlSql</category>
         <category>Beetl</category>
         <category>枚举</category>
         <category>异常</category>
+        <category>Java IO-初识IO</category>
         <category>POI</category>
         <category>Spring</category>
         <category>SpringCloud</category>
@@ -44,37 +45,36 @@
         <category>Spring Boot</category>
         <category>ProtoBuffer</category>
         <category>其他</category>
+        <category>SOAR</category>
         <category>博客园</category>
         <category>博客</category>
-        <category>SOAR</category>
         <category>VerificationCode</category>
-        <category>MongoDb</category>
         <category>VinUtil</category>
-        <category>JSON类库详解</category>
-        <category>常用开发库</category>
-        <category>Lombok工具库详解</category>
+        <category>MongoDb</category>
         <category>Hutool</category>
         <category>工具类</category>
+        <category>常用开发库</category>
+        <category>JSON类库详解</category>
         <category>Spring常用工具类</category>
+        <category>Lombok工具库详解</category>
         <category>异步编程</category>
         <category>线程</category>
-        <category>LLM</category>
-        <category>人工智能</category>
-        <category>方法论</category>
-        <category>开源协议</category>
         <category>CentOS7</category>
         <category>MongoDB</category>
         <category>Redis</category>
+        <category>方法论</category>
+        <category>开源协议</category>
+        <category>LLM</category>
+        <category>人工智能</category>
         <category>VMware</category>
-        <category>ClaudeCode</category>
-        <category>PostMan</category>
-        <category>Typora</category>
         <category>开发错误</category>
-        <category>JDBC</category>
-        <category>Mysql</category>
+        <category>Typora</category>
+        <category>PostMan</category>
         <category>Java8</category>
         <category>特性</category>
         <category>EasyExcel</category>
+        <category>JDBC</category>
+        <category>Mysql</category>
         <category>Ureport</category>
         <category>日志类库详解</category>
         <category>Script</category>
@@ -371,8 +371,8 @@
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/07/19/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/JSON%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/</guid>
             <title>JSON类库详解</title>
             <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/07/19/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/JSON%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/</link>
-            <category>JSON类库详解</category>
             <category>常用开发库</category>
+            <category>JSON类库详解</category>
             <pubDate>Wed, 19 Jul 2023 13:14:41 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;JSON应用非常广泛，对于Java常用的JSON库要完全掌握; 其中考虑到FastJson代码质量，漏洞，坑等等，应该尽量避免使用。&lt;/p&gt;
@@ -809,8 +809,8 @@
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/07/16/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/Spring%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB/</guid>
             <title>Spring常用工具类</title>
             <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/07/16/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/Spring%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB/</link>
-            <category>常用开发库</category>
             <category>工具类</category>
+            <category>常用开发库</category>
             <category>Spring常用工具类</category>
             <pubDate>Sun, 16 Jul 2023 17:33:26 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
@@ -902,9 +902,9 @@
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/07/16/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/Hutool/</guid>
             <title>Hutool</title>
             <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/07/16/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/Hutool/</link>
-            <category>常用开发库</category>
             <category>Hutool</category>
             <category>工具类</category>
+            <category>常用开发库</category>
             <pubDate>Sun, 16 Jul 2023 16:54:49 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;Hutool作为后起之秀，功能上也比较全。但是要注意一点，它的开源协议是：中国第一个开源协议&lt;a href=&#34;http://license.coscl.org.cn/MulanPSL&#34;&gt;木兰宽松许可证, 第1版&lt;/a&gt;，对此在商业项目中需要谨慎些，在个人项目无所谓。&lt;/p&gt;
@@ -1032,8 +1032,8 @@
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/07/03/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/Google%20Guava/</guid>
             <title>Google Guava</title>
             <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/07/03/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/Google%20Guava/</link>
-            <category>常用开发库</category>
             <category>工具类</category>
+            <category>常用开发库</category>
             <category>Google Guava</category>
             <pubDate>Mon, 03 Jul 2023 15:55:32 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;简介&#34;&gt;&lt;a href=&#34;#简介&#34; class=&#34;headerlink&#34; title=&#34;简介&#34;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;Guava工程包含了若干被Google的 Java项目广泛依赖 的核心库，例如：集合 &lt;code&gt;[collections]&lt;/code&gt; 、缓存&lt;code&gt; [caching]&lt;/code&gt; 、原生类型支持 &lt;code&gt;[primitives support]&lt;/code&gt; 、并发库&lt;code&gt; [concurrency libraries]&lt;/code&gt; 、通用注解&lt;code&gt; [common annotations]&lt;/code&gt; 、字符串处理&lt;code&gt; [string processing]&lt;/code&gt; 、&lt;code&gt;I/O&lt;/code&gt; 等等。 所有这些工具每天都在被Google的工程师应用在产品服务中。&lt;/p&gt;
@@ -1291,8 +1291,8 @@
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/06/26/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/Apache%20Common/</guid>
             <title>Apache Common</title>
             <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/06/26/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93%E8%AF%A6%E8%A7%A3/Apache%20Common/</link>
-            <category>常用开发库</category>
             <category>工具类</category>
+            <category>常用开发库</category>
             <category>Apache Common</category>
             <pubDate>Mon, 26 Jun 2023 20:40:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;Apache-Common包简介&#34;&gt;&lt;a href=&#34;#Apache-Common包简介&#34; class=&#34;headerlink&#34; title=&#34;Apache Common包简介&#34;&gt;&lt;/a&gt;Apache Common包简介&lt;/h1&gt;&lt;p&gt;Apache Commons是对JDK的拓展，包含了很多开源的工具，用于解决平时编程经常会遇到的问题，减少重复劳动。官网网址:&lt;a href=&#34;http://commons.apache.org/&#34;&gt;http://commons.apache.org&lt;/a&gt;&lt;/p&gt;
@@ -2718,41 +2718,6 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2%E5%9B%AD%E4%BC%98%E5%8C%96/</guid>
-            <title>博客园优化</title>
-            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2%E5%9B%AD%E4%BC%98%E5%8C%96/</link>
-            <category>其他</category>
-            <category>博客园</category>
-            <category>博客</category>
-            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;博客园美化&#34;&gt;&lt;a href=&#34;#博客园美化&#34; class=&#34;headerlink&#34; title=&#34;博客园美化&#34;&gt;&lt;/a&gt;博客园美化&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;由于博猪最近网络比较坑爹，又不满足于CSDN这个坑爹的社区，所以博猪的瞄向了博客园，但是博客园的主题太丑了，所以这里提供一个美化的解决方案：&lt;a href=&#34;https://www.yuque.com/awescnb/user/tmpomo&#34;&gt;awescnb&lt;/a&gt;,由于官方文档比较完整这里不提供教程了。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;博客园Markdown上传&#34;&gt;&lt;a href=&#34;#博客园Markdown上传&#34; class=&#34;headerlink&#34; title=&#34;博客园Markdown上传&#34;&gt;&lt;/a&gt;博客园Markdown上传&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;首先需要电脑内置Python3的环境！！！！&lt;/p&gt;
-&lt;p&gt;功能很香！！！！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;下载&#34;&gt;&lt;a href=&#34;#下载&#34; class=&#34;headerlink&#34; title=&#34;下载&#34;&gt;&lt;/a&gt;下载&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;git clone git@github.com:dongfanger/pycnblog.git&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;或者直接手动下载：&lt;a href=&#34;https://github.com/dongfanger/pycnblog&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;安装依赖库&#34;&gt;&lt;a href=&#34;#安装依赖库&#34; class=&#34;headerlink&#34; title=&#34;安装依赖库&#34;&gt;&lt;/a&gt;安装依赖库&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;pip install pyyaml&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;配置脚本&#34;&gt;&lt;a href=&#34;#配置脚本&#34; class=&#34;headerlink&#34; title=&#34;配置脚本&#34;&gt;&lt;/a&gt;配置脚本&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;在config.yaml中，填写博客配置信息。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs yaml&#34;&gt;&lt;span class=&#34;hljs-attr&#34;&gt;blog_url:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;https://rpc.cnblogs.com/metaweblog/testblog&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;blog_id:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;testblog&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;username:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;zhangsan&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;password:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;123456&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs yaml&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# blog_url在博客后台&amp;gt;设置，页面最下方的MetaWeblog访问地址。 https://rpc.cnblogs.com/metaweblog/testblog&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# blog_id就是访问地址的尾巴， testblog。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# username是登录用户名，跟blog_id不一定是同一个。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 是否生成图片替换后本地文件,默认False关闭&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 上传后是否发布，默认未发布，设置True为发布&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 图片自定义显示格式，默认不设置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 如设置width和居中，&amp;lt;center&amp;gt;&amp;lt;img src=&amp;quot;&amp;#123;&amp;#125;&amp;quot; style=&amp;quot;width:100%&amp;quot; /&amp;gt;&amp;lt;/center&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;运行脚本&#34;&gt;&lt;a href=&#34;#运行脚本&#34; class=&#34;headerlink&#34; title=&#34;运行脚本&#34;&gt;&lt;/a&gt;运行脚本&lt;/h2&gt;&lt;p&gt;打开 &lt;code&gt;cnblog_markdown.cmd&lt;/code&gt;（windows里面双击此文件即可），提示&lt;code&gt;Please input file path:&lt;/code&gt;把文件往里一拖，回车就完事了。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;最后别忘了，博客后台看一下，没问题就确认发布草稿。&lt;/p&gt;
-&lt;/blockquote&gt;
- ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%85%B6%E4%BB%96/SOAR%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/</guid>
             <title>SOAR基础教程</title>
             <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%85%B6%E4%BB%96/SOAR%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/</link>
@@ -2800,6 +2765,41 @@
 &lt;p&gt;SQL代码分析报告会生成一个Markdown文件，可通过Markdown文件查看SQL性能分析情况。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0086NgqGgy1h2xcvilni2j31eo0qu7ea.jpg&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2%E5%9B%AD%E4%BC%98%E5%8C%96/</guid>
+            <title>博客园优化</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/%E5%85%B6%E4%BB%96/%E5%8D%9A%E5%AE%A2%E5%9B%AD%E4%BC%98%E5%8C%96/</link>
+            <category>其他</category>
+            <category>博客园</category>
+            <category>博客</category>
+            <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;博客园美化&#34;&gt;&lt;a href=&#34;#博客园美化&#34; class=&#34;headerlink&#34; title=&#34;博客园美化&#34;&gt;&lt;/a&gt;博客园美化&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;由于博猪最近网络比较坑爹，又不满足于CSDN这个坑爹的社区，所以博猪的瞄向了博客园，但是博客园的主题太丑了，所以这里提供一个美化的解决方案：&lt;a href=&#34;https://www.yuque.com/awescnb/user/tmpomo&#34;&gt;awescnb&lt;/a&gt;,由于官方文档比较完整这里不提供教程了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;博客园Markdown上传&#34;&gt;&lt;a href=&#34;#博客园Markdown上传&#34; class=&#34;headerlink&#34; title=&#34;博客园Markdown上传&#34;&gt;&lt;/a&gt;博客园Markdown上传&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;首先需要电脑内置Python3的环境！！！！&lt;/p&gt;
+&lt;p&gt;功能很香！！！！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;下载&#34;&gt;&lt;a href=&#34;#下载&#34; class=&#34;headerlink&#34; title=&#34;下载&#34;&gt;&lt;/a&gt;下载&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;git clone git@github.com:dongfanger/pycnblog.git&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;或者直接手动下载：&lt;a href=&#34;https://github.com/dongfanger/pycnblog&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;安装依赖库&#34;&gt;&lt;a href=&#34;#安装依赖库&#34; class=&#34;headerlink&#34; title=&#34;安装依赖库&#34;&gt;&lt;/a&gt;安装依赖库&lt;/h2&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;pip install pyyaml&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;配置脚本&#34;&gt;&lt;a href=&#34;#配置脚本&#34; class=&#34;headerlink&#34; title=&#34;配置脚本&#34;&gt;&lt;/a&gt;配置脚本&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;在config.yaml中，填写博客配置信息。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs yaml&#34;&gt;&lt;span class=&#34;hljs-attr&#34;&gt;blog_url:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;https://rpc.cnblogs.com/metaweblog/testblog&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;blog_id:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;testblog&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;username:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;zhangsan&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-attr&#34;&gt;password:&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;123456&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs yaml&#34;&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# blog_url在博客后台&amp;gt;设置，页面最下方的MetaWeblog访问地址。 https://rpc.cnblogs.com/metaweblog/testblog&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# blog_id就是访问地址的尾巴， testblog。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# username是登录用户名，跟blog_id不一定是同一个。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 是否生成图片替换后本地文件,默认False关闭&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 上传后是否发布，默认未发布，设置True为发布&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 图片自定义显示格式，默认不设置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-comment&#34;&gt;# 如设置width和居中，&amp;lt;center&amp;gt;&amp;lt;img src=&amp;quot;&amp;#123;&amp;#125;&amp;quot; style=&amp;quot;width:100%&amp;quot; /&amp;gt;&amp;lt;/center&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;运行脚本&#34;&gt;&lt;a href=&#34;#运行脚本&#34; class=&#34;headerlink&#34; title=&#34;运行脚本&#34;&gt;&lt;/a&gt;运行脚本&lt;/h2&gt;&lt;p&gt;打开 &lt;code&gt;cnblog_markdown.cmd&lt;/code&gt;（windows里面双击此文件即可），提示&lt;code&gt;Please input file path:&lt;/code&gt;把文件往里一拖，回车就完事了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最后别忘了，博客后台看一下，没问题就确认发布草稿。&lt;/p&gt;
+&lt;/blockquote&gt;
  ]]></description>
         </item>
         <item>
