@@ -7,82 +7,82 @@
         <language>zh-CN</language>
         <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
         <lastBuildDate>Sun, 28 May 2023 21:00:29 +0800</lastBuildDate>
-        <category>感言</category>
-        <category>思考</category>
         <category>开发习惯</category>
+        <category>思考</category>
+        <category>思维习惯</category>
+        <category>感言</category>
         <category>Docker</category>
         <category>LINUX</category>
         <category>CentOS</category>
         <category>Linux</category>
+        <category>Maven</category>
         <category>Jenkins</category>
         <category>Crontab</category>
-        <category>Maven</category>
+        <category>JAVA</category>
+        <category>shell</category>
+        <category>IDEA</category>
+        <category>Alibaba Cloud Toolkit</category>
         <category>Archery</category>
         <category>MySql</category>
         <category>工具</category>
-        <category>IDEA</category>
-        <category>Alibaba Cloud Toolkit</category>
         <category>Git</category>
-        <category>PostMan</category>
-        <category>Typora</category>
         <category>Node</category>
-        <category>前端</category>
         <category>Nvm</category>
+        <category>前端</category>
         <category>信息安全等级保护认证</category>
         <category>系统认证</category>
         <category>读书笔记</category>
-        <category>JAVA</category>
-        <category>Java8</category>
-        <category>特性</category>
-        <category>枚举</category>
+        <category>Java IO-初识IO</category>
         <category>BeetlSql</category>
         <category>Beetl</category>
-        <category>ProtoBuffer</category>
+        <category>枚举</category>
         <category>异常</category>
-        <category>Java IO-初识IO</category>
-        <category>JDBC</category>
-        <category>Mysql</category>
         <category>POI</category>
-        <category>EasyExcel</category>
-        <category>MyBatis</category>
         <category>Spring</category>
         <category>SpringCloud</category>
         <category>SpringCloud Alibaba</category>
         <category>Spring Boot</category>
+        <category>ProtoBuffer</category>
         <category>其他</category>
-        <category>SOAR</category>
-        <category>VerificationCode</category>
-        <category>VinUtil</category>
-        <category>MongoDb</category>
         <category>博客园</category>
         <category>博客</category>
-        <category>Apache Common</category>
-        <category>工具类</category>
-        <category>常用开发库</category>
-        <category>Google Guava</category>
-        <category>Hutool</category>
-        <category>Lombok工具库详解</category>
+        <category>SOAR</category>
+        <category>VerificationCode</category>
+        <category>MongoDb</category>
+        <category>VinUtil</category>
         <category>JSON类库详解</category>
+        <category>常用开发库</category>
+        <category>Lombok工具库详解</category>
+        <category>Hutool</category>
+        <category>工具类</category>
         <category>Spring常用工具类</category>
-        <category>日志类库详解</category>
         <category>异步编程</category>
         <category>线程</category>
+        <category>LLM</category>
+        <category>人工智能</category>
+        <category>方法论</category>
+        <category>开源协议</category>
         <category>CentOS7</category>
         <category>MongoDB</category>
         <category>Redis</category>
-        <category>设计模式</category>
         <category>VMware</category>
-        <category>方法论</category>
-        <category>开源协议</category>
-        <category>Script</category>
-        <category>思维习惯</category>
-        <category>shell</category>
-        <category>LLM</category>
-        <category>人工智能</category>
         <category>ClaudeCode</category>
+        <category>PostMan</category>
+        <category>Typora</category>
         <category>开发错误</category>
+        <category>JDBC</category>
+        <category>Mysql</category>
+        <category>Java8</category>
+        <category>特性</category>
+        <category>EasyExcel</category>
         <category>Ureport</category>
+        <category>日志类库详解</category>
+        <category>Script</category>
+        <category>设计模式</category>
         <category>VLM</category>
+        <category>MyBatis</category>
+        <category>Apache Common</category>
+        <category>Google Guava</category>
         <item>
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/MyBatis/MyBatis%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95/</guid>
             <title>MyBatis技术内幕</title>
