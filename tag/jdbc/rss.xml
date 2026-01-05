@@ -82,6 +82,7 @@
         <category>ClaudeCode</category>
         <category>开发错误</category>
         <category>Ureport</category>
+        <category>VLM</category>
         <item>
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/JAVA/MyBatis/JDBC%E8%BF%9E%E6%8E%A5%E5%8F%82%E6%95%B0%E3%80%90rewriteBatchedStatements%E3%80%91%E8%AF%A6%E8%A7%A3/</guid>
             <title>JDBC连接参数【rewriteBatchedStatements】详解</title>
