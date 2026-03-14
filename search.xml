@@ -198,6 +198,10 @@
 </ol>
 <p>或者，在扩展面板中找到Claude Code插件，如果有更新可用，会显示<strong>更新</strong>按钮。</p>
 ]]></content>
+      <categories>
+        <category>好好码代码吖</category>
+        <category>AI</category>
+      </categories>
       <tags>
         <tag>ClaudeCode</tag>
       </tags>
@@ -295,6 +299,10 @@
 <h3 id="配置HTTP代理"><a href="#配置HTTP代理" class="headerlink" title="配置HTTP代理"></a>配置HTTP代理</h3><p>如果你的网络环境需要使用HTTP代理，可以配置npm和Git的代理设置： <strong>配置npm代理：</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 设置HTTP代理</span><br>npm config <span class="hljs-built_in">set</span> proxy http://proxy.example.com:8080<br>npm config <span class="hljs-built_in">set</span> https-proxy http://proxy.example.com:8080<br><br><span class="hljs-comment"># 取消代理设置</span><br>npm config delete proxy<br>npm config delete https-proxy<br></code></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>好好码代码吖</category>
+        <category>AI</category>
+      </categories>
       <tags>
         <tag>ClaudeCode</tag>
       </tags>
@@ -381,6 +389,10 @@
 <h2 id="卸载命令行工具"><a href="#卸载命令行工具" class="headerlink" title="卸载命令行工具"></a>卸载命令行工具</h2><p>如果需要卸载Claude Code命令行工具，可以使用以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 使用npm卸载</span><br>npm uninstall -g claude-code<br><br><span class="hljs-comment"># 使用yarn卸载</span><br>yarn global remove claude-code<br><br><span class="hljs-comment"># 使用pnpm卸载</span><br>pnpm remove -g claude-code<br></code></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>好好码代码吖</category>
+        <category>AI</category>
+      </categories>
       <tags>
         <tag>ClaudeCode</tag>
       </tags>
@@ -474,6 +486,10 @@
 <li><strong>更新维护</strong>：定期关注国内大模型平台的更新和维护信息</li>
 </ol>
 ]]></content>
+      <categories>
+        <category>好好码代码吖</category>
+        <category>AI</category>
+      </categories>
       <tags>
         <tag>ClaudeCode</tag>
       </tags>
@@ -536,6 +552,10 @@
 <li><strong>更新维护</strong>：定期更新中转工具和配置，确保安全性和稳定性</li>
 </ol>
 ]]></content>
+      <categories>
+        <category>好好码代码吖</category>
+        <category>AI</category>
+      </categories>
       <tags>
         <tag>ClaudeCode</tag>
       </tags>
