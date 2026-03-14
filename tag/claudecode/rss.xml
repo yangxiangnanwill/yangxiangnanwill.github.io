@@ -5,24 +5,23 @@
         <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
         <description>愿你一生努力，一生被爱</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 05 Jan 2026 15:23:03 +0800</pubDate>
-        <lastBuildDate>Mon, 05 Jan 2026 15:23:03 +0800</lastBuildDate>
+        <pubDate>Sat, 14 Mar 2026 17:13:46 +0800</pubDate>
+        <lastBuildDate>Sat, 14 Mar 2026 17:13:46 +0800</lastBuildDate>
         <category>感言</category>
         <category>思考</category>
         <category>思维习惯</category>
-        <category>ClaudeCode</category>
         <category>读书笔记</category>
+        <category>ClaudeCode</category>
         <category>人工智能</category>
         <category>Docker</category>
         <category>LINUX</category>
+        <category>JAVA</category>
+        <category>shell</category>
         <category>CentOS</category>
         <category>Linux</category>
         <category>Crontab</category>
         <category>Maven</category>
         <category>Jenkins</category>
-        <category>JAVA</category>
-        <category>shell</category>
-        <category>开发习惯</category>
         <category>Node</category>
         <category>Nvm</category>
         <category>前端</category>
@@ -34,55 +33,207 @@
         <category>MySql</category>
         <category>信息安全等级保护认证</category>
         <category>系统认证</category>
+        <category>开发习惯</category>
         <category>BeetlSql</category>
         <category>Beetl</category>
         <category>Java IO-初识IO</category>
         <category>POI</category>
         <category>枚举</category>
-        <category>异常</category>
         <category>Spring</category>
         <category>SpringCloud</category>
         <category>SpringCloud Alibaba</category>
+        <category>异常</category>
         <category>Spring Boot</category>
-        <category>VerificationCode</category>
-        <category>VinUtil</category>
-        <category>MongoDb</category>
         <category>ProtoBuffer</category>
         <category>其他</category>
+        <category>VerificationCode</category>
+        <category>VinUtil</category>
         <category>SOAR</category>
+        <category>MongoDb</category>
         <category>博客园</category>
         <category>博客</category>
-        <category>LLM</category>
-        <category>异步编程</category>
-        <category>线程</category>
         <category>Hutool</category>
         <category>工具类</category>
         <category>常用开发库</category>
         <category>JSON类库详解</category>
         <category>Lombok工具库详解</category>
         <category>Spring常用工具类</category>
+        <category>异步编程</category>
+        <category>线程</category>
         <category>CentOS7</category>
         <category>Redis</category>
         <category>MongoDB</category>
         <category>VMware</category>
-        <category>方法论</category>
-        <category>开源协议</category>
-        <category>开发错误</category>
+        <category>LLM</category>
         <category>PostMan</category>
         <category>Typora</category>
+        <category>开发错误</category>
         <category>EasyExcel</category>
+        <category>方法论</category>
+        <category>开源协议</category>
         <category>Java8</category>
         <category>特性</category>
         <category>Ureport</category>
         <category>JDBC</category>
         <category>Mysql</category>
-        <category>VLM</category>
         <category>Script</category>
         <category>日志类库详解</category>
         <category>设计模式</category>
+        <category>VLM</category>
         <category>MyBatis</category>
-        <category>Apache Common</category>
         <category>Google Guava</category>
+        <category>Apache Common</category>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/03/14/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/AI/ClaudeCode%E6%95%99%E7%A8%8B(6)-LSP%20(%E8%AF%AD%E8%A8%80%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8D%8F%E8%AE%AE)%E5%9C%A8Claude%20Code%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+            <title>ClaudeCode教程(6)-LSP (语言服务器协议)在Claude Code中的应用</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/03/14/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/AI/ClaudeCode%E6%95%99%E7%A8%8B(6)-LSP%20(%E8%AF%AD%E8%A8%80%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8D%8F%E8%AE%AE)%E5%9C%A8Claude%20Code%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+            <category>ClaudeCode</category>
+            <pubDate>Sat, 14 Mar 2026 17:13:46 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在集成 LSP 之前，Claude Code 仅能依赖 grep 进行文本匹配，如同“盲人摸象”，常因无法区分代码语义而产生误报或幻觉。集成 LSP 后，它瞬间获得了 IntelliJ IDEA 级别的“全知视角”——精准跳转、安全重构与实时诊断。这一变革让 AI 从基于概率的“猜测”进化为基于事实的“确证”，以极小的配置成本换取了开发效率与准确性的质变，真正实现了从“搜索工具”到“智能代理”的跨越。&lt;/p&gt;
+&lt;h1 id=&#34;LSP概述&#34;&gt;&lt;a href=&#34;#LSP概述&#34; class=&#34;headerlink&#34; title=&#34;LSP概述&#34;&gt;&lt;/a&gt;LSP概述&lt;/h1&gt;&lt;h2 id=&#34;什么是LSP&#34;&gt;&lt;a href=&#34;#什么是LSP&#34; class=&#34;headerlink&#34; title=&#34;什么是LSP&#34;&gt;&lt;/a&gt;什么是LSP&lt;/h2&gt;&lt;p&gt;LSP（Language Server Protocol，语言服务器协议）是一种标准化协议，允许代码编辑器或IDE与语言服务器进行通信，以提供代码智能功能。它由Microsoft开发，现已成为行业标准，被广泛应用于各种开发工具中。&lt;/p&gt;
+&lt;p&gt;在Claude Code中，LSP是一个强大的工具，为AI提供了真正的IDE级别的代码理解能力。通过LSP，Claude Code能够像专业IDE一样理解代码的语义结构，包括函数定义、类继承关系、变量作用域和引用链等。&lt;/p&gt;
+&lt;h2 id=&#34;LSP的工作原理&#34;&gt;&lt;a href=&#34;#LSP的工作原理&#34; class=&#34;headerlink&#34; title=&#34;LSP的工作原理&#34;&gt;&lt;/a&gt;LSP的工作原理&lt;/h2&gt;&lt;p&gt;LSP采用客户端-服务器架构：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;客户端&lt;/strong&gt;：Claude Code编辑器或集成的IDE（如VS Code）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;服务器&lt;/strong&gt;：语言服务器，负责提供代码智能功能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;通信协议&lt;/strong&gt;：基于JSON-RPC的标准化协议，定义了客户端和服务器之间的通信方式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;LSP的核心思想是将代码编辑和代码分析分离，编辑器负责UI和基本编辑功能，而语言服务器负责提供高级代码智能功能。&lt;/p&gt;
+&lt;h2 id=&#34;Claude-Code中LSP的优势&#34;&gt;&lt;a href=&#34;#Claude-Code中LSP的优势&#34; class=&#34;headerlink&#34; title=&#34;Claude Code中LSP的优势&#34;&gt;&lt;/a&gt;Claude Code中LSP的优势&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;精确的代码理解&lt;/strong&gt;：LSP提供了比简单文本搜索更精确的代码理解能力&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智能代码导航&lt;/strong&gt;：支持跳转定义、查找引用等功能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实时错误检查&lt;/strong&gt;：可以在编辑过程中实时检查代码错误&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代码补全建议&lt;/strong&gt;：提供基于上下文的智能代码补全&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;减少Token消耗&lt;/strong&gt;：通过LSP获取精确的代码信息，减少了AI需要处理的Token数量&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;Claude-Code中LSP的功能&#34;&gt;&lt;a href=&#34;#Claude-Code中LSP的功能&#34; class=&#34;headerlink&#34; title=&#34;Claude Code中LSP的功能&#34;&gt;&lt;/a&gt;Claude Code中LSP的功能&lt;/h1&gt;&lt;h2 id=&#34;核心功能&#34;&gt;&lt;a href=&#34;#核心功能&#34; class=&#34;headerlink&#34; title=&#34;核心功能&#34;&gt;&lt;/a&gt;核心功能&lt;/h2&gt;&lt;p&gt;根据Claude Code 2.0.74更新日志，LSP工具提供了以下代码智能功能：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Go-to-definition（跳转到定义）&lt;/strong&gt;：快速跳转到函数、变量或类的定义位置&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Find references（查找引用）&lt;/strong&gt;：查找代码中所有引用某个函数、变量或类的位置&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hover documentation（悬停文档）&lt;/strong&gt;：鼠标悬停在代码上时显示详细的文档和类型信息&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;其他高级功能&#34;&gt;&lt;a href=&#34;#其他高级功能&#34; class=&#34;headerlink&#34; title=&#34;其他高级功能&#34;&gt;&lt;/a&gt;其他高级功能&lt;/h2&gt;&lt;p&gt;除了上述核心功能外，LSP还为Claude Code提供了以下能力：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;代码语义分析&lt;/strong&gt;：理解代码的结构和关系&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;类型推断&lt;/strong&gt;：推断变量和函数的类型&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代码重构建议&lt;/strong&gt;：提供代码重构的建议&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代码格式化&lt;/strong&gt;：自动格式化代码&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;错误和警告提示&lt;/strong&gt;：实时显示代码中的错误和警告&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;Claude-Code中LSP的配置&#34;&gt;&lt;a href=&#34;#Claude-Code中LSP的配置&#34; class=&#34;headerlink&#34; title=&#34;Claude Code中LSP的配置&#34;&gt;&lt;/a&gt;Claude Code中LSP的配置&lt;/h1&gt;&lt;h2 id=&#34;配置方式&#34;&gt;&lt;a href=&#34;#配置方式&#34; class=&#34;headerlink&#34; title=&#34;配置方式&#34;&gt;&lt;/a&gt;配置方式&lt;/h2&gt;&lt;p&gt;在Claude Code中，LSP有三种主要配置方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;VS Code集成（推荐）&lt;/strong&gt;：最简单的配置方式，需要VS Code&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;cclsp社区方案&lt;/strong&gt;：不需要VS Code的社区解决方案&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;手动配置.lsp.json&lt;/strong&gt;：手动创建配置文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;VS-Code集成配置&#34;&gt;&lt;a href=&#34;#VS-Code集成配置&#34; class=&#34;headerlink&#34; title=&#34;VS Code集成配置&#34;&gt;&lt;/a&gt;VS Code集成配置&lt;/h2&gt;&lt;p&gt;如果您使用VS Code，配置LSP非常简单：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;确保您的Claude Code版本 &amp;gt;&amp;#x3D; 2.0.74&lt;/li&gt;
+&lt;li&gt;在Claude Code中运行 &lt;code&gt;/config&lt;/code&gt; 命令&lt;/li&gt;
+&lt;li&gt;找到以下配置项并确保其设置正确：&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Diff tool = auto&lt;/code&gt;：让Claude Code自动检测您使用的IDE&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Auto-install IDE extension = true&lt;/code&gt;：自动安装IDE扩展&lt;br&gt;Claude Code会自动检测VS Code并利用其LSP功能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;手动配置&#34;&gt;&lt;a href=&#34;#手动配置&#34; class=&#34;headerlink&#34; title=&#34;手动配置&#34;&gt;&lt;/a&gt;手动配置&lt;/h2&gt;&lt;p&gt;如果您不使用VS Code，可以手动创建&lt;code&gt;.lsp.json&lt;/code&gt;配置文件：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在项目根目录创建&lt;code&gt;.lsp.json&lt;/code&gt;文件&lt;/li&gt;
+&lt;li&gt;配置语言服务器信息：&lt;figure class=&#34;highlight json&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs json&#34;&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;servers&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;python&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;      &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;pyls&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;--verbose&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;      &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;filetypes&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;python&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;      &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;rootPatterns&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;.git&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;setup.py&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;]&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;javascript&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;      &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;command&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;typescript-language-server&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;--stdio&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;      &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;filetypes&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;javascript&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;javascriptreact&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt;&lt;br&gt;      &lt;span class=&#34;hljs-attr&#34;&gt;&amp;quot;rootPatterns&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;hljs-punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;package.json&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;hljs-string&#34;&gt;&amp;quot;.git&amp;quot;&lt;/span&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;]&lt;/span&gt;&lt;br&gt;    &lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;  &lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;其他相关配置&#34;&gt;&lt;a href=&#34;#其他相关配置&#34; class=&#34;headerlink&#34; title=&#34;其他相关配置&#34;&gt;&lt;/a&gt;其他相关配置&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;终端配置&lt;/strong&gt;：&lt;ul&gt;
+&lt;li&gt;运行 &lt;code&gt;/terminal-setup&lt;/code&gt; 命令配置终端支持&lt;/li&gt;
+&lt;li&gt;支持Kitty、Alacritty、Zed和Warp终端&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主题配置&lt;/strong&gt;：&lt;ul&gt;
+&lt;li&gt;运行 &lt;code&gt;/theme&lt;/code&gt; 命令配置主题&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;ctrl+t&lt;/code&gt; 快捷键切换语法高亮&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;Claude-Code中LSP的使用&#34;&gt;&lt;a href=&#34;#Claude-Code中LSP的使用&#34; class=&#34;headerlink&#34; title=&#34;Claude Code中LSP的使用&#34;&gt;&lt;/a&gt;Claude Code中LSP的使用&lt;/h1&gt;&lt;h2 id=&#34;基本使用&#34;&gt;&lt;a href=&#34;#基本使用&#34; class=&#34;headerlink&#34; title=&#34;基本使用&#34;&gt;&lt;/a&gt;基本使用&lt;/h2&gt;&lt;p&gt;LSP在Claude Code中是隐性工作的，您不需要手动触发LSP功能。当您与Claude Code交互时，它会自动使用LSP获取代码信息。&lt;/p&gt;
+&lt;h2 id=&#34;实际应用示例&#34;&gt;&lt;a href=&#34;#实际应用示例&#34; class=&#34;headerlink&#34; title=&#34;实际应用示例&#34;&gt;&lt;/a&gt;实际应用示例&lt;/h2&gt;&lt;h3 id=&#34;1-代码理解&#34;&gt;&lt;a href=&#34;#1-代码理解&#34; class=&#34;headerlink&#34; title=&#34;1. 代码理解&#34;&gt;&lt;/a&gt;1. 代码理解&lt;/h3&gt;&lt;p&gt;当您请求Claude Code解释一段代码时，它会使用LSP获取精确的代码结构信息：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;请解释这段代码的工作原理&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Claude Code会利用LSP理解代码的结构，包括函数调用关系、变量作用域等，提供更准确的解释。&lt;/p&gt;
+&lt;h3 id=&#34;2-代码修改&#34;&gt;&lt;a href=&#34;#2-代码修改&#34; class=&#34;headerlink&#34; title=&#34;2. 代码修改&#34;&gt;&lt;/a&gt;2. 代码修改&lt;/h3&gt;&lt;p&gt;当您请求Claude Code修改代码时，它会使用LSP确保修改的准确性：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;将这个函数的参数类型改为TypeScript接口&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Claude Code会使用LSP获取当前函数的定义和引用，确保修改不会破坏代码。&lt;/p&gt;
+&lt;h3 id=&#34;3-代码导航&#34;&gt;&lt;a href=&#34;#3-代码导航&#34; class=&#34;headerlink&#34; title=&#34;3. 代码导航&#34;&gt;&lt;/a&gt;3. 代码导航&lt;/h3&gt;&lt;p&gt;您可以请求Claude Code跳转到特定的代码位置：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;跳转到User类的定义&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Claude Code会使用LSP的go-to-definition功能，直接跳转到User类的定义位置。&lt;/p&gt;
+&lt;h3 id=&#34;4-引用查找&#34;&gt;&lt;a href=&#34;#4-引用查找&#34; class=&#34;headerlink&#34; title=&#34;4. 引用查找&#34;&gt;&lt;/a&gt;4. 引用查找&lt;/h3&gt;&lt;p&gt;您可以请求Claude Code查找代码引用：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;查找handleClick函数的所有引用&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Claude Code会使用LSP的find-references功能，列出所有引用handleClick函数的位置。&lt;/p&gt;
+&lt;h1 id=&#34;LSP与子Agent的结合使用&#34;&gt;&lt;a href=&#34;#LSP与子Agent的结合使用&#34; class=&#34;headerlink&#34; title=&#34;LSP与子Agent的结合使用&#34;&gt;&lt;/a&gt;LSP与子Agent的结合使用&lt;/h1&gt;&lt;h2 id=&#34;协同工作原理&#34;&gt;&lt;a href=&#34;#协同工作原理&#34; class=&#34;headerlink&#34; title=&#34;协同工作原理&#34;&gt;&lt;/a&gt;协同工作原理&lt;/h2&gt;&lt;p&gt;LSP和子Agent可以协同工作，提供更强大的代码处理能力：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;LSP提供代码理解&lt;/strong&gt;：LSP负责提供精确的代码结构和语义信息&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;子Agent执行特定任务&lt;/strong&gt;：子Agent利用LSP提供的信息执行特定的代码处理任务&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结果反馈和优化&lt;/strong&gt;：执行结果可以反馈给LSP，进一步优化代码理解&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;使用示例&#34;&gt;&lt;a href=&#34;#使用示例&#34; class=&#34;headerlink&#34; title=&#34;使用示例&#34;&gt;&lt;/a&gt;使用示例&lt;/h2&gt;&lt;p&gt;以下是LSP与子Agent结合使用的示例：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;!/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;lsp-subagent-example.sh&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;1. 使用LSP分析代码结构&lt;/span&gt;&lt;br&gt;claude --model opus --allowedTools &amp;quot;SlashCommand&amp;quot; -p &amp;quot;&lt;br&gt;使用LSP分析项目代码结构，包括：&lt;br&gt;1. 主要模块和类&lt;br&gt;2. 函数依赖关系&lt;br&gt;3. 关键变量和常量&lt;br&gt;&lt;br&gt;然后根据分析结果创建一个子Agent，用于：&lt;br&gt;1. 检查代码中的潜在bug&lt;br&gt;2. 提供代码优化建议&lt;br&gt;3. 生成单元测试&lt;br&gt;&amp;quot;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;hljs-meta prompt_&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;language-bash&#34;&gt;2. 执行子Agent任务&lt;/span&gt;&lt;br&gt;claude --agents &amp;#x27;&amp;#123;&amp;quot;code-analyzer&amp;quot;: &amp;#123;&lt;br&gt;  &amp;quot;description&amp;quot;: &amp;quot;Expert code analyzer using LSP information&amp;quot;,&lt;br&gt;  &amp;quot;prompt&amp;quot;: &amp;quot;You are a code analyzer that uses LSP information to find bugs, suggest optimizations, and generate tests.&amp;quot;,&lt;br&gt;  &amp;quot;tools&amp;quot;: [&amp;quot;Read&amp;quot;, &amp;quot;Write&amp;quot;, &amp;quot;Bash&amp;quot;, &amp;quot;SlashCommand&amp;quot;]&lt;br&gt;&amp;#125;&amp;#125;&amp;#x27; -p &amp;quot;&lt;br&gt;使用LSP信息分析代码，执行以下任务：&lt;br&gt;1. 检查src/main.py中的潜在bug&lt;br&gt;2. 提供优化建议&lt;br&gt;3. 为核心功能生成单元测试&lt;br&gt;&amp;quot;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;最佳实践&#34;&gt;&lt;a href=&#34;#最佳实践&#34; class=&#34;headerlink&#34; title=&#34;最佳实践&#34;&gt;&lt;/a&gt;最佳实践&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;合理配置LSP&lt;/strong&gt;：根据项目需求配置合适的语言服务器&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结合子Agent使用&lt;/strong&gt;：利用LSP提供的精确代码信息，让子Agent执行更复杂的代码处理任务&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;监控性能&lt;/strong&gt;：注意LSP服务器的性能，避免配置过多的语言服务器&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;定期更新&lt;/strong&gt;：保持语言服务器和Claude Code版本的更新&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;使用VS Code集成&lt;/strong&gt;：如果可能，优先使用VS Code集成，简化配置过程&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;LSP的性能优化&#34;&gt;&lt;a href=&#34;#LSP的性能优化&#34; class=&#34;headerlink&#34; title=&#34;LSP的性能优化&#34;&gt;&lt;/a&gt;LSP的性能优化&lt;/h1&gt;&lt;h2 id=&#34;减少Token消耗&#34;&gt;&lt;a href=&#34;#减少Token消耗&#34; class=&#34;headerlink&#34; title=&#34;减少Token消耗&#34;&gt;&lt;/a&gt;减少Token消耗&lt;/h2&gt;&lt;p&gt;LSP的一个重要优势是减少Token消耗。根据测试，启用LSP后，Token消耗可以降低约40%。这是因为：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;精确的代码引用&lt;/strong&gt;：LSP提供精确的代码位置，避免了发送大量冗余代码&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结构化的代码信息&lt;/strong&gt;：LSP提供结构化的代码信息，减少了AI需要处理的文本量&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智能的上下文管理&lt;/strong&gt;：LSP帮助管理代码上下文，只提供相关的代码信息&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;性能优化建议&#34;&gt;&lt;a href=&#34;#性能优化建议&#34; class=&#34;headerlink&#34; title=&#34;性能优化建议&#34;&gt;&lt;/a&gt;性能优化建议&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;只配置必要的语言服务器&lt;/strong&gt;：根据项目需求，只配置项目使用的语言服务器&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优化语言服务器配置&lt;/strong&gt;：根据项目大小调整语言服务器的配置参数&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;使用缓存&lt;/strong&gt;：利用LSP的缓存机制，减少重复的代码分析&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;合理使用子Agent&lt;/strong&gt;：避免在短时间内创建过多的子Agent&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;监控资源使用&lt;/strong&gt;：定期检查语言服务器的资源使用情况&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;常见问题和解决方案&#34;&gt;&lt;a href=&#34;#常见问题和解决方案&#34; class=&#34;headerlink&#34; title=&#34;常见问题和解决方案&#34;&gt;&lt;/a&gt;常见问题和解决方案&lt;/h1&gt;&lt;h2 id=&#34;问题1：LSP功能不工作&#34;&gt;&lt;a href=&#34;#问题1：LSP功能不工作&#34; class=&#34;headerlink&#34; title=&#34;问题1：LSP功能不工作&#34;&gt;&lt;/a&gt;问题1：LSP功能不工作&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;检查Claude Code版本是否 &amp;gt;&amp;#x3D; 2.0.74&lt;/li&gt;
+&lt;li&gt;运行 &lt;code&gt;/config&lt;/code&gt; 命令检查LSP配置&lt;/li&gt;
+&lt;li&gt;检查语言服务器是否正确安装&lt;/li&gt;
+&lt;li&gt;检查项目根目录是否有正确的配置文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;问题2：LSP服务器崩溃&#34;&gt;&lt;a href=&#34;#问题2：LSP服务器崩溃&#34; class=&#34;headerlink&#34; title=&#34;问题2：LSP服务器崩溃&#34;&gt;&lt;/a&gt;问题2：LSP服务器崩溃&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;检查语言服务器日志&lt;/li&gt;
+&lt;li&gt;调整语言服务器的配置参数&lt;/li&gt;
+&lt;li&gt;更新语言服务器版本&lt;/li&gt;
+&lt;li&gt;减少同时打开的文件数量&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;问题3：VS-Code集成问题&#34;&gt;&lt;a href=&#34;#问题3：VS-Code集成问题&#34; class=&#34;headerlink&#34; title=&#34;问题3：VS Code集成问题&#34;&gt;&lt;/a&gt;问题3：VS Code集成问题&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;运行 &lt;code&gt;/terminal-setup&lt;/code&gt; 命令重新配置终端&lt;/li&gt;
+&lt;li&gt;检查VS Code扩展是否正确安装&lt;/li&gt;
+&lt;li&gt;重启VS Code和Claude Code&lt;/li&gt;
+&lt;li&gt;检查VS Code版本兼容性&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;问题4：Token消耗仍然很高&#34;&gt;&lt;a href=&#34;#问题4：Token消耗仍然很高&#34; class=&#34;headerlink&#34; title=&#34;问题4：Token消耗仍然很高&#34;&gt;&lt;/a&gt;问题4：Token消耗仍然很高&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;检查LSP配置是否正确&lt;/li&gt;
+&lt;li&gt;优化语言服务器性能&lt;/li&gt;
+&lt;li&gt;调整Claude Code的上下文窗口大小&lt;/li&gt;
+&lt;li&gt;使用更精确的查询方式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h1&gt;&lt;p&gt;LSP是Claude Code中的一个重要功能，它为AI提供了真正的IDE级别的代码理解能力。通过LSP，Claude Code能够更精确地理解代码结构，提供更智能的代码导航和分析功能，同时减少Token消耗。&lt;/p&gt;
+&lt;p&gt;在使用LSP时，建议：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;优先使用VS Code集成，简化配置过程&lt;/li&gt;
+&lt;li&gt;根据项目需求配置合适的语言服务器&lt;/li&gt;
+&lt;li&gt;结合子Agent使用，执行更复杂的代码处理任务&lt;/li&gt;
+&lt;li&gt;定期优化LSP配置，提高性能&lt;/li&gt;
+&lt;li&gt;关注Claude Code的更新，获取新的LSP功能&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;LSP的引入标志着Claude Code从简单的代码生成工具向完整的AI辅助开发环境的转变，为开发者提供了更强大的AI编程体验。&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/01/05/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/AI/ClaudeCode%E6%95%99%E7%A8%8B(5)-%E4%BD%BF%E7%94%A8CCR&amp;CCW%E7%AD%89%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7/</guid>
             <title>ClaudeCode教程(5)-使用CCR&amp;CCW等可视化工具</title>
