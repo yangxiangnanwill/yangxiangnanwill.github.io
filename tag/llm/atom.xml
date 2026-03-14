@@ -7,8 +7,9 @@
     <category term="感言" />
     <category term="思考" />
     <category term="思维习惯" />
-    <category term="开发习惯" />
     <category term="ClaudeCode" />
+    <category term="读书笔记" />
+    <category term="人工智能" />
     <category term="Docker" />
     <category term="LINUX" />
     <category term="CentOS" />
@@ -18,9 +19,10 @@
     <category term="Jenkins" />
     <category term="JAVA" />
     <category term="shell" />
+    <category term="开发习惯" />
     <category term="Node" />
-    <category term="前端" />
     <category term="Nvm" />
+    <category term="前端" />
     <category term="IDEA" />
     <category term="Alibaba Cloud Toolkit" />
     <category term="Git" />
@@ -29,54 +31,52 @@
     <category term="MySql" />
     <category term="信息安全等级保护认证" />
     <category term="系统认证" />
-    <category term="读书笔记" />
     <category term="BeetlSql" />
     <category term="Beetl" />
-    <category term="枚举" />
-    <category term="异常" />
     <category term="Java IO-初识IO" />
     <category term="POI" />
+    <category term="枚举" />
+    <category term="异常" />
     <category term="Spring" />
     <category term="SpringCloud" />
     <category term="SpringCloud Alibaba" />
     <category term="Spring Boot" />
+    <category term="VerificationCode" />
+    <category term="VinUtil" />
+    <category term="MongoDb" />
     <category term="ProtoBuffer" />
     <category term="其他" />
     <category term="SOAR" />
     <category term="博客园" />
     <category term="博客" />
-    <category term="VerificationCode" />
-    <category term="VinUtil" />
-    <category term="MongoDb" />
+    <category term="LLM" />
+    <category term="异步编程" />
+    <category term="线程" />
     <category term="Hutool" />
     <category term="工具类" />
     <category term="常用开发库" />
     <category term="JSON类库详解" />
-    <category term="Spring常用工具类" />
     <category term="Lombok工具库详解" />
-    <category term="异步编程" />
-    <category term="线程" />
+    <category term="Spring常用工具类" />
     <category term="CentOS7" />
-    <category term="MongoDB" />
     <category term="Redis" />
+    <category term="MongoDB" />
+    <category term="VMware" />
     <category term="方法论" />
     <category term="开源协议" />
-    <category term="LLM" />
-    <category term="人工智能" />
-    <category term="VMware" />
     <category term="开发错误" />
-    <category term="Typora" />
     <category term="PostMan" />
+    <category term="Typora" />
+    <category term="EasyExcel" />
     <category term="Java8" />
     <category term="特性" />
-    <category term="EasyExcel" />
+    <category term="Ureport" />
     <category term="JDBC" />
     <category term="Mysql" />
-    <category term="Ureport" />
-    <category term="日志类库详解" />
-    <category term="Script" />
-    <category term="设计模式" />
     <category term="VLM" />
+    <category term="Script" />
+    <category term="日志类库详解" />
+    <category term="设计模式" />
     <category term="MyBatis" />
     <category term="Apache Common" />
     <category term="Google Guava" />
@@ -940,8 +940,8 @@
 &lt;p&gt;&lt;strong&gt;Baichuan2&lt;/strong&gt; 于 &lt;code&gt;2023年 9 月 6 日&lt;/code&gt;推出。发布了 &lt;strong&gt;7B、13B&lt;/strong&gt; 的 &lt;strong&gt;Base&lt;/strong&gt; 和 &lt;strong&gt;Chat&lt;/strong&gt; 版本，并提供了 Chat 版本的 &lt;strong&gt;4bits 量化&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;2024 年 1 月 29 日&lt;/code&gt; 发布了 &lt;strong&gt;Baichuan 3&lt;/strong&gt;。但是&lt;strong&gt;目前还没有开源&lt;/strong&gt;。&lt;/p&gt;
 </content>
-        <category term="LLM" />
         <category term="人工智能" />
+        <category term="LLM" />
         <updated>2026-01-04T02:06:38.333Z</updated>
     </entry>
 </feed>
