@@ -1118,6 +1118,10 @@
 </ol>
 <p>LSP的引入标志着Claude Code从简单的代码生成工具向完整的AI辅助开发环境的转变，为开发者提供了更强大的AI编程体验。</p>
 ]]></content>
+      <categories>
+        <category>好好码代码吖</category>
+        <category>AI</category>
+      </categories>
       <tags>
         <tag>ClaudeCode</tag>
       </tags>
@@ -3848,6 +3852,10 @@ VS Code 启动后将使用 <code>D:\VSCodeExtensions</code> 作为插件目录
 </tr>
 </tbody></table>
 ]]></content>
+      <categories>
+        <category>好好码代码吖</category>
+        <category>工具</category>
+      </categories>
   </entry>
   <entry>
     <title>信息安全等级保护认证</title>

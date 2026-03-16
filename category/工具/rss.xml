@@ -5,8 +5,8 @@
         <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io</link>
         <description>愿你一生努力，一生被爱</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 28 May 2023 21:00:29 +0800</pubDate>
-        <lastBuildDate>Sun, 28 May 2023 21:00:29 +0800</lastBuildDate>
+        <pubDate>Sat, 14 Mar 2026 16:50:31 +0800</pubDate>
+        <lastBuildDate>Sat, 14 Mar 2026 16:50:31 +0800</lastBuildDate>
         <category>感言</category>
         <category>思考</category>
         <category>思维习惯</category>
@@ -83,6 +83,149 @@
         <category>MyBatis</category>
         <category>Google Guava</category>
         <category>Apache Common</category>
+        <item>
+            <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/03/14/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/%E5%B7%A5%E5%85%B7/VSCode%20%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95/</guid>
+            <title>VSCode 自定义插件安装目录</title>
+            <link>https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2026/03/14/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/%E5%B7%A5%E5%85%B7/VSCode%20%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95/</link>
+            <pubDate>Sat, 14 Mar 2026 16:50:31 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;C盘爆了,发现vscode的插件占了好几个G，好淦！！！！！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;使用4种方法修改 Visual Studio Code 插件的安装位置。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;修改环境变量&lt;/li&gt;
+&lt;li&gt;Portable mode&lt;/li&gt;
+&lt;li&gt;命令行参数&lt;/li&gt;
+&lt;li&gt;符号链接&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;插件默认安装位置：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt; &lt;code&gt;%USERPROFILE%\.vscode\extensions&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;macOS&lt;/strong&gt; &lt;code&gt;~/.vscode/extensions&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Linux&lt;/strong&gt; &lt;code&gt;~/.vscode/extensions&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;通过环境变量VSCODE-EXTENSIONS-修改插件目录&#34;&gt;&lt;a href=&#34;#通过环境变量VSCODE-EXTENSIONS-修改插件目录&#34; class=&#34;headerlink&#34; title=&#34;通过环境变量VSCODE_EXTENSIONS 修改插件目录&#34;&gt;&lt;/a&gt;通过环境变量&lt;code&gt;VSCODE_EXTENSIONS&lt;/code&gt; 修改插件目录&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;[!NOTE] Title&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;官方文档：&lt;a href=&#34;https://code.visualstudio.com/docs/configure/extensions/extension-marketplace#_common-questions&#34;&gt;Extension Marketplace&lt;/a&gt;&lt;br&gt;这是 VS Code 官方文档明确支持的方法之一。 设置后，VS Code 会全局使用指定的目录作为插件安装位置，不需要额外参数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;设置方法：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt;&lt;ol&gt;
+&lt;li&gt;创建好新插件目录（不要放在 VS Code 的安装目录中），例如：&lt;code&gt;D:\Administrator\.vscode\extensions&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打开环境变量设置：&lt;code&gt;Win&lt;/code&gt; + &lt;code&gt;R&lt;/code&gt; → 输入 &lt;code&gt;sysdm.cpl&lt;/code&gt; → 确定 → 高级 → 环境变量&lt;/li&gt;
+&lt;li&gt;新建系统变量：&lt;ul&gt;
+&lt;li&gt;变量名：&lt;code&gt;VSCODE_EXTENSIONS&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;变量值：&lt;code&gt;D:\Administrator\.vscode\extensions&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可以将原插件目录 &lt;code&gt;%USERPROFILE%\.vscode\extensions&lt;/code&gt; （例如：&lt;code&gt;C:\Users\用户名\.vscode\extensions&lt;/code&gt;）下的全部文件拷贝到新插件目录，然后重启 VS Code 即可&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;macOS &amp;#x2F; Linux&lt;/strong&gt;&lt;ol&gt;
+&lt;li&gt;编辑 shell 配置文件修改环境变量：  &lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;export VSCODE_EXTENSIONS=&amp;quot;/home/username/vscode-ext&amp;quot;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;然后执行： &lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;source ~/.zshrc   # 或 ~/.bashrc&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;方法二：使用-VS-Code-Portable-Mode（便携版）&#34;&gt;&lt;a href=&#34;#方法二：使用-VS-Code-Portable-Mode（便携版）&#34; class=&#34;headerlink&#34; title=&#34;方法二：使用 VS Code Portable Mode（便携版）&#34;&gt;&lt;/a&gt;方法二：使用 VS Code Portable Mode（便携版）&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;[!NOTE] Title&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;官方文档：&lt;a href=&#34;https://code.visualstudio.com/docs/editor/portable&#34;&gt;Portable mode&lt;/a&gt;&lt;br&gt;Portable mode 是 VS Code 官方提供的便携版，无需安装，所有数据（包括插件）都将存放在 VS Code 目录下。方便跨开发环境使用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;启用方法：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;只能使用 VS Code 压缩包版本（Windows: .zip, Linux: .tar.gz, ），下载见官方 &lt;a href=&#34;https://code.visualstudio.com/Download&#34;&gt;Download Visual Studio Code&lt;/a&gt;；&lt;/li&gt;
+&lt;li&gt;只需在根目录创建一个 &lt;code&gt;data&lt;/code&gt; 文件夹&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;VS Code 会自动使用 &lt;code&gt;data/extensions&lt;/code&gt; 作为插件目录。此方法下_&lt;strong&gt;无法自动更新&lt;/strong&gt;_。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目录结构示例：&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight haskell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs haskell&#34;&gt;&lt;span class=&#34;hljs-type&#34;&gt;VSCode&lt;/span&gt;/&lt;br&gt; ├─ &lt;span class=&#34;hljs-type&#34;&gt;Code&lt;/span&gt;.exe&lt;br&gt; └─ &lt;span class=&#34;hljs-class&#34;&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;data&lt;/span&gt;/&lt;/span&gt;&lt;br&gt;      ├─ user-&lt;span class=&#34;hljs-class&#34;&gt;&lt;span class=&#34;hljs-keyword&#34;&gt;data&lt;/span&gt;/&lt;/span&gt;&lt;br&gt;      └─ extensions/   ← 插件目录&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;方法三：使用命令行参数-extensions-dir&#34;&gt;&lt;a href=&#34;#方法三：使用命令行参数-extensions-dir&#34; class=&#34;headerlink&#34; title=&#34;方法三：使用命令行参数 --extensions-dir&#34;&gt;&lt;/a&gt;方法三：&lt;strong&gt;使用命令行参数&lt;/strong&gt; &lt;code&gt;--extensions-dir&lt;/code&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]&lt;br&gt;官方文档：&lt;a href=&#34;https://code.visualstudio.com/docs/configure/command-line&#34;&gt;Command Line Interface (CLI)&lt;/a&gt;&lt;br&gt;VS Code 支持通过 CLI 参数指定插件目录的方法来打开软件；&lt;br&gt;类似于 Atom 可以用 &lt;code&gt;--portable&lt;/code&gt; 定义数据目录，VS Code 也可以使用 &lt;code&gt;--extensions-dir&lt;/code&gt; 指定插件安装目录来打开 VS Code。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;使用方法：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;创建好新插件目录（不要放在 VS Code 的安装目录中），例如：&lt;code&gt;D:\VSCodeExtensions&lt;/code&gt;，然后在 CMD 或者 Shell 中执行以下命令即可：  &lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;code --extensions-dir &amp;quot;D:\Administrator\.vscode\extensions&amp;quot;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]&lt;br&gt;该方法主要用于多套插件环境需求；每次打开 VS Code 时，都需执行对应某套插件目录的命令。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;执行命令前可使用 &lt;code&gt;code -v&lt;/code&gt; 命令判断 &lt;code&gt;code&lt;/code&gt; 命令能否正确执行，不能正确执行可重新安装 VS Code 来设置 PATH。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果只有一套插件环境，也可以修改 VS Code 快捷方式（Windows）来快速启动（右键快捷方式→属性→目标）&lt;br&gt;  在 VS Code 快捷方式的“目标”字段末尾添加参数（注意空格）：  &lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;--extensions-dir &amp;quot;D:\Administrator\.vscode\extensions&amp;quot;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+VS Code 启动后将使用 &lt;code&gt;D:\VSCodeExtensions&lt;/code&gt; 作为插件目录。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;方法四：使用符号链接（Symbolic-Link）重定向插件目录&#34;&gt;&lt;a href=&#34;#方法四：使用符号链接（Symbolic-Link）重定向插件目录&#34; class=&#34;headerlink&#34; title=&#34;方法四：使用符号链接（Symbolic Link）重定向插件目录&#34;&gt;&lt;/a&gt;方法四：使用符号链接（Symbolic Link）重定向插件目录&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]&lt;br&gt;符号链接：&lt;a href=&#34;https://en.wikipedia.org/wiki/Symbolic_link&#34;&gt;Symbolic link - Wikipedia&lt;/a&gt;&lt;br&gt;符号链接类似于快捷方式，允许文件和目录在多个位置显示为存在，但实际上它们只存在于一个物理位置。&lt;br&gt;如果不想修改 VS Code 的任何配置，则可以直接把默认插件目录替换成符号链接，让它指向想要的位置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;链接方法&#34;&gt;&lt;a href=&#34;#链接方法&#34; class=&#34;headerlink&#34; title=&#34;链接方法&#34;&gt;&lt;/a&gt;链接方法&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Windows :&lt;ol&gt;
+&lt;li&gt;创建好新插件目录（不要放在 VS Code 的安装目录中），例如：&lt;code&gt;D:\Administrator\.vscode\extensions&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;将原插件目录 &lt;code&gt;%USERPROFILE%\.vscode\extensions&lt;/code&gt; （例如：&lt;code&gt;C:\Users\用户名\.vscode\extensions&lt;/code&gt;）下的全部文件拷贝到新插件目录&lt;code&gt;D:\Administrator\.vscode\extensions&lt;/code&gt;，_&lt;strong&gt;删除&lt;/strong&gt;_原插件目录 &lt;code&gt;%USERPROFILE%\.vscode\extensions&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;创建符号链接（软链接）&lt;br&gt; 在 &lt;strong&gt;管理员身份&lt;/strong&gt;下的 CMD 或者 PowerShell 中执行：&lt;br&gt; mklink &amp;#x2F;D “%USERPROFILE%.vscode\extensions” “D:\Administrator.vscode\extensions”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Linux &amp;#x2F; macOS ：&lt;br&gt;mv ~&amp;#x2F;.vscode&amp;#x2F;extensions &amp;#x2F;mnt&amp;#x2F;data&amp;#x2F;vscode-ext&lt;br&gt;ln -s &amp;#x2F;mnt&amp;#x2F;data&amp;#x2F;vscode-ext ~&amp;#x2F;.vscode&amp;#x2F;extensions&lt;br&gt;无需对 VS Code 做任何更改，插件目录就已被重定向。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;软链接取消方法&#34;&gt;&lt;a href=&#34;#软链接取消方法&#34; class=&#34;headerlink&#34; title=&#34;软链接取消方法&#34;&gt;&lt;/a&gt;软链接取消方法&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Windows ：&lt;/p&gt;
+&lt;p&gt;  去资源管理器删除 &lt;code&gt;%USERPROFILE%\.vscode\extensions&lt;/code&gt; 文件夹，或者：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;rmdir &amp;quot;%USERPROFILE%\.vscode\extensions&amp;quot;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Linux &amp;#x2F; macOS ：&lt;/p&gt;
+  &lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;code class=&#34;hljs shell&#34;&gt;rm ~/.vscode/extensions&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;注意&#34;&gt;&lt;a href=&#34;#注意&#34; class=&#34;headerlink&#34; title=&#34;注意&#34;&gt;&lt;/a&gt;注意&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;[!IMPORTANT]&lt;br&gt;非 Portable mode 下，不要将插件目录或其他用户数据放在 VS Code 的安装目录中，否则更新时会被删；&lt;br&gt;VS Code 更新时，安装目录不是“增量更新”，而是“整个版本目录替换”。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;优先级说明&#34;&gt;&lt;a href=&#34;#优先级说明&#34; class=&#34;headerlink&#34; title=&#34;优先级说明&#34;&gt;&lt;/a&gt;优先级说明&lt;/h3&gt;&lt;p&gt;VS Code 在决定插件目录时遵循以下优先级（从高到低）：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Portable Mode（存在 data&amp;#x2F; 文件夹时强制使用）&lt;/li&gt;
+&lt;li&gt;CLI 参数 &lt;code&gt;--extensions-dir&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;环境变量 &lt;code&gt;VSCODE_EXTENSIONS&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;默认路径&lt;br&gt;同时进行多种配置的情况下，只有更高优先级的会生效。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;四种方法可以根据场景各取所好，所有已安装的插件都可以拷贝到新插件目录继续使用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;方法对比&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方法&lt;/th&gt;
+&lt;th&gt;启动优先级&lt;/th&gt;
+&lt;th&gt;适用场景&lt;/th&gt;
+&lt;th&gt;关键特性&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;环境变量 &lt;code&gt;VSCODE_EXTENSIONS&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;中&lt;/td&gt;
+&lt;td&gt;推荐&lt;/td&gt;
+&lt;td&gt;官方支持；简单稳定；全局生效&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Portable Mode&lt;/td&gt;
+&lt;td&gt;最高&lt;/td&gt;
+&lt;td&gt;便携、隔离环境&lt;/td&gt;
+&lt;td&gt;强制使用 data&amp;#x2F;extensions；完全隔离&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CLI 参数 &lt;code&gt;--extensions-dir&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;高&lt;/td&gt;
+&lt;td&gt;多套插件环境&lt;/td&gt;
+&lt;td&gt;显式覆盖环境变量；适合高级用户&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;符号链接&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;想保持默认行为&lt;/td&gt;
+&lt;td&gt;对 VS Code 完全透明；兼容性好&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://github.com/yangxiangnanwill/yangxiangnanwill.github.io/2023/05/28/%E5%A5%BD%E5%A5%BD%E7%A0%81%E4%BB%A3%E7%A0%81%E5%90%96/%E5%B7%A5%E5%85%B7/PostMan%E6%95%99%E7%A8%8B/</guid>
             <title>PostMan教程</title>
